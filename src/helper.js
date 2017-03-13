@@ -1,18 +1,24 @@
-
-
 export default class DistrictRepository {
   constructor(data) {
-    this.data = this.filterData(data)
+    this.data = this.reduceData(data)
   }
-  filterData(data) {
-    let schools = data.reduce((acc, currentValue,index,array) => {
-      if (!acc[currentValue.Location]) {
-        acc[currentValue.Location] = currentValue.Location;
-      } else {
-        acc[currentValue.Location] += currentValue.Location;
+
+  reduceData(data) {
+    return data.reduce((acc, currentValue) => {
+      const objData = currentValue.Data
+      const location = currentValue.Location
+      const timeFrame = currentValue.TimeFrame
+
+      if (!acc[location]) {
+        acc[location] = {};
       }
+      acc[location][timeFrame] = objData
       return acc;
     },{})
-  return schools;
+  }
+
+  findByName(name) {
+    
+
   }
 };

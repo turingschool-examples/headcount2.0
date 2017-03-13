@@ -6,13 +6,13 @@ describe('DistrictRepository iteration 0', () =>  {
 
   test('district has data in an object', () => {
     // remember that an array is also just an object.
+    // console.log(district.data)
     expect(typeof district.data).toBe('object');
   });
 
   test('data coming in has no duplicates', () => {
     // uncomment out the tests that best fits your model
     // expect(district.data.length).toBe(181);
-    console.log(district.data)
     expect(Object.keys(district.data).length).toBe(181);
   });
 
