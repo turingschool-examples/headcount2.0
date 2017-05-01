@@ -27,4 +27,21 @@ export default class DistrictRepository {
 
     return this.data[school]
   }
+
+  findAllMatches(location){
+    const matches = Object.keys(this.data).map(key => {
+      return this.data[key];
+    })
+
+    if(!location) {
+      return matches;
+    }
+
+    return matches.filter(obj => {
+      return obj
+        .location
+        .toLowerCase()
+        .includes(location.toLowerCase())
+    })
+  }
 }
