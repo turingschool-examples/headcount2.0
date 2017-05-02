@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import '../App.css';
 import DistrictRepository from '../helper';
-// import CardContainer from './CardContainer';
 import Controls from './Controls';
 import kinderData from '../../data/kindergartners_in_full_day_program.js';
 
-const district = new DistrictRepository(kinderData).data;
+const district = new DistrictRepository(kinderData);
 
 class App extends Component {
   constructor() {
@@ -15,11 +14,14 @@ class App extends Component {
     }
   }
 
+  componentDidMount() {
+    this.setState({
+      district: district.data,
+    })
+  }
+
   handleSubmit(area) {
     const county = district[area.location].data;
-    console.log(county);
-    // this.setState({districts: county})
-    // console.log(this.state.districts)
   }
 
   render() {
