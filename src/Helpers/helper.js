@@ -5,18 +5,18 @@ export default class DistrictRepository {
   }
 
   findAllMatches(query) {
+    const schoolsArray = Object.keys(this.data).map((school) =>{
+      return this.data[school]
+    })
+
+    if(!query){
+      return schoolsArray
+    }
+
     return Object.keys(this.data).filter( (s) => {
       return s.toLowerCase().includes(query.toLowerCase())
     }).map( (school) => this.data[school])
   }
-
-        // let searchArray = Object.keys(this.data).map( (school) => {
-        //   return this.data[school]
-        // })
-        // return searchArray.filter((school) =>{
-        //   return school.location.toLowerCase().includes(query.toLowerCase())
-        // }
-
 
   sanitizeNumbers(number){
     if (typeof number === 'number') {
@@ -53,13 +53,3 @@ export default class DistrictRepository {
     }
   }
 }
-// [
-// {'YUMA SCHOOL DISTRICT 1': [ {
-//             TimeFrame: 2007,
-//             DataFormat: 'Percent',
-//             Data: 1 },
-//           {
-//             TimeFrame: 2006,
-//             DataFormat: 'Percent',
-//             Data: 1 },
-// }
