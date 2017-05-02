@@ -4,63 +4,48 @@ export default class DistrictRepository {
     this.data = this.cleanData(kinderData)
   }
 
+  sanitizeNumbers(number){
+    if (typeof number === 'number') {
+      return Math.round(number*1000)/1000
+    } else {
+      return 0
+    }
+  };
+
   cleanData(data){
     let cleandedData = data.reduce((acc, district) => {
-      // console.log(district.TimeFrame, " help us figure it out")
-      if (!acc.includes(district.Location)){
-        //loop through acc look at each index/
-        //if index.location === district
-        acc.push({
-          location: district.Location,
-          years: [{
-            TimeFrame: district.TimeFrame,
-            DataFormat: district.DataFormat,
-            Data: district.Data
-          }]
-        })
-      } else {
-        acc.find(district).years.push({
-          TimeFrame: district.TimeFrame,
-          DataFormat: district.DataFormat,
-          Data: district.Data
-        })
-      }
-      // console.log(acc, ' example')
+      let location = district.Location
+      if (acc.hasOwnProperty(location)) {
+        acc[location].data[district.TimeFrame] = this.sanitizeNumbers(district.Data)
+      }  else {
+        acc[location] = {
+          location: location,
+          data: {
+            [district.TimeFrame]: this.sanitizeNumbers(district.Data)
+          }
+       }
+    }
       return acc
-    },[])
-    // console.log(cleandedData[60])
+    },{})
     return cleandedData
   }
+
+  findByName(name) {
+    if (name) {
+      let key = Object.keys(this.data).find((schoolName) => {
+        return name.toLowerCase() === schoolName.toLowerCase()
+      })
+      return this.data[key]
+    }
+  }
 }
-
-
-// data.reduce((acc, location) => {
-//   if (acc.includes(location)){
-//     acc.find(location).years.push({
-//       TimeFrame: [location].TimeFrame,
-//       DataFormat: [location].DataFormat,
-//       Data: [location].Data
-//     })
-//   } else {
-//     acc.push({
-//       location: location,
-//       years: [{
-//         TimeFrame: [location].TimeFrame,
-//         DataFormat: [location].DataFormat,
-//         Data: [location].Data
-//       }]
-//     })
-//   }
-//   return acc
-// },[])
-//
 // [
-//   {location: denver,
-//    years: [
-//      {TimeFrame: 2007,
-//       dataFormat: 'Percent',
-//       data: 1
-//      }
-//    ]
-//   }
-// ]
+// {'YUMA SCHOOL DISTRICT 1': [ {
+//             TimeFrame: 2007,
+//             DataFormat: 'Percent',
+//             Data: 1 },
+//           {
+//             TimeFrame: 2006,
+//             DataFormat: 'Percent',
+//             Data: 1 },
+// }

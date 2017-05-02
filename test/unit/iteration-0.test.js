@@ -9,10 +9,9 @@ describe('DistrictRepository iteration 0', () =>  {
     expect(typeof district.data).toBe('object');
   });
 
-  test.only('data coming in has no duplicates', () => {
+  test('data coming in has no duplicates', () => {
     // uncomment out the tests that best fits your model
     // expect(district.data.length).toBe(181);
-    console.log(district.data)
     expect(Object.keys(district.data).length).toBe(181);
   });
 
