@@ -4,6 +4,21 @@ export default class DistrictRepository {
     this.data = this.cleanData(kinderData)
   }
 
+  findAllMatches(query) {
+    if (!query) {
+      return Object.keys(this.data).map( (school) => {
+        return this.data[school]
+      })
+    } else {
+        let searchArray = Object.keys(this.data).map( (school) => {
+          return this.data[school]
+        })
+        return searchArray.filter((school) =>{
+          return school.location.toLowerCase().includes(query.toLowerCase())
+        })
+    }
+  }
+
   sanitizeNumbers(number){
     if (typeof number === 'number') {
       return Math.round(number*1000)/1000
