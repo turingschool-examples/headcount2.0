@@ -14,9 +14,13 @@ describe('Caaard Grid', () =>{
     ReactDOM.render(<CardGrid />, div);
   });
 
-  it('should render 191 school districts', () => {
-    const wrapper = shallow(<CardGrid schools = {schoolsData.data}/>)
-    console.log(wrapper.debug())
+  it.only('should render 181 school districts', () => {
+    const wrapper = shallow(<CardGrid schools = {schoolsData}/>)
+    const found = wrapper.find("Card")
+
+    // console.log(schoolsData.findAllMatches())
+
+    expect(found.length).toEqual(181)
   })
 
 
