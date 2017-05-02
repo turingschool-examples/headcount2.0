@@ -7,13 +7,22 @@ export default class DistrictRepository {
 
   formatData(raw) {
     const baseValue = raw.reduce( (formattedData, curVal) => {
+      let time = curVal.TimeFrame;
 
       !formattedData[curVal.Location] ?
-       formattedData[curVal.Location] = 1 :
-       formattedData[curVal.Location]++
+       formattedData[curVal.Location] = [] :
+        formattedData[curVal.Location].push(
+          { [time]: curVal.Data }
+        )
 
       return formattedData;
     }, {})
+    console.log(baseValue);
     return baseValue
   };
+
+findByName(name) {
+
+}
+
 };
