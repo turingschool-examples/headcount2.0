@@ -5,5 +5,5 @@ import Search from '../Components/Search';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  // ReactDOM.render(<App />, div);
+  ReactDOM.render(<Search />, div);
 });
