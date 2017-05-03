@@ -6,6 +6,7 @@ export default class DistrictRepository {
    cleaner(data){
     return data.reduce((acc, value) => {
       let { Location, TimeFrame, Data } = value;
+      Location = Location.toUpperCase();
       if(!acc[Location]) {
         acc[Location] = {};
         acc[Location].location = Location;
@@ -21,11 +22,10 @@ export default class DistrictRepository {
       return undefined;
     }
 
-    let school = Object.keys(this.data).filter(key => {
-      return key.toLowerCase() === location.toLowerCase() ? this.data[key] : undefined;
-    });
-    // console.log(school);
-    return this.data[school]
+    // let school = Object.keys(this.data).filter(key => {
+    //   return key.toLowerCase() === location.toLowerCase() ? this.data[key] : undefined;
+    // });
+    return this.data[location.toUpperCase()]
   }
 
   findAllMatches(location){
