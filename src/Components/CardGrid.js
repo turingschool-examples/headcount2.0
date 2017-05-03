@@ -4,9 +4,8 @@ import Card from './Card.js'
 import DistrictRepository from '../Helpers/helper'
 import kinderData from '../../data/kindergartners_in_full_day_program.js';
 
-const CardGrid =({ schools, searched }) => {
+const CardGrid =({ schools, searched, cardClick }) => {
 
-  // console.log(searched)
   return(
     <section className="card-grid">
       {schools.findAllMatches(searched).map((school, i) =>{
@@ -14,7 +13,8 @@ const CardGrid =({ schools, searched }) => {
           <div key = {i} >
              <Card location = {school.location}
                    data = {school.data}
-                   schools = {schools}/>
+                   schools = {schools}
+                   cardClick = {cardClick}/>
           </div>
         )
       })}

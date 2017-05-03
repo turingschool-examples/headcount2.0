@@ -23,12 +23,17 @@ class App extends Component {
     this.setState({searched : this.state.searched})
   }
 
+  handleCardSelect(){
+    console.log('YALL CLICKED THIS')
+  }
+
   render() {
     return (
       <div>
         <Search handleSearch = {this.handleSearch.bind(this)}/>
         <CardGrid schools = {this.schools}
-                  searched = {this.state.searched}/>
+                  searched = {this.state.searched}
+                  cardClick = {this.handleCardSelect.bind(this)}/>
       </div>
     )
   }
