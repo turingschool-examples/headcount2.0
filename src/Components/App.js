@@ -18,11 +18,17 @@ class App extends Component {
     }
   }
 
+  handleSearch(query){
+    this.state.searched = query
+    this.setState({searched : this.state.searched})
+  }
+
   render() {
     return (
       <div>
-        <Search/>
-        <CardGrid schools={this.schools}/>
+        <Search handleSearch = {this.handleSearch.bind(this)}/>
+        <CardGrid schools = {this.schools}
+                  searched = {this.state.searched}/>
       </div>
     );
   }
