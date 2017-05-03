@@ -1,19 +1,18 @@
 import React from 'react'
 
-const Card  = ( {school, data} ) => {
+const Card  = ( {location, data, schools} ) => {
 
-  const dataPairs = Object.keys(data).map((yearData) =>{
-    return `${yearData}: ${data[yearData]}`
-  })
-  // console.log(dataPairs)
+  let dataPairs = schools.makeCardArray(data)
 
   return(
-    <section>
-      <h3>{school}</h3>
+    <section className="card">
+      <h3 className="card-school-name">{location}</h3>
       {dataPairs.map((set, i) =>{
         return(
-          <div key = {i}>
-            <p>{set}</p>
+          <div
+            className="card-info"
+            key = {i}>
+            <p className={schools.highLowValues(set)}>{set}</p>
           </div>
         )
       })}

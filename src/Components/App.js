@@ -1,5 +1,6 @@
 /* eslint-disable */
 import React, { Component } from 'react';
+import '../Styles/normalize.css';
 import '../Styles/App.css';
 import Search from './Search.js'
 import CardGrid from './CardGrid.js'

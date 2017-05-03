@@ -6,16 +6,17 @@ import kinderData from '../../data/kindergartners_in_full_day_program.js';
 
 const CardGrid =({ schools }) => {
   return(
-    <div>
+    <section className="card-grid">
       {schools.findAllMatches().map((school, i) =>{
         return(
           <div key = {i} >
-             <Card school = {school.location}
-                   data = {school.data} />
+             <Card location = {school.location}
+                   data = {school.data}
+                   schools = {schools}/>
           </div>
         )
       })}
-    </div>
+    </section>
   )
 }
 
