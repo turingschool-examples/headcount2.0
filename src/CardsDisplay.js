@@ -2,27 +2,34 @@ import React from 'react';
 import Card from './Card'
 
 const CardsDisplay = ({ cards }) => {
+  return (
+    <section>
+      {Object.keys(cards).map((key, index) => {
+        return (
+          <section key={index}>
+            <p>{cards[key].location}</p>
+            <Card school={key}
+                  data={cards}/>
+          </section>
+        )
+      })}
+    </section>
 
-  const dataArr = Object.keys(cards)
+      // <Card key={index}
+      //       location={cards.location}
+      //
+      //   />
 
-    dataArr.map((card, index) => {
-    return (
-
-      <Card key={index} {...card}
-
-        />
-
-    )
-  })
-
-console.log(dataArr)
-
-
-  return(
-    <div>
-      {dataArr}
-    </div>
-  );
+  )
 }
+
+
+
+//   return(
+//     <div>
+//       // {dataArr}
+//     </div>
+//   );
+// }
 
 export default CardsDisplay
