@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {shallow, mount} from 'enzyme'
@@ -18,7 +19,7 @@ describe('Caaard Grid', () =>{
     const wrapper = shallow(<CardGrid schools = {schoolsData}/>)
     const found = wrapper.find("Card")
 
-    // console.log(schoolsData.findAllMatches())
+    console.log(schoolsData.findAllMatches())
 
     expect(found.length).toEqual(181)
   })

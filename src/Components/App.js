@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component } from 'react';
 import '../Styles/App.css';
 import Search from './Search.js'
@@ -9,8 +10,8 @@ import kinderData from '../../data/kindergartners_in_full_day_program.js';
 class App extends Component {
   constructor(){
     super()
-    this.schools = new DistrictRepository(kinderData);
-    this.state = {
+    this.schools=new DistrictRepository(kinderData);
+    this.state={
       full: this.schools.data,
       searched : '',
     }
@@ -20,7 +21,7 @@ class App extends Component {
     return (
       <div>
         <Search/>
-        <CardGrid/>
+        <CardGrid schools={this.schools}/>
       </div>
     );
   }

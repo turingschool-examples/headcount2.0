@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react'
 import Card from './Card.js'
 import DistrictRepository from '../Helpers/helper'
@@ -9,7 +10,8 @@ const CardGrid =({ schools }) => {
       {schools.findAllMatches().map((school, i) =>{
         return(
           <div key = {i} >
-             <Card />
+             <Card school = {school.location}
+                   data = {school.data} />
           </div>
         )
       })}

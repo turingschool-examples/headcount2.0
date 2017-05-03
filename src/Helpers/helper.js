@@ -1,4 +1,4 @@
-
+/* eslint-disable */
 export default class DistrictRepository {
   constructor(kinderData){
     this.data = this.cleanData(kinderData)

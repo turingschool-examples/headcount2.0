@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { shallow, mount } from 'enzyme'
 import ReactDOM from 'react-dom';
