@@ -11,6 +11,24 @@ export default class DistrictRepository {
     return dataPairs
   }
 
+  findAverage(query){
+    let school = this.findAllMatches(query)[0].data
+    let dataArray = Object.keys(school)
+    let result = dataArray.reduce((acc, key)=>{
+      acc += school[key]
+      return acc
+    }, 0)
+    return this.sanitizeNumbers(result/dataArray.length)
+  }
+
+  compareDistrictAverages(schoolA, schoolB){
+    let avgA = this.findAverage(schoolA)
+    let avgB = this.findAverage(schoolB)
+    let compareAvg = this.sanitizeNumbers(avgA/avgB)
+
+    return {[schoolA.toUpperCase()]: avgA, [schoolB.toUpperCase()]: avgB, "compared": compareAvg}
+  }
+
   highLowValues(set) {
     let result = ''
     let splitSet = set.split(' ')
