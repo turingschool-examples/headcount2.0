@@ -22,26 +22,20 @@ export default class DistrictRepository {
       return undefined;
     }
 
-    // let school = Object.keys(this.data).filter(key => {
-    //   return key.toLowerCase() === location.toLowerCase() ? this.data[key] : undefined;
-    // });
     return this.data[location.toUpperCase()]
   }
 
   findAllMatches(location){
-    const matches = Object.keys(this.data).map(key => {
-      return this.data[key];
-    })
+    const matches = Object.keys(this.data);
 
     if(!location) {
       return matches;
     }
 
-    return matches.filter(obj => {
-      return obj
-        .location
-        .toLowerCase()
-        .includes(location.toLowerCase())
+    const found = matches.filter(name => {
+     return  name.includes(location.toUpperCase())
     })
+
+    return found;
   }
 }

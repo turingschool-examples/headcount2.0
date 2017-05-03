@@ -24,8 +24,21 @@ class App extends Component {
 
   handleSubmit(area) {
     const county = district.findByName(area);
+    console.log(county);
     this.setState({
-      district: county,
+      district: {county},
+    })
+  }
+
+  handleMatches(letters) {
+    const matches = district.findAllMatches(letters);
+    const found = matches.reduce((acc, key) => {
+      acc[key] = district.data[key]
+      return acc
+    }, {})
+
+    this.setState({
+      district: found,
     })
   }
 
@@ -33,7 +46,10 @@ class App extends Component {
     return (
       <div>
         Welcome To Headcount 2.0
-        <Controls handleSubmit={this.handleSubmit.bind(this)}/>
+        <Controls
+          handleSubmit={this.handleSubmit.bind(this)}
+          handleAutoComplete={this.handleMatches.bind(this)}
+        />
         <CardContainer handleData={this.state}/>
       </div>
     );
