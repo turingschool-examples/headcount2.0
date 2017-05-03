@@ -3,17 +3,29 @@ export default class DistrictRepository {
     this.data = this.mappedData(data)
   }
 
+  sanitizedData(data) {
+    if (typeof data === 'number') {
+      return Math.round(data * 1000) / 1000
+    } else {
+      return 0
+    }
+  }
+
   mappedData(data) {
     let newData = {}
+
     data.forEach(val => {
       let { Location, TimeFrame, Data } = val
+      let sanitizedData = this.sanitizedData(Data)
+      Data = parseFloat(Data).toFixed(3)*1
 
       if(!newData[Location]) {
         newData[Location] = {}
         newData[Location].location = Location
         newData[Location].data = {}
       }
-        newData[Location].data[TimeFrame] = Data
+        newData[Location].data[TimeFrame] = sanitizedData
+        // console.log(typeof parseFloat(Data.toFixed(3)))
     })
     return newData
   }
@@ -27,9 +39,9 @@ export default class DistrictRepository {
         return this.data[specificLocation]
       }
     })
+
     return this.data[school];
   }
-
 
 
 }
