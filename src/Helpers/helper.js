@@ -4,6 +4,20 @@ export default class DistrictRepository {
     this.data = this.cleanData(kinderData)
   }
 
+  makeCardArray(data) {
+    const dataPairs = Object.keys(data).map((yearData) =>{
+      return `${yearData}: ${data[yearData]}`
+    })
+    return dataPairs
+  }
+
+  highLowValues(set) {
+    let result = ''
+    let splitSet = set.split(' ')
+    splitSet[1] < .5 ? result = 'low-data' : result = 'high-data'
+    return result
+  }
+
   findAllMatches(query) {
     const schoolsArray = Object.keys(this.data).map((school) =>{
       return this.data[school]
