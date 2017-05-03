@@ -16,8 +16,8 @@ class App extends Component {
   render() {
     return (
       <div>
-      <div>Welcome To Headcount 2.0</div>
-      <Cards data={ this.schools.data } />
+        <h1>Welcome To Headcount 2.0</h1>
+        <Cards data={ this.schools.data } />
       </div>
     );
   }
