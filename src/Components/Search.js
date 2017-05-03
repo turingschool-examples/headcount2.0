@@ -11,8 +11,13 @@ export default class Search extends Component {
 
   render(){
     return(
-      <div>
-        <input type = "text" value = {this.state.search} onChange = {(e) =>{this.setState(e.target.value)}} />
+      <div className = "search">
+        <input type = "text"
+              value = {this.state.search}
+              onChange = {(e) =>{
+                this.setState({search: e.target.value})
+                this.props.handleSearch(this.state.search)
+              }}/>
       </div>
     )
   }

@@ -12,14 +12,13 @@ describe('Caaard Grid', () =>{
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<CardGrid />, div);
+    ReactDOM.render(<CardGrid schools = {schoolsData} />, div);
   });
 
-  it.only('should render 181 school districts', () => {
+  it('should render 181 school districts', () => {
+    let mockFn = jest.fn()
     const wrapper = shallow(<CardGrid schools = {schoolsData}/>)
     const found = wrapper.find("Card")
-
-    console.log(schoolsData.findAllMatches())
 
     expect(found.length).toEqual(181)
   })
