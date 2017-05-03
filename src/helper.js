@@ -1,7 +1,9 @@
 export default class DistrictRepository {
   constructor(data) {
     this.data = this.mappedData(data)
+    // console.log(this.data)
   }
+
 
   sanitizedData(data) {
     if (typeof data === 'number') {
@@ -27,7 +29,7 @@ export default class DistrictRepository {
         newData[Location].data[TimeFrame] = sanitizedData
         // console.log(typeof parseFloat(Data.toFixed(3)))
     })
-    // console.log(newData)
+
 
     return newData
   }
@@ -37,7 +39,7 @@ export default class DistrictRepository {
       return undefined
     }
     let school = Object.keys(this.data).find(specificLocation => {
-      if (name.toLowerCase() == specificLocation.toLowerCase()) {
+      if (name.toLowerCase() === specificLocation.toLowerCase()) {
         return this.data[specificLocation]
       }
     })
