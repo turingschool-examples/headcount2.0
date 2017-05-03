@@ -1,7 +1,6 @@
 export default class DistrictRepository {
   constructor(data) {
     this.data = this.mappedData(data)
-
   }
 
   mappedData(data) {
@@ -10,42 +9,25 @@ export default class DistrictRepository {
       let { Location, TimeFrame, Data } = val
 
       if(!newData[Location]) {
-        newData[Location] = {[TimeFrame]: Data}
-      } else {
-        newData[Location] = Object.assign(newData[Location], {[TimeFrame]: Data})
-        // console.log('val.Location',val.Location)
-        // console.log(newData[Location])
+        newData[Location] = {}
+        newData[Location].location = Location
+        newData[Location].data = {}
       }
-      // console.log(Location, TimeFrame, Data)
+        newData[Location].data[TimeFrame] = Data
     })
     return newData
   }
 
   findByName(name) {
-    let matched = {}
-    // const newData = Object.keys(this.data)
-
     if(!name) {
       return undefined
     }
-
-    matched.data = Object.keys(this.data).forEach(specificLocation => {
-
+    let school = Object.keys(this.data).find(specificLocation => {
       if (name.toLowerCase() == specificLocation.toLowerCase()) {
-        // console.log('consoled: ', name.toLowerCase(), 'consoled:', specificLocation.toLowerCase())
-        matched.location = specificLocation
-        // console.log('name ', name)
-        // console.log('specific ', specificLocation)
-        return specificLocation
+        return this.data[specificLocation]
       }
     })
-// console.log('consoled: ', matched)
-
-    if(!matched.location) {
-      return undefined
-    } else {
-      return matched
-    }
+    return this.data[school];
   }
 
 
