@@ -3,7 +3,7 @@ export default class DistrictRepository {
     this.data = this.cleaner(data);
   }
 
-  cleaner(data){
+   cleaner(data){
     return data.reduce((acc, value) => {
       let { Location, TimeFrame, Data } = value;
       if(!acc[Location]) {
@@ -24,7 +24,7 @@ export default class DistrictRepository {
     let school = Object.keys(this.data).filter(key => {
       return key.toLowerCase() === location.toLowerCase() ? this.data[key] : undefined;
     });
-
+    // console.log(school);
     return this.data[school]
   }
 
