@@ -9,10 +9,10 @@ export default class Controls extends Component {
   }
 
   submitDistrict() {
-    this.props.handleSubmit(this.state);
+    this.props.handleSubmit(this.state.location);
     this.setState({location: ''});
   }
-    
+
   render() {
     return (
       <div>

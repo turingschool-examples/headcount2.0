@@ -23,7 +23,7 @@ class App extends Component {
 
 
   handleSubmit(area) {
-    const county = district[area.location].data;
+    const county = district.findByName(area);
     this.setState({
       district: county,
     })
