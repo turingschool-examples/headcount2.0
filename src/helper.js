@@ -16,7 +16,7 @@ export default class DistrictRepository {
     }
     acc[Location.toUpperCase()].data[TimeFrame] = sanitizedData;
     return acc
-  }, [])
+  }, {})
   return newData;
 }
 
@@ -34,5 +34,29 @@ export default class DistrictRepository {
       name = nameToFind.toUpperCase();
     }
     return this.data[name]
+  }
+
+  findAllMatches(stringToMatch) {
+    let stringUpper = '';
+    if (stringToMatch) {
+      stringUpper = stringToMatch.toUpperCase();
+      let keys = Object.keys(this.data);
+      let matches = [];
+      keys.map((key) => {
+        if (this.data[key].location.toUpperCase().includes(stringUpper)) {
+          matches.push(this.data[key]);
+          return matches;
+        }
+      })
+      return matches;
+    } else {
+      let keys = Object.keys(this.data);
+      let matches = [];
+      keys.map((key) => {
+        matches.push(this.data[key]);
+        return matches;
+      })
+      return matches;
+    }
   }
 }
