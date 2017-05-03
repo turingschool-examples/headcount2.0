@@ -27,6 +27,8 @@ export default class DistrictRepository {
         newData[Location].data[TimeFrame] = sanitizedData
         // console.log(typeof parseFloat(Data.toFixed(3)))
     })
+    // console.log(newData)
+
     return newData
   }
 
@@ -43,5 +45,19 @@ export default class DistrictRepository {
     return this.data[school];
   }
 
+  findAllMatches(input = null) {
+    const districtKeys = Object.keys(this.data);
+    let searchedKeys = []
+
+      districtKeys.forEach((key) => {
+        if(input == null){
+          searchedKeys.push({[key]:this.data[key]})
+        }
+        else if(key.toLowerCase().includes(input.toLowerCase())) {
+         searchedKeys.push({[key]:this.data[key]})
+        }
+      })
+      return searchedKeys
+  }
 
 }
