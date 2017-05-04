@@ -14,7 +14,7 @@ class App extends Component {
     }
   }
 
-  
+
 
   componentDidMount() {
     const renderedData = new DistrictRepository(kinderData);
@@ -28,8 +28,10 @@ class App extends Component {
   render() {
     return (
       <main>
-        <div>Welcome To Headcount 2.0</div>
-        <Controls />
+        <section className='header-container'>
+          <header>Welcome To Headcount 2.0</header>
+          <Controls />
+        </section>
         <CardsDisplay cards={this.state.data}/>
       </main>
 

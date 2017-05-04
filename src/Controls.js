@@ -10,7 +10,7 @@ export default class Controls extends Component {
 
   render () {
     return(
-      <section>
+      <section className='controls-container'>
         <input type='text'
                 placeholder='Search by district'
                 value={this.state.input}

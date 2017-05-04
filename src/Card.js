@@ -3,7 +3,7 @@ import React from 'react'
 const Card = ({school, data}) => {
 
   return(
-  <div>
+  <div className='data-container'>
     {Object.keys(data[school].data).map((datapiece, index) => {
       if(data[school].data >= 0.5) {
         return(
