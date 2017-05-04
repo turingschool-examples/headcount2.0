@@ -3,12 +3,12 @@ import React from 'react';
 const Card = ({ location, data }) => {
   return (
     <div>
-      <h1>Location: {location}</h1>
+      <h1 className='cardTitle'>Location: {location}</h1>
       {Object.keys(data).map((key, index) => {
         return(
-          <p key={index}>
+          <div className='cardData' key={index}>
             Data: {data[key]}
-          </p>
+          </div>
         )
       })}
     </div>

@@ -19,8 +19,9 @@ export default class Controls extends Component {
 
   render() {
     return (
-      <div>
-        <input type='text'
+      <div className='controls'>
+        <input className='input'
+          type='text'
           placeholder='Please enter a school district'
           value={this.state.location}
           onChange={(e) => {
@@ -28,9 +29,10 @@ export default class Controls extends Component {
             this.autoComplete();
           }
           }
-             />
-        <input type='submit'
-               onClick={() => this.submitDistrict()}
+        />
+        <input className='submitButton'
+          type='submit'
+          onClick={() => this.submitDistrict()}
              />
       </div>
     )

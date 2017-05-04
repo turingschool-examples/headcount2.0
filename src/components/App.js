@@ -16,11 +16,14 @@ class App extends Component {
   }
 
   componentDidMount() {
+    this.onLoad();
+  }
+
+  onLoad() {
     this.setState({
       district: district.data,
     })
   }
-
 
   handleSubmit(area) {
     const county = district.findByName(area);

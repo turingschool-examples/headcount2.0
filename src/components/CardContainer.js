@@ -4,10 +4,10 @@ import Card from './Card';
 const CardContainer = ({handleData}) => {
   const keys = Object.keys(handleData.district);
   return(
-    <section className='cardContainer'>
+    <section className='cardsContainer'>
       {keys.map((key, index) => {
         return (
-          <div key={index}>
+          <div className='card'key={index}>
             <Card
               location={handleData.district[key].location}
               data={handleData.district[key].data}
