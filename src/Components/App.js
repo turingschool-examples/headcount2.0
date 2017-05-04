@@ -27,6 +27,8 @@ class App extends Component {
   handleCardSelect(id){
     if(this.state.selected.length < 2){
       if(this.state.selected[0] === id){
+        console.log("MATCHES")
+        this.handleCardDeselect(id)
         return
       }
       this.state.selected.push(id)
@@ -37,18 +39,14 @@ class App extends Component {
   }
 
   handleCardDeselect(id){
+    let index = this.state.selected.indexOf(id)
     if(!this.state.selected.includes(id)){
       return
-      }
-
-    if(this.state.selected[0] == id){
-      console.log("At Zero", this.state.selected[0])
-      this.state.seleted.splice(0, 1)
-
-    } else if (this.state.selected[1] == id) {
-      console.log("At One", this.state.selected[1])
-      this.state.selected.splice(1, 1)
     }
+    if(this.state.selected.length === 1){
+      this.setState({selected: []})
+    }
+    this.state.selected.splice(index, 1)
 
     this.setState({selected: this.state.selected})
   }
