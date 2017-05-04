@@ -13,7 +13,7 @@ const CardContainer = ({handleData}) => {
     <section className='cardsContainer'>
       {keys.map((key, index) => {
         return (
-          <div className='cards'key={index}>
+          <div className='cards' key={handleData.district[key].location}>
             {<Card
               location={handleData.district[key].location}
               data={handleData.district[key].data}

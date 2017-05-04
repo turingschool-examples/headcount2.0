@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import Card from '../../src/components/Card';
 import DistrictRepository from '../../src/helper';
 import kinderData from '../../data/kindergartners_in_full_day_program.js';

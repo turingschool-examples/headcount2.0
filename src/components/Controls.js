@@ -13,13 +13,13 @@ export default class Controls extends Component {
     this.setState({location: ''});
   }
 
-  autoComplete() {
-    this.props.handleAutoComplete(this.state.location);
+  search() {
+    this.props.handleSearch(this.state.location);
   }
 
   handleOnChange(e) {
     this.setState({location: e.target.value});
-    this.autoComplete();
+    this.search();
   }
 
   render() {

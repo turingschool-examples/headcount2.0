@@ -19,19 +19,7 @@ describe('CardContainer Test', () => {
     expect(wrapper.find('.cards').length).toEqual(1);
   })
 
-  it.skip('renders 181 card elements ', () => {
-    const district = new DistrictRepository(kinderData);
-    // console.log(district);
-    const expectedState = {
-      district: district.data
-    }
-
-    console.log(expectedState);
-
-    const wrapper = mount(<CardContainer handleData={{expectedState}}/>)
-
-    expect(wrapper.find('.card').length).toEqual(181);
-  })
+  
 
 
 })

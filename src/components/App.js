@@ -23,7 +23,7 @@ class App extends Component {
     this.setState({
       district: district.data,
     })
-    console.log(district.data);
+
   }
 
   handleSubmit(area) {
@@ -47,11 +47,11 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='app'>
         Welcome To Headcount 2.0
         <Controls
           handleSubmit={this.handleSubmit.bind(this)}
-          handleAutoComplete={this.handleMatches.bind(this)}
+          handleSearch={this.handleMatches.bind(this)}
         />
         <CardContainer handleData={this.state}/>
       </div>
