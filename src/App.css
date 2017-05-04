@@ -1,1 +1,116 @@
 /*APP COMPONENT RELATED CSS GOES HERE*/
+
+
+html,
+body {
+  width: auto;
+  height: auto;
+  background-color: #828B9B;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 210px;
+  border: 6px double white;
+  background-color: #25435F;
+  /*border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;*/
+}
+
+.controls-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+input {
+  height: 30px;
+  width: 300px;
+  font-size: 0.9em;
+  padding: 0 10px 0 10px;
+  border-radius: 17px;
+}
+
+button {
+  height: 35px;
+  width: 68px;
+  font-size: 0.9em;
+  margin-left: 10px;
+  border-radius: 17px;
+  background-color: white;
+}
+
+header {
+  font-size: 2.2em;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin: 3%;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 5%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  border: 6px double white;
+  border-radius: 30px;
+  margin-top: 50px;
+  background-color: #25435F;
+}
+
+.card-title {
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  color: white;
+  padding: 10px 5px 0 5px;
+}
+
+.data-container {
+  font-size: 1em;
+  font-family: 'Roboto Slab', serif;
+  color: white;
+  margin-bottom: 20px;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 600px) {
+
+  .card {
+    width: 38%;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  header {
+    font-size: 1.5em;
+  }
+
+  input {
+    width: 180px;
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+  .card {
+    width: 80%;
+  }
+}
