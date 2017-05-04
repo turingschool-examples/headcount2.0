@@ -11,11 +11,12 @@ export default class Controls extends Component {
   render () {
     return(
       <section>
-        <input type='text'
+        <input className='input-field'
+                type='text'
                 placeholder='Search by district'
                 value={this.state.input}
           />
-        <button>Filter</button>
+        <button className='filter-btn'>Filter</button>
       </section>
     )
   }
