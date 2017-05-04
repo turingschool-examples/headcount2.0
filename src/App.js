@@ -15,21 +15,18 @@ class App extends Component {
   }
 
 
-
   componentDidMount() {
     const renderedData = new DistrictRepository(kinderData);
     this.setState({data: renderedData.data})
-    // console.log('consoled: ', renderedData.data)
 }
-
-
 
 
   render() {
     return (
       <main>
+
         <section className='header-container'>
-          <header>Welcome To Headcount 2.0</header>
+          <h2>Welcome To Headcount 2.0</h2>
           <Controls />
         </section>
         <CardsDisplay cards={this.state.data}/>

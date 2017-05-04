@@ -3,6 +3,7 @@ import Card from './Card'
 
 const CardsDisplay = ({ cards }) => {
   return (
+
     <section className='card-container'>
       {Object.keys(cards).map((key, index) => {
         return (
@@ -15,21 +16,8 @@ const CardsDisplay = ({ cards }) => {
       })}
     </section>
 
-      // <Card key={index}
-      //       location={cards.location}
-      //
-      //   />
-
   )
 }
 
-
-
-//   return(
-//     <div>
-//       // {dataArr}
-//     </div>
-//   );
-// }
 
 export default CardsDisplay
