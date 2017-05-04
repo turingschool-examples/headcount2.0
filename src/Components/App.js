@@ -24,23 +24,22 @@ class App extends Component {
     this.setState({searched : this.state.searched})
   }
 
-  handleCardSelect(id){
+  handleCardSelect(location){
     if(this.state.selected.length < 2){
-      if(this.state.selected[0] === id){
-        console.log("MATCHES")
-        this.handleCardDeselect(id)
+      if(this.state.selected[0] === location){
+        this.handleCardDeselect(location)
         return
       }
-      this.state.selected.push(id)
+      this.state.selected.push(location)
     } else {
-      this.handleCardDeselect(id)
+      this.handleCardDeselect(location)
     }
     this.setState({selected: this.state.selected})
   }
 
-  handleCardDeselect(id){
-    let index = this.state.selected.indexOf(id)
-    if(!this.state.selected.includes(id)){
+  handleCardDeselect(location){
+    let index = this.state.selected.indexOf(location)
+    if(!this.state.selected.includes(location)){
       return
     }
     if(this.state.selected.length === 1){
@@ -58,7 +57,7 @@ class App extends Component {
         <CardGrid schools = {this.schools}
                   searched = {this.state.searched}
                   cardClick = {this.handleCardSelect.bind(this)}
-                  cardUnclick = {this.handleCardDeselect.bind(this)}/>
+                  selected = {this.state.selected}/>
       </div>
     )
   }

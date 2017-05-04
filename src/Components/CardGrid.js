@@ -4,7 +4,7 @@ import Card from './Card.js'
 import DistrictRepository from '../Helpers/helper'
 import kinderData from '../../data/kindergartners_in_full_day_program.js';
 
-const CardGrid =({ schools, searched, cardClick, cardUnclick }) => {
+const CardGrid = ({ schools, searched, cardClick, selected }) => {
 
   return(
     <section className="card-grid">
@@ -15,8 +15,8 @@ const CardGrid =({ schools, searched, cardClick, cardUnclick }) => {
                    data = {school.data}
                    schools = {schools}
                    cardClick = {cardClick}
-                   cardUnclick = {cardUnclick}
-                   id = {i}/>
+                   id = {i}
+                   selected = {selected}/>
           </div>
         )
       })}

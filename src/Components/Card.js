@@ -1,13 +1,13 @@
 /* eslint-disable */
 import React from 'react'
 
-const Card  = ( {location, data, schools, cardClick, cardUnclick, id} ) => {
+const Card  = ( {location, data, schools, cardClick, selected, id} ) => {
+  let cssClass = schools.selectionMatch(location, selected)
 
   let dataPairs = schools.makeCardArray(data)
-
   return(
-    <section className="card"
-             onClick = {cardClick.bind(null, id)}>
+    <section className = {`card ${cssClass}`}
+             onClick = {cardClick.bind(null, location)}>
       <h3 className="card-school-name">{location}</h3>
       {dataPairs.map((set, i) =>{
         return(

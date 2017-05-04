@@ -1,9 +1,23 @@
 /*APP COMPONENT RELATED CSS GOES HERE*/
+@import url('https://fonts.googleapis.com/css?family=Lato|Walter+Turncoat');
+*{
+  font-family: "Lato";
+}
+body{
+  background-image: url(https://images.designtrends.com/wp-content/uploads/2015/12/22092207/Seamless-Wooden-Floor-Texture.jpg);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: color-burn;
+  background-size: 500px;
+}
+
 .card {
-  border: 1px solid coral;
-  width: 300px;
+  border: 5px solid #777777;
+  border-top-color: #878787;
+  border-bottom-color: #565656;
+  width: 290px;
   margin: 10px;
-  height: 415px;
+  height: 350px;
+  background-color: #444444;
 }
 
 .card-grid {
@@ -13,12 +27,15 @@
 }
 
 .card-info {
-  border: 1px solid cyan;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .card-school-name {
-  border: 1px solid green;
+  font-family: "Walter Turncoat";
+  font-size: 18px;
   text-align: center;
+  color: #ededed;
 }
 
 p {
@@ -31,5 +48,13 @@ p {
 }
 
 .high-data {
-  color: seagreen;
+  color: #55cc55;
+}
+
+.is-selected {
+  background-color: cyan;
+}
+
+.not-selected{
+  background-color: #444444;
 }

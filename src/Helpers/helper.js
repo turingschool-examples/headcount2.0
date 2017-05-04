@@ -4,6 +4,18 @@ export default class DistrictRepository {
     this.data = this.cleanData(kinderData)
   }
 
+  selectionMatch(location, selected){
+    let result
+    selected.forEach((selectItem) =>{
+      if(location === selectItem){
+        result = "is-selected"
+      } else {
+        result = "not-selected"
+      }
+    })
+    return result
+  }
+
   makeCardArray(data) {
     const dataPairs = Object.keys(data).map((yearData) =>{
       return `${yearData}: ${data[yearData]}`
