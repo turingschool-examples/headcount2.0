@@ -15,6 +15,7 @@ class App extends Component {
     this.state={
       full: this.schools.data,
       searched : '',
+      selected: []
     }
   }
 
@@ -23,8 +24,33 @@ class App extends Component {
     this.setState({searched : this.state.searched})
   }
 
-  handleCardSelect(){
-    console.log('YALL CLICKED THIS')
+  handleCardSelect(id){
+    if(this.state.selected.length < 2){
+      if(this.state.selected[0] === id){
+        return
+      }
+      this.state.selected.push(id)
+    } else {
+      this.handleCardDeselect(id)
+    }
+    this.setState({selected: this.state.selected})
+  }
+
+  handleCardDeselect(id){
+    if(!this.state.selected.includes(id)){
+      return
+      }
+
+    if(this.state.selected[0] == id){
+      console.log("At Zero", this.state.selected[0])
+      this.state.seleted.splice(0, 1)
+
+    } else if (this.state.selected[1] == id) {
+      console.log("At One", this.state.selected[1])
+      this.state.selected.splice(1, 1)
+    }
+
+    this.setState({selected: this.state.selected})
   }
 
   render() {
@@ -33,7 +59,8 @@ class App extends Component {
         <Search handleSearch = {this.handleSearch.bind(this)}/>
         <CardGrid schools = {this.schools}
                   searched = {this.state.searched}
-                  cardClick = {this.handleCardSelect.bind(this)}/>
+                  cardClick = {this.handleCardSelect.bind(this)}
+                  cardUnclick = {this.handleCardDeselect.bind(this)}/>
       </div>
     )
   }
