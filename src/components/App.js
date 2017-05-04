@@ -15,7 +15,7 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.onLoad();
   }
 
@@ -23,11 +23,11 @@ class App extends Component {
     this.setState({
       district: district.data,
     })
+    console.log(district.data);
   }
 
   handleSubmit(area) {
     const county = district.findByName(area);
-    console.log(county);
     this.setState({
       district: {county},
     })
