@@ -8,13 +8,13 @@ export const CardData = ({ data, schoolKey }) => {
         .map((key, index) => {
         if (data[schoolKey].data[key] > 0.5) {
           return (
-            <p className='over' key={index + Date.now()}>
+            <p className='over school-data' key={index + Date.now()}>
               {key}: {data[schoolKey].data[key]}
             </p>
           )
         } else {
           return (
-            <p className='under' key={index + Date.now()}>
+            <p className='under school-data' key={index + Date.now()}>
               {key}: {data[schoolKey].data[key]}
             </p>
           )

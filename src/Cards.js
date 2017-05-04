@@ -1,15 +1,17 @@
 import React from 'react';
 import { CardData } from './CardData';
 
-export const Cards = ({ data }) => {
+export const Cards = ({ data, onClick }) => {
   return (
-    <section className='card-holder'>
+    <section className='card-holder'
+             onClick={(e) => {onClick(e)}}>
       {
       Object.keys(data)
       .map( (key, index) => {
         return (
-          <div className='card' key={index}>
-            <p>School: {data[key].location}</p>
+          <div className='card'
+               key={index}>
+            <p className='school-name'>School: {data[key].location}</p>
             <CardData data={data} schoolKey={key} />
           </div>
         )
