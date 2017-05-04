@@ -11,7 +11,9 @@ export const Cards = ({ data, onClick }) => {
         return (
           <div className='card'
                key={index}>
-            <p className='school-name'>School: {data[key].location}</p>
+            <p className='school-name'>
+              <span>School District:</span>
+              {data[key].location}</p>
             <CardData data={data} schoolKey={key} />
           </div>
         )

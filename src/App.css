@@ -20,7 +20,7 @@ header {
 }
 
 .card {
-  width: 275px;
+  width: 250px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 25px;
   box-shadow: 10px 10px 10px #277884;
@@ -38,13 +38,19 @@ p {
 }
 
 .school-name {
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
   margin: 20px 10px;
 }
 
+span {
+  display: block;
+  font-weight: normal;
+}
+
 .school-data {
-  margin: 0 0 5px 50px;
+  margin: 0 0 5px 35px;
 }
 
 .under {
@@ -57,7 +63,7 @@ p {
 }
 
 .clicked {
-  width: 267px;
+  width: 242px;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 10px 10px 10px #126672;
   border-radius: 25px;
