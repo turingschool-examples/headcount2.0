@@ -11,6 +11,15 @@ header {
   padding: 20px;
 }
 
+.search-label {
+  font-weight: lighter;
+  margin: 5px 0 0 0;
+}
+
+.searchInput {
+  font-size: 30px;
+}
+
 .card-holder {
   background-color: rgba(73, 183, 174, 0.8);
   display: flex;

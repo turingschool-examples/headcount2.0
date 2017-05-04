@@ -52,4 +52,26 @@ export default class DistrictRepository {
       return matches;
     }
   }
+
+  findAverage (name) {
+    const card = this.findByName(name);
+    const keys = Object.keys(card.data);
+    const totals = keys.reduce((acc, key) => {
+      return acc + card.data[key];
+    }, 0)
+    const avg = totals / keys.length;
+    return Math.round(avg * 1000) / 1000;
+  };
+
+  compareDistrictAverages (name1, name2) {
+    const school1Name = this.findByName(name1).location.toUpperCase();
+    const school2Name = this.findByName(name2).location.toUpperCase();
+    const school1Avg = this.findAverage(name1);
+    const school2Avg = this.findAverage(name2);
+
+    const average = (school1Avg / school2Avg);
+    console.log(average);
+
+    return {[school1Name]: school1Avg, [school2Name]: school2Avg, ['compared']: Math.round(average * 1000) / 1000};
+  };
 }
