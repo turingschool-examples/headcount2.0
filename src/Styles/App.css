@@ -1,0 +1,35 @@
+/*APP COMPONENT RELATED CSS GOES HERE*/
+.card {
+  border: 1px solid coral;
+  width: 300px;
+  margin: 10px;
+  height: 415px;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card-info {
+  border: 1px solid cyan;
+}
+
+.card-school-name {
+  border: 1px solid green;
+  text-align: center;
+}
+
+p {
+  margin: 5px;
+  text-align: center;
+}
+
+.low-data {
+  color: salmon;
+}
+
+.high-data {
+  color: seagreen;
+}
