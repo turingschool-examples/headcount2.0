@@ -1,13 +1,18 @@
 /*APP COMPONENT RELATED CSS GOES HERE*/
+body {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Jinego_Elementary_School_1st_grade_classroom_back.jpg/1280px-Jinego_Elementary_School_1st_grade_classroom_back.jpg) no-repeat fixed;
+  background-size: fill;
+}
+
 header {
-  background-color: #003b66;
+  background-color: rgba(0, 59, 102, 1);
   color: #ffffff;
   text-align: center;
   padding: 20px;
 }
 
 .card-holder {
-  background-color: #49b7ae;
+  background-color: rgba(73, 183, 174, 0.8);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -16,7 +21,7 @@ header {
 
 .card {
   width: 275px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 25px;
   box-shadow: 10px 10px 10px #277884;
   margin: 10px;

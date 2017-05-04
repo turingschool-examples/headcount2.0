@@ -14,7 +14,6 @@ class App extends Component {
   }
 
   handleSelect(e) {
-    console.log('click! ' + event.target);
     if (document.querySelectorAll('.clicked').length < 2) {
       event.target.closest('.card').classList.toggle('clicked');
     } else {
