@@ -30,7 +30,13 @@ describe('App', () => {
     expect(wrapper.find('Controls').length).toEqual(1)
   });
 
+  it('has a default state containing data that is an empty object', () => {
+    const wrapper = shallow(<App />);
+    const expectedState = {
+      data: {}
+    };
 
-    // expect(typeof wrapper.this.state.data).toEqual('object');
+    expect(wrapper.state()).toEqual(expectedState);
+  });
 
-})
+});

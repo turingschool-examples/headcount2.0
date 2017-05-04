@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import Card from '../src/Card';
-import DistrictRepository from './helper.js'
+import DistrictRepository from '../src/helper.js'
 import kinderData from '../data/kindergartners_in_full_day_program.js';
 
 
 describe ('Card', () => {
-
+  // 
   // it('renders without crashing', () => {
   //   const div = document.createElement('div');
-  //   ReactDOM.render(<Card />, div);
+  //   ReactDOM.render(<Card school={() => {}} data={() => {}}/>, div);
   // });
 
   // it('renders data inside <p> tags', () => {
