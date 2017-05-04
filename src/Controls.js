@@ -10,7 +10,8 @@ export default class Controls extends Component {
 
   render () {
     return(
-      <section>
+
+      <section className='controls-container'>
         <input className='input-field'
                 type='text'
                 placeholder='Search by district'

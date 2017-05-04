@@ -24,8 +24,11 @@ class App extends Component {
   render() {
     return (
       <main>
-        <h2>Welcome To Headcount 2.0</h2>
-        <Controls />
+
+        <section className='header-container'>
+          <h2>Welcome To Headcount 2.0</h2>
+          <Controls />
+        </section>
         <CardsDisplay cards={this.state.data}/>
       </main>
 
