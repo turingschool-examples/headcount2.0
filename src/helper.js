@@ -43,7 +43,7 @@ export default class DistrictRepository {
     const school = this.findByName(location);
     const keys = Object.keys(school.data);
     const total = keys.reduce((acc, key) => {
-      acc = acc + school.data[key];
+      acc += school.data[key];
       return acc;
     },0)/keys.length;
     return Math.round(total * 1000) / 1000;

@@ -5,7 +5,6 @@ export default class Controls extends Component {
     super()
     this.state = {
       location: '',
-      matches: [],
     }
   }
 

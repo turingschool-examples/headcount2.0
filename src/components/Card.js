@@ -4,9 +4,9 @@ const Card = ({ location, data }) => {
   return (
     <div>
       <h1>Location: {location}</h1>
-      {Object.keys(data).map(key => {
+      {Object.keys(data).map((key, index) => {
         return(
-          <p>
+          <p key={index}>
             Data: {data[key]}
           </p>
         )
