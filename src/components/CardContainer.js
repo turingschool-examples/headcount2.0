@@ -1,5 +1,7 @@
 import React from 'react';
 import Card from './Card';
+import PropTypes from 'prop-types';
+
 
 const CardContainer = ({handleData, handleCompare, handleCompareData}) => {
   const districtArray = Object.keys(handleData).map((districtObj) => <Card key={handleData[districtObj].location} {...handleData[districtObj]} handleCompare={handleCompare}/>);
@@ -12,6 +14,12 @@ const CardContainer = ({handleData, handleCompare, handleCompareData}) => {
       {districtArray}
     </section>
   )
+}
+
+CardContainer.propTypes = {
+  handleData: PropTypes.object,
+  handleCompare: PropTypes.func,
+  handleCompareData: PropTypes.array,
 }
 
 export default CardContainer;

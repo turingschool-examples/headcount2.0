@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 const Card = ({ location, data, handleCompare }) => {
   return (
@@ -14,6 +16,12 @@ const Card = ({ location, data, handleCompare }) => {
       })}
     </div>
   );
+}
+
+Card.propTypes = {
+  location: PropTypes.string,
+  data: PropTypes.object,
+  handleCompare: PropTypes.func,
 }
 
 export default Card;
