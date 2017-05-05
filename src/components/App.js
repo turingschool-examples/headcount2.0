@@ -48,13 +48,16 @@ class App extends Component {
 
   compareData(location) {
     if (this.state.compare.length < 2) {
-      this.state.compare.push(district.findByName(location))
-      this.setState({compare: this.state.compare })
+      this.updateCompare(location);
     } else {
       this.state.compare.shift();
-      this.state.compare.push(district.findByName(location))
-      this.setState({compare: this.state.compare })
+      this.updateCompare(location)
     }
+  }
+
+  updateCompare(location) {
+    this.state.compare.push(district.findByName(location))
+    this.setState({compare: this.state.compare })
   }
 
   render() {
