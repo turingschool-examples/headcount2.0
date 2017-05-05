@@ -9,7 +9,7 @@ export default class App extends Component {
   constructor() {
     super()
     this.schools = new DistrictRepository(kinderData);
-    let schoolData = this.schools.data
+    let schoolData = this.schools.data;
     this.state = {
       data: schoolData
     }

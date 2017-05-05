@@ -70,7 +70,6 @@ export default class DistrictRepository {
     const school2Avg = this.findAverage(name2);
 
     const average = (school1Avg / school2Avg);
-    console.log(average);
 
     return {[school1Name]: school1Avg, [school2Name]: school2Avg, ['compared']: Math.round(average * 1000) / 1000};
   };
