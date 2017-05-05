@@ -1,27 +1,30 @@
 import React from 'react';
 import Card from './Card';
 
-const CardContainer = ({handleData}) => {
+const CardContainer = ({handleData, handleCompare, handleCompareData}) => {
   // const infoArray = Object.keys(handleData).map((districtObj) => {<Card location={handleData[districtObj.location]} data={handleData[districtObj.data]}/>})
   // console.log(infoArray);
-  const keys = Object.keys(handleData.district);
-  // console.log(handleData);
+  const keys = Object.keys(handleData);
+  console.log('compare data', handleCompareData);
+  console.log('data', handleData);
   return(
     // <section className='cardsContainer'>
     //   {infoArray}
     // </section>
-    <section className='cardsContainer'>
-      {keys.map((key, index) => {
-        return (
-          <div className='cards' key={handleData.district[key].location}>
-            {<Card
-              location={handleData.district[key].location}
-              data={handleData.district[key].data}
-             />}
-          </div>
-        );
-      })}
-    </section>
+      <section className='cardsContainer'>
+        {keys.map((key, index) => {
+          console.log('key', key);
+          return (
+            <div className='cards' key={handleData[key].location}>
+              {<Card
+                location={handleData[key].location}
+                data={handleData[key].data}
+                compare={handleCompare}
+               />}
+            </div>
+          );
+        })}
+      </section>
   )
 }
 

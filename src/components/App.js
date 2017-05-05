@@ -12,6 +12,7 @@ class App extends Component {
     super()
     this.state = {
       district: {},
+      compare: []
     }
   }
 
@@ -45,6 +46,13 @@ class App extends Component {
     })
   }
 
+  compareData(location) {
+    if(this.state.compare.length < 2) {
+      this.state.compare.push(district.findByName(location))
+      this.setState({compare: this.state.compare })
+    }
+  }
+
   render() {
     return (
       <div className='app'>
@@ -53,7 +61,10 @@ class App extends Component {
           handleSubmit={this.handleSubmit.bind(this)}
           handleSearch={this.handleMatches.bind(this)}
         />
-        <CardContainer handleData={this.state}/>
+        <CardContainer
+          handleData={this.state.district}
+          handleCompare={this.compareData.bind(this)}
+          handleCompareData={this.state.compare}/>
       </div>
     );
   }
