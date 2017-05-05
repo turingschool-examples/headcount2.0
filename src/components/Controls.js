@@ -39,7 +39,6 @@ export default class Controls extends Component {
       </div>
     )
   }
-
 }
 
 Controls.propTypes = {

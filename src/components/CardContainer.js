@@ -9,8 +9,12 @@ const CardContainer = ({handleData, handleCompare, handleCompareData}) => {
 
   return(
     <section className='cardsContainer'>
-      {compareArray}
-      {districtArray}
+      <div className='compareCards'>
+        {compareArray}
+      </div>
+      <div className='cardList'>
+        {districtArray}
+      </div>
     </section>
   )
 }
