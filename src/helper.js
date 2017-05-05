@@ -12,16 +12,12 @@ export default class DistrictRepository {
         acc[Location].location = Location;
         acc[Location].data = {};
       }
-        acc[Location].data[TimeFrame] = Math.round(Data * 1000) / 1000 || 0;
+        acc[Location].data[TimeFrame] = this.round(Data) || 0;
       return acc
     }, {});
   }
 
-  findByName(location) {
-    if (!location) {
-      return undefined;
-    }
-
+  findByName(location = '') {
     return this.data[location.toUpperCase()]
   }
 
@@ -32,9 +28,7 @@ export default class DistrictRepository {
       return matches;
     }
 
-    const found = matches.filter(name => {
-     return  name.includes(location.toUpperCase())
-    })
+    const found = matches.filter(name => name.includes(location.toUpperCase()))
 
     return found;
   }
@@ -46,15 +40,19 @@ export default class DistrictRepository {
       acc += school.data[key];
       return acc;
     },0)/keys.length;
-    return Math.round(total * 1000) / 1000;
+    return this.round(total);
   }
 
   compareDistrictAverages(location1, location2) {
     const district1 = this.findAverage(location1);
     const district2 = this.findAverage(location2);
     const divided = district1/district2;
-    const compare = Math.round(divided * 1000) / 1000;
+    const compare = this.round(divided);
     const result = {[location1.toUpperCase()]: district1, [location2.toUpperCase()]: district2, compared: compare};
-    return result
+    return result;
+  }
+
+  round(value) {
+    return Math.round(value * 1000) / 1000;
   }
 }

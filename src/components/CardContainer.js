@@ -2,7 +2,6 @@ import React from 'react';
 import Card from './Card';
 import PropTypes from 'prop-types';
 
-
 const CardContainer = ({handleData, handleCompare, handleCompareData}) => {
   const districtArray = Object.keys(handleData).map((districtObj) => <Card key={handleData[districtObj].location} {...handleData[districtObj]} handleCompare={handleCompare}/>);
 

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-
 export default class Controls extends Component {
   constructor() {
     super()
@@ -36,12 +35,13 @@ export default class Controls extends Component {
         <input className='submitButton'
           type='submit'
           onClick={() => this.submitDistrict()}
-             />
+        />
       </div>
     )
   }
 
 }
+
 Controls.propTypes = {
   handleSearch: PropTypes.func,
   handleSubmit: PropTypes.func,
