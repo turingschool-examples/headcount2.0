@@ -20,9 +20,10 @@ class App extends Component {
   }
 
   handleChange(userInput) {
-    console.log(this.renderedData)
-    const sortedData = this.renderedData.findAllMatches(userInput)
+    const renderedData = new DistrictRepository(kinderData);
+    const sortedData = renderedData.findAllMatches(userInput)
     this.setState({ data: sortedData });
+    console.log(this.state.data)
   }
 
   render() {

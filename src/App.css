@@ -70,6 +70,14 @@ h2 {
   background-color: #25435F;
 }
 
+.above {
+  color: green;
+}
+
+.below {
+  color: tomato;
+}
+
 .card-title {
   text-align: center;
   font-family: 'Roboto Slab', serif;
