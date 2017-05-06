@@ -5,7 +5,7 @@ const Card = ({school, data}) => {
   return(
   <div className='data-container'>
     {Object.keys(data[school].data).map((datapiece, index) => {
-      if(data[school].data >= 0.5) {
+      if(data[school].data[datapiece] > 0.5) {
         return(
             <p className='above' key={index}>{datapiece}: {data[school].data[datapiece]}</p>
         )
