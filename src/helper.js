@@ -44,6 +44,9 @@ export default class DistrictRepository {
   }
 
   compareDistrictAverages(location1, location2) {
+    if(!location1 || !location2) {
+      return null
+    }
     const district1 = this.findAverage(location1);
     const district2 = this.findAverage(location2);
     const divided = district1/district2;

@@ -12,7 +12,8 @@ class App extends Component {
     super()
     this.state = {
       district: {},
-      compare: []
+      compare: [],
+      comparison: '',
     }
   }
 
@@ -51,13 +52,23 @@ class App extends Component {
       this.updateCompare(location);
     } else {
       this.state.compare.shift();
-      this.updateCompare(location)
+      this.updateCompare(location);
     }
+    this.createComparison()
   }
 
   updateCompare(location) {
-    this.state.compare.push(district.findByName(location))
-    this.setState({compare: this.state.compare })
+    this.state.compare.push(district.findByName(location));
+    this.setState({compare: this.state.compare });
+  }
+
+  createComparison(){
+    if (this.state.compare.length === 2) {
+      const data = district.compareDistrictAverages(this.state.compare[0].location, this.state.compare[1].location)
+      this.state.compare.push(data)
+      this.setState({compare: this.state.compare})
+    }
+
   }
 
   render() {
@@ -71,7 +82,8 @@ class App extends Component {
         <CardContainer
           handleData={this.state.district}
           handleCompare={this.compareData.bind(this)}
-          handleCompareData={this.state.compare}/>
+          handleCompareData={this.state.compare}
+          handleComparison={this.state.comparison}/>
       </div>
     );
   }

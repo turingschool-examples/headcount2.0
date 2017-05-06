@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const Card = ({ location, data, handleCompare }) => {
+const Card = ({ location, data, handleCompare, compare }) => {
+  
   return (
     <div className='card' key={location} onClick={() => handleCompare(location)}>
       <h1 className='cardTitle'>
