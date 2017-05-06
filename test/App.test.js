@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import App from '../src/App';
 
 
@@ -25,9 +25,9 @@ describe('App', () => {
   });
 
   it('should render a Controls component', () => {
-    const wrapper = shallow(<App />);
+    const wrapper = mount(<App />);
 
-    expect(wrapper.find('Controls').length).toEqual(1)
+    expect(wrapper.find('.controls-container').length).toEqual(1)
   });
 
   it('has a default state containing data that is an empty object', () => {

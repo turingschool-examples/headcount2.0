@@ -7,23 +7,23 @@ import kinderData from '../data/kindergartners_in_full_day_program.js';
 
 
 describe ('Card', () => {
-  // 
-  // it('renders without crashing', () => {
-  //   const div = document.createElement('div');
-  //   ReactDOM.render(<Card school={() => {}} data={() => {}}/>, div);
-  // });
 
-  // it('renders data inside <p> tags', () => {
-  //   const wrapper = shallow(<App />);
-  //   const welcome = <h2>Welcome To Headcount 2.0</h2>;
-  //
-  //   expect(wrapper.contains(welcome)).toEqual(true);
-  // })
+  it.skip('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<Card data={() => {}}/>, div);
+  });
 
-  // it('button should have a class of input-field', () => {
-  //   const wrapper = shallow(<Controls />);
-  //
-  //   expect(wrapper.find('button').hasClass('filter-btn')).toEqual(true);
-  // })
+  it.skip('renders data inside <p> tags', () => {
+    const wrapper = shallow(<App />);
+    const welcome = <h2>Welcome To Headcount 2.0</h2>;
+
+    expect(wrapper.contains(welcome)).toEqual(true);
+  })
+
+  it.skip('button should have a class of input-field', () => {
+    const wrapper = shallow(<Controls />);
+
+    expect(wrapper.find('button').hasClass('filter-btn')).toEqual(true);
+  })
 
 })
