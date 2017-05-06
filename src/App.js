@@ -23,7 +23,7 @@ class App extends Component {
     const renderedData = new DistrictRepository(kinderData);
     const sortedData = renderedData.findAllMatches(userInput)
     this.setState({ data: sortedData });
-    console.log(this.state.data)
+    console.log(renderedData)
   }
 
   render() {

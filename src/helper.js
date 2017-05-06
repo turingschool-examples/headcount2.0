@@ -53,10 +53,10 @@ export default class DistrictRepository {
 
       districtKeys.forEach((key) => {
         if(input == null){
-          searchedKeys.push({[key]:this.data[key]})
+          searchedKeys.push(this.data[key])
         }
         else if(key.toLowerCase().includes(input.toLowerCase())) {
-         searchedKeys.push({[key]:this.data[key]})
+         searchedKeys.push(this.data[key])
         }
       })
       return searchedKeys

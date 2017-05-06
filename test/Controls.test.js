@@ -23,16 +23,4 @@ describe ('Controls', () => {
     expect(wrapper.find('input').hasClass('input-field')).toEqual(true);
   })
 
-  it('should have one button', () => {
-    const wrapper = shallow(<Controls />);
-
-    expect(wrapper.find('button').length).toEqual(1);
-  });
-
-  it('button should have a class of input-field', () => {
-    const wrapper = shallow(<Controls />);
-
-    expect(wrapper.find('button').hasClass('filter-btn')).toEqual(true);
-  })
-
 })
