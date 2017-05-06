@@ -12,36 +12,50 @@ export default class DistrictRepository {
         acc[Location].location = Location;
         acc[Location].data = {};
       }
-        acc[Location].data[TimeFrame] = Math.round(Data * 1000) / 1000 || 0;
+        acc[Location].data[TimeFrame] = this.round(Data) || 0;
       return acc
     }, {});
   }
 
-  findByName(location) {
-    if (!location) {
-      return undefined;
-    }
-
-    // let school = Object.keys(this.data).filter(key => {
-    //   return key.toLowerCase() === location.toLowerCase() ? this.data[key] : undefined;
-    // });
+  findByName(location = '') {
     return this.data[location.toUpperCase()]
   }
 
   findAllMatches(location){
-    const matches = Object.keys(this.data).map(key => {
-      return this.data[key];
-    })
+    const matches = Object.keys(this.data);
 
     if(!location) {
       return matches;
     }
 
-    return matches.filter(obj => {
-      return obj
-        .location
-        .toLowerCase()
-        .includes(location.toLowerCase())
-    })
+    const found = matches.filter(name => name.includes(location.toUpperCase()))
+
+    return found;
+  }
+
+  findAverage(location) {
+    const school = this.findByName(location);
+    const keys = Object.keys(school.data);
+    const total = keys.reduce((acc, key) => {
+      acc += school.data[key];
+      return acc;
+    },0)/keys.length;
+    return this.round(total);
+  }
+
+  compareDistrictAverages(location1, location2) {
+    if(!location1 || !location2) {
+      return null
+    }
+    const district1 = this.findAverage(location1);
+    const district2 = this.findAverage(location2);
+    const divided = district1/district2;
+    const compare = this.round(divided);
+    const result = {[location1.toUpperCase()]: district1, [location2.toUpperCase()]: district2, compared: compare};
+    return result;
+  }
+
+  round(value) {
+    return Math.round(value * 1000) / 1000;
   }
 }
