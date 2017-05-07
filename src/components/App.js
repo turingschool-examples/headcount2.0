@@ -74,7 +74,7 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
-        Welcome To Headcount 2.0
+        <h1 className='headline'>Welcome To Headcount 2.0</h1>
         <Controls
           handleSubmit={this.handleSubmit.bind(this)}
           handleSearch={this.handleMatches.bind(this)}

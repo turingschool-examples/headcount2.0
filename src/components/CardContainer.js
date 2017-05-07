@@ -1,11 +1,23 @@
 import React from 'react';
 import Card from './Card';
 import PropTypes from 'prop-types';
+import CompareCard from './CompareCard';
 
 const CardContainer = ({handleData, handleCompare, handleCompareData, handleComparison}) => {
   const districtArray = Object.keys(handleData).map((districtObj) => <Card key={handleData[districtObj].location} {...handleData[districtObj]} handleCompare={handleCompare}/>);
 
-  const compareArray = handleCompareData.map((compareObj) => <Card key={compareObj.location} {...compareObj}/>);
+  const compareArray = handleCompareData.map((compareObj, index) => {
+    if (index === 2) {
+      return (
+      <CompareCard key={index} {...compareObj} />
+      )
+    }
+    return (
+    <Card key={compareObj.location} handleCompare={handleCompare} {...compareObj}/>
+    )
+
+  })
+
   console.log('handleCompareData', handleCompareData);
 
   // const comparisonArray = Object.keys(handleComparison).map((obj) => <Card {...obj}/>)
