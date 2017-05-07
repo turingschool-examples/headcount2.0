@@ -1,1 +1,13 @@
 /*APP COMPONENT RELATED CSS GOES HERE*/
+.negative {
+  color: magenta;
+}
+
+.positive {
+  color: aqua;
+}
+
+.card {
+  border: 1px solid black;
+  width: 300px;
+}
