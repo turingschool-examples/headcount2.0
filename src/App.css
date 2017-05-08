@@ -39,3 +39,7 @@ body {
   border: 1px solid black;
   width: 300px;
 }
+
+.active {
+  background-color: #bdbdbd;
+}

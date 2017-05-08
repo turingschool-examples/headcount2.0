@@ -51,15 +51,18 @@ class App extends Component {
     if (this.state.compare.length < 2) {
       this.updateCompare(location);
     } else {
-      this.state.compare.shift();
-      this.updateCompare(location);
+      // this.state.compare.shift();
+      const newCompare = this.state.compare.filter((locationObj, index) =>
+      { return locationObj.location === location || locationObj.compared });
+
+      this.setState({compare: newCompare})
     }
     this.createComparison()
   }
 
   updateCompare(location) {
-    this.state.compare.push(district.findByName(location));
-    this.setState({compare: this.state.compare });
+    this.state.compare.unshift(district.findByName(location));
+    this.setState({compare: this.state.compare});
   }
 
   createComparison(){

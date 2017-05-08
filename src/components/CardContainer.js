@@ -13,7 +13,7 @@ const CardContainer = ({handleData, handleCompare, handleCompareData, handleComp
       )
     }
     return (
-    <Card key={compareObj.location} handleCompare={handleCompare} {...compareObj}/>
+    <Card key={compareObj.location} active={true} handleCompare={handleCompare} {...compareObj}/>
     )
 
   })
