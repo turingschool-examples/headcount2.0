@@ -8,7 +8,7 @@ const CompareCard = (props) => {
     )
   })
   return (
-    <article className='card'>
+    <article className='card compareCard active'>
       {displayCompareCard}
     </article>
   )

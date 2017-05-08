@@ -51,9 +51,8 @@ class App extends Component {
     if (this.state.compare.length < 2) {
       this.updateCompare(location);
     } else {
-      // this.state.compare.shift();
       const newCompare = this.state.compare.filter((locationObj, index) =>
-      { return locationObj.location === location || locationObj.compared });
+      { return !locationObj.compared && locationObj.location !== location });
 
       this.setState({compare: newCompare})
     }

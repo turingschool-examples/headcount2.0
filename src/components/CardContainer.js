@@ -18,10 +18,6 @@ const CardContainer = ({handleData, handleCompare, handleCompareData, handleComp
 
   })
 
-  console.log('handleCompareData', handleCompareData);
-
-  // const comparisonArray = Object.keys(handleComparison).map((obj) => <Card {...obj}/>)
-
   return(
     <section className='cardsContainer'>
       <div className='compareCards'>
