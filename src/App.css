@@ -3,6 +3,9 @@ body {
   align-items: center;
   justify-content: center;
   font-family: 'Open Sans', sans-serif;
+  background: #517fa4;
+  background: -webkit-linear-gradient(to bottom, #517fa4, #243949);
+  background: linear-gradient(to bottom, #517fa4, #243949);
 }
 
 .headline {
@@ -48,9 +51,19 @@ body {
   color: blue;
 }
 
+li {
+  list-style-type: none;
+}
+
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
   border: 1px solid black;
-  width: 300px;
+  width: 400px;
+  height: 350px;
+  background: #ffffff;
 }
 
 .active {
