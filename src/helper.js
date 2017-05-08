@@ -51,7 +51,7 @@ export default class DistrictRepository {
     const district2 = this.findAverage(location2);
     const divided = district1/district2;
     const compare = this.round(divided);
-    const result = {[location1.toUpperCase()]: district1, [location2.toUpperCase()]: district2, compared: compare};
+    const result = {[location1.toUpperCase()]: district1, [location2.toUpperCase()]: district2, COMPARED: compare};
     return result;
   }
 
