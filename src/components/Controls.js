@@ -9,11 +9,6 @@ export default class Controls extends Component {
     }
   }
 
-  submitDistrict() {
-    this.props.handleSubmit(this.state.location);
-    this.setState({location: ''});
-  }
-
   search() {
     this.props.handleSearch(this.state.location);
   }
@@ -31,10 +26,6 @@ export default class Controls extends Component {
           placeholder='Please enter a school district'
           value={this.state.location}
           onChange={(e) => this.handleOnChange(e)}
-        />
-        <input className='submitButton'
-          type='submit'
-          onClick={() => this.submitDistrict()}
         />
       </div>
     )

@@ -88,3 +88,9 @@ li {
 .active:nth-of-type(2) {
   order: 3;
 }
+
+.comparedStats {
+  color: #4b0082;
+  font-size: 24px;
+  font-weight: 700;
+}

@@ -4,7 +4,7 @@ import React from 'react';
 const CompareCard = (props) => {
   const displayCompareCard = Object.keys(props).map((key, index) => {
     return (
-      <p key={index}>{key}: {props[key]}</p>
+      <p key={index} className='comparedStats'>{key}: {props[key]}</p>
     )
   })
   return (
