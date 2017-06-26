@@ -1,7 +1,7 @@
 export default class DistrictRepository {
   constructor(data) {
     this.data = this.normalize(data);
-    console.log(this.data);
+    // console.log(this.data);
   }
 
   normalize(data) {
@@ -12,7 +12,9 @@ export default class DistrictRepository {
           data: {}
         };
       }
-      dataObj[e.Location].data[e.TimeFrame] = e.Data;
+
+      const data = parseFloat(e.Data) ? Math.round(e.Data * 1000) / 1000 : 0;
+      dataObj[e.Location].data[e.TimeFrame] = data;
 
 
       // const keys = Object.keys(e).map(key =>
@@ -23,8 +25,14 @@ export default class DistrictRepository {
   }
 
   findByName(name) {
+    if (name === undefined) {
+      return undefined
+    }
+
     let lowCaseName = name.toLowerCase();
-    let keys = Object.keys(this.data).map(e => e.toLowerCase())
-    return this.data[name]
+    const place = Object.keys(this.data).find(e => {
+      return e.toLowerCase() === lowCaseName;
+    });
+    return this.data[place]
   }
 }
