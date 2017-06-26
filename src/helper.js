@@ -4,32 +4,19 @@ export default class DistrictRepository {
   }
 
   normalize(data) {
-    // return data.reduce((dataObj, e))
-
-
-
-
-    return data.reduce((acc, e, i) => {
-      let index = acc.findIndex(accE => {
-        return accE.location === e.Location
-      })
-
-      if (index === -1) {
-        acc[acc.length] = {
-          location: e.Location,
-          data: [{
-            timeFrame: e.TimeFrame,
-            data: e.Data,
-          }],
-        }
-      } else {
-        acc[index].data.push({
-          timeFrame: e.TimeFrame,
-          data: e.Data,
-        });
+    return data.reduce((dataObj, e) => {
+      if (!dataObj[e.Location]) {
+        dataObj[e.Location] = [];
       }
+      dataObj[e.Location].push({ location: e.Location,
+                                 timeFrame: e.TimeFrame,
+                                 data: e.Data});
 
-      return acc;
-    }, []);
+
+      // const keys = Object.keys(e).map(key =>
+      //     [key.charAt(0).toLowerCase(),
+      //     ...key.slice(1)].join(''));
+      return dataObj;
+    }, {})
   }
 }
