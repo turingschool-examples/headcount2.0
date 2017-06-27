@@ -4,19 +4,18 @@ export default class DistrictRepository {
   }
 
   reducedData(data) {
-    let newData = data.reduce((accum, object) => {
+    return data.reduce((accum, object) => {
       let { Location, TimeFrame, Data } = object;
 
       if(!accum[Location]) {
         accum[Location] = {
           location: Location,
-          data: {}
+          annualData: {}
         }
       }
-      accum[Location].data[TimeFrame] = this.sanitizedData(Data)
+      accum[Location].annualData[TimeFrame] = this.sanitizedData(Data)
       return accum
     },{})
-    return newData
   }
 
   findByName(location) {
@@ -26,7 +25,6 @@ export default class DistrictRepository {
     let school = Object.keys(this.data).find(place => {
       return location.toLowerCase() === place.toLowerCase()
     })
-    console.log(this.data[school]);
     return this.data[school];
   }
 
@@ -36,6 +34,23 @@ export default class DistrictRepository {
     } else {
       return 0
     }
+  }
+
+  findAllMatches(input = '') {
+    const schoolKeys = Object.keys(this.data)
+
+    const newArray = schoolKeys.map(school => {
+      return school.toLowerCase()
+    })
+
+    return newArray.filter(location => {
+      let searchInput = input.toLowerCase()
+      if (searchInput === '') {
+        return true
+      } else if (location.split(' ').includes(searchInput)) {
+        return true
+      }
+    })
   }
 
 }
