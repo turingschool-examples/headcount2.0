@@ -2,6 +2,11 @@ import React from 'react';
 import Graph from './Graph'
 
 const Card = ({ city, clickActive }) => {
+
+  const clickColor = (number) => {
+    return number > .5 ? 'green' : 'red';
+  }
+
   return (
     <div className='card' onClick= {() => clickActive(city.location)}>
 
@@ -14,7 +19,10 @@ const Card = ({ city, clickActive }) => {
             return (
                 <tr key={date}>
                   <td>{date}</td>
-                  <td>{city.data[date]}</td>
+                  <td> : </td>
+                  <td className={clickColor(city.data[date])}>
+                    {city.data[date]}
+                  </td>
                 </tr>
             )
           })

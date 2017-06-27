@@ -4,16 +4,36 @@ body {
   font-family: sans-serif;
 }
 
+h1 {
+  font-size: 1em;
+  height: 50px;
+  align-self: center;
+}
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 .card {
-  max-width: 200px;
-  background-color: red;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  border: solid 1px black;
+  padding: 5px;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
 }
 
 .card p {
-  
+
 }
