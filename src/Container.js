@@ -1,10 +1,10 @@
 import React from 'react';
 import Card from './Card';
 
-const Container = ({ data }) => {
+const Container = ({ data, clickActive }) => {
   const iterator = Object.keys(data).map(key => {
       return (
-        <Card city= {data[key]} key={key} />
+        <Card city= {data[key]} key={key} clickActive={clickActive} />
     )
   })
 
