@@ -10,15 +10,18 @@ export default class Search extends Component {
   }
 
   handleSearchInput(e) {
-    this.setState({searchInput: e.target.value})
   }
 
   render() {
+    const { filterSearch } = this.props;
+
     return (
       <div>
         <input type="text"
           placeholder="Search"
-          onKeyDown={this.handleSearchInput.bind(this)}/>
+          onKeyDown={
+            (e) => filterSearch(e.target.value)
+          }/>
         <input type="submit" />
       </div>
     )

@@ -32,7 +32,7 @@ export default class DistrictRepository {
   }
 
   findAllMatches(name) {
-    const lowCaseName = name === undefined ? '' : name.toLowerCase()
+    const lowCaseName = name === undefined ? '' : name.toLowerCase();
     return Object.keys(this.data).filter(e => {
       const index = e.toLowerCase().indexOf(lowCaseName);
       return lowCaseName === '' ? true : index >= 0;

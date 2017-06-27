@@ -8,28 +8,35 @@ import Search from './Search';
 class App extends Component {
   constructor() {
     super();
-    this.state = {data: {}};
+    this.state = {
+      districtRepository: {},
+      filteredData: []
+    };
   }
 
-  componentDidMount() {
-    const initialState = new DistrictRepository(kinderData)
-    const data = initialState
-    this.setState({data: initialState})
+  componentWillMount() {
+    const initialState = new DistrictRepository(kinderData);
+    const filteredData = initialState.findAllMatches()
+    this.setState({
+      districtRepository: initialState,
+      filteredData
+    });
   }
 
   filterSearch(searchInput) {
-    // console.log(this.state.data)
+    const filteredData = this.state.districtRepository.findAllMatches(searchInput);
+    this.setState({filteredData})
   }
 
 
   render() {
-    this.filterSearch('Colorado')
-    const {data} = this.state
-    console.log(data);
+    const { districtRepository: {data}, filteredData } = this.state;
+    const displayData = filteredData.map(e => data[e]);
+
     return (
       <div>
-        <Search />
-        <Container data={data}/>
+        <Search filterSearch={this.filterSearch.bind(this)}/>
+        <Container data={displayData}/>
       </div>
     )
   }
