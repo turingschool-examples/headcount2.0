@@ -42,22 +42,18 @@ export default class DistrictRepository {
 
   findAverage(city) {
     const cityToAvg = this.findByName(city).data;
-    console.log(cityToAvg);
     const keys = Object.keys(cityToAvg);
 
-    return Math.round((keys.reduce((accu, elem) => accu + cityToAvg[elem], 0) / keys.length) *1000) / 1000 ;
-
-
-
-
-    return keys.reduce((accu, elem, index, array) => {
-      console.log(elem)
-      accu += cityToAvg[elem];
-      return accu
-    }, 0) / keys.length;
+    return Math.round((keys.reduce((accu, elem) => accu + cityToAvg[elem], 0) / keys.length) * 1000) / 1000 ;
   }
 
-  compareDistrictAverages() {
-
+  compareDistrictAverages(city1, city2) {
+    const city1Avg = this.findAverage(city1);
+    const city2Avg = this.findAverage(city2);
+    return {
+      [city1.toUpperCase()]: city1Avg,
+      [city2.toUpperCase()]: city2Avg,
+      compared: Math.round(city1Avg / city2Avg * 1000) / 1000,
+    }
   }
 }
