@@ -23,7 +23,6 @@ class App extends Component {
     const {data} = this.state
     return (
       <div>
-        Hello
         <Container data={data}/>
       </div>
     )
