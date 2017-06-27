@@ -4,15 +4,19 @@ export default class DistrictRepository {
   }
 
   reducedData(data) {
-    return data.reduce((accum, object) => {
-      if(!accum[object.Location]) {
-        accum[object.Location] = {
-          location: object.Location,
+    let newData = data.reduce((accum, object) => {
+      let { Location, TimeFrame, Data } = object;
+
+      if(!accum[Location]) {
+        accum[Location] = {
+          location: Location,
           data: {}
         }
       }
+      accum[Location].data[TimeFrame] = this.sanitizedData(Data)
       return accum
     },{})
+    return newData
   }
 
   findByName(location) {
@@ -22,6 +26,16 @@ export default class DistrictRepository {
     let school = Object.keys(this.data).find(place => {
       return location.toLowerCase() === place.toLowerCase()
     })
+    console.log(this.data[school]);
     return this.data[school];
   }
+
+  sanitizedData(data) {
+    if (typeof data === 'number') {
+      return Math.round(data * 1000) / 1000
+    } else {
+      return 0
+    }
+  }
+
 }
