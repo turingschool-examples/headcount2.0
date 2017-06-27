@@ -1,21 +1,23 @@
 import React from 'react';
-
+import Graph from './Graph'
 
 const Card = ({ city }) => {
-  // console.log(data);
   return (
-    <div>
+    <div className='card'>
       <h1>{city.location}</h1>
+      <Graph data={city.data}/>
+      <table>
       {
         Object.keys(city.data).map(date => {
           return (
-            <div>
-              <p>{date}</p>
-              <p>{city.data[date]}</p>
-            </div>
+              <tr>
+                <td>{date}</td>
+                <td>{city.data[date]}</td>
+              </tr>
           )
         })
       }
+      </table>
     </div>
   )
 }
