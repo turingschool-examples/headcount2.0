@@ -1,39 +1,26 @@
-import * as d3 from 'd3';
-import React from 'react';
+import React, { Component } from 'react';
+import { ScatterChart, Scatter, CartesianGrid, Tooltip, Legend,
+ XAxis, YAxis, ZAxis, ReferenceLine, ReferenceDot, ReferenceArea, ErrorBar } from 'recharts';
 
-
-// Returns the largest X coordinate from the data set
-// const xMax = (data)  => d3.max(data, (d) => d[0]);
-//
-// // Returns the higest Y coordinate from the data set
-// const yMax = (data)  => d3.max(data, (d) => d[1]);
-//
-// // Returns a function that "scales" X coordinates from the data to fit the chart
-// const xScale = (props) => {
-//   return d3.scale.linear()
-//     .domain([0, xMax(props.data)])
-//     .range([props.padding, props.width - props.padding * 2]);
-// };
-//
-// // Returns a function that "scales" Y coordinates from the data to fit the chart
-// const yScale = (props) => {
-//   return d3.scale.linear()
-//     .domain([0, yMax(props.data)])
-//     .range([props.height - props.padding, props.padding]);
-// };
-const width = 200;
-const height = 100;
 
 const Graph = ({data}) => {
-  // const scales = { xScale: xScale(props), yScale: yScale(props) };
-  // console.log(props)
+  const keys = Object.keys(data)
+  const dataNorm = keys.reduce((arr, e) => {
+    arr.push({
+      year: e,
+      data: data[e]
+    })
+    return arr
+  }, [])
 
   return (
-    <div>
-      <svg width={width} height={height}>
-        <rect width='100%' height='100%' fill='blue'/>
-      </svg>
-    </div>
+      <ScatterChart width={200} height={100} margin={{ top: 10, right: 0, bottom: 0, left: 0 }}>
+        <XAxis dataKey="year" name="year" />
+        <YAxis dataKey="data" name="data" />
+        <CartesianGrid />
+        <Tooltip cursor={{ stroke: '#808080', strokeDasharray: '5 5' }}/>
+        <Scatter line shape="square" legendType="square" data={dataNorm} fill="#347300" />
+      </ScatterChart>
   )
 }
 
