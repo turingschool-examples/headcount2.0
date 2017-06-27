@@ -7,16 +7,18 @@ const Card = ({ city }) => {
       <h1>{city.location}</h1>
       <Graph data={city.data}/>
       <table>
-      {
-        Object.keys(city.data).map(date => {
-          return (
-              <tr>
-                <td>{date}</td>
-                <td>{city.data[date]}</td>
-              </tr>
-          )
-        })
-      }
+        <tbody>
+        {
+          Object.keys(city.data).map(date => {
+            return (
+                <tr key={date}>
+                  <td>{date}</td>
+                  <td>{city.data[date]}</td>
+                </tr>
+            )
+          })
+        }
+      </tbody>
       </table>
     </div>
   )

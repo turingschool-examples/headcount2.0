@@ -4,7 +4,7 @@ import Card from './Card';
 const Container = ({ data }) => {
   const iterator = Object.keys(data).map(key => {
       return (
-        <Card city= {data[key]} />
+        <Card city= {data[key]} key={key} />
     )
   })
 
