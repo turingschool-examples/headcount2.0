@@ -1,0 +1,16 @@
+
+.card {
+  width: 150px;
+  border: 1px solid black;
+  font-size: 10px;
+  text-align: center;
+  margin: 2%;
+}
+
+.less-than {
+  color: red;
+}
+
+.greater-than {
+  color: green;
+}
