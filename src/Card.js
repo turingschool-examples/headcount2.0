@@ -6,7 +6,9 @@ const Card = ({ city, clickActive }) => {
     <div className='card' onClick= {() => clickActive(city.location)}>
 
       <h1>{city.location}</h1>
-      <Graph data={city.data}/>
+        <div style={{backgroundColor: 'white'}}>
+          <Graph data={city.data}/>
+        </div>
       <table>
         <tbody>
         {
