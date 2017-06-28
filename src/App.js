@@ -3,6 +3,7 @@ import './App.css';
 import DistrictRepository from './helper';
 import kinderData from '../data/kindergartners_in_full_day_program';
 import Container from './Container';
+import CompareContainer from './CompareContainer';
 import Search from './Search';
 
 class App extends Component {
@@ -11,7 +12,7 @@ class App extends Component {
     this.state = {
       districtRepository: {},
       filteredData: [],
-      activeCards: {}
+      activeCards: {},
     };
   }
 
@@ -20,27 +21,34 @@ class App extends Component {
     const filteredData = initialState.findAllMatches()
     this.setState({
       districtRepository: initialState,
-      filteredData
+      filteredData,
     });
   }
 
   filterSearch(searchInput) {
     const filteredData = this.state.districtRepository.findAllMatches(searchInput);
-    this.setState({filteredData})
+    this.setState({filteredData});
   }
 
   clickActive(location) {
     const { districtRepository: { data }, activeCards } = this.state;
     let newStateObj = Object.assign({}, { [location]: data[location] }, activeCards);
 
-    if (activeCards[location]) {
+    if (activeCards[location] || Object.keys(activeCards).length >= 2) {
       delete newStateObj[location];
     }
-    this.setState({activeCards: newStateObj})
 
-    if (Object.keys(activeCards).length < 2) {
+    this.setState({activeCards: newStateObj});
+  }
+
+  compareAverage() {
+    const { districtRepository: { data }, activeCards } = this.state;
+    const citiesToCompare = Object.keys(activeCards);
+    console.log(activeCards);
+    if (citiesToCompare.length === 2) {
+      console.log(citiesToCompare.map(e => activeCards[e]));
+
     }
-
   }
 
 
@@ -53,6 +61,7 @@ class App extends Component {
         <Search filterSearch={this.filterSearch.bind(this)}/>
         <Container data={activeCards}
                    clickActive={this.clickActive.bind(this)}
+                   compareAverage={this.compareAverage.bind(this)}
                    className='compare-container'/>
         <Container data={displayData}
                    clickActive={this.clickActive.bind(this)}

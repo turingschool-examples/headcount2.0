@@ -11,7 +11,7 @@ const Card = ({ city, clickActive }) => {
     <div className='card' onClick= {() => clickActive(city.location)}>
 
       <h1>{city.location}</h1>
-        <div style={{backgroundColor: 'white'}}>
+        <div>
           <Graph data={city.data}/>
         </div>
       <table>

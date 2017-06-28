@@ -10,7 +10,7 @@ export default class DistrictRepository {
       if (!dataObj[e.Location]) {
         dataObj[e.Location] = {
           location: e.Location,
-          data: {}
+          data: {},
         };
       }
       dataObj[e.Location].data[e.TimeFrame] = data;
@@ -28,11 +28,10 @@ export default class DistrictRepository {
     const place = Object.keys(this.data).find(e => {
       return e.toLowerCase() === lowCaseName;
     });
-    return this.data[place]
+    return this.data[place];
   }
 
   findAllMatches(name) {
-    // this.findAverage('colorado');
     const lowCaseName = name === undefined ? '' : name.toLowerCase();
     return Object.keys(this.data).filter(e => {
       const index = e.toLowerCase().indexOf(lowCaseName);
@@ -44,7 +43,7 @@ export default class DistrictRepository {
     const cityToAvg = this.findByName(city).data;
     const keys = Object.keys(cityToAvg);
 
-    return Math.round((keys.reduce((accu, elem) => accu + cityToAvg[elem], 0) / keys.length) * 1000) / 1000 ;
+    return Math.round((keys.reduce((accu, elem) => accu + cityToAvg[elem], 0) / keys.length) * 1000) / 1000;
   }
 
   compareDistrictAverages(city1, city2) {

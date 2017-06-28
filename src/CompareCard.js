@@ -1,6 +1,7 @@
 import React from 'react';
 
-const CompareCard = () => {
+const CompareCard = ({compareAverage}) => {
+  compareAverage()
   return (
     <div>
       <h1>place 1</h1>
