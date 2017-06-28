@@ -2,7 +2,6 @@ import React from 'react';
 import './Card.css';
 
 const Card = ({schoolNames, helper}) => {
-  // console.log(helper.data[schoolNames].location);
   const schoolName = helper.data[schoolNames].location;
   const annualData = helper.data[schoolNames].annualData;
   return (
@@ -11,11 +10,15 @@ const Card = ({schoolNames, helper}) => {
       {Object.keys(annualData).map((year, index) => {
         if (annualData[year] <= 0.5) {
           return (
-            <p key={index} className="less-than">{year}: {annualData[year]}</p>
+            <ul>
+              <li><p className="less-than data">{year}: {annualData[year]}</p></li>
+            </ul>
           )
         } else {
           return (
-            <p key={index} className="greater-than">{year}: {annualData[year]}</p>
+            <ul>
+              <li><p className="greater-than data">{year}: {annualData[year]}</p></li>
+            </ul>
           )
         }
       })}

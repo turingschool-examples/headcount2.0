@@ -6,15 +6,22 @@ const CardList = ({selectedCards, filteredCards, helper}) => {
 
   if (!filteredCards.length) {
     return(
-      <div className="card-list">
-        {Object.keys(helper.data).map((school, index) => {
-          return(
-            <Card schoolNames={school}
-                  helper={helper}
-                  key={index}/>
-          )
-        })}
-      </div>
+      <section>
+        <div className="header-container">
+          <div className="apple"></div>
+          <div className="header">Headcount 2.0</div>
+          <div className="bus"></div>  
+        </div>
+        <div className="card-list">
+          {Object.keys(helper.data).map((school, index) => {
+            return(
+              <Card schoolNames={school}
+                    helper={helper}
+                    key={index}/>
+            )
+          })}
+        </div>
+      </section>
     )
   } else {
     console.log(filteredCards);
@@ -22,8 +29,7 @@ const CardList = ({selectedCards, filteredCards, helper}) => {
     return(
       <div className="card-list">
         {filteredCards.map((school, index) => {
-          // let upperCaseSchool = school.toUpperCase()
-
+      
           return(
             <Card schoolNames={school}
                   helper={helper}
