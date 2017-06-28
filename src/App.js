@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import Card from './Card'
 import DistrictRepository from './helper'
 import CardList from './CardList'
 import Input from './Input'
 import kinderData from '../data/kindergartners_in_full_day_program';
+
+
 
 class App extends Component {
   constructor () {
@@ -16,18 +17,18 @@ class App extends Component {
     }
   }
 
-  sumbitSearch() {
-    console.log('Werd')
-    // const newState = [...this.state.filteredCards, this.helper.findAllMatches(this.state.searchInput)]
-    // this.setState({filteredCards: newState})
+  submitSearch(searchInput) {
+    const newState = this.helper.findAllMatches(searchInput)
+    this.setState({filteredCards: newState})
   }
 
   render() {
     return (
       <div>
         <Input helper={this.helper}
-               submitSearch={this.submitSearch}/>
+               submitSearch={this.submitSearch.bind(this)}/>
         <CardList selectedCards={this.state.selectedCards}
+                  filteredCards={this.state.filteredCards}
                   helper={this.helper}/>
       </div>
     );

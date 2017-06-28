@@ -6,22 +6,22 @@ class Input extends Component {
     this.state = {
       searchInput: '',
     }
-    // this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleSubmit() {
-    this.props.sumbitSearch(this.state)
+  handleSubmit(searchInput) {
+    this.props.submitSearch(searchInput)
     this.setState({
       searchInput: ''
     })
-    console.log('Triggered');
   }
 
   render() {
     return(
       <div>
-        <input value={this.state.searchInput} onChange={(e) => this.setState({searchInput: e.target.value})}/>
-        <button onClick={() => {this.handleSubmit()}}>Submit</button>
+        <input value={this.state.searchInput}
+               onChange={(e) => this.setState({searchInput: e.target.value})}/>
+             <button onClick={() => {this.handleSubmit(this.state.searchInput)}}>Submit</button>
       </div>
     )
   }

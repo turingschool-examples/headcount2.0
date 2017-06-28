@@ -9,7 +9,7 @@ export default class DistrictRepository {
 
       if(!accum[Location]) {
         accum[Location] = {
-          location: Location,
+          location: Location.toLowerCase(),
           annualData: {}
         }
       }
@@ -43,13 +43,9 @@ export default class DistrictRepository {
       return school.toLowerCase()
     })
 
-    return newArray.filter(location => {
+    return schoolKeys.filter(location => {
       let searchInput = input.toLowerCase()
-      if (searchInput === '') {
-        return true
-      } else if (location.split(' ').includes(searchInput)) {
-        return true
-      }
+      return location.toLowerCase().indexOf(searchInput) >= 0;
     })
   }
 
