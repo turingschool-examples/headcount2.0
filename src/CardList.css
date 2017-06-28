@@ -1,0 +1,48 @@
+body {
+  background: #5bc5ef;
+}
+
+.card-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.header {
+  font-family: 'Just Me Again Down Here', cursive;  color: white;
+  font-size: 120px;
+  text-align: center;
+  margin: 0 20px;
+}
+
+.apple {
+  /*background-image: url(https://www.clipartsgram.com/image/696298155-school-bus-side.png);*/
+  background-image: url(http://www.misskatecuttables.com/uploads/shopping_cart/8039/large_worm-in-apple.png);
+  height: 120px;
+  width: 120px;
+  margin-bottom: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bus {
+  background-image: url(https://www.clipartsgram.com/image/696298155-school-bus-side.png);
+  height: 140px;
+  width: 120px;
+  margin-bottom: -10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*.apple {
+  background-image: url(http://www.misskatecuttables.com/uploads/shopping_cart/8039/large_worm-in-apple.png);
+  width: 60px;
+}*/
