@@ -7,6 +7,7 @@ const Card = ({ city, clickActive }) => {
     return number > .5 ? 'green' : 'red';
   }
 
+  // console.log(city)
   return (
     <div className='card' onClick= {() => clickActive(city.location)}>
 
