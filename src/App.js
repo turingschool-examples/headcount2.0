@@ -30,9 +30,17 @@ class App extends Component {
   }
 
   clickActive(location) {
-    const { districtRepository: { data }, activeCards } = this.state
-    const newStateObj = Object.assign({}, { [location]: data[location] }, activeCards)
+    const { districtRepository: { data }, activeCards } = this.state;
+    let newStateObj = Object.assign({}, { [location]: data[location] }, activeCards);
+
+    if (activeCards[location]) {
+      delete newStateObj[location];
+    }
     this.setState({activeCards: newStateObj})
+
+    if (Object.keys(activeCards).length < 2) {
+    }
+
   }
 
 
