@@ -4,10 +4,9 @@ import './Card.css';
 const Card = ({schoolNames, helper}) => {
   const schoolName = helper.data[schoolNames].location;
   const annualData = helper.data[schoolNames].annualData;
-  console.log(annualData);
   return (
     <div className="card">
-      <h1>{schoolName}</h1>
+      <h1>{schoolName.toUpperCase()}</h1>
       {Object.keys(annualData).map((year, index) => {
         if (annualData[year] <= 0.5) {
           return (
