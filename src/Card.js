@@ -4,7 +4,6 @@ import './Card.css';
 const Card = ({schoolNames, helper}) => {
   const schoolName = helper.data[schoolNames].location;
   const annualData = helper.data[schoolNames].annualData;
-  console.log(annualData);
   return (
     <div className="card">
       <h1>{schoolName}</h1>
