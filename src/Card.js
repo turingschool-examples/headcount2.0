@@ -1,5 +1,4 @@
 import React from 'react';
-import Graph from './Graph'
 
 const Card = ({ city, clickActive }) => {
 
@@ -12,9 +11,6 @@ const Card = ({ city, clickActive }) => {
     <div className='card' onClick= {() => clickActive(city.location)}>
 
       <h1>{city.location}</h1>
-        <div>
-          <Graph data={city.data}/>
-        </div>
       <table>
         <tbody>
         {

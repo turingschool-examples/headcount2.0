@@ -47,8 +47,8 @@ class App extends Component {
 
     if (arr.length === 2) {
       const averageResults = districtRepository.compareDistrictAverages(arr[0].location, arr[1].location);
-      city1Avg = averageResults[arr[0].location];
-      city2Avg = averageResults[arr[1].location];
+      city1Avg = averageResults[arr[0].location.toUpperCase()];
+      city2Avg = averageResults[arr[1].location.toUpperCase()];
       comparedAverages = averageResults.compared;
       location1 = arr[0].location;
       location2 = arr[1].location;
