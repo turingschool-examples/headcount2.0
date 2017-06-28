@@ -36,6 +36,7 @@ class App extends Component {
     this.setState({activeCards: newStateArr});
   }
 
+// TODO: Refactor compareAverage
   compareAverage(arr) {
     const { districtRepository } = this.state;
     let location1 = '';
@@ -43,12 +44,18 @@ class App extends Component {
     let comparedAverages = '';
     let city1Avg = '';
     let city2Avg = '';
-    let averageResults = '';
-    
-    if (arr.length === 2) {
-      averageResults = districtRepository.compareDistrictAverages(arr[0].location, arr[1].location);
-    }
 
+    if (arr.length === 2) {
+      const averageResults = districtRepository.compareDistrictAverages(arr[0].location, arr[1].location);
+      city1Avg = averageResults[arr[0].location];
+      city2Avg = averageResults[arr[1].location];
+      comparedAverages = averageResults.compared;
+      location1 = arr[0].location;
+      location2 = arr[1].location;
+    } else if (arr.length === 1) {
+      city1Avg = districtRepository.findAverage(arr[0].location);
+      location1 = arr[0].location;
+    }
     return {
       location1,
       location2,
@@ -56,26 +63,6 @@ class App extends Component {
       city2Avg,
       comparedAverages,
     }
-
-    // let obj = {
-    //   location1: '',
-    //   location2: '',
-    //   city1Avg: '',
-    //   city2Avg: '',
-    //   comparedAverages: '',
-    // }
-    //
-    // if (Object.keys(activeCards).length === 2) {
-    //   const cities = Object.keys(activeCards);
-    //   console.log(averageResults);
-    //   const city1Avg = averageResults[cities[0]];
-    //   const city2Avg = averageResults[cities[1]];
-    //   const comparedAverages = city1Avg / city2Avg;
-    //   Object.assign(obj, {
-
-    //   });
-    // }
-    // return obj;
   }
 
 

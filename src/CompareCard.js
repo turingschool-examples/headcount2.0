@@ -2,6 +2,7 @@ import React from 'react';
 
 const CompareCard = ({data, compareAverage}) => {
   const averageData = compareAverage(data)
+  console.log(data);
 
   return (
     <div>
