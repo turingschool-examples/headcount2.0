@@ -1,5 +1,6 @@
 import React from 'react';
 import CompareCard from './CompareCard'
+import Card from './Card'
 
 const CompareContainer = ({ data, clickActive, className, compareAverage }) => {
   const iterator = Object.keys(data)
@@ -19,4 +20,4 @@ const CompareContainer = ({ data, clickActive, className, compareAverage }) => {
   )
 }
 
-export default Container;
+export default CompareContainer;
