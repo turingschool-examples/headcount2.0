@@ -1,29 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-
-export default class Search extends Component {
-  constructor() {
-    super()
-    this.state = {
-      searchInput : ''
-    }
-  }
-
-  handleSearchInput(e) {
-  }
-
-  render() {
-    const { filterSearch } = this.props;
-
-    return (
-      <div>
-        <input type="text"
-          placeholder="Search"
-          onKeyDown={
-            (e) => filterSearch(e.target.value)
-          }/>
-        <input type="submit" />
-      </div>
-    )
-  }
+const Search = ({filterSearch}) => {
+  return (
+    <div className='search-input'>
+      <input type="text"
+        placeholder="Search"
+        onKeyDown={
+          (e) => filterSearch(e.target.value)
+        }/>
+      <input type="submit" />
+    </div>
+  )
 }
+
+export default Search;
