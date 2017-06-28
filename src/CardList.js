@@ -5,16 +5,23 @@ import './CardList.css'
 const CardList = ({selectedCards, helper}) => {
   console.log(helper.data);
   return (
-    <div className="card-list">
-      {Object.keys(helper.data).map((school, index) => {
+    <section>
+      <div className="header-container">
+        <div className="apple"></div>
+        <div className="header">Headcount 2.0</div>
+        <div className="bus"></div>  
+      </div>
+      <div className="card-list">
+        {Object.keys(helper.data).map((school, index) => {
 
-         return (
-           <Card schoolNames={school}
-                 helper={helper}
-                 key={index}/>
-         )
-      })}
-    </div>
+           return (
+             <Card schoolNames={school}
+                   helper={helper}
+                   key={index}/>
+           )
+        })}
+      </div>
+    </section>
   )
 }
 
