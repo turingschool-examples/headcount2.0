@@ -2,20 +2,37 @@ import React from 'react';
 import CompareCard from './CompareCard'
 import Card from './Card'
 
-const CompareContainer = ({ data, clickActive, className, compareAverage }) => {
-  const iterator = Object.keys(data)
-                         .map(key => <Card city={data[key]} key={key} clickActive={clickActive} />)
+const mockCardData = [
+  {
+      data : {
+        2004: 0.302,
+        2005: 0.267,
+        2006: 0.354,
+      },
+      location: "ACADEMY 20",
 
-  const compareSection = (className) => {
-    if (className === 'compare-container') {
-      return <CompareCard compareAverage={compareAverage}/>
-    }
-  }
+  },
+  {
+
+      data : {
+        2004: 0.3,
+        2005: 0.9,
+        2006: 0.853,
+      },
+      location: "Colorado",
+
+  },
+]
+
+const CompareContainer = ({ data, compareAverage, clickActive }) => {
+  const card1 = data[0] !== undefined ? <Card city={data[0]}/> : <div className='empty-card'></div>
+  const card2 = data[1] !== undefined ? <Card city={data[1]}/> : <div className='empty-card'></div>
 
   return (
-    <div className={className}>
-      {compareSection(className)}
-      {iterator}
+    <div className='compare-container'>
+      {card1}
+      <CompareCard compareAverage={compareAverage} data={data}/>
+      {card2}
     </div>
   )
 }

@@ -12,7 +12,7 @@ class App extends Component {
     this.state = {
       districtRepository: {},
       filteredData: [],
-      activeCards: {},
+      activeCards: [],
     };
   }
 
@@ -32,41 +32,37 @@ class App extends Component {
 
   clickActive(location) {
     const { districtRepository: { data }, activeCards } = this.state;
-    let newStateObj = Object.assign({}, { [location]: data[location] }, activeCards);
-
-    if (activeCards[location] || Object.keys(activeCards).length >= 2) {
-      delete newStateObj[location];
-    }
-    console.log('clickactive');
-    this.setState({activeCards: newStateObj}, this.compareAverage);
+    const newStateArr = [...activeCards, data[location]];
+    this.setState({activeCards: newStateArr});
   }
 
-  compareAverage() {
-    const { districtRepository, activeCards } = this.state;
-    let obj = {
-      location1: '',
-      location2: '',
-      city1Avg: '',
-      city2Avg: '',
-      comparedAverages: '',
-    }
+// TODO: Refactor compareAverage
+  compareAverage(arr) {
+    const { districtRepository } = this.state;
+    let location1 = '';
+    let location2 = ''
+    let comparedAverages = '';
+    let city1Avg = '';
+    let city2Avg = '';
 
-    if(Object.keys(activeCards).length === 2) {
-      const cities = Object.keys(activeCards);
-      const averageResults = districtRepository.compareDistrictAverages(cities[0], cities[1]);
-      console.log(averageResults);
-      const city1Avg = averageResults[cities[0]];
-      const city2Avg = averageResults[cities[1]];
-      const comparedAverages = city1Avg / city2Avg;
-      Object.assign(obj, {
-        location1: cities[0],
-        location2: cities[1],
-        city1Avg,
-        city2Avg,
-        comparedAverages,
-      });
+    if (arr.length === 2) {
+      const averageResults = districtRepository.compareDistrictAverages(arr[0].location, arr[1].location);
+      city1Avg = averageResults[arr[0].location];
+      city2Avg = averageResults[arr[1].location];
+      comparedAverages = averageResults.compared;
+      location1 = arr[0].location;
+      location2 = arr[1].location;
+    } else if (arr.length === 1) {
+      city1Avg = districtRepository.findAverage(arr[0].location);
+      location1 = arr[0].location;
     }
-    return obj;
+    return {
+      location1,
+      location2,
+      city1Avg,
+      city2Avg,
+      comparedAverages,
+    }
   }
 
 
@@ -77,10 +73,9 @@ class App extends Component {
     return (
       <div>
         <Search filterSearch={this.filterSearch.bind(this)}/>
-        <Container data={activeCards}
-                   clickActive={this.clickActive.bind(this)}
-                   compareAverage={this.compareAverage.bind(this)}
-                   className='compare-container'/>
+        <CompareContainer data={activeCards}
+          clickActive={this.clickActive.bind(this)}
+          compareAverage={this.compareAverage.bind(this)}/>
         <Container data={displayData}
                    clickActive={this.clickActive.bind(this)}
                    className='card-container'/>
