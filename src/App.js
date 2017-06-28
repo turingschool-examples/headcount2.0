@@ -38,17 +38,11 @@ class App extends Component {
       delete newStateObj[location];
     }
     console.log('clickactive');
-    this.setState({activeCards: newStateObj}, this.compareAverage());
+    this.setState({activeCards: newStateObj}, this.compareAverage);
   }
 
   compareAverage() {
-    // const { districtRepository: { data }, activeCards } = this.state;
-    // const citiesToCompare = Object.keys(activeCards);
-    // console.log(activeCards);
-    // if (citiesToCompare.length === 2) {
-    //   console.log(citiesToCompare.map(e => activeCards[e]));
-    //
-    // }
+    const { districtRepository, activeCards } = this.state;
     let obj = {
       location1: '',
       location2: '',
@@ -57,21 +51,20 @@ class App extends Component {
       comparedAverages: '',
     }
 
-    if(Object.keys(this.state.activeCards).length === 2) {
-      const cities = Object.keys(this.state.activeCards)
-      const averageResults = this.state.districtRepository.compareDistrictAverages(cities[0], cities[1])
+    if(Object.keys(activeCards).length === 2) {
+      const cities = Object.keys(activeCards);
+      const averageResults = districtRepository.compareDistrictAverages(cities[0], cities[1]);
       console.log(averageResults);
-      const city1Avg = averageResults[cities[0]]
-      const city2Avg = averageResults[cities[1]]
-      const comparedAverages = city1Avg / city2Avg
-      obj = {
+      const city1Avg = averageResults[cities[0]];
+      const city2Avg = averageResults[cities[1]];
+      const comparedAverages = city1Avg / city2Avg;
+      Object.assign(obj, {
         location1: cities[0],
         location2: cities[1],
         city1Avg,
         city2Avg,
-        comparedAverages
-      }
-
+        comparedAverages,
+      });
     }
     return obj;
   }
