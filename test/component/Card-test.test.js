@@ -40,5 +40,4 @@ it('Should run clickActive when clicked', () => {
   expect(mockFn).toHaveBeenCalledTimes(0);
   card.simulate('click');
   expect(mockFn).toHaveBeenCalledTimes(1);
-
 })

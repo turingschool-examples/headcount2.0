@@ -7,7 +7,7 @@ const CompareCard = ({data, compareAverage}) => {
   console.log(data);
 
   return (
-    <div>
+    <div className='compare-card'>
       <h1>{averageData.location1}</h1>
       <p>Average {averageData.city1Avg}</p>
       <p>Compared Average {averageData.comparedAverages}</p>

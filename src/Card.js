@@ -6,30 +6,27 @@ const Card = ({ city, clickActive }) => {
     return number > .5 ? 'green' : 'red';
   }
 
-  // console.log(city)
+  const renderTable = Object.keys(city.data).map(date => {
+      return (
+          <tr key={date} className={clickColor(city.data[date])}>
+            <td>{date}</td>
+            <td>
+              {city.data[date]}
+            </td>
+          </tr>
+      )
+    });
+
   return (
     <div className='card' onClick= {() => clickActive(city.location)}>
-
-      <h1>{city.location}</h1>
-      <table>
+      <h3>{city.location}</h3>
+      <table className='data-table'>
         <tbody>
-        {
-          Object.keys(city.data).map(date => {
-            return (
-                <tr key={date}>
-                  <td>{date}</td>
-                  <td> : </td>
-                  <td className={clickColor(city.data[date])}>
-                    {city.data[date]}
-                  </td>
-                </tr>
-            )
-          })
-        }
-      </tbody>
+        </tbody>
       </table>
     </div>
   )
 }
+// {renderTable}
 
 export default Card

@@ -65,21 +65,27 @@ class App extends Component {
     }
   }
 
-
   render() {
     const { districtRepository: { data }, filteredData, activeCards } = this.state;
     const displayData = filteredData.map(e => data[e]);
 
     return (
-      <div>
-        <Search filterSearch={this.filterSearch.bind(this)}/>
-        <CompareContainer data={activeCards}
-          clickActive={this.clickActive.bind(this)}
-          compareAverage={this.compareAverage.bind(this)}/>
-        <Container data={displayData}
-                   clickActive={this.clickActive.bind(this)}
-                   className='card-container'/>
-      </div>
+        <section>
+          <aside className='side-nav'>
+            <Search filterSearch={this.filterSearch.bind(this)}/>
+            <Container
+              className='card-container'
+              data={displayData}
+              clickActive={this.clickActive.bind(this)}/>
+          </aside>
+          <main>
+            <h1 className='title'>Headcount 2.0</h1>
+            <CompareContainer
+              data={activeCards}
+              clickActive={this.clickActive.bind(this)}
+              compareAverage={this.compareAverage.bind(this)}/>
+          </main>
+        </section>
     )
   }
 }

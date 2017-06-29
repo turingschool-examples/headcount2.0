@@ -1,14 +1,84 @@
-body {
+*, html, body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  max-height: 100vh;
 }
 
-h1 {
-  font-size: 1em;
-  height: 50px;
-  align-self: center;
+h1, h2, h3, p, table {
+  padding: 0;
+  margin: 0;
 }
+
+section {
+  display: flex;
+}
+
+.side-nav {
+  max-height: 100vh;
+  min-height: 100vh;
+  width: 25%;
+  overflow-y: scroll;
+  background-color: #555555;
+}
+
+.search-input {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+input[type="text"] {
+  font-size: 20px;
+}
+
+.card h3 {
+  font-size: 16px;
+  text-align: left;
+}
+
+.card,
+input[type="text"] {
+  color: #fff;
+  background-color: #999999;
+  border: solid 1px black;
+  padding: 5px;
+  margin: 5px;
+}
+
+.card {
+}
+
+.data-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+main {
+  width: 75%;
+}
+
+.title {
+  background-color: #999999;
+  font-size: 38px;
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+
 
 .compare-container {
   display: flex;
@@ -16,30 +86,6 @@ h1 {
   justify-content: center;
 }
 
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.card {
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
-  border: solid 1px black;
-  padding: 5px;
-}
-
-.red {
-  color: red;
-}
-
-.green {
-  color: green;
-}
-
-.card p {
-
+.compare-card {
+  background-color: red;
 }
