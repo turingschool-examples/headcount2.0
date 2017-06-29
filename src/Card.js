@@ -9,12 +9,13 @@ const Card = ({ city, clickActive, activeCards }) => {
                 .includes(city.location)) {
     renderTable = Object.keys(city.data).map(date => {
         return (
-            <tr key={date} className={clickColor(city.data[date])}>
-              <td>{date}</td>
-              <td>
-                {city.data[date]}
-              </td>
-            </tr>
+          <tr key={date}
+              className={clickColor(city.data[date])}>
+            <td>{date}</td>
+            <td>
+              {city.data[date]}
+            </td>
+          </tr>
         )
       });
   }
