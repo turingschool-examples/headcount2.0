@@ -76,12 +76,14 @@ class App extends Component {
             <Container
               className='card-container'
               data={displayData}
+              activeCards={activeCards}
               clickActive={this.clickActive.bind(this)}/>
           </aside>
           <main>
             <h1 className='title'>Headcount 2.0</h1>
             <CompareContainer
               data={activeCards}
+              activeCards={activeCards}
               clickActive={this.clickActive.bind(this)}
               compareAverage={this.compareAverage.bind(this)}/>
           </main>

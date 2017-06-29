@@ -24,7 +24,7 @@ const Graph = ({data}) => {
   }
 
   return (
-    <ScatterChart width={300} height={200} margin={{ top: 20, right: 20, bottom: 0, left: 20 }}>
+    <ScatterChart width={500} height={300} margin={{ top: 20, right: 20, bottom: 0, left: 20 }}>
       <XAxis type="number" dataKey="year" domain={['dataMin', 'dataMax']} name="year" unit="year" />
       <YAxis dataKey="data" name="weight" unit="kg" />
       <CartesianGrid />
