@@ -39,9 +39,9 @@ export default class DistrictRepository {
   findAllMatches(input = '') {
     const schoolKeys = Object.keys(this.data);
     const newArray = schoolKeys.map(school => {
-      return school.toUpperCase();
+      return this.data[school];
     })
-
+    return newArray
     return schoolKeys.filter(location => {
       let searchInput = input.toUpperCase();
       return location.toUpperCase().indexOf(searchInput) >= 0;
