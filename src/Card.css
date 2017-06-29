@@ -1,0 +1,29 @@
+
+.card {
+  width: 150px;
+  text-align: center;
+  margin: 2%;
+  background: white;
+  opacity: .86;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 3px 3px 3px #7c7c7c;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+.data {
+  font-size: 15px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.less-than {
+  color: #ea6512;
+}
+
+.greater-than {
+  color: #4f4f4f;
+}
