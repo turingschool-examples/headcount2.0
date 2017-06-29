@@ -1,13 +1,12 @@
 import React from 'react';
 
 const Card = ({ city, clickActive, activeCards }) => {
-
   const clickColor = (number) => number > .5 ? 'green' : 'red';
-
-  // console.log(city)
   let renderTable;
 
-  if(activeCards.length > 0 && activeCards.map(e => e.location).includes(city.location)) {
+  if(activeCards.length > 0 &&
+     activeCards.map(e => e.location)
+                .includes(city.location)) {
     renderTable = Object.keys(city.data).map(date => {
         return (
             <tr key={date} className={clickColor(city.data[date])}>
@@ -19,7 +18,6 @@ const Card = ({ city, clickActive, activeCards }) => {
         )
       });
   }
-
 
   return (
     <div className='card' onClick= {() => clickActive(city.location)}>

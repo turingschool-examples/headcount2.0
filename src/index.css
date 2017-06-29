@@ -66,6 +66,11 @@ input[type="text"] {
   margin: 5px;
 }
 
+.card:hover {
+  background-color: #777777;
+  cursor: pointer;
+}
+
 .data-table {
   display: flex;
   flex-direction: column;
