@@ -32,7 +32,17 @@ class App extends Component {
 
   clickActive(location) {
     const { districtRepository: { data }, activeCards } = this.state;
-    const newStateArr = [...activeCards, data[location]];
+    const activeLocations = activeCards.map(e => e.location);
+    const newStateArr = [...activeCards];
+
+    if (activeLocations.includes(location)) {
+      newStateArr.filter(e => e.location !== location);
+    } else if (newStateArr.length >= 2){
+      newStateArr.shift();
+      newStateArr.push(data[location]);
+    } else {
+      newStateArr.push(data[location]);
+    }
     this.setState({activeCards: newStateArr});
   }
 

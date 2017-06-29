@@ -9,7 +9,10 @@ const CompareContainer = ({ data, compareAverage, clickActive, activeCards }) =>
 
   return (
     <div className='compare-container'>
-      <CompareCard compareAverage={compareAverage} data={data}/>
+      <CompareCard
+        compareAverage={compareAverage}
+        data={data}
+        clickActive={clickActive}/>
       <div className='compare-card-container'>
         {card1}
         {card2}

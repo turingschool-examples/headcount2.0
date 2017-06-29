@@ -19,6 +19,7 @@ const Card = ({ city, clickActive, activeCards }) => {
       });
   }
 
+  console.log(clickActive);
   return (
     <div className='card' onClick= {() => clickActive(city.location)}>
       <h3>{city.location}</h3>
