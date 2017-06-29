@@ -3,7 +3,8 @@ import Graph from './Graph'
 
 
 const CompareCard = ({data, compareAverage}) => {
-  const averageData = compareAverage(data)
+  const averageData = compareAverage(data) || {};
+  const { location1, city1Avg, comparedAverages, location2, city2Avg } = averageData
 
   return (
     <div className='compare-card'>
