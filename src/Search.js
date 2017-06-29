@@ -4,11 +4,10 @@ const Search = ({filterSearch}) => {
   return (
     <div className='search-input'>
       <input type="text"
-        placeholder="Search"
+        placeholder="Search Districts"
         onKeyDown={
           (e) => filterSearch(e.target.value)
         }/>
-      <input type="submit" />
     </div>
   )
 }
