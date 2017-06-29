@@ -11,7 +11,7 @@ const Container = ({ data, clickActive, className, compareAverage, activeCards }
                                        activeCards={activeCards}/>)
 
   return (
-    <div className={className}>
+    <div>
       {iterator}
     </div>
   )
