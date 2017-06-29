@@ -2,24 +2,23 @@ import React, { Component } from 'react';
 import { LineChart, Line, ScatterChart, Scatter, CartesianGrid, Tooltip, Legend,
  XAxis, YAxis, ZAxis, ReferenceLine, ReferenceDot, ReferenceArea, ErrorBar } from 'recharts';
 
-
 const Graph = ({data}) => {
   const keys = Object.keys(data);
-  let dataNorm = []
-  let dataNorm2 = []
+  let dataNorm = [];
+  let dataNorm2 = [];
   if (data.length === 2) {
     dataNorm = Object.keys(data[0].data).map((e, i, arr)=> {
       return {
         year: parseInt(e),
         data: data[0].data[e],
       }
-    })
+    });
     dataNorm2 = Object.keys(data[1].data).map((e, i, arr)=> {
       return {
         year: parseInt(e),
         data: data[1].data[e],
       }
-    })
+    });
   }
 
   return (
@@ -44,11 +43,10 @@ const Graph = ({data}) => {
                fill="#ff7300" />
       <Scatter line shape="square"
                legendType="square"
-               data={dataNorm2}
+               data={dataNorm}
                fill="#347300" />
     </ScatterChart>
   );
 }
-
 
 export default Graph;

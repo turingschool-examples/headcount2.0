@@ -14,6 +14,7 @@ class App extends Component {
       filteredData: [],
       activeCards: [],
     };
+    this.clickActive = this.clickActive.bind(this);
   }
 
   componentWillMount() {
@@ -30,13 +31,14 @@ class App extends Component {
     this.setState({filteredData});
   }
 
+  // TODO: Refactor clickActive
   clickActive(location) {
     const { districtRepository: { data }, activeCards } = this.state;
     const activeLocations = activeCards.map(e => e.location);
-    const newStateArr = [...activeCards];
+    let newStateArr = [...activeCards];
 
     if (activeLocations.includes(location)) {
-      newStateArr.filter(e => e.location !== location);
+      newStateArr = newStateArr.filter(e => e.location !== location);
     } else if (newStateArr.length >= 2){
       newStateArr.shift();
       newStateArr.push(data[location]);
@@ -87,14 +89,14 @@ class App extends Component {
               className='card-container'
               data={displayData}
               activeCards={activeCards}
-              clickActive={this.clickActive.bind(this)}/>
+              clickActive={this.clickActive}/>
           </aside>
           <main>
             <h1 className='title'>Headcount 2.0</h1>
             <CompareContainer
               data={activeCards}
               activeCards={activeCards}
-              clickActive={this.clickActive.bind(this)}
+              clickActive={this.clickActive}
               compareAverage={this.compareAverage.bind(this)}/>
           </main>
         </section>
