@@ -77,6 +77,7 @@ class App extends Component {
     }
   }
 
+
   render() {
     const { districtRepository: { data }, filteredData, activeCards } = this.state;
     const displayData = filteredData.map(e => data[e]);

@@ -12,7 +12,7 @@ const CompareCard = ({data, compareAverage}) => {
       <p>Compared Average {averageData.comparedAverages}</p>
       <h1>Location 2:{averageData.location2}</h1>
       <p>Average {averageData.city2Avg}</p>
-      <Graph data={data}/>
+      <Graph data={data} />
     </div>
   )
 }
