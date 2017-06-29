@@ -43,7 +43,7 @@ const Graph = ({data}) => {
                fill="#ff7300" />
       <Scatter line shape="square"
                legendType="square"
-               data={dataNorm}
+               data={dataNorm2}
                fill="#347300" />
     </ScatterChart>
   );
