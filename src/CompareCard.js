@@ -8,11 +8,17 @@ const CompareCard = ({data, compareAverage}) => {
 
   return (
     <div className='compare-card'>
-      <h1>Location 1:{location1}</h1>
-      <p>Average {city1Avg}</p>
-      <p>Compared Average {comparedAverages}</p>
-      <h1>Location 2:{location2}</h1>
-      <p>Average {city2Avg}</p>
+      <div className="compare-location-1">
+        <h1>Location 1: {location1}</h1>
+        <p>Average {city1Avg}</p>
+      </div>
+      <div className="compare-location-2">
+        <h1>Location 2: {location2}</h1>
+        <p>Average {city2Avg}</p>
+      </div>
+      <p className='compared-average-display'>
+        Compared Average: {comparedAverages}
+      </p>
       <Graph data={data} />
     </div>
   )
