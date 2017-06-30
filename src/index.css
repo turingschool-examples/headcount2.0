@@ -28,6 +28,7 @@ section {
 
 .search-input,
 .title {
+  height: 6%;
   background-color: #0288D1;
   padding: 5px;
 }
@@ -43,6 +44,7 @@ section {
   color: #fff;
   font-size: 38px;
   text-align: center;
+  padding: 5px;
 }
 
 .side-nav {
@@ -119,7 +121,7 @@ main {
 .compare-card-container {
   display: flex;
   flex-wrap: nowrap;
-  height: 94%;
+  height: 50%;
 }
 
 .compare-card-container .card {
@@ -130,7 +132,7 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 80px;
-  height: 50%;
+  height: 100%;
 }
 
 .compare-card {

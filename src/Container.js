@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import CompareCard from './CompareCard'
+import { string, func, array} from 'prop-types'
 
 const Container = ({ data, clickActive, className, compareAverage, activeCards }) => {
   const iterator = Object.keys(data)
@@ -15,6 +15,14 @@ const Container = ({ data, clickActive, className, compareAverage, activeCards }
       {iterator}
     </div>
   )
+}
+
+Container.propTypes = {
+  data: array,
+  clickActive: func,
+  className: string,
+  compareAverage: func,
+  activeCards: array
 }
 
 export default Container;

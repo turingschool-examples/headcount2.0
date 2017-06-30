@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { LineChart, Line, ScatterChart, Scatter, CartesianGrid, Tooltip, Legend,
- XAxis, YAxis, ZAxis, ReferenceLine, ReferenceDot, ReferenceArea, ErrorBar } from 'recharts';
+import { ScatterChart, Scatter, CartesianGrid, Tooltip, Legend, XAxis, YAxis } from 'recharts';
 
 
 export default class Graph extends Component {
@@ -15,7 +14,7 @@ export default class Graph extends Component {
   componentDidMount() {
     const parent = this.refs.graph.parentNode
     const width = parent.clientWidth - 50;
-    const height = parent.clientHeight - 50;
+    const height = parent.clientHeight - 150;
 
     this.setState({
       height,
@@ -26,19 +25,18 @@ export default class Graph extends Component {
   render() {
     const { width, height } = this.state;
     const { data } = this.props;
-    const keys = Object.keys(data);
     let dataNorm = [];
     let dataNorm2 = [];
     if (data.length === 2) {
       dataNorm = Object.keys(data[0].data).map((e, i, arr)=> {
         return {
-          year: parseInt(e),
+          year: parseInt(e, 10),
           data: data[0].data[e],
         }
       });
       dataNorm2 = Object.keys(data[1].data).map((e, i, arr)=> {
         return {
-          year: parseInt(e),
+          year: parseInt(e, 10),
           data: data[1].data[e],
         }
       });
@@ -76,8 +74,3 @@ export default class Graph extends Component {
     );
   }
 }
-// const Graph = ({data}) => {
-//
-// }
-//
-// export default Graph;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { func } from 'prop-types'
 
 const Search = ({filterSearch}) => {
   return (
@@ -10,6 +11,10 @@ const Search = ({filterSearch}) => {
         }/>
     </div>
   )
+}
+
+Search.propTypes = {
+  filterSearch: func
 }
 
 export default Search;

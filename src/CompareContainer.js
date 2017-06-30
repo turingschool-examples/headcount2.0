@@ -1,6 +1,7 @@
 import React from 'react';
 import CompareCard from './CompareCard'
-import Card from './Card'
+import Card from './Card';
+import { func, array} from 'prop-types'
 
 
 const CompareContainer = ({ data, compareAverage, clickActive, activeCards }) => {
@@ -27,6 +28,13 @@ const CompareContainer = ({ data, compareAverage, clickActive, activeCards }) =>
       </div>
     </div>
   )
+}
+
+CompareContainer.propTypes = {
+  data: array,
+  compareAverage: func,
+  clickActive: func,
+  activeCards: array
 }
 
 export default CompareContainer;

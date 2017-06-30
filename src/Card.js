@@ -1,6 +1,8 @@
 import React from 'react';
+import { object, func, array } from 'prop-types'
 
 const Card = ({ city, clickActive, activeCards }) => {
+  // console.log(city, clickActive, activeCards);
   const clickColor = (number) => number > .5 ? 'green' : 'red';
   let renderTable;
 
@@ -18,7 +20,7 @@ const Card = ({ city, clickActive, activeCards }) => {
   }
 
   return (
-    <div className='card' onClick= {() => clickActive(city.location)}>
+    <div className='card' onClick={() => clickActive(city.location)}>
       <h3>{city.location}</h3>
       <table className='data-table'>
         <tbody>
@@ -27,6 +29,12 @@ const Card = ({ city, clickActive, activeCards }) => {
       </table>
     </div>
   )
+}
+
+Card.propTypes = {
+  city: object,
+  clickActive: func,
+  activeCards: array
 }
 
 export default Card
