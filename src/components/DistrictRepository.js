@@ -1,34 +1,50 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class DistrictRepository extends Component {
-	constructor(districtData) {
-		super();
-		this.data = districtData.reduce((acc, obj) => {
-			if (!acc[obj.Location]) {
-				acc[obj.Location] = [];
-			}
-			if (acc[obj.Location]) {
-				acc[obj.Location].push(obj);
-			}
-			return acc;
-		}, {});
-	}
+  constructor(districtData) {
+    super();
+    this.data = districtData.reduce((acc, obj) => {
+      if (!acc[obj.Location]) {
+        acc[obj.Location] = [];
+      }
+      if (acc[obj.Location]) {
+        acc[obj.Location].push(obj);
+      }
+      return acc;
+    }, {});
+  }
 
-	findByName(input) {
-		const keys = Object.keys(this.data);
-		const filteredArray = keys.filter(
-			location => location.toUpperCase() === input.toUpperCase()
-		);
-		const foundLocation = filteredArray.pop().toUpperCase();
-		if (input && foundLocation) {
-			console.log(foundLocation);
-			let districtObj = {
-				location: foundLocation,
-				data: this.data[foundLocation].map(
-					obj => `${obj.TimeFrame}: ` + obj.Data
-				)
-			};
-			return districtObj;
-		}
-	}
+  getData(districtInfo) {
+    districtInfo = districtInfo.reduce((acc, item) => {
+      if (item.TimeFrame === "N/A") {
+        item.Data = 0;
+      }
+      acc[item.TimeFrame] = parseFloat(item.Data.toFixed(3));
+      return acc;
+    }, {});
+    return districtInfo;
+  }
+
+  findByName(thing) {
+    if (thing) {
+      thing = thing.toUpperCase();
+    }
+    const dataSet = this.data;
+    const districtKeys = Object.keys(dataSet);
+    const upKeys = districtKeys.map(key => {
+      return key.toUpperCase();
+    });
+
+    let newThang = this.data[thing];
+    let answer;
+
+    if (upKeys.includes(thing)) {
+      answer = {
+        location: thing,
+        data: this.getData(newThang)
+      };
+
+      return answer;
+    }
+  }
 }

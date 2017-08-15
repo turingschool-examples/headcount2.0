@@ -1,67 +1,67 @@
 module.exports =
   [
   {
-    "Location": "Colorado",
+    "Location": "COLORADO",
     "TimeFrame": 2007,
     "DataFormat": "Percent",
     "Data": 0.39465
   },
   {
-    "Location": "Colorado",
+    "Location": "COLORADO",
     "TimeFrame": 2006,
     "DataFormat": "Percent",
     "Data": 0.33677
   },
   {
-    "Location": "Colorado",
+    "Location": "COLORADO",
     "TimeFrame": 2005,
     "DataFormat": "Percent",
     "Data": 0.27807
   },
   {
-    "Location": "Colorado",
+    "Location": "COLORADO",
     "TimeFrame": 2004,
     "DataFormat": "Percent",
     "Data": 0.24014
   },
   {
-    "Location": "Colorado",
+    "Location": "COLORADO",
     "TimeFrame": 2008,
     "DataFormat": "Percent",
     "Data": 0.5357
   },
   {
-    "Location": "Colorado",
+    "Location": "COLORADO",
     "TimeFrame": 2009,
     "DataFormat": "Percent",
     "Data": 0.598
   },
   {
-    "Location": "Colorado",
+    "Location": "COLORADO",
     "TimeFrame": 2010,
     "DataFormat": "Percent",
     "Data": 0.64019
   },
   {
-    "Location": "Colorado",
+    "Location": "COLORADO",
     "TimeFrame": 2011,
     "DataFormat": "Percent",
     "Data": 0.672
   },
   {
-    "Location": "Colorado",
+    "Location": "COLORADO",
     "TimeFrame": 2012,
     "DataFormat": "Percent",
     "Data": 0.695
   },
   {
-    "Location": "Colorado",
+    "Location": "COLORADO",
     "TimeFrame": 2013,
     "DataFormat": "Percent",
     "Data": 0.70263
   },
   {
-    "Location": "Colorado",
+    "Location": "COLORADO",
     "TimeFrame": 2014,
     "DataFormat": "Percent",
     "Data": 0.74118
