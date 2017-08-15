@@ -6,28 +6,25 @@ export default class DistrictRepository extends Component {
 		this.data = this.getDistrictData(rawData);
 	}
 
-	getDistrictData(rawData) {
-		const cleanData = rawData.reduce((acc, obj) => {
-			if (!acc[obj.Location]) {
-				acc[obj.Location] = [];
-			}
-			if (acc[obj.Location]) {
-				acc[obj.Location].push(obj);
-			}
-			return acc;
-		}, {});
-		return cleanData;
-	}
+	findAllMatches(userInput) {
+		if (userInput) {
+			userInput = userInput.toUpperCase();
+		}
 
-	getData(districtInfo) {
-		districtInfo = districtInfo.reduce((acc, item) => {
-			if (item.Data === 'N/A') {
-				item.Data = 0;
-			}
-			acc[item.TimeFrame] = parseFloat(item.Data.toFixed(3));
-			return acc;
-		}, {});
-		return districtInfo;
+		const dataSet = this.data;
+		const districtKeys = Object.keys(dataSet).map(key => {
+			return key.toUpperCase();
+		});
+
+		if (!userInput) {
+			return districtKeys;
+		}
+
+		const filteredMatches = districtKeys.filter(district =>
+			district.includes(userInput)
+		);
+
+		return filteredMatches;
 	}
 
 	findByName(userInput) {
@@ -48,5 +45,29 @@ export default class DistrictRepository extends Component {
 				data: this.getData(districtName)
 			});
 		}
+	}
+
+	getData(districtInfo) {
+		districtInfo = districtInfo.reduce((acc, item) => {
+			if (item.Data === 'N/A') {
+				item.Data = 0;
+			}
+			acc[item.TimeFrame] = parseFloat(item.Data.toFixed(3));
+			return acc;
+		}, {});
+		return districtInfo;
+	}
+
+	getDistrictData(rawData) {
+		const cleanData = rawData.reduce((acc, obj) => {
+			if (!acc[obj.Location]) {
+				acc[obj.Location] = [];
+			}
+			if (acc[obj.Location]) {
+				acc[obj.Location].push(obj);
+			}
+			return acc;
+		}, {});
+		return cleanData;
 	}
 }
