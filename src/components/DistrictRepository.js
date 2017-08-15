@@ -16,7 +16,7 @@ export default class DistrictRepository extends Component {
 
   getData(districtInfo) {
     districtInfo = districtInfo.reduce((acc, item) => {
-      if (item.TimeFrame === "N/A") {
+      if (item.Data === "N/A") {
         item.Data = 0;
       }
       acc[item.TimeFrame] = parseFloat(item.Data.toFixed(3));
