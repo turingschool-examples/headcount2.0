@@ -17,7 +17,7 @@ export default class DistrictRepository extends Component {
       const accuData = accu[elem.Location].Data;
       const roundedData = Math.round(1000*elem.Data)/1000;
 
-      Object.assign(accuData, {[elem.TimeFrame]: roundedData})
+      Object.assign(accuData, {[elem.TimeFrame]: roundedData || 0})
       return accu
     }, {})
   }
