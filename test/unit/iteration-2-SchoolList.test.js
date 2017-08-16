@@ -31,7 +31,6 @@ describe('School List', () => {
   it('should pass through the correct props', () => {
     let { Location, Data } = wrapper.find('SchoolCard').node.props;
 
-    console.log(wrapper.find('SchoolCard').node.props.data.Location)
     expect(wrapper.find('SchoolCard').node.props).toEqual(mockData)
   })
 
