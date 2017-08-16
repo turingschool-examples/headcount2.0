@@ -69,7 +69,9 @@ describe('School Card', () => {
   it('should pass through the correct props', () => {
     const {className, children} = wrapper.find('li').get(0).props
 
-    expect(children).toEqual(["2004", ": ", 0])
+    const listItemData = children[0].props.children + children[1] + children[2].props.children
+
+    expect(listItemData).toEqual('2004,: 0')
   })
 
 })
