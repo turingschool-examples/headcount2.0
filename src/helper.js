@@ -19,21 +19,6 @@ export default class DistrictRepository {
     return locData
   }
 
-  // getDataObj(location) {
-  //   let newObj = {}
-  //   newObj[location.TimeFrame] = this.getRoundedNum(location.Data)
-  //   return newObj;
-  // }
-
-  // sortData(data) {
-  //   debugger
-  //   let sortedData = data.reduce((arr, location) => {
-  //     let keys = Object.keys(location.data)
-  //      arr.push(keys)
-  //   }, [])
-  //   return sortedData
-  // }
-
   getRoundedNum(num) {
     if (isNaN(num)) {
       return 0;
