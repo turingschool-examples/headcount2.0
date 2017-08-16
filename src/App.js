@@ -7,7 +7,7 @@ class App extends Component {
 
   render() {
     let districtData = new DistrictRepository(kinderData)
-    console.log(districtData.findByName('Academy 20'))
+    console.log(districtData.cleanData(kinderData))
     return (
       <div>Welcome To Headcount 2.0</div>
     );

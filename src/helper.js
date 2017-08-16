@@ -4,26 +4,35 @@ export default class DistrictRepository {
   }
 
   cleanData(rawData) {
-    return rawData.reduce((obj, location) => {
-      // const keys = Object.keys(location);
-      const dataObj = this.getDataObj(location);
-      const loc = location.Location;
+    let locData = rawData.reduce((obj, location) => {
+      const loc = location.Location.toUpperCase();
       if (!obj[loc]) {
         obj[loc] = {
           location: loc,
-          data: []
+          data: {}
         }
       }
-      obj[loc].data.push(dataObj)
+      obj[loc].data[location.TimeFrame] = this.getRoundedNum(location.Data)
       return obj
-    }, {});
+    }, []);
+
+    return locData
   }
 
-  getDataObj(location) {
-    let newObj = {}
-    newObj[location.TimeFrame] = this.getRoundedNum(location.Data)
-    return newObj;
-  }
+  // getDataObj(location) {
+  //   let newObj = {}
+  //   newObj[location.TimeFrame] = this.getRoundedNum(location.Data)
+  //   return newObj;
+  // }
+
+  // sortData(data) {
+  //   debugger
+  //   let sortedData = data.reduce((arr, location) => {
+  //     let keys = Object.keys(location.data)
+  //      arr.push(keys)
+  //   }, [])
+  //   return sortedData
+  // }
 
   getRoundedNum(num) {
     if (isNaN(num)) {
@@ -32,15 +41,25 @@ export default class DistrictRepository {
     return Math.round(1000 * num)/1000;
   }
 
-  findByName(input) {
-    debugger
-    if (!input) {
+  findByName(searchInput) {
+    if (!searchInput) {
       return undefined
     }
     let initialLocations = Object.keys(this.data);
     let cleanedLocations = initialLocations.map(key => key.toLowerCase());
-    let searchIndex = cleanedLocations.indexOf(input.toLowerCase());
+    let searchIndex = cleanedLocations.indexOf(searchInput.toLowerCase());
 
     return this.data[initialLocations[searchIndex]]
+  }
+
+  findAllMatches(searchInput) {
+    const locations = Object.keys(this.data)
+
+    if (!searchInput) {
+      return locations.map(location => this.findByName(location))
+    }
+
+    return locations.filter(input => input.toLowerCase().includes(searchInput.toLowerCase()))
+                    .map(location => this.findByName(location))
   }
 }
