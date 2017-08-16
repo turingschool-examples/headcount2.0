@@ -48,16 +48,21 @@ export default class DistrictRepository extends Component {
   }
 
   findAllMatches(name) {
-    console.log('triggered')
+    const { data } = this
     const matchedArray = []
-    const keys = Object.keys(this.data)
-    keys.forEach( key => matchedArray.push(this.data[key]))
+    const keys = Object.keys(data)
+    keys.forEach( key => matchedArray.push(data[key]))
 
     if (!name) {
-      return matchedArray
+    return matchedArray
     }
 
-    return matchedArray.filter( place => place.Location.toUpperCase().includes(name.toUpperCase()))
+    const newArray = matchedArray.filter( place => place.Location.toUpperCase().includes(name.toUpperCase()))
+
+    this.setState({
+      data: newArray
+    })
+    return newArray;
   }
 
   render() {
