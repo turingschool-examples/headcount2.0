@@ -1,21 +1,22 @@
-import React from "react";
-import { DistrictContainer } from "./DistrictContainer";
+import React from 'react';
+import { DistrictContainer } from './DistrictContainer';
 
-export const DistrictCard = props => {
-  if (props.foundData !== []) {
-    let yearArray = [];
-    let yearKeys;
-    return (
-      <div className="district-card">
-        <h3>
-          {props.foundData.location}
-        </h3>
-        <ul>
-          {props.foundData.location}
-        </ul>
-      </div>
-    );
-  } else {
-    return <div>YOOOO</div>;
-  }
+export const DistrictCard = ({ location, data }) => {
+	console.log(data);
+	return (
+		<div>
+			<h3>
+				{location}
+			</h3>
+			<ul>
+				{data.map(year => {
+					return (
+						<li>
+							{`${year.TimeFrame}: ${year.Data}`}
+						</li>
+					);
+				})}
+			</ul>
+		</div>
+	);
 };
