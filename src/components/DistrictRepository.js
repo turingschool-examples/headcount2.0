@@ -28,7 +28,7 @@ export default class DistrictRepository extends Component {
       return districtKeys;
     }
 
-    const filteredMatches = districtKeys.filter(district =>
+    let filteredMatches = districtKeys.filter(district =>
       district.includes(userInput)
     );
 
@@ -48,6 +48,12 @@ export default class DistrictRepository extends Component {
     let answer;
 
     if (districtKeys.includes(userInput)) {
+      //   this.setState({
+      //     cards: {
+      //       location: userInput,
+      //       data: this.getData(districtName)
+      //     }
+      //   })
       return (answer = {
         location: userInput,
         data: this.getData(districtName)
@@ -88,8 +94,10 @@ export default class DistrictRepository extends Component {
       <div className="district-repository-container">
         <Controls findDistrict={this.findByName.bind(this)} />
         <DistrictContainer
+          getData={this.getData.bind(this)}
           foundData={this.state.cards}
           fullData={this.state.data}
+          key={Math.random()}
         />
       </div>
     );
