@@ -1,105 +1,99 @@
-import React, { Component } from "react";
-import Controls from "./Controls";
-import { DistrictContainer } from "./DistrictContainer";
-import KinderData from "../../data/kindergartners_in_full_day_program";
-import "../styles/DistrictRepository.css";
+import React, { Component } from 'react';
+import Controls from './Controls';
+import DistrictContainer from './DistrictContainer';
+import KinderData from '../../data/kindergartners_in_full_day_program';
+import '../styles/DistrictRepository.css';
 
 export default class DistrictRepository extends Component {
-  constructor(rawData) {
-    super();
-    // this.state.data = this.getDistrictData();
-    this.state = {
-      cards: [...this.findAllMatches()],
-      data: this.getDistrictData()
-    };
-  }
+	constructor(rawData) {
+		super();
+		this.state = {
+			cards: [],
+			data: this.getDistrictData()
+		};
+	}
 
-  findAllMatches(userInput) {
-    if (userInput) {
-      userInput = userInput.toUpperCase();
-    }
+	componentDidMount() {
+		this.setState({ cards: [...this.findAllMatches()] });
+	}
 
-    const dataSet = this.getDistrictData();
-    const districtKeys = Object.keys(dataSet).map(key => {
-      return key.toUpperCase();
-    });
+	findAllMatches(userInput) {
+		if (userInput) {
+			userInput = userInput.toUpperCase();
+		}
 
-    if (!userInput) {
-      return districtKeys;
-    }
+		const dataSet = this.getDistrictData();
+		const districtKeys = Object.keys(dataSet).map(key => {
+			return key.toUpperCase();
+		});
 
-    let filteredMatches = districtKeys.filter(district =>
-      district.includes(userInput)
-    );
+		if (!userInput) {
+			return districtKeys;
+		}
 
-    return filteredMatches;
-  }
+		let filteredMatches = districtKeys.filter(district =>
+			district.includes(userInput)
+		);
 
-  findByName(userInput) {
-    if (userInput) {
-      userInput = userInput.toUpperCase();
-    }
-    const dataSet = this.state.data;
-    const districtKeys = Object.keys(dataSet).map(key => {
-      return key.toUpperCase();
-    });
+		return filteredMatches;
+	}
 
-    let districtName = dataSet[userInput];
-    let answer;
+	findByName(userInput) {
+		if (userInput) {
+			userInput = userInput.toUpperCase();
+		}
+		const dataSet = this.state.data;
+		const districtKeys = Object.keys(dataSet).map(key => {
+			return key.toUpperCase();
+		});
 
-    if (districtKeys.includes(userInput)) {
-      //   this.setState({
-      //     cards: {
-      //       location: userInput,
-      //       data: this.getData(districtName)
-      //     }
-      //   })
-      return (answer = {
-        location: userInput,
-        data: this.getData(districtName)
-      });
-    }
-  }
+		let districtName = dataSet[userInput];
+		let answer;
 
-  getData(districtInfo) {
-    districtInfo = districtInfo.reduce((acc, item) => {
-      if (item.Data === "N/A") {
-        item.Data = 0;
-      }
-      acc[item.TimeFrame] = parseFloat(item.Data.toFixed(3));
-      return acc;
-    }, {});
-    return districtInfo;
-  }
+		if (districtKeys.includes(userInput)) {
+			return (answer = {
+				location: userInput,
+				data: this.getData(districtName)
+			});
+		}
+	}
 
-  getDistrictData() {
-    var rawData = KinderData;
+	getData(districtInfo) {
+		districtInfo = districtInfo.reduce((acc, item) => {
+			if (item.Data === 'N/A') {
+				item.Data = 0;
+			}
+			acc[item.TimeFrame] = parseFloat(item.Data.toFixed(3));
+			return acc;
+		}, {});
+		return districtInfo;
+	}
 
-    const cleanData = rawData.reduce((acc, obj) => {
-      if (!acc[obj.Location]) {
-        acc[obj.Location] = [];
-      }
-      if (acc[obj.Location]) {
-        acc[obj.Location].push(obj);
-      }
-      return acc;
-    }, {});
-    return cleanData;
-  }
+	getDistrictData() {
+		var rawData = KinderData;
 
-  // componentDidMount()
+		const cleanData = rawData.reduce((acc, obj) => {
+			if (!acc[obj.Location]) {
+				acc[obj.Location] = [];
+			}
+			if (acc[obj.Location]) {
+				acc[obj.Location].push(obj);
+			}
+			return acc;
+		}, {});
+		return cleanData;
+	}
 
-  render() {
-    return (
-      <div className="district-repository-container">
-        <Controls findDistrict={this.findByName.bind(this)} />
-        <DistrictContainer
-          getData={this.getData.bind(this)}
-          foundData={this.state.cards}
-          fullData={this.state.data}
-          key={Math.random()}
-        />
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div className="district-repository-container">
+				<Controls findDistrict={this.findByName.bind(this)} />
+				<DistrictContainer
+					getData={this.getData.bind(this)}
+					foundData={this.state.cards}
+					fullData={this.state.data}
+				/>
+			</div>
+		);
+	}
 }
