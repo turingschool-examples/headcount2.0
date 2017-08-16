@@ -3,11 +3,20 @@ import Controls from "./Controls";
 import { DistrictCard } from "./DistrictCard";
 import "../styles/DistrictRepository.css";
 
-export const DistrictContainer = props => {
+export const DistrictContainer = ({
+  location,
+  fullData,
+  foundData,
+  getData
+}) => {
   return (
     <div className="district-container">
-      {props.foundData.map(location =>
-        <DistrictCard location={location} data={props.fullData[location]} />
+      {foundData.map(place =>
+        <DistrictCard
+          location={location}
+          data={fullData[place]}
+          getData={getData}
+        />
       )}
     </div>
   );

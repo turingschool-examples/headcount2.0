@@ -2,7 +2,7 @@ import React from "react";
 import { DistrictContainer } from "./DistrictContainer";
 import "../styles/DistrictRepository.css";
 
-export const DistrictCard = ({ location, data }) => {
+export const DistrictCard = ({ location, data, getData }) => {
   return (
     <div className="card">
       <h3>
