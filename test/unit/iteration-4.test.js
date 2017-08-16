@@ -1,4 +1,4 @@
-import DistrictRepository from "../../src/components/DistrictRepository.js";
+import { DistrictRepository } from "../../src/helpers/DistrictRepository.js";
 import kinderData from "../../data/kindergartners_in_full_day_program.js";
 
 describe("DistrictRepository iteration 0", () => {

@@ -14,9 +14,4 @@ describe("App", () => {
 
     expect(wrapper.find("div.app-container").length).toEqual(1);
   });
-
-  it("should render a DistrictRepository component", () => {
-    const wrapper = shallow(<App />);
-    expect(wrapper.find("DistrictRepository").length).toEqual(1);
-  });
 });
