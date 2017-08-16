@@ -1,5 +1,5 @@
-import DistrictRepository from "../../src/components/DistrictRepository.js";
 import kinderData from "../../data/kindergartners_in_full_day_program.js";
+import { DistrictRepository } from "../../src/helpers/DistrictRepository";
 
 describe("DistrictRepository iteration 1 - part 1", () => {
   const district = new DistrictRepository(kinderData);

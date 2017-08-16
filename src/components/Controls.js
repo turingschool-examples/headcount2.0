@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import DistrictRepository from "./DistrictRepository";
 import PropTypes from "prop-types";
 import { DistrictContainer } from "./DistrictContainer";
 
