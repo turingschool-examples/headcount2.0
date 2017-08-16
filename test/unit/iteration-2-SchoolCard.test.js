@@ -66,4 +66,10 @@ describe('School Card', () => {
     expect(wrapper.find('p.average').text()).toEqual("0.34");
   })
 
+  it('should pass through the correct props', () => {
+    const {className, children} = wrapper.find('li').get(0).props
+
+    expect(children).toEqual(["2004", ": ", 0])
+  })
+
 })
