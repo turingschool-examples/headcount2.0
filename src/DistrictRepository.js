@@ -11,6 +11,7 @@ export default class DistrictRepository extends Component {
       data: {}
     }
     this.findAllMatches = this.findAllMatches.bind(this);
+    this.findAverage = this.findAverage.bind(this);
   }
 
   componentDidMount() {
@@ -44,6 +45,7 @@ export default class DistrictRepository extends Component {
     const upName = name.toUpperCase();
     const dataKey = Object.keys(this.data)
     const searchedKey = dataKey.filter( (key) => upName === key.toUpperCase() )
+
     return this.data[searchedKey]
   }
 
@@ -65,12 +67,34 @@ export default class DistrictRepository extends Component {
     return newArray;
   }
 
+  findAverage(location) {
+    const locationObject = this.findByName(location);
+    const yearsKeys = Object.keys(locationObject.Data);
+    const averages = yearsKeys.reduce( (average, year) => {
+      average += locationObject.Data[year]
+      return average
+    }, 0) / yearsKeys.length;
+
+    return Math.round(1000*averages)/1000;
+  }
+
+  compareDistrictAverages(location1, location2) {
+    const district1 = this.findAverage(location1);
+    const district2 = this.findAverage(location2);
+    const ratio = Math.round(1000 * (district1 / district2))/1000
+    const comparison = {[location1.toUpperCase()]: district1,
+                        [location2.toUpperCase()]: district2,
+                        compared: ratio}
+
+    return comparison
+  }
+
   render() {
     const {data} = this.state
     return (
       <div>
         <Search findSchool={this.findAllMatches}/>
-        <SchoolList data={data}/>
+        <SchoolList data={data} findAverage={this.findAverage}/>
       </div>
     )
   }
