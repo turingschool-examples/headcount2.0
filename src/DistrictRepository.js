@@ -1,23 +1,6 @@
-import React, { Component } from 'react'
-import SchoolList from './SchoolList'
-import Search from './Search'
-import kinderData from '../data/kindergartners_in_full_day_program'
-
-export default class DistrictRepository extends Component {
-  constructor() {
-    super();
-    this.data = this.getData(kinderData);
-    this.state = {
-      data: {}
-    }
-    this.findAllMatches = this.findAllMatches.bind(this);
-    this.findAverage = this.findAverage.bind(this);
-  }
-
-  componentDidMount() {
-    this.setState({
-      data: this.data
-    })
+export default class DistrictRepository {
+  constructor(data) {
+    this.data = this.getData(data)
   }
 
   getData(data) {
@@ -60,10 +43,6 @@ export default class DistrictRepository extends Component {
 
     const newArray = matchedArray.filter( place => place.Location.toUpperCase().includes(name.toUpperCase()));
 
-    this.setState({
-      data: newArray
-    });
-
     return newArray;
   }
 
@@ -87,15 +66,5 @@ export default class DistrictRepository extends Component {
                         compared: ratio}
 
     return comparison
-  }
-
-  render() {
-    const {data} = this.state
-    return (
-      <div>
-        <Search findSchool={this.findAllMatches}/>
-        <SchoolList data={data} findAverage={this.findAverage}/>
-      </div>
-    )
   }
 }

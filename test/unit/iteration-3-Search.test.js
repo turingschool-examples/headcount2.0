@@ -14,16 +14,17 @@ describe('Search', () => {
     expect(wrapper).toBeDefined()
   })
 
-  it.skip('should fire a function on change', () => {
+  it('should fire a function on change', () => {
     const searchInput = wrapper.find('.search-bar');
     const mockFn = jest.fn()
 
     wrapper = mount(<Search findSchool={mockFn} />);
+    wrapper.instance().findSchool = mockFn;
 
     expect(mockFn).toHaveBeenCalledTimes(0);
 
     searchInput.simulate('change', { target: { value: 'COLORADO'} });
-
-    expect(mockFn).toHaveBeenCalledTimes(8);
+    console.log('mock', mockFn.mock.calls)
+    expect(wrapper.instance().props().findSchool).toHaveBeenCalledTimes(1);
   })
 })

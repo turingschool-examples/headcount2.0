@@ -4,7 +4,8 @@ import PropTypes, { object, array, func } from 'prop-types'
 
 const SchoolList = ({ data, findAverage }) => {
   const schools = Object.keys(data);
-  const schoolCards =  schools.map((school, i) => <SchoolCard data={data[school]} key={i} findAverage={findAverage}/>);
+  const schoolCards =  schools.map((school, i) =>
+    <SchoolCard data={data[school]} key={i} findAverage={findAverage} />);
 
   return (
     <div>

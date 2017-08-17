@@ -14,15 +14,19 @@ describe('District Repository', () => {
     expect(wrapper).toBeDefined()
   })
 
-  // it('should fire a function on change', () => {
-  //   wrapper = mount(<DistrictRepository />)
-  //   const searchInput = wrapper.find('.search-bar');
-  //   const mockFn = jest.fn()
-  //
-  //   expect(mockFn).toHaveBeenCalledTimes(0);
-  //
-  //   searchInput.simulate('change', { target: { value: 'COLORADO'} });
-  //
-  //   expect(mockFn).toHaveBeenCalledTimes(8);
-  // })
+  it.skip('should fire a function on change', () => {
+    wrapper = mount(<DistrictRepository />)
+    const searchInput = wrapper.find('.search-bar');
+    const mockFn = jest.fn()
+    wrapper.instance().findAllMatches = mockFn
+
+    console.log(wrapper.instance().findAllMatches)
+
+    expect(mockFn).toHaveBeenCalledTimes(0);
+
+    searchInput.simulate('change', { target: { value: 'COLORADO'} });
+    console.log(searchInput.debug())
+
+    expect(wrapper.instance().findAllMatches).toHaveBeenCalledTimes(1);
+  })
 })
