@@ -21,7 +21,19 @@ body {
 }
 
 .sidebar-container h4 {
+  margin: 0;
+  padding: 5px;
   font-size: 12px;
+}
+
+.sidebar-card {
+  background-color: white;
+  text-decoration-color: black;
+}
+
+.selected {
+  background-color: purple;
+  text-decoration-color: white;
 }
 
 .main-container {
