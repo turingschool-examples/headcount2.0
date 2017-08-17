@@ -10,16 +10,13 @@ describe('Search', () => {
     wrapper = shallow(<Search />)
   })
 
-  it.skip('should exist', ()=> {
+  it('should exist', ()=> {
     expect(wrapper).toBeDefined()
   })
 
-  it.skip('should fire a function on change', () => {
+  it('should fire a function on change', () => {
     const searchInput = wrapper.find('.search-bar');
     const mockFn = jest.fn()
-    const searchFunction = wrapper.props().children.props.onChange
-
-    console.log(searchFunction)
 
     wrapper = mount(<Search findSchool={mockFn} />);
 

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import SchoolCard from './SchoolCard'
-import PropTypes, { object, func } from 'prop-types'
+import PropTypes, { object, array, func } from 'prop-types'
 
 const SchoolList = ({ data, findAverage }) => {
+  console.log(data)
   const schools = Object.keys(data);
   const schoolsArray = schools.map( school => data[school]);
   const schoolCards =  schoolsArray.map((school, i) => <SchoolCard data={school} key={i} findAverage={findAverage}/>);
@@ -15,7 +16,10 @@ const SchoolList = ({ data, findAverage }) => {
 }
 
 SchoolList.propTypes = {
-  data: object,
+  data: PropTypes.oneOfType([
+    object,
+    array
+  ]),
   findAverage: func
 }
 
