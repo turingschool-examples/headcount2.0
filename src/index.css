@@ -2,4 +2,44 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  height: 100vh;
+}
+
+.header {
+  position: relative;
+  height: 10vh;
+}
+.sidebar-container {
+  float: left;
+  height: 89vh;
+  min-width: 30%;
+  padding: 0 15px;
+  overflow-x: auto;
+}
+
+.school-card-container {
+  position: fixed;
+  overflow-y: scroll;
+  padding-top: 5px;
+  height: 84vh;
+}
+
+.sidebar-container h4 {
+  margin: 0;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.sidebar-card {
+  background-color: white;
+  text-decoration-color: black;
+}
+
+.selected {
+  background-color: purple;
+  text-decoration-color: white;
+}
+
+.main-container {
+  position: relative;
 }
