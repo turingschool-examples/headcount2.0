@@ -1,16 +1,18 @@
 import App from "../../src/components/App";
-import Controls from "../../src/components/Controls";
 import KinderData from "../../data/kindergartners_in_full_day_program";
 import React from "react";
-import { shallow, render } from "enzyme";
+import { DistrictRepository } from "../../src/helpers/DistrictRepository";
+import { shallow, render, mount } from "enzyme";
 
 describe("App", () => {
   let wrapper;
   let DCPropsArray;
+  let repository;
 
   beforeEach(() => {
     wrapper = shallow(<App />);
     DCPropsArray = Object.keys(wrapper.find("DistrictContainer").node.props);
+    repository = new DistrictRepository(KinderData);
   });
 
   it("should render one Controls Component", () => {
@@ -31,6 +33,12 @@ describe("App", () => {
     expect(wrapper.find("div.app-container").length).toEqual(1);
   });
 
+  it("should render 181 DistrictCards", () => {
+    wrapper = mount(<App />);
+
+    expect(wrapper.find("DistrictCard").length).toEqual(181);
+  });
+
   it("should have a default state property of cards whose value is an array", () => {
     const componentState = wrapper.state();
     expect(componentState.cards).toBeInstanceOf(Array);
@@ -41,8 +49,8 @@ describe("App", () => {
     expect(componentState.data).toBeInstanceOf(Object);
   });
 
-  it("should pass three props to the DistrictContainer", () => {
-    expect(DCPropsArray.length).toEqual(3);
+  it("should pass four props to the DistrictContainer", () => {
+    expect(DCPropsArray.length).toEqual(4);
   });
 
   it("should pass a getData prop", () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { DistrictCard } from "./DistrictCard";
+import DistrictCard from "./DistrictCard";
 import "../styles/DistrictRepository.css";
 
 const DistrictContainer = props => {

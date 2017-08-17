@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../App.css";
 import DistrictContainer from "./DistrictContainer";
-import { Controls } from "./Controls";
+import Controls from "./Controls";
 import KinderData from "../../data/kindergartners_in_full_day_program";
 import { DistrictRepository } from "../helpers/DistrictRepository";
 

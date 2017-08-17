@@ -2,7 +2,7 @@ import React from "react";
 // import { DistrictContainer } from './DistrictContainer';
 import "../styles/DistrictRepository.css";
 
-export const DistrictCard = ({ location, data, getData, findDistrict }) => {
+const DistrictCard = ({ location, data, getData, findDistrict }) => {
   return (
     <div className="card" onClick={findDistrict}>
       <h3>
@@ -24,3 +24,5 @@ export const DistrictCard = ({ location, data, getData, findDistrict }) => {
     </div>
   );
 };
+
+export default DistrictCard;
