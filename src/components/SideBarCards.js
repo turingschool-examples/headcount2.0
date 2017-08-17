@@ -8,21 +8,21 @@ class SideBarCards extends Component {
     }
   }
 
-  handleSelectSchools(selectSchool, location) {
+  handleSelectSchools(selectSchool, school) {
     console.log('working')
     let selectStatus = !this.state.selected
-    selectSchool(selectStatus, location)
+    selectSchool(selectStatus, school)
     this.setState({ selected: selectStatus })
   }
 
   render() {
-    let { location, data, selectSchool } = this.props;
+    let { school, selectSchool } = this.props;
 
     return (
       <div className={ this.state.selected ? "sidebar-card selected" : "sidebar-card"}
-           onClick={ () => this.handleSelectSchools(selectSchool, location) }
+           onClick={ () => this.handleSelectSchools(selectSchool, school) }
       >
-        <h4>{location}</h4>
+        <h4>{school.location}</h4>
       </div>
     )
   }

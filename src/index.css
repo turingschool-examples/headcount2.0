@@ -7,17 +7,21 @@ body {
 
 .header {
   position: relative;
+  height: 10vh;
 }
 .sidebar-container {
   float: left;
+  height: 89vh;
   min-width: 30%;
-  margin: 0 15px;
+  padding: 0 15px;
   overflow-x: auto;
 }
 
 .school-card-container {
   position: fixed;
   overflow-y: scroll;
+  padding-top: 5px;
+  height: 84vh;
 }
 
 .sidebar-container h4 {

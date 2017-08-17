@@ -10,7 +10,7 @@ class SideBar extends Component {
     let { schools, selectSchool, selectedSchools } = this.props
 
     const schoolDisplay = schools.map((school, index) =>
-      <SideBarCards { ...school }
+      <SideBarCards school={ school }
                     selectSchool={ selectSchool }
                     key={ index } />
     )
