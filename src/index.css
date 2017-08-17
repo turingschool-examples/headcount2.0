@@ -2,4 +2,28 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  height: 100vh;
+}
+
+.header {
+  position: relative;
+}
+.sidebar-container {
+  float: left;
+  min-width: 30%;
+  margin: 0 15px;
+  overflow-x: auto;
+}
+
+.school-card-container {
+  position: fixed;
+  overflow-y: scroll;
+}
+
+.sidebar-container h4 {
+  font-size: 12px;
+}
+
+.main-container {
+  position: relative;
 }

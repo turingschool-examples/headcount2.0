@@ -14,7 +14,7 @@ export default class DistrictRepository {
       }
       obj[loc].data[location.TimeFrame] = this.getRoundedNum(location.Data)
       return obj
-    }, []);
+    }, {});
 
     return locData
   }
