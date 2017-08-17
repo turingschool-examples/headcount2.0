@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import "../App.css";
 import DistrictContainer from "./DistrictContainer";
 import Controls from "./Controls";
@@ -32,8 +33,9 @@ class App extends Component {
     });
   }
 
-  clickDistrictCard() {
-    console.log("clicked a card");
+  clickDistrictCard(e) {
+    let selectedCard = e.target;
+    return (selectedCard.style.outline = "3px solid green");
   }
 
   findSearchedDistrict() {
