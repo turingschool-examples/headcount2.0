@@ -69,6 +69,7 @@ export class DistrictRepository {
       }
       return acc;
     }, {});
+    // console.log(cleanData);
     return cleanData;
   }
 }
