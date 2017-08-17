@@ -1,38 +1,35 @@
 import React, { Component } from 'react';
 import '../App.css';
 import DistrictContainer from './DistrictContainer';
-import Controls from './Controls';
+import { Controls } from './Controls';
 import KinderData from '../../data/kindergartners_in_full_day_program';
 import { DistrictRepository } from '../helpers/DistrictRepository';
+
+const fullData = new DistrictRepository(KinderData);
 
 class App extends Component {
 	constructor() {
 		super();
-		this.fullData = new DistrictRepository(KinderData);
+		this.handleChange = this.handleChange.bind(this);
 		this.state = {
 			cards: [],
-			data: this.fullData.getDistrictData()
+			data: {},
+			input: ''
 		};
 	}
 
 	componentDidMount() {
 		this.setState({
-			cards: [...this.fullData.findAllMatches()],
-			data: this.fullData.getDistrictData()
+			cards: [...fullData.findAllMatches()],
+			data: fullData.getDistrictData()
 		});
 	}
 
-	getDistrictData() {
-		const cleanData = this.data.reduce((acc, obj) => {
-			if (!acc[obj.Location]) {
-				acc[obj.Location] = [];
-			}
-			if (acc[obj.Location]) {
-				acc[obj.Location].push(obj);
-			}
-			return acc;
-		}, {});
-		return cleanData;
+	handleChange(e) {
+		this.setState({
+			cards: [...fullData.findAllMatches(e.target.value)],
+			input: e.target.value
+		});
 	}
 
 	render() {
@@ -42,11 +39,12 @@ class App extends Component {
 			return (
 				<div className="app-container">
 					<Controls
-						findDistrict={this.fullData.findByName}
-						DistrictRepository={this.fullData}
+						findDistrict={fullData.findByName}
+						handleChange={this.handleChange}
+						DistrictRepository={fullData}
 					/>
 					<DistrictContainer
-						getData={this.fullData.cleanData}
+						getData={fullData.cleanData}
 						foundData={this.state.cards}
 						fullData={this.state.data}
 					/>

@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import KinderData from '../../data/kindergartners_in_full_day_program';
+// import React, { Component } from 'react';
+// import KinderData from '../../data/kindergartners_in_full_day_program';
 import '../styles/DistrictRepository.css';
 
 export class DistrictRepository {
@@ -50,6 +50,8 @@ export class DistrictRepository {
 
 		let districtName = newData[userInput];
 		let answer;
+		console.log('districtName', districtName);
+		console.log('districtKeys', districtKeys);
 
 		if (districtKeys.includes(userInput)) {
 			return (answer = {

@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { DistrictContainer } from './DistrictContainer';
+// import PropTypes from 'prop-types';
+// import { DistrictContainer } from './DistrictContainer';
 
-export default class Controls extends Component {
+export class Controls extends Component {
 	constructor() {
 		super();
-		this.state = {
-			input: ''
-		};
-	}
-
-	getInput(e) {
-		this.setState({ input: e.target.value });
+		this.submitInput = this.submitInput.bind(this);
 	}
 
 	submitInput() {
@@ -27,14 +21,11 @@ export default class Controls extends Component {
 		return (
 			<div className="controls-container">
 				<input
-					value={this.state.input}
-					onChange={this.getInput.bind(this)}
-					onKeyUp={() =>
-						this.props.DistrictRepository.findAllMatches(this.state.input)}
+					onChange={this.props.handleChange}
 					className="search-input"
 					placeholder="Search district"
 				/>
-				<button onClick={this.submitInput.bind(this)} className="search-button">
+				<button onClick={this.submitInput} className="search-button">
 					Search
 				</button>
 			</div>
