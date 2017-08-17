@@ -1,14 +1,31 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const SideBarCards = () => {
+class SideBarCards extends Component {
+  constructor() {
+    super()
+    this.state={
+      selected: false
+    }
+  }
 
-  //controller for managing what cards are showing based on search
+  handleSelectSchools(selectSchool, location) {
+    console.log('working')
+    let selectStatus = !this.state.selected
+    selectSchool(selectStatus, location)
+    this.setState({ selected: selectStatus })
+  }
 
-  return (
-    <div className="sidebar-card-container">
-      School cards will go here
-    </div>
-  )
+  render() {
+    let { location, data, selectSchool } = this.props;
+
+    return (
+      <div className={ this.state.selected ? "sidebar-card selected" : "sidebar-card"}
+           onClick={ () => this.handleSelectSchools(selectSchool, location) }
+      >
+        <h4>{location}</h4>
+      </div>
+    )
+  }
 };
 
 export default SideBarCards;
