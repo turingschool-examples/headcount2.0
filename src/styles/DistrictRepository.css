@@ -45,6 +45,10 @@
   width: 30%;
 }
 
+.clicked {
+  outline: 3px solid green;
+}
+
 .card:hover {
   background: yellow;
 }
