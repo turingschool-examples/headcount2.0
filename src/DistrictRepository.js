@@ -4,7 +4,7 @@ import Search from './Search'
 import kinderData from '../data/kindergartners_in_full_day_program'
 
 export default class DistrictRepository extends Component {
-  constructor(data) {
+  constructor() {
     super();
     this.data = this.getData(kinderData);
     this.state = {
@@ -42,28 +42,28 @@ export default class DistrictRepository extends Component {
       return undefined
     }
 
-    const upName = name.toUpperCase();
     const dataKey = Object.keys(this.data)
-    const searchedKey = dataKey.filter( (key) => upName === key.toUpperCase() )
+    const searchedKey = dataKey.filter( (key) => name.toUpperCase() === key.toUpperCase())
 
     return this.data[searchedKey]
   }
 
   findAllMatches(name) {
-    const { data } = this
-    const matchedArray = []
-    const keys = Object.keys(data)
-    keys.forEach( key => matchedArray.push(data[key]))
+    const { data } = this;
+    const keys = Object.keys(data);
+    const matchedArray = [];
+    keys.forEach( key => matchedArray.push(data[key]));
 
     if (!name) {
     return matchedArray
     }
 
-    const newArray = matchedArray.filter( place => place.Location.toUpperCase().includes(name.toUpperCase()))
+    const newArray = matchedArray.filter( place => place.Location.toUpperCase().includes(name.toUpperCase()));
 
     this.setState({
       data: newArray
-    })
+    });
+
     return newArray;
   }
 
