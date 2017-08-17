@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import PropTypes, { func } from 'prop-types'
+import React from 'react';
+import { func } from 'prop-types'
 
 const Search = ({ findSchool }) => {
     return (

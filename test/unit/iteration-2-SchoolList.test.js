@@ -19,18 +19,16 @@ describe('School List', () => {
     wrapper = shallow(<SchoolList data={mockData}/>)
   })
 
-  it.skip('should exist', () => {
+  it('should exist', () => {
     expect(wrapper).toBeDefined()
   })
 
-  it.skip('should render a SchoolCard', () => {
+  it('should render a SchoolCard', () => {
     expect(wrapper.find('SchoolCard').length).toEqual(1);
     expect(wrapper.find('SchoolCard')).toBeDefined();
   })
 
-  it.skip('should pass through the correct props', () => {
-    let { Location, Data } = wrapper.find('SchoolCard').node.props;
-
+  it('should pass through the correct props', () => {
     expect(wrapper.find('SchoolCard').node.props).toEqual(mockData)
   })
 
