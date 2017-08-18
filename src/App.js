@@ -32,32 +32,36 @@ class App extends Component {
 
   clickedCard(item, info) {
 
-    if ( this.state.compareCards.length !== 2 ) {
-      this.state.compareCards.push(info);
-
-      const newArray = [...this.state.compareCards];
-
+    if ( this.state.compareCards.length <= 2 ) {
       this.setState({
-        compareCards: newArray
+        compareCards: this.removeClickedCard(item, info)
       });
-
       item.classList.toggle('clicked-card');
-
-    } else if ( this.state.compareCards.includes(info) ) {
-      const indexNum = this.state.compareCards.indexOf(info);
-
-      const newArray = this.state.compareCards.splice(indexNum, 1);
-      //do I need to set state here with new array?
-      item.classList.toggle('clicked-card');
-
     }
   };
+
+  removeClickedCard(item, info) {
+    const { compareCards } = this.state
+
+    if (compareCards[0] && (info.Location === compareCards[0].Location)){
+      return compareCards.splice(1, 1);
+    } else if (compareCards[1] && (info.Location === compareCards[1].Location)) {
+      return compareCards.splice(0, 1);
+    } else if (compareCards.length === 2) {
+      item.classList.toggle('clicked-card');
+      return [...compareCards];
+    } else {
+      compareCards.push(info);
+      return [...compareCards]
+    }
+
+  }
 
   render() {
     const data = this.state.data;
     return (
       <div>
-      
+
         <Search findSchool={this.updateData.bind(this)} />
 
         <SchoolList data={data}

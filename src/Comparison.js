@@ -3,7 +3,7 @@ import SchoolCard from './SchoolCard'
 
 
 const Comparison = ({ cardData, findAverage }) => {
-  console.log(cardData);
+  // console.log(cardData);
 
   const schoolCards =  cardData.map((school, i) =>
     <SchoolCard data={school}
