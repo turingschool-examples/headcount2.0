@@ -31,14 +31,17 @@ class App extends Component {
   }
 
   clickedCard(item, info) {
-    // item.classList.toggle('clicked-card');
 
+    if (this.state.compareCards.includes(info)) {
+      const indexNum = this.state.compareCards.indexOf(info);
 
-    if (this.state.compareCards.length < 2) {
+      this.state.compareCards.splice(indexNum, 1);
+      item.classList.toggle('clicked-card');
 
+    } else if (this.state.compareCards.length !== 2) {
       const chosenCard = this.state.compareCards.push(info);
-      const newArray = [...this.state.compareCards]
-      console.log(newArray);
+      
+      const newArray = [...this.state.compareCards];
 
       this.setState({
         compareCards: newArray
