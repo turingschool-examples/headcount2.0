@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import "../App.css";
+import "../styles/DistrictRepository.css";
 import DistrictContainer from "./DistrictContainer";
 import Controls from "./Controls";
 import KinderData from "../../data/kindergartners_in_full_day_program";
@@ -15,7 +15,8 @@ class App extends Component {
     this.state = {
       cards: [],
       data: {},
-      input: ""
+      input: "",
+      selectedCards: []
     };
   }
 
@@ -33,15 +34,21 @@ class App extends Component {
     });
   }
 
-  clickDistrictCard(e) {
-    let selectedCard = e.target;
-    return (selectedCard.style.outline = "3px solid green");
+  clickDistrictCard(e, location) {
+    let card = e.currentTarget;
+    let selected = this.state.selectedCards;
+    if (selected.length >= 2) {
+      selected.pop();
+    }
+    selected.push(location);
+    this.setState({
+      selectedCards: selected
+    });
+    return card.classList.toggle("clicked");
   }
 
   findSearchedDistrict() {
-    console.log("this is the search button");
     let found = fullData.findByName(this.state.input);
-    console.log("found", found);
   }
 
   render() {
@@ -60,6 +67,7 @@ class App extends Component {
             foundData={this.state.cards}
             fullData={this.state.data}
             findDistrict={this.clickDistrictCard.bind(this)}
+            selected={this.state.selectedCards}
           />
         </div>
       );

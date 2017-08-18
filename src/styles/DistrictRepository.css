@@ -46,6 +46,7 @@
 }
 
 .clicked {
+  background-color: purple;
   outline: 3px solid green;
 }
 

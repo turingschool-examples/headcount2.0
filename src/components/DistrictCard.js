@@ -1,5 +1,4 @@
 import React from "react";
-// import { DistrictContainer } from './DistrictContainer';
 import "../styles/DistrictRepository.css";
 
 const DistrictCard = ({ location, data, getData, findDistrict }) => {
@@ -13,7 +12,7 @@ const DistrictCard = ({ location, data, getData, findDistrict }) => {
   };
 
   return (
-    <div className="card" onClick={findDistrict}>
+    <div className="card" onClick={e => findDistrict(e, location)}>
       <h3>
         {location}
       </h3>
