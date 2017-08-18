@@ -16,31 +16,25 @@ class App extends Component {
       data: {},
       compareCards: []
     }
-  }
+  };
 
   componentDidMount() {
     this.setState({
       data: districtInfo.data
     })
-  }
+  };
 
   updateData(location) {
     this.setState({
       data: districtInfo.findAllMatches(location)
     })
-  }
+  };
 
   clickedCard(item, info) {
 
-    if (this.state.compareCards.includes(info)) {
-      const indexNum = this.state.compareCards.indexOf(info);
+    if ( this.state.compareCards.length !== 2 ) {
+      this.state.compareCards.push(info);
 
-      this.state.compareCards.splice(indexNum, 1);
-      item.classList.toggle('clicked-card');
-
-    } else if (this.state.compareCards.length !== 2) {
-      const chosenCard = this.state.compareCards.push(info);
-      
       const newArray = [...this.state.compareCards];
 
       this.setState({
@@ -48,21 +42,34 @@ class App extends Component {
       });
 
       item.classList.toggle('clicked-card');
+
+    } else if ( this.state.compareCards.includes(info) ) {
+      const indexNum = this.state.compareCards.indexOf(info);
+
+      const newArray = this.state.compareCards.splice(indexNum, 1);
+      //do I need to set state here with new array?
+      item.classList.toggle('clicked-card');
+
     }
-  }
+  };
 
   render() {
     const data = this.state.data;
     return (
       <div>
-        <Search findSchool={this.updateData.bind(this)}/>
+      
+        <Search findSchool={this.updateData.bind(this)} />
+
         <SchoolList data={data}
              findAverage={districtInfo.findAverage.bind(districtInfo)}
              clickedCard={this.clickedCard.bind(this)} />
-        <Comparison />
+
+        <Comparison cardData={this.state.compareCards}
+                 findAverage={districtInfo.findAverage.bind(districtInfo)} />
+
       </div>
     );
-  }
-}
+  };
+};
 
 export default App;
