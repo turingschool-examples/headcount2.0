@@ -1,4 +1,14 @@
 
+/*.all-cards {
+  width: 25%;
+}*/
+
+.compare-cards {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
 .school-card {
   background-color: #72fbc2;
   display: flex;
@@ -7,12 +17,14 @@
   justify-content: center;
   border: 5px solid #000;
   border-radius: 10px;
+  height: 350px;
   width: 250px;
 }
 
 .clicked-card {
   border: 5px solid blue;
 }
+
 
 .school-name {
 
