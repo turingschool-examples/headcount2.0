@@ -46,7 +46,7 @@ class App extends Component {
 
   render() {
     if (this.state.cards === []) {
-      return <div> hello</div>;
+      return <div className="no-cards"> hello</div>;
     } else {
       return (
         <div className="app-container">
