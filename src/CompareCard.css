@@ -1,0 +1,11 @@
+.compare-card {
+  background-color: #d5d5d5;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 5px solid #26d5e8;
+  border-radius: 10px;
+  height: 350px;
+  width: 250px;
+}
