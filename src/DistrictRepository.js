@@ -67,6 +67,6 @@ export default class DistrictRepository {
   }
 
   compareDistrictAverages(average1, average2) {
-    return Math.round(1000 * (average1 / average2)) / 1000;
+    return Math.round(1000 * (average1 / average2)) / 1000 || 0;
   }
 }
