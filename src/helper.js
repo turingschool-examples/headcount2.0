@@ -6,7 +6,8 @@ export default class DistrictRepository {
     let cleanData = {};
 
     cleanData = dataArrayToClean.reduce( (acc, item) => {
-      let currentLocation = item.Location.toUpperCase();
+      const currentLocation = item.Location.toUpperCase();
+
       if (!acc[currentLocation]) {
         acc[currentLocation] = {};
       }
@@ -20,7 +21,7 @@ export default class DistrictRepository {
   }
 
   findByName(query = 'no query entered') {
-    let queryUppercase = query.toUpperCase();
+    const queryUppercase = query.toUpperCase();
     if (!this.data[queryUppercase]) {
       return
     } else {
@@ -35,7 +36,7 @@ export default class DistrictRepository {
   }
 
   findAllMatches(query = '') {
-    let queryUppercase = query.toUpperCase();
+    const queryUppercase = query.toUpperCase();
     let returnArray = [];
 
     returnArray = Object.keys(this.data).reduce( (acc, location) => {
@@ -45,6 +46,19 @@ export default class DistrictRepository {
       return acc
     }, []);
     return returnArray
+  }
+
+  findAverage(query) {
+    const queryUppercase = query.toUpperCase();
+    const averageData = this.findByName(queryUppercase);
+    let total = 0;
+
+    total = Object.keys(averageData.data).reduce( (acc, year) => {
+      acc += averageData.data[year]
+      return acc;
+    }, 0)
+
+    return parseFloat((total/Object.keys(averageData.data).length).toFixed(3))
   }
 
 }
