@@ -10,9 +10,9 @@ export default class DistrictRepository {
       if (!acc[currentLocation]) {
         acc[currentLocation] = {};
       }
-      acc[currentLocation][item.TimeFrame] = {
-        DataFormat: item.DataFormat,
-        Data: item.Data,
+      acc[currentLocation][item.TimeFrame] = item
+      if (typeof acc[currentLocation][item.TimeFrame].Data != 'number') {
+        acc[currentLocation][item.TimeFrame].Data = 0;
       }
       return acc;
     },{})
@@ -27,7 +27,7 @@ export default class DistrictRepository {
       return {
         location: queryUppercase,
         data: Object.keys(this.data[queryUppercase]).reduce( (acc, year) => {
-          acc[year] = parseFloat(this.data[queryUppercase][year].Data).toFixed(3));
+          acc[year] = parseFloat((this.data[queryUppercase][year].Data).toFixed(3));
           return acc
         }, {})
       }
