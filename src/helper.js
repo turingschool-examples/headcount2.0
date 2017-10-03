@@ -61,4 +61,25 @@ export default class DistrictRepository {
     return parseFloat((total/Object.keys(averageData.data).length).toFixed(3))
   }
 
+  compareDistrictAverages(location1, location2) {
+    const location1Uppercase = location1.toUpperCase();
+    const location2Uppercase = location2.toUpperCase();
+    const location1Average = this.findAverage(location1Uppercase);
+    const location2Average = this.findAverage(location2Uppercase);
+
+    return {
+      [location1Uppercase]: location1Average,
+      [location2Uppercase]: location2Average,
+      compared: this.findCompared(location1Average, location2Average),
+    }
+  }
+
+  findCompared(avg1, avg2) {
+    if (avg1 >= avg2) {
+      return parseFloat((avg2/avg1).toFixed(3))
+    } else {
+      return parseFloat((avg1/avg2).toFixed(3))
+    }
+  }
+
 }
