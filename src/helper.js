@@ -32,7 +32,19 @@ export default class DistrictRepository {
         }, {})
       }
     }
+  }
 
+  findAllMatches(query = '') {
+    let queryUppercase = query.toUpperCase();
+    let returnArray = [];
+
+    returnArray = Object.keys(this.data).reduce( (acc, location) => {
+      if ( location.includes(queryUppercase) ) {
+        acc.push(this.data[location])
+      }
+      return acc
+    }, []);
+    return returnArray
   }
 
 }
