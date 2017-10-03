@@ -21,13 +21,15 @@ export default class DistrictRepository {
 
   findByName(query = 'no query entered') {
     let queryUppercase = query.toUpperCase();
-    // test queryUppercase against existing data in this.data
-    // if there's no match, return undefined
     if (!this.data[queryUppercase]) {
       return
     } else {
       return {
         location: queryUppercase,
+        data: Object.keys(this.data[queryUppercase]).reduce( (acc, year) => {
+          acc[year] = parseFloat(this.data[queryUppercase][year].Data).toFixed(3));
+          return acc
+        }, {})
       }
     }
 
