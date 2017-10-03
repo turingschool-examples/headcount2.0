@@ -6,10 +6,11 @@ export default class DistrictRepository {
     let cleanData = {};
 
     cleanData = dataArrayToClean.reduce( (acc, item) => {
-      if (!acc[item.Location]) {
-        acc[item.Location] = {};
+      let currentLocation = item.Location.toUpperCase();
+      if (!acc[currentLocation]) {
+        acc[currentLocation] = {};
       }
-      acc[item.Location][item.TimeFrame] = {
+      acc[currentLocation][item.TimeFrame] = {
         DataFormat: item.DataFormat,
         Data: item.Data,
       }
@@ -17,4 +18,19 @@ export default class DistrictRepository {
     },{})
     return cleanData;
   }
+
+  findByName(query = 'no query entered') {
+    let queryUppercase = query.toUpperCase();
+    // test queryUppercase against existing data in this.data
+    // if there's no match, return undefined
+    if (!this.data[queryUppercase]) {
+      return
+    } else {
+      return {
+        location: queryUppercase,
+      }
+    }
+
+  }
+
 }
