@@ -1,7 +1,9 @@
 export default class DistrictRepository {
+  
   constructor(initialData) {
     this.data = this.removeDuplicateData(initialData);
   }
+
   removeDuplicateData(dataArrayToClean) {
     let cleanData = {};
 
