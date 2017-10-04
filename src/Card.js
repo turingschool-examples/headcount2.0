@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-const Card = () => {
+const Card = ({districtName, districtObject}) => (
   <article>
-    <h3>{this.props.districtName}</h3>
+    <h3>{districtName}</h3>
     <ul>
       {
-        Object.keys(this.props.districtObject).map( (item, index) =>
-          <li key={index}>{item}: {this.props.districtObject[item].Data}</li> )
+        Object.keys(districtObject).map( (item, index) =>
+          <li key={index}>{item}: {districtObject[item].Data}</li> )
       }
     </ul>
   </article>
-}
+);
+
+export default Card;
