@@ -5,7 +5,10 @@
         "node": true,
         "mocha": true
     },
-    "extends": "eslint:recommended",
+    "plugins": [
+        "react"
+    ],
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
     "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
@@ -14,10 +17,8 @@
         },
         "sourceType": "module"
     },
-    "plugins": [
-        "react"
-    ],
     "rules": {
+      "react/prop-types": [1],
       "eqeqeq": ["error", "always"],
       "getter-return": ["error", { "allowImplicit": true }],
       "indent": ["warn", 2],
@@ -37,7 +38,8 @@
       "no-duplicate-imports": "error",
       "id-length": "error",
       "id-blacklist": ["error", "data", "err", "e", "cb", "callback", "payload", "obj", "arr"],
-      "max-depth": ["warn", 4]
+      "max-depth": ["warn", 4],
+      "react/prop-types": [1]
     },
     "globals": {
     "expect": true
