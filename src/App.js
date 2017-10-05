@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Search from './Search';
-import './styles/App.css';
 import CardContainer from './CardContainer';
 import Card from './Card';
+import DistrictRepository from './helper'
+import kinderData from '../data/kindergartners_in_full_day_program'
+import './styles/App.css';
 
 const testDataObject = {
   'School1': {
@@ -42,7 +44,13 @@ const testDataObject = {
 };
 
 class App extends Component {
-
+  constructor() {
+    super();
+    this.state = {
+      dataObject: new DistrictRepository(kinderData),
+      displayArray: []
+    };
+  }
 
   cardSearch(query) {
     console.log(query);
