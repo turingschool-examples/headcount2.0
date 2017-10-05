@@ -54,21 +54,21 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({
-      displayArray: this.dataObject.findAllMatches()
+      displayArray: this.state.dataObject.findAllMatches()
     });
   }
 
   cardSearch(query) {
     this.setState({
-      displayArray: this.dataObject.findAllMatches(query)
+      displayArray: this.state.dataObject.findAllMatches(query)
     });
   }
 
   render() {
     return (
       <div>Welcome To Headcount 2.0
-        <Search cardSearch={this.cardSearch} />
-        <CardContainer dataObj={testDataObject} />
+        <Search cardSearch={this.cardSearch.bind(this)} />
+        <CardContainer dataArray={this.state.displayArray} />
       </div>
     );
   }
