@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Search from './Search';
 import CardContainer from './CardContainer';
-import Card from './Card';
-import DistrictRepository from './helper'
-import kinderData from '../data/kindergartners_in_full_day_program'
+// import Card from './Card';
+import DistrictRepository from './helper';
+import kinderData from '../data/kindergartners_in_full_day_program';
 import './styles/App.css';
 
 const testDataObject = {
@@ -52,8 +52,16 @@ class App extends Component {
     };
   }
 
+  componentDidMount() {
+    this.setState({
+      displayArray: this.dataObject.findAllMatches()
+    });
+  }
+
   cardSearch(query) {
-    console.log(query);
+    this.setState({
+      displayArray: this.dataObject.findAllMatches(query)
+    });
   }
 
   render() {
