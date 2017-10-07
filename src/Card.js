@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({districtName, districtObject}) => (
-  <article>
+const Card = ({districtName, districtObject, onCardClick}) => (
+  <article onClick={() => onCardClick(districtName)}>
     <h3>{districtName}</h3>
     <ul>
       {
@@ -15,7 +15,8 @@ const Card = ({districtName, districtObject}) => (
 
 Card.propTypes = {
   districtName: PropTypes.string,
-  districtObject: PropTypes.object
+  districtObject: PropTypes.object,
+  onCardClick: PropTypes.func
 };
 
 export default Card;

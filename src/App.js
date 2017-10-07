@@ -15,6 +15,7 @@ class App extends Component {
       displayArray: [],
       comparisonArray: []
     };
+    this.onCardClick = this.onCardClick.bind(this);
   }
 
   componentDidMount() {
@@ -29,7 +30,8 @@ class App extends Component {
     });
   }
 
-  onCardClick = (location) => {
+  onCardClick(location) {
+    console.log(location);
     let { comparisonArray } = this.state;
     let tempArray = comparisonArray.filter(card => card.location !== location);
 
@@ -48,7 +50,9 @@ class App extends Component {
       <div>
         <Hero />
         <Search cardSearch={this.cardSearch.bind(this)} />
-        <CardContainer dataArray={this.state.displayArray} />
+        <CardContainer
+          dataArray={this.state.displayArray}
+          onCardClick={this.onCardClick} />
       </div>
     );
   }
