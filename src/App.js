@@ -31,7 +31,6 @@ class App extends Component {
   }
 
   onCardClick(location) {
-    console.log(location);
     let { comparisonArray } = this.state;
     let tempArray = comparisonArray.filter(card => card.location !== location);
 
