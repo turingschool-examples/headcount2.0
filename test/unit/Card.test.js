@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../../src/Card';
 import App from '../../src/App';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-15';
 import config from '../setup.js';
 import DistrictRepository from '../../src/helper.js';
@@ -55,11 +55,13 @@ describe('Card component', () => {
     expect(li.length).toEqual(11);
   });
 
-  test('onCardClick function should change comparisonArray in App state', () => {
-    const wrapperApp = shallow(<App />);
+  test.skip('onCardClick function should change comparisonArray in App state', () => {
+    const wrapperApp = mount(<App />);
     expect(wrapperApp.state('comparisonArray')).toEqual([]);
-    article.simulate('click');
-    expect(wrapperApp.state('comparisonArray')).toEqual([]);
+    article.simulate('click', ...args);
+    mockFunc({});
+    mockFunc.mock.calls;
+    expect(wrapperApp.state('comparisonArray')).toEqual([{}]);
   });
 
 });
