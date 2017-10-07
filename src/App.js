@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Search from './Search';
 import CardContainer from './CardContainer';
 import Hero from './Hero';
-// import Card from './Card';
 import DistrictRepository from './helper';
 import kinderData from '../data/kindergartners_in_full_day_program';
 import './styles/App.css';
