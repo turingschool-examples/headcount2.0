@@ -13,7 +13,8 @@ class App extends Component {
     this.state = {
       dataObject: new DistrictRepository(kinderData),
       displayArray: [],
-      comparisonArray: []
+      comparisonArray: [],
+      comparisonCardArray: []
     };
     this.onCardClick = this.onCardClick.bind(this);
     this.cardSearch = this.cardSearch.bind(this);
@@ -33,16 +34,33 @@ class App extends Component {
 
   onCardClick(location) {
     let { comparisonArray, dataObject } = this.state;
+    let tempComparisonCard;
     let tempArray = comparisonArray.filter(card => card.location !== location);
 
     if (tempArray.length === comparisonArray.length) {
       const clickedCard = dataObject.findByName(location);
 
       tempArray.push(clickedCard);
+      tempComparisonCard = this.updateComparisonCards(tempArray);
+      console.log(tempComparisonCard);
     }
     this.setState({
-      comparisonArray: tempArray
+      comparisonArray: tempArray,
+      comparisonCardArray: tempComparisonCard
     });
+  }
+
+  updateComparisonCards(newComparisonArray) {
+    console.log('here we go comparing!');
+    if (newComparisonArray.length < 2) {
+      return [];
+    }
+    console.log('array is at least 2!');
+    let tempCompareArray = [];
+    tempCompareArray.push(
+      this.state.dataObject.compareDistrictAverages(
+        newComparisonArray[0].location, newComparisonArray[1].location));
+    return tempCompareArray;
   }
 
   render() {
@@ -50,14 +68,15 @@ class App extends Component {
     return (
       <div>
         <Hero />
-        <CardComparison
-          onCardClick={this.onCardClick}
-          comparisonArray={comparisonArray} />
-        <Search cardSearch={this.cardSearch} />
         <CardContainer
           comparisonArray={comparisonArray}
           dataArray={displayArray}
           onCardClick={this.onCardClick} />
+        <Search cardSearch={this.cardSearch.bind(this)} />
+        <CardComparison
+          onCardClick={this.onCardClick}
+          comparisonArray={this.state.comparisonArray}
+          comparisonCardArray={this.state.comparisonCardArray} />
       </div>
     );
   }
