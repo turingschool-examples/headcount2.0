@@ -19,7 +19,7 @@ const Card = ({ districtName, districtObject, onCardClick, borderColorClass }) =
             className={classSwitch(districtObject[item])}>
             {item}: {districtObject[item]}
           </li>)
-      }
+      } 
     </ul>
   </article>
 );

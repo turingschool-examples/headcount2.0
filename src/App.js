@@ -52,11 +52,11 @@ class App extends Component {
         <Hero />
         <CardComparison
           onCardClick={this.onCardClick}
-          comparisonArray={this.state.comparisonArray} />
-        <Search cardSearch={this.cardSearch.bind(this)} />
+          comparisonArray={comparisonArray} />
+        <Search cardSearch={this.cardSearch} />
         <CardContainer
-          comparisonArray={this.state.comparisonArray}
-          dataArray={this.state.displayArray}
+          comparisonArray={comparisonArray}
+          dataArray={displayArray}
           onCardClick={this.onCardClick} />
       </div>
     );
