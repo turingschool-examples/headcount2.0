@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 import PropTypes from 'prop-types';
 
-const CardContainer = ({ dataArray, onCardClick }) => (
+const CardContainer = ({ dataArray, onCardClick, comparisonArray }) => (
   <section>
     {dataArray.map((district) =>
       <Card

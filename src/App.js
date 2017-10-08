@@ -15,6 +15,7 @@ class App extends Component {
       comparisonArray: []
     };
     this.onCardClick = this.onCardClick.bind(this);
+    this.cardSearch = this.cardSearch.bind(this);
   }
 
   componentDidMount() {
@@ -30,11 +31,11 @@ class App extends Component {
   }
 
   onCardClick(location) {
-    let { comparisonArray } = this.state;
+    let { comparisonArray, dataObject } = this.state;
     let tempArray = comparisonArray.filter(card => card.location !== location);
 
     if (tempArray.length === comparisonArray.length) {
-      const clickedCard = this.state.dataObject.findByName(location);
+      const clickedCard = dataObject.findByName(location);
 
       tempArray.push(clickedCard);
     }
@@ -44,13 +45,15 @@ class App extends Component {
   }
 
   render() {
+    let { comparisonArray, displayArray } = this.state;
     return (
       <div>
-        <Hero />
-        <Search cardSearch={this.cardSearch.bind(this)} />
+        {/* <Hero /> */}
+        <Search cardSearch={this.cardSearch} />
         <CardContainer
-          dataArray={this.state.displayArray}
-          onCardClick={this.onCardClick} />
+          dataArray={displayArray}
+          onCardClick={this.onCardClick}
+          comparisonArray={comparisonArray} />
       </div>
     );
   }
