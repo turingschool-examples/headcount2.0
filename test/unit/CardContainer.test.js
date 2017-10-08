@@ -26,9 +26,11 @@ describe('CardContainer unit testing', () => {
     expect(wrapper.exists()).toEqual(true);
   });
 
-  test('should render an instance of card component', () => {
+  test('should render an instance of card component and a surrounding section tag', () => {
     const section = wrapper.find('section');
-    expect(section.find('Card').exists()).toEqual(true);
+    const card = section.find('Card');
+    expect(section.exists()).toEqual(true);
+    expect(card.exists()).toEqual(true);
   });
 
   test('should render and pass down correct information', () => {
