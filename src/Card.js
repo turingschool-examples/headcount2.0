@@ -4,7 +4,7 @@ import cardcss from './styles/Card.css';
 
 const classSwitch = (num) => {
   return num >= 0.5 ? 'blue' : 'red';
-}
+};
 
 const Card = ({ districtName, districtObject, onCardClick, borderColorClass }) => (
   <article
