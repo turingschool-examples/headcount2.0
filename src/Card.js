@@ -6,8 +6,10 @@ const classSwitch = (num) => {
   return num >= 0.5 ? 'blue' : 'red';
 }
 
-const Card = ({ districtName, districtObject, onCardClick }) => (
-  <article onClick={() => onCardClick(districtName)}>
+const Card = ({ districtName, districtObject, onCardClick, borderColorClass }) => (
+  <article
+    className={borderColorClass}
+    onClick={() => onCardClick(districtName)}>
     <h3>{districtName}</h3>
     <ul>
       {
@@ -25,7 +27,8 @@ const Card = ({ districtName, districtObject, onCardClick }) => (
 Card.propTypes = {
   districtName: PropTypes.string,
   districtObject: PropTypes.object,
-  onCardClick: PropTypes.func
+  onCardClick: PropTypes.func,
+  borderColorClass: PropTypes.string
 };
 
 export default Card;

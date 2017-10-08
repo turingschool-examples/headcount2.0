@@ -4,6 +4,7 @@ import CardContainer from './CardContainer';
 import Hero from './Hero';
 import DistrictRepository from './helper';
 import kinderData from '../data/kindergartners_in_full_day_program';
+import CardComparison from './CardComparison';
 import './styles/App.css';
 
 class App extends Component {
@@ -48,12 +49,15 @@ class App extends Component {
     let { comparisonArray, displayArray } = this.state;
     return (
       <div>
-        {/* <Hero /> */}
-        <Search cardSearch={this.cardSearch} />
-        <CardContainer
-          dataArray={displayArray}
+        <Hero />
+        <CardComparison
           onCardClick={this.onCardClick}
-          comparisonArray={comparisonArray} />
+          comparisonArray={this.state.comparisonArray} />
+        <Search cardSearch={this.cardSearch.bind(this)} />
+        <CardContainer
+          comparisonArray={this.state.comparisonArray}
+          dataArray={this.state.displayArray}
+          onCardClick={this.onCardClick} />
       </div>
     );
   }
