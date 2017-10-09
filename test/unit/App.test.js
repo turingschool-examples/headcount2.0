@@ -108,4 +108,39 @@ describe('App component unit testing', () => {
     expect(mountWrapper.state('comparisonCardArray')).toEqual([cardComparisonObject]);
   });
 
+  test('child components should receive correct props', () => {
+
+    let mockFunc = () => {};
+    let cardComparisonObject = district.compareDistrictAverages('aspen 1', 'bennett 29j' );
+    let card1 = district.findByName('aspen 1');
+    let card2 = district.findByName('bennett 29j');
+    let comparisonArray = [card1, card2];
+    let comparisonCardArray = [cardComparisonObject];
+
+    const search = mount(<Search cardSearch={mockFunc}/>);
+
+    expect(search.props().cardSearch).toEqual(mockFunc);
+
+    const cardContainer = mount(
+      <CardContainer
+        comparisonArray={comparisonArray}
+        dataArray={district.findAllMatches()}
+        onCardClick={mockFunc} />
+    );
+
+    expect(cardContainer.props().comparisonArray).toEqual(comparisonArray);
+    expect(cardContainer.props().dataArray).toEqual(district.findAllMatches());
+    expect(cardContainer.props().onCardClick).toEqual(mockFunc);
+
+    const cardComparison = mount(<CardComparison
+      comparisonArray={comparisonArray}
+      comparisonCardArray={comparisonCardArray}
+      onCardClick={mockFunc} />
+    );
+
+    expect(cardComparison.props().comparisonArray).toEqual(comparisonArray);
+    expect(cardComparison.props().comparisonCardArray).toEqual(comparisonCardArray);
+    expect(cardComparison.props().onCardClick).toEqual(mockFunc);
+  });
+
 });
