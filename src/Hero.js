@@ -7,10 +7,10 @@ export default class Hero extends Component {
   }
 
   render() {
-    return(
+    return (
       <div className='hero'>
         <h1>HeadCount 2.0</h1>
       </div>
-    )
+    );
   }
 }

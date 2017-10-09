@@ -6,7 +6,7 @@ import config from '../setup.js';
 import DistrictRepository from '../../src/helper.js';
 import kinderData from '../../data/kindergartners_in_full_day_program.js';
 
-describe('ComparisonCard componet unit testing', () => {
+describe(`ComparisonCard componet unit testing`, () => {
   const district = new DistrictRepository(kinderData);
   let shallowWrapper;
   let mountWrapper;
@@ -39,27 +39,28 @@ describe('ComparisonCard componet unit testing', () => {
     );
   });
 
-  test('should create an instance of ComparisonCard', () => {
+  test(`should create an instance of ComparisonCard`, () => {
     expect(shallowWrapper.exists()).toEqual(true);
   });
 
-  test('should render h3 tags for locations, h4 for averages, h2 for compared, wrapped in an article tag', () => {
-    const article = mountWrapper.find('article');
-    const firsth3 = article.find('h3').first();
-    const secondh3 = article.find('h3').at(1);
-    const firsth4 = article.find('h4').first();
-    const secondh4 = article.find('h4').at(1);
-    const h2 = article.find('h2');
+  test(`should render h3 tags for locations, h4 for averages, h2 for compared,
+    wrapped in an article tag`, () => {
+      const article = mountWrapper.find('article');
+      const firsth3 = article.find('h3').first();
+      const secondh3 = article.find('h3').at(1);
+      const firsth4 = article.find('h4').first();
+      const secondh4 = article.find('h4').at(1);
+      const h2 = article.find('h2');
 
-    expect(article.type()).toEqual('article');
-    expect(firsth3.type()).toEqual('h3');
-    expect(secondh3.type()).toEqual('h3');
-    expect(firsth4.type()).toEqual('h4');
-    expect(secondh4.type()).toEqual('h4');
-    expect(h2.type()).toEqual('h2');
-  });
+      expect(article.type()).toEqual('article');
+      expect(firsth3.type()).toEqual('h3');
+      expect(secondh3.type()).toEqual('h3');
+      expect(firsth4.type()).toEqual('h4');
+      expect(secondh4.type()).toEqual('h4');
+      expect(h2.type()).toEqual('h2');
+    });
 
-  test('expect to render correct information', () => {
+  test(`expect to render correct information`, () => {
     const firsth3 = mountWrapper.find('h3').first().text();
     const secondh3 = mountWrapper.find('h3').at(1).text();
     const firsth4 = mountWrapper.find('h4').first().text();
@@ -72,5 +73,4 @@ describe('ComparisonCard componet unit testing', () => {
     expect(secondh4).toEqual('0.182');
     expect(h2).toEqual('0.182');
   });
-
 });
