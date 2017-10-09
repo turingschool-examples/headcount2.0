@@ -4,11 +4,11 @@ import comparisoncardcss from './styles/ComparisonCard.css';
 
 const ComparisonCard = ( { locationOne, locationTwo, averageOne, averageTwo, comparisonData} ) => (
   <article className='comparison-card'>
-    <h3>{locationOne}</h3>
-    <h4>{averageOne}</h4>
-    <h2>{comparisonData}</h2>
-    <h3>{locationTwo}</h3>
-    <h4>{averageTwo}</h4>
+    <h3 className='location-one'>{locationOne}</h3>
+    <h4 className='average-one'>Average: {averageOne}</h4>
+    <h2>Compared: {comparisonData}</h2>
+    <h3 className='location-two'>{locationTwo}</h3>
+    <h4 className='average-two'>Average: {averageTwo}</h4>
   </article>
 );
 
