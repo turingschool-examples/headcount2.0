@@ -17,6 +17,7 @@ describe('Card component', () => {
   let h3;
   let ul;
   let li;
+  let liFirst;
 
   beforeEach(() => {
     mockFunc = () => {};
@@ -31,6 +32,7 @@ describe('Card component', () => {
     h3 = article.find('h3');
     ul = article.find('ul');
     li = ul.find('li');
+    liFirst = ul.find('li').at(1);
   });
 
   test('Create an instance of Card component', () => {
@@ -38,10 +40,10 @@ describe('Card component', () => {
   });
 
   test('should render article, h3, ul, and li tags', () => {
-    expect(article.exists()).toEqual(true);
-    expect(h3.exists()).toEqual(true);
-    expect(ul.exists()).toEqual(true);
-    expect(li.exists()).toEqual(true);
+    expect(article.type()).toEqual('article');
+    expect(h3.type()).toEqual('h3');
+    expect(ul.type()).toEqual('ul');
+    expect(liFirst.type()).toEqual('li');
   });
 
   test('it should render the correct data', () => {
@@ -61,6 +63,7 @@ describe('Card component', () => {
 
     expect(li1text).toEqual('2004: 0');
     expect(li1.hasClass('red')).toEqual(true);
+
     expect(li6text).toEqual('2010: 0.875');
     expect(li6.hasClass('blue')).toEqual(true);
   })
