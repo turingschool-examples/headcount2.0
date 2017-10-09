@@ -1,6 +1,5 @@
 import React from 'react';
-import ComparisonCard from '../../src/ComparisonCard';
-import CardComparison from '../../src/CardComparison';
+import ComparisonContainer from '../../src/ComparisonContainer';
 import Search from '../../src/Search';
 import CardContainer from '../../src/CardContainer';
 import App from '../../src/App';
@@ -37,29 +36,35 @@ describe('App component unit testing', () => {
     expect(search.exists()).toEqual(true);
   });
 
-  test('App should render an instance of CardComparison', () => {
-    const cardComparison = mountWrapper.find('CardComparison');
-    expect(cardComparison.exists()).toEqual(true);
+  test('App should render an instance of ComparisonContainer', () => {
+    const ComparisonContainer = mountWrapper.find('ComparisonContainer');
+    expect(ComparisonContainer.exists()).toEqual(true);
   });
 
-  test('state should have dataObject property set to new instance of DistrictRepository', () => {
-    expect(mountWrapper.state('dataObject')).toEqual(district);
-  });
+  test(`state should have dataObject property set to new
+    instance of DistrictRepository`, () => {
+      expect(mountWrapper.state('dataObject')).toEqual(district);
+    });
 
-  test('state should have displayArray property that contains kinderData objects', () => {
-    expect(mountWrapper.state('displayArray')).toEqual(district.findAllMatches());
-  });
+  test(`state should have displayArray property
+    that contains kinderData objects`, () => {
+      expect(mountWrapper.state('displayArray'))
+        .toEqual(district.findAllMatches());
+    });
 
-  test('state should have comparisonArray property that contains empty array', () => {
-    expect(mountWrapper.state('comparisonArray')).toEqual([]);
-  });
+  test(`state should have comparisonArray property
+    that contains empty array`, () => {
+      expect(mountWrapper.state('comparisonArray')).toEqual([]);
+    });
 
-  test('state should have comparisonCardArray property that contains empty array', () => {
-    expect(mountWrapper.state('comparisonCardArray')).toEqual([]);
-  });
+  test(`state should have comparisonCardArray property
+    that contains empty array`, () => {
+      expect(mountWrapper.state('comparisonCardArray')).toEqual([]);
+    });
 
   test('cardSearch function should update displayArray.state', () => {
-    expect(mountWrapper.state('displayArray')).toEqual(district.findAllMatches());
+    expect(mountWrapper.state('displayArray'))
+      .toEqual(district.findAllMatches());
 
     let dataObj = district.findByName('colorado');
 
@@ -74,48 +79,53 @@ describe('App component unit testing', () => {
 
     input.simulate('change', {target: { value: 'colorado'}});
 
-    expect(mountWrapper.state('displayArray')).toEqual([district.findByName('colorado')]);
+    expect(mountWrapper.state('displayArray'))
+      .toEqual([district.findByName('colorado')]);
   });
 
-  test('onCardClick function should update comparisonArray.state & comparisonCardArray.state', () => {
-    expect(mountWrapper.state('comparisonArray')).toEqual([]);
-    expect(mountWrapper.state('comparisonCardArray')).toEqual([]);
+  test(`onCardClick function should update comparisonArray.state &
+  comparisonCardArray.state`, () => {
+      expect(mountWrapper.state('comparisonArray')).toEqual([]);
+      expect(mountWrapper.state('comparisonCardArray')).toEqual([]);
 
-    let cardComparisonObject = district.compareDistrictAverages('aspen 1', 'bennett 29j' );
-    let card1 = district.findByName('aspen 1');
-    let card2 = district.findByName('bennett 29j');
-    let comparisonArray = [card1, card2];
+      let ComparisonContainerObject =
+        district.compareDistrictAverages('aspen 1', 'bennett 29j' );
+      let card1 = district.findByName('aspen 1');
+      let card2 = district.findByName('bennett 29j');
+      let comparisonArray = [card1, card2];
 
-    let mockFunc = () => {
-      mountWrapper.setState({
-        comparisonArray: [card1, card2],
-        comparisonCardArray: [cardComparisonObject]
-      });
-    };
+      let mockFunc = () => {
+        mountWrapper.setState({
+          comparisonArray: [card1, card2],
+          comparisonCardArray: [ComparisonContainerObject]
+        });
+      };
 
-    const cardContainer = mount(
-      <CardContainer
-        comparisonArray={comparisonArray}
-        dataArray={district.findAllMatches()}
-        onCardClick={mockFunc} />
-    );
+      const cardContainer = mount(
+        <CardContainer
+          comparisonArray={comparisonArray}
+          dataArray={district.findAllMatches()}
+          onCardClick={mockFunc} />
+      );
 
-    const cardNode = cardContainer.find('Card').first();
+      const cardNode = cardContainer.find('Card').first();
 
-    cardNode.simulate('click');
+      cardNode.simulate('click');
 
-    expect(mountWrapper.state('comparisonArray')).toEqual(comparisonArray);
-    expect(mountWrapper.state('comparisonCardArray')).toEqual([cardComparisonObject]);
-  });
+      expect(mountWrapper.state('comparisonArray')).toEqual(comparisonArray);
+      expect(mountWrapper.state('comparisonCardArray'))
+        .toEqual([ComparisonContainerObject]);
+    });
 
   test('child components should receive correct props', () => {
 
     let mockFunc = () => {};
-    let cardComparisonObject = district.compareDistrictAverages('aspen 1', 'bennett 29j' );
+    let ComparisonContainerObject =
+      district.compareDistrictAverages('aspen 1', 'bennett 29j' );
     let card1 = district.findByName('aspen 1');
     let card2 = district.findByName('bennett 29j');
     let comparisonArray = [card1, card2];
-    let comparisonCardArray = [cardComparisonObject];
+    let comparisonCardArray = [ComparisonContainerObject];
 
     const search = mount(<Search cardSearch={mockFunc}/>);
 
@@ -132,15 +142,18 @@ describe('App component unit testing', () => {
     expect(cardContainer.props().dataArray).toEqual(district.findAllMatches());
     expect(cardContainer.props().onCardClick).toEqual(mockFunc);
 
-    const cardComparison = mount(<CardComparison
-      comparisonArray={comparisonArray}
-      comparisonCardArray={comparisonCardArray}
-      onCardClick={mockFunc} />
+    const testComparisonContainer = mount(
+      <ComparisonContainer
+        comparisonArray={comparisonArray}
+        comparisonCardArray={comparisonCardArray}
+        onCardClick={mockFunc} />
     );
 
-    expect(cardComparison.props().comparisonArray).toEqual(comparisonArray);
-    expect(cardComparison.props().comparisonCardArray).toEqual(comparisonCardArray);
-    expect(cardComparison.props().onCardClick).toEqual(mockFunc);
+    expect(testComparisonContainer.props()
+      .comparisonArray).toEqual(comparisonArray);
+    expect(testComparisonContainer.props()
+      .comparisonCardArray).toEqual(comparisonCardArray);
+    expect(testComparisonContainer.props().onCardClick).toEqual(mockFunc);
   });
 
 });

@@ -4,7 +4,7 @@ import Card from './Card';
 import ComparisonCard from './ComparisonCard';
 
 const borderColors = ['blue-border', 'green-border'];
-const CardComparison = (
+const ComparisonContainer = (
   { comparisonArray, onCardClick, comparisonCardArray }
 ) => (
   <section>
@@ -38,9 +38,9 @@ const CardComparison = (
   </section>
 );
 
-export default CardComparison;
+export default ComparisonContainer;
 
-CardComparison.propTypes = {
+ComparisonContainer.propTypes = {
   comparisonArray: PropTypes.array,
   onCardClick: PropTypes.func,
   comparisonCardArray: PropTypes.array
