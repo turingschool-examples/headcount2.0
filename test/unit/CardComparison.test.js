@@ -16,13 +16,20 @@ describe('CardComparison unit testing', () => {
 
   beforeEach(() => {
     mockFunc = () => {};
-    comparisonArray = [district.findByName('aspen 1'), district.findByName('bennett 29j')];
-    comparisonCardArray = [district.compareDistrictAverages('aspen 1', 'bennett 29j')];
+    
+    comparisonArray = [
+      district.findByName('aspen 1'),
+      district.findByName('bennett 29j')];
+
+    comparisonCardArray = [
+      district.compareDistrictAverages('aspen 1', 'bennett 29j')];
+
     shallowWrapper = shallow(
       <CardComparison
         onCardClick={mockFunc}
         comparisonArray={comparisonArray}
         comparisonCardArray={comparisonCardArray} />);
+
     mountWrapper = mount(
       <CardComparison
         onCardClick={mockFunc}

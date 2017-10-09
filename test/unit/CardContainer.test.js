@@ -16,7 +16,10 @@ describe('CardContainer unit testing', () => {
 
   beforeEach(() => {
     mockFunc = () => {};
-    comparisonArray = [district.findByName('colorado'), district.findByName('colorado springs 11')]
+    
+    comparisonArray = [
+      district.findByName('colorado'),
+     district.findByName('colorado springs 11')];
     dataArray = district.findAllMatches('colo');
     shallowWrapper = shallow(
       <CardContainer
@@ -40,7 +43,7 @@ describe('CardContainer unit testing', () => {
     const section = mountWrapper.find('section');
     const card1 = section.find('Card').first();
     const card2 = section.find('Card').at(1);
-    expect(section.exists()).toEqual(true);
+    expect(section.type()).toEqual('section');
     expect(card1.exists()).toEqual(true);
     expect(card2.exists()).toEqual(true);
   });
