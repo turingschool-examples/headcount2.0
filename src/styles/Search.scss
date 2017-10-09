@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:300,400,600,700");
+
+.input-container {
+  opacity: 0.9;
+  background-color: #2a2a2b;
+  height: 50px;
+  padding: 15px 0px 0px 0px;
+}
+
+input {
+  display: block;
+  height: 35px;
+  width: 400px;
+  border-width: 0;
+  margin: 0px auto;
+  padding-left: 10px;
+  font-size: 18px;
+  font-family: 'Dosis', sans-serif;
+}
+
+::-webkit-input-placeholder {
+  color: #000;
+}

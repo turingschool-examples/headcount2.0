@@ -3,15 +3,34 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "0.9.0"
+    "babel": "^6.23.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-15": "^1.0.1",
+    "eslint": "^4.8.0",
+    "eslint-plugin-react": "^7.4.0",
+    "jest-css-modules": "^1.1.0",
+    "node-sass-chokidar": "0.0.3",
+    "react-scripts": "0.9.0",
+    "react-test-renderer": "^15.6.2"
   },
+   "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/jest-css-modules"
+  }
+  ,
   "dependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "jest-enzyme": "^4.0.0",
+    "npm-run-all": "^4.1.1",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
