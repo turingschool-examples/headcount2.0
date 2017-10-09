@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from './Card';
+import ComparisonCard from './ComparisonCard';
 
 const borderColors = ['blue-border', 'green-border'];
 const CardComparison = ( { comparisonArray, onCardClick, comparisonCardArray } ) => (
@@ -19,8 +20,18 @@ const CardComparison = ( { comparisonArray, onCardClick, comparisonCardArray } )
       })
     }
     {
-      comparisonCardArray.map( () => {
+      comparisonCardArray.map( (comparisonCard, index) => {
+        let locationOne = Object.keys(comparisonCard)[0];
+        let locationTwo = Object.keys(comparisonCard)[1];
         
+
+        return (<ComparisonCard
+          key={`comparisonCard${index}`}
+          locationOne={locationOne}
+          locationTwo={locationTwo}
+          averageOne={comparisonCard[locationOne]}
+          averageTwo={comparisonCard[locationTwo]}
+          comparisonData={comparisonCard.compared} />);
       })
     }
   </section>

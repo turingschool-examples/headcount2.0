@@ -41,9 +41,8 @@ class App extends Component {
       const clickedCard = dataObject.findByName(location);
 
       tempArray.push(clickedCard);
-      tempComparisonCard = this.updateComparisonCards(tempArray);
-      console.log(tempComparisonCard);
     }
+    tempComparisonCard = this.updateComparisonCards(tempArray);
     this.setState({
       comparisonArray: tempArray,
       comparisonCardArray: tempComparisonCard
@@ -51,11 +50,9 @@ class App extends Component {
   }
 
   updateComparisonCards(newComparisonArray) {
-    console.log('here we go comparing!');
     if (newComparisonArray.length < 2) {
       return [];
     }
-    console.log('array is at least 2!');
     let tempCompareArray = [];
     tempCompareArray.push(
       this.state.dataObject.compareDistrictAverages(
