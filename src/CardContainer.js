@@ -11,7 +11,8 @@ const CardContainer = ({ dataArray, onCardClick, comparisonArray }) => (
       return (
         <Card
           key={district.location}
-          borderColorClass={borderColors[defineBorderColor(district, comparisonArray)]}
+          borderColorClass={borderColors[defineBorderColor(
+            district, comparisonArray)]}
           districtName={district.location}
           districtObject={district.data}
           onCardClick={onCardClick} />

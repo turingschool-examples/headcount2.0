@@ -4,13 +4,14 @@ import Card from './Card';
 import ComparisonCard from './ComparisonCard';
 
 const borderColors = ['blue-border', 'green-border'];
-const CardComparison = ( { comparisonArray, onCardClick, comparisonCardArray } ) => (
+const CardComparison = (
+  { comparisonArray, onCardClick, comparisonCardArray }
+) => (
   <section>
     {
       comparisonArray.map( (selectedDistrict, index) => {
         return (
           <Card
-          // key={`selectedIndex:${index}`}
             key={`comp-array-${index}`}
             borderColorClass={borderColors[index]}
             districtName={selectedDistrict.location}
@@ -23,7 +24,7 @@ const CardComparison = ( { comparisonArray, onCardClick, comparisonCardArray } )
       comparisonCardArray.map( (comparisonCard, index) => {
         let locationOne = Object.keys(comparisonCard)[0];
         let locationTwo = Object.keys(comparisonCard)[1];
-        
+
 
         return (<ComparisonCard
           key={`comparisonCard${index}`}

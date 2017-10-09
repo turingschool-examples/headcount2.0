@@ -1,6 +1,11 @@
 section {
+  box-shadow:0 0 10px black inset;
   display: flex;
+  min-width: 100%;
   flex-direction: row;
-  // justify-content: center;
-  overflow: auto;
+  // justify-content: space-around;
+  // margin-left: auto;
+  // margin-right: auto;
+  // justify-content: space-evenly;
+  overflow-x: auto;
 }
