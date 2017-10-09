@@ -21,7 +21,7 @@ describe('Search Component', () => {
   test('should render text input field', () => {
     const input = wrapper.find('input');
 
-    expect(input.type()).toEqual('input')
+    expect(input.type()).toEqual('input');
   });
 
   test('should update value of input field', () => {
@@ -29,6 +29,6 @@ describe('Search Component', () => {
 
     input.simulate('change', {target: {value: 'hello'}});
     expect(wrapper.state('input')).toEqual('hello');
-  })
+  });
 
 });

@@ -1,7 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ComparisonCard = ( { locationOne, locationTwo, averageOne, averageTwo, comparisonData} ) => (
+const ComparisonCard = ( {
+  locationOne,
+  locationTwo,
+  averageOne,
+  averageTwo,
+  comparisonData
+} ) => (
   <article>
     <h3>{locationOne}</h3>
     <h4>{averageOne}</h4>

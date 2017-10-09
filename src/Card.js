@@ -6,7 +6,8 @@ const classSwitch = (num) => {
   return num >= 0.5 ? 'blue' : 'red';
 };
 
-const Card = ({ districtName, districtObject, onCardClick, borderColorClass }) => (
+const Card = ({ districtName, districtObject, onCardClick, borderColorClass }
+) => (
   <article
     className={borderColorClass}
     onClick={() => onCardClick(districtName)}>

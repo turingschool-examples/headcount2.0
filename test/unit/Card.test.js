@@ -18,6 +18,7 @@ describe('Card component', () => {
   let ul;
   let li;
   let liFirst;
+  let liLast;
 
   beforeEach(() => {
     mockFunc = () => {};
@@ -32,7 +33,8 @@ describe('Card component', () => {
     h3 = article.find('h3');
     ul = article.find('ul');
     li = ul.find('li');
-    liFirst = ul.find('li').at(1);
+    liFirst = ul.find('li').at(0);
+    liLast = ul.find('li').at(10);
   });
 
   test('Create an instance of Card component', () => {
@@ -48,7 +50,8 @@ describe('Card component', () => {
 
   test('it should render the correct data', () => {
     expect(h3.text()).toEqual('MEEKER RE1');
-    expect(ul.text()).toEqual('2004: 02005: 02006: 02007: 02008: 02009: 02010: 0.8752011: 02012: 02013: 02014: 0')
+    expect(liFirst.text()).toEqual('2004: 0');
+    expect(liLast.text()).toEqual('2014: 0');
   });
 
   test('number of li tags rendered should be the same as data.length', () => {
@@ -66,5 +69,5 @@ describe('Card component', () => {
 
     expect(li6text).toEqual('2010: 0.875');
     expect(li6.hasClass('blue')).toEqual(true);
-  })
+  });
 });

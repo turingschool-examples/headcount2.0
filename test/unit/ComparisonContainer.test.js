@@ -62,10 +62,12 @@ describe('ComparisonContainer unit testing', () => {
 
       const aspenArticle = mountWrapper.find('Card').first().find('article');
       const h3 = aspenArticle.find('h3').text();
-      const ul = aspenArticle.find('ul').text();
+      const liFirst = aspenArticle.find('li').at(0).text();
+      const liLast = aspenArticle.find('li').at(10).text();
 
       expect(h3).toEqual('ASPEN 1');
-      expect(ul).toEqual(`2004: 12005: 12006: 12007: 12008: 12009: 12010: 12011: 12012: 12013: 12014: 0.992`);
+      expect(liFirst).toEqual(`2004: 1`);
+      expect(liLast).toEqual('2014: 0.992');
     });
 
   test(`should render correct information on instance
