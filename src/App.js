@@ -64,7 +64,7 @@ class App extends Component {
   render() {
     let { comparisonArray, displayArray, comparisonCardArray } = this.state;
     return (
-      <div>
+      <div className='app-container'>
         <Hero />
         <CardContainer
           comparisonArray={comparisonArray}

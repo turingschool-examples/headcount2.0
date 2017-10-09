@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import searchcss from './styles/Search.css';
 
 export default class Search extends Component {
   constructor() {
@@ -19,7 +20,7 @@ export default class Search extends Component {
 
   render() {
     return (
-      <div>
+      <div className='input-container'>
         <input
           type='text'
           placeholder='Search for a school district...'
