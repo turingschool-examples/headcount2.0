@@ -5,7 +5,7 @@ import Hero from './Hero';
 import DistrictRepository from './helper';
 import kinderData from '../data/kindergartners_in_full_day_program';
 import CardComparison from './CardComparison';
-import './styles/App.scss';
+import './styles/App.css';
 
 class App extends Component {
   constructor() {
