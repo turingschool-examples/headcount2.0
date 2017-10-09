@@ -6,6 +6,8 @@ article {
   min-height: 400px;
   margin: 10px 0px 10px 0px;
   font-family: 'Dosis', sans-serif;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 h3 {
@@ -39,9 +41,11 @@ li {
 }
 
 .blue-border {
-  background-color: blue;
+  border: 5px solid blue;
+  background-color: #eef;
 }
 
 .green-border {
-  background-color: green;
+  border: 5px solid green;
+  background-color: #efe;
 }

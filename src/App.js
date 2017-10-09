@@ -37,7 +37,7 @@ class App extends Component {
     let tempComparisonCard;
     let tempArray = comparisonArray.filter(card => card.location !== location);
 
-    if (tempArray.length === comparisonArray.length) {
+    if (tempArray.length === comparisonArray.length && comparisonArray.length < 2) {
       const clickedCard = dataObject.findByName(location);
 
       tempArray.push(clickedCard);
