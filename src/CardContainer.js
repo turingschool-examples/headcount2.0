@@ -3,6 +3,7 @@ import Card from './Card';
 import PropTypes from 'prop-types';
 
 const borderColors = ['blue-border', 'green-border'];
+
 const CardContainer = ({ dataArray, onCardClick, comparisonArray }) => (
   <section>
     {dataArray.map((district) => {
