@@ -4,7 +4,7 @@ import CardContainer from './CardContainer';
 import Hero from './Hero';
 import DistrictRepository from './helper';
 import kinderData from '../data/kindergartners_in_full_day_program';
-import CardComparison from './CardComparison';
+import ComparisonContainer from './ComparisonContainer';
 import './styles/App.css';
 
 class App extends Component {
@@ -37,7 +37,8 @@ class App extends Component {
     let tempComparisonCard;
     let tempArray = comparisonArray.filter(card => card.location !== location);
 
-    if (tempArray.length === comparisonArray.length && comparisonArray.length < 2) {
+    if (tempArray.length === comparisonArray.length &&
+      comparisonArray.length < 2) {
       const clickedCard = dataObject.findByName(location);
 
       tempArray.push(clickedCard);
@@ -70,7 +71,7 @@ class App extends Component {
           dataArray={displayArray}
           onCardClick={this.onCardClick} />
         <Search cardSearch={this.cardSearch} />
-        <CardComparison
+        <ComparisonContainer
           onCardClick={this.onCardClick}
           comparisonArray={comparisonArray}
           comparisonCardArray={comparisonCardArray} />
