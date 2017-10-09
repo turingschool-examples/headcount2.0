@@ -61,7 +61,7 @@ class App extends Component {
   }
 
   render() {
-    let { comparisonArray, displayArray } = this.state;
+    let { comparisonArray, displayArray, comparisonCardArray } = this.state;
     return (
       <div>
         <Hero />
@@ -69,7 +69,7 @@ class App extends Component {
           comparisonArray={comparisonArray}
           dataArray={displayArray}
           onCardClick={this.onCardClick} />
-        <Search cardSearch={this.cardSearch.bind(this)} />
+        <Search cardSearch={this.cardSearch} />
         <CardComparison
           onCardClick={this.onCardClick}
           comparisonArray={comparisonArray}
