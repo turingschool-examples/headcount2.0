@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import cardcss from './styles/Card.scss';
+import cardcss from './styles/Card.css';
 
 const classSwitch = (num) => {
   return num >= 0.5 ? 'blue' : 'red';

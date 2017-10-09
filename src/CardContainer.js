@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card';
 import PropTypes from 'prop-types';
-import styles from './styles/CardContainer.scss';
+import styles from './styles/CardContainer.css';
 
 const borderColors = ['blue-border', 'green-border'];
 
