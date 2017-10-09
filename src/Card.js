@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import cardcss from './styles/Card.css';
+import cardcss from './styles/Card.scss';
 
 const classSwitch = (num) => {
   return num >= 0.5 ? 'blue' : 'red';
@@ -19,7 +19,7 @@ const Card = ({ districtName, districtObject, onCardClick, borderColorClass }) =
             className={classSwitch(districtObject[item])}>
             {item}: {districtObject[item]}
           </li>)
-      } 
+      }
     </ul>
   </article>
 );
