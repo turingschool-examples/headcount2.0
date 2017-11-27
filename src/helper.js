@@ -8,9 +8,7 @@ export default class DistrictRepository {
             if(!newData[object.Location]) {
                 newData[object.Location] = {
                     location: object.Location,
-                    data: {
-                        // [object.TimeFrame]: object.Data
-                    }
+                    data: {}
                 }
             }
 
