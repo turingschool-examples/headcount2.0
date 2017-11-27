@@ -4,21 +4,21 @@ export default class DistrictRepository {
     }
 
     cleanData(data) {
-        let newData = data.reduce( (newData, object) => {
-            if(!newData[object.Location]) {
-                newData[object.Location] = {
-                    location: object.Location,
+        return data.reduce( (newData, object) => {
+            const district = object.Location;
+            const year = object.TimeFrame;
+            if(!newData[district]) {
+                newData[district] = {
+                    location: district,
                     data: {}
                 }
             }
 
-            if(!newData[object.Location].data[object.TimeFrame]) {
-                newData[object.Location].data[object.TimeFrame] = object.Data;
+            if(!newData[district].data[year]) {
+                newData[district].data[year] = object.Data;
             }
 
             return newData;
         }, {})
-
-        return newData;
     }
 }
