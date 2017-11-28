@@ -4,21 +4,38 @@ export default class DistrictRepository {
     }
 
     cleanData(data) {
-        return data.reduce( (newData, object) => {
-            const district = object.Location;
+        return data.reduce( (cleanData, object) => {
+            const district = object.Location.toUpperCase();
             const year = object.TimeFrame;
-            if(!newData[district]) {
-                newData[district] = {
+
+            if(!cleanData[district]) {
+                cleanData[district] = {
                     location: district,
                     data: {}
                 }
             }
 
-            if(!newData[district].data[year]) {
-                newData[district].data[year] = object.Data;
+            if(!cleanData[district].data[year]) {
+                cleanData[district].data[year] = Math.round(object.Data * 1000)/1000 || 0;
             }
 
-            return newData;
+            return cleanData;
         }, {})
+    }
+
+    findByName(input) {
+        if (!input) {
+            return undefined;
+        }
+
+        const district = Object.keys(this.data).find( district => {
+            return district === input.toUpperCase();
+        })
+
+        if (!district) {
+            return undefined
+        }
+        
+        return this.data[district]
     }
 }
