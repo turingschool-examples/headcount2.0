@@ -4,14 +4,16 @@ export default class DistrictRepository {
   }
 
   mutateData(data) {
-    const formattedData = data.reduce((allCities, city) => {
-      if (city.location in allCities) {
-        allCities[city.location].push(city)
+    const arrayToObject = data.reduce((obj, district) => {
+      if (district.Location in obj) {
+        obj[district.Location][district.TimeFrame] = district.Data
       } else {
-        allCities[city.location] = [city]
+        obj[district.Location] = {[district.TimeFrame]: district.Data}
       }
-      return allCities
+      return obj
     },{})
-    return formattedData
+  //   const arrayToObject = (data) =>
+  // Object.assign({}, ...data.map(item => ({[item.location]: {item}})))
+  return arrayToObject
   }
 }
