@@ -4,7 +4,7 @@ export default class DistrictRepository {
   }
 
   cleanData(data) {
-    let newData = data.reduce((acc, {Location, TimeFrame, Data})=>{
+    return data.reduce((acc, {Location, TimeFrame, Data})=>{
       if (!acc[Location]) {
         acc[Location] = []
       }
