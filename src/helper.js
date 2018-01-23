@@ -1,4 +1,4 @@
-export default class DistrictRepository {
+class DistrictRepository {
   constructor(schoolData) {
     this.data = this.cleanData(schoolData);
   }
@@ -38,3 +38,5 @@ export default class DistrictRepository {
     return array;
   }
 }
+
+export default DistrictRepository;
