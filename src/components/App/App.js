@@ -1,43 +1,23 @@
 import React, { Component } from 'react';
-import astronomy from '../../images/astronomy.svg';
-import '../../normalize.css';
+import Control from '../Control/Control';
+import CardContainer from '../CardContainer/CardContainer';
 import './App.css';
+import DistrictRepository from '../../helper.js';
+import kinderData from '../../data/kindergartners_in_full_day_program.js';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      schoolData: new DistrictRepository(kinderData).data
+    }
+  }
+
   render() {
     return (
       <div>
-        <div className="Control">
-          <div className="input-cont">
-            <i class="fa fa-search" aria-hidden="true"></i>
-            <label htmlFor="search"></label>
-            <input type="text"
-                   id="search"
-                   placeholder="Search by School"
-            />
-            <label htmlFor="submit"></label>
-            <input type="submit"
-                   id="submit"
-            />
-          </div>
-          <h1>Education Colorado</h1>
-        </div>
-
-        <div className="CardContainer">
-          <div className="bottom-images">
-            <img src={astronomy} className='school-icon' />
-            <img src={astronomy} className='school-icon' />
-            <img src={astronomy} className='school-icon' />
-            <img src={astronomy} className='school-icon' />
-            <img src={astronomy} className='school-icon' />
-            <img src={astronomy} className='school-icon' />
-            <img src={astronomy} className='school-icon' />
-            <img src={astronomy} className='school-icon' />
-            <img src={astronomy} className='school-icon' />
-
-          </div>
-        </div>
-        
+        <Control />
+        <CardContainer schoolData={this.state.schoolData} />
       </div>
     );
   }
