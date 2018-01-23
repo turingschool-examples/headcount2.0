@@ -7,6 +7,8 @@ export default class DistrictRepository {
     return info.reduce((accu, school) => {
       if(!accu[school.Location]) {
         accu[school.Location] = {}
+        // started looking at how to store duplicated data in our object
+        // accu[school.Location] = {TimeFrame:school.TimeFrame}
       }
 
       return accu;
