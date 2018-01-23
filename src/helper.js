@@ -23,18 +23,32 @@ export default class DistrictRepository {
   }
 
   findByName(search) {
-    if(search) {
-      let foundLocation = Object.keys(this.data)
-          .find( location => search.toUpperCase() === location.toUpperCase())
-      if(foundLocation) {
-        let foundObject = { location: foundLocation.toUpperCase(), 
+    let foundLocation;
+
+    typeof search === 'string' ? foundLocation = 
+    Object.keys(this.data).find( location => search.toUpperCase() === location.toUpperCase()) 
+    : foundLocation = undefined;
+
+    let newObject;
+
+    foundLocation ? newObject = {location: foundLocation.toUpperCase(),
                             data: this.data[foundLocation]}
-        return foundObject;
-      } else {
-        return undefined;
-      }
-    } else {
-      return undefined;
-    }
+                  :
+                  newObject = undefined;
+
+    return newObject;
+    //   let foundLocation = Object.keys(this.data)
+    //       .find( location => search.toUpperCase() === location.toUpperCase())
+    //   if(foundLocation) {
+    //     let foundObject = { location: foundLocation.toUpperCase(), 
+    //                         data: this.data[foundLocation]}
+    //     return foundObject;
+    //   } else {
+    //     return undefined;
+    //   }
+    // } else {
+    //   return undefined;
+    // }
   }
+
 }
