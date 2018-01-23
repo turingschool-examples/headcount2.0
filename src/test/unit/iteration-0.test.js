@@ -11,7 +11,7 @@ describe.only('DistrictRepository iteration 0', () =>  {
 
   test('data coming in has no duplicates', () => {
     // uncomment out the tests that best fits your model
-    console.log('keys: ', district.formatData(kinderData))
+    console.log('keys: ', district.formatData(kinderData).Colorado)
     // expect(district.data.length).toBe(181);
     expect(Object.keys(district.data).length).toBe(181);
   });

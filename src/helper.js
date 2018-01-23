@@ -3,25 +3,21 @@ export default class DistrictRepository {
     this.data = this.formatData(data)
   }
 
-  //  obj = {
-  //    colorodo: {
-  //                location: COLORODO, 
-  //                data: {year: percentage, year: percentage} 
-  //              }
-  //  }
-
   formatData(data) {
-    //sort years and percentages within each dataset 2004-2014
-
     return data.reduce((obj, item) => {
-      const location = item.Location
+      const location = item.Location.toUpperCase();
       
       if (!obj[location]) {
         obj[location] = {}
       }
-      const yearData = {[item.TimeFrame]: item.Data}
 
-      obj[location].location = item.Location
+      if(typeof item.Data != 'number'){
+        item.Data = 0;
+      }
+
+      const yearData = {[item.TimeFrame]: parseFloat(item.Data.toPrecision(3))}
+
+      obj[location].location = item.Location.toUpperCase();
       obj[location].data = 
         Object.assign({...obj[location].data}, yearData)
 
@@ -29,5 +25,14 @@ export default class DistrictRepository {
     }, {})
   }
 
+  findByName(location) {
+    if(!location) {
+      return undefined;
+    }
 
+    const keys = Object.keys(this.data)
+    const match = keys.find(key => key === location.toUpperCase());
+
+    return this.data[match];
+  }
 }
