@@ -8,16 +8,26 @@ export default class DistrictRepository {
       let location = Location.toUpperCase();
       if (!acc[location]) {
         acc[location] = {
-          location: Location,
+          location: location,
           dataType: DataFormat,
           data: {}
         };
       }
-      acc[location].data[TimeFrame] = Data;
+      acc[location].data[TimeFrame] = Math.round(1000*Data)/1000 || 0;
+
       return acc;
     }, {});
   }
 
+  findByName(name) {
+    const schoolList = Object.keys(this.data);
+    if (!name || !schoolList.includes(name.toUpperCase())) {
+      return undefined;
+    } else {
+      return this.data[name.toUpperCase()];
+    }
+  }
+    
   findAllMatches(searchFrag = '') {
     let dataKeys = Object.keys(this.data).map( dataPoint => dataPoint);
     let array = [];
