@@ -11,8 +11,12 @@ export default class DistrictRepository {
       }
 
       if (!obj[district.Location].data[district.TimeFrame]) {
-        let roundedData = Math.round(1000*district.Data)/1000
-        obj[district.Location].data[district.TimeFrame] = roundedData
+        if (isNaN(district.Data)) {
+            obj[district.Location].data[district.TimeFrame] = 0;
+        } else {
+          let roundedData = Math.round(1000*district.Data)/1000
+          obj[district.Location].data[district.TimeFrame] = roundedData
+        }
       }
       obj[district.Location].location = district.Location;
 
@@ -29,7 +33,6 @@ export default class DistrictRepository {
       if (!this.data[searched]) {
         return undefined
       } else {
-        console.log(this.data[searched])
         return this.data[searched]
       }
     }
