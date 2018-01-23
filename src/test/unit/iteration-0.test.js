@@ -1,7 +1,7 @@
-import DistrictRepository from '../../src/helper.js';
-import kinderData from '../../data/kindergartners_in_full_day_program.js';
+import DistrictRepository from '../../helper.js';
+import kinderData from '../../../data/kindergartners_in_full_day_program.js';
 
-describe('DistrictRepository iteration 0', () =>  {
+describe.only('DistrictRepository iteration 0', () =>  {
   const district = new DistrictRepository(kinderData);
 
   test('district has data in an object', () => {
@@ -11,6 +11,7 @@ describe('DistrictRepository iteration 0', () =>  {
 
   test('data coming in has no duplicates', () => {
     // uncomment out the tests that best fits your model
+    console.log('keys: ', district.formatData(kinderData).Colorado)
     // expect(district.data.length).toBe(181);
     expect(Object.keys(district.data).length).toBe(181);
   });
