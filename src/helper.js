@@ -2,26 +2,30 @@ import React from 'react';
 
 export default class DistrictRepository {
   constructor(data) {
-    this.data = 
-    data.reduce((obj, district) => {
-      district.Location = district.Location.toUpperCase()
-      if (!obj[district.Location]) {
-        obj[district.Location] = {}
-        obj[district.Location].data = {}
-      }
+    this.data = this.cleanData(data);
+  }
 
-      if (!obj[district.Location].data[district.TimeFrame]) {
-        if (isNaN(district.Data)) {
-            obj[district.Location].data[district.TimeFrame] = 0;
-        } else {
-          let roundedData = Math.round(1000*district.Data)/1000
-          obj[district.Location].data[district.TimeFrame] = roundedData
-        }
-      }
-      obj[district.Location].location = district.Location;
+  cleanData(data) {
+   return data.reduce((obj, district) => {
+      const local = district.Location.toUpperCase();
 
+      if (!obj[local]) {
+        obj[local] = {}
+        obj[local].data = {}
+      }
+      obj[local].location = local;
+
+      const objData = obj[local].data;
+      const year = [district.TimeFrame]
+
+      isNaN(district.Data) ? objData[year] = 0 :
+      objData[year] = this.round(district.Data)
       return obj;
     }, {})
+  }
+
+  round(num) {
+    return Math.round(1000*num)/1000
   }
 
   findByName(search) {
