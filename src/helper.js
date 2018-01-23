@@ -29,10 +29,12 @@ export default class DistrictRepository {
   }
 
   findByName(search) {
-    if (search === undefined) {
+    if (!search) {
       return undefined
     } else {
       let searched = search.toUpperCase();
+
+      //return this.data[searched]
 
       if (!this.data[searched]) {
         return undefined
@@ -40,5 +42,19 @@ export default class DistrictRepository {
         return this.data[searched]
       }
     }
+  }
+
+  findAllMatches(searched) {
+    const dataArray = Object.keys(this.data)
+ 
+
+    const found = dataArray.filter(district => {
+      if(!searched || district.includes(searched.toUpperCase()) ) {
+        return district 
+      } 
+
+    })
+
+    return found
   }
 }
