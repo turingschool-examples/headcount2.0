@@ -14,7 +14,6 @@ export default class DistrictRepository {
         };
       }
       acc[location].data[TimeFrame] = Math.round(1000*Data)/1000 || 0;
-
       return acc;
     }, {});
   }
