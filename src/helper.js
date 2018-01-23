@@ -7,12 +7,13 @@ export default class DistrictRepository {
       district.Location = district.Location.toUpperCase()
       if (!obj[district.Location]) {
         obj[district.Location] = {}
-        //obj[district.Location].data = {}
+        obj[district.Location].data = {}
       }
 
-      let roundedData = Math.round(1000*district.Data)/1000
-      //obj[district.Location].data = {...obj}
-      obj[district.Location][district.TimeFrame] = roundedData;
+      if (!obj[district.Location].data[district.TimeFrame]) {
+        let roundedData = Math.round(1000*district.Data)/1000
+        obj[district.Location].data[district.TimeFrame] = roundedData
+      }
       obj[district.Location].location = district.Location;
 
       return obj;
