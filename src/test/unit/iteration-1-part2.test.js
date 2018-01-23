@@ -1,4 +1,4 @@
-import DistrictRepository from '../../src/helper.js';
+import DistrictRepository from '../../src/components/helper.js';
 import kinderData from '../../data/kindergartners_in_full_day_program.js';
 
 describe('DistrictRepository iteration 1 - part 2', () =>  {
