@@ -4,10 +4,9 @@ export default class DistrictRepository {
   }
 
   dataCleaner(data) {
-
     let cleanData = data.reduce( (districtObject, district)=> {
     
-      let yearData = {[district.TimeFrame] : district.Data}
+      let yearData = { [district.TimeFrame] : district.Data }
 
       if (!districtObject[district.Location]) {
         districtObject[district.Location] = {};
@@ -18,37 +17,44 @@ export default class DistrictRepository {
       return districtObject
     }, {})
 
-  return cleanData
+  return cleanData;
 
+  }
+
+  roundNumbers(data) {
+    let dataValues = Object.values(data);
+    let dataYears = Object.keys(data);
+    let newObject = {}
+
+    for(let i = 0; i < dataValues.length; i++) {
+      if(typeof dataValues[i] === 'number') {
+        let roundedNum = Math.round(dataValues[i] * 1000) / 1000
+        newObject[dataYears[i]] = roundedNum
+      } else {
+        dataValues[i] = 0;
+        newObject[dataYears[i]] = dataValues[i];
+      }
+    }
+
+    return newObject;
   }
 
   findByName(search) {
     let foundLocation;
-
-    typeof search === 'string' ? foundLocation = 
-    Object.keys(this.data).find( location => search.toUpperCase() === location.toUpperCase()) 
-    : foundLocation = undefined;
-
     let newObject;
 
-    foundLocation ? newObject = {location: foundLocation.toUpperCase(),
-                            data: this.data[foundLocation]}
-                  :
-                  newObject = undefined;
+    let cityNames = Object.keys(this.data);
+
+    typeof search === 'string' ? foundLocation = 
+      cityNames
+        .find( location => search.toUpperCase() === location.toUpperCase()) 
+      : foundLocation = undefined;
+
+    foundLocation ? 
+      newObject = {location: foundLocation.toUpperCase(),
+                   data: this.roundNumbers(this.data[foundLocation])}
+      : newObject = undefined;
 
     return newObject;
-    //   let foundLocation = Object.keys(this.data)
-    //       .find( location => search.toUpperCase() === location.toUpperCase())
-    //   if(foundLocation) {
-    //     let foundObject = { location: foundLocation.toUpperCase(), 
-    //                         data: this.data[foundLocation]}
-    //     return foundObject;
-    //   } else {
-    //     return undefined;
-    //   }
-    // } else {
-    //   return undefined;
-    // }
   }
-
 }
