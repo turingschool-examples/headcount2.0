@@ -1,8 +1,6 @@
 export default class DistrictRepository {
   constructor(data) {
     this.data = this.dataCleaner(data)
-
-
   }
 
   dataCleaner(data) {
@@ -16,17 +14,32 @@ export default class DistrictRepository {
       let yearData = {[district.TimeFrame] : district.Data}
 
       if (!districtObject[district.Location]) {
-        districtObject[district.Location] = [];
+        districtObject[district.Location] = {};
       } 
 
-      districtObject[district.Location].push(yearData)
+      Object.assign(districtObject[district.Location], yearData)
 
       return districtObject
     }, {})
 
   return cleanData
-  
+
   }
 
-
+  findByName(search) {
+    if (!search) {
+      return undefined
+    } else {
+      search = search.toUpperCase();
+      let foundLocation = Object.keys(this.data).find( (location) => {
+          if (location == search) {
+            return {location: foundLocation, 
+                  data : this.data[foundLocation]}
+          }
+          else {
+            return undefined
+          }
+        })
+    }
+  }
 }
