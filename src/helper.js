@@ -14,6 +14,7 @@ export default class DistrictRepository {
         };
       }
       acc[location].data[TimeFrame] = Math.round(1000*Data)/1000 || 0;
+
       return acc;
     }, {});
   }
@@ -25,5 +26,16 @@ export default class DistrictRepository {
     } else {
       return this.data[name.toUpperCase()];
     }
+  }
+    
+  findAllMatches(searchFrag = '') {
+    let dataKeys = Object.keys(this.data).map( dataPoint => dataPoint);
+    let array = [];
+    dataKeys.forEach(key => {
+      if (key.includes(searchFrag.toUpperCase())) {
+        array.push(this.data[key]);
+      }
+    } );
+    return array;
   }
 }
