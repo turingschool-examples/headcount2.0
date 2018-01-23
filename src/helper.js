@@ -43,8 +43,10 @@ export default class DistrictRepository {
     let foundLocation;
     let newObject;
 
+    let cityNames = Object.keys(this.data);
+
     typeof search === 'string' ? foundLocation = 
-      Object.keys(this.data)
+      cityNames
         .find( location => search.toUpperCase() === location.toUpperCase()) 
       : foundLocation = undefined;
 
