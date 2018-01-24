@@ -11,27 +11,25 @@ class App extends Component {
     this.state = {
       schoolData: {},
       searchResults: [],
+      districtRepository: {},
     }
     this.handleSearch = this.handleSearch.bind(this);
   }
 
   componentDidMount() {
-    let district = this.getCleanData(kinderData);
-    this.setState({
-      schoolData: district,
-    })
+    this.getDistrictRepository(kinderData);
   }
 
-  getCleanData(schoolData) {
-    return new DistrictRepository(schoolData).data
+  getDistrictRepository(schoolData) {
+    let districtRepository = new DistrictRepository(schoolData);
+    this.setState({ districtRepository, schoolData: districtRepository.data })
   }
 
   handleSearch(e) {
-    let schoolsToSearch = Object.keys(this.state.schoolData);
-    let searchResults = schoolsToSearch.filter( schoolName => schoolName
-      .includes(e.target.value.toUpperCase()))
-      .map( schoolName => this.state.schoolData[schoolName]);
-    this.setState({searchResults})
+    this.setState({ 
+      searchResults: this.state.districtRepository
+                      .findAllMatches(e.target.value)
+    })
   }
 
   render() {

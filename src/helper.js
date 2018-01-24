@@ -28,14 +28,13 @@ class DistrictRepository {
   }
     
   findAllMatches(searchFrag = '') {
-    let dataKeys = Object.keys(this.data).map( dataPoint => dataPoint);
-    let array = [];
-    dataKeys.forEach(key => {
-      if (key.includes(searchFrag.toUpperCase())) {
-        array.push(this.data[key]);
-      }
+    let searchResults = [];
+    Object.keys(this.data).map( dataPoint => dataPoint)
+      .forEach(key => {
+        key.includes(searchFrag.toUpperCase()) 
+        && searchResults.push(this.data[key]);
     } );
-    return array;
+    return searchResults;
   }
 }
 
