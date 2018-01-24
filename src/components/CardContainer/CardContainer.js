@@ -3,18 +3,14 @@ import Card from '../Card/Card.js';
 import './CardContainer.css';
 import PropTypes from 'prop-types';
 
-const CardContainer = ({ districtData }) => {
+const CardContainer = ({ districtData, selectCard }) => {
   const renderedDistricts = Object.keys(districtData).map((district, key) => 
     <Card districtName={district}
           data={districtData[district].data}
-          key={key}
-          onClick={hi}
+          key={district}
+          selectCard={selectCard}
     />
   )
-
-  function hi () {
-    console.log(hi)
-  }
 
   return(
     <div className='CardContainer'>

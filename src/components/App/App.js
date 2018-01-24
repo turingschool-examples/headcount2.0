@@ -26,11 +26,18 @@ class App extends Component {
     this.setState({districtData})
   }
 
+  selectCard = (e) => {
+    console.log('clicked', e.target)
+  }
+
   render() {
     return (
       <div className="App">
         <Search handleSubmit={this.handleSubmit}/>
-        <CardContainer districtData={this.state.districtData} />
+        <CardContainer 
+          districtData={this.state.districtData}
+          selectCard={this.selectCard} 
+        />
       </div>
     );
   }

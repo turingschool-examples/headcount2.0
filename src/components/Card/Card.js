@@ -2,7 +2,7 @@ import React from 'react';
 import './Card.css';
 import PropTypes from 'prop-types';
 
-const Card = ({ districtName, data }) => {
+const Card = ({ districtName, data, selectCard }) => {
   const dataValues = Object.keys(data).map( (year, i) =>
     data[year] > 0.5 ? <li className="over" key={i}>{year}: {data[year]}</li>
     :
@@ -10,7 +10,10 @@ const Card = ({ districtName, data }) => {
   )
 
   return(
-    <article className='Card'>
+    <article 
+      className="Card"
+      onClick={selectCard}  
+    >
       <h3>{districtName}</h3>
       <ul>
         {dataValues}
