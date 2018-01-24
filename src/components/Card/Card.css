@@ -1,6 +1,7 @@
 .Card {
   border: 2px solid black;
-  width: 240px;
+  width: 250px;
+  height: 346px;
   margin: 10px;
   padding: 10px;
   box-sizing: border-box;
@@ -29,12 +30,11 @@ h3 {
 
 ul {
   padding: 0;
-  width: 110px;
+  width: fit-content;
   margin: auto;
 }
 
 li {
-  width: 110px;
   font-size: 20px;
   list-style-type: none;
   box-sizing: border-box;
