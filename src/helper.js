@@ -57,4 +57,56 @@ export default class DistrictRepository {
 
     return newObject;
   }
+
+  findAllMatches(search) {
+    
+    let cityNames = Object.keys(this.data);
+   // return an array
+   // we want the array to contain all data sets that match a name
+
+
+    if (search) {
+      // captures the name of the name of the city we're searching
+      let searchedCity = cityNames.filter( city => city.toUpperCase().includes(search.toUpperCase()));
+      
+      // loop over the data, using searchedCity. 
+      // find location: [serachedCity]
+      // add key [searchedCity] value, all the data to an array
+      const cityArray = searchedCity.map( (city) => {
+        return { 
+          location: city,
+          data: this.roundNumbers(this.data[city])
+        }
+      })
+
+      return cityArray
+    }
+
+    else {
+      return cityNames.map( (city => {
+        return {
+          location: city,
+          data: this.roundNumbers(this.data[city])
+        }
+      }))
+    }
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
