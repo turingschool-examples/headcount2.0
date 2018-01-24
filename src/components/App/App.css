@@ -1,0 +1,74 @@
+/*EVERYTHING THAT STAYS IN APP*/
+.App {
+  width: 100%;
+}
+
+
+/*CONTROLS PAGE*/
+.Control {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 80px;
+  position: relative;
+}
+
+h1 {
+  font-family: 'Bree Serif', serif;
+  margin: 0;
+  font-size: 40px;
+}
+
+input {
+  box-sizing: border-box;
+}
+
+input[type=text] {
+  min-width: 185px;
+  width: 50%;
+  max-width: 350px;
+  height: 39.5px;
+  padding-left: 10px;
+  border: none;
+  border-bottom: 2px solid grey;
+}
+
+input[type=submit] {
+  min-width: 104px;
+  width: 33%;
+  max-width: 125px;
+  height: 40px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+}
+
+.input-cont {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/*CARD CONTAINER*/
+.CardContainer {
+  width: 100%;
+  height: 90vh;
+}
+
+/*ICONS*/
+.bottom-images {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  overflow-y: hidden;
+}
+
+.school-icon {
+  width: 50px;
+  margin-right: 100px;
+}
