@@ -1,5 +1,6 @@
 import React from 'react';
 import './Card.css';
+import PropTypes from 'prop-types';
 
 const Card = ({ districtName, data, key }) => {
   const dataValues = Object.keys(data).map( year =>
@@ -16,6 +17,14 @@ const Card = ({ districtName, data, key }) => {
       </ul>
     </article>
   )
+}
+
+Card.propTypes = {
+  districtName: PropTypes.string.isRequired,
+  data: PropTypes.shape({
+    2004: PropTypes.number.isRequired,
+    2014: PropTypes.number.isRequired
+  })
 }
 
 export default Card;
