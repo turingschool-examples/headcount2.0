@@ -28,20 +28,13 @@ ShallowWrapper {
           />
           <i
                     aria-hidden="true"
-                    className="fa fa-search"
+                    className="fa fa-search search-icon"
           />
           <input
                     id="search"
                     onChange={[Function]}
                     placeholder="Search by School"
                     type="text"
-          />
-          <label
-                    htmlFor="submit"
-          />
-          <input
-                    id="submit"
-                    type="submit"
           />
 </div>,
         <h1>
@@ -63,20 +56,13 @@ ShallowWrapper {
 />,
             <i
               aria-hidden="true"
-              className="fa fa-search"
+              className="fa fa-search search-icon"
 />,
             <input
               id="search"
               onChange={[Function]}
               placeholder="Search by School"
               type="text"
-/>,
-            <label
-              htmlFor="submit"
-/>,
-            <input
-              id="submit"
-              type="submit"
 />,
           ],
           "className": "input-cont",
@@ -100,7 +86,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "aria-hidden": "true",
-              "className": "fa fa-search",
+              "className": "fa fa-search search-icon",
             },
             "ref": null,
             "rendered": null,
@@ -115,29 +101,6 @@ ShallowWrapper {
               "onChange": [Function],
               "placeholder": "Search by School",
               "type": "text",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "htmlFor": "submit",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "label",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "id": "submit",
-              "type": "submit",
             },
             "ref": null,
             "rendered": null,
@@ -175,20 +138,13 @@ ShallowWrapper {
             />
             <i
                         aria-hidden="true"
-                        className="fa fa-search"
+                        className="fa fa-search search-icon"
             />
             <input
                         id="search"
                         onChange={[Function]}
                         placeholder="Search by School"
                         type="text"
-            />
-            <label
-                        htmlFor="submit"
-            />
-            <input
-                        id="submit"
-                        type="submit"
             />
 </div>,
           <h1>
@@ -210,20 +166,13 @@ ShallowWrapper {
 />,
               <i
                 aria-hidden="true"
-                className="fa fa-search"
+                className="fa fa-search search-icon"
 />,
               <input
                 id="search"
                 onChange={[Function]}
                 placeholder="Search by School"
                 type="text"
-/>,
-              <label
-                htmlFor="submit"
-/>,
-              <input
-                id="submit"
-                type="submit"
 />,
             ],
             "className": "input-cont",
@@ -247,7 +196,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "aria-hidden": "true",
-                "className": "fa fa-search",
+                "className": "fa fa-search search-icon",
               },
               "ref": null,
               "rendered": null,
@@ -262,29 +211,6 @@ ShallowWrapper {
                 "onChange": [Function],
                 "placeholder": "Search by School",
                 "type": "text",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "htmlFor": "submit",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "label",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "id": "submit",
-                "type": "submit",
               },
               "ref": null,
               "rendered": null,
