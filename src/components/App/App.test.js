@@ -38,11 +38,7 @@ it('should update state when handleSearch is activated', () => {
   
   expect(wrapper.find('input').simulate('change', {target: {value: 'aca'}}));
   expect(wrapper.state().searchResults.length).toEqual(1);
-  expect(wrapper.state().searchResults).toEqual([searchDataReplica]);
-
-
-
-
-
-  
+  expect(wrapper.state().searchResults).toEqual([searchDataReplica]);  
 });
+
+// it('')
