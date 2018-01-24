@@ -15,10 +15,16 @@ class App extends Component {
   }
 
   handleSubmit = (query) => {
-    console.log(district.findAllMatches(query))
-    district.findAllMatches(query)
-  }
+    const matches = district.findAllMatches(query)
 
+    const districtData = matches.reduce((obj, match) => {
+      if (!obj[match]) {
+        obj[match] = district.data[match]
+      }
+      return obj
+    }, {})
+    this.setState({districtData})
+  }
 
   render() {
     return (
