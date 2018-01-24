@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '../Card/Card.js';
+import './CardContainer.css';
 
 const CardContainer = ({ districtData }) => {
   const renderedDistricts = Object.keys(districtData).map((district, key) => 
@@ -10,7 +11,7 @@ const CardContainer = ({ districtData }) => {
   )
 
   return(
-    <div>
+    <div className='CardContainer'>
       {renderedDistricts}
     </div>
   )
