@@ -10,7 +10,7 @@ class App extends Component {
     super(props);
     this.state = {
       schoolData: {},
-      searchArray: [],
+      searchResults: [],
     }
     this.handleSearch = this.handleSearch.bind(this);
   }
@@ -28,17 +28,27 @@ class App extends Component {
 
   handleSearch(e) {
     let schoolsToSearch = Object.keys(this.state.schoolData);
-    let array = schoolsToSearch.filter( schoolName => schoolName.includes(e.target.value.toUpperCase()));
-    this.setState({
-      searchArray: array,
-    })
+    let searchResults = schoolsToSearch.filter( schoolName => schoolName
+      .includes(e.target.value.toUpperCase()))
+      .map( schoolName => this.state.schoolData[schoolName]);
+    this.setState({searchResults})
   }
 
   render() {
     return (
       <div>
         <Control handleSearch={this.handleSearch}/>
-        <CardContainer schoolData={this.state.schoolData} />
+
+        {
+          !this.state.searchResults.length &&
+          <CardContainer schoolData={this.state.schoolData} />
+        }
+
+        {
+          this.state.searchResults.length &&
+          <CardContainer schoolData={this.state.searchResults} />
+        }
+        
       </div>
     );
   }
