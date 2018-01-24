@@ -1,5 +1,6 @@
 import React from 'react';
 import './Card.css';
+import PropTypes from 'prop-types';
 
 function Card({location, data}) {
 
@@ -7,11 +8,6 @@ function Card({location, data}) {
     return <li> { dataPoint[0] } : { dataPoint[1] } </li>
   })
 
-
-// turn data props into an array, map over it to plug it into <li>
-// object.value to get the years
-// map over that array and return an array 
-// where each object is an index in the array
   return (
     <div className='district-card'>
       <h3 className='district-header'> { location } </h3>
@@ -19,5 +15,12 @@ function Card({location, data}) {
     </div> 
   )
 } 
+
+Card.propTypes = {
+  location: PropTypes.string.isRequired,
+
+  data: PropTypes.object.isRequired
+}
+  
 
 export default Card
