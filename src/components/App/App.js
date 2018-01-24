@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.getDistrictRepository(kinderData);
+          this.getDistrictRepository(kinderData);
   }
 
   getDistrictRepository(schoolData) {
@@ -43,7 +43,7 @@ class App extends Component {
         }
 
         {
-          this.state.searchResults.length &&
+          this.state.searchResults.length > 0 &&
           <CardContainer schoolData={this.state.searchResults} />
         }
         
