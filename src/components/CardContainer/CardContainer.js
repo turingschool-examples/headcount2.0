@@ -1,10 +1,17 @@
 import React from 'react';
 import Card from '../Card/Card.js';
 
-const CardContainer = ({data}) => {
+const CardContainer = ({ districtData }) => {
+  const renderedDistricts = Object.keys(districtData).map((district, key) => 
+    <Card districtName={district}
+          data={districtData[district].data}
+          key={key}
+    />
+  )
+
   return(
     <div>
-      <Card />
+      {renderedDistricts}
     </div>
   )
 }

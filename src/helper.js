@@ -47,7 +47,6 @@ export default class DistrictRepository {
   findAllMatches(searched) {
     const dataArray = Object.keys(this.data)
  
-
     const found = dataArray.filter(district => {
       if(!searched || district.includes(searched.toUpperCase()) ) {
         return district 
@@ -57,4 +56,5 @@ export default class DistrictRepository {
 
     return found
   }
+
 }

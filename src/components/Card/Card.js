@@ -1,10 +1,9 @@
 import React from 'react';
 
-const Card = (data) => {
-  console.log(data)
+const Card = ({ districtName, data, key }) => {
   return(
     <div>
-      <h3></h3>
+      <h3>{districtName}</h3>
       <p></p>
     </div>
   )
