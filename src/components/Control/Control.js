@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Control = () => {
+const Control = (props) => {
+
   return (
     <div className="Control">
       <div className="input-cont">
@@ -9,6 +10,7 @@ const Control = () => {
         <input type="text"
                id="search"
                placeholder="Search by School"
+               onChange={(e) => props.handleSearch(e)}
         />
         <label htmlFor="submit"></label>
         <input type="submit"
