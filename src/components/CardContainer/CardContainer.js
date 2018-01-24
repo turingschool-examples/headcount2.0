@@ -5,20 +5,14 @@ import astronomy from '../../images/astronomy.svg';
 
 const CardContainer = ({schoolData}) => {
   const schoolsToRender = Object.keys(schoolData)
-    .map(school => <Card schoolData={schoolData[school]} />)
+    .map((school, index) => <Card key={index}
+                                  schoolData={schoolData[school]} 
+                            />)
 
   return (
     <div className="CardContainer">
     {schoolsToRender}
       <div className="bottom-images">
-        <img src={astronomy} className='school-icon' />
-        <img src={astronomy} className='school-icon' />
-        <img src={astronomy} className='school-icon' />
-        <img src={astronomy} className='school-icon' />
-        <img src={astronomy} className='school-icon' />
-        <img src={astronomy} className='school-icon' />
-        <img src={astronomy} className='school-icon' />
-        <img src={astronomy} className='school-icon' />
         <img src={astronomy} className='school-icon' />
       </div>
     </div>

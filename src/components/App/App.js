@@ -9,8 +9,19 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      schoolData: new DistrictRepository(kinderData).data
+      schoolData: {},
     }
+  }
+
+  componentDidMount() {
+    let district = this.getCleanData(kinderData);
+    this.setState({
+      schoolData: district,
+    })
+  }
+
+  getCleanData(schoolData) {
+    return new DistrictRepository(schoolData).data
   }
 
   render() {
