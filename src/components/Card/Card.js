@@ -2,11 +2,11 @@ import React from 'react';
 import './Card.css';
 import PropTypes from 'prop-types';
 
-const Card = ({ districtName, data, key }) => {
-  const dataValues = Object.keys(data).map( year =>
-    data[year] > 0.5 ? <li className="over">{year}: {data[year]}</li>
+const Card = ({ districtName, data }) => {
+  const dataValues = Object.keys(data).map( (year, i) =>
+    data[year] > 0.5 ? <li className="over" key={i}>{year}: {data[year]}</li>
     :
-    <li className="under">{year}: {data[year]}</li>
+    <li className="under" key={i}>{year}: {data[year]}</li>
   )
 
   return(
