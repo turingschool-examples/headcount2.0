@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
-import './App.css';
+import Controls from './Controls';
+import ComparisonContainer from './ComparisonContainer';
+import CardContainer from './CardContainer';
+import '../styles/App.css'
 
 class App extends Component {
   render() {
     return (
-      <div>Welcome To Headcount 2.0</div>
+      <section>
+        <Controls />
+        <ComparisonContainer />
+        <CardContainer />
+      </section>
     );
   }
 }
