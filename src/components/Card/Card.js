@@ -1,4 +1,5 @@
 import React from 'react';
+import './Card.css';
 
 function Card({location, data}) {
 
@@ -12,9 +13,9 @@ function Card({location, data}) {
 // map over that array and return an array 
 // where each object is an index in the array
   return (
-    <div>
-      <h3> { location } </h3>
-      <ul> { dataArray } </ul>
+    <div className='district-card'>
+      <h3 className='district-header'> { location } </h3>
+      <ul className='district-list'> { dataArray } </ul>
     </div> 
   )
 } 
