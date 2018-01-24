@@ -16,7 +16,9 @@ class App extends Component {
 
   render() {
     return (
-      <CardContainer districtData={this.state.districtData} />
+      <div className="App">
+        <CardContainer districtData={this.state.districtData} />
+      </div>
     );
   }
 }

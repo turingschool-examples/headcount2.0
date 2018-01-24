@@ -1,17 +1,29 @@
 .Card {
-  border: 1px solid blue;
+  border: 1px solid white;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
-  width: 300px;
+  width: 250px;
+  background: rgba(255, 255, 255, .1)
 }
 
 .Card h3 {
-  background-color: #888;
-  color: #fff;
+  color: #AAD74F;
 }
 
 .Card p {
   margin: 7px;
+}
+
+ul {
+  list-style: none;
+}
+
+.over {
+  color: #78C9D0;
+}
+
+.under {
+  color: #D23D54;
 }
