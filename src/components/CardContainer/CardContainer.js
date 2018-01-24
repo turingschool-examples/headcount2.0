@@ -3,7 +3,7 @@ import Card from '../Card/Card';
 import './CardContainer.css';
 
 function CardContainer(props) {
-  let allCities = props.data.findAllMatches().map( (city) => {
+  let allCities = props.data.map( (city) => {
     return <Card {...city} />
   })
 
