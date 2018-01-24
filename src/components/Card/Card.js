@@ -12,7 +12,10 @@ const Card = (props) => {
     });
 
   return (
-    <article className='Card'>
+    <article 
+      className='Card'
+      onClick={() => props.handleCompareCards(location)}
+    >
       <h3>{location}</h3>
       <ul>
         { dataList }
@@ -26,7 +29,8 @@ Card.propTypes = {
     location: PropTypes.string.isRequired,
     data: PropTypes.objectOf(PropTypes.number.isRequired),
     dataType: PropTypes.string.isRequired
-  })
+  }),
+  handleCompareCards: PropTypes.func.isRequired
 };
 
 export default Card;

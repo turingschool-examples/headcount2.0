@@ -11,13 +11,15 @@ class App extends Component {
     this.state = {
       schoolData: {},
       searchResults: [],
-      districtRepository: {}
+      districtRepository: {},
+      compareSchool1: '',
+      comparison: {}
     };
     this.handleSearch = this.handleSearch.bind(this);
   }
 
   componentDidMount() {
-          this.getDistrictRepository(kinderData);
+    this.getDistrictRepository(kinderData);
   }
 
   getDistrictRepository(schoolData) {
@@ -32,6 +34,16 @@ class App extends Component {
     });
   }
 
+  handleCompareCards = (schoolName) => {
+    if (!Object.keys(this.state.compareSchool1).length) {
+      this.setState({compareSchool1: schoolName});
+    } else {
+      let comparison = this.state.districtRepository
+        .compareDistrictAverages(this.state.compareSchool1, schoolName);
+      this.setState({comparison});
+    }
+  }
+
   render() {
     return (
       <div>
@@ -39,12 +51,18 @@ class App extends Component {
 
         {
           !this.state.searchResults.length &&
-          <CardContainer schoolData={this.state.schoolData} />
+          <CardContainer 
+            schoolData={this.state.schoolData}
+            handleCompareCards={this.handleCompareCards}
+          />
         }
 
         {
           this.state.searchResults.length > 0 &&
-          <CardContainer schoolData={this.state.searchResults} />
+          <CardContainer
+            schoolData={this.state.searchResults}
+            handleCompareCards={this.handleCompareCards}
+          />
         }
         
       </div>
