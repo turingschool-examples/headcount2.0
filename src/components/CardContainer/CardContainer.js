@@ -8,8 +8,13 @@ const CardContainer = ({ districtData }) => {
     <Card districtName={district}
           data={districtData[district].data}
           key={key}
+          onClick={hi}
     />
   )
+
+  function hi () {
+    console.log(hi)
+  }
 
   return(
     <div className='CardContainer'>
