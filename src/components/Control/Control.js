@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Control = (props) => {
-
   return (
     <div className="Control">
       <div className="input-cont">
@@ -20,6 +20,10 @@ const Control = (props) => {
       <h1>Education Colorado</h1>
     </div>
   )
+}
+
+Control.propTypes = {
+  handleSearch: PropTypes.func.isRequired
 }
 
 export default Control;

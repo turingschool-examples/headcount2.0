@@ -13,7 +13,7 @@ const CardContainer = ({schoolData}) => {
     <div className="CardContainer">
     {schoolsToRender}
       <div className="bottom-images">
-        <img src={astronomy} className='school-icon' />
+        <img src={astronomy} alt='telescope' className='school-icon' />
       </div>
     </div>
   )

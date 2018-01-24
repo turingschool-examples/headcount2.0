@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import App from './App';
 import kinderData from '../../data/kindergartners_in_full_day_program.js';
 
 it('should have a default state equal to the cleaned data', () => {
@@ -13,7 +13,8 @@ it('should have a default state equal to the cleaned data', () => {
 
 it('should grab clean data', () => {
   const wrapper = shallow(<App />);
-  let newData = wrapper.instance().getCleanData(kinderData);
-  expect(newData).toEqual(newData);
-  //not sure best way to test this: import helper?
+  const rawData = [{Location: 'Colorado', TimeFrame: 2007, DataFormat:'Percent', Data:.337}]
+  const cleanData = {"COLORADO": {"data": {"2007": 0.337}, "dataType": "Percent", "location": "COLORADO"}}
+  let newData = wrapper.instance().getCleanData(rawData);
+  expect(newData).toEqual(cleanData);
 });
