@@ -1,6 +1,5 @@
 .container-wrap {
   width: 100%;
-  height: 600px;
-  background-color: lightgreen;
-  
+  height: 100%;
+  overflow: auto;
 }
