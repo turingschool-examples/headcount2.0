@@ -11,8 +11,8 @@ class App extends Component {
     this.state = {
       schoolData: {},
       searchResults: [],
-      districtRepository: {},
-    }
+      districtRepository: {}
+    };
     this.handleSearch = this.handleSearch.bind(this);
   }
 
@@ -22,14 +22,14 @@ class App extends Component {
 
   getDistrictRepository(schoolData) {
     let districtRepository = new DistrictRepository(schoolData);
-    this.setState({ districtRepository, schoolData: districtRepository.data })
+    this.setState({ districtRepository, schoolData: districtRepository.data });
   }
 
-  handleSearch(e) {
+  handleSearch(event) {
     this.setState({ 
       searchResults: this.state.districtRepository
-                      .findAllMatches(e.target.value)
-    })
+        .findAllMatches(event.target.value)
+    });
   }
 
   render() {
