@@ -6,11 +6,14 @@ export default class DistrictRepository {
   schoolData(info) {
       
     return info.reduce((accu, school) => {
+      const rounding = Math.round(school.Data * 1000) / 1000
 
-      if(!accu[school.Location]) {
-        accu[school.Location.toUpperCase()] = {data:{}, location: school.Location.toUpperCase()}
+      if(!accu[school.Location.toUpperCase()]) {
+        accu[school.Location.toUpperCase()] = {data:{[school.TimeFrame] : rounding || 0}, 
+                                              location: school.Location.toUpperCase()}
         }
-        accu[school.Location.toUpperCase()].data[school.TimeFrame] = isNaN(school.Data) ? 0 : Math.round(school.Data * 1000) / 1000 
+
+        accu[school.Location.toUpperCase()].data[school.TimeFrame] = rounding || 0
         
       return accu;
     }, [])

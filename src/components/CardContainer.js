@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Card from './Card'
 import '../styles/CardContainer.css'
 
 
@@ -9,15 +10,15 @@ class CardContainer extends Component {
       district: ''
     }
   }
-// Our array is returning a length of 0 even though we can see that it is an array with 181 objects WTF
-  render() {
-    const newArray = this.props.allDistrictData
 
+  render() {
+    const dataArray = Object.keys(this.props.allDistrictData)
+    const newCard = dataArray.map(location => <Card data={ this.props.allDistrictData[location] }/>)
+    
     return (
       <section className='container-wrap'>
         <h2>Cards area</h2>
-        {console.log(newArray)}
-        {newArray.forEach(district => console.log('hey'))}
+        { newCard }
       </section>
       )
   }

@@ -22,7 +22,7 @@ class App extends Component {
      this.setState({
       allDistrictData: DistrictData.data
     })
-  }
+  }_
 
   handleSearch = (district) => {
     this.setState({
