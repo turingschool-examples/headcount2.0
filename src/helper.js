@@ -34,8 +34,29 @@ class DistrictRepository {
       if (key.includes(searchFrag.toUpperCase())) {
         array.push(this.data[key]);
       }
-    } );
+    });
     return array;
+  }
+
+  findAverage(schoolName) {
+    let schoolScores = Object.values(this.data[schoolName].data);
+    let average = schoolScores
+      .reduce((avg, score) => avg += score, 0 ) / schoolScores.length;
+    return Math.round(1000*average)/1000;
+  }
+
+  compareDistrictAverages(school1, school2) {
+    let school1Name = school1.toUpperCase();
+    let school2Name = school2.toUpperCase();
+    let school1Avg = this.findAverage(school1Name);
+    let school2Avg = this.findAverage(school2Name);
+
+    return {
+      [school1Name]: school1Avg,
+      [school2Name]: school2Avg,
+      compared: 
+      Math.round(1000 * (school1Avg / school2Avg)) / 1000
+    };
   }
 }
 
