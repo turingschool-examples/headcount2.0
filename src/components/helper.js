@@ -26,4 +26,19 @@ export default class DistrictRepository {
       return undefined
     }
   }
+
+  findAllMatches(districtName){
+
+    if (!districtName){
+      return this.data
+    } else if(this.data[districtName.toUpperCase()]) {
+      let upperCase = districtName.toUpperCase();
+      return this.data[upperCase]
+    } else  {
+      return []
+    }
+
+  }
+
+
 }
