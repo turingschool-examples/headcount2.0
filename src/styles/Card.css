@@ -1,0 +1,13 @@
+.card {
+  border: 1px solid;
+  width: 250px;
+  display: inline-block;
+  margin: 0 5px 10px 0;
+  /*height: 120px;*/
+  vertical-align: top;
+  padding: 5px;
+}
+
+.card li {
+  list-style-type: none;  
+}
