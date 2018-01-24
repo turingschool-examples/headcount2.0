@@ -4,7 +4,7 @@ import ComparisonContainer from './ComparisonContainer';
 import CardContainer from './CardContainer';
 import DistrictRepository from './helper.js';
 import '../styles/App.css';
-import kinderData from '../../data/kindergartners_in_full_day_program.js';
+import kinderData from '../data/kindergartners_in_full_day_program.js';
 
 const DistrictData = new DistrictRepository(kinderData);
 
@@ -13,8 +13,15 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
+      allDistrictData: [],
       districtCards: []
     }
+  }
+
+  componentDidMount() {
+     this.setState({
+      allDistrictData: DistrictData.data
+    })
   }
 
   handleSearch = (district) => {
@@ -28,7 +35,7 @@ class App extends Component {
       <section>
         <Controls />
         <ComparisonContainer />
-        <CardContainer />
+        <CardContainer allDistrictData={ this.state.allDistrictData }/>
       </section>
     );
   }

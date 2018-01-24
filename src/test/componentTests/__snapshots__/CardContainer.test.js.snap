@@ -17,38 +17,17 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <h2>
-        Cards area
+      "children": Array [
+        <h2>
+          Cards area
 </h2>,
+        undefined,
+      ],
       "className": "container-wrap",
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": "Cards area",
-      },
-      "ref": null,
-      "rendered": "Cards area",
-      "type": "h2",
-    },
-    "type": "section",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <h2>
-          Cards area
-</h2>,
-        "className": "container-wrap",
-      },
-      "ref": null,
-      "rendered": Object {
+    "rendered": Array [
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
@@ -59,6 +38,39 @@ ShallowWrapper {
         "rendered": "Cards area",
         "type": "h2",
       },
+      undefined,
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2>
+            Cards area
+</h2>,
+          undefined,
+        ],
+        "className": "container-wrap",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Cards area",
+          },
+          "ref": null,
+          "rendered": "Cards area",
+          "type": "h2",
+        },
+        undefined,
+      ],
       "type": "section",
     },
   ],

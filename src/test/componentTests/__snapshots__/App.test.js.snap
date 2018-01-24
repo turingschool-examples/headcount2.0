@@ -20,7 +20,9 @@ ShallowWrapper {
       "children": Array [
         <Controls />,
         <ComparisonContainer />,
-        <CardContainer />,
+        <CardContainer
+          allDistrictData={Array []}
+/>,
       ],
     },
     "ref": null,
@@ -47,7 +49,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "allDistrictData": Array [],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -64,7 +68,9 @@ ShallowWrapper {
         "children": Array [
           <Controls />,
           <ComparisonContainer />,
-          <CardContainer />,
+          <CardContainer
+            allDistrictData={Array []}
+/>,
         ],
       },
       "ref": null,
@@ -91,7 +97,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "allDistrictData": Array [],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

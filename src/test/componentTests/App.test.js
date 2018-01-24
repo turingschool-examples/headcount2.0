@@ -13,9 +13,15 @@ it('should match the snapshot', () => {
   expect(renderedComponent).toMatchSnapshot()
 })
 
+it('should gather clean data from all districts', () => {
+  const renderedComponent = shallow(<App/>)
+  expect(Object.keys(renderedComponent.state().allDistrictData).length).toBe(181)
+});
+
 it('when handleSearch is called with a district, the state should have that district object', () => {
   const renderedComponent = shallow(<App />)
   const mockedDistrict = { 'data' : { '2014' : 0.741 }, 'location': 'COLORADO' }
   renderedComponent.instance().handleSearch('COLORADO')
   expect(renderedComponent.state().districtCards).toEqual(mockedDistrict)
 })
+
