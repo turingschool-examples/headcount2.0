@@ -10,7 +10,9 @@ class App extends Component {
     super(props);
     this.state = {
       schoolData: {},
+      searchArray: [],
     }
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
   componentDidMount() {
@@ -24,10 +26,18 @@ class App extends Component {
     return new DistrictRepository(schoolData).data
   }
 
+  handleSearch(e) {
+    let schoolsToSearch = Object.keys(this.state.schoolData);
+    let array = schoolsToSearch.filter( schoolName => schoolName.includes(e.target.value.toUpperCase()));
+    this.setState({
+      searchArray: array,
+    })
+  }
+
   render() {
     return (
       <div>
-        <Control />
+        <Control handleSearch={this.handleSearch}/>
         <CardContainer schoolData={this.state.schoolData} />
       </div>
     );
