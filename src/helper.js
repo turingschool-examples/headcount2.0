@@ -48,10 +48,9 @@ export default class DistrictRepository {
     const dataArray = Object.keys(this.data)
  
     const found = dataArray.filter(district => {
-      if(!searched || district.includes(searched.toUpperCase()) ) {
+      if (!searched || district.includes(searched.toUpperCase()) ) {
         return district 
       } 
-
     })
 
     return found
