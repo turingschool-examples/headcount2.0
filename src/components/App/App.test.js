@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import kinderData from '../../data/kindergartners_in_full_day_program.js';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  // ReactDOM.render(<App />, div);
-});
+
+it('should have a default state equal to the cleaned data', () => {
+  const wrapper = shallow(<App />);
+  
+})

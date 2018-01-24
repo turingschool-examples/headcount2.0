@@ -1,12 +1,22 @@
 import React from 'react'
+import './Card.css';
 
-const Card = ({location, data}) => {
-  const dataList = data.map((dataPoint, index) => <li>dataPoint[index]</li>)
+const Card = (props) => {
+  const { location, data } = props.schoolData;
+  const dataList = Object.keys(data)
+    .map((year, index) => {
+      let average;
+      data[year] >= 0.5 ? average = 'high' : average = 'low';
+      return <li key={index} className={average} >{year}: {data[year]}</li>
+    })
 
   return (
-    <div className='Card'>
+    <article className='Card'>
       <h3>{location}</h3>
-    </div>
+      <ul>
+        { dataList }
+      </ul>
+    </article>
   )
 }
 
