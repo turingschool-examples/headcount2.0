@@ -1,0 +1,49 @@
+.Control {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 75px;
+  position: relative;
+}
+
+h1 {
+  font-family: 'Bree Serif', serif;
+  margin: 0;
+  font-size: 40px;
+}
+
+input {
+  box-sizing: border-box;
+}
+
+input[type=text] {
+  /*min-width: 185px;*/
+  /*width: 50%;*/
+  width: 110px;
+  height: 39.5px;
+  padding-left: 10px;
+  border: none;
+  transition: width 1s;
+}
+ input:focus {
+  width: 300px;
+ }
+
+.input-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.input-cont:hover {
+
+}
+
+.search-icon {
+  font-size: 17.5px;
+}
