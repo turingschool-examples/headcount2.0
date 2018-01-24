@@ -33,9 +33,8 @@ class DistrictRepository {
       .forEach(key => {
         key.includes(searchFrag.toUpperCase()) 
         && searchResults.push(this.data[key]);
-    } );
+      });
     return searchResults;
-
   }
 
   findAverage(schoolName) {
