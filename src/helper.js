@@ -56,4 +56,31 @@ export default class DistrictRepository {
     return found
   }
 
+  findAverage(data) {
+    const arrayOfNumbers = Object.values(this.data[data].data)
+    const sum = arrayOfNumbers.reduce((avg, number) => {
+
+      avg += number
+      return avg 
+    }, 0)
+
+    return this.round(sum / arrayOfNumbers.length)
+
+  }
+
+  compareDistrictAverages(district1, district2) {
+    district1 = district1.toUpperCase()
+    district2 = district2.toUpperCase()
+    const district1Avg = this.findAverage(district1);
+    const district2Avg = this.findAverage(district2);
+    const comparedRatio = this.round(district1Avg / district2Avg)
+
+    return {
+      [district1]: district1Avg,
+      [district2]: district2Avg,
+      compared: comparedRatio
+    }
+  }
+
+
 }
