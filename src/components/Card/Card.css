@@ -1,0 +1,17 @@
+.Card {
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+.Card h3 {
+  background-color: #888;
+  color: #fff;
+}
+
+.Card p {
+  margin: 7px;
+}

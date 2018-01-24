@@ -1,12 +1,14 @@
 import React from 'react';
+import './Card.css';
 
-const Card = (data) => {
-  console.log(data)
+const Card = ({ districtName, data, key }) => {
+  const dataValues = Object.keys(data).map( year => year + ': ' + data[year] )
+
   return(
-    <div>
-      <h3></h3>
-      <p></p>
-    </div>
+    <article className='Card'>
+      <h3>{districtName}</h3>
+      {dataValues.map(value => <p>{value}</p>)}
+    </article>
   )
 }
 
