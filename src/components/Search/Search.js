@@ -10,6 +10,7 @@ class Search extends Component {
 
   handleInput = (e) => {
     this.setState({query: e.target.value})
+    this.props.handleSubmit(this.state.query);
   }
 
   submitHelper = (e) => {
