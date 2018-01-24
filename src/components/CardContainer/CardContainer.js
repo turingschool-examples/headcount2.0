@@ -19,11 +19,7 @@ const CardContainer = ({ districtData }) => {
 }
 
 CardContainer.propTypes = {
-  districtData: PropTypes.shape({
-    districtName: PropTypes.string,
-    data: PropTypes.object,
-    key: PropTypes.number
-  }).isRequired
+  districtData: PropTypes.object.isRequired
 }
 
 export default CardContainer;

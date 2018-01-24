@@ -15,7 +15,10 @@ const Card = ({ districtName, data }) => {
 
 Card.propTypes = {
   districtName: PropTypes.string.isRequired,
-  data: PropTypes.object.isRequired
+  data: PropTypes.shape({
+    2004: PropTypes.number.isRequired,
+    2014: PropTypes.number.isRequired
+  })
 }
 
 export default Card;
