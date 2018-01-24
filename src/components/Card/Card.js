@@ -1,10 +1,18 @@
 import React from 'react';
 
 const Card = ({ districtName, data, key }) => {
+  const dataValues = Object.keys(data).map(year => 
+    year + ': ' + data[year]
+  )
+
+  console.log(dataValues)
+
   return(
     <div>
       <h3>{districtName}</h3>
-      <p></p>
+     
+        {dataValues.map(value => <p>{value}</p>)}
+
     </div>
   )
 }
