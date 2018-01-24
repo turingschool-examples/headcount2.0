@@ -13,7 +13,7 @@ class CardContainer extends Component {
 
   render() {
     const dataArray = Object.keys(this.props.allDistrictData)
-    const newCard = dataArray.map(location => <Card data={ this.props.allDistrictData[location] }/>)
+    const newCard = dataArray.map((location, index) => <Card data={ this.props.allDistrictData[location]} key={index} />)
     
     return (
       <section className='container-wrap'>

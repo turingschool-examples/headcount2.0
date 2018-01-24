@@ -3,7 +3,7 @@ import '../styles/Card.css'
 
 const Card = (props) => {
 
-const cardDisplay = Object.keys(props['data'].data).map( year => <li> {year} : {props['data'].data[year]} </li>)
+const cardDisplay = Object.keys(props['data'].data).map( (year, index) => <li key={index}> {year} : {props['data'].data[year]} </li>)
 
   return (
     <article className='card'>
