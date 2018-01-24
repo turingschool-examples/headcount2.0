@@ -12,10 +12,15 @@ class Search extends Component {
     this.setState({query: e.target.value})
   }
 
+  submitHelper = (e) => {
+    e.preventDefault()
+    this.props.handleSubmit(this.state.query)
+  }
+
   render() {
     return(
       <div>
-        <form onSubmit={this.props.handleSubmit}>
+        <form onSubmit={this.submitHelper}>
           <input 
             type="text" 
             placeholder="Search District"

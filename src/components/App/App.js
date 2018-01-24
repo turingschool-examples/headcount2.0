@@ -14,9 +14,9 @@ class App extends Component {
     }
   }
 
-  handleSubmit = (e) => {
-    e.preventDefault()
-   
+  handleSubmit = (query) => {
+    console.log(district.findAllMatches(query))
+    district.findAllMatches(query)
   }
 
 
