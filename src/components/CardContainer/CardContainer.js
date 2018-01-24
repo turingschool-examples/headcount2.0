@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../Card/Card';
 import astronomy from '../../images/astronomy.svg';
+import './CardContainer.css'
 
 
 const CardContainer = ({schoolData}) => {

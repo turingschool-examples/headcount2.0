@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Control from '../Control/Control';
 import CardContainer from '../CardContainer/CardContainer';
-import './App.css';
 import DistrictRepository from '../../helper.js';
 import kinderData from '../../data/kindergartners_in_full_day_program.js';
+import './App.css';
 
 class App extends Component {
   constructor(props) {
