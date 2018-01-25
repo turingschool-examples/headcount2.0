@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Control from '../Control/Control';
 import CardContainer from '../CardContainer/CardContainer';
+import CompareContainer from '../CompareContainer/CompareContainer';
 import DistrictRepository from '../../helper.js';
 import kinderData from '../../data/kindergartners_in_full_day_program.js';
 import './App.css';
@@ -13,7 +14,9 @@ class App extends Component {
       searchResults: [],
       districtRepository: {},
       compareSchool1: '',
-      comparison: {}
+      compareSchool2: '',
+      comparison: {},
+      hideComparison: 'hide'
     };
   }
 
@@ -35,18 +38,25 @@ class App extends Component {
 
   handleCompareCards = (schoolName) => {
     if (!Object.keys(this.state.compareSchool1).length) {
-      this.setState({compareSchool1: schoolName});
+      let compareSchool1 = this.state.districtRepository.findByName(schoolName);
+      this.setState({compareSchool1, hideComparison: 'displayOne'});
     } else {
+      let compareSchool2 = this.state.districtRepository.findByName(schoolName);
       let comparison = this.state.districtRepository
-        .compareDistrictAverages(this.state.compareSchool1, schoolName);
-      this.setState({comparison});
+        .compareDistrictAverages(this.state.compareSchool1.location, schoolName);
+      this.setState({compareSchool2, comparison, hideComparison: 'displayAll'});
     }
   }
 
   render() {
     return (
       <div>
-        <Control handleSearch={this.handleSearch}/>
+        <Control handleSearch={this.handleSearch} />
+        <CompareContainer hideComparison={this.state.hideComparison} 
+                          school1={this.state.compareSchool1}
+                          school2={this.state.compareSchool2}
+                          comparison={this.state.comparison}
+        />
 
         {
           !this.state.searchResults.length &&
