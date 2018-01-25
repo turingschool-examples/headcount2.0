@@ -24,13 +24,15 @@ const Card = (props) => {
   );
 };
 
+const { shape, string, objectOf, number, func } = PropTypes;
+
 Card.propTypes = {
-  schoolData: PropTypes.shape({
-    location: PropTypes.string.isRequired,
-    data: PropTypes.objectOf(PropTypes.number.isRequired),
-    dataType: PropTypes.string.isRequired
+  schoolData: shape({
+    location: string.isRequired,
+    data: objectOf(number.isRequired),
+    dataType: string.isRequired
   }),
-  handleCompareCards: PropTypes.func.isRequired
+  handleCompareCards: func.isRequired
 };
 
 export default Card;

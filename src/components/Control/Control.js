@@ -20,8 +20,9 @@ const Control = (props) => {
   );
 };
 
+const { func } = PropTypes;
 Control.propTypes = {
-  handleSearch: PropTypes.func.isRequired
+  handleSearch: func.isRequired
 };
 
 export default Control;

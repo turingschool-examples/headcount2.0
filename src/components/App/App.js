@@ -15,19 +15,18 @@ class App extends Component {
       compareSchool1: '',
       comparison: {}
     };
-    this.handleSearch = this.handleSearch.bind(this);
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     this.getDistrictRepository(kinderData);
   }
 
-  getDistrictRepository(schoolData) {
+  getDistrictRepository = (schoolData) => {
     let districtRepository = new DistrictRepository(schoolData);
     this.setState({ districtRepository, schoolData: districtRepository.data });
   }
 
-  handleSearch(event) {
+  handleSearch = (event) => {
     this.setState({ 
       searchResults: this.state.districtRepository
         .findAllMatches(event.target.value)

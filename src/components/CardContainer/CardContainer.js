@@ -22,22 +22,25 @@ const CardContainer = ({schoolData, handleCompareCards}) => {
   );
 };
 
+const { oneOfType, objectOf, arrayOf,
+  shape, string, number, func } = PropTypes;
+  
 CardContainer.propTypes = {
-  schoolData: PropTypes.oneOfType([
-    PropTypes.objectOf(PropTypes.shape({
-      location: PropTypes.string.isRequired,
-      dataType: PropTypes.string.isRequired,
-      data: PropTypes.objectOf(
-        PropTypes.number.isRequired)
+  schoolData: oneOfType([
+    objectOf(shape({
+      location: string.isRequired,
+      dataType: string,
+      data: objectOf(
+        number.isRequired)
     })),
-    PropTypes.arrayOf(PropTypes.shape({
-      location: PropTypes.string.isRequired,
-      dataType: PropTypes.string.isRequired,
-      data: PropTypes.objectOf(
-        PropTypes.number.isRequired)
+    arrayOf(shape({
+      location: string.isRequired,
+      dataType: string,
+      data: objectOf(
+        number.isRequired)
     }))
   ]),
-  handleCompareCards: PropTypes.func.isRequired
+  handleCompareCards: func.isRequired
 };
 
 export default CardContainer;
