@@ -33,7 +33,7 @@ class App extends Component {
   render() {
     return (
       <section>
-        <Controls />
+        <Controls handleSearch={handleSearch} />
         <ComparisonContainer />
         <CardContainer allDistrictData={ this.state.allDistrictData }/>
       </section>
