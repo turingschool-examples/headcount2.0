@@ -12,7 +12,8 @@ class App extends Component {
     super()
     this.state = {
       districtData: district.data,
-      selectedCards: []
+      selectedCards: [],
+      clicked: false
     }
   }
 
@@ -29,12 +30,14 @@ class App extends Component {
   }
 
   selectCard = (id) => {
-    if(this.state.selectedCards.length === 3) {
+    if(this.state.selectedCards.length === 2) {
       this.state.selectedCards.shift()
     }
 
     const selectedCards = [...this.state.selectedCards, this.state.districtData[id]]
-    this.setState({selectedCards})
+    this.setState({selectedCards, clicked: true})
+
+
   }
 
   render() {
@@ -52,6 +55,7 @@ class App extends Component {
           districtData={this.state.districtData}
           comparedCards={this.state.comparedCards}
           selectCard={this.selectCard} 
+          clicked={this.state.clicked}
         />
       </div>
     );

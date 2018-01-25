@@ -1,4 +1,5 @@
 .compared-cards {
+  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
