@@ -8,9 +8,10 @@ const ComparedCards = ({ selectedCards, selectCard }) => {
           data={district.data}
           id={district.location}
           selectCard={selectCard}
+          key={key}
     />)
   return (
-    <div class="compared-cards">
+    <div className="compared-cards">
       {selectedCardsArray}
     </div>
   )

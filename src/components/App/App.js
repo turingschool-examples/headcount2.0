@@ -29,7 +29,9 @@ class App extends Component {
     this.setState({districtData})
   }
 
-  selectCard = (id) => {
+  selectCard = (e, id) => {
+    let { className } = e.target;
+    className != 'clicked' ? className += 'clicked' : className -= 'clicked';
     if(this.state.selectedCards.length === 2) {
       this.state.selectedCards.shift()
     }
