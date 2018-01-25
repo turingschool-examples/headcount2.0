@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import '../styles/Controls.css'
 
 class Controls extends Component {
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     this.state = {
       district: ''
     }
@@ -14,7 +14,7 @@ class Controls extends Component {
       <header>
         <h1> HeadCount 2.0 </h1>
         <input type='text' placeholder='Enter District Name' /> 
-        <button>Search</button>
+        <button onClick={props.handleSearch}>Search</button>
       </header>
       )
   }

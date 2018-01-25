@@ -30,16 +30,17 @@ export default class DistrictRepository {
     }
   }
 
-  findAllMatches(districtName){
-
-    if (!districtName){
+  findAllMatches(string){
+    //let upperCase = string.toUpperCase();
+    if (!string){
       return this.data
-    } else if(this.data[districtName.toUpperCase()]) {
-      let upperCase = districtName.toUpperCase();
-      return this.data[upperCase]
-    } else  {
-      return []
-    }
+    } 
+       
+      const searchResult = Object.values(this.data).filter(district => district.location.includes(string.toUpperCase()))
+      //console.log('data: ', this.data)
+      console.log(searchResult)
+      return searchResult
+    
 
   }
 
