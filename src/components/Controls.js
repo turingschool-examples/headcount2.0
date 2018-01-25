@@ -9,12 +9,20 @@ class Controls extends Component {
     }
   }
 
+  handleInput = (e) => {
+    const { value } = e.target;
+    this.setState({
+      district: value
+    })
+    this.props.handleSearch(this.state.district)
+  }
+
   render() {
     return (
-      <header>
+      <header className='search-wrap'>
         <h1> HeadCount 2.0 </h1>
-        <input type='text' placeholder='Enter District Name' /> 
-        <button onClick={props.handleSearch}>Search</button>
+        <input onChange={this.handleInput} value={this.state.district} type='text' placeholder='Enter District Name' /> 
+        
       </header>
       )
   }

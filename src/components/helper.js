@@ -38,7 +38,7 @@ export default class DistrictRepository {
        
       const searchResult = Object.values(this.data).filter(district => district.location.includes(string.toUpperCase()))
       //console.log('data: ', this.data)
-      console.log(searchResult)
+      //console.log(searchResult)
       return searchResult
     
 
