@@ -13,8 +13,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      allDistrictData: [],
-      districtCards: []
+      allDistrictData: []
     }
   }
 
@@ -24,16 +23,16 @@ class App extends Component {
     })
   }
 
-  handleSearch = (district) => {
+  handleSearch = (string) => {
     this.setState({
-      districtCards: DistrictData.findByName(district)
+      allDistrictData: DistrictData.findAllMatches(string)
     })
   }
 
   render() {
     return (
       <section>
-        <Controls handleSearch={handleSearch} />
+        <Controls handleSearch={this.handleSearch} />
         <ComparisonContainer />
         <CardContainer allDistrictData={ this.state.allDistrictData }/>
       </section>
