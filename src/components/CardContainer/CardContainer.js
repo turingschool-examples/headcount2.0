@@ -10,6 +10,7 @@ const CardContainer = ({schoolData, handleCompareCards}) => {
       key={index}
       schoolData={schoolData[school]} 
       handleCompareCards={handleCompareCards}
+      size='large'
     />);
 
   return (

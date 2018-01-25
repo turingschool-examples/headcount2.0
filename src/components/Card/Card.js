@@ -14,6 +14,7 @@ const Card = (props) => {
   return (
     <article 
       className='Card'
+      id={props.size}
       onClick={() => props.handleCompareCards(location)}
     >
       <h3>{location}</h3>
@@ -30,7 +31,8 @@ Card.propTypes = {
     data: PropTypes.objectOf(PropTypes.number.isRequired),
     dataType: PropTypes.string.isRequired
   }),
-  handleCompareCards: PropTypes.func.isRequired
+  handleCompareCards: PropTypes.func.isRequired,
+  size: PropTypes.string.isRequired
 };
 
 export default Card;
