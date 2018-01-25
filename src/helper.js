@@ -1,94 +1,64 @@
 export default class DistrictRepository {
   constructor(data) {
     this.data = this.dataCleaner(data)
+
   }
 
   dataCleaner(data) {
-    let cleanData = data.reduce( (districtObject, district)=> {
-    
+    const cleaned = (acc, district) => {
       let yearData = { [district.TimeFrame] : district.Data }
 
-      if (!districtObject[district.Location]) {
-        districtObject[district.Location] = {};
+      if (!acc[district.Location]) {
+        acc[district.Location] = {};
       } 
 
-      Object.assign(districtObject[district.Location], yearData)
+      Object.assign(acc[district.Location], yearData)
+      return acc;
+    }
 
-      return districtObject
-    }, {})
+    const cleanData = data.reduce(cleaned, {})
 
-  return cleanData;
-
+    return cleanData;
   }
 
   roundNumbers(data) {
-    let dataValues = Object.values(data);
-    let dataYears = Object.keys(data);
-    let newObject = {}
-
-    for(let i = 0; i < dataValues.length; i++) {
-      if(typeof dataValues[i] === 'number') {
-        let roundedNum = Math.round(dataValues[i] * 1000) / 1000
-        newObject[dataYears[i]] = roundedNum
-      } else {
-        dataValues[i] = 0;
-        newObject[dataYears[i]] = dataValues[i];
+    const roundedNums = (acc, entry) => {
+      if (typeof entry[1] === 'number') {
+        entry[1] = Math.round(entry[1] * 1000) / 1000
       }
+      else {
+        entry[1] = 0
+      }
+      acc[entry[0]] = entry[1]
+      return acc;
     }
 
-    return newObject;
+    const cleanedNums = Object.entries(data).reduce(roundedNums, {})
+    return cleanedNums;
   }
 
-  findByName(search) {
-    let foundLocation;
-    let newObject;
-
-    let cityNames = Object.keys(this.data);
-
-    typeof search === 'string' ? foundLocation = 
-      cityNames
-        .find( location => search.toUpperCase() === location.toUpperCase()) 
-      : foundLocation = undefined;
-
-    foundLocation ? 
-      newObject = {location: foundLocation.toUpperCase(),
-                   data: this.roundNumbers(this.data[foundLocation])}
-      : newObject = undefined;
-
-    return newObject;
+  findByName(search = '') {
+    const foundLocation = Object.keys(this.data).find( location => search.toUpperCase() === location.toUpperCase()) 
+      if(foundLocation) {
+      return Object.assign({
+        location: foundLocation.toUpperCase(),  
+        data: this.roundNumbers(this.data[foundLocation])
+      })
+    }
   }
 
-  findAllMatches(search) {
-    
+
+  findAllMatches(search = '') {
     let cityNames = Object.keys(this.data);
-   // return an array
-   // we want the array to contain all data sets that match a name
 
-
-    if (search) {
-      // captures the name of the name of the city we're searching
-      let searchedCity = cityNames.filter( city => city.toUpperCase().includes(search.toUpperCase()));
-      
-      // loop over the data, using searchedCity. 
-      // find location: [serachedCity]
-      // add key [searchedCity] value, all the data to an array
-      const cityArray = searchedCity.map( (city) => {
+    const searchedCity = cityNames.filter( city => city.toUpperCase().includes(search.toUpperCase()));
+    const cityArray = searchedCity.map( city => {
         return { 
           location: city,
           data: this.roundNumbers(this.data[city])
         }
       })
 
-      return cityArray
-    }
-
-    else {
-      return cityNames.map( (city => {
-        return {
-          location: city,
-          data: this.roundNumbers(this.data[city])
-        }
-      }))
+    return cityArray;
     }
   }
-}
