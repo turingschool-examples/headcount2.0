@@ -28,3 +28,15 @@ ul {
 .under {
   color: #D23D54;
 }
+
+.fa {
+  margin-right: 8px;
+}
+
+.fa-bolt {
+  color: yellow;
+}
+
+.fa-tint {
+  color: #849FED;
+}
