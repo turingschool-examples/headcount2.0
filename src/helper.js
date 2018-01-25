@@ -1,5 +1,3 @@
-
-
 export default class DistrictRepository {
   constructor(data) {
     this.data = this.cleanData(data);
@@ -46,14 +44,7 @@ export default class DistrictRepository {
 
   findAllMatches(searched) {
     const dataArray = Object.keys(this.data)
- 
-    const found = dataArray.filter(district => {
-      if (!searched || district.includes(searched.toUpperCase()) ) {
-        return district 
-      } 
-    })
-
-    return found
+    return dataArray.filter(district => !searched || district.includes(searched.toUpperCase()))
   }
 
 }
