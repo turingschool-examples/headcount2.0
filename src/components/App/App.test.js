@@ -41,4 +41,23 @@ it('should update state when handleSearch is activated', () => {
   expect(wrapper.state().searchResults).toEqual([searchDataReplica]);  
 });
 
-// it('')
+// This test works no matter what the first card is
+it('when the first card is clicked its name should be entered in state', () => {
+  const wrapper = mount(<App />);
+  wrapper.find('article').first().simulate('click');
+  expect(wrapper.state().compareSchool1)
+    .toEqual(wrapper.find('h3').first().text());
+});
+
+// This test only works for the KinderData cards.
+it('when a 2nd card is clicked it puts a comparison object in state', () => {
+  const wrapper = mount(<App />);
+  wrapper.find('article').first().simulate('click');
+  wrapper.find('article').last().simulate('click');
+  expect(wrapper.state().comparison)
+    .toEqual({
+      "COLORADO": 0.53,
+      "YUMA SCHOOL DISTRICT 1": 0.909,
+      "compared": 0.583
+    });
+});
