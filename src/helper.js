@@ -34,53 +34,31 @@ export default class DistrictRepository {
     }
 
     const cleanedNums = Object.entries(data).reduce(roundedNums, {})
-
     return cleanedNums;
   }
 
-  findByName(search) {
-    let foundLocation;
-    let newObject;
-
-    let cityNames = Object.keys(this.data);
-
-    typeof search === 'string' ? foundLocation = 
-      cityNames
-        .find( location => search.toUpperCase() === location.toUpperCase()) 
-      : foundLocation = undefined;
-
-    foundLocation ? 
-      newObject = {location: foundLocation.toUpperCase(),
-                   data: this.roundNumbers(this.data[foundLocation])}
-      : newObject = undefined;
-
-    return newObject;
+  findByName(search = '') {
+    const foundLocation = Object.keys(this.data).find( location => search.toUpperCase() === location.toUpperCase()) 
+      if(foundLocation) {
+      return Object.assign({
+        location: foundLocation.toUpperCase(),  
+        data: this.roundNumbers(this.data[foundLocation])
+      })
+    }
   }
 
 
-  findAllMatches(search) {
-    
+  findAllMatches(search = '') {
     let cityNames = Object.keys(this.data);
 
-    if (search) {
-      const searchedCity = cityNames.filter( city => city.toUpperCase().includes(search.toUpperCase()));
-      const cityArray = searchedCity.map( city => {
+    const searchedCity = cityNames.filter( city => city.toUpperCase().includes(search.toUpperCase()));
+    const cityArray = searchedCity.map( city => {
         return { 
           location: city,
           data: this.roundNumbers(this.data[city])
         }
       })
 
-      return cityArray;
-    }
-
-    else {
-      return cityNames.map( city => {
-        return {
-          location: city,
-          data: this.roundNumbers(this.data[city])
-        }
-      })
+    return cityArray;
     }
   }
-}
