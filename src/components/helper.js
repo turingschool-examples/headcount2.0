@@ -44,5 +44,30 @@ export default class DistrictRepository {
 
   }
 
+  findAverage(string) {
+    const sum = Object.values(this.data[string.toUpperCase()].data).reduce((accu, data) => {
+      accu = accu + data
+      return accu;
+    }, 0)
 
+    let length = Object.values(this.data[string.toUpperCase()].data).length;
+    
+    return Math.round((sum / length) * 1000) / 1000;
+  }
+
+  compareDistrictAverages(string1, string2) {
+    let obj = {};
+    const location1 = this.data[string1.toUpperCase()].location;
+    const average1 = this.findAverage(string1)
+    const location2 = this.data[string2.toUpperCase()].location;
+    const average2 = this.findAverage(string2)
+
+    const comparison = Math.round((average1 / average2) * 1000) / 1000;
+
+    obj[location1] = average1;
+    obj[location2] = average2;
+    obj['compared'] = comparison;
+    
+    return obj
+  }
 }
