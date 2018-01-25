@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class SearchBar extends Component {
   constructor(props) {
-    super(props)
+    super(props);
       this.state = {
         value: ''
       }
@@ -18,10 +18,11 @@ class SearchBar extends Component {
   }
 
   render() {
-
+    
     return (
       <div>
-        <input type='text' 
+        <input className='search-bar'
+               type='text' 
                placeholder='Districts'
                value={this.state.value}
                onChange={this.handleInput} 
