@@ -7,12 +7,11 @@ export default class DistrictRepository {
   dataCleaner(data) {
     const cleaned = (acc, district) => {
       let yearData = { [district.TimeFrame] : district.Data }
-
-      if (!acc[district.Location]) {
-        acc[district.Location] = {};
+      if (!acc[district.Location.toUpperCase()]) {
+        acc[district.Location.toUpperCase()] = {};
       } 
 
-      Object.assign(acc[district.Location], yearData)
+      Object.assign(acc[district.Location.toUpperCase()], this.roundNumbers(yearData))
       return acc;
     }
 
@@ -23,13 +22,9 @@ export default class DistrictRepository {
 
   roundNumbers(data) {
     const roundedNums = (acc, entry) => {
-      if (typeof entry[1] === 'number') {
-        entry[1] = Math.round(entry[1] * 1000) / 1000
-      }
-      else {
-        entry[1] = 0
-      }
-      acc[entry[0]] = entry[1]
+  
+      acc[entry[0]] = this.cleanNum(entry[1]);
+
       return acc;
     }
 
@@ -37,28 +32,57 @@ export default class DistrictRepository {
     return cleanedNums;
   }
 
+  cleanNum(num) {
+    return Math.round(num * 1000) / 1000 || 0
+  }
+
   findByName(search = '') {
-    const foundLocation = Object.keys(this.data).find( location => search.toUpperCase() === location.toUpperCase()) 
+    const foundLocation = Object.keys(this.data).find( location => search.toUpperCase() === location) 
       if(foundLocation) {
       return Object.assign({
-        location: foundLocation.toUpperCase(),  
-        data: this.roundNumbers(this.data[foundLocation])
+        location: foundLocation,  
+        data: this.data[foundLocation]
       })
     }
   }
-
 
   findAllMatches(search = '') {
     let cityNames = Object.keys(this.data);
 
-    const searchedCity = cityNames.filter( city => city.toUpperCase().includes(search.toUpperCase()));
+    const searchedCity = cityNames.filter( city => city.includes(search.toUpperCase()));
     const cityArray = searchedCity.map( city => {
-        return { 
-          location: city,
-          data: this.roundNumbers(this.data[city])
-        }
-      })
+      return { 
+        location: city,
+        data: this.data[city]
+      }
+    })
 
     return cityArray;
-    }
   }
+
+  findAverage(dist) {
+    const data = Object.entries(this.data[dist])
+
+    const average = (avg, yearData) => {
+      avg += yearData[1]
+
+      return avg;
+    }
+
+    const roughAvg = data.reduce(average, 0) / data.length;
+    return this.cleanNum(roughAvg)
+  }
+
+  compareDistrictAverages(dist1, dist2) {
+    dist1 = this.findByName(dist1).location
+    dist2 = this.findByName(dist2).location
+
+    const avg1 = this.findAverage(dist1);
+    const avg2 = this.findAverage(dist2);
+    
+    let distAvg = this.findAverage(dist1) / this.findAverage(dist2);
+    distAvg = this.cleanNum(distAvg)
+
+    return {[dist1]: avg1, [dist2]: avg2, 'compared': distAvg}
+  }
+}

@@ -41,7 +41,7 @@ ShallowWrapper {
                                   "2013": 0.703,
                                   "2014": 0.741,
                                 },
-                                "location": "Colorado",
+                                "location": "COLORADO",
                               },
                               Object {
                                 "data": Object {
@@ -2972,7 +2972,7 @@ ShallowWrapper {
                 "2013": 0.703,
                 "2014": 0.741,
               },
-              "location": "Colorado",
+              "location": "COLORADO",
             },
             Object {
               "data": Object {
@@ -5893,7 +5893,7 @@ ShallowWrapper {
                                         "2013": 0.703,
                                         "2014": 0.741,
                                       },
-                                      "location": "Colorado",
+                                      "location": "COLORADO",
                                     },
                                     Object {
                                       "data": Object {
@@ -8824,7 +8824,7 @@ ShallowWrapper {
                   "2013": 0.703,
                   "2014": 0.741,
                 },
-                "location": "Colorado",
+                "location": "COLORADO",
               },
               Object {
                 "data": Object {
