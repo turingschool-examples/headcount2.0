@@ -28,3 +28,6 @@ ul {
 .under {
   color: #D23D54;
 }
+.Card.clicked {
+  border: 2px solid #eeed8c;
+}

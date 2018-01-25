@@ -3,11 +3,11 @@ import Card from '../Card/Card.js';
 import './CardContainer.css';
 import PropTypes from 'prop-types';
 
-const CardContainer = ({ districtData, selectCard }) => {
+const CardContainer = ({ districtData, selectCard, key }) => {
   const renderedDistricts = Object.keys(districtData).map((district, key) => 
     <Card districtName={district}
           data={districtData[district].data}
-          key={district}
+          id={district}
           selectCard={selectCard}
     />
   )
