@@ -39,12 +39,10 @@ export default class DistrictRepository {
   }
 
   findByName(search) {
+    let foundLocation;
+    let newObject;
 
     let cityNames = Object.keys(this.data);
-
-    const foundLocation = ( cityNames ) => {
-
-    }
 
     typeof search === 'string' ? foundLocation = 
       cityNames
