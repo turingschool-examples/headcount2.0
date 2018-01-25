@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 function Card({location, data}) {
 
-  const dataArray = Object.entries(data).map( dataPoint => {
-    return <li> { dataPoint[0] } : { dataPoint[1] } </li>
+  const dataArray = Object.entries(data).map( (dataPoint, index) => {
+    return <li key={dataPoint[0] + index}> { dataPoint[0] } : { dataPoint[1] } </li>
   })
 
   return (

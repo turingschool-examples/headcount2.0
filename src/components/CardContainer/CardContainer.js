@@ -4,8 +4,8 @@ import './CardContainer.css';
 import PropTypes from 'prop-types'
 
 function CardContainer(props) {
-  let allCities = props.data.map( (city) => {
-    return <Card {...city}/>
+  let allCities = props.data.map( (city, index) => {
+    return <Card {...city} key={city.location + index}/>
   })
 
   return (
