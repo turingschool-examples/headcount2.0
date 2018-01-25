@@ -29,17 +29,10 @@ export default class DistrictRepository {
   findByName(search) {
     if (!search) {
       return undefined
-    } else {
-      let searched = search.toUpperCase();
-
-      //return this.data[searched]
-
-      if (!this.data[searched]) {
-        return undefined
-      } else {
-        return this.data[searched]
-      }
-    }
+    } 
+    let searched = search.toUpperCase();
+    
+    return this.data[searched]
   }
 
   findAllMatches(searched) {
@@ -50,13 +43,11 @@ export default class DistrictRepository {
   findAverage(data) {
     const arrayOfNumbers = Object.values(this.data[data].data)
     const sum = arrayOfNumbers.reduce((avg, number) => {
-
       avg += number
       return avg 
     }, 0)
 
     return this.round(sum / arrayOfNumbers.length)
-
   }
 
   compareDistrictAverages(district1, district2) {
