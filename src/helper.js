@@ -4,65 +4,64 @@ export default class DistrictRepository {
   }
 
   cleanData(data) {
-   return data.reduce((obj, district) => {
+    return data.reduce((cleanObj, district) => {
       const local = district.Location.toUpperCase();
 
-      if (!obj[local]) {
-        obj[local] = {}
-        obj[local].data = {}
+      if (!cleanObj[local]) {
+        cleanObj[local] = {};
+        cleanObj[local].data = {};
       }
-      obj[local].location = local;
+      cleanObj[local].location = local;
 
-      const objData = obj[local].data;
-      const year = [district.TimeFrame]
+      const objData = cleanObj[local].data;
+      const year = [district.TimeFrame];
 
       isNaN(district.Data) ? objData[year] = 0 :
-      objData[year] = this.round(district.Data)
-      return obj;
-    }, {})
+        objData[year] = this.round(district.Data);
+      return cleanObj;
+    }, {});
   }
 
   round(num) {
-    return Math.round(1000*num)/1000
+    return Math.round(1000 * num) / 1000;
   }
 
   findByName(search) {
     if (!search) {
-      return undefined
+      return undefined;
     } 
     let searched = search.toUpperCase();
     
-    return this.data[searched]
+    return this.data[searched];
   }
 
   findAllMatches(searched) {
-    const dataArray = Object.keys(this.data)
-    return dataArray.filter(district => !searched || district.includes(searched.toUpperCase()))
+    const dataArray = Object.keys(this.data);
+    return dataArray.filter(district => !searched || 
+      district.includes(searched.toUpperCase()));
   }
 
   findAverage(data) {
-    const arrayOfNumbers = Object.values(this.data[data].data)
+    const arrayOfNumbers = Object.values(this.data[data].data);
     const sum = arrayOfNumbers.reduce((avg, number) => {
-      avg += number
-      return avg 
-    }, 0)
+      avg += number;
+      return avg;
+    }, 0);
 
-    return this.round(sum / arrayOfNumbers.length)
+    return this.round(sum / arrayOfNumbers.length);
   }
 
   compareDistrictAverages(district1, district2) {
-    district1 = district1.toUpperCase()
-    district2 = district2.toUpperCase()
+    district1 = district1.toUpperCase();
+    district2 = district2.toUpperCase();
     const district1Avg = this.findAverage(district1);
     const district2Avg = this.findAverage(district2);
-    const comparedRatio = this.round(district1Avg / district2Avg)
+    const comparedRatio = this.round(district1Avg / district2Avg);
 
     return {
       [district1]: district1Avg,
       [district2]: district2Avg,
       compared: comparedRatio
-    }
+    };
   }
-
-
 }
