@@ -1,0 +1,31 @@
+.card {
+  border: 1px solid;
+  width: 250px;
+  display: inline-block;
+  margin: 0 5px 10px 0;
+  /*height: 120px;*/
+  vertical-align: top;
+  padding: 5px;
+  text-align: center;
+}
+
+.card ul{
+  margin: 0;
+  padding: 0;
+  width: 135px;
+  margin: auto;
+}
+
+.card li {
+  list-style-type: none;  
+  padding: 5px 20px;
+  text-align: left;
+}
+
+.higher{
+  color: green;
+}
+
+.lower {
+  color: red;
+}
