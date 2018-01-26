@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-     this.setState({
+    this.setState({
       allDistrictData: DistrictData.data
     })
   }
@@ -31,24 +31,15 @@ class App extends Component {
   }
 
   compareCards = (string) => {
-    //2nd card clicked replace cardCompData[2]
-    //if card clicked 2 time toggle back to mock data
-    //maybe reduce to shift/unshift 1 card clicked pop/push 2nd card clicked???
-    
-    //add
-    //reduce this.state.cardCompData((accu, data, index))
-    //add counter
-    //if clicked 1st time 
-    // counter++ replace cardCompData1 data
-    //if same card clicked counter-- && id replace with mock data
-    //if this works do the same for cardCompData2
-
-    console.log(string)
+    //set up conditional where if click on card in card container put in cardCompData array 
+    //if card click in comparison container remove card from cardCompData array
+    //also add condition so that cardCompData is limited to length of 2
+    //create new card component for comparison card
+    //new card should have condition that makes it appear only when cardComp is 2
     let location1 = DistrictData.findByName(string)
     this.setState({
       cardCompData: location1
     })
-    console.log(this.state.cardCompData)
   }
 
   render() {
