@@ -1,4 +1,4 @@
-.Card {
+article {
   border: 1px solid white;
   display: flex;
   flex-direction: column;
@@ -8,11 +8,11 @@
   background: rgba(255, 255, 255, .1)
 }
 
-.Card h3 {
+article h3 {
   color: #AAD74F;
 }
 
-.Card p {
+article p {
   margin: 7px;
 }
 
@@ -28,6 +28,9 @@ ul {
 .under {
   color: #D23D54;
 }
+
+.clicked {
+
 
 .fa {
   margin-right: 8px;
