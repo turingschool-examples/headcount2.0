@@ -14,14 +14,7 @@ class App extends Component {
     super()
     this.state = {
       allDistrictData: [],
-      cardCompData: [{data: {2004: 0, 2005: 0, 2006: 0, 2007: 0, 
-                    2008: 0, 2009: 0, 2010: 0, 2011: 0, 2012: 0, 
-                    2013: 0, 2014: 0}, 
-                    location: 'Location 1 for Comparison'}, 
-                    {data: {2004: 0, 2005: 0, 2006: 0, 2007: 0, 
-                    2008: 0, 2009: 0, 2010: 0, 2011: 0, 2012: 0, 
-                    2013: 0, 2014: 0}, 
-                    location: 'Location 2 for Comparison'}]
+      cardCompData: []
     }
   }
 
@@ -38,12 +31,22 @@ class App extends Component {
   }
 
   compareCards = (string) => {
-    //if clicked 1 time replace cardCompData[0]
     //2nd card clicked replace cardCompData[2]
     //if card clicked 2 time toggle back to mock data
+    //maybe reduce to shift/unshift 1 card clicked pop/push 2nd card clicked???
+    
+    //add
+    //reduce this.state.cardCompData((accu, data, index))
+    //add counter
+    //if clicked 1st time 
+    // counter++ replace cardCompData1 data
+    //if same card clicked counter-- && id replace with mock data
+    //if this works do the same for cardCompData2
+
     console.log(string)
+    let location1 = DistrictData.findByName(string)
     this.setState({
-      cardCompData: DistrictData.findByName(string)
+      cardCompData: location1
     })
     console.log(this.state.cardCompData)
   }
