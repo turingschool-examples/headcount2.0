@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 const Card = ({ districtName, data, selectCard, id }) => {
   
   const dataValues = Object.keys(data).map( (year, i) =>
-    data[year] > 0.5 ? <li className="over" key={i}>{year}: {data[year]}</li>
+    data[year] > 0.5 ? <li className="over" key={i}><i className="fa fa-bolt"></i>{year}: {data[year]}</li>
     :
-    <li className="under" key={i}>{year}: {data[year]}</li>
+    <li className="under" key={i}><i className="fa fa-tint"></i>{year}: {data[year]}</li>
   )
 
   return(
