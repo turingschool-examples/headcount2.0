@@ -30,13 +30,17 @@ class App extends Component {
   }
 
   selectCard = (e, id) => {
-    let { className } = e.target;
+    //let { className } = e.target;
     e.target.className !== 'clicked' ? e.target.className += 'clicked' : e.target.className = '';
     
     if(this.state.selectedCards.length === 2) {
       this.state.selectedCards.shift()
     }
-    
+
+    if (this.state.selectedCards.length >= 1 && this.state.selectedCards[0].location === id ) {
+      this.state.selectedCards.pop()
+    }
+
     const selectedCards = [...this.state.selectedCards, this.state.districtData[id]];
 
     this.setState({selectedCards, clicked: true})
