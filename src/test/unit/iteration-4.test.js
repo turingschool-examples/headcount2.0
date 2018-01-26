@@ -1,7 +1,7 @@
-import DistrictRepository from '../../src/helper.js';
+import DistrictRepository from '../../helper.js';
 import kinderData from '../../kindergartners_in_full_day_program.js';
 
-describe('DistrictRepository iteration 0', () =>  {
+describe('DistrictRepository iteration 4', () =>  {
   const district = new DistrictRepository(kinderData);
 
   test('findAverage for ACADEMY 20', () => {
