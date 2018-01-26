@@ -29,25 +29,26 @@ class App extends Component {
   }
 
   selectCard = (e, id) => {
-
-    if (!this.state.districtData[id].clicked) {
-      this.state.districtData[id].clicked = true;
-    } else {
-      this.state.districtData[id].clicked = false;
-    }
-    
     if(this.state.selectedCards.length === 2) {
       this.state.selectedCards.shift();
     }
 
     if (this.state.selectedCards.length >= 1 && this.state.selectedCards[0].location === id ) {
-      this.state.selectedCards.shift();
+      this.state.selectedCards.pop();
     }
 
     const selectedCards = [...this.state.selectedCards, this.state.districtData[id]];
 
     this.setState({selectedCards})
     console.log(this.state.selectedCards);
+    
+    this.state.selectedCards.forEach(card => {
+      if (!this.state.districtData[card.location].clicked) {
+        this.state.districtData[card.location].clicked = true;
+      } else {
+        this.state.districtData[card.location].clicked = false;
+      }
+    })
 
   }
 
