@@ -8,10 +8,7 @@ const display = getDisplay();
 
 function getDisplay() {
   if (hideComparison === 'hide') {
-    return (
-      <div className={hideComparison}>
-      </div>
-    ); 
+    return; 
   } else if (hideComparison === 'displayOne') {
       return (
         <section className={hideComparison}>
