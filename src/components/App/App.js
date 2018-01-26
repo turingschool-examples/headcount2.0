@@ -11,9 +11,9 @@ class App extends Component {
     super(props);
     this.state = {
       schoolData: {},
-      // searchTerm: '',
+      searchTerm: '',
       searchResults: [],
-      // searchError: '',
+      searchError: '',
       districtRepository: {},
       compareSchool1: {},
       compareSchool2: {},
@@ -39,14 +39,18 @@ class App extends Component {
     });
   }
   
-  // componentDidUpdate(searchResults) {
-  //   if (this.state.searchResults.length === 0 &&
-  //     this.state.searchTerm) {
-  //     this.setState({searchError: 'error'})
-  //   } else {
-  //     this.setState({searchError: ''})
-  //   }
-  // }
+  componentDidUpdate(searchResults) {
+    // console.log(this.state.searchResults.length)
+    // console.log(this.state.searchTerm.length)
+    if (this.state.searchResults.length === 0 &&
+      this.state.searchTerm.length > 0) {
+      console.log('No results')
+      // this.setState({searchError: 'error'})
+    } else {
+      console.log('All good G')
+      // this.setState({searchError: ''})
+    }
+  }
 
   handleCompareCards = (schoolName) => {
     if (!Object.keys(this.state.compareSchool1).length) {
