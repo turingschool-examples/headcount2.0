@@ -1,28 +1,19 @@
 import React, { Component } from 'react';
-import Card from './Card'
-import '../styles/CardContainer.css'
+import Card from './Card';
+import '../styles/CardContainer.css';
 
 
-class CardContainer extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      district: ''
-    }
-  }
+const CardContainer = (props) => {
 
-  render() {
-    const dataArray = Object.keys(this.props.allDistrictData)
-    const newCard = dataArray.map((location, index) => <Card data={ this.props.allDistrictData[location]} key={index} />)
-    
-    return (
+    const dataArray = Object.keys(props.allDistrictData)
+    const newCard = dataArray.map((location, index) => <Card compareCards={props.compareCards} data={ props.allDistrictData[location]} key={index} />)
+  return (
       <section className='container-wrap'>
         <h2>School Data:</h2>
         { newCard }
       </section>
       )
-  }
-
+  
 }
 
 export default CardContainer

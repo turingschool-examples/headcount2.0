@@ -20,11 +20,11 @@ export default class DistrictRepository {
     
   }  
 
-  findByName(districtName){
-    
-    if(districtName) {
-      let upperCase = districtName.toUpperCase();
-      return this.data[upperCase]
+  findByName(string){
+    //console.log(string)
+    if(string) {
+      let upperCase = string.toUpperCase();
+      return [this.data[upperCase]]
     } else {
       return undefined
     }
