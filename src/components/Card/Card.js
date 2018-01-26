@@ -8,7 +8,7 @@ const Card = (props) => {
     .map((year, index) => {
       let average;
       data[year] >= 0.5 ? average = 'high' : average = 'low';
-      return <li key={index} className={average} >{year}: {data[year]}</li>;
+      return <li key={index}>{year}: <span className={average}>{data[year]}</span></li>;
     });
 
   return (

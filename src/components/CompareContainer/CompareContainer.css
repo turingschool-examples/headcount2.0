@@ -1,6 +1,5 @@
 .CompareContainer {
   width: 100%;
-
 }
 
 .comparison {
@@ -12,6 +11,10 @@
   box-sizing: border-box;
   border-radius: 40px;
   background-color: #f4f4f4fa;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .instructions {
@@ -40,7 +43,7 @@
 
 .displayAll {
   width: 100%;
-  height: 500px;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,4 +59,11 @@
 
 #arrow {
   margin: 0 30px;
+}
+
+button {
+  font-family: 'Bree Serif', serif;
+  font-size: 1em;
+  align-self: flex-start;
+  margin: 10px;
 }
