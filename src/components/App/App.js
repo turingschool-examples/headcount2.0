@@ -12,8 +12,7 @@ class App extends Component {
     super()
     this.state = {
       districtData: district.data,
-      selectedCards: [],
-      clicked: false
+      selectedCards: []
     }
   }
 
@@ -34,11 +33,11 @@ class App extends Component {
     e.target.className !== 'clicked' ? e.target.className += 'clicked' : e.target.className = '';
     
     if(this.state.selectedCards.length === 2) {
-      this.state.selectedCards.shift()
+      this.state.selectedCards.shift();
     }
 
     if (this.state.selectedCards.length >= 1 && this.state.selectedCards[0].location === id ) {
-      this.state.selectedCards.pop()
+      this.state.selectedCards.shift();
     }
 
     const selectedCards = [...this.state.selectedCards, this.state.districtData[id]];
