@@ -10,9 +10,10 @@ const cardDisplay = Object.keys(props['data'].data).map( (year, index) =>
   <li className='lower' key={index}> {year} : {props['data'].data[year]} </li>
   );
   
+  // onClick={() => props.compareCards (props['data'].location)
 
   return (
-    <article className='card' onClick={() => props.compareCards (props['data'].location)}>
+    <article className='card'>
       <h2>{props['data'].location}</h2>
       <ul>{cardDisplay}</ul>
     </article>

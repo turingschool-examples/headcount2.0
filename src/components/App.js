@@ -13,8 +13,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      allDistrictData: [],
-      compareCardsData: []
+      allDistrictData: []
     }
   }
 
@@ -30,21 +29,12 @@ class App extends Component {
     })
   }
 
-  compareCards = (string) => {
-   
-    this.setState({
-      compareCardsData: DistrictData.findByName(string)
-    })
-    //console.log(this.state.compareCardsData)
-  }
-
-
   render() {
     return (
       <section>
         <Controls handleSearch={this.handleSearch} />
-        <ComparisonContainer compareCardsData={this.state.compareCardsData} />
-        <CardContainer compareCards={this.compareCards} allDistrictData={ this.state.allDistrictData }/>
+        <ComparisonContainer />
+        <CardContainer allDistrictData={ this.state.allDistrictData }/>
       </section>
     );
   }
