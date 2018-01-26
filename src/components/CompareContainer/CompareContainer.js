@@ -9,6 +9,7 @@ const CompareContainer = (props) => {
   // let props.school1Avg;
   // let props.school2Avg;
 
+
   // if (comparison[props.school1.location] >
   //   comparison[props.school2.location]) {
   //   props.school1Avg = 'high';
@@ -20,10 +21,7 @@ const CompareContainer = (props) => {
 
   function getDisplay() {
     if (props.hideComparison === 'hide') {
-      return (
-        <div className={props.hideComparison}>
-        </div>
-      ); 
+      return; 
     } else if (props.hideComparison === 'displayOne') {
       return (
         <section className={props.hideComparison}>

@@ -67,6 +67,7 @@ class App extends Component {
   }
 
   removeComparison = () => {
+    console.log('hi')
     this.setState({
       compareSchool1: {},
       compareSchool2: {},
