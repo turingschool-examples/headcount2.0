@@ -13,7 +13,6 @@ class App extends Component {
     this.state = {
       districtData: district.data,
       selectedCards: [],
-      clicked: false
     }
   }
 
@@ -30,8 +29,15 @@ class App extends Component {
   }
 
   selectCard = (e, id) => {
-    let { className } = e.target;
-    e.target.className !== 'clicked' ? e.target.className += 'clicked' : e.target.className = '';
+
+    if (!this.state.districtData[id].clicked) {
+      this.state.districtData[id].clicked = true;
+    } else {
+      this.state.districtData[id].clicked = false;
+    }
+
+
+    
     
     if(this.state.selectedCards.length === 2) {
       this.state.selectedCards.shift()
@@ -39,7 +45,9 @@ class App extends Component {
     
     const selectedCards = [...this.state.selectedCards, this.state.districtData[id]];
 
-    this.setState({selectedCards, clicked: true})
+    this.setState({selectedCards})
+    console.log(this.state.selectedCards);
+
   }
 
   render() {

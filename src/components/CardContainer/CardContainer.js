@@ -6,12 +6,14 @@ import PropTypes from 'prop-types';
 const CardContainer = ({ districtData, selectCard, key}) => {
  
   const renderedDistricts = Object.keys(districtData).map((district, key) => 
-    <Card districtName={district}
-          data={districtData[district].data}
-          id={district}
-          selectCard={selectCard}
-          key={key}
-    />
+    <Card 
+      districtName={district}
+      data={districtData[district].data}
+      hit={districtData[district].clicked}
+      id={district}
+      selectCard={selectCard}
+      key={key}
+   />
   )
 
   return(
