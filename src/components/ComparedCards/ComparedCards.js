@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from '../Card/Card.js';
-import './ComparedCard.css';
+import './ComparedCards.css';
 
 const ComparedCards = ({ selectedCards, selectCard }) => {
   const selectedCardsArray = selectedCards.map((district, key) => 

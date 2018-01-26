@@ -29,17 +29,32 @@ class App extends Component {
     this.setState({districtData})
   }
 
+  makeComparison = () => { 
+    const d1 = this.state.selectedCards[0].location;
+    const d2 = this.state.selectedCards[1].location;
+
+    const average =  district.compareDistrictAverages(d1, d2);
+    console.log("hi", average);
+
+  }
+
   selectCard = (e, id) => {
-    let { className } = e.target;
-    e.target.className !== 'clicked' ? e.target.className += 'clicked' : e.target.className = '';
     
-    if(this.state.selectedCards.length === 2) {
+    if(this.state.selectedCards.length >= 2) {
       this.state.selectedCards.shift()
     }
     
     const selectedCards = [...this.state.selectedCards, this.state.districtData[id]];
 
     this.setState({selectedCards, clicked: true})
+  }
+
+  componentDidUpdate() {
+    console.log(this.state.selectedCards);
+    if (this.state.selectedCards.length > 1) {
+      this.makeComparison(); 
+    }
+
   }
 
   render() {
