@@ -61,9 +61,27 @@
   margin: 0 30px;
 }
 
+h2 {
+  font-family: 'Bree Serif', serif;
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
 button {
   font-family: 'Bree Serif', serif;
   font-size: 1em;
   align-self: flex-start;
   margin: 10px;
+  border: 2px solid black;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color: #f4f4f4fa;
+}
+
+button:hover {
+  background-color: #dd4a0d;
 }

@@ -13,6 +13,7 @@ const Control = (props) => {
           id="search"
           placeholder="Search by School"
           onChange={(event) => props.handleSearch(event)}
+          // className={props.searchError}
         />
       </div>
       <h1>Education Colorado</h1>
@@ -22,6 +23,7 @@ const Control = (props) => {
 
 const { func } = PropTypes;
 Control.propTypes = {
+  // searchError: string.isRequired,
   handleSearch: func.isRequired
 };
 

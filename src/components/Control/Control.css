@@ -47,3 +47,7 @@ input[type=text] {
 .search-icon {
   font-size: 17.5px;
 }
+
+.error {
+  border: 2px solid red;
+}
