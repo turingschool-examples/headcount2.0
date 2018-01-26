@@ -42,11 +42,18 @@ it('should update state when handleSearch is activated', () => {
 });
 
 // This test works no matter what the first card is
-it('when the first card is clicked its name should be entered in state', () => {
+it('when the first card is clicked its object should be entered in state', () => {
   const wrapper = mount(<App />);
   wrapper.find('article').first().simulate('click');
   expect(wrapper.state().compareSchool1)
-    .toEqual(wrapper.find('h3').first().text());
+    .toEqual({
+      "data": {
+        "2004": 0.24, "2005": 0.278, "2006": 0.337, "2007": 0.395, "2008": 0.536,
+        "2009": 0.598, "2010": 0.64, "2011": 0.672, "2012": 0.695, "2013": 0.703,
+        "2014": 0.741},
+      "dataType": "Percent",
+      "location": "COLORADO"
+    });
 });
 
 // This test only works for the KinderData cards.

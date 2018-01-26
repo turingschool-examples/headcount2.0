@@ -40,7 +40,7 @@ class App extends Component {
     if (!Object.keys(this.state.compareSchool1).length) {
       let compareSchool1 = this.state.districtRepository.findByName(schoolName);
       this.setState({compareSchool1, hideComparison: 'displayOne'});
-    } else {
+    } else if (schoolName !== this.state.compareSchool1.location) {
       let compareSchool2 = this.state.districtRepository.findByName(schoolName);
       let comparison = this.state.districtRepository
         .compareDistrictAverages(this.state.compareSchool1.location, schoolName);
@@ -48,14 +48,25 @@ class App extends Component {
     }
   }
 
+  removeComparison = () => {
+    this.setState({
+      compareSchool1: '',
+      compareSchool2: '',
+      comparison: {},
+      hideComparison: 'hide'
+    })
+  }
+
   render() {
     return (
       <div>
         <Control handleSearch={this.handleSearch} />
-        <CompareContainer hideComparison={this.state.hideComparison} 
+        <CompareContainer hideComparison={this.state.hideComparison}
+                          handleCompareCards={this.handleCompareCards}
                           school1={this.state.compareSchool1}
                           school2={this.state.compareSchool2}
                           comparison={this.state.comparison}
+                          removeComparison={this.removeComparison}
         />
 
         {
