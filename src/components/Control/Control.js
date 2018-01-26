@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import './Control.css';
 
 const Control = (props) => {
+  //let classList = props.searchError ? '' : 
+  
   return (
     <div className="Control">
       <div className="input-cont">
@@ -13,6 +15,7 @@ const Control = (props) => {
           id="search"
           placeholder="Search by School"
           onChange={(event) => props.handleSearch(event)}
+          className={props.searchError}
         />
       </div>
       <h1>Education Colorado</h1>
@@ -20,8 +23,9 @@ const Control = (props) => {
   );
 };
 
-const { func } = PropTypes;
+const { func, string } = PropTypes;
 Control.propTypes = {
+  searchError: string.isRequired,
   handleSearch: func.isRequired
 };
 

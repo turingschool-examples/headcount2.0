@@ -11,10 +11,12 @@ class App extends Component {
     super(props);
     this.state = {
       schoolData: {},
+      searchTerm: '',
       searchResults: [],
+      searchError: '',
       districtRepository: {},
-      compareSchool1: '',
-      compareSchool2: '',
+      compareSchool1: {},
+      compareSchool2: {},
       comparison: {},
       hideComparison: 'hide'
     };
@@ -30,10 +32,24 @@ class App extends Component {
   }
 
   handleSearch = (event) => {
+    let searchTerm = event.target.value;
     this.setState({ 
       searchResults: this.state.districtRepository
-        .findAllMatches(event.target.value)
+        .findAllMatches(searchTerm), searchTerm
     });
+  }
+  
+  componentDidUpdate(searchResults) {
+    // console.log(this.state.searchResults.length)
+    // console.log(this.state.searchTerm.length)
+    if (this.state.searchResults.length === 0 &&
+      this.state.searchTerm.length > 0) {
+      console.log('No results')
+      // this.setState({searchError: 'error'})
+    } else {
+      console.log('All good G')
+      // this.setState({searchError: ''})
+    }
   }
 
   handleCompareCards = (schoolName) => {
@@ -43,30 +59,36 @@ class App extends Component {
     } else if (schoolName !== this.state.compareSchool1.location) {
       let compareSchool2 = this.state.districtRepository.findByName(schoolName);
       let comparison = this.state.districtRepository
-        .compareDistrictAverages(this.state.compareSchool1.location, schoolName);
+        .compareDistrictAverages(
+          this.state.compareSchool1.location, schoolName
+        );
       this.setState({compareSchool2, comparison, hideComparison: 'displayAll'});
     }
   }
 
   removeComparison = () => {
     this.setState({
-      compareSchool1: '',
-      compareSchool2: '',
+      compareSchool1: {},
+      compareSchool2: {},
       comparison: {},
       hideComparison: 'hide'
-    })
+    });
   }
 
   render() {
     return (
       <div>
-        <Control handleSearch={this.handleSearch} />
-        <CompareContainer hideComparison={this.state.hideComparison}
-                          handleCompareCards={this.handleCompareCards}
-                          school1={this.state.compareSchool1}
-                          school2={this.state.compareSchool2}
-                          comparison={this.state.comparison}
-                          removeComparison={this.removeComparison}
+        <Control 
+          handleSearch={this.handleSearch}
+          searchError={this.state.searchError}
+        />
+        <CompareContainer
+          hideComparison={this.state.hideComparison}
+          handleCompareCards={this.handleCompareCards}
+          school1={this.state.compareSchool1}
+          school2={this.state.compareSchool2}
+          comparison={this.state.comparison}
+          removeComparison={this.removeComparison}
         />
 
         {
