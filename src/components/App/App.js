@@ -45,7 +45,7 @@ class App extends Component {
       return averageObject;
   }
 
-  selectCard = (e, id) => {
+  selectCard = (id, e) => {
     if(this.state.selectedCards.length === 2) {
       this.state.selectedCards.shift();
     }
@@ -53,10 +53,12 @@ class App extends Component {
     if (this.state.selectedCards.length >= 1 && this.state.selectedCards[0].location === id ) {
       this.state.selectedCards.pop();
     }
+    console.log(id)
 
-    const selectedCards = [...this.state.selectedCards, this.state.districtData[id]];
- 
-    this.setState({selectedCards});
+    let selectedCards = [...this.state.selectedCards, this.state.districtData[id]];
+    this.setState({selectedCards})
+
+
   }
 
   removeComparison = () => {

@@ -3,13 +3,13 @@ import Card from '../Card/Card.js';
 import './ComparedCards.css';
 import ComparisonCard from '../ComparisonCard/ComparisonCard';
 
-const ComparedCards = ({ selectedCards, selectCard, makeComparison }) => {
+const ComparedCards = ({ selectedCards, selectCard, makeComparison, removeComparison }) => {
   
   let comparedObject;
   if (selectedCards.length > 1) {
-    comparedObject = makeComparison(selectedCards[0].location, selectedCards[1].location);
+    comparedObject = makeComparison(selectedCards[0].location, selectedCards[1].location)
   }
-
+  console.log(selectedCards)
   const selectedCardsArray = selectedCards.map((district, key) => 
     <Card 
       districtName={district.location}
@@ -18,13 +18,13 @@ const ComparedCards = ({ selectedCards, selectCard, makeComparison }) => {
       selectCard={selectCard}
       key={key}
     />);
+
   return (
 
     <article className="compared-cards-container">
       <div className="compared-cards">
         {selectedCardsArray[0]}
-        <ComparisonCard 
-          comparedObject={comparedObject}/>
+        <ComparisonCard comparedObject={comparedObject}/>
         {selectedCardsArray[1]}
       </div>
       <div>
