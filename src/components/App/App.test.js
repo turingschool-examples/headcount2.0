@@ -43,4 +43,3 @@ describe( 'App Component', () => {
 })
 
 
-// should select two cards and render a comparison
