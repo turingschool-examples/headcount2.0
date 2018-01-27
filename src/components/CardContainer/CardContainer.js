@@ -3,14 +3,27 @@ import Card from '../Card/Card';
 import './CardContainer.css';
 import PropTypes from 'prop-types'
 
-function CardContainer(props) {
-  let allCities = props.data.map( (city, index) => {
-    return <Card {...city} key={city.location + index}/>
+function CardContainer({data, selected, handleClick}) {
+  const allCities = data.map( (city, index) => {
+    return <Card {...city} 
+                 key={city.location + index}
+                 handleClick={handleClick} />
+  })
+
+  const selectedCities = selected.map( (city, index) => {
+    return <Card {...city}
+                 key={city.location + index}
+                 style={city.style} />
   })
 
   return (
     <div className='card-container'>
-      {allCities}
+      <div className='selected-cities'>
+        {selectedCities}
+      </div>
+      <div className='all-cities'>
+        {allCities}
+      </div>
     </div>
 
   )

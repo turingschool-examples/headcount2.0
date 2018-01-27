@@ -12,7 +12,8 @@ class App extends Component {
     this.district = new DistrictRepository(kinderData)
 
     this.state = {
-      data: this.district.findAllMatches()
+      data: this.district.findAllMatches(),
+      selected: []
     }
   }
 
@@ -23,12 +24,44 @@ class App extends Component {
     })
   }
 
+  handleClick = (e) => {
+    const truth = this.state.selected 
+    const selectedDistrict = this.district.findByName(e.target.id)
+    selectedDistrict.style = 'selected'
+
+    this.manageSelected(truth, selectedDistrict)
+  }
+
+  manageSelected = (truth, selectedDistrict) => {
+    switch (truth.length) {
+      case 2:
+        truth.shift()
+        truth.push(selectedDistrict)
+        this.makeComparison(truth[0], truth[1])
+        break;
+      case 1:
+        truth.unshift(selectedDistrict)
+        this.makeComparison(truth[0], truth[1])
+        break
+      default:
+        truth.unshift(selectedDistrict)
+    }
+    this.setState({
+      selected: truth
+    })
+  }
+
+  makeComparison = (dist1, dist2) => {
+    console.log(this.district.compareDistrictAverages(dist1.location, dist2.location))
+
+  }
+
   render() {
     return (
       <div>
         <div>Welcome To Headcount 2.0</div>
         <SearchBar filterCards={this.filterCards} />
-        <CardContainer data={this.state.data} />
+        <CardContainer {...this.state} handleClick={this.handleClick}/>
       </div>
     );
   }
