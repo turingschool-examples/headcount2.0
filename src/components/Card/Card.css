@@ -1,0 +1,27 @@
+.district-card, .selected {
+  text-align: center;
+  display: inline-block;
+  width: 275px;
+  height: 400px;
+  border-radius: 5px;
+  box-shadow: 0px 8px 10px -1px rgba(0,0,0,0.3);
+  margin: 15px 10px 15px 0;
+}
+
+
+.district-header {
+  pointer-events: none;
+}
+
+
+.district-list {
+  list-style: none;
+  width: 200px;
+  pointer-events: none;
+
+}
+
+.selected {
+  margin: auto;
+  border: 1px solid red;
+}
