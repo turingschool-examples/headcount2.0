@@ -12,8 +12,7 @@ class App extends Component {
     super()
     this.state = {
       districtData: district.data,
-      selectedCards: [],
-      clicked: false,
+      selectedCards: []
       averageObject: {}
     }
   }
@@ -38,13 +37,24 @@ class App extends Component {
   }
 
   selectCard = (e, id) => {
-    if(this.state.selectedCards.length >= 2) {
-      this.state.selectedCards.shift()
+    if(this.state.selectedCards.length === 2) {
+      this.state.selectedCards.shift();
+    }
+
+    if (this.state.selectedCards.length >= 1 && this.state.selectedCards[0].location === id ) {
+      this.state.selectedCards.pop();
     }
 
     const selectedCards = [...this.state.selectedCards, this.state.districtData[id]];
+
+
+    
+    if(this.state.selectedCards.length >= 2) {
+      this.state.selectedCards.shift()
+    }
  
     this.setState({selectedCards, clicked: true})
+
   }
 
 
@@ -62,7 +72,7 @@ class App extends Component {
         }
         <CardContainer 
           districtData={this.state.districtData}
-          comparedCards={this.state.comparedCards}
+          comparedCards={this.state.selectedCards}
           selectCard={this.selectCard} 
           clicked={this.state.clicked}
         />
