@@ -33,9 +33,9 @@ class App extends Component {
       this.state.selectedCards.shift();
     }
 
-    // if (this.state.selectedCards.length >= 1 && this.state.selectedCards[0].location === id ) {
-    //   this.state.selectedCards.pop();
-    // }
+    if (this.state.selectedCards.length >= 1 && this.state.selectedCards[0].location === id ) {
+      this.state.selectedCards.pop();
+    }
 
     const selectedCards = [...this.state.selectedCards, this.state.districtData[id]];
 
