@@ -6,20 +6,22 @@ import './CardContainer.css';
 
 const CardContainer = ({schoolData, handleCompareCards}) => {
   const schoolsToRender = Object.keys(schoolData)
-    .map((school, index) => <Card
-      key={index}
-      schoolData={schoolData[school]} 
-      handleCompareCards={handleCompareCards}
-      size='large'
-    />);
+    .map((school, index) => 
+      <Card
+        key={index}
+        schoolData={schoolData[school]} 
+        handleCompareCards={handleCompareCards}
+        size='large'
+      />
+    );
 
   return (
-    <div className="CardContainer">
+    <section className="CardContainer">
       {schoolsToRender}
       <div className="bottom-images">
         <img src={astronomy} alt='telescope' className='school-icon' />
       </div>
-    </div>
+    </section>
   );
 };
 

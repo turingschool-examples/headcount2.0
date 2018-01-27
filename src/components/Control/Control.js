@@ -6,20 +6,23 @@ const Control = (props) => {
   //let classList = props.searchError ? '' : 
   
   return (
-    <div className="Control">
+    <header className="Control">
       <div className="input-cont">
         <label htmlFor="search"></label>
-        <i className="fa fa-search search-icon" aria-hidden="true"></i>
+        <i 
+          className="fa fa-search search-icon" 
+          aria-hidden="true">
+        </i>
         <input
           type="text"
           id="search"
           placeholder="Search by School"
-          onChange={(event) => props.handleSearch(event)}
+          onChange={(event) => props.handleSearch(event.target.value)}
           className={props.searchError}
         />
       </div>
       <h1>Education Colorado</h1>
-    </div>
+    </header>
   );
 };
 
