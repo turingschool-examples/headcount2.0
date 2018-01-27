@@ -10,12 +10,10 @@ describe('Search Component', () => {
     expect(renderedComp).toMatchSnapshot();
   })
 
-  //not sure if using the spy function right
   it('should update its state when handleInput is called', () => {
     const mock = jest.fn();
     const renderedComp = shallow(<Search handleSubmit={mock}/>)
     const event = {target: {value: 'colorado'}}
-    //console.log(renderedComp.instance());
     renderedComp.instance().handleInput(event)
     expect(renderedComp.state().query).toEqual('colorado')
   })
