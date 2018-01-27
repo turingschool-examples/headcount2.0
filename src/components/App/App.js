@@ -33,23 +33,15 @@ class App extends Component {
       this.state.selectedCards.shift();
     }
 
-    if (this.state.selectedCards.length >= 1 && this.state.selectedCards[0].location === id ) {
-      this.state.selectedCards.pop();
-    }
+    // if (this.state.selectedCards.length >= 1 && this.state.selectedCards[0].location === id ) {
+    //   this.state.selectedCards.pop();
+    // }
 
     const selectedCards = [...this.state.selectedCards, this.state.districtData[id]];
 
     this.setState({selectedCards})
-    console.log(this.state.selectedCards);
     
-    this.state.selectedCards.forEach(card => {
-      if (!this.state.districtData[card.location].clicked) {
-        this.state.districtData[card.location].clicked = true;
-      } else {
-        this.state.districtData[card.location].clicked = false;
-      }
-    })
-
+    console.log(this.state.selectedCards);
   }
 
   render() {
@@ -65,7 +57,7 @@ class App extends Component {
         }
         <CardContainer 
           districtData={this.state.districtData}
-          comparedCards={this.state.comparedCards}
+          comparedCards={this.state.selectedCards}
           selectCard={this.selectCard} 
           clicked={this.state.clicked}
         />
