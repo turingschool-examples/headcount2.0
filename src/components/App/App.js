@@ -12,7 +12,9 @@ class App extends Component {
     super()
     this.state = {
       districtData: district.data,
-      selectedCards: []
+      selectedCards: [],
+      clicked: false,
+      averageObject: {}
     }
   }
 
@@ -26,6 +28,13 @@ class App extends Component {
       return obj
     }, {})
     this.setState({districtData})
+  }
+
+  makeComparison = () => { 
+      const d1 = this.state.selectedCards[0].location;
+      const d2 = this.state.selectedCards[1].location;
+      const averageObject =  district.compareDistrictAverages(d1, d2);
+      return averageObject;
   }
 
   selectCard = (e, id) => {
@@ -44,6 +53,7 @@ class App extends Component {
     console.log(this.state.selectedCards);
   }
 
+
   render() {
     return (
       <div className="App">
@@ -53,6 +63,7 @@ class App extends Component {
           <ComparedCards 
             selectedCards={this.state.selectedCards}
             selectCard={this.selectCard}
+            makeComparison={this.makeComparison}
           />
         }
         <CardContainer 
