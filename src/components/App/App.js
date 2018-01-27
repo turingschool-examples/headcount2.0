@@ -12,7 +12,7 @@ class App extends Component {
     super()
     this.state = {
       districtData: district.data,
-      selectedCards: []
+      selectedCards: [],
       averageObject: {}
     }
   }
