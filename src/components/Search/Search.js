@@ -23,12 +23,15 @@ class Search extends Component {
     return (
       <div>
         <form onSubmit={this.submitHelper}>
-          <input 
+          <input
+            id="search-input" 
             type="text" 
             placeholder="Search District"
             value={this.state.query}
             onChange={this.handleInput} />
-          <input type="submit" />
+          <input 
+            id="button"
+            type="submit" />
         </form>
       </div>
     );

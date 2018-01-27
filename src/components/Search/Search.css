@@ -1,6 +1,18 @@
 form {
-  width: 250px;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
   margin: 0 auto;
   margin-bottom: 50px;
 }
+
+#button {
+  height: 50px !important;
+}
+
+#search-input {
+  height: 50px;
+  width: 400px;
+}
+

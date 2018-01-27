@@ -70,3 +70,4 @@ it('should have a comparison object within it when there are two selected cards 
   //add two cards to selected arr
   //check compare object has object in it
 })
+
