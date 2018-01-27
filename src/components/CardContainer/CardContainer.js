@@ -3,7 +3,7 @@ import Card from '../Card/Card';
 import './CardContainer.css';
 import PropTypes from 'prop-types'
 
-function CardContainer({data, selected, handleClick}) {
+function CardContainer({data, selected, handleClick, compared}) {
   const allCities = data.map( (city, index) => {
     return <Card {...city} 
                  key={city.location + index}
@@ -15,6 +15,23 @@ function CardContainer({data, selected, handleClick}) {
                  key={city.location + index}
                  style={city.style} />
   })
+
+  const comparisonCard = compared.map( (entry, index) => {
+    return (
+      <div className='comparison-card-line'>
+        <h3> {entry[0] + ':' + entry[1]} </h3>
+      </div>
+    )
+  })
+
+  const comparisonContainer = 
+    <div className='comparison-card'>
+      {comparisonCard}
+    </div>
+
+  if(selectedCities.length === 2) {
+    selectedCities.splice(1, 0, comparisonContainer)
+  }
 
   return (
     <div className='card-container'>
