@@ -12,7 +12,7 @@ class App extends Component {
     this.state = {
       schoolData: {},
       searchResults: [],
-      searchError: '',
+      searchError: false,
       districtRepository: {},
       comparisonData: []
     };
@@ -29,7 +29,12 @@ class App extends Component {
 
   handleSearch = (searchTerm) => {
     let searchResults = this.state.districtRepository.findAllMatches(searchTerm);
-    this.setState({ searchResults });
+    let searchError = this.toggleSearchError(searchTerm, searchResults)
+    this.setState({ searchResults, searchError });
+  }
+
+  toggleSearchError = (searchTerm, searchResults) => {
+    return searchResults.length === 0 && searchTerm.length > 0 ? true : false;
   }
 
   handleCompareCards = (schoolName) => {
