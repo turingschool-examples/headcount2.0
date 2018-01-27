@@ -1,4 +1,5 @@
-.district-card {
+
+.district-card. .selected {
   background-color: white;
   text-align: center;
   display: inline-block;
@@ -14,6 +15,8 @@
 
 .district-header {
   font-size: 24px;
+  pointer-events: none;
+
 }
 
 
@@ -22,4 +25,13 @@
   font-size: 16px;
   margin: 0;
   padding: 0;
+  pointer-events: none;
+}
+
+
+}
+
+.selected {
+  margin: auto;
+  border: 1px solid red;
 }
