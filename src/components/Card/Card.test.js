@@ -9,7 +9,7 @@ describe('Card', () => {
     const mockName = 'Colorado'
     const wrapper = shallow(<Card 
                                 districtName={mockName}
-                                data={mockData}/>)
+                                data={mockData} />)
 
     expect(wrapper).toMatchSnapshot()
   })
