@@ -1,33 +1,42 @@
 import React, { Component } from 'react';
 import './App.css';
-import Search from '../Search/Search'
+import Search from '../Search/Search';
 import CardContainer from '../CardContainer/CardContainer.js';
 import kinderData from '../../data/kindergartners_in_full_day_program.js';
 import districtRepository from '../../helper.js';
-import ComparedCards from '../ComparedCards/ComparedCards.js'
+import ComparedCards from '../ComparedCards/ComparedCards.js';
 const district = new districtRepository(kinderData);
 
 class App extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       districtData: district.data,
       selectedCards: [],
       averageObject: {}
-    }
+    };
   }
 
   handleSubmit = (query) => {
-    const matches = district.findAllMatches(query)
+    const matches = district.findAllMatches(query);
 
-    const districtData = matches.reduce((obj, match) => {
-      if (!obj[match]) {
-        obj[match] = district.data[match]
+    const districtData = matches.reduce((districtObj, match) => {
+      if (!districtObj[match]) {
+        districtObj[match] = district.data[match];
       }
-      return obj
-    }, {})
-    this.setState({districtData})
+      return districtObj;
+    }, {});
+    this.setState({districtData});
   }
+
+  makeComparison = () => { 
+    const d1 = this.state.selectedCards[0].location;
+    const d2 = this.state.selectedCards[1].location;
+    const averageObject =  district.compareDistrictAverages(d1, d2);
+    return averageObject;
+  }
+
+  mockFunction = () => {}
 
   makeComparison = () => { 
       const d1 = this.state.selectedCards[0].location;
@@ -36,7 +45,7 @@ class App extends Component {
       return averageObject;
   }
 
-  selectCard = (e, id) => {
+  selectCard = (id, e) => {
     if(this.state.selectedCards.length === 2) {
       this.state.selectedCards.shift();
     }
@@ -44,10 +53,11 @@ class App extends Component {
     if (this.state.selectedCards.length >= 1 && this.state.selectedCards[0].location === id ) {
       this.state.selectedCards.pop();
     }
+    console.log(id)
 
-    const selectedCards = [...this.state.selectedCards, this.state.districtData[id]];
- 
-    this.setState({selectedCards, clicked: true})
+    let selectedCards = [...this.state.selectedCards, this.state.districtData[id]];
+    this.setState({selectedCards})
+
 
   }
 
@@ -59,12 +69,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>HEADCOUNT</h1>
         <Search handleSubmit={this.handleSubmit}/>
         {
           this.state.selectedCards.length > 0 &&
           <ComparedCards 
             selectedCards={this.state.selectedCards}
-            selectCard={this.selectCard}
+            selectCard={this.mockFunction}
             makeComparison={this.makeComparison}
             removeComparison={this.removeComparison}
           />
@@ -73,7 +84,6 @@ class App extends Component {
           districtData={this.state.districtData}
           comparedCards={this.state.selectedCards}
           selectCard={this.selectCard} 
-          clicked={this.state.clicked}
         />
       </div>
     );
