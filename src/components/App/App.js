@@ -25,9 +25,12 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <div>Welcome To Headcount 2.0</div>
-        <SearchBar filterCards={this.filterCards} />
+      <div className='App'>
+      <header>
+        <h3>Welcome To </h3>
+        <h1>Headcount 2.0</h1>
+        <SearchBar className='SearchBar' filterCards={this.filterCards} />
+      </header>  
         <CardContainer data={this.state.data} />
       </div>
     );
