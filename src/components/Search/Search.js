@@ -1,26 +1,26 @@
-import React, { Component } from 'react'
-import './Search.css'
+import React, { Component } from 'react';
+import './Search.css';
 
 class Search extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       query: ""
-    }
+    };
   }
 
-  handleInput = (e) => {
-    this.setState({query: e.target.value})
+  handleInput = (event) => {
+    this.setState({query: event.target.value});
     this.props.handleSubmit(this.state.query);
   }
 
-  submitHelper = (e) => {
-    e.preventDefault()
-    this.props.handleSubmit(this.state.query)
+  submitHelper = (event) => {
+    event.preventDefault();
+    this.props.handleSubmit(this.state.query);
   }
 
   render() {
-    return(
+    return (
       <div>
         <form onSubmit={this.submitHelper}>
           <input 
@@ -31,7 +31,7 @@ class Search extends Component {
           <input type="submit" />
         </form>
       </div>
-    )
+    );
   }
 }
 
