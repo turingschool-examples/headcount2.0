@@ -1,4 +1,4 @@
-.card-container {
+.card-container, .selected-cities {
   margin: auto;
   display: flex;
   width: 90%;
