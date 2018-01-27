@@ -1,7 +1,7 @@
-.compared-cards {
+.compared-cards-container {
   background-color: rgba(5, 5, 5, 1);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   position: fixed;
   bottom: 10%;
@@ -9,6 +9,11 @@
   padding-top: 25px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+}
+
+.compared-cards {
+  display: flex;
+  flex-direction: row;
 }
 
 .clicked {

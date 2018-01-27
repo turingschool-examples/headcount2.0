@@ -46,15 +46,13 @@ class App extends Component {
     }
 
     const selectedCards = [...this.state.selectedCards, this.state.districtData[id]];
-
-
-    
-    if(this.state.selectedCards.length >= 2) {
-      this.state.selectedCards.shift()
-    }
  
     this.setState({selectedCards, clicked: true})
 
+  }
+
+  removeComparison = () => {
+    this.setState({selectedCards: []})
   }
 
 
@@ -68,6 +66,7 @@ class App extends Component {
             selectedCards={this.state.selectedCards}
             selectCard={this.selectCard}
             makeComparison={this.makeComparison}
+            removeComparison={this.removeComparison}
           />
         }
         <CardContainer 
