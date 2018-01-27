@@ -42,3 +42,20 @@ it.skip("should change the display there is text in the input", () => {
   console.log('-----------------------------------------------');
   console.log(wrapper.debug());
 })
+
+it.only('should have cards in the state selected cards array when a card is selected', () => {
+  const wrapper = mount(<App />);
+  const mockData = {COLORADO: {data:{2004: 0.154, 2014: 0.555}, location: 'COLORADO'}, 'ACADEMY 20': {data:{2004: 0.222, 2014: 0.777}, location: 'ACADEMY 20'}}
+  wrapper.setState({districtData: mockData});
+  expect(wrapper.state().selectedCards).toEqual([]);
+  wrapper.find('article').first().simulate('click');
+  console.log(wrapper.debug());
+  expect(wrapper.state().selectedCards.length).toEqual(1)
+})
+
+it('should have a comparison object within it when there are two selected cards in the array', () => {
+  const wrapper = shallow(<App />);
+  //check compareObject in state is empty
+  //add two cards to selected arr
+  //check compare object has object in it
+})
