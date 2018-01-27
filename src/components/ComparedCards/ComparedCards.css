@@ -31,3 +31,20 @@
 .clicked {
   background-color: rgba(5, 5, 5, 1);
 }
+
+@media only screen and (max-width: 825px) {
+  .compared-cards-container {
+    position: relative;
+    width: 280px;
+    margin: 10px auto;
+    border-radius: 15px;
+  }
+
+  .compared-cards article {
+    margin: 10px auto;
+  }
+
+  .compared-cards {
+    flex-direction: column;
+  }
+}
