@@ -1,0 +1,47 @@
+article {
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 250px;
+  background: rgba(255, 255, 255, .1)
+}
+
+article h3 {
+  color: #AAD74F;
+}
+
+article p {
+  margin: 7px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.over {
+  color: #78C9D0;
+}
+
+.under {
+  color: #D23D54;
+}
+
+.clicked {
+  border: 2px solid yellow;
+}
+
+
+.fa {
+  margin-right: 8px;
+}
+
+.fa-bolt {
+  color: yellow;
+}
+
+.fa-tint {
+  color: #849FED;
+}
