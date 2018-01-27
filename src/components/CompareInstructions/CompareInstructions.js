@@ -8,7 +8,7 @@ const CompareInstructions = ({ comparisonData, handleCompareCards }) => {
   return (
     <section className="displayOne">
       <Card 
-        schoolData={ comparisonData[0] }
+        schoolData={ comparisonData.school1 }
         handleCompareCards={ handleCompareCards }
         size='small'
       />
@@ -16,7 +16,7 @@ const CompareInstructions = ({ comparisonData, handleCompareCards }) => {
         <p className='instructions'>
           click another to compare
         </p>
-        <img src={ arrow } alt="Choose a Card To Compare With" id="arrow"/>
+        <img src={ arrow } alt="Choose a Card To Compare With" id="arrow" />
       </div>
       <div className='shadow-card'>
       </div>

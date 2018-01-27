@@ -14,7 +14,7 @@ class App extends Component {
       searchResults: [],
       searchError: '',
       districtRepository: {},
-      comparisonData: []
+      comparisonData: {}
     };
   }
 
@@ -33,27 +33,40 @@ class App extends Component {
   }
 
   handleCompareCards = (schoolName) => {
-    if (!this.state.comparisonData.length) {
-      let school = this.state.districtRepository.findByName(schoolName);
-      let comparisonData = [...this.state.comparisonData, school]
-
+      let comparisonData = Object.assign({}, this.state.comparisonData);
+    
+    if (!Object.keys(this.state.comparisonData).length) {
+      let school1 = this.state.districtRepository.findByName(schoolName);
+      
+      comparisonData.school1 = school1;
       this.setState({ comparisonData });
-    } else if (schoolName !== this.state.comparisonData[0].location) {
-      let school = this.state.districtRepository.findByName(schoolName);
-      let comparison = this.state.districtRepository
-        .compareDistrictAverages(
-          this.state.comparisonData[0].location, schoolName);
-      let comparisonData = [...this.state.comparisonData, school, comparison]
-
+    } else if (schoolName !== comparisonData.school1.location) {
+      let school2 = this.state.districtRepository.findByName(schoolName);
+      let comparison = this.state.districtRepository.compareDistrictAverages(
+          comparisonData.school1.location, schoolName);
+      
+      comparisonData.school2 = school2;
+      comparisonData.comparison = comparison;
       this.setState({ comparisonData });
     }
   }
 
   removeComparison = () => {
-    this.setState({ comparisonData: [] });
+    this.setState({ comparisonData: {} });
   }
 
   render() {
+    let cardContainer = !this.state.searchResults.length ?  
+      <CardContainer 
+        schoolData={ this.state.schoolData }
+        handleCompareCards={ this.handleCompareCards }
+      />
+      :
+      <CardContainer
+        schoolData={ this.state.searchResults }
+        handleCompareCards={ this.handleCompareCards }
+      />
+
     return (
       <div>
         <Control 
@@ -66,28 +79,12 @@ class App extends Component {
           removeComparison={ this.removeComparison }
         />
 
-        {
-          !this.state.searchResults.length &&
-          <CardContainer 
-            schoolData={ this.state.schoolData }
-            handleCompareCards={ this.handleCompareCards }
-          />
-        }
-
-        {
-          this.state.searchResults.length > 0 &&
-          <CardContainer
-            schoolData={ this.state.searchResults }
-            handleCompareCards={ this.handleCompareCards }
-          />
-        }
-        
+        { cardContainer }
       </div>
     );
   }
 }
 
 export default App;
-
 
 //icons by Icon Pond: https://www.flaticon.com/authors/popcorns-arts

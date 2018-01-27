@@ -7,9 +7,9 @@ import './CompareContainer.css';
 const CompareContainer = ({comparisonData, handleCompareCards, removeComparison}) => {
 
   const getDisplay = () => {
-    if (!comparisonData.length) {
+    if (!Object.keys(comparisonData).length) {
       return; 
-    } else if (comparisonData.length === 1) {
+    } else if (Object.keys(comparisonData).length === 1) {
         return (
           <CompareInstructions 
             comparisonData={ comparisonData }
@@ -31,9 +31,33 @@ const CompareContainer = ({comparisonData, handleCompareCards, removeComparison}
 
   return (
     <section className="CompareContainer">
-      {display}
+      { display }
     </section>
   );
 };
+
+const { shape, string, objectOf, number, func, object } = PropTypes;
+// comparisonData, handleCompareCards, removeComparison
+CompareContainer.propTypes = {
+  handleCompareCards: func.isRequired,
+  removeComparison: func.isRequired,
+  comparisonData: shape({
+    comparison: object
+  }),
+  school1: 
+    objectOf(shape({
+      location: string.isRequired,
+      dataType: string,
+      data: objectOf(
+        number.isRequired)
+    })),
+  school1: 
+    objectOf(shape({
+      location: string.isRequired,
+      dataType: string,
+      data: objectOf(
+        number.isRequired)
+    }))
+}
 
 export default CompareContainer;
