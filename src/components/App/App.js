@@ -11,14 +11,10 @@ class App extends Component {
     super(props);
     this.state = {
       schoolData: {},
-      searchTerm: '',
       searchResults: [],
       searchError: '',
       districtRepository: {},
-      compareSchool1: {},
-      compareSchool2: {},
-      comparison: {},
-      hideComparison: 'hide'
+      comparisonData: []
     };
   }
 
@@ -31,80 +27,58 @@ class App extends Component {
     this.setState({ districtRepository, schoolData: districtRepository.data });
   }
 
-  handleSearch = (event) => {
-    let searchTerm = event.target.value;
-    this.setState({ 
-      searchResults: this.state.districtRepository
-        .findAllMatches(searchTerm), searchTerm
-    });
-  }
-  
-  componentDidUpdate(searchResults) {
-    // console.log(this.state.searchResults.length)
-    // console.log(this.state.searchTerm.length)
-    if (this.state.searchResults.length === 0 &&
-      this.state.searchTerm.length > 0) {
-      console.log('No results')
-      // this.setState({searchError: 'error'})
-    } else {
-      console.log('All good G')
-      // this.setState({searchError: ''})
-    }
+  handleSearch = (searchTerm) => {
+    let searchResults = this.state.districtRepository.findAllMatches(searchTerm);
+    this.setState({ searchResults });
   }
 
   handleCompareCards = (schoolName) => {
-    if (!Object.keys(this.state.compareSchool1).length) {
-      let compareSchool1 = this.state.districtRepository.findByName(schoolName);
-      this.setState({compareSchool1, hideComparison: 'displayOne'});
-    } else if (schoolName !== this.state.compareSchool1.location) {
-      let compareSchool2 = this.state.districtRepository.findByName(schoolName);
+    if (!this.state.comparisonData.length) {
+      let school = this.state.districtRepository.findByName(schoolName);
+      let comparisonData = [...this.state.comparisonData, school]
+
+      this.setState({ comparisonData });
+    } else if (schoolName !== this.state.comparisonData[0].location) {
+      let school = this.state.districtRepository.findByName(schoolName);
       let comparison = this.state.districtRepository
         .compareDistrictAverages(
-          this.state.compareSchool1.location, schoolName
-        );
-      this.setState({compareSchool2, comparison, hideComparison: 'displayAll'});
+          this.state.comparisonData[0].location, schoolName);
+      let comparisonData = [...this.state.comparisonData, school, comparison]
+
+      this.setState({ comparisonData });
     }
   }
 
   removeComparison = () => {
-    console.log('hi')
-    this.setState({
-      compareSchool1: {},
-      compareSchool2: {},
-      comparison: {},
-      hideComparison: 'hide'
-    });
+    this.setState({ comparisonData: [] });
   }
 
   render() {
     return (
       <div>
         <Control 
-          handleSearch={this.handleSearch}
-          searchError={this.state.searchError}
+          handleSearch={ this.handleSearch }
+          searchError={ this.state.searchError }
         />
         <CompareContainer
-          hideComparison={this.state.hideComparison}
-          handleCompareCards={this.handleCompareCards}
-          school1={this.state.compareSchool1}
-          school2={this.state.compareSchool2}
-          comparison={this.state.comparison}
-          removeComparison={this.removeComparison}
+          handleCompareCards={ this.handleCompareCards }
+          comparisonData={ this.state.comparisonData }
+          removeComparison={ this.removeComparison }
         />
 
         {
           !this.state.searchResults.length &&
           <CardContainer 
-            schoolData={this.state.schoolData}
-            handleCompareCards={this.handleCompareCards}
+            schoolData={ this.state.schoolData }
+            handleCompareCards={ this.handleCompareCards }
           />
         }
 
         {
           this.state.searchResults.length > 0 &&
           <CardContainer
-            schoolData={this.state.searchResults}
-            handleCompareCards={this.handleCompareCards}
+            schoolData={ this.state.searchResults }
+            handleCompareCards={ this.handleCompareCards }
           />
         }
         

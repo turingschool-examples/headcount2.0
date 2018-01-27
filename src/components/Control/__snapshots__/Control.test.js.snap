@@ -31,6 +31,7 @@ ShallowWrapper {
                     className="fa fa-search search-icon"
           />
           <input
+                    className={undefined}
                     id="search"
                     onChange={[Function]}
                     placeholder="Search by School"
@@ -59,6 +60,7 @@ ShallowWrapper {
               className="fa fa-search search-icon"
 />,
             <input
+              className={undefined}
               id="search"
               onChange={[Function]}
               placeholder="Search by School"
@@ -97,6 +99,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "className": undefined,
               "id": "search",
               "onChange": [Function],
               "placeholder": "Search by School",
@@ -121,7 +124,7 @@ ShallowWrapper {
         "type": "h1",
       },
     ],
-    "type": "div",
+    "type": "header",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -141,6 +144,7 @@ ShallowWrapper {
                         className="fa fa-search search-icon"
             />
             <input
+                        className={undefined}
                         id="search"
                         onChange={[Function]}
                         placeholder="Search by School"
@@ -169,6 +173,7 @@ ShallowWrapper {
                 className="fa fa-search search-icon"
 />,
               <input
+                className={undefined}
                 id="search"
                 onChange={[Function]}
                 placeholder="Search by School"
@@ -207,6 +212,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
+                "className": undefined,
                 "id": "search",
                 "onChange": [Function],
                 "placeholder": "Search by School",
@@ -231,7 +237,7 @@ ShallowWrapper {
           "type": "h1",
         },
       ],
-      "type": "div",
+      "type": "header",
     },
   ],
   Symbol(enzyme.__options__): Object {
