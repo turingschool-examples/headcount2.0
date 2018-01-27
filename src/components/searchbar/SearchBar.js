@@ -23,10 +23,11 @@ class SearchBar extends Component {
       <div>
         <input className='search-bar'
                type='text' 
-               placeholder='Districts'
+               placeholder='Filter by County...'
                value={this.state.value}
                onChange={this.handleInput} 
         />
+        <p className='instructions'> Click on any two cards to compare data. </p>
       </div>
 
     )

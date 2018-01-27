@@ -1,36 +1,61 @@
 
 .App {
-  background-image: #58bf79; /* Old browsers */
-  background-image: -moz-linear-gradient(top, #58bf79 0%, #3e8451 100%); /* FF3.6-15 */
-  background-image: -webkit-linear-gradient(top, #58bf79 0%,#3e8451 100%); /* Chrome10-25,Safari5.1-6 */
-  background-image: linear-gradient(to bottom, #58bf79 0%,#3e8451 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#309cf4',GradientType=0 ); /* IE6-9 */
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center; 
-    /*position: fixed;*/
+background-image: #5ac475; /* Old browsers */
+background-image: -moz-linear-gradient(top, #5ac475 0%, #469d7d 100%); /* FF3.6-15 */
+background-image: -webkit-linear-gradient(top, #5ac475 0%,#469d7d 100%); /* Chrome10-25,Safari5.1-6 */
+background-image: linear-gradient(to bottom, #5ac475 0%,#469d7d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5ac475', endColorstr='#469d7d',GradientType=0 ); /* IE6-9 */
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center; 
 }
 
-.Header {
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Slabo+13px');
+
+.App {
+  background-color: white;
+}
+
+header {
   text-align: center;
   margin-top: 0;
+  background-color: white;
+  z-index: 10;
 }
 
 h1 {
+  color: #469d7d;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 64px;
   margin-top: 0;
+  margin-bottom: 0;
   text-align: center;
 }
 
-h3 {
+p {
+  color: #d18643;
+  font-family: 'Slabo 13px', serif;
+  font-size: 18px;
   margin-top: 0;
   text-align: center;
+  margin-bottom: 0;
 }
 
 .search-bar {
   display: block;
   margin: auto;
-  margin-bottom: 10%;
+  margin-top: 10%;
+  margin-bottom: 2%;
   border-radius: 2px;
   border-style: none;
-  width: 100px;
+  width: 300px;
+  font-size: 16px;
+  font-family: 'Slabo 13px', serif;
+}
+
+.instructions {
+  text-align: center;
+  color: white;
+  margin-bottom: 8%;
 }

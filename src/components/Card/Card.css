@@ -1,5 +1,6 @@
 
-.district-card. .selected {
+.district-card, .selected {
+  aleign-self: center;
   background-color: white;
   text-align: center;
   display: inline-block;
@@ -7,7 +8,7 @@
   height: 60vh;
   border-radius: 5px;
   box-shadow: 0px 8px 10px -1px rgba(0,0,0,0.3);
-  margin: 15px 10px 15px 0;
+  margin: 2% 1% 2% 0;
   /*opacity: .9;*/
 }
 
@@ -16,7 +17,6 @@
 .district-header {
   font-size: 24px;
   pointer-events: none;
-
 }
 
 
@@ -28,8 +28,6 @@
   pointer-events: none;
 }
 
-
-}
 
 .selected {
   margin: auto;

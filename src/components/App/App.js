@@ -59,11 +59,12 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-      <header>
-        <h3>Welcome To </h3>
-        <h1>Headcount 2.0</h1>
+        <header>
+          <p>Welcome To </p>
+          <h1>Headcount 2.0</h1>
+          <p> A simulated data search app built in React </p>
+        </header>  
         <SearchBar className='SearchBar' filterCards={this.filterCards} />
-      </header>  
         <CardContainer {...this.state} handleClick={this.handleClick}/>
       </div>
     );

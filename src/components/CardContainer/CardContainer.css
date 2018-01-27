@@ -5,3 +5,8 @@
   align-items: center;
   flex-flow: wrap row;
 }
+
+.card-container {
+  justify-content: center;
+}
+
