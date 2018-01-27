@@ -1,0 +1,48 @@
+.CompareContainer {
+  width: 100%;
+  background-color: #fafafa;
+}
+
+.instructions {
+  width: 130px;
+  font-size: 22px;
+  text-align: center;
+  margin: -10px 0 5px 0;
+}
+
+.instructions-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin: 0 7px 0 0;
+}
+
+.displayOne {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shadow-card {
+  width: 110px;
+  height: 171px;
+  border-radius: 26px;
+  background-color: #bdbdbdad;
+}
+
+#arrow {
+  margin: 0 30px;
+}
+
+h2 {
+  font-family: 'Bree Serif', serif;
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+}

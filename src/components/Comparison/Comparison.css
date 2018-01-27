@@ -1,0 +1,41 @@
+.comparison {
+  width: 250px;
+  height: 346px;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 40px;
+  background-color: #e9fffc;
+  box-shadow: 2px 2px 2px 2px #e4e4e4;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.displayAll {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+button {
+  font-family: 'Bree Serif', serif;
+  font-size: 1em;
+  align-self: flex-start;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color: #f4f4f4fa;
+  border: none;
+  box-shadow: 1px 1px 1px 1px #b0b0b0;
+}
+
+button:hover {
+  background-color: #dd4a0d;
+  cursor: pointer;
+}
