@@ -13,6 +13,7 @@ class App extends Component {
     this.state = {
       districtData: district.data,
       selectedCards: []
+      averageObject: {}
     }
   }
 
@@ -28,6 +29,13 @@ class App extends Component {
     this.setState({districtData})
   }
 
+  makeComparison = () => { 
+      const d1 = this.state.selectedCards[0].location;
+      const d2 = this.state.selectedCards[1].location;
+      const averageObject =  district.compareDistrictAverages(d1, d2);
+      return averageObject;
+  }
+
   selectCard = (e, id) => {
     if(this.state.selectedCards.length === 2) {
       this.state.selectedCards.shift();
@@ -39,10 +47,16 @@ class App extends Component {
 
     const selectedCards = [...this.state.selectedCards, this.state.districtData[id]];
 
-    this.setState({selectedCards})
+
     
-    console.log(this.state.selectedCards);
+    if(this.state.selectedCards.length >= 2) {
+      this.state.selectedCards.shift()
+    }
+ 
+    this.setState({selectedCards, clicked: true})
+
   }
+
 
   render() {
     return (
@@ -53,6 +67,7 @@ class App extends Component {
           <ComparedCards 
             selectedCards={this.state.selectedCards}
             selectCard={this.selectCard}
+            makeComparison={this.makeComparison}
           />
         }
         <CardContainer 
