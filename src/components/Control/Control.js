@@ -8,11 +8,11 @@ const Control = (props) => {
   return (
     <header className="Control">
       <div className="input-cont">
-        <label htmlFor="search"></label>
         <i 
           className="fa fa-search search-icon" 
           aria-hidden="true">
         </i>
+        <label htmlFor="search"></label>
         <input
           type="text"
           id="search"

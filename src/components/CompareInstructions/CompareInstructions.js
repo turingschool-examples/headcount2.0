@@ -2,13 +2,14 @@ import React from 'react';
 import Card from '../Card/Card';
 import PropTypes from 'prop-types';
 import arrow from '../../images/arrow2.gif';
+import PropTypes from 'prop-types';
 
 
 const CompareInstructions = ({ comparisonData, handleCompareCards }) => {
   return (
     <section className="displayOne">
       <Card 
-        schoolData={ comparisonData[0] }
+        schoolData={ comparisonData.school1 }
         handleCompareCards={ handleCompareCards }
         size='small'
         clicked='clicked'
@@ -17,7 +18,7 @@ const CompareInstructions = ({ comparisonData, handleCompareCards }) => {
         <p className='instructions'>
           click another to compare
         </p>
-        <img src={ arrow } alt="Choose a Card To Compare With" id="arrow"/>
+        <img src={arrow} alt="click another card to see a comparison of the two" />
       </div>
       <div className='shadow-card'>
       </div>
@@ -31,5 +32,28 @@ CompareInstructions.propTypes = {
   comparisonData: array.isRequired,
   handleCompareCards: func.isRequired
 };
+
+const { shape, string, objectOf, number, func, object } = PropTypes;
+
+CompareInstructions.propTypes = {
+  handleCompareCards: func.isRequired,
+  comparisonData: shape({
+    comparison: object
+  }),
+  school1: 
+    objectOf(shape({
+      location: string.isRequired,
+      dataType: string,
+      data: objectOf(
+        number.isRequired)
+    })),
+  school2: 
+    objectOf(shape({
+      location: string.isRequired,
+      dataType: string,
+      data: objectOf(
+        number.isRequired)
+    }))
+}
 
 export default CompareInstructions;
