@@ -1,0 +1,733 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comparison should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Comparison
+    comparisonData={
+        Array [
+            Object {
+              "data": Object {
+                "2004": 0.302,
+                "2005": 0.267,
+                "2006": 0.354,
+                "2007": 0.392,
+                "2008": 0.385,
+                "2009": 0.39,
+                "2010": 0.436,
+                "2011": 0.489,
+                "2012": 0.479,
+                "2013": 0.488,
+                "2014": 0.49,
+              },
+              "dataType": "Percent",
+              "location": "ACADEMY 20",
+            },
+            Object {
+              "data": Object {
+                "2004": 0,
+                "2005": 0,
+                "2006": 0,
+                "2007": 0,
+                "2008": 0.844,
+                "2009": 0.96,
+                "2010": 1,
+                "2011": 1,
+                "2012": 1,
+                "2013": 1,
+                "2014": 1,
+              },
+              "dataType": "Percent",
+              "location": "AKRON R-1",
+            },
+            Object {
+              "ACADEMY 20": 0.407,
+              "AKRON R-1": 0.619,
+              "compared": 0.658,
+            },
+          ]
+    }
+    handleCompareCards={[Function]}
+    removeComparison={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          handleCompareCards={[Function]}
+          schoolData={
+                    Object {
+                              "data": Object {
+                                "2004": 0.302,
+                                "2005": 0.267,
+                                "2006": 0.354,
+                                "2007": 0.392,
+                                "2008": 0.385,
+                                "2009": 0.39,
+                                "2010": 0.436,
+                                "2011": 0.489,
+                                "2012": 0.479,
+                                "2013": 0.488,
+                                "2014": 0.49,
+                              },
+                              "dataType": "Percent",
+                              "location": "ACADEMY 20",
+                            }
+          }
+          size="large"
+/>,
+        <article
+          className="comparison"
+>
+          <div>
+                    <h3>
+                              ACADEMY 20
+                    </h3>
+                    <h4>
+                              0.407
+                    </h4>
+          </div>
+          <div>
+                    <h3>
+                              Differential
+                    </h3>
+                    <h4
+                              className="compare-total"
+                    >
+                              0.658
+                    </h4>
+          </div>
+          <div>
+                    <h3>
+                              AKRON R-1
+                    </h3>
+                    <h4>
+                              0.619
+                    </h4>
+          </div>
+</article>,
+        <Card
+          handleCompareCards={[Function]}
+          schoolData={
+                    Object {
+                              "data": Object {
+                                "2004": 0,
+                                "2005": 0,
+                                "2006": 0,
+                                "2007": 0,
+                                "2008": 0.844,
+                                "2009": 0.96,
+                                "2010": 1,
+                                "2011": 1,
+                                "2012": 1,
+                                "2013": 1,
+                                "2014": 1,
+                              },
+                              "dataType": "Percent",
+                              "location": "AKRON R-1",
+                            }
+          }
+          size="large"
+/>,
+        <button
+          onClick={[Function]}
+>
+          Reset
+</button>,
+      ],
+      "className": "displayAll",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "handleCompareCards": [Function],
+          "schoolData": Object {
+            "data": Object {
+              "2004": 0.302,
+              "2005": 0.267,
+              "2006": 0.354,
+              "2007": 0.392,
+              "2008": 0.385,
+              "2009": 0.39,
+              "2010": 0.436,
+              "2011": 0.489,
+              "2012": 0.479,
+              "2013": 0.488,
+              "2014": 0.49,
+            },
+            "dataType": "Percent",
+            "location": "ACADEMY 20",
+          },
+          "size": "large",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div>
+              <h3>
+                            ACADEMY 20
+              </h3>
+              <h4>
+                            0.407
+              </h4>
+</div>,
+            <div>
+              <h3>
+                            Differential
+              </h3>
+              <h4
+                            className="compare-total"
+              >
+                            0.658
+              </h4>
+</div>,
+            <div>
+              <h3>
+                            AKRON R-1
+              </h3>
+              <h4>
+                            0.619
+              </h4>
+</div>,
+          ],
+          "className": "comparison",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  ACADEMY 20
+</h3>,
+                <h4>
+                  0.407
+</h4>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "ACADEMY 20",
+                },
+                "ref": null,
+                "rendered": "ACADEMY 20",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 0.407,
+                },
+                "ref": null,
+                "rendered": 0.407,
+                "type": "h4",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  Differential
+</h3>,
+                <h4
+                  className="compare-total"
+>
+                  0.658
+</h4>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Differential",
+                },
+                "ref": null,
+                "rendered": "Differential",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 0.658,
+                  "className": "compare-total",
+                },
+                "ref": null,
+                "rendered": 0.658,
+                "type": "h4",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  AKRON R-1
+</h3>,
+                <h4>
+                  0.619
+</h4>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "AKRON R-1",
+                },
+                "ref": null,
+                "rendered": "AKRON R-1",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 0.619,
+                },
+                "ref": null,
+                "rendered": 0.619,
+                "type": "h4",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "article",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "handleCompareCards": [Function],
+          "schoolData": Object {
+            "data": Object {
+              "2004": 0,
+              "2005": 0,
+              "2006": 0,
+              "2007": 0,
+              "2008": 0.844,
+              "2009": 0.96,
+              "2010": 1,
+              "2011": 1,
+              "2012": 1,
+              "2013": 1,
+              "2014": 1,
+            },
+            "dataType": "Percent",
+            "location": "AKRON R-1",
+          },
+          "size": "large",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Reset",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Reset",
+        "type": "button",
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            handleCompareCards={[Function]}
+            schoolData={
+                        Object {
+                                    "data": Object {
+                                      "2004": 0.302,
+                                      "2005": 0.267,
+                                      "2006": 0.354,
+                                      "2007": 0.392,
+                                      "2008": 0.385,
+                                      "2009": 0.39,
+                                      "2010": 0.436,
+                                      "2011": 0.489,
+                                      "2012": 0.479,
+                                      "2013": 0.488,
+                                      "2014": 0.49,
+                                    },
+                                    "dataType": "Percent",
+                                    "location": "ACADEMY 20",
+                                  }
+            }
+            size="large"
+/>,
+          <article
+            className="comparison"
+>
+            <div>
+                        <h3>
+                                    ACADEMY 20
+                        </h3>
+                        <h4>
+                                    0.407
+                        </h4>
+            </div>
+            <div>
+                        <h3>
+                                    Differential
+                        </h3>
+                        <h4
+                                    className="compare-total"
+                        >
+                                    0.658
+                        </h4>
+            </div>
+            <div>
+                        <h3>
+                                    AKRON R-1
+                        </h3>
+                        <h4>
+                                    0.619
+                        </h4>
+            </div>
+</article>,
+          <Card
+            handleCompareCards={[Function]}
+            schoolData={
+                        Object {
+                                    "data": Object {
+                                      "2004": 0,
+                                      "2005": 0,
+                                      "2006": 0,
+                                      "2007": 0,
+                                      "2008": 0.844,
+                                      "2009": 0.96,
+                                      "2010": 1,
+                                      "2011": 1,
+                                      "2012": 1,
+                                      "2013": 1,
+                                      "2014": 1,
+                                    },
+                                    "dataType": "Percent",
+                                    "location": "AKRON R-1",
+                                  }
+            }
+            size="large"
+/>,
+          <button
+            onClick={[Function]}
+>
+            Reset
+</button>,
+        ],
+        "className": "displayAll",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "handleCompareCards": [Function],
+            "schoolData": Object {
+              "data": Object {
+                "2004": 0.302,
+                "2005": 0.267,
+                "2006": 0.354,
+                "2007": 0.392,
+                "2008": 0.385,
+                "2009": 0.39,
+                "2010": 0.436,
+                "2011": 0.489,
+                "2012": 0.479,
+                "2013": 0.488,
+                "2014": 0.49,
+              },
+              "dataType": "Percent",
+              "location": "ACADEMY 20",
+            },
+            "size": "large",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div>
+                <h3>
+                                ACADEMY 20
+                </h3>
+                <h4>
+                                0.407
+                </h4>
+</div>,
+              <div>
+                <h3>
+                                Differential
+                </h3>
+                <h4
+                                className="compare-total"
+                >
+                                0.658
+                </h4>
+</div>,
+              <div>
+                <h3>
+                                AKRON R-1
+                </h3>
+                <h4>
+                                0.619
+                </h4>
+</div>,
+            ],
+            "className": "comparison",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    ACADEMY 20
+</h3>,
+                  <h4>
+                    0.407
+</h4>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "ACADEMY 20",
+                  },
+                  "ref": null,
+                  "rendered": "ACADEMY 20",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 0.407,
+                  },
+                  "ref": null,
+                  "rendered": 0.407,
+                  "type": "h4",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    Differential
+</h3>,
+                  <h4
+                    className="compare-total"
+>
+                    0.658
+</h4>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Differential",
+                  },
+                  "ref": null,
+                  "rendered": "Differential",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 0.658,
+                    "className": "compare-total",
+                  },
+                  "ref": null,
+                  "rendered": 0.658,
+                  "type": "h4",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    AKRON R-1
+</h3>,
+                  <h4>
+                    0.619
+</h4>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "AKRON R-1",
+                  },
+                  "ref": null,
+                  "rendered": "AKRON R-1",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 0.619,
+                  },
+                  "ref": null,
+                  "rendered": 0.619,
+                  "type": "h4",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "article",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "handleCompareCards": [Function],
+            "schoolData": Object {
+              "data": Object {
+                "2004": 0,
+                "2005": 0,
+                "2006": 0,
+                "2007": 0,
+                "2008": 0.844,
+                "2009": 0.96,
+                "2010": 1,
+                "2011": 1,
+                "2012": 1,
+                "2013": 1,
+                "2014": 1,
+              },
+              "dataType": "Percent",
+              "location": "AKRON R-1",
+            },
+            "size": "large",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Reset",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Reset",
+          "type": "button",
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

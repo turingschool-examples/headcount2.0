@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import './Card.css';
 
 const Card = (props) => {
-  
   const { location, data } = props.schoolData;
   const dataList = Object.keys(data)
     .map((year, index) => {
@@ -12,8 +11,8 @@ const Card = (props) => {
       return (
         <li key={ index }>
           { year }: <span className={ average }>
-                      { data[year] }
-                    </span>
+            { data[year] }
+          </span>
         </li>
       );
     });

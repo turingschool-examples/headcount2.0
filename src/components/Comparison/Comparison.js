@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '../Card/Card';
+import PropTypes from 'prop-types';
 
 const Comparison = ({comparisonData, handleCompareCards, removeComparison}) => {
   
@@ -33,7 +34,15 @@ const Comparison = ({comparisonData, handleCompareCards, removeComparison}) => {
       />
       <button onClick={ removeComparison }>Reset</button>
     </section>
-  )
-}
+  );
+};
+
+const { array, func } = PropTypes;
+
+Comparison.propTypes = {
+  comparisonData: array.isRequired,
+  handleCompareCards: func.isRequired,
+  removeComparison: func.isRequired
+};
 
 export default Comparison;

@@ -12,7 +12,7 @@ class App extends Component {
     this.state = {
       schoolData: {},
       searchResults: [],
-      searchError: '',
+      searchError: false,
       districtRepository: {},
       comparisonData: []
     };
@@ -28,23 +28,29 @@ class App extends Component {
   }
 
   handleSearch = (searchTerm) => {
-    let searchResults = this.state.districtRepository.findAllMatches(searchTerm);
-    this.setState({ searchResults });
+    let searchResults = this.state.districtRepository
+      .findAllMatches(searchTerm);
+    let searchError = this.toggleSearchError(searchTerm, searchResults);
+    this.setState({ searchResults, searchError });
+  }
+
+  toggleSearchError = (searchTerm, searchResults) => {
+    return searchResults.length === 0 && searchTerm.length > 0 ? true : false;
   }
 
   handleCompareCards = (schoolName) => {
     if (!this.state.comparisonData.length) {
       let school = this.state.districtRepository.findByName(schoolName);
-      let comparisonData = [...this.state.comparisonData, school]
-
+      let comparisonData = [...this.state.comparisonData, school];
+      
       this.setState({ comparisonData });
+
     } else if (schoolName !== this.state.comparisonData[0].location) {
       let school = this.state.districtRepository.findByName(schoolName);
       let comparison = this.state.districtRepository
         .compareDistrictAverages(
           this.state.comparisonData[0].location, schoolName);
-      let comparisonData = [...this.state.comparisonData, school, comparison]
-
+      let comparisonData = [...this.state.comparisonData, school, comparison];
       this.setState({ comparisonData });
     }
   }
