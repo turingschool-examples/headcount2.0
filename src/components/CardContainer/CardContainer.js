@@ -4,7 +4,6 @@ import './CardContainer.css';
 import PropTypes from 'prop-types';
 
 const CardContainer = ({ districtData, selectCard, comparedCards }) => {
-  console.log(comparedCards)
   const clicked = (location) => {
     const match = comparedCards.find( card => {
       return card.location === location.location;

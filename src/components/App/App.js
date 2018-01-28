@@ -18,7 +18,6 @@ class App extends Component {
 
   handleSubmit = (query) => {
     const matches = district.findAllMatches(query);
-
     const districtData = matches.reduce((districtObj, match) => {
       if (!districtObj[match]) {
         districtObj[match] = district.data[match];

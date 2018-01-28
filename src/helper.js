@@ -16,8 +16,7 @@ export default class DistrictRepository {
       const objData = cleanObj[local].data;
       const year = [district.TimeFrame];
 
-      isNaN(district.Data) ? objData[year] = 0 :
-        objData[year] = this.round(district.Data);
+      isNaN(district.Data) ? objData[year] = 0 :objData[year] = this.round(district.Data);
       return cleanObj;
     }, {});
   }
@@ -28,14 +27,14 @@ export default class DistrictRepository {
 
   findByName(search) {
     let searched = search.toUpperCase();
-    
     return this.data[searched] ;
   }
 
   findAllMatches(searched) {
+    searched = searched.toUpperCase()
     const dataArray = Object.keys(this.data);
-    return dataArray.filter(district => !searched || 
-      district.includes(searched.toUpperCase()));
+    
+    return dataArray.filter(district => district.includes(searched));
   }
 
   findAverage(data) {
