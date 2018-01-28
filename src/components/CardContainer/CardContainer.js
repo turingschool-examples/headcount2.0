@@ -4,10 +4,9 @@ import './CardContainer.css';
 import PropTypes from 'prop-types';
 
 const CardContainer = ({ districtData, selectCard, comparedCards }) => {
-  console.log(comparedCards)
-  const clicked = (location) => {
+  const clicked = (district) => {
     const match = comparedCards.find( card => {
-      return card.location === location.location;
+      return card.location === district.location;
     });
     return match ? "clicked" : "";
   };
@@ -31,7 +30,9 @@ const CardContainer = ({ districtData, selectCard, comparedCards }) => {
 };
 
 CardContainer.propTypes = {
-  districtData: PropTypes.object.isRequired
+  districtData: PropTypes.object.isRequired,
+  selectCard: PropTypes.func.isRequired,
+  comparedCards: PropTypes.array.isRequired
 };
 
 export default CardContainer;
