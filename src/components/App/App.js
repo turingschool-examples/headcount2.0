@@ -35,7 +35,10 @@ class App extends Component {
     return averageObject;
   }
 
-  mockFunction = () => {}
+  deselectCard = (id) => {
+    let filteredArr = this.state.selectedCards.filter( card => card.location !== id )
+    this.setState({ selectedCards: filteredArr })
+  }
 
   makeComparison = () => { 
       const d1 = this.state.selectedCards[0].location;
@@ -72,7 +75,7 @@ class App extends Component {
           this.state.selectedCards.length > 0 &&
           <ComparedCards 
             selectedCards={this.state.selectedCards}
-            selectCard={this.mockFunction}
+            selectCard={this.deselectCard}
             makeComparison={this.makeComparison}
             removeComparison={this.removeComparison}
           />
