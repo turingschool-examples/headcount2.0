@@ -31,7 +31,21 @@ CompareInstructions.propTypes = {
   handleCompareCards: func.isRequired,
   comparisonData: shape({
     comparison: object
-  })
+  }),
+  school1: 
+    objectOf(shape({
+      location: string.isRequired,
+      dataType: string,
+      data: objectOf(
+        number.isRequired)
+    })),
+  school2: 
+    objectOf(shape({
+      location: string.isRequired,
+      dataType: string,
+      data: objectOf(
+        number.isRequired)
+    }))
 }
 
 export default CompareInstructions;

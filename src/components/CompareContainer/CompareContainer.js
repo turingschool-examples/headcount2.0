@@ -37,7 +37,7 @@ const CompareContainer = ({comparisonData, handleCompareCards, removeComparison}
 };
 
 const { shape, string, objectOf, number, func, object } = PropTypes;
-// comparisonData, handleCompareCards, removeComparison
+
 CompareContainer.propTypes = {
   handleCompareCards: func.isRequired,
   removeComparison: func.isRequired,
@@ -51,7 +51,7 @@ CompareContainer.propTypes = {
       data: objectOf(
         number.isRequired)
     })),
-  school1: 
+  school2: 
     objectOf(shape({
       location: string.isRequired,
       dataType: string,

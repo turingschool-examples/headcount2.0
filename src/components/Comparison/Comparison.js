@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '../Card/Card';
+import PropTypes from 'prop-types';
 import './Comparison.css';
 
 const Comparison = ({comparisonData, handleCompareCards, removeComparison}) => {
@@ -35,6 +36,30 @@ const Comparison = ({comparisonData, handleCompareCards, removeComparison}) => {
       <button onClick={ removeComparison }>Reset</button>
     </section>
   )
+}
+
+const { shape, string, objectOf, number, func, object } = PropTypes;
+
+Comparison.propTypes = {
+  handleCompareCards: func.isRequired,
+  removeComparison: func.isRequired,
+  comparisonData: shape({
+    comparison: object
+  }),
+  school1: 
+    objectOf(shape({
+      location: string.isRequired,
+      dataType: string,
+      data: objectOf(
+        number.isRequired)
+    })),
+  school2: 
+    objectOf(shape({
+      location: string.isRequired,
+      dataType: string,
+      data: objectOf(
+        number.isRequired)
+    }))
 }
 
 export default Comparison;
