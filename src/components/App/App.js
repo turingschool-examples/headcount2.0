@@ -28,8 +28,9 @@ class App extends Component {
   }
 
   handleSearch = (searchTerm) => {
-    let searchResults = this.state.districtRepository.findAllMatches(searchTerm);
-    let searchError = this.toggleSearchError(searchTerm, searchResults)
+    let searchResults = this.state.districtRepository
+      .findAllMatches(searchTerm);
+    let searchError = this.toggleSearchError(searchTerm, searchResults);
     this.setState({ searchResults, searchError });
   }
 
@@ -40,16 +41,16 @@ class App extends Component {
   handleCompareCards = (schoolName) => {
     if (!this.state.comparisonData.length) {
       let school = this.state.districtRepository.findByName(schoolName);
-      let comparisonData = [...this.state.comparisonData, school]
-
+      let comparisonData = [...this.state.comparisonData, school];
+      
       this.setState({ comparisonData });
+
     } else if (schoolName !== this.state.comparisonData[0].location) {
       let school = this.state.districtRepository.findByName(schoolName);
       let comparison = this.state.districtRepository
         .compareDistrictAverages(
           this.state.comparisonData[0].location, schoolName);
-      let comparisonData = [...this.state.comparisonData, school, comparison]
-
+      let comparisonData = [...this.state.comparisonData, school, comparison];
       this.setState({ comparisonData });
     }
   }

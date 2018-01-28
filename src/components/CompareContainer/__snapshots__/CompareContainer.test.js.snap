@@ -1,0 +1,519 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getDisplay should match the snapshot if comparisonData has only 1 object 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CompareContainer
+    comparisonData={
+        Array [
+            Object {
+              "data": Object {
+                "2004": 0.302,
+                "2005": 0.267,
+                "2006": 0.354,
+                "2007": 0.392,
+                "2008": 0.385,
+                "2009": 0.39,
+                "2010": 0.436,
+                "2011": 0.489,
+                "2012": 0.479,
+                "2013": 0.488,
+                "2014": 0.49,
+              },
+              "dataType": "Percent",
+              "location": "ACADEMY 20",
+            },
+          ]
+    }
+    handleCompareCards={[Function]}
+    removeComparison={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <CompareInstructions
+        comparisonData={
+                Array [
+                        Object {
+                          "data": Object {
+                            "2004": 0.302,
+                            "2005": 0.267,
+                            "2006": 0.354,
+                            "2007": 0.392,
+                            "2008": 0.385,
+                            "2009": 0.39,
+                            "2010": 0.436,
+                            "2011": 0.489,
+                            "2012": 0.479,
+                            "2013": 0.488,
+                            "2014": 0.49,
+                          },
+                          "dataType": "Percent",
+                          "location": "ACADEMY 20",
+                        },
+                      ]
+        }
+        handleCompareCards={[Function]}
+/>,
+      "className": "CompareContainer",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "comparisonData": Array [
+          Object {
+            "data": Object {
+              "2004": 0.302,
+              "2005": 0.267,
+              "2006": 0.354,
+              "2007": 0.392,
+              "2008": 0.385,
+              "2009": 0.39,
+              "2010": 0.436,
+              "2011": 0.489,
+              "2012": 0.479,
+              "2013": 0.488,
+              "2014": 0.49,
+            },
+            "dataType": "Percent",
+            "location": "ACADEMY 20",
+          },
+        ],
+        "handleCompareCards": [Function],
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <CompareInstructions
+          comparisonData={
+                    Array [
+                              Object {
+                                "data": Object {
+                                  "2004": 0.302,
+                                  "2005": 0.267,
+                                  "2006": 0.354,
+                                  "2007": 0.392,
+                                  "2008": 0.385,
+                                  "2009": 0.39,
+                                  "2010": 0.436,
+                                  "2011": 0.489,
+                                  "2012": 0.479,
+                                  "2013": 0.488,
+                                  "2014": 0.49,
+                                },
+                                "dataType": "Percent",
+                                "location": "ACADEMY 20",
+                              },
+                            ]
+          }
+          handleCompareCards={[Function]}
+/>,
+        "className": "CompareContainer",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "comparisonData": Array [
+            Object {
+              "data": Object {
+                "2004": 0.302,
+                "2005": 0.267,
+                "2006": 0.354,
+                "2007": 0.392,
+                "2008": 0.385,
+                "2009": 0.39,
+                "2010": 0.436,
+                "2011": 0.489,
+                "2012": 0.479,
+                "2013": 0.488,
+                "2014": 0.49,
+              },
+              "dataType": "Percent",
+              "location": "ACADEMY 20",
+            },
+          ],
+          "handleCompareCards": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`getDisplay should match the snapshot if it is given an empty array 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CompareContainer
+    comparisonData={Array []}
+    handleCompareCards={[Function]}
+    removeComparison={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": undefined,
+      "className": "CompareContainer",
+    },
+    "ref": null,
+    "rendered": null,
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": undefined,
+        "className": "CompareContainer",
+      },
+      "ref": null,
+      "rendered": null,
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`getDisplay should match the snapshot when it is given a full comparison 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CompareContainer
+    comparisonData={
+        Array [
+            Object {
+              "data": Object {
+                "2004": 0.302,
+                "2005": 0.267,
+                "2006": 0.354,
+                "2007": 0.392,
+                "2008": 0.385,
+                "2009": 0.39,
+                "2010": 0.436,
+                "2011": 0.489,
+                "2012": 0.479,
+                "2013": 0.488,
+                "2014": 0.49,
+              },
+              "dataType": "Percent",
+              "location": "ACADEMY 20",
+            },
+            Object {
+              "data": Object {
+                "2004": 0,
+                "2005": 0,
+                "2006": 0,
+                "2007": 0,
+                "2008": 0.844,
+                "2009": 0.96,
+                "2010": 1,
+                "2011": 1,
+                "2012": 1,
+                "2013": 1,
+                "2014": 1,
+              },
+              "dataType": "Percent",
+              "location": "AKRON R-1",
+            },
+            Object {
+              "ACADEMY 20": 0.407,
+              "AKRON R-1": 0.619,
+              "compared": 0.658,
+            },
+          ]
+    }
+    handleCompareCards={[Function]}
+    removeComparison={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <Comparison
+        comparisonData={
+                Array [
+                        Object {
+                          "data": Object {
+                            "2004": 0.302,
+                            "2005": 0.267,
+                            "2006": 0.354,
+                            "2007": 0.392,
+                            "2008": 0.385,
+                            "2009": 0.39,
+                            "2010": 0.436,
+                            "2011": 0.489,
+                            "2012": 0.479,
+                            "2013": 0.488,
+                            "2014": 0.49,
+                          },
+                          "dataType": "Percent",
+                          "location": "ACADEMY 20",
+                        },
+                        Object {
+                          "data": Object {
+                            "2004": 0,
+                            "2005": 0,
+                            "2006": 0,
+                            "2007": 0,
+                            "2008": 0.844,
+                            "2009": 0.96,
+                            "2010": 1,
+                            "2011": 1,
+                            "2012": 1,
+                            "2013": 1,
+                            "2014": 1,
+                          },
+                          "dataType": "Percent",
+                          "location": "AKRON R-1",
+                        },
+                        Object {
+                          "ACADEMY 20": 0.407,
+                          "AKRON R-1": 0.619,
+                          "compared": 0.658,
+                        },
+                      ]
+        }
+        handleCompareCards={[Function]}
+        removeComparison={[Function]}
+/>,
+      "className": "CompareContainer",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "comparisonData": Array [
+          Object {
+            "data": Object {
+              "2004": 0.302,
+              "2005": 0.267,
+              "2006": 0.354,
+              "2007": 0.392,
+              "2008": 0.385,
+              "2009": 0.39,
+              "2010": 0.436,
+              "2011": 0.489,
+              "2012": 0.479,
+              "2013": 0.488,
+              "2014": 0.49,
+            },
+            "dataType": "Percent",
+            "location": "ACADEMY 20",
+          },
+          Object {
+            "data": Object {
+              "2004": 0,
+              "2005": 0,
+              "2006": 0,
+              "2007": 0,
+              "2008": 0.844,
+              "2009": 0.96,
+              "2010": 1,
+              "2011": 1,
+              "2012": 1,
+              "2013": 1,
+              "2014": 1,
+            },
+            "dataType": "Percent",
+            "location": "AKRON R-1",
+          },
+          Object {
+            "ACADEMY 20": 0.407,
+            "AKRON R-1": 0.619,
+            "compared": 0.658,
+          },
+        ],
+        "handleCompareCards": [Function],
+        "removeComparison": [Function],
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <Comparison
+          comparisonData={
+                    Array [
+                              Object {
+                                "data": Object {
+                                  "2004": 0.302,
+                                  "2005": 0.267,
+                                  "2006": 0.354,
+                                  "2007": 0.392,
+                                  "2008": 0.385,
+                                  "2009": 0.39,
+                                  "2010": 0.436,
+                                  "2011": 0.489,
+                                  "2012": 0.479,
+                                  "2013": 0.488,
+                                  "2014": 0.49,
+                                },
+                                "dataType": "Percent",
+                                "location": "ACADEMY 20",
+                              },
+                              Object {
+                                "data": Object {
+                                  "2004": 0,
+                                  "2005": 0,
+                                  "2006": 0,
+                                  "2007": 0,
+                                  "2008": 0.844,
+                                  "2009": 0.96,
+                                  "2010": 1,
+                                  "2011": 1,
+                                  "2012": 1,
+                                  "2013": 1,
+                                  "2014": 1,
+                                },
+                                "dataType": "Percent",
+                                "location": "AKRON R-1",
+                              },
+                              Object {
+                                "ACADEMY 20": 0.407,
+                                "AKRON R-1": 0.619,
+                                "compared": 0.658,
+                              },
+                            ]
+          }
+          handleCompareCards={[Function]}
+          removeComparison={[Function]}
+/>,
+        "className": "CompareContainer",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "comparisonData": Array [
+            Object {
+              "data": Object {
+                "2004": 0.302,
+                "2005": 0.267,
+                "2006": 0.354,
+                "2007": 0.392,
+                "2008": 0.385,
+                "2009": 0.39,
+                "2010": 0.436,
+                "2011": 0.489,
+                "2012": 0.479,
+                "2013": 0.488,
+                "2014": 0.49,
+              },
+              "dataType": "Percent",
+              "location": "ACADEMY 20",
+            },
+            Object {
+              "data": Object {
+                "2004": 0,
+                "2005": 0,
+                "2006": 0,
+                "2007": 0,
+                "2008": 0.844,
+                "2009": 0.96,
+                "2010": 1,
+                "2011": 1,
+                "2012": 1,
+                "2013": 1,
+                "2014": 1,
+              },
+              "dataType": "Percent",
+              "location": "AKRON R-1",
+            },
+            Object {
+              "ACADEMY 20": 0.407,
+              "AKRON R-1": 0.619,
+              "compared": 0.658,
+            },
+          ],
+          "handleCompareCards": [Function],
+          "removeComparison": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

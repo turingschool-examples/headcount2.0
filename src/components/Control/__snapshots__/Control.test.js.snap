@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Control
     handleSearch={[Function]}
+    searchError={false}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -31,7 +32,7 @@ ShallowWrapper {
                     className="fa fa-search search-icon"
           />
           <input
-                    className={undefined}
+                    className=""
                     id="search"
                     onChange={[Function]}
                     placeholder="Search by School"
@@ -60,7 +61,7 @@ ShallowWrapper {
               className="fa fa-search search-icon"
 />,
             <input
-              className={undefined}
+              className=""
               id="search"
               onChange={[Function]}
               placeholder="Search by School"
@@ -99,7 +100,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "className": undefined,
+              "className": "",
               "id": "search",
               "onChange": [Function],
               "placeholder": "Search by School",
@@ -144,7 +145,7 @@ ShallowWrapper {
                         className="fa fa-search search-icon"
             />
             <input
-                        className={undefined}
+                        className=""
                         id="search"
                         onChange={[Function]}
                         placeholder="Search by School"
@@ -173,7 +174,7 @@ ShallowWrapper {
                 className="fa fa-search search-icon"
 />,
               <input
-                className={undefined}
+                className=""
                 id="search"
                 onChange={[Function]}
                 placeholder="Search by School"
@@ -212,7 +213,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "className": undefined,
+                "className": "",
                 "id": "search",
                 "onChange": [Function],
                 "placeholder": "Search by School",
