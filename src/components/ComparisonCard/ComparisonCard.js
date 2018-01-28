@@ -3,7 +3,6 @@ import './ComparisonCard.css'
 import PropTypes from 'prop-types';
 
 const ComparisonCard = ({comparedObject}) => {
-  console.log(comparedObject)
   if (comparedObject) {
     const d1Name = Object.keys(comparedObject)[0]
     const d1Avg = comparedObject[Object.keys(comparedObject)[0]]
@@ -28,7 +27,7 @@ const ComparisonCard = ({comparedObject}) => {
 };
 
 ComparisonCard.propTypes = {
-  comparedObject: PropTypes.object.isRequired 
+  comparedObject: PropTypes.object
 };
 
 export default ComparisonCard;
