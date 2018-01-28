@@ -9,7 +9,6 @@
   position: relative;
   background-color: #e9fffc;
   color: #434141;
-
 }
 
 h1 {
@@ -20,6 +19,7 @@ h1 {
 
 input {
   box-sizing: border-box;
+  margin-left: 10px;
 }
 
 input[type=text] {
@@ -30,15 +30,16 @@ input[type=text] {
   transition: width 1s;
   background-color: #e9fffc;
 }
- input:focus {
-  width: 300px;
- }
 
- input::placeholder {
+input:focus {
+  width: 300px;
+}
+
+input::placeholder {
   color: #434141;
   font-family: 'Bree Serif', serif;
   font-size: 15px;
- }
+}
 
 .input-cont {
   display: flex;

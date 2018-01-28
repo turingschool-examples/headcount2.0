@@ -40,7 +40,7 @@ class App extends Component {
 
   handleCompareCards = (schoolName) => {
 
-      let comparisonData = Object.assign({}, this.state.comparisonData);
+    let comparisonData = Object.assign({}, this.state.comparisonData);
     
     if (!Object.keys(this.state.comparisonData).length) {
       let school1 = this.state.districtRepository.findByName(schoolName);
@@ -50,7 +50,7 @@ class App extends Component {
     } else if (schoolName !== comparisonData.school1.location) {
       let school2 = this.state.districtRepository.findByName(schoolName);
       let comparison = this.state.districtRepository.compareDistrictAverages(
-          comparisonData.school1.location, schoolName);
+        comparisonData.school1.location, schoolName);
       
       comparisonData.school2 = school2;
       comparisonData.comparison = comparison;
@@ -72,7 +72,7 @@ class App extends Component {
       <CardContainer
         schoolData={ this.state.searchResults }
         handleCompareCards={ this.handleCompareCards }
-      />
+      />;
 
     return (
       <div>

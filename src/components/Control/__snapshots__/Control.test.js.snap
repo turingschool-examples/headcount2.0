@@ -24,12 +24,12 @@ ShallowWrapper {
         <div
           className="input-cont"
 >
-          <label
-                    htmlFor="search"
-          />
           <i
                     aria-hidden="true"
                     className="fa fa-search search-icon"
+          />
+          <label
+                    htmlFor="search"
           />
           <input
                     className=""
@@ -53,12 +53,12 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <label
-              htmlFor="search"
-/>,
             <i
               aria-hidden="true"
               className="fa fa-search search-icon"
+/>,
+            <label
+              htmlFor="search"
 />,
             <input
               className=""
@@ -77,23 +77,23 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "htmlFor": "search",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "label",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
               "aria-hidden": "true",
               "className": "fa fa-search search-icon",
             },
             "ref": null,
             "rendered": null,
             "type": "i",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "htmlFor": "search",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "label",
           },
           Object {
             "instance": null,
@@ -137,12 +137,12 @@ ShallowWrapper {
           <div
             className="input-cont"
 >
-            <label
-                        htmlFor="search"
-            />
             <i
                         aria-hidden="true"
                         className="fa fa-search search-icon"
+            />
+            <label
+                        htmlFor="search"
             />
             <input
                         className=""
@@ -166,12 +166,12 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <label
-                htmlFor="search"
-/>,
               <i
                 aria-hidden="true"
                 className="fa fa-search search-icon"
+/>,
+              <label
+                htmlFor="search"
 />,
               <input
                 className=""
@@ -190,23 +190,23 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "htmlFor": "search",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "label",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
                 "aria-hidden": "true",
                 "className": "fa fa-search search-icon",
               },
               "ref": null,
               "rendered": null,
               "type": "i",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "htmlFor": "search",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "label",
             },
             Object {
               "instance": null,

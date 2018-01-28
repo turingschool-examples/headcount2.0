@@ -16,15 +16,21 @@ const Comparison = ({comparisonData, handleCompareCards, removeComparison}) => {
       <article className="comparison">
         <div>
           <h3>{ comparisonData.school1.location }</h3>
-          <h4>{ comparisonData.comparison[comparisonData.school1.location] }</h4>
+          <h4>
+            { comparisonData.comparison[comparisonData.school1.location] }
+          </h4>
         </div>
         <div>
           <h3>Differential</h3>
-          <h4 className='compare-total'>{ comparisonData.comparison.compared }</h4>
+          <h4 className='compare-total'>
+            { comparisonData.comparison.compared }
+          </h4>
         </div>
         <div>
           <h3>{ comparisonData.school2.location }</h3>
-          <h4>{ comparisonData.comparison[comparisonData.school2.location] }</h4>
+          <h4>
+            { comparisonData.comparison[comparisonData.school2.location] }
+          </h4>
         </div>
       </article>
 
@@ -36,14 +42,6 @@ const Comparison = ({comparisonData, handleCompareCards, removeComparison}) => {
       <button onClick={ removeComparison }>Reset</button>
     </section>
   );
-};
-
-const { array, func } = PropTypes;
-
-Comparison.propTypes = {
-  comparisonData: array.isRequired,
-  handleCompareCards: func.isRequired,
-  removeComparison: func.isRequired
 };
 
 const { shape, string, objectOf, number, func, object } = PropTypes;
@@ -68,6 +66,6 @@ Comparison.propTypes = {
       data: objectOf(
         number.isRequired)
     }))
-}
+};
 
 export default Comparison;

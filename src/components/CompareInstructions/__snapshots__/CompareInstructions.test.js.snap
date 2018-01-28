@@ -6,8 +6,8 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CompareInstructions
     comparisonData={
-        Array [
-            Object {
+        Object {
+            "school1": Object {
               "data": Object {
                 "2004": 0.302,
                 "2005": 0.267,
@@ -24,7 +24,7 @@ ShallowWrapper {
               "dataType": "Percent",
               "location": "ACADEMY 20",
             },
-          ]
+          }
     }
     handleCompareCards={[Function]}
 />,
@@ -74,8 +74,7 @@ ShallowWrapper {
                     click another to compare
           </p>
           <img
-                    alt="Choose a Card To Compare With"
-                    id="arrow"
+                    alt="click another card to see a comparison of the two"
                     src="arrow2.gif"
           />
 </div>,
@@ -129,8 +128,7 @@ ShallowWrapper {
               click another to compare
 </p>,
             <img
-              alt="Choose a Card To Compare With"
-              id="arrow"
+              alt="click another card to see a comparison of the two"
               src="arrow2.gif"
 />,
           ],
@@ -155,8 +153,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "alt": "Choose a Card To Compare With",
-              "id": "arrow",
+              "alt": "click another card to see a comparison of the two",
               "src": "arrow2.gif",
             },
             "ref": null,
@@ -220,8 +217,7 @@ ShallowWrapper {
                         click another to compare
             </p>
             <img
-                        alt="Choose a Card To Compare With"
-                        id="arrow"
+                        alt="click another card to see a comparison of the two"
                         src="arrow2.gif"
             />
 </div>,
@@ -275,8 +271,7 @@ ShallowWrapper {
                 click another to compare
 </p>,
               <img
-                alt="Choose a Card To Compare With"
-                id="arrow"
+                alt="click another card to see a comparison of the two"
                 src="arrow2.gif"
 />,
             ],
@@ -301,8 +296,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "alt": "Choose a Card To Compare With",
-                "id": "arrow",
+                "alt": "click another card to see a comparison of the two",
                 "src": "arrow2.gif",
               },
               "ref": null,
