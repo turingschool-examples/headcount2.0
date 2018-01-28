@@ -1,12 +1,16 @@
-.card-container, .selected-cities {
-  margin: auto;
+.selected-cities {
   display: flex;
-  width: 90%;
+  width: 100%;
   align-items: center;
-  flex-flow: wrap row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.card-container {
+.all-cities {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
