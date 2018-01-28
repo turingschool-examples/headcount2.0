@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should show a card if its state districtData has data in it 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          HEADCOUNT
+</h1>,
+        <Search
+          handleSubmit={[Function]}
+/>,
+        false,
+        <CardContainer
+          comparedCards={Array []}
+          districtData={
+                    Object {
+                              "COLORADO": Object {
+                                "data": Object {
+                                  "2004": 0.154,
+                                  "2005": 0.555,
+                                },
+                                "location": "COLORADO",
+                              },
+                            }
+          }
+          selectCard={[Function]}
+/>,
+      ],
+      "className": "App",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "HEADCOUNT",
+        },
+        "ref": null,
+        "rendered": "HEADCOUNT",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "handleSubmit": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      false,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "comparedCards": Array [],
+          "districtData": Object {
+            "COLORADO": Object {
+              "data": Object {
+                "2004": 0.154,
+                "2005": 0.555,
+              },
+              "location": "COLORADO",
+            },
+          },
+          "selectCard": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            HEADCOUNT
+</h1>,
+          <Search
+            handleSubmit={[Function]}
+/>,
+          false,
+          <CardContainer
+            comparedCards={Array []}
+            districtData={
+                        Object {
+                                    "COLORADO": Object {
+                                      "data": Object {
+                                        "2004": 0.154,
+                                        "2005": 0.555,
+                                      },
+                                      "location": "COLORADO",
+                                    },
+                                  }
+            }
+            selectCard={[Function]}
+/>,
+        ],
+        "className": "App",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "HEADCOUNT",
+          },
+          "ref": null,
+          "rendered": "HEADCOUNT",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "handleSubmit": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "comparedCards": Array [],
+            "districtData": Object {
+              "COLORADO": Object {
+                "data": Object {
+                  "2004": 0.154,
+                  "2005": 0.555,
+                },
+                "location": "COLORADO",
+              },
+            },
+            "selectCard": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

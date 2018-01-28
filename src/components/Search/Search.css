@@ -12,7 +12,28 @@ form {
 }
 
 #search-input {
-  height: 50px;
-  width: 400px;
+  box-sizing: border-box;
+  background-color: #393A37;
+  border: none;
+  padding: 3px;
+  height: 25px;
+  width: 150px;
+  color: #AAD74F;
+  font-size: 1.3em;
+}
+
+#search-input::placeholder {
+  color: #AAD74F;
+  font-size: 1em;
+  margin-left: 2px;
+}
+
+#button {
+  box-sizing: border-box;
+  border: 1px solid #AAD74F ;
+  background: none;
+  margin-left: 15px;
+  height: 25px !important;
+  color: #AAD74F;
 }
 

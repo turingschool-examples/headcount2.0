@@ -8,7 +8,6 @@ const ComparedCards = ({ selectedCards, selectCard, makeComparison, removeCompar
   if (selectedCards.length > 1) {
     comparedObject = makeComparison(selectedCards[0].location, selectedCards[1].location)
   }
-  console.log(selectedCards)
   const selectedCardsArray = selectedCards.map((district, key) => 
     <Card 
       districtName={district.location}
@@ -28,7 +27,7 @@ const ComparedCards = ({ selectedCards, selectCard, makeComparison, removeCompar
       </div>
       <div>
         <button 
-          id="remove comparison"
+          id="remove-comparison"
           onClick={removeComparison}>
             clear comparison
         </button>

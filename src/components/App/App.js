@@ -12,8 +12,7 @@ class App extends Component {
     super();
     this.state = {
       districtData: district.data,
-      selectedCards: [],
-      averageObject: {}
+      selectedCards: []
     };
   }
 
@@ -36,13 +35,9 @@ class App extends Component {
     return averageObject;
   }
 
-  mockFunction = () => {}
-
-  makeComparison = () => { 
-      const d1 = this.state.selectedCards[0].location;
-      const d2 = this.state.selectedCards[1].location;
-      const averageObject =  district.compareDistrictAverages(d1, d2);
-      return averageObject;
+  deselectCard = (id) => {
+    let filteredArr = this.state.selectedCards.filter( card => card.location !== id )
+    this.setState({ selectedCards: filteredArr })
   }
 
   selectCard = (id, e) => {
@@ -53,7 +48,6 @@ class App extends Component {
     if (this.state.selectedCards.length >= 1 && this.state.selectedCards[0].location === id ) {
       this.state.selectedCards.pop();
     }
-    console.log(id)
 
     let selectedCards = [...this.state.selectedCards, this.state.districtData[id]];
     this.setState({selectedCards})
@@ -73,7 +67,7 @@ class App extends Component {
           this.state.selectedCards.length > 0 &&
           <ComparedCards 
             selectedCards={this.state.selectedCards}
-            selectCard={this.mockFunction}
+            selectCard={this.deselectCard}
             makeComparison={this.makeComparison}
             removeComparison={this.removeComparison}
           />
