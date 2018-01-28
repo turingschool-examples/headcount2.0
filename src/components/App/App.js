@@ -40,13 +40,6 @@ class App extends Component {
     this.setState({ selectedCards: filteredArr })
   }
 
-  makeComparison = () => { 
-      const d1 = this.state.selectedCards[0].location;
-      const d2 = this.state.selectedCards[1].location;
-      const averageObject =  district.compareDistrictAverages(d1, d2);
-      return averageObject;
-  }
-
   selectCard = (id, e) => {
     if(this.state.selectedCards.length === 2) {
       this.state.selectedCards.shift();
@@ -55,7 +48,6 @@ class App extends Component {
     if (this.state.selectedCards.length >= 1 && this.state.selectedCards[0].location === id ) {
       this.state.selectedCards.pop();
     }
-    console.log(id)
 
     let selectedCards = [...this.state.selectedCards, this.state.districtData[id]];
     this.setState({selectedCards})
