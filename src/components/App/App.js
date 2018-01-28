@@ -18,12 +18,14 @@ class App extends Component {
 
   handleSubmit = (query) => {
     const matches = district.findAllMatches(query);
+
     const districtData = matches.reduce((districtObj, match) => {
       if (!districtObj[match]) {
         districtObj[match] = district.data[match];
       }
-      return districtObj;
-    }, {});
+        return districtObj;
+      }, {});
+
     this.setState({districtData});
   }
 
@@ -40,15 +42,17 @@ class App extends Component {
   }
 
   selectCard = (id, e) => {
-    if(this.state.selectedCards.length === 2) {
-      this.state.selectedCards.shift();
+    const selected = this.state.selectedCards
+
+    if(selected.length === 2) {
+      selected.shift();
     }
 
-    if (this.state.selectedCards.length >= 1 && this.state.selectedCards[0].location === id ) {
-      this.state.selectedCards.pop();
+    if (selected.length >= 1 && selected[0].location === id ) {
+      selected.shift();
     }
 
-    let selectedCards = [...this.state.selectedCards, this.state.districtData[id]];
+    let selectedCards = [...selected, this.state.districtData[id]];
     this.setState({selectedCards})
   }
 
@@ -62,6 +66,7 @@ class App extends Component {
       <div className="App">
         <h1>HEADCOUNT</h1>
         <Search handleSubmit={this.handleSubmit}/>
+        
         {
           this.state.selectedCards.length > 0 &&
           <ComparedCards 
@@ -71,6 +76,7 @@ class App extends Component {
             removeComparison={this.removeComparison}
           />
         }
+
         <CardContainer 
           districtData={this.state.districtData}
           comparedCards={this.state.selectedCards}
