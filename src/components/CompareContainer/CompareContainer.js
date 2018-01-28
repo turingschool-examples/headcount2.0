@@ -13,7 +13,8 @@ const CompareContainer =
       return (
         <CompareInstructions 
           comparisonData={ comparisonData }
-          handleCompareCards={ removeComparison }
+          handleCompareCards={ handleCompareCards }
+          removeComparison={ removeComparison }
         />
       );
     } else {

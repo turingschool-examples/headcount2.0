@@ -63,15 +63,18 @@ class App extends Component {
   }
 
   render() {
-    let cardContainer = !this.state.searchResults.length ?  
+    let cardContainer = !this.state.searchResults.length 
+      ?  
       <CardContainer 
         schoolData={ this.state.schoolData }
         handleCompareCards={ this.handleCompareCards }
+        comparisonData={ this.state.comparisonData }
       />
       :
       <CardContainer
         schoolData={ this.state.searchResults }
         handleCompareCards={ this.handleCompareCards }
+        comparisonData={ this.state.comparisonData }
       />;
 
     return (

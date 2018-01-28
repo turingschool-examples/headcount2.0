@@ -9,20 +9,20 @@ ShallowWrapper {
     schoolData={
         Object {
             "data": Object {
-              "2004": 0.302,
-              "2005": 0.267,
-              "2006": 0.354,
-              "2007": 0.392,
-              "2008": 0.385,
-              "2009": 0.39,
-              "2010": 0.436,
-              "2011": 0.489,
-              "2012": 0.479,
-              "2013": 0.488,
-              "2014": 0.49,
+              "2004": 0.24,
+              "2005": 0.278,
+              "2006": 0.337,
+              "2007": 0.395,
+              "2008": 0.536,
+              "2009": 0.598,
+              "2010": 0.64,
+              "2011": 0.672,
+              "2012": 0.695,
+              "2013": 0.703,
+              "2014": 0.741,
             },
             "dataType": "Percent",
-            "location": "ACADEMY 20",
+            "location": "COLORADO",
           }
     }
     size="large"
@@ -41,7 +41,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <h3>
-          ACADEMY 20
+          COLORADO
 </h3>,
         <ul>
           <li>
@@ -50,7 +50,7 @@ ShallowWrapper {
                     <span
                               className="low"
                     >
-                              0.302
+                              0.24
                     </span>
           </li>
           <li>
@@ -59,7 +59,7 @@ ShallowWrapper {
                     <span
                               className="low"
                     >
-                              0.267
+                              0.278
                     </span>
           </li>
           <li>
@@ -68,7 +68,7 @@ ShallowWrapper {
                     <span
                               className="low"
                     >
-                              0.354
+                              0.337
                     </span>
           </li>
           <li>
@@ -77,70 +77,70 @@ ShallowWrapper {
                     <span
                               className="low"
                     >
-                              0.392
+                              0.395
                     </span>
           </li>
           <li>
                     2008
                     : 
                     <span
-                              className="low"
+                              className="high"
                     >
-                              0.385
+                              0.536
                     </span>
           </li>
           <li>
                     2009
                     : 
                     <span
-                              className="low"
+                              className="high"
                     >
-                              0.39
+                              0.598
                     </span>
           </li>
           <li>
                     2010
                     : 
                     <span
-                              className="low"
+                              className="high"
                     >
-                              0.436
+                              0.64
                     </span>
           </li>
           <li>
                     2011
                     : 
                     <span
-                              className="low"
+                              className="high"
                     >
-                              0.489
+                              0.672
                     </span>
           </li>
           <li>
                     2012
                     : 
                     <span
-                              className="low"
+                              className="high"
                     >
-                              0.479
+                              0.695
                     </span>
           </li>
           <li>
                     2013
                     : 
                     <span
-                              className="low"
+                              className="high"
                     >
-                              0.488
+                              0.703
                     </span>
           </li>
           <li>
                     2014
                     : 
                     <span
-                              className="low"
+                              className="high"
                     >
-                              0.49
+                              0.741
                     </span>
           </li>
 </ul>,
@@ -156,10 +156,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "ACADEMY 20",
+          "children": "COLORADO",
         },
         "ref": null,
-        "rendered": "ACADEMY 20",
+        "rendered": "COLORADO",
         "type": "h3",
       },
       Object {
@@ -174,7 +174,7 @@ ShallowWrapper {
               <span
                             className="low"
               >
-                            0.302
+                            0.24
               </span>
 </li>,
             <li>
@@ -183,7 +183,7 @@ ShallowWrapper {
               <span
                             className="low"
               >
-                            0.267
+                            0.278
               </span>
 </li>,
             <li>
@@ -192,7 +192,7 @@ ShallowWrapper {
               <span
                             className="low"
               >
-                            0.354
+                            0.337
               </span>
 </li>,
             <li>
@@ -201,70 +201,70 @@ ShallowWrapper {
               <span
                             className="low"
               >
-                            0.392
+                            0.395
               </span>
 </li>,
             <li>
               2008
               : 
               <span
-                            className="low"
+                            className="high"
               >
-                            0.385
+                            0.536
               </span>
 </li>,
             <li>
               2009
               : 
               <span
-                            className="low"
+                            className="high"
               >
-                            0.39
+                            0.598
               </span>
 </li>,
             <li>
               2010
               : 
               <span
-                            className="low"
+                            className="high"
               >
-                            0.436
+                            0.64
               </span>
 </li>,
             <li>
               2011
               : 
               <span
-                            className="low"
+                            className="high"
               >
-                            0.489
+                            0.672
               </span>
 </li>,
             <li>
               2012
               : 
               <span
-                            className="low"
+                            className="high"
               >
-                            0.479
+                            0.695
               </span>
 </li>,
             <li>
               2013
               : 
               <span
-                            className="low"
+                            className="high"
               >
-                            0.488
+                            0.703
               </span>
 </li>,
             <li>
               2014
               : 
               <span
-                            className="low"
+                            className="high"
               >
-                            0.49
+                            0.741
               </span>
 </li>,
           ],
@@ -282,7 +282,7 @@ ShallowWrapper {
                 <span
                   className="low"
 >
-                  0.302
+                  0.24
 </span>,
               ],
             },
@@ -295,11 +295,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": 0.302,
+                  "children": 0.24,
                   "className": "low",
                 },
                 "ref": null,
-                "rendered": 0.302,
+                "rendered": 0.24,
                 "type": "span",
               },
             ],
@@ -316,7 +316,7 @@ ShallowWrapper {
                 <span
                   className="low"
 >
-                  0.267
+                  0.278
 </span>,
               ],
             },
@@ -329,11 +329,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": 0.267,
+                  "children": 0.278,
                   "className": "low",
                 },
                 "ref": null,
-                "rendered": 0.267,
+                "rendered": 0.278,
                 "type": "span",
               },
             ],
@@ -350,7 +350,7 @@ ShallowWrapper {
                 <span
                   className="low"
 >
-                  0.354
+                  0.337
 </span>,
               ],
             },
@@ -363,11 +363,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": 0.354,
+                  "children": 0.337,
                   "className": "low",
                 },
                 "ref": null,
-                "rendered": 0.354,
+                "rendered": 0.337,
                 "type": "span",
               },
             ],
@@ -384,7 +384,7 @@ ShallowWrapper {
                 <span
                   className="low"
 >
-                  0.392
+                  0.395
 </span>,
               ],
             },
@@ -397,11 +397,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": 0.392,
+                  "children": 0.395,
                   "className": "low",
                 },
                 "ref": null,
-                "rendered": 0.392,
+                "rendered": 0.395,
                 "type": "span",
               },
             ],
@@ -416,9 +416,9 @@ ShallowWrapper {
                 "2008",
                 ": ",
                 <span
-                  className="low"
+                  className="high"
 >
-                  0.385
+                  0.536
 </span>,
               ],
             },
@@ -431,11 +431,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": 0.385,
-                  "className": "low",
+                  "children": 0.536,
+                  "className": "high",
                 },
                 "ref": null,
-                "rendered": 0.385,
+                "rendered": 0.536,
                 "type": "span",
               },
             ],
@@ -450,9 +450,9 @@ ShallowWrapper {
                 "2009",
                 ": ",
                 <span
-                  className="low"
+                  className="high"
 >
-                  0.39
+                  0.598
 </span>,
               ],
             },
@@ -465,11 +465,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": 0.39,
-                  "className": "low",
+                  "children": 0.598,
+                  "className": "high",
                 },
                 "ref": null,
-                "rendered": 0.39,
+                "rendered": 0.598,
                 "type": "span",
               },
             ],
@@ -484,9 +484,9 @@ ShallowWrapper {
                 "2010",
                 ": ",
                 <span
-                  className="low"
+                  className="high"
 >
-                  0.436
+                  0.64
 </span>,
               ],
             },
@@ -499,11 +499,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": 0.436,
-                  "className": "low",
+                  "children": 0.64,
+                  "className": "high",
                 },
                 "ref": null,
-                "rendered": 0.436,
+                "rendered": 0.64,
                 "type": "span",
               },
             ],
@@ -518,9 +518,9 @@ ShallowWrapper {
                 "2011",
                 ": ",
                 <span
-                  className="low"
+                  className="high"
 >
-                  0.489
+                  0.672
 </span>,
               ],
             },
@@ -533,11 +533,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": 0.489,
-                  "className": "low",
+                  "children": 0.672,
+                  "className": "high",
                 },
                 "ref": null,
-                "rendered": 0.489,
+                "rendered": 0.672,
                 "type": "span",
               },
             ],
@@ -552,9 +552,9 @@ ShallowWrapper {
                 "2012",
                 ": ",
                 <span
-                  className="low"
+                  className="high"
 >
-                  0.479
+                  0.695
 </span>,
               ],
             },
@@ -567,11 +567,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": 0.479,
-                  "className": "low",
+                  "children": 0.695,
+                  "className": "high",
                 },
                 "ref": null,
-                "rendered": 0.479,
+                "rendered": 0.695,
                 "type": "span",
               },
             ],
@@ -586,9 +586,9 @@ ShallowWrapper {
                 "2013",
                 ": ",
                 <span
-                  className="low"
+                  className="high"
 >
-                  0.488
+                  0.703
 </span>,
               ],
             },
@@ -601,11 +601,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": 0.488,
-                  "className": "low",
+                  "children": 0.703,
+                  "className": "high",
                 },
                 "ref": null,
-                "rendered": 0.488,
+                "rendered": 0.703,
                 "type": "span",
               },
             ],
@@ -620,9 +620,9 @@ ShallowWrapper {
                 "2014",
                 ": ",
                 <span
-                  className="low"
+                  className="high"
 >
-                  0.49
+                  0.741
 </span>,
               ],
             },
@@ -635,11 +635,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": 0.49,
-                  "className": "low",
+                  "children": 0.741,
+                  "className": "high",
                 },
                 "ref": null,
-                "rendered": 0.49,
+                "rendered": 0.741,
                 "type": "span",
               },
             ],
@@ -659,7 +659,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h3>
-            ACADEMY 20
+            COLORADO
 </h3>,
           <ul>
             <li>
@@ -668,7 +668,7 @@ ShallowWrapper {
                         <span
                                     className="low"
                         >
-                                    0.302
+                                    0.24
                         </span>
             </li>
             <li>
@@ -677,7 +677,7 @@ ShallowWrapper {
                         <span
                                     className="low"
                         >
-                                    0.267
+                                    0.278
                         </span>
             </li>
             <li>
@@ -686,7 +686,7 @@ ShallowWrapper {
                         <span
                                     className="low"
                         >
-                                    0.354
+                                    0.337
                         </span>
             </li>
             <li>
@@ -695,70 +695,70 @@ ShallowWrapper {
                         <span
                                     className="low"
                         >
-                                    0.392
+                                    0.395
                         </span>
             </li>
             <li>
                         2008
                         : 
                         <span
-                                    className="low"
+                                    className="high"
                         >
-                                    0.385
+                                    0.536
                         </span>
             </li>
             <li>
                         2009
                         : 
                         <span
-                                    className="low"
+                                    className="high"
                         >
-                                    0.39
+                                    0.598
                         </span>
             </li>
             <li>
                         2010
                         : 
                         <span
-                                    className="low"
+                                    className="high"
                         >
-                                    0.436
+                                    0.64
                         </span>
             </li>
             <li>
                         2011
                         : 
                         <span
-                                    className="low"
+                                    className="high"
                         >
-                                    0.489
+                                    0.672
                         </span>
             </li>
             <li>
                         2012
                         : 
                         <span
-                                    className="low"
+                                    className="high"
                         >
-                                    0.479
+                                    0.695
                         </span>
             </li>
             <li>
                         2013
                         : 
                         <span
-                                    className="low"
+                                    className="high"
                         >
-                                    0.488
+                                    0.703
                         </span>
             </li>
             <li>
                         2014
                         : 
                         <span
-                                    className="low"
+                                    className="high"
                         >
-                                    0.49
+                                    0.741
                         </span>
             </li>
 </ul>,
@@ -774,10 +774,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "ACADEMY 20",
+            "children": "COLORADO",
           },
           "ref": null,
-          "rendered": "ACADEMY 20",
+          "rendered": "COLORADO",
           "type": "h3",
         },
         Object {
@@ -792,7 +792,7 @@ ShallowWrapper {
                 <span
                                 className="low"
                 >
-                                0.302
+                                0.24
                 </span>
 </li>,
               <li>
@@ -801,7 +801,7 @@ ShallowWrapper {
                 <span
                                 className="low"
                 >
-                                0.267
+                                0.278
                 </span>
 </li>,
               <li>
@@ -810,7 +810,7 @@ ShallowWrapper {
                 <span
                                 className="low"
                 >
-                                0.354
+                                0.337
                 </span>
 </li>,
               <li>
@@ -819,70 +819,70 @@ ShallowWrapper {
                 <span
                                 className="low"
                 >
-                                0.392
+                                0.395
                 </span>
 </li>,
               <li>
                 2008
                 : 
                 <span
-                                className="low"
+                                className="high"
                 >
-                                0.385
+                                0.536
                 </span>
 </li>,
               <li>
                 2009
                 : 
                 <span
-                                className="low"
+                                className="high"
                 >
-                                0.39
+                                0.598
                 </span>
 </li>,
               <li>
                 2010
                 : 
                 <span
-                                className="low"
+                                className="high"
                 >
-                                0.436
+                                0.64
                 </span>
 </li>,
               <li>
                 2011
                 : 
                 <span
-                                className="low"
+                                className="high"
                 >
-                                0.489
+                                0.672
                 </span>
 </li>,
               <li>
                 2012
                 : 
                 <span
-                                className="low"
+                                className="high"
                 >
-                                0.479
+                                0.695
                 </span>
 </li>,
               <li>
                 2013
                 : 
                 <span
-                                className="low"
+                                className="high"
                 >
-                                0.488
+                                0.703
                 </span>
 </li>,
               <li>
                 2014
                 : 
                 <span
-                                className="low"
+                                className="high"
                 >
-                                0.49
+                                0.741
                 </span>
 </li>,
             ],
@@ -900,7 +900,7 @@ ShallowWrapper {
                   <span
                     className="low"
 >
-                    0.302
+                    0.24
 </span>,
                 ],
               },
@@ -913,11 +913,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": 0.302,
+                    "children": 0.24,
                     "className": "low",
                   },
                   "ref": null,
-                  "rendered": 0.302,
+                  "rendered": 0.24,
                   "type": "span",
                 },
               ],
@@ -934,7 +934,7 @@ ShallowWrapper {
                   <span
                     className="low"
 >
-                    0.267
+                    0.278
 </span>,
                 ],
               },
@@ -947,11 +947,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": 0.267,
+                    "children": 0.278,
                     "className": "low",
                   },
                   "ref": null,
-                  "rendered": 0.267,
+                  "rendered": 0.278,
                   "type": "span",
                 },
               ],
@@ -968,7 +968,7 @@ ShallowWrapper {
                   <span
                     className="low"
 >
-                    0.354
+                    0.337
 </span>,
                 ],
               },
@@ -981,11 +981,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": 0.354,
+                    "children": 0.337,
                     "className": "low",
                   },
                   "ref": null,
-                  "rendered": 0.354,
+                  "rendered": 0.337,
                   "type": "span",
                 },
               ],
@@ -1002,7 +1002,7 @@ ShallowWrapper {
                   <span
                     className="low"
 >
-                    0.392
+                    0.395
 </span>,
                 ],
               },
@@ -1015,11 +1015,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": 0.392,
+                    "children": 0.395,
                     "className": "low",
                   },
                   "ref": null,
-                  "rendered": 0.392,
+                  "rendered": 0.395,
                   "type": "span",
                 },
               ],
@@ -1034,9 +1034,9 @@ ShallowWrapper {
                   "2008",
                   ": ",
                   <span
-                    className="low"
+                    className="high"
 >
-                    0.385
+                    0.536
 </span>,
                 ],
               },
@@ -1049,11 +1049,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": 0.385,
-                    "className": "low",
+                    "children": 0.536,
+                    "className": "high",
                   },
                   "ref": null,
-                  "rendered": 0.385,
+                  "rendered": 0.536,
                   "type": "span",
                 },
               ],
@@ -1068,9 +1068,9 @@ ShallowWrapper {
                   "2009",
                   ": ",
                   <span
-                    className="low"
+                    className="high"
 >
-                    0.39
+                    0.598
 </span>,
                 ],
               },
@@ -1083,11 +1083,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": 0.39,
-                    "className": "low",
+                    "children": 0.598,
+                    "className": "high",
                   },
                   "ref": null,
-                  "rendered": 0.39,
+                  "rendered": 0.598,
                   "type": "span",
                 },
               ],
@@ -1102,9 +1102,9 @@ ShallowWrapper {
                   "2010",
                   ": ",
                   <span
-                    className="low"
+                    className="high"
 >
-                    0.436
+                    0.64
 </span>,
                 ],
               },
@@ -1117,11 +1117,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": 0.436,
-                    "className": "low",
+                    "children": 0.64,
+                    "className": "high",
                   },
                   "ref": null,
-                  "rendered": 0.436,
+                  "rendered": 0.64,
                   "type": "span",
                 },
               ],
@@ -1136,9 +1136,9 @@ ShallowWrapper {
                   "2011",
                   ": ",
                   <span
-                    className="low"
+                    className="high"
 >
-                    0.489
+                    0.672
 </span>,
                 ],
               },
@@ -1151,11 +1151,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": 0.489,
-                    "className": "low",
+                    "children": 0.672,
+                    "className": "high",
                   },
                   "ref": null,
-                  "rendered": 0.489,
+                  "rendered": 0.672,
                   "type": "span",
                 },
               ],
@@ -1170,9 +1170,9 @@ ShallowWrapper {
                   "2012",
                   ": ",
                   <span
-                    className="low"
+                    className="high"
 >
-                    0.479
+                    0.695
 </span>,
                 ],
               },
@@ -1185,11 +1185,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": 0.479,
-                    "className": "low",
+                    "children": 0.695,
+                    "className": "high",
                   },
                   "ref": null,
-                  "rendered": 0.479,
+                  "rendered": 0.695,
                   "type": "span",
                 },
               ],
@@ -1204,9 +1204,9 @@ ShallowWrapper {
                   "2013",
                   ": ",
                   <span
-                    className="low"
+                    className="high"
 >
-                    0.488
+                    0.703
 </span>,
                 ],
               },
@@ -1219,11 +1219,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": 0.488,
-                    "className": "low",
+                    "children": 0.703,
+                    "className": "high",
                   },
                   "ref": null,
-                  "rendered": 0.488,
+                  "rendered": 0.703,
                   "type": "span",
                 },
               ],
@@ -1238,9 +1238,9 @@ ShallowWrapper {
                   "2014",
                   ": ",
                   <span
-                    className="low"
+                    className="high"
 >
-                    0.49
+                    0.741
 </span>,
                 ],
               },
@@ -1253,11 +1253,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": 0.49,
-                    "className": "low",
+                    "children": 0.741,
+                    "className": "high",
                   },
                   "ref": null,
-                  "rendered": 0.49,
+                  "rendered": 0.741,
                   "type": "span",
                 },
               ],

@@ -2,19 +2,31 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import CompareInstructions from './CompareInstructions';
+import mockData from '../../data/testing_mocks';
 
-it('should match the snapshot', () => {
+describe('CompareInstructions', () => {
+  let wrapper;
+  const mockRemoveComparison = jest.fn();
   const mockedComparisonData = {
-    school1: {
-      data: {2004: 0.302, 2005: 0.267, 2006: 0.354, 2007: 0.392, 2008: 0.385,
-        2009: 0.39, 2010: 0.436, 2011: 0.489, 2012: 0.479, 2013: 0.488, 2014: 0.49},
-      dataType: "Percent",
-      location: "ACADEMY 20"
-    }
+    school1: mockData.cleanedCoKinderData
   }
-  const wrapper = shallow(<CompareInstructions
-    comparisonData={mockedComparisonData}
-    handleCompareCards={() => {}}
-  />)
-  expect(wrapper).toMatchSnapshot();
+
+  beforeEach(() => {
+    wrapper = shallow(
+      <CompareInstructions
+        comparisonData={mockedComparisonData}
+        handleCompareCards={() => {}}
+        removeComparison={mockRemoveComparison}
+      />)
+  })
+
+  it('should match the snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  })
+  
+  it('should execute removeComparison when the small card is clicked', () => {
+    wrapper.find('div').first().simulate('click');
+    expect(mockRemoveComparison.mock.calls.length).toBe(1);
+  })
 })
+

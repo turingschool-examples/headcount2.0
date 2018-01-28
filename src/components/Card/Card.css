@@ -1,10 +1,15 @@
-.Card {
+.selected, .Card {
   margin: 10px;
   padding: 10px;
   box-sizing: border-box;
   border-radius: 40px;
   box-shadow: 2px 2px 2px 2px #e4e4e4;
   background-color: #f4f4f4;
+}
+
+.selected {
+  border: 3px solid #3eafba;
+  box-shadow: 0 0 0 0;
 }
 
 a .Card:hover {
@@ -19,12 +24,14 @@ a .Card:hover {
 
 #small {
   width: 120px;
-  height: 190px;
+  height: 165px;
   border-radius: 26px;
+  border: 2px solid #3eafba;
+  box-shadow: 0 0 0 0;
 }
 
 #small h3 {
-  font-size: 12px;
+  font-size: 9px;
   margin: 3px;
 }
 
