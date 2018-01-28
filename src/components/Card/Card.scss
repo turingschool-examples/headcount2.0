@@ -1,0 +1,59 @@
+$backgroundColor: rgba(255, 255, 255, .1);
+$sublimeGreen: #AAD74F;
+$sublimeRed: #D23D54;
+$sublimeBlue: #78C9D0;
+$sublimeYellow: #FFFF74;
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 250px;
+  border: 1px solid #fff;
+  background: $backgroundColor;
+}
+
+article h3 {
+  color: $sublimeGreen;
+  font-size: 1.5em;
+  margin-bottom: 0px;
+}
+
+article p {
+  margin: 7px;
+}
+
+ul {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin: 3px 3px;
+  }
+
+  .over {
+    color: $sublimeBlue;
+  }
+
+  .under {
+    color: $sublimeRed;
+  }
+
+  .fa {
+    margin-right: 8px;
+  } 
+
+  .fa-bolt {
+    color: yellow;
+  }
+
+  .fa-tint {
+    color: #849FED;
+  }
+}
+
+.clicked {
+  border: 2px solid $sublimeYellow;
+}

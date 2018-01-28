@@ -1,0 +1,36 @@
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 250px;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.1); }
+
+article h3 {
+  color: #AAD74F;
+  font-size: 1.5em;
+  margin-bottom: 0px; }
+
+article p {
+  margin: 7px; }
+
+ul {
+  text-align: left;
+  list-style: none;
+  padding: 0; }
+  ul li {
+    margin: 3px 3px; }
+  ul .over {
+    color: #78C9D0; }
+  ul .under {
+    color: #D23D54; }
+  ul .fa {
+    margin-right: 8px; }
+  ul .fa-bolt {
+    color: yellow; }
+  ul .fa-tint {
+    color: #849FED; }
+
+.clicked {
+  border: 2px solid #FFFF74; }
