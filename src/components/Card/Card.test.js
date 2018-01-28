@@ -5,9 +5,12 @@ import { shallow } from 'enzyme';
 
 describe('Card', () => {
   it('snapshot test', () => {
-    const mockData = {2004: 0.24, 2005: 0.278};
+    const mockData = {2004: 0.24, 2014: 0.278};
     const mockName = 'Colorado';
+    const mockFunction = jest.fn();
     const wrapper = shallow(<Card 
+                              id={mockName}
+                              selectCard={mockFunction}
                               districtName={mockName}
                               data={mockData} />);
 
@@ -15,9 +18,12 @@ describe('Card', () => {
   });
 
   it('should have a li for each data set', () => {
-    const mockData = {2004: 0.24, 2005: 0.278};
+    const mockData = {2004: 0.24, 2014: 0.278};
     const mockName = 'Colorado';
+    const mockFunction = jest.fn();
     const wrapper = shallow(<Card 
+                              id={mockName}
+                              selectCard={mockFunction}
                               districtName={mockName}
                               data={mockData} />);
     

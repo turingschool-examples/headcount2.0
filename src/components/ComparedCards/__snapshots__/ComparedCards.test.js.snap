@@ -6,19 +6,21 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ComparedCards
     makeComparison={[Function]}
+    removeComparison={[Function]}
+    selectCard={[Function]}
     selectedCards={
         Array [
             Object {
               "data": Object {
                 "2004": 0.523,
-                "2005": 0.321,
+                "2014": 0.321,
               },
               "location": "COLORADO",
             },
             Object {
               "data": Object {
                 "2004": 0.283,
-                "2005": 0.432,
+                "2014": 0.432,
               },
               "location": "ACADEMY 20",
             },
@@ -45,12 +47,12 @@ ShallowWrapper {
                     data={
                               Object {
                                         "2004": 0.523,
-                                        "2005": 0.321,
+                                        "2014": 0.321,
                                       }
                     }
                     districtName="COLORADO"
                     id="COLORADO"
-                    selectCard={undefined}
+                    selectCard={[Function]}
           />
           <ComparisonCard
                     comparedObject={undefined}
@@ -59,18 +61,18 @@ ShallowWrapper {
                     data={
                               Object {
                                         "2004": 0.283,
-                                        "2005": 0.432,
+                                        "2014": 0.432,
                                       }
                     }
                     districtName="ACADEMY 20"
                     id="ACADEMY 20"
-                    selectCard={undefined}
+                    selectCard={[Function]}
           />
 </div>,
         <div>
           <button
                     id="remove-comparison"
-                    onClick={undefined}
+                    onClick={[Function]}
           >
                     clear comparison
           </button>
@@ -90,12 +92,12 @@ ShallowWrapper {
               data={
                             Object {
                                           "2004": 0.523,
-                                          "2005": 0.321,
+                                          "2014": 0.321,
                                         }
               }
               districtName="COLORADO"
               id="COLORADO"
-              selectCard={undefined}
+              selectCard={[Function]}
 />,
             <ComparisonCard
               comparedObject={undefined}
@@ -104,12 +106,12 @@ ShallowWrapper {
               data={
                             Object {
                                           "2004": 0.283,
-                                          "2005": 0.432,
+                                          "2014": 0.432,
                                         }
               }
               districtName="ACADEMY 20"
               id="ACADEMY 20"
-              selectCard={undefined}
+              selectCard={[Function]}
 />,
           ],
           "className": "compared-cards",
@@ -123,11 +125,11 @@ ShallowWrapper {
             "props": Object {
               "data": Object {
                 "2004": 0.523,
-                "2005": 0.321,
+                "2014": 0.321,
               },
               "districtName": "COLORADO",
               "id": "COLORADO",
-              "selectCard": undefined,
+              "selectCard": [Function],
             },
             "ref": null,
             "rendered": null,
@@ -151,11 +153,11 @@ ShallowWrapper {
             "props": Object {
               "data": Object {
                 "2004": 0.283,
-                "2005": 0.432,
+                "2014": 0.432,
               },
               "districtName": "ACADEMY 20",
               "id": "ACADEMY 20",
-              "selectCard": undefined,
+              "selectCard": [Function],
             },
             "ref": null,
             "rendered": null,
@@ -171,7 +173,7 @@ ShallowWrapper {
         "props": Object {
           "children": <button
             id="remove-comparison"
-            onClick={undefined}
+            onClick={[Function]}
 >
             clear comparison
 </button>,
@@ -184,7 +186,7 @@ ShallowWrapper {
           "props": Object {
             "children": "clear comparison",
             "id": "remove-comparison",
-            "onClick": undefined,
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": "clear comparison",
@@ -209,12 +211,12 @@ ShallowWrapper {
                         data={
                                     Object {
                                                 "2004": 0.523,
-                                                "2005": 0.321,
+                                                "2014": 0.321,
                                               }
                         }
                         districtName="COLORADO"
                         id="COLORADO"
-                        selectCard={undefined}
+                        selectCard={[Function]}
             />
             <ComparisonCard
                         comparedObject={undefined}
@@ -223,18 +225,18 @@ ShallowWrapper {
                         data={
                                     Object {
                                                 "2004": 0.283,
-                                                "2005": 0.432,
+                                                "2014": 0.432,
                                               }
                         }
                         districtName="ACADEMY 20"
                         id="ACADEMY 20"
-                        selectCard={undefined}
+                        selectCard={[Function]}
             />
 </div>,
           <div>
             <button
                         id="remove-comparison"
-                        onClick={undefined}
+                        onClick={[Function]}
             >
                         clear comparison
             </button>
@@ -254,12 +256,12 @@ ShallowWrapper {
                 data={
                                 Object {
                                                 "2004": 0.523,
-                                                "2005": 0.321,
+                                                "2014": 0.321,
                                               }
                 }
                 districtName="COLORADO"
                 id="COLORADO"
-                selectCard={undefined}
+                selectCard={[Function]}
 />,
               <ComparisonCard
                 comparedObject={undefined}
@@ -268,12 +270,12 @@ ShallowWrapper {
                 data={
                                 Object {
                                                 "2004": 0.283,
-                                                "2005": 0.432,
+                                                "2014": 0.432,
                                               }
                 }
                 districtName="ACADEMY 20"
                 id="ACADEMY 20"
-                selectCard={undefined}
+                selectCard={[Function]}
 />,
             ],
             "className": "compared-cards",
@@ -287,11 +289,11 @@ ShallowWrapper {
               "props": Object {
                 "data": Object {
                   "2004": 0.523,
-                  "2005": 0.321,
+                  "2014": 0.321,
                 },
                 "districtName": "COLORADO",
                 "id": "COLORADO",
-                "selectCard": undefined,
+                "selectCard": [Function],
               },
               "ref": null,
               "rendered": null,
@@ -315,11 +317,11 @@ ShallowWrapper {
               "props": Object {
                 "data": Object {
                   "2004": 0.283,
-                  "2005": 0.432,
+                  "2014": 0.432,
                 },
                 "districtName": "ACADEMY 20",
                 "id": "ACADEMY 20",
-                "selectCard": undefined,
+                "selectCard": [Function],
               },
               "ref": null,
               "rendered": null,
@@ -335,7 +337,7 @@ ShallowWrapper {
           "props": Object {
             "children": <button
               id="remove-comparison"
-              onClick={undefined}
+              onClick={[Function]}
 >
               clear comparison
 </button>,
@@ -348,7 +350,7 @@ ShallowWrapper {
             "props": Object {
               "children": "clear comparison",
               "id": "remove-comparison",
-              "onClick": undefined,
+              "onClick": [Function],
             },
             "ref": null,
             "rendered": "clear comparison",

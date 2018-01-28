@@ -8,10 +8,12 @@ ShallowWrapper {
     data={
         Object {
             "2004": 0.24,
-            "2005": 0.278,
+            "2014": 0.278,
           }
     }
     districtName="Colorado"
+    id="Colorado"
+    selectCard={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -46,7 +48,7 @@ ShallowWrapper {
                     <i
                               className="fa fa-tint"
                     />
-                    2005
+                    2014
                     : 
                     0.278
           </li>
@@ -90,7 +92,7 @@ ShallowWrapper {
               <i
                             className="fa fa-tint"
               />
-              2005
+              2014
               : 
               0.278
 </li>,
@@ -141,7 +143,7 @@ ShallowWrapper {
                 <i
                   className="fa fa-tint"
 />,
-                "2005",
+                "2014",
                 ": ",
                 0.278,
               ],
@@ -160,7 +162,7 @@ ShallowWrapper {
                 "rendered": null,
                 "type": "i",
               },
-              "2005",
+              "2014",
               ": ",
               0.278,
             ],
@@ -199,7 +201,7 @@ ShallowWrapper {
                         <i
                                     className="fa fa-tint"
                         />
-                        2005
+                        2014
                         : 
                         0.278
             </li>
@@ -243,7 +245,7 @@ ShallowWrapper {
                 <i
                                 className="fa fa-tint"
                 />
-                2005
+                2014
                 : 
                 0.278
 </li>,
@@ -294,7 +296,7 @@ ShallowWrapper {
                   <i
                     className="fa fa-tint"
 />,
-                  "2005",
+                  "2014",
                   ": ",
                   0.278,
                 ],
@@ -313,7 +315,7 @@ ShallowWrapper {
                   "rendered": null,
                   "type": "i",
                 },
-                "2005",
+                "2014",
                 ": ",
                 0.278,
               ],

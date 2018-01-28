@@ -6,7 +6,8 @@ import { shallow } from 'enzyme';
 describe('Search Component', () => {
 
   it('should match the snapshot', () => {
-    const renderedComp = shallow(<Search />);
+    const mock = jest.fn();
+    const renderedComp = shallow(<Search handleSubmit={mock}/>);
     expect(renderedComp).toMatchSnapshot();
   });
 
