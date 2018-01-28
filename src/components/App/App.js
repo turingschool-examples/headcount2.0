@@ -22,7 +22,7 @@ class App extends Component {
     const foundItems = this.district.findAllMatches(searchValue);
     this.setState({
       data: foundItems
-    })
+    });
   }
 
   handleClick = (e) => {
@@ -44,7 +44,7 @@ class App extends Component {
       case 1:
         truth.unshift(selectedDistrict)
         this.makeComparison(truth[0], truth[1])
-        break
+        break;
       default:
         truth.unshift(selectedDistrict)
     }
