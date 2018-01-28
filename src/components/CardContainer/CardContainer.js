@@ -28,7 +28,9 @@ const CardContainer = ({ districtData, selectCard, comparedCards }) => {
 };
 
 CardContainer.propTypes = {
-  districtData: PropTypes.object.isRequired
+  districtData: PropTypes.object.isRequired,
+  selectCard: PropTypes.func.isRequired,
+  comparedCards: PropTypes.array.isRequired
 };
 
 export default CardContainer;

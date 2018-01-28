@@ -38,7 +38,10 @@ Card.propTypes = {
   data: PropTypes.shape({
     2004: PropTypes.number.isRequired,
     2014: PropTypes.number.isRequired
-  })
+  }),
+  selectCard: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  clicked: PropTypes.string
 };
 
 export default Card;

@@ -2,11 +2,12 @@ import React from 'react';
 import Card from '../Card/Card.js';
 import './ComparedCards.css';
 import ComparisonCard from '../ComparisonCard/ComparisonCard';
+import PropTypes from 'prop-types';
 
 const ComparedCards = ({ selectedCards, selectCard, makeComparison, removeComparison }) => {
   let comparedObject;
   if (selectedCards.length > 1) {
-    comparedObject = makeComparison(selectedCards[0].location, selectedCards[1].location)
+    comparedObject = makeComparison(selectedCards[0].location, selectedCards[1].location);
   }
   const selectedCardsArray = selectedCards.map((district, key) => 
     <Card 
@@ -33,7 +34,13 @@ const ComparedCards = ({ selectedCards, selectCard, makeComparison, removeCompar
         </button>
       </div>
     </article>
-  )
-}
+  );
+};
 
+ComparedCards.propTypes = {
+  selectedCards: PropTypes.array.isRequired,
+  selectCard: PropTypes.func.isRequired,
+  makeComparison: PropTypes.func.isRequired,
+  removeComparison: PropTypes.func.isRequired
+};
 export default ComparedCards;

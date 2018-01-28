@@ -37,27 +37,27 @@ class App extends Component {
   }
 
   deselectCard = (id) => {
-    let filteredArr = this.state.selectedCards.filter( card => card.location !== id )
-    this.setState({ selectedCards: filteredArr })
+    let filteredArr = this.state.selectedCards.filter(card => card.location !== id);
+    this.setState({ selectedCards: filteredArr });
   }
 
-  selectCard = (id, e) => {
-    const selected = this.state.selectedCards
-
-    if(selected.length === 2) {
-      selected.shift();
+  selectCard = (id) => {
+    if (this.state.selectedCards.length === 2) {
+      this.state.selectedCards.shift();
     }
 
-    if (selected.length >= 1 && selected[0].location === id ) {
-      selected.shift();
+    if (this.state.selectedCards.length >= 1 
+      && this.state.selectedCards[0].location === id) {
+      this.state.selectedCards.pop();
     }
 
-    let selectedCards = [...selected, this.state.districtData[id]];
-    this.setState({selectedCards})
+    let selectedCards = [...this.state.selectedCards,
+      this.state.districtData[id]];
+    this.setState({selectedCards});
   }
 
   removeComparison = () => {
-    this.setState({selectedCards: []})
+    this.setState({selectedCards: []});
   }
 
 
