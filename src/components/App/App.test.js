@@ -60,3 +60,5 @@ it('should have the compare container in the DOM within it when there are two se
   expect(wrapper.find('article.compared-cards-container').length).toEqual(1)
 })
 
+//for each function make instance of and test that it returns
+

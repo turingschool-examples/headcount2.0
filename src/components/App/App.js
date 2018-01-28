@@ -56,8 +56,6 @@ class App extends Component {
 
     let selectedCards = [...this.state.selectedCards, this.state.districtData[id]];
     this.setState({selectedCards})
-
-
   }
 
   removeComparison = () => {

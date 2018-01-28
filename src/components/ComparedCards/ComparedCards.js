@@ -29,7 +29,7 @@ const ComparedCards = ({ selectedCards, selectCard, makeComparison, removeCompar
       </div>
       <div>
         <button 
-          id="remove comparison"
+          id="remove-comparison"
           onClick={removeComparison}>
             clear comparison
         </button>
