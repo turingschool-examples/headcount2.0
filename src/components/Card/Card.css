@@ -1,27 +1,35 @@
+
 .district-card, .selected {
+  align-self: center;
+  flex-basis: auto;
+  background-color: white;
   text-align: center;
   display: inline-block;
-  width: 275px;
-  height: 400px;
+  width: 40vh;
+  height: 60vh;
   border-radius: 5px;
   box-shadow: 0px 8px 10px -1px rgba(0,0,0,0.3);
-  margin: 15px 10px 15px 0;
+  margin: 2% 1% 2% 0;
 }
 
+//need to make font size responsive
 
 .district-header {
+  font-size: 24px;
   pointer-events: none;
 }
 
 
 .district-list {
   list-style: none;
-  width: 200px;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
   pointer-events: none;
-
 }
+
 
 .selected {
   margin: auto;
-  border: 1px solid red;
+  border: 6px solid #ef8f38;
 }

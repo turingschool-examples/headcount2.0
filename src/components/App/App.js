@@ -62,9 +62,20 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <div>Welcome To Headcount 2.0</div>
-        <SearchBar filterCards={this.filterCards} />
+      <div className='App'>
+        <header>
+          <div className='top'>
+            <img className='line' src={ require('./line.svg') } />
+            <p className='welcome'>Welcome to </p>
+            <img className='line' src={ require('./line.svg') } />
+          </div> 
+          <logo>
+            <img className ='icon' src={ require('./icon.svg') } />
+            <h1>Headcount 2.0</h1>
+          </logo>  
+          <p> A simulated data search app built in React </p>
+        </header>  
+        <SearchBar className='SearchBar' filterCards={this.filterCards} />
         <CardContainer {...this.state} handleClick={this.handleClick}/>
       </div>
     );

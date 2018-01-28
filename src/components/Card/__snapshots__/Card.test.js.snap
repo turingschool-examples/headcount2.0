@@ -1,0 +1,348 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Component it should render without crashing 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    data={
+        Object {
+            "data": Object {
+              "2004": 0.24,
+              "2005": 0.278,
+              "2006": 0.337,
+              "2007": 0.395,
+              "2008": 0.536,
+              "2009": 0.598,
+              "2010": 0.64,
+              "2011": 0.672,
+              "2012": 0.695,
+              "2013": 0.703,
+              "2014": 0.741,
+            },
+          }
+    }
+    location="Colorado"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3
+          className="district-header"
+>
+           
+          Colorado
+           
+</h3>,
+        <ul
+          className="district-list"
+>
+           
+          <li>
+                     
+                    data
+                     : 
+                    Object {
+                              "2004": 0.24,
+                              "2005": 0.278,
+                              "2006": 0.337,
+                              "2007": 0.395,
+                              "2008": 0.536,
+                              "2009": 0.598,
+                              "2010": 0.64,
+                              "2011": 0.672,
+                              "2012": 0.695,
+                              "2013": 0.703,
+                              "2014": 0.741,
+                            }
+                     
+          </li>
+           
+</ul>,
+      ],
+      "className": "district-card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            " ",
+            "Colorado",
+            " ",
+          ],
+          "className": "district-header",
+        },
+        "ref": null,
+        "rendered": Array [
+          " ",
+          "Colorado",
+          " ",
+        ],
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            " ",
+            Array [
+              <li>
+                 
+                data
+                 : 
+                Object {
+                                "2004": 0.24,
+                                "2005": 0.278,
+                                "2006": 0.337,
+                                "2007": 0.395,
+                                "2008": 0.536,
+                                "2009": 0.598,
+                                "2010": 0.64,
+                                "2011": 0.672,
+                                "2012": 0.695,
+                                "2013": 0.703,
+                                "2014": 0.741,
+                              }
+                 
+</li>,
+            ],
+            " ",
+          ],
+          "className": "district-list",
+        },
+        "ref": null,
+        "rendered": Array [
+          " ",
+          Object {
+            "instance": null,
+            "key": "data0",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " ",
+                "data",
+                " : ",
+                Object {
+                  "2004": 0.24,
+                  "2005": 0.278,
+                  "2006": 0.337,
+                  "2007": 0.395,
+                  "2008": 0.536,
+                  "2009": 0.598,
+                  "2010": 0.64,
+                  "2011": 0.672,
+                  "2012": 0.695,
+                  "2013": 0.703,
+                  "2014": 0.741,
+                },
+                " ",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              "data",
+              " : ",
+              Object {
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.337,
+                "2007": 0.395,
+                "2008": 0.536,
+                "2009": 0.598,
+                "2010": 0.64,
+                "2011": 0.672,
+                "2012": 0.695,
+                "2013": 0.703,
+                "2014": 0.741,
+              },
+              " ",
+            ],
+            "type": "li",
+          },
+          " ",
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3
+            className="district-header"
+>
+             
+            Colorado
+             
+</h3>,
+          <ul
+            className="district-list"
+>
+             
+            <li>
+                         
+                        data
+                         : 
+                        Object {
+                                    "2004": 0.24,
+                                    "2005": 0.278,
+                                    "2006": 0.337,
+                                    "2007": 0.395,
+                                    "2008": 0.536,
+                                    "2009": 0.598,
+                                    "2010": 0.64,
+                                    "2011": 0.672,
+                                    "2012": 0.695,
+                                    "2013": 0.703,
+                                    "2014": 0.741,
+                                  }
+                         
+            </li>
+             
+</ul>,
+        ],
+        "className": "district-card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              " ",
+              "Colorado",
+              " ",
+            ],
+            "className": "district-header",
+          },
+          "ref": null,
+          "rendered": Array [
+            " ",
+            "Colorado",
+            " ",
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              " ",
+              Array [
+                <li>
+                   
+                  data
+                   : 
+                  Object {
+                                    "2004": 0.24,
+                                    "2005": 0.278,
+                                    "2006": 0.337,
+                                    "2007": 0.395,
+                                    "2008": 0.536,
+                                    "2009": 0.598,
+                                    "2010": 0.64,
+                                    "2011": 0.672,
+                                    "2012": 0.695,
+                                    "2013": 0.703,
+                                    "2014": 0.741,
+                                  }
+                   
+</li>,
+              ],
+              " ",
+            ],
+            "className": "district-list",
+          },
+          "ref": null,
+          "rendered": Array [
+            " ",
+            Object {
+              "instance": null,
+              "key": "data0",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  "data",
+                  " : ",
+                  Object {
+                    "2004": 0.24,
+                    "2005": 0.278,
+                    "2006": 0.337,
+                    "2007": 0.395,
+                    "2008": 0.536,
+                    "2009": 0.598,
+                    "2010": 0.64,
+                    "2011": 0.672,
+                    "2012": 0.695,
+                    "2013": 0.703,
+                    "2014": 0.741,
+                  },
+                  " ",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                "data",
+                " : ",
+                Object {
+                  "2004": 0.24,
+                  "2005": 0.278,
+                  "2006": 0.337,
+                  "2007": 0.395,
+                  "2008": 0.536,
+                  "2009": 0.598,
+                  "2010": 0.64,
+                  "2011": 0.672,
+                  "2012": 0.695,
+                  "2013": 0.703,
+                  "2014": 0.741,
+                },
+                " ",
+              ],
+              "type": "li",
+            },
+            " ",
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
