@@ -54,5 +54,5 @@ input[type=text] {
 }
 
 .error {
-  border: 2px solid red;
+  outline-color: red;
 }

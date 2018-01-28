@@ -1,5 +1,6 @@
+/* eslint-disable */
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import CardContainer from './CardContainer';
 
 describe('CardContainer', () => {
@@ -12,7 +13,7 @@ describe('CardContainer', () => {
         2009: 0.39, 2010: 0.436, 2011: 0.489, 2012: 0.479, 2013: 0.488, 2014: 0.49},
       dataType: "Percent",
       location: "ACADEMY 20"}]
-    wrapper = mount(<CardContainer 
+    wrapper = shallow(<CardContainer 
                           schoolData={mockedState}
                           handleCompareCards={mockedHandleCompareCards}
                     />)
@@ -23,8 +24,11 @@ describe('CardContainer', () => {
     expect(wrapper).toBeDefined();
   })
 
-  it('should render Cards', () => {
-    //add snapshot but forgot syntax
-    expect(wrapper.find('.Card').length).toEqual(1)
+  it('should render all the Cards it recieves', () => {
+    expect(wrapper.find('Card').length).toEqual(1)
+  })
+
+  it('should match the snapshot', () => {
+    expect(wrapper).toMatchSnapshot()
   })
 })

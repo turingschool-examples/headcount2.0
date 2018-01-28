@@ -35,8 +35,16 @@ const Comparison = ({comparisonData, handleCompareCards, removeComparison}) => {
       />
       <button onClick={ removeComparison }>Reset</button>
     </section>
-  )
-}
+  );
+};
+
+const { array, func } = PropTypes;
+
+Comparison.propTypes = {
+  comparisonData: array.isRequired,
+  handleCompareCards: func.isRequired,
+  removeComparison: func.isRequired
+};
 
 const { shape, string, objectOf, number, func, object } = PropTypes;
 

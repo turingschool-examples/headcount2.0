@@ -4,34 +4,33 @@ import Comparison from '../Comparison/Comparison';
 import PropTypes from 'prop-types';
 import './CompareContainer.css';
 
-const CompareContainer = ({comparisonData, handleCompareCards, removeComparison}) => {
+const CompareContainer = 
+({comparisonData, handleCompareCards, removeComparison}) => {
 
   const getDisplay = () => {
     if (!Object.keys(comparisonData).length) {
       return; 
     } else if (Object.keys(comparisonData).length === 1) {
-        return (
-          <CompareInstructions 
-            comparisonData={ comparisonData }
-            handleCompareCards={ handleCompareCards }
-          />
-        );
+      return (
+        <CompareInstructions 
+          comparisonData={ comparisonData }
+          handleCompareCards={ handleCompareCards }
+        />
+      );
     } else {
       return (
         <Comparison
-            comparisonData={ comparisonData }
-            handleCompareCards={ handleCompareCards }
-            removeComparison={ removeComparison }
+          comparisonData={ comparisonData }
+          handleCompareCards={ handleCompareCards }
+          removeComparison={ removeComparison }
         />
       );
     }
-  }
-
-  const display = getDisplay();
+  };
 
   return (
     <section className="CompareContainer">
-      { display }
+      {getDisplay()}
     </section>
   );
 };

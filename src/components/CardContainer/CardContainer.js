@@ -7,12 +7,13 @@ import './CardContainer.css';
 const CardContainer = ({schoolData, handleCompareCards}) => {
   const schoolsToRender = Object.keys(schoolData)
     .map((school, index) => 
-      <Card
-        key={index}
-        schoolData={schoolData[school]} 
-        handleCompareCards={handleCompareCards}
-        size='large'
-      />
+      <a href='#' key={index}>
+        <Card
+          schoolData={schoolData[school]} 
+          handleCompareCards={handleCompareCards}
+          size='large'
+        />
+      </a>
     );
 
   return (
