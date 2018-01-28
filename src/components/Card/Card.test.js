@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import Card from './Card';
 import { shallow } from 'enzyme';
@@ -19,6 +20,7 @@ describe('Card', () => {
     const wrapper = shallow(<Card 
                               districtName={mockName}
                               data={mockData} />);
+    
     expect(wrapper.find('li').length).toEqual(2);
   });
 });

@@ -69,7 +69,7 @@ ShallowWrapper {
 </div>,
         <div>
           <button
-                    id="remove comparison"
+                    id="remove-comparison"
                     onClick={undefined}
           >
                     clear comparison
@@ -170,7 +170,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <button
-            id="remove comparison"
+            id="remove-comparison"
             onClick={undefined}
 >
             clear comparison
@@ -183,7 +183,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "clear comparison",
-            "id": "remove comparison",
+            "id": "remove-comparison",
             "onClick": undefined,
           },
           "ref": null,
@@ -233,7 +233,7 @@ ShallowWrapper {
 </div>,
           <div>
             <button
-                        id="remove comparison"
+                        id="remove-comparison"
                         onClick={undefined}
             >
                         clear comparison
@@ -334,7 +334,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <button
-              id="remove comparison"
+              id="remove-comparison"
               onClick={undefined}
 >
               clear comparison
@@ -347,7 +347,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "clear comparison",
-              "id": "remove comparison",
+              "id": "remove-comparison",
               "onClick": undefined,
             },
             "ref": null,

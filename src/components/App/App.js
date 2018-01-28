@@ -36,7 +36,7 @@ class App extends Component {
   }
 
   deselectCard = (id) => {
-    let filteredArr = this.state.selectedCards.filter( card => card.location !== id );
+    let filteredArr = this.state.selectedCards.filter(card => card.location !== id);
     this.setState({ selectedCards: filteredArr });
   }
 
@@ -50,7 +50,8 @@ class App extends Component {
       this.state.selectedCards.pop();
     }
 
-    let selectedCards = [...this.state.selectedCards, this.state.districtData[id]];
+    let selectedCards = [...this.state.selectedCards,
+      this.state.districtData[id]];
     this.setState({selectedCards});
   }
 

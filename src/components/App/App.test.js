@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.js';
@@ -68,7 +69,7 @@ it('the handleSubmit function should set the districtData state to the searched 
   expect(wrapper.state().districtData).toEqual(expected);
 });
 
-it('the makeComparison function should show a comparison card when there selectedCards array length is 2', () => {
+it('the makeComparison function should show a comparison card when the selectedCards array length is 2', () => {
   const wrapper = mount(<App />);
   const mockData = {COLORADO: {data:{2004: 0.154, 2014: 0.555}, location: 'COLORADO'}, 'ACADEMY 20': {data:{2004: 0.222, 2014: 0.777}, location: 'ACADEMY 20'}};
   wrapper.setState({districtData: mockData});
