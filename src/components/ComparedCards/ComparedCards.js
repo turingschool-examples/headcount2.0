@@ -4,7 +4,6 @@ import './ComparedCards.css';
 import ComparisonCard from '../ComparisonCard/ComparisonCard';
 
 const ComparedCards = ({ selectedCards, selectCard, makeComparison, removeComparison }) => {
-  
   let comparedObject;
   if (selectedCards.length > 1) {
     comparedObject = makeComparison(selectedCards[0].location, selectedCards[1].location)
