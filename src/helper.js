@@ -27,12 +27,9 @@ export default class DistrictRepository {
   }
 
   findByName(search) {
-    if (!search) {
-      return undefined;
-    } 
     let searched = search.toUpperCase();
     
-    return this.data[searched];
+    return this.data[searched] ;
   }
 
   findAllMatches(searched) {
