@@ -1,3 +1,5 @@
+/* eslint-disable */ 
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CardContainer from './CardContainer';
@@ -28,7 +30,6 @@ describe( 'CardContainer', () => {
         }}]
       
     const renderedComp = shallow(<CardContainer data={mockCard}/>);
-
     expect(renderedComp).toMatchSnapshot();
   });
 
