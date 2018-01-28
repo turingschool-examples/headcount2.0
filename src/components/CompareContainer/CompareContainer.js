@@ -6,7 +6,6 @@ import './CompareContainer.css';
 
 const CompareContainer = 
 ({comparisonData, handleCompareCards, removeComparison}) => {
-
   const getDisplay = () => {
     if (!Object.keys(comparisonData).length) {
       return; 
@@ -14,7 +13,7 @@ const CompareContainer =
       return (
         <CompareInstructions 
           comparisonData={ comparisonData }
-          handleCompareCards={ handleCompareCards }
+          handleCompareCards={ removeComparison }
         />
       );
     } else {
@@ -57,6 +56,6 @@ CompareContainer.propTypes = {
       data: objectOf(
         number.isRequired)
     }))
-}
+};
 
 export default CompareContainer;

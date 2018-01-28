@@ -46,14 +46,16 @@ it('should update state when handleSearch is activated', () => {
 it('when the first card is clicked its object should be entered in state', () => {
   const wrapper = mount(<App />);
   wrapper.find('article').first().simulate('click');
-  expect(wrapper.state().compareSchool1)
+  expect(wrapper.state().comparisonData)
     .toEqual({
+      school1 : {
       "data": {
         "2004": 0.24, "2005": 0.278, "2006": 0.337, "2007": 0.395, "2008": 0.536,
         "2009": 0.598, "2010": 0.64, "2011": 0.672, "2012": 0.695, "2013": 0.703,
         "2014": 0.741},
       "dataType": "Percent",
       "location": "COLORADO"
+      }
     });
 });
 
@@ -62,10 +64,29 @@ it('when a 2nd card is clicked it puts a comparison object in state', () => {
   const wrapper = mount(<App />);
   wrapper.find('article').first().simulate('click');
   wrapper.find('article').last().simulate('click');
-  expect(wrapper.state().comparison)
+  expect(wrapper.state().comparisonData)
     .toEqual({
-      "COLORADO": 0.53,
-      "YUMA SCHOOL DISTRICT 1": 0.909,
-      "compared": 0.583
+      comparison: {
+        "COLORADO": 0.53,
+        "YUMA SCHOOL DISTRICT 1": 0.909,
+        "compared": 0.583
+      },
+      school1: {
+        data: {
+          2004: 0.24, 2005: 0.278, 2006: 0.337, 2007: 0.395,
+          2008: 0.536, 2009: 0.598, 2010: 0.64, 2011: 0.672,
+          2012: 0.695, 2013: 0.703, 2014: 0.741
+        },
+        dataType: "Percent",
+        location: "COLORADO"
+      },
+      school2: {
+        data: {
+          2004: 0, 2005: 1, 2006: 1, 2007: 1, 2008: 1, 2009: 1,
+          2010: 1, 2011: 1, 2012: 1, 2013: 1, 2014: 1
+        },
+        dataType: "Percent",
+        location: "YUMA SCHOOL DISTRICT 1"
+      }
     });
 });

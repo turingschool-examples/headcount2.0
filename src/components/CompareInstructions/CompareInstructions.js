@@ -2,8 +2,6 @@ import React from 'react';
 import Card from '../Card/Card';
 import PropTypes from 'prop-types';
 import arrow from '../../images/arrow2.gif';
-import PropTypes from 'prop-types';
-
 
 const CompareInstructions = ({ comparisonData, handleCompareCards }) => {
   return (
@@ -18,19 +16,15 @@ const CompareInstructions = ({ comparisonData, handleCompareCards }) => {
         <p className='instructions'>
           click another to compare
         </p>
-        <img src={arrow} alt="click another card to see a comparison of the two" />
+        <img
+          src={arrow}
+          alt="click another card to see a comparison of the two"
+        />
       </div>
       <div className='shadow-card'>
       </div>
     </section>
   );
-};
-
-const { array, func } = PropTypes;
-
-CompareInstructions.propTypes = {
-  comparisonData: array.isRequired,
-  handleCompareCards: func.isRequired
 };
 
 const { shape, string, objectOf, number, func, object } = PropTypes;
@@ -54,6 +48,6 @@ CompareInstructions.propTypes = {
       data: objectOf(
         number.isRequired)
     }))
-}
+};
 
 export default CompareInstructions;

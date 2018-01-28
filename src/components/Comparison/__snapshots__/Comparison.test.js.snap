@@ -6,8 +6,13 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Comparison
     comparisonData={
-        Array [
-            Object {
+        Object {
+            "comparison": Object {
+              "ACADEMY 20": 0.407,
+              "AKRON R-1": 0.619,
+              "compared": 0.658,
+            },
+            "school1": Object {
               "data": Object {
                 "2004": 0.302,
                 "2005": 0.267,
@@ -24,7 +29,7 @@ ShallowWrapper {
               "dataType": "Percent",
               "location": "ACADEMY 20",
             },
-            Object {
+            "school2": Object {
               "data": Object {
                 "2004": 0,
                 "2005": 0,
@@ -41,12 +46,7 @@ ShallowWrapper {
               "dataType": "Percent",
               "location": "AKRON R-1",
             },
-            Object {
-              "ACADEMY 20": 0.407,
-              "AKRON R-1": 0.619,
-              "compared": 0.658,
-            },
-          ]
+          }
     }
     handleCompareCards={[Function]}
     removeComparison={[Function]}
