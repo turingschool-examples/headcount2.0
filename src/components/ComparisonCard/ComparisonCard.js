@@ -9,6 +9,7 @@ const ComparisonCard = ({comparedObject}) => {
     const d2Name = Object.keys(comparedObject)[1]
     const d2Avg = comparedObject[Object.keys(comparedObject)[1]]
     const compareRatio = comparedObject.compared
+    
     return (
       <article>
         <h3>{d1Name}</h3>
