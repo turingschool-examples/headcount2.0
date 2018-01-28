@@ -23,4 +23,4 @@ Card.propTypes = {
 }
   
 
-export default Card
+export default Card;

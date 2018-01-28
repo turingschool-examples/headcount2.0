@@ -60,8 +60,15 @@ class App extends Component {
     return (
       <div className='App'>
         <header>
-          <p>Welcome To </p>
-          <h1>Headcount 2.0</h1>
+          <div className='top'>
+            <img className='line' src={ require('./line.svg') } />
+            <p className='welcome'>Welcome to </p>
+            <img className='line' src={ require('./line.svg') } />
+          </div> 
+          <logo>
+            <img className ='icon' src={ require('./icon.svg') } />
+            <h1>Headcount 2.0</h1>
+          </logo>  
           <p> A simulated data search app built in React </p>
         </header>  
         <SearchBar className='SearchBar' filterCards={this.filterCards} />
