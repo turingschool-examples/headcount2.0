@@ -25,6 +25,7 @@ ShallowWrapper {
           filterCards={[Function]}
 />,
         <CardContainer
+          compared={Array []}
           data={
                     Array [
                               Object {
@@ -2925,6 +2926,8 @@ ShallowWrapper {
                               },
                             ]
           }
+          handleClick={[Function]}
+          selected={Array []}
 />,
       ],
     },
@@ -2957,6 +2960,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "compared": Array [],
           "data": Array [
             Object {
               "data": Object {
@@ -5855,6 +5859,8 @@ ShallowWrapper {
               "location": "YUMA SCHOOL DISTRICT 1",
             },
           ],
+          "handleClick": [Function],
+          "selected": Array [],
         },
         "ref": null,
         "rendered": null,
@@ -5877,6 +5883,7 @@ ShallowWrapper {
             filterCards={[Function]}
 />,
           <CardContainer
+            compared={Array []}
             data={
                         Array [
                                     Object {
@@ -8777,6 +8784,8 @@ ShallowWrapper {
                                     },
                                   ]
             }
+            handleClick={[Function]}
+            selected={Array []}
 />,
         ],
       },
@@ -8809,6 +8818,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "compared": Array [],
             "data": Array [
               Object {
                 "data": Object {
@@ -11707,6 +11717,8 @@ ShallowWrapper {
                 "location": "YUMA SCHOOL DISTRICT 1",
               },
             ],
+            "handleClick": [Function],
+            "selected": Array [],
           },
           "ref": null,
           "rendered": null,

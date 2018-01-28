@@ -13,7 +13,8 @@ class App extends Component {
 
     this.state = {
       data: this.district.findAllMatches(),
-      selected: []
+      selected: [],
+      compared: []
     }
   }
 
@@ -21,12 +22,13 @@ class App extends Component {
     const foundItems = this.district.findAllMatches(searchValue);
     this.setState({
       data: foundItems
-    })
+    });
   }
 
   handleClick = (e) => {
-    const truth = this.state.selected 
+    const truth = this.state.selected
     const selectedDistrict = this.district.findByName(e.target.id)
+
     selectedDistrict.style = 'selected'
 
     this.manageSelected(truth, selectedDistrict)
@@ -42,7 +44,7 @@ class App extends Component {
       case 1:
         truth.unshift(selectedDistrict)
         this.makeComparison(truth[0], truth[1])
-        break
+        break;
       default:
         truth.unshift(selectedDistrict)
     }
@@ -52,8 +54,10 @@ class App extends Component {
   }
 
   makeComparison = (dist1, dist2) => {
-    console.log(this.district.compareDistrictAverages(dist1.location, dist2.location))
-
+    const compared = Object.entries(this.district.compareDistrictAverages(dist1.location, dist2.location))
+    this.setState({
+      compared
+    })
   }
 
   render() {
