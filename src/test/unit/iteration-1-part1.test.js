@@ -1,3 +1,5 @@
+ /* eslint-disable */ 
+
 import DistrictRepository from '../../helper.js';
 import kinderData from '../../kindergartners_in_full_day_program.js';
 

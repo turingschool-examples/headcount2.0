@@ -9,55 +9,61 @@ class App extends Component {
   constructor() {
     super();
     
-    this.district = new DistrictRepository(kinderData)
+    this.district = new DistrictRepository(kinderData);
 
     this.state = {
       data: this.district.findAllMatches(),
       selected: [],
       compared: []
-    }
+    };
   }
 
-  filterCards = (searchValue) => {
+  filterCards = (searchValue = '') => {
     const foundItems = this.district.findAllMatches(searchValue);
     this.setState({
       data: foundItems
     });
   }
 
-  handleClick = (e) => {
-    const truth = this.state.selected
-    const selectedDistrict = this.district.findByName(e.target.id)
+  handleClick = (ev) => {
+    const truth = this.state.selected;
+    const selectedDistrict = this.district.findByName(ev.target.id);
 
-    selectedDistrict.style = 'selected'
+    selectedDistrict.style = 'selected';
 
-    this.manageSelected(truth, selectedDistrict)
+    this.manageSelected(truth, selectedDistrict);
   }
 
   manageSelected = (truth, selectedDistrict) => {
     switch (truth.length) {
-      case 2:
-        truth.shift()
-        truth.push(selectedDistrict)
-        this.makeComparison(truth[0], truth[1])
-        break;
-      case 1:
-        truth.unshift(selectedDistrict)
-        this.makeComparison(truth[0], truth[1])
-        break;
-      default:
-        truth.unshift(selectedDistrict)
+    case 2:
+      truth.shift();
+      truth.push(selectedDistrict);
+      this.makeComparison(truth[0], truth[1]);
+      break;
+    case 1:
+      truth.unshift(selectedDistrict);
+      this.makeComparison(truth[0], truth[1]);
+      break;
+    default:
+      truth.unshift(selectedDistrict);
     }
     this.setState({
       selected: truth
-    })
+    });
   }
 
   makeComparison = (dist1, dist2) => {
-    const compared = Object.entries(this.district.compareDistrictAverages(dist1.location, dist2.location))
+    const compared = Object.entries(
+      this.district.compareDistrictAverages(
+        dist1.location, 
+        dist2.location
+      )
+    );
+
     this.setState({
       compared
-    })
+    });
   }
 
   render() {

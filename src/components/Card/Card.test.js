@@ -1,3 +1,5 @@
+/* eslint-disable */ 
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Card from './Card.js';
@@ -26,11 +28,6 @@ describe('Card Component', () => {
         }};
 
     const renderedCard = shallow(<Card location={location} data={mockData} />);
-    
-    console.log(renderedCard.props)
     expect(renderedCard).toMatchSnapshot();   
   })
 })
-
-
-// Should be selected when clicked
