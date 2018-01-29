@@ -43,16 +43,15 @@ class App extends Component {
   }
 
   selectCard = (id) => {
-    if (this.state.selectedCards.length === 2) {
-      this.state.selectedCards.shift();
+    const selected = this.state.selectedCards;
+
+    if (selected.length >= 1 && selected[0].location === id) {
+      selected.splice(0, 1);
+    } else if (selected.length > 1 && selected[1].location === id || selected.length === 2){
+      selected.splice(1, 1)
     }
 
-    if (this.state.selectedCards.length >= 1 && this.state.selectedCards[0].location === id) {
-      this.state.selectedCards.pop();
-    }
-
-    let selectedCards = [...this.state.selectedCards,
-      this.state.districtData[id]];
+    const selectedCards = [...selected, this.state.districtData[id]];
     this.setState({selectedCards});
   }
 
