@@ -9,7 +9,7 @@ const ComparedCards = ({ selectedCards, selectCard, makeComparison, removeCompar
 
   if (selectedCards.length > 1) {
     const d1 = selectedCards[0].location;
-    const d2 = selectedCards[2].location;
+    const d2 = selectedCards[1].location;
 
     comparedObject = makeComparison(d1, d2);
   }

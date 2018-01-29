@@ -23,8 +23,8 @@ class App extends Component {
       if (!districtObj[match]) {
         districtObj[match] = district.data[match];
       }
-        return districtObj;
-      }, {});
+      return districtObj;
+    }, {});
 
     this.setState({districtData});
   }
@@ -37,7 +37,8 @@ class App extends Component {
   }
 
   deselectCard = (id) => {
-    let filteredArr = this.state.selectedCards.filter(card => card.location !== id);
+    const selected = this.state.selectedCards;
+    const filteredArr = selected.filter(card => card.location !== id);
     this.setState({ selectedCards: filteredArr });
   }
 
@@ -46,8 +47,7 @@ class App extends Component {
       this.state.selectedCards.shift();
     }
 
-    if (this.state.selectedCards.length >= 1 
-      && this.state.selectedCards[0].location === id) {
+    if (this.state.selectedCards.length >= 1 && this.state.selectedCards[0].location === id) {
       this.state.selectedCards.pop();
     }
 
