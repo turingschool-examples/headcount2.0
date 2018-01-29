@@ -4,10 +4,12 @@ import './CardContainer.css';
 import PropTypes from 'prop-types';
 
 const CardContainer = ({ districtData, selectCard, comparedCards }) => {
-  const clicked = (district) => {
-    const match = comparedCards.find( card => {
-      return card.location === district.location;
+  
+  const clicked = (location) => {
+    const match = comparedCards.find(card => {
+      card.location === location.location;
     });
+
     return match ? "clicked" : "";
   };
 

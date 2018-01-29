@@ -25,6 +25,7 @@ class App extends Component {
       }
       return districtObj;
     }, {});
+
     this.setState({districtData});
   }
 
@@ -36,22 +37,21 @@ class App extends Component {
   }
 
   deselectCard = (id) => {
-    let filteredArr = this.state.selectedCards.filter(card => card.location !== id);
+    const selected = this.state.selectedCards;
+    const filteredArr = selected.filter(card => card.location !== id);
     this.setState({ selectedCards: filteredArr });
   }
 
   selectCard = (id) => {
-    if (this.state.selectedCards.length === 2) {
-      this.state.selectedCards.shift();
+    const select = this.state.selectedCards;
+
+    if (select.length >= 1 && select[0].location === id) {
+      select.splice(0, 1);
+    } else if (select.length > 1 && select[1].location === id || select.length === 2){
+      select.splice(1, 1);
     }
 
-    if (this.state.selectedCards.length >= 1 
-      && this.state.selectedCards[0].location === id) {
-      this.state.selectedCards.pop();
-    }
-
-    let selectedCards = [...this.state.selectedCards,
-      this.state.districtData[id]];
+    const selectedCards = [...select, this.state.districtData[id]];
     this.setState({selectedCards});
   }
 
@@ -65,6 +65,7 @@ class App extends Component {
       <div className="App">
         <h1>HEADCOUNT</h1>
         <Search handleSubmit={this.handleSubmit}/>
+        
         {
           this.state.selectedCards.length > 0 &&
           <ComparedCards 
@@ -74,6 +75,7 @@ class App extends Component {
             removeComparison={this.removeComparison}
           />
         }
+
         <CardContainer 
           districtData={this.state.districtData}
           comparedCards={this.state.selectedCards}

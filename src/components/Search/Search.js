@@ -10,14 +10,10 @@ class Search extends Component {
     };
   }
 
-  handleInput = (event) => {
-    this.setState({query: event.target.value});
-    this.props.handleSubmit(this.state.query);
-  }
-
   submitHelper = (event) => {
     event.preventDefault();
-    this.props.handleSubmit(this.state.query);
+    this.setState({query: event.target.value}, () =>
+      this.props.handleSubmit(this.state.query));
   }
 
   render() {
@@ -29,7 +25,7 @@ class Search extends Component {
             type="text" 
             placeholder="Search District"
             value={this.state.query}
-            onChange={this.handleInput} />
+            onChange={this.submitHelper} />
           <input 
             id="button"
             type="submit" />

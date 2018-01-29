@@ -6,9 +6,14 @@ import PropTypes from 'prop-types';
 
 const ComparedCards = ({ selectedCards, selectCard, makeComparison, removeComparison }) => {
   let comparedObject;
+
   if (selectedCards.length > 1) {
-    comparedObject = makeComparison(selectedCards[0].location, selectedCards[1].location);
+    const d1 = selectedCards[0].location;
+    const d2 = selectedCards[1].location;
+
+    comparedObject = makeComparison(d1, d2);
   }
+
   const selectedCardsArray = selectedCards.map((district, key) => 
     <Card 
       districtName={district.location}
@@ -21,11 +26,15 @@ const ComparedCards = ({ selectedCards, selectCard, makeComparison, removeCompar
   return (
 
     <article className="compared-cards-container">
+      
       <div className="compared-cards">
         {selectedCardsArray[0]}
+
         <ComparisonCard comparedObject={comparedObject}/>
+
         {selectedCardsArray[1]}
       </div>
+
       <div>
         <button 
           id="remove-comparison"
@@ -33,6 +42,7 @@ const ComparedCards = ({ selectedCards, selectCard, makeComparison, removeCompar
             clear comparison
         </button>
       </div>
+    
     </article>
   );
 };
