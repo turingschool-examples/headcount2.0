@@ -3,7 +3,8 @@ import Card from '../Card/Card';
 import PropTypes from 'prop-types';
 import arrow from '../../images/arrow2.gif';
 
-const CompareInstructions = ({ comparisonData, handleCompareCards, removeComparison }) => {
+const CompareInstructions =
+({ comparisonData, handleCompareCards, removeComparison }) => {
   return (
     <section className="displayOne">
       <div onClick={ removeComparison }>
