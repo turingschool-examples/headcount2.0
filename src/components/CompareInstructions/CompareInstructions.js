@@ -3,15 +3,16 @@ import Card from '../Card/Card';
 import PropTypes from 'prop-types';
 import arrow from '../../images/arrow2.gif';
 
-const CompareInstructions = ({ comparisonData, handleCompareCards }) => {
+const CompareInstructions = ({ comparisonData, handleCompareCards, removeComparison }) => {
   return (
     <section className="displayOne">
-      <Card 
-        schoolData={ comparisonData.school1 }
-        handleCompareCards={ handleCompareCards }
-        size='small'
-        clicked='clicked'
-      />
+      <div onClick={ removeComparison }>
+        <Card 
+          schoolData={ comparisonData.school1 }
+          handleCompareCards={ handleCompareCards }
+          size='small'
+        />
+      </div>
       <div className="instructions-cont">
         <p className='instructions'>
           click another to compare
@@ -31,6 +32,7 @@ const { shape, string, objectOf, number, func, object } = PropTypes;
 
 CompareInstructions.propTypes = {
   handleCompareCards: func.isRequired,
+  removeComparison: func.isRequired,
   comparisonData: shape({
     comparison: object
   }),

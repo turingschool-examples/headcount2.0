@@ -16,10 +16,13 @@ const Card = (props) => {
         </li>
       );
     });
+  const select = () => {
+    return props.selected ? 'selected' : 'Card';
+  };
 
   return (
     <article 
-      className='Card'
+      className={select()}
       id={ props.size }
       onClick={ () => props.handleCompareCards(location) }
     >
@@ -31,7 +34,7 @@ const Card = (props) => {
   );
 };
 
-const { shape, string, objectOf, number, func } = PropTypes;
+const { shape, string, objectOf, number, func, bool } = PropTypes;
 
 Card.propTypes = {
   schoolData: shape({
@@ -40,7 +43,8 @@ Card.propTypes = {
     dataType: string.isRequired
   }),
   handleCompareCards: func.isRequired,
-  size: string.isRequired
+  size: string.isRequired,
+  selected: bool
 };
 
 export default Card;

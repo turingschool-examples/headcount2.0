@@ -2,91 +2,82 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import App from './App';
+import mockData from '../../data/testing_mocks';
 
-it('should have a default state equal to the cleaned data', () => {
-  const wrapper = shallow(<App />);
-  let cleanedData = 
-      {"data": {"2004": 0.24, "2005": 0.278, "2006": 0.337, "2007": 0.395, 
-        "2008": 0.536, "2009": 0.598, "2010": 0.64, "2011": 0.672, 
-        "2012": 0.695, "2013": 0.703, "2014": 0.741}, 
-      "dataType": "Percent", "location": "COLORADO"};
-  expect(wrapper.state().schoolData[Object.keys(wrapper.state()
-    .schoolData)[0]]).toEqual(cleanedData);
-});
+describe('App state', () => {
+  let wrapper;
 
-it('should update state with a new instance of DistrictRepository', () => {
-  const wrapper = shallow(<App />);
-  const rawData = 
-    [{Location: 'Colorado', TimeFrame: 2007, 
-      DataFormat:'Percent', Data:.337 }];
-  const cleanData = 
-    {"data": {"COLORADO": {"data": {"2007": 0.337}, 
-      "dataType": "Percent", "location": "COLORADO"}}};
-  wrapper.instance().getDistrictRepository(rawData);
-  expect(wrapper.state().districtRepository).toEqual(cleanData);
-});
+  beforeEach(() => {
+    wrapper = shallow(<App />)
+  })
 
-it('should update state when handleSearch is activated', () => {
-  const wrapper = mount(<App />);
-  let searchDataReplica = 
-    {"data": {"2004": 0.302, "2005": 0.267, "2006": 0.354, "2007": 0.392, 
-      "2008": 0.385, "2009": 0.39, "2010": 0.436, "2011": 0.489, "2012": 0.479, 
-      "2013": 0.488, "2014": 0.49}, "dataType": "Percent", 
-    "location": "ACADEMY 20"};
-  
-  expect(wrapper.find('input').simulate('change', {target: {value: 'col'}}));
-  expect(wrapper.state().searchResults.length).toEqual(2);
-  
-  expect(wrapper.find('input').simulate('change', {target: {value: 'aca'}}));
-  expect(wrapper.state().searchResults.length).toEqual(1);
-  expect(wrapper.state().searchResults).toEqual([searchDataReplica]);  
-});
+  it('should have a default state of empty objects, an empty array and false', () => {
+    wrapper = shallow(<App />, {disableLifecycleMethods: true});
+    expect(wrapper.state()).toEqual(mockData.defaultState);
+  })
 
-// This test works no matter what the first card is
-it('when the first card is clicked its object should be entered in state', () => {
-  const wrapper = mount(<App />);
-  wrapper.find('article').first().simulate('click');
-  expect(wrapper.state().comparisonData)
-    .toEqual({
-      school1 : {
-      "data": {
-        "2004": 0.24, "2005": 0.278, "2006": 0.337, "2007": 0.395, "2008": 0.536,
-        "2009": 0.598, "2010": 0.64, "2011": 0.672, "2012": 0.695, "2013": 0.703,
-        "2014": 0.741},
-      "dataType": "Percent",
-      "location": "COLORADO"
-      }
-    });
-});
+  it('should have a state equal to the cleaned kinderData after component did mount', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.state().schoolData[Object.keys(wrapper.state().schoolData)[0]])
+      .toEqual(mockData.cleanedCoKinderData);
+  })
 
-// This test only works for the KinderData cards.
-it('when a 2nd card is clicked it puts a comparison object in state', () => {
-  const wrapper = mount(<App />);
-  wrapper.find('article').first().simulate('click');
-  wrapper.find('article').last().simulate('click');
-  expect(wrapper.state().comparisonData)
-    .toEqual({
-      comparison: {
-        "COLORADO": 0.53,
-        "YUMA SCHOOL DISTRICT 1": 0.909,
-        "compared": 0.583
-      },
-      school1: {
-        data: {
-          2004: 0.24, 2005: 0.278, 2006: 0.337, 2007: 0.395,
-          2008: 0.536, 2009: 0.598, 2010: 0.64, 2011: 0.672,
-          2012: 0.695, 2013: 0.703, 2014: 0.741
-        },
-        dataType: "Percent",
-        location: "COLORADO"
-      },
-      school2: {
-        data: {
-          2004: 0, 2005: 1, 2006: 1, 2007: 1, 2008: 1, 2009: 1,
-          2010: 1, 2011: 1, 2012: 1, 2013: 1, 2014: 1
-        },
-        dataType: "Percent",
-        location: "YUMA SCHOOL DISTRICT 1"
-      }
-    });
-});
+  it('should update state with a new instance of DistrictRepository', () => {
+    const wrapper = shallow(<App />);
+    wrapper.instance().getDistrictRepository(mockData.rawUpdateData);
+    expect(wrapper.state().districtRepository).toEqual(mockData.cleanUpdateData);
+  })
+})
+
+describe('App methods', () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = mount(<App />)
+  })
+
+  it('should update state when handleSearch is activated', () => {    
+    expect(wrapper.find('input').simulate('change', {target: {value: 'col'}}));
+    expect(wrapper.state().searchResults.length).toEqual(2);
+    expect(wrapper.state().searchError).toEqual(false);
+    
+    expect(wrapper.find('input').simulate('change', {target: {value: 'aca'}}));
+    expect(wrapper.state().searchResults.length).toEqual(1);
+    expect(wrapper.state().searchResults).toEqual([mockData.mockSearchData]);  
+    expect(wrapper.state().searchError).toEqual(false);
+  })
+
+  it('when handleSearch is activated and no matches are found, searchError should be toggled', () => {
+    expect(wrapper.find('input').simulate('change', {target: {value: 'zzzz'}}));
+    expect(wrapper.state().searchResults.length).toEqual(0);
+    expect(wrapper.state().searchError).toEqual(true);
+  })
+
+  it('when the first card is clicked its object should be entered in state', () => {
+    wrapper.find('article').first().simulate('click');
+    expect(wrapper.state().comparisonData)
+      .toEqual({
+        school1 : mockData.cleanedCoKinderData
+      });
+  })
+
+  it('when a 2nd card is clicked it puts a comparison object in state', () => {
+    wrapper.find('article').first().simulate('click');
+    wrapper.find('article').last().simulate('click');
+    expect(wrapper.state().comparisonData)
+      .toEqual({
+        comparison: mockData.comparison,
+        school1: mockData.cleanedCoKinderData,
+        school2: mockData.cleanedYumaKinderData
+      });
+  })
+
+  it('should reset comparisonData to an empty object in state when called', () => {
+    wrapper.find('article').first().simulate('click');
+    expect(wrapper.state().comparisonData).toEqual({
+      school1: mockData.cleanedCoKinderData,
+    })
+    wrapper.instance().removeComparison();
+    expect(wrapper.state().comparisonData).toEqual({})
+  })
+})

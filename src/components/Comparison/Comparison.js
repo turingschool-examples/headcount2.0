@@ -11,6 +11,7 @@ const Comparison = ({comparisonData, handleCompareCards, removeComparison}) => {
         schoolData={ comparisonData.school1 }
         handleCompareCards={ handleCompareCards }
         size='large'
+        selected={true}
       />
 
       <article className="comparison">
@@ -38,6 +39,7 @@ const Comparison = ({comparisonData, handleCompareCards, removeComparison}) => {
         schoolData={ comparisonData.school2 }
         handleCompareCards={ handleCompareCards }
         size='large'
+        selected={true}
       />
       <button onClick={ removeComparison }>Reset</button>
     </section>

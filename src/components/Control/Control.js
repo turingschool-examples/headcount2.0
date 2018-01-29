@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Control.css';
 
-const Control = (props) => {
-  let searchError = props.searchError ? 'error' : '';
+const Control = ({searchError, handleSearch}) => {
+  let searchClass = searchError ? 'error' : '';
   
   return (
     <header className="Control">
@@ -17,8 +17,8 @@ const Control = (props) => {
           type="text"
           id="search"
           placeholder="Search by School"
-          onChange={(event) => props.handleSearch(event.target.value)}
-          className={searchError}
+          onChange={(event) => handleSearch(event.target.value)}
+          className={searchClass}
         />
       </div>
       <h1>Education Colorado</h1>

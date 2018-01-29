@@ -1,38 +1,37 @@
 .comparison {
-  width: 250px;
-  height: 346px;
-  margin: 10px;
-  padding: 10px;
-  box-sizing: border-box;
-  border-radius: 40px;
-  background-color: #e9fffc;
-  box-shadow: 2px 2px 2px 2px #e4e4e4;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 2px 2px #e4e4e4;
+  background-color: #f4f4f4;
+  border-radius: 40px;
+  height: 346px;
+  width: 250px;
+  text-align: center;
 }
 
 .displayAll {
-  width: 100%;
-  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  width: 100%;
+  height: fit-content;
 }
 
 button {
-  font-family: 'Bree Serif', serif;
-  font-size: 1em;
   align-self: flex-start;
   margin: 10px;
   padding: 10px;
   box-sizing: border-box;
-  border-radius: 15px;
+  box-shadow: 1px 1px 1px 1px #b0b0b0;
   background-color: #f4f4f4fa;
   border: none;
-  box-shadow: 1px 1px 1px 1px #b0b0b0;
+  border-radius: 15px;
+  font-family: 'Bree Serif', serif;
+  font-size: 1em;
 }
 
 button:hover {

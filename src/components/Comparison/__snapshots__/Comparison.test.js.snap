@@ -8,35 +8,35 @@ ShallowWrapper {
     comparisonData={
         Object {
             "comparison": Object {
-              "ACADEMY 20": 0.407,
-              "AKRON R-1": 0.619,
-              "compared": 0.658,
+              "COLORADO": 0.53,
+              "YUMA SCHOOL DISTRICT 1": 0.909,
+              "compared": 0.583,
             },
             "school1": Object {
               "data": Object {
-                "2004": 0.302,
-                "2005": 0.267,
-                "2006": 0.354,
-                "2007": 0.392,
-                "2008": 0.385,
-                "2009": 0.39,
-                "2010": 0.436,
-                "2011": 0.489,
-                "2012": 0.479,
-                "2013": 0.488,
-                "2014": 0.49,
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.337,
+                "2007": 0.395,
+                "2008": 0.536,
+                "2009": 0.598,
+                "2010": 0.64,
+                "2011": 0.672,
+                "2012": 0.695,
+                "2013": 0.703,
+                "2014": 0.741,
               },
               "dataType": "Percent",
-              "location": "ACADEMY 20",
+              "location": "COLORADO",
             },
             "school2": Object {
               "data": Object {
                 "2004": 0,
-                "2005": 0,
-                "2006": 0,
-                "2007": 0,
-                "2008": 0.844,
-                "2009": 0.96,
+                "2005": 1,
+                "2006": 1,
+                "2007": 1,
+                "2008": 1,
+                "2009": 1,
                 "2010": 1,
                 "2011": 1,
                 "2012": 1,
@@ -44,7 +44,7 @@ ShallowWrapper {
                 "2014": 1,
               },
               "dataType": "Percent",
-              "location": "AKRON R-1",
+              "location": "YUMA SCHOOL DISTRICT 1",
             },
           }
     }
@@ -69,22 +69,23 @@ ShallowWrapper {
           schoolData={
                     Object {
                               "data": Object {
-                                "2004": 0.302,
-                                "2005": 0.267,
-                                "2006": 0.354,
-                                "2007": 0.392,
-                                "2008": 0.385,
-                                "2009": 0.39,
-                                "2010": 0.436,
-                                "2011": 0.489,
-                                "2012": 0.479,
-                                "2013": 0.488,
-                                "2014": 0.49,
+                                "2004": 0.24,
+                                "2005": 0.278,
+                                "2006": 0.337,
+                                "2007": 0.395,
+                                "2008": 0.536,
+                                "2009": 0.598,
+                                "2010": 0.64,
+                                "2011": 0.672,
+                                "2012": 0.695,
+                                "2013": 0.703,
+                                "2014": 0.741,
                               },
                               "dataType": "Percent",
-                              "location": "ACADEMY 20",
+                              "location": "COLORADO",
                             }
           }
+          selected={true}
           size="large"
 />,
         <article
@@ -92,10 +93,10 @@ ShallowWrapper {
 >
           <div>
                     <h3>
-                              ACADEMY 20
+                              COLORADO
                     </h3>
                     <h4>
-                              0.407
+                              0.53
                     </h4>
           </div>
           <div>
@@ -105,15 +106,15 @@ ShallowWrapper {
                     <h4
                               className="compare-total"
                     >
-                              0.658
+                              0.583
                     </h4>
           </div>
           <div>
                     <h3>
-                              AKRON R-1
+                              YUMA SCHOOL DISTRICT 1
                     </h3>
                     <h4>
-                              0.619
+                              0.909
                     </h4>
           </div>
 </article>,
@@ -123,11 +124,11 @@ ShallowWrapper {
                     Object {
                               "data": Object {
                                 "2004": 0,
-                                "2005": 0,
-                                "2006": 0,
-                                "2007": 0,
-                                "2008": 0.844,
-                                "2009": 0.96,
+                                "2005": 1,
+                                "2006": 1,
+                                "2007": 1,
+                                "2008": 1,
+                                "2009": 1,
                                 "2010": 1,
                                 "2011": 1,
                                 "2012": 1,
@@ -135,9 +136,10 @@ ShallowWrapper {
                                 "2014": 1,
                               },
                               "dataType": "Percent",
-                              "location": "AKRON R-1",
+                              "location": "YUMA SCHOOL DISTRICT 1",
                             }
           }
+          selected={true}
           size="large"
 />,
         <button
@@ -158,21 +160,22 @@ ShallowWrapper {
           "handleCompareCards": [Function],
           "schoolData": Object {
             "data": Object {
-              "2004": 0.302,
-              "2005": 0.267,
-              "2006": 0.354,
-              "2007": 0.392,
-              "2008": 0.385,
-              "2009": 0.39,
-              "2010": 0.436,
-              "2011": 0.489,
-              "2012": 0.479,
-              "2013": 0.488,
-              "2014": 0.49,
+              "2004": 0.24,
+              "2005": 0.278,
+              "2006": 0.337,
+              "2007": 0.395,
+              "2008": 0.536,
+              "2009": 0.598,
+              "2010": 0.64,
+              "2011": 0.672,
+              "2012": 0.695,
+              "2013": 0.703,
+              "2014": 0.741,
             },
             "dataType": "Percent",
-            "location": "ACADEMY 20",
+            "location": "COLORADO",
           },
+          "selected": true,
           "size": "large",
         },
         "ref": null,
@@ -187,10 +190,10 @@ ShallowWrapper {
           "children": Array [
             <div>
               <h3>
-                            ACADEMY 20
+                            COLORADO
               </h3>
               <h4>
-                            0.407
+                            0.53
               </h4>
 </div>,
             <div>
@@ -200,15 +203,15 @@ ShallowWrapper {
               <h4
                             className="compare-total"
               >
-                            0.658
+                            0.583
               </h4>
 </div>,
             <div>
               <h3>
-                            AKRON R-1
+                            YUMA SCHOOL DISTRICT 1
               </h3>
               <h4>
-                            0.619
+                            0.909
               </h4>
 </div>,
           ],
@@ -223,10 +226,10 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <h3>
-                  ACADEMY 20
+                  COLORADO
 </h3>,
                 <h4>
-                  0.407
+                  0.53
 </h4>,
               ],
             },
@@ -237,10 +240,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "ACADEMY 20",
+                  "children": "COLORADO",
                 },
                 "ref": null,
-                "rendered": "ACADEMY 20",
+                "rendered": "COLORADO",
                 "type": "h3",
               },
               Object {
@@ -248,10 +251,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": 0.407,
+                  "children": 0.53,
                 },
                 "ref": null,
-                "rendered": 0.407,
+                "rendered": 0.53,
                 "type": "h4",
               },
             ],
@@ -269,7 +272,7 @@ ShallowWrapper {
                 <h4
                   className="compare-total"
 >
-                  0.658
+                  0.583
 </h4>,
               ],
             },
@@ -291,11 +294,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": 0.658,
+                  "children": 0.583,
                   "className": "compare-total",
                 },
                 "ref": null,
-                "rendered": 0.658,
+                "rendered": 0.583,
                 "type": "h4",
               },
             ],
@@ -308,10 +311,10 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <h3>
-                  AKRON R-1
+                  YUMA SCHOOL DISTRICT 1
 </h3>,
                 <h4>
-                  0.619
+                  0.909
 </h4>,
               ],
             },
@@ -322,10 +325,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "AKRON R-1",
+                  "children": "YUMA SCHOOL DISTRICT 1",
                 },
                 "ref": null,
-                "rendered": "AKRON R-1",
+                "rendered": "YUMA SCHOOL DISTRICT 1",
                 "type": "h3",
               },
               Object {
@@ -333,10 +336,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": 0.619,
+                  "children": 0.909,
                 },
                 "ref": null,
-                "rendered": 0.619,
+                "rendered": 0.909,
                 "type": "h4",
               },
             ],
@@ -354,11 +357,11 @@ ShallowWrapper {
           "schoolData": Object {
             "data": Object {
               "2004": 0,
-              "2005": 0,
-              "2006": 0,
-              "2007": 0,
-              "2008": 0.844,
-              "2009": 0.96,
+              "2005": 1,
+              "2006": 1,
+              "2007": 1,
+              "2008": 1,
+              "2009": 1,
               "2010": 1,
               "2011": 1,
               "2012": 1,
@@ -366,8 +369,9 @@ ShallowWrapper {
               "2014": 1,
             },
             "dataType": "Percent",
-            "location": "AKRON R-1",
+            "location": "YUMA SCHOOL DISTRICT 1",
           },
+          "selected": true,
           "size": "large",
         },
         "ref": null,
@@ -401,22 +405,23 @@ ShallowWrapper {
             schoolData={
                         Object {
                                     "data": Object {
-                                      "2004": 0.302,
-                                      "2005": 0.267,
-                                      "2006": 0.354,
-                                      "2007": 0.392,
-                                      "2008": 0.385,
-                                      "2009": 0.39,
-                                      "2010": 0.436,
-                                      "2011": 0.489,
-                                      "2012": 0.479,
-                                      "2013": 0.488,
-                                      "2014": 0.49,
+                                      "2004": 0.24,
+                                      "2005": 0.278,
+                                      "2006": 0.337,
+                                      "2007": 0.395,
+                                      "2008": 0.536,
+                                      "2009": 0.598,
+                                      "2010": 0.64,
+                                      "2011": 0.672,
+                                      "2012": 0.695,
+                                      "2013": 0.703,
+                                      "2014": 0.741,
                                     },
                                     "dataType": "Percent",
-                                    "location": "ACADEMY 20",
+                                    "location": "COLORADO",
                                   }
             }
+            selected={true}
             size="large"
 />,
           <article
@@ -424,10 +429,10 @@ ShallowWrapper {
 >
             <div>
                         <h3>
-                                    ACADEMY 20
+                                    COLORADO
                         </h3>
                         <h4>
-                                    0.407
+                                    0.53
                         </h4>
             </div>
             <div>
@@ -437,15 +442,15 @@ ShallowWrapper {
                         <h4
                                     className="compare-total"
                         >
-                                    0.658
+                                    0.583
                         </h4>
             </div>
             <div>
                         <h3>
-                                    AKRON R-1
+                                    YUMA SCHOOL DISTRICT 1
                         </h3>
                         <h4>
-                                    0.619
+                                    0.909
                         </h4>
             </div>
 </article>,
@@ -455,11 +460,11 @@ ShallowWrapper {
                         Object {
                                     "data": Object {
                                       "2004": 0,
-                                      "2005": 0,
-                                      "2006": 0,
-                                      "2007": 0,
-                                      "2008": 0.844,
-                                      "2009": 0.96,
+                                      "2005": 1,
+                                      "2006": 1,
+                                      "2007": 1,
+                                      "2008": 1,
+                                      "2009": 1,
                                       "2010": 1,
                                       "2011": 1,
                                       "2012": 1,
@@ -467,9 +472,10 @@ ShallowWrapper {
                                       "2014": 1,
                                     },
                                     "dataType": "Percent",
-                                    "location": "AKRON R-1",
+                                    "location": "YUMA SCHOOL DISTRICT 1",
                                   }
             }
+            selected={true}
             size="large"
 />,
           <button
@@ -490,21 +496,22 @@ ShallowWrapper {
             "handleCompareCards": [Function],
             "schoolData": Object {
               "data": Object {
-                "2004": 0.302,
-                "2005": 0.267,
-                "2006": 0.354,
-                "2007": 0.392,
-                "2008": 0.385,
-                "2009": 0.39,
-                "2010": 0.436,
-                "2011": 0.489,
-                "2012": 0.479,
-                "2013": 0.488,
-                "2014": 0.49,
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.337,
+                "2007": 0.395,
+                "2008": 0.536,
+                "2009": 0.598,
+                "2010": 0.64,
+                "2011": 0.672,
+                "2012": 0.695,
+                "2013": 0.703,
+                "2014": 0.741,
               },
               "dataType": "Percent",
-              "location": "ACADEMY 20",
+              "location": "COLORADO",
             },
+            "selected": true,
             "size": "large",
           },
           "ref": null,
@@ -519,10 +526,10 @@ ShallowWrapper {
             "children": Array [
               <div>
                 <h3>
-                                ACADEMY 20
+                                COLORADO
                 </h3>
                 <h4>
-                                0.407
+                                0.53
                 </h4>
 </div>,
               <div>
@@ -532,15 +539,15 @@ ShallowWrapper {
                 <h4
                                 className="compare-total"
                 >
-                                0.658
+                                0.583
                 </h4>
 </div>,
               <div>
                 <h3>
-                                AKRON R-1
+                                YUMA SCHOOL DISTRICT 1
                 </h3>
                 <h4>
-                                0.619
+                                0.909
                 </h4>
 </div>,
             ],
@@ -555,10 +562,10 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <h3>
-                    ACADEMY 20
+                    COLORADO
 </h3>,
                   <h4>
-                    0.407
+                    0.53
 </h4>,
                 ],
               },
@@ -569,10 +576,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "ACADEMY 20",
+                    "children": "COLORADO",
                   },
                   "ref": null,
-                  "rendered": "ACADEMY 20",
+                  "rendered": "COLORADO",
                   "type": "h3",
                 },
                 Object {
@@ -580,10 +587,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": 0.407,
+                    "children": 0.53,
                   },
                   "ref": null,
-                  "rendered": 0.407,
+                  "rendered": 0.53,
                   "type": "h4",
                 },
               ],
@@ -601,7 +608,7 @@ ShallowWrapper {
                   <h4
                     className="compare-total"
 >
-                    0.658
+                    0.583
 </h4>,
                 ],
               },
@@ -623,11 +630,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": 0.658,
+                    "children": 0.583,
                     "className": "compare-total",
                   },
                   "ref": null,
-                  "rendered": 0.658,
+                  "rendered": 0.583,
                   "type": "h4",
                 },
               ],
@@ -640,10 +647,10 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <h3>
-                    AKRON R-1
+                    YUMA SCHOOL DISTRICT 1
 </h3>,
                   <h4>
-                    0.619
+                    0.909
 </h4>,
                 ],
               },
@@ -654,10 +661,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "AKRON R-1",
+                    "children": "YUMA SCHOOL DISTRICT 1",
                   },
                   "ref": null,
-                  "rendered": "AKRON R-1",
+                  "rendered": "YUMA SCHOOL DISTRICT 1",
                   "type": "h3",
                 },
                 Object {
@@ -665,10 +672,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": 0.619,
+                    "children": 0.909,
                   },
                   "ref": null,
-                  "rendered": 0.619,
+                  "rendered": 0.909,
                   "type": "h4",
                 },
               ],
@@ -686,11 +693,11 @@ ShallowWrapper {
             "schoolData": Object {
               "data": Object {
                 "2004": 0,
-                "2005": 0,
-                "2006": 0,
-                "2007": 0,
-                "2008": 0.844,
-                "2009": 0.96,
+                "2005": 1,
+                "2006": 1,
+                "2007": 1,
+                "2008": 1,
+                "2009": 1,
                 "2010": 1,
                 "2011": 1,
                 "2012": 1,
@@ -698,8 +705,9 @@ ShallowWrapper {
                 "2014": 1,
               },
               "dataType": "Percent",
-              "location": "AKRON R-1",
+              "location": "YUMA SCHOOL DISTRICT 1",
             },
+            "selected": true,
             "size": "large",
           },
           "ref": null,
