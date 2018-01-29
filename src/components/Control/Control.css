@@ -1,34 +1,21 @@
-.Control {
-  border-bottom: 3px solid #e4e4e4;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  height: 75px;
-  position: relative;
-  background-color: #e9fffc;
-  color: #434141;
-}
-
 h1 {
-  font-family: 'Bree Serif', serif;
   margin: 7px 0;
+  font-family: 'Bree Serif', serif;
   font-size: 40px;
 }
 
 input {
-  box-sizing: border-box;
   margin-left: 10px;
+  box-sizing: border-box;
 }
 
 input[type=text] {
-  width: 140px;
-  height: 39.5px;
   padding-left: 10px;
+  height: 39.5px;
+  width: 140px;
+  background-color: #e9fffc;
   border: none;
   transition: width 1s;
-  background-color: #e9fffc;
 }
 
 input:focus {
@@ -41,19 +28,32 @@ input::placeholder {
   font-size: 15px;
 }
 
-.input-cont {
+.Control {
+  position: relative;
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 15px;
-  right: 20px;
-}
-
-.search-icon {
-  font-size: 17.5px;
+  align-items: flex-start;
+  height: 75px;
+  width: 100%;
+  background-color: #e9fffc;
+  border-bottom: 3px solid #e4e4e4;
+  color: #434141;
 }
 
 .error {
   outline-color: red;
+}
+
+.input-cont {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-icon {
+  font-size: 17.5px;
 }

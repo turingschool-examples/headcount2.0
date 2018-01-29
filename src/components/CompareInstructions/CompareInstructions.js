@@ -2,6 +2,7 @@ import React from 'react';
 import Card from '../Card/Card';
 import PropTypes from 'prop-types';
 import arrow from '../../images/arrow2.gif';
+import './CompareInstructions.css';
 
 const CompareInstructions =
 ({ comparisonData, handleCompareCards, removeComparison }) => {

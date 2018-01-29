@@ -1,0 +1,34 @@
+.displayOne {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 100%;
+}
+
+.instructions {
+  margin: -10px 0 5px 0;
+  width: 130px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.instructions-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 7px 0 0;
+  height: 200px;
+}
+
+.shadow-card {
+  height: 165px;
+  width: 120px;
+  border-radius: 26px;
+  background-color: #bdbdbdad;
+}
+
+#arrow {
+  margin: 0 30px;
+}

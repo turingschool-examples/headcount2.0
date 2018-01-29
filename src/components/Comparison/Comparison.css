@@ -1,9 +1,31 @@
+button {
+  align-self: flex-start;
+  padding: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 1px 1px #b0b0b0;
+  background-color: #f4f4f4fa;
+  border: none;
+  border-radius: 15px;
+  font-family: 'Bree Serif', serif;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #dd4a0d;
+  cursor: pointer;
+}
+
+h4 {
+  margin: 0;
+}
+
 .comparison {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin: 10px;
   padding: 10px;
+  margin: 10px;
   box-sizing: border-box;
   box-shadow: 2px 2px 2px 2px #e4e4e4;
   background-color: #f4f4f4;
@@ -17,24 +39,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   height: fit-content;
-}
-
-button {
-  align-self: flex-start;
-  margin: 10px;
-  padding: 10px;
-  box-sizing: border-box;
-  box-shadow: 1px 1px 1px 1px #b0b0b0;
-  background-color: #f4f4f4fa;
-  border: none;
-  border-radius: 15px;
-  font-family: 'Bree Serif', serif;
-  font-size: 1em;
-}
-
-button:hover {
-  background-color: #dd4a0d;
-  cursor: pointer;
+  width: 100%;
 }

@@ -1,3 +1,44 @@
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: auto;
+}
+
+a .Card:hover {
+  background-color: #d2d2d2;
+  cursor: pointer;
+}
+
+h3 {
+  margin: 6px 5px 14px 0;
+  font-family: 'Bree Serif', serif;
+  color: #434141;
+  text-align: center;
+}
+
+li {
+  box-sizing: border-box;
+  font-size: 20px;
+  list-style-type: none;
+}
+
+ul {
+  padding: 0;
+  margin: auto;
+  width: fit-content;
+}
+
+.high {
+  color: #2d2db2;
+}
+
+.low {
+  color: #dd4a0d;
+}
+
 .selected, .Card {
   margin: 10px;
   padding: 10px;
@@ -10,11 +51,6 @@
 .selected {
   border: 3px solid #3eafba;
   box-shadow: 0 0 0 0;
-}
-
-a .Card:hover {
-  background-color: #d2d2d2;
-  cursor: pointer;
 }
 
 #large {
@@ -42,40 +78,4 @@ a .Card:hover {
 #small:hover {
   cursor: pointer;
   background-color: #ff6c2f;
-}
-
-.high {
-  color: #2d2db2;
-}
-
-.low {
-  color: #dd4a0d;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  cursor: auto;
-}
-
-h3 {
-  text-align: center;
-  font-family: 'Bree Serif', serif;
-  margin: 6px 5px 14px 0;
-  color: #434141;
-}
-
-ul {
-  padding: 0;
-  width: fit-content;
-  margin: auto;
-}
-
-li {
-  font-size: 20px;
-  list-style-type: none;
-  box-sizing: border-box;
 }
