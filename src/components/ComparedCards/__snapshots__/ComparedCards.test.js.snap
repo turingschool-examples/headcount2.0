@@ -1,0 +1,373 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComparedCards snapshot test 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ComparedCards
+    makeComparison={[Function]}
+    removeComparison={[Function]}
+    selectCard={[Function]}
+    selectedCards={
+        Array [
+            Object {
+              "data": Object {
+                "2004": 0.523,
+                "2014": 0.321,
+              },
+              "location": "COLORADO",
+            },
+            Object {
+              "data": Object {
+                "2004": 0.283,
+                "2014": 0.432,
+              },
+              "location": "ACADEMY 20",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="compared-cards"
+>
+          <Card
+                    data={
+                              Object {
+                                        "2004": 0.523,
+                                        "2014": 0.321,
+                                      }
+                    }
+                    districtName="COLORADO"
+                    id="COLORADO"
+                    selectCard={[Function]}
+          />
+          <ComparisonCard
+                    comparedObject={undefined}
+          />
+          <Card
+                    data={
+                              Object {
+                                        "2004": 0.283,
+                                        "2014": 0.432,
+                                      }
+                    }
+                    districtName="ACADEMY 20"
+                    id="ACADEMY 20"
+                    selectCard={[Function]}
+          />
+</div>,
+        <div>
+          <button
+                    id="remove-comparison"
+                    onClick={[Function]}
+          >
+                    clear comparison
+          </button>
+</div>,
+      ],
+      "className": "compared-cards-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Card
+              data={
+                            Object {
+                                          "2004": 0.523,
+                                          "2014": 0.321,
+                                        }
+              }
+              districtName="COLORADO"
+              id="COLORADO"
+              selectCard={[Function]}
+/>,
+            <ComparisonCard
+              comparedObject={undefined}
+/>,
+            <Card
+              data={
+                            Object {
+                                          "2004": 0.283,
+                                          "2014": 0.432,
+                                        }
+              }
+              districtName="ACADEMY 20"
+              id="ACADEMY 20"
+              selectCard={[Function]}
+/>,
+          ],
+          "className": "compared-cards",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "function",
+            "props": Object {
+              "data": Object {
+                "2004": 0.523,
+                "2014": 0.321,
+              },
+              "districtName": "COLORADO",
+              "id": "COLORADO",
+              "selectCard": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "comparedObject": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "function",
+            "props": Object {
+              "data": Object {
+                "2004": 0.283,
+                "2014": 0.432,
+              },
+              "districtName": "ACADEMY 20",
+              "id": "ACADEMY 20",
+              "selectCard": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <button
+            id="remove-comparison"
+            onClick={[Function]}
+>
+            clear comparison
+</button>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "clear comparison",
+            "id": "remove-comparison",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "clear comparison",
+          "type": "button",
+        },
+        "type": "div",
+      },
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="compared-cards"
+>
+            <Card
+                        data={
+                                    Object {
+                                                "2004": 0.523,
+                                                "2014": 0.321,
+                                              }
+                        }
+                        districtName="COLORADO"
+                        id="COLORADO"
+                        selectCard={[Function]}
+            />
+            <ComparisonCard
+                        comparedObject={undefined}
+            />
+            <Card
+                        data={
+                                    Object {
+                                                "2004": 0.283,
+                                                "2014": 0.432,
+                                              }
+                        }
+                        districtName="ACADEMY 20"
+                        id="ACADEMY 20"
+                        selectCard={[Function]}
+            />
+</div>,
+          <div>
+            <button
+                        id="remove-comparison"
+                        onClick={[Function]}
+            >
+                        clear comparison
+            </button>
+</div>,
+        ],
+        "className": "compared-cards-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Card
+                data={
+                                Object {
+                                                "2004": 0.523,
+                                                "2014": 0.321,
+                                              }
+                }
+                districtName="COLORADO"
+                id="COLORADO"
+                selectCard={[Function]}
+/>,
+              <ComparisonCard
+                comparedObject={undefined}
+/>,
+              <Card
+                data={
+                                Object {
+                                                "2004": 0.283,
+                                                "2014": 0.432,
+                                              }
+                }
+                districtName="ACADEMY 20"
+                id="ACADEMY 20"
+                selectCard={[Function]}
+/>,
+            ],
+            "className": "compared-cards",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "function",
+              "props": Object {
+                "data": Object {
+                  "2004": 0.523,
+                  "2014": 0.321,
+                },
+                "districtName": "COLORADO",
+                "id": "COLORADO",
+                "selectCard": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "comparedObject": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "function",
+              "props": Object {
+                "data": Object {
+                  "2004": 0.283,
+                  "2014": 0.432,
+                },
+                "districtName": "ACADEMY 20",
+                "id": "ACADEMY 20",
+                "selectCard": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <button
+              id="remove-comparison"
+              onClick={[Function]}
+>
+              clear comparison
+</button>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "clear comparison",
+              "id": "remove-comparison",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "clear comparison",
+            "type": "button",
+          },
+          "type": "div",
+        },
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

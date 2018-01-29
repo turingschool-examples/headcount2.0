@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardContainer snapshot test 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    comparedCards={
+        Array [
+            Object {
+              "data": Object {
+                "2004": 0.523,
+                "2014": 0.321,
+              },
+              "location": "COLORADO",
+            },
+            Object {
+              "data": Object {
+                "2004": 0.283,
+                "2014": 0.432,
+              },
+              "location": "ACADEMY 20",
+            },
+          ]
+    }
+    districtData={
+        Object {
+            "ACADEMY 20": Object {
+              "data": Object {
+                "2004": 0.283,
+                "2014": 0.432,
+              },
+              "location": "ACADEMY 20",
+            },
+            "COLORADO": Object {
+              "data": Object {
+                "2004": 0.523,
+                "2014": 0.321,
+              },
+              "location": "COLORADO",
+            },
+          }
+    }
+    selectCard={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          clicked="clicked"
+          data={
+                    Object {
+                              "2004": 0.523,
+                              "2014": 0.321,
+                            }
+          }
+          districtName="COLORADO"
+          id="COLORADO"
+          selectCard={[Function]}
+/>,
+        <Card
+          clicked="clicked"
+          data={
+                    Object {
+                              "2004": 0.283,
+                              "2014": 0.432,
+                            }
+          }
+          districtName="ACADEMY 20"
+          id="ACADEMY 20"
+          selectCard={[Function]}
+/>,
+      ],
+      "className": "CardContainer",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "clicked": "clicked",
+          "data": Object {
+            "2004": 0.523,
+            "2014": 0.321,
+          },
+          "districtName": "COLORADO",
+          "id": "COLORADO",
+          "selectCard": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "function",
+        "props": Object {
+          "clicked": "clicked",
+          "data": Object {
+            "2004": 0.283,
+            "2014": 0.432,
+          },
+          "districtName": "ACADEMY 20",
+          "id": "ACADEMY 20",
+          "selectCard": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            clicked="clicked"
+            data={
+                        Object {
+                                    "2004": 0.523,
+                                    "2014": 0.321,
+                                  }
+            }
+            districtName="COLORADO"
+            id="COLORADO"
+            selectCard={[Function]}
+/>,
+          <Card
+            clicked="clicked"
+            data={
+                        Object {
+                                    "2004": 0.283,
+                                    "2014": 0.432,
+                                  }
+            }
+            districtName="ACADEMY 20"
+            id="ACADEMY 20"
+            selectCard={[Function]}
+/>,
+        ],
+        "className": "CardContainer",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "clicked": "clicked",
+            "data": Object {
+              "2004": 0.523,
+              "2014": 0.321,
+            },
+            "districtName": "COLORADO",
+            "id": "COLORADO",
+            "selectCard": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "function",
+          "props": Object {
+            "clicked": "clicked",
+            "data": Object {
+              "2004": 0.283,
+              "2014": 0.432,
+            },
+            "districtName": "ACADEMY 20",
+            "id": "ACADEMY 20",
+            "selectCard": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
