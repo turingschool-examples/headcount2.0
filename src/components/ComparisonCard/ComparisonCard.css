@@ -3,7 +3,15 @@
   margin: 0;
 }
 
-.compare-card h4 {
+.avg {
   font-size: 1.5em;
   color: #78C9D0 !important;
+}
+
+.bottom {
+  margin-bottom: 0;
+}
+
+.name-target {
+  margin: 35px 0 10px 0;
 }

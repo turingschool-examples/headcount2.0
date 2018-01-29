@@ -13,10 +13,10 @@ const ComparisonCard = ({comparedObject}) => {
     return (
       <article className="compare-card">
         <h3>{d1Name}</h3>
-        <h3>{d1Avg}</h3>
+        <h4 className="avg">{d1Avg}</h4>
         <h1>{compareRatio}</h1>
-        <h3>{d2Name}</h3>
-        <h3>{d2Avg}</h3>
+        <h4 className="avg bottom">{d2Avg}</h4>
+        <h3 className="name-target">{d2Name}</h3>
       </article>
     );
   }
