@@ -5,8 +5,11 @@ import PropTypes from 'prop-types';
 function Card({ location, data, handleClick, style }) {
 
   const dataArray = Object.entries(data).map( (dataPoint, index) => {
+    let style = dataPoint[1] > .5 ? 'high' : 'low'
+
     return (
-      <li key={dataPoint[0] + index}> 
+      <li key={dataPoint[0] + index}
+        className={style}> 
         { dataPoint[0] } : { dataPoint[1] } 
       </li>
     );
