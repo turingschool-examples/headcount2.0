@@ -1,0 +1,81 @@
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: auto;
+}
+
+a .Card:hover {
+  background-color: #d2d2d2;
+  cursor: pointer;
+}
+
+h3 {
+  margin: 6px 5px 14px 0;
+  font-family: 'Bree Serif', serif;
+  color: #434141;
+  text-align: center;
+}
+
+li {
+  box-sizing: border-box;
+  font-size: 20px;
+  list-style-type: none;
+}
+
+ul {
+  padding: 0;
+  margin: auto;
+  width: fit-content;
+}
+
+.high {
+  color: #2d2db2;
+}
+
+.low {
+  color: #dd4a0d;
+}
+
+.selected, .Card {
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 40px;
+  box-shadow: 2px 2px 2px 2px #e4e4e4;
+  background-color: #f4f4f4;
+}
+
+.selected {
+  border: 3px solid #3eafba;
+  box-shadow: 0 0 0 0;
+}
+
+#large {
+  width: 250px;
+  height: 346px;
+}
+
+#small {
+  width: 120px;
+  height: 165px;
+  border-radius: 26px;
+  border: 2px solid #3eafba;
+  box-shadow: 0 0 0 0;
+}
+
+#small h3 {
+  font-size: 9px;
+  margin: 3px;
+}
+
+#small li {
+  font-size: 9.7px;
+}
+
+#small:hover {
+  cursor: pointer;
+  background-color: #ff6c2f;
+}

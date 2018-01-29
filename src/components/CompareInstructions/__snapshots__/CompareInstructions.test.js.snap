@@ -1,0 +1,403 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CompareInstructions should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CompareInstructions
+    comparisonData={
+        Object {
+            "school1": Object {
+              "data": Object {
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.337,
+                "2007": 0.395,
+                "2008": 0.536,
+                "2009": 0.598,
+                "2010": 0.64,
+                "2011": 0.672,
+                "2012": 0.695,
+                "2013": 0.703,
+                "2014": 0.741,
+              },
+              "dataType": "Percent",
+              "location": "COLORADO",
+            },
+          }
+    }
+    handleCompareCards={[Function]}
+    removeComparison={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          onClick={[Function]}
+>
+          <Card
+                    handleCompareCards={[Function]}
+                    schoolData={
+                              Object {
+                                        "data": Object {
+                                          "2004": 0.24,
+                                          "2005": 0.278,
+                                          "2006": 0.337,
+                                          "2007": 0.395,
+                                          "2008": 0.536,
+                                          "2009": 0.598,
+                                          "2010": 0.64,
+                                          "2011": 0.672,
+                                          "2012": 0.695,
+                                          "2013": 0.703,
+                                          "2014": 0.741,
+                                        },
+                                        "dataType": "Percent",
+                                        "location": "COLORADO",
+                                      }
+                    }
+                    size="small"
+          />
+</div>,
+        <div
+          className="instructions-cont"
+>
+          <p
+                    className="instructions"
+          >
+                    click another to compare
+          </p>
+          <img
+                    alt="click another card to see a comparison of the two"
+                    src="arrow2.gif"
+          />
+</div>,
+        <div
+          className="shadow-card"
+/>,
+      ],
+      "className": "displayOne",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Card
+            handleCompareCards={[Function]}
+            schoolData={
+                        Object {
+                                    "data": Object {
+                                      "2004": 0.24,
+                                      "2005": 0.278,
+                                      "2006": 0.337,
+                                      "2007": 0.395,
+                                      "2008": 0.536,
+                                      "2009": 0.598,
+                                      "2010": 0.64,
+                                      "2011": 0.672,
+                                      "2012": 0.695,
+                                      "2013": 0.703,
+                                      "2014": 0.741,
+                                    },
+                                    "dataType": "Percent",
+                                    "location": "COLORADO",
+                                  }
+            }
+            size="small"
+/>,
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "handleCompareCards": [Function],
+            "schoolData": Object {
+              "data": Object {
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.337,
+                "2007": 0.395,
+                "2008": 0.536,
+                "2009": 0.598,
+                "2010": 0.64,
+                "2011": 0.672,
+                "2012": 0.695,
+                "2013": 0.703,
+                "2014": 0.741,
+              },
+              "dataType": "Percent",
+              "location": "COLORADO",
+            },
+            "size": "small",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p
+              className="instructions"
+>
+              click another to compare
+</p>,
+            <img
+              alt="click another card to see a comparison of the two"
+              src="arrow2.gif"
+/>,
+          ],
+          "className": "instructions-cont",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "click another to compare",
+              "className": "instructions",
+            },
+            "ref": null,
+            "rendered": "click another to compare",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "click another card to see a comparison of the two",
+              "src": "arrow2.gif",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "shadow-card",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            onClick={[Function]}
+>
+            <Card
+                        handleCompareCards={[Function]}
+                        schoolData={
+                                    Object {
+                                                "data": Object {
+                                                  "2004": 0.24,
+                                                  "2005": 0.278,
+                                                  "2006": 0.337,
+                                                  "2007": 0.395,
+                                                  "2008": 0.536,
+                                                  "2009": 0.598,
+                                                  "2010": 0.64,
+                                                  "2011": 0.672,
+                                                  "2012": 0.695,
+                                                  "2013": 0.703,
+                                                  "2014": 0.741,
+                                                },
+                                                "dataType": "Percent",
+                                                "location": "COLORADO",
+                                              }
+                        }
+                        size="small"
+            />
+</div>,
+          <div
+            className="instructions-cont"
+>
+            <p
+                        className="instructions"
+            >
+                        click another to compare
+            </p>
+            <img
+                        alt="click another card to see a comparison of the two"
+                        src="arrow2.gif"
+            />
+</div>,
+          <div
+            className="shadow-card"
+/>,
+        ],
+        "className": "displayOne",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Card
+              handleCompareCards={[Function]}
+              schoolData={
+                            Object {
+                                          "data": Object {
+                                            "2004": 0.24,
+                                            "2005": 0.278,
+                                            "2006": 0.337,
+                                            "2007": 0.395,
+                                            "2008": 0.536,
+                                            "2009": 0.598,
+                                            "2010": 0.64,
+                                            "2011": 0.672,
+                                            "2012": 0.695,
+                                            "2013": 0.703,
+                                            "2014": 0.741,
+                                          },
+                                          "dataType": "Percent",
+                                          "location": "COLORADO",
+                                        }
+              }
+              size="small"
+/>,
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "handleCompareCards": [Function],
+              "schoolData": Object {
+                "data": Object {
+                  "2004": 0.24,
+                  "2005": 0.278,
+                  "2006": 0.337,
+                  "2007": 0.395,
+                  "2008": 0.536,
+                  "2009": 0.598,
+                  "2010": 0.64,
+                  "2011": 0.672,
+                  "2012": 0.695,
+                  "2013": 0.703,
+                  "2014": 0.741,
+                },
+                "dataType": "Percent",
+                "location": "COLORADO",
+              },
+              "size": "small",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="instructions"
+>
+                click another to compare
+</p>,
+              <img
+                alt="click another card to see a comparison of the two"
+                src="arrow2.gif"
+/>,
+            ],
+            "className": "instructions-cont",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "click another to compare",
+                "className": "instructions",
+              },
+              "ref": null,
+              "rendered": "click another to compare",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "click another card to see a comparison of the two",
+                "src": "arrow2.gif",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "shadow-card",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

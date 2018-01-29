@@ -1,0 +1,503 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Control should match the snapshot if there is an error in the search 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Control
+    handleSearch={[Function]}
+    searchError={true}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="input-cont"
+>
+          <i
+                    aria-hidden="true"
+                    className="fa fa-search search-icon"
+          />
+          <label
+                    htmlFor="search"
+          />
+          <input
+                    className="error"
+                    id="search"
+                    onChange={[Function]}
+                    placeholder="Search by School"
+                    type="text"
+          />
+</div>,
+        <h1>
+          Education Colorado
+</h1>,
+      ],
+      "className": "Control",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <i
+              aria-hidden="true"
+              className="fa fa-search search-icon"
+/>,
+            <label
+              htmlFor="search"
+/>,
+            <input
+              className="error"
+              id="search"
+              onChange={[Function]}
+              placeholder="Search by School"
+              type="text"
+/>,
+          ],
+          "className": "input-cont",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "aria-hidden": "true",
+              "className": "fa fa-search search-icon",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "i",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "htmlFor": "search",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "error",
+              "id": "search",
+              "onChange": [Function],
+              "placeholder": "Search by School",
+              "type": "text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Education Colorado",
+        },
+        "ref": null,
+        "rendered": "Education Colorado",
+        "type": "h1",
+      },
+    ],
+    "type": "header",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="input-cont"
+>
+            <i
+                        aria-hidden="true"
+                        className="fa fa-search search-icon"
+            />
+            <label
+                        htmlFor="search"
+            />
+            <input
+                        className="error"
+                        id="search"
+                        onChange={[Function]}
+                        placeholder="Search by School"
+                        type="text"
+            />
+</div>,
+          <h1>
+            Education Colorado
+</h1>,
+        ],
+        "className": "Control",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <i
+                aria-hidden="true"
+                className="fa fa-search search-icon"
+/>,
+              <label
+                htmlFor="search"
+/>,
+              <input
+                className="error"
+                id="search"
+                onChange={[Function]}
+                placeholder="Search by School"
+                type="text"
+/>,
+            ],
+            "className": "input-cont",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-hidden": "true",
+                "className": "fa fa-search search-icon",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "i",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "htmlFor": "search",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "error",
+                "id": "search",
+                "onChange": [Function],
+                "placeholder": "Search by School",
+                "type": "text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Education Colorado",
+          },
+          "ref": null,
+          "rendered": "Education Colorado",
+          "type": "h1",
+        },
+      ],
+      "type": "header",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Control should match the snapshot if there is not error in the search 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Control
+    handleSearch={[Function]}
+    searchError={false}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="input-cont"
+>
+          <i
+                    aria-hidden="true"
+                    className="fa fa-search search-icon"
+          />
+          <label
+                    htmlFor="search"
+          />
+          <input
+                    className=""
+                    id="search"
+                    onChange={[Function]}
+                    placeholder="Search by School"
+                    type="text"
+          />
+</div>,
+        <h1>
+          Education Colorado
+</h1>,
+      ],
+      "className": "Control",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <i
+              aria-hidden="true"
+              className="fa fa-search search-icon"
+/>,
+            <label
+              htmlFor="search"
+/>,
+            <input
+              className=""
+              id="search"
+              onChange={[Function]}
+              placeholder="Search by School"
+              type="text"
+/>,
+          ],
+          "className": "input-cont",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "aria-hidden": "true",
+              "className": "fa fa-search search-icon",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "i",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "htmlFor": "search",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "",
+              "id": "search",
+              "onChange": [Function],
+              "placeholder": "Search by School",
+              "type": "text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Education Colorado",
+        },
+        "ref": null,
+        "rendered": "Education Colorado",
+        "type": "h1",
+      },
+    ],
+    "type": "header",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="input-cont"
+>
+            <i
+                        aria-hidden="true"
+                        className="fa fa-search search-icon"
+            />
+            <label
+                        htmlFor="search"
+            />
+            <input
+                        className=""
+                        id="search"
+                        onChange={[Function]}
+                        placeholder="Search by School"
+                        type="text"
+            />
+</div>,
+          <h1>
+            Education Colorado
+</h1>,
+        ],
+        "className": "Control",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <i
+                aria-hidden="true"
+                className="fa fa-search search-icon"
+/>,
+              <label
+                htmlFor="search"
+/>,
+              <input
+                className=""
+                id="search"
+                onChange={[Function]}
+                placeholder="Search by School"
+                type="text"
+/>,
+            ],
+            "className": "input-cont",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-hidden": "true",
+                "className": "fa fa-search search-icon",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "i",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "htmlFor": "search",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "",
+                "id": "search",
+                "onChange": [Function],
+                "placeholder": "Search by School",
+                "type": "text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Education Colorado",
+          },
+          "ref": null,
+          "rendered": "Education Colorado",
+          "type": "h1",
+        },
+      ],
+      "type": "header",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

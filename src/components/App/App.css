@@ -1,0 +1,15 @@
+.App {
+  width: 100%;
+}
+
+.bottom-images {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  overflow-y: hidden;
+}
+
+.school-icon {
+  margin-right: 100px;
+  width: 50px;
+}
