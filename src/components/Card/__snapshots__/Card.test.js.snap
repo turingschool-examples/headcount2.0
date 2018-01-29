@@ -1,0 +1,339 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card snapshot test 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    data={
+        Object {
+            "2004": 0.24,
+            "2014": 0.278,
+          }
+    }
+    districtName="Colorado"
+    id="Colorado"
+    selectCard={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3>
+          Colorado
+</h3>,
+        <ul>
+          <li
+                    className="under"
+          >
+                    <i
+                              className="fa fa-tint"
+                    />
+                    2004
+                    : 
+                    0.24
+          </li>
+          <li
+                    className="under"
+          >
+                    <i
+                              className="fa fa-tint"
+                    />
+                    2014
+                    : 
+                    0.278
+          </li>
+</ul>,
+      ],
+      "className": undefined,
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Colorado",
+        },
+        "ref": null,
+        "rendered": "Colorado",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li
+              className="under"
+>
+              <i
+                            className="fa fa-tint"
+              />
+              2004
+              : 
+              0.24
+</li>,
+            <li
+              className="under"
+>
+              <i
+                            className="fa fa-tint"
+              />
+              2014
+              : 
+              0.278
+</li>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <i
+                  className="fa fa-tint"
+/>,
+                "2004",
+                ": ",
+                0.24,
+              ],
+              "className": "under",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "fa fa-tint",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              "2004",
+              ": ",
+              0.24,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <i
+                  className="fa fa-tint"
+/>,
+                "2014",
+                ": ",
+                0.278,
+              ],
+              "className": "under",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "fa fa-tint",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              "2014",
+              ": ",
+              0.278,
+            ],
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3>
+            Colorado
+</h3>,
+          <ul>
+            <li
+                        className="under"
+            >
+                        <i
+                                    className="fa fa-tint"
+                        />
+                        2004
+                        : 
+                        0.24
+            </li>
+            <li
+                        className="under"
+            >
+                        <i
+                                    className="fa fa-tint"
+                        />
+                        2014
+                        : 
+                        0.278
+            </li>
+</ul>,
+        ],
+        "className": undefined,
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Colorado",
+          },
+          "ref": null,
+          "rendered": "Colorado",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li
+                className="under"
+>
+                <i
+                                className="fa fa-tint"
+                />
+                2004
+                : 
+                0.24
+</li>,
+              <li
+                className="under"
+>
+                <i
+                                className="fa fa-tint"
+                />
+                2014
+                : 
+                0.278
+</li>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <i
+                    className="fa fa-tint"
+/>,
+                  "2004",
+                  ": ",
+                  0.24,
+                ],
+                "className": "under",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "fa fa-tint",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
+                "2004",
+                ": ",
+                0.24,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <i
+                    className="fa fa-tint"
+/>,
+                  "2014",
+                  ": ",
+                  0.278,
+                ],
+                "className": "under",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "fa fa-tint",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
+                "2014",
+                ": ",
+                0.278,
+              ],
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
