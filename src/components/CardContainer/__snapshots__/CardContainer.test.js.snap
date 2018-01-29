@@ -10,14 +10,14 @@ ShallowWrapper {
             Object {
               "data": Object {
                 "2004": 0.523,
-                "2005": 0.321,
+                "2014": 0.321,
               },
               "location": "COLORADO",
             },
             Object {
               "data": Object {
                 "2004": 0.283,
-                "2005": 0.432,
+                "2014": 0.432,
               },
               "location": "ACADEMY 20",
             },
@@ -28,19 +28,20 @@ ShallowWrapper {
             "ACADEMY 20": Object {
               "data": Object {
                 "2004": 0.283,
-                "2005": 0.432,
+                "2014": 0.432,
               },
               "location": "ACADEMY 20",
             },
             "COLORADO": Object {
               "data": Object {
                 "2004": 0.523,
-                "2005": 0.321,
+                "2014": 0.321,
               },
               "location": "COLORADO",
             },
           }
     }
+    selectCard={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -60,24 +61,24 @@ ShallowWrapper {
           data={
                     Object {
                               "2004": 0.523,
-                              "2005": 0.321,
+                              "2014": 0.321,
                             }
           }
           districtName="COLORADO"
           id="COLORADO"
-          selectCard={undefined}
+          selectCard={[Function]}
 />,
         <Card
           clicked="clicked"
           data={
                     Object {
                               "2004": 0.283,
-                              "2005": 0.432,
+                              "2014": 0.432,
                             }
           }
           districtName="ACADEMY 20"
           id="ACADEMY 20"
-          selectCard={undefined}
+          selectCard={[Function]}
 />,
       ],
       "className": "CardContainer",
@@ -92,11 +93,11 @@ ShallowWrapper {
           "clicked": "clicked",
           "data": Object {
             "2004": 0.523,
-            "2005": 0.321,
+            "2014": 0.321,
           },
           "districtName": "COLORADO",
           "id": "COLORADO",
-          "selectCard": undefined,
+          "selectCard": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -110,11 +111,11 @@ ShallowWrapper {
           "clicked": "clicked",
           "data": Object {
             "2004": 0.283,
-            "2005": 0.432,
+            "2014": 0.432,
           },
           "districtName": "ACADEMY 20",
           "id": "ACADEMY 20",
-          "selectCard": undefined,
+          "selectCard": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -135,24 +136,24 @@ ShallowWrapper {
             data={
                         Object {
                                     "2004": 0.523,
-                                    "2005": 0.321,
+                                    "2014": 0.321,
                                   }
             }
             districtName="COLORADO"
             id="COLORADO"
-            selectCard={undefined}
+            selectCard={[Function]}
 />,
           <Card
             clicked="clicked"
             data={
                         Object {
                                     "2004": 0.283,
-                                    "2005": 0.432,
+                                    "2014": 0.432,
                                   }
             }
             districtName="ACADEMY 20"
             id="ACADEMY 20"
-            selectCard={undefined}
+            selectCard={[Function]}
 />,
         ],
         "className": "CardContainer",
@@ -167,11 +168,11 @@ ShallowWrapper {
             "clicked": "clicked",
             "data": Object {
               "2004": 0.523,
-              "2005": 0.321,
+              "2014": 0.321,
             },
             "districtName": "COLORADO",
             "id": "COLORADO",
-            "selectCard": undefined,
+            "selectCard": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -185,11 +186,11 @@ ShallowWrapper {
             "clicked": "clicked",
             "data": Object {
               "2004": 0.283,
-              "2005": 0.432,
+              "2014": 0.432,
             },
             "districtName": "ACADEMY 20",
             "id": "ACADEMY 20",
-            "selectCard": undefined,
+            "selectCard": [Function],
           },
           "ref": null,
           "rendered": null,
