@@ -11,14 +11,6 @@ describe('Search Component', () => {
     expect(renderedComp).toMatchSnapshot();
   });
 
-  it('should update its state when handleInput is called', () => {
-    const mock = jest.fn();
-    const renderedComp = shallow(<Search handleSubmit={mock}/>);
-    const event = {target: {value: 'colorado'}};
-    renderedComp.instance().handleInput(event);
-    expect(renderedComp.state().query).toEqual('colorado');
-  });
-
   it('should fire of the submitHelper when entered or submitted', () => {
     const mock = jest.fn();
     const renderedComp = shallow(<Search handleSubmit={mock}/>);

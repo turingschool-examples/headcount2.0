@@ -29,17 +29,23 @@ ShallowWrapper {
         <h3>
           ADAMS COUNTY 14
 </h3>,
-        <h3>
+        <h4
+          className="avg"
+>
           0.709
-</h3>,
+</h4>,
         <h1>
           1.742
 </h1>,
-        <h3>
-          ACADEMY 20
-</h3>,
-        <h3>
+        <h4
+          className="avg bottom"
+>
           0.407
+</h4>,
+        <h3
+          className="name-target"
+>
+          ACADEMY 20
 </h3>,
       ],
       "className": "compare-card",
@@ -63,10 +69,11 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": 0.709,
+          "className": "avg",
         },
         "ref": null,
         "rendered": 0.709,
-        "type": "h3",
+        "type": "h4",
       },
       Object {
         "instance": null,
@@ -84,21 +91,23 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "ACADEMY 20",
+          "children": 0.407,
+          "className": "avg bottom",
         },
         "ref": null,
-        "rendered": "ACADEMY 20",
-        "type": "h3",
+        "rendered": 0.407,
+        "type": "h4",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": 0.407,
+          "children": "ACADEMY 20",
+          "className": "name-target",
         },
         "ref": null,
-        "rendered": 0.407,
+        "rendered": "ACADEMY 20",
         "type": "h3",
       },
     ],
@@ -114,17 +123,23 @@ ShallowWrapper {
           <h3>
             ADAMS COUNTY 14
 </h3>,
-          <h3>
+          <h4
+            className="avg"
+>
             0.709
-</h3>,
+</h4>,
           <h1>
             1.742
 </h1>,
-          <h3>
-            ACADEMY 20
-</h3>,
-          <h3>
+          <h4
+            className="avg bottom"
+>
             0.407
+</h4>,
+          <h3
+            className="name-target"
+>
+            ACADEMY 20
 </h3>,
         ],
         "className": "compare-card",
@@ -148,10 +163,11 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": 0.709,
+            "className": "avg",
           },
           "ref": null,
           "rendered": 0.709,
-          "type": "h3",
+          "type": "h4",
         },
         Object {
           "instance": null,
@@ -169,21 +185,23 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "ACADEMY 20",
+            "children": 0.407,
+            "className": "avg bottom",
           },
           "ref": null,
-          "rendered": "ACADEMY 20",
-          "type": "h3",
+          "rendered": 0.407,
+          "type": "h4",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": 0.407,
+            "children": "ACADEMY 20",
+            "className": "name-target",
           },
           "ref": null,
-          "rendered": 0.407,
+          "rendered": "ACADEMY 20",
           "type": "h3",
         },
       ],

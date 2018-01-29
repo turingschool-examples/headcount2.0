@@ -28,14 +28,23 @@ export default class DistrictRepository {
   }
 
   findByName(search) {
+    if (!search) {
+      return undefined
+    }
+
     let searched = search.toUpperCase();
-    return this.data[searched] ;
+
+    return this.data[searched];
   }
 
   findAllMatches(searched) {
-    searched = searched.toUpperCase();
     const dataArray = Object.keys(this.data);
     
+    if (!searched) {
+      return dataArray
+    }
+
+    searched = searched.toUpperCase();
     return dataArray.filter(district => district.includes(searched));
   }
 
