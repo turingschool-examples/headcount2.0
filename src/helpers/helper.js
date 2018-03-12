@@ -5,14 +5,24 @@ export default class DistrictRepository {
 
   cleanData(data) {
     return data.reduce((statsObj, school) => {
-      if(!statsObj[school.Location]) { 
-       statsObj[school.Location] = []
+      if(!statsObj[school.Location.toUpperCase()]) {
+        statsObj[school.Location.toUpperCase()] = {location: school.Location.toUpperCase(), data: {}}
       }
-      statsObj[school.Location].push(school)
-      statsObj[school.Location].sort((a, b) => {
-        return b.TimeFrame - a.TimeFrame
-      })
+      statsObj[school.Location.toUpperCase()].data[school.TimeFrame] = this.cleanNumber(school.Data)
       return statsObj; 
-    }, {})
+    }, {})    
+  }
+
+  cleanNumber(number) {
+    return typeof number === "number" ? parseFloat(Number(number).toFixed(3)) : 0
+  }
+
+  findByName(district) {
+    let districtToCaps;
+    if (district) {
+      districtToCaps = district.toUpperCase()
+      return this.stats[districtToCaps]
+
+    }  
   }
 }
