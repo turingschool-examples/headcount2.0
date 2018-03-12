@@ -10,7 +10,7 @@ export default class DistrictRepository {
       }
       statsObj[school.Location.toUpperCase()].data[school.TimeFrame] = this.cleanNumber(school.Data)
       return statsObj; 
-    }, {})    
+    }, {})   
   }
 
   cleanNumber(number) {
@@ -22,7 +22,20 @@ export default class DistrictRepository {
     if (district) {
       districtToCaps = district.toUpperCase()
       return this.stats[districtToCaps]
-
     }  
+  }
+
+  findAllMatches(userInput) {
+    return Object.keys(this.stats).reduce((statsArr, school) => {
+      if (!userInput) {
+        statsArr.push(this.stats[school])
+      } else {
+        let userInputToCaps = userInput.toUpperCase();
+          if (school.includes(userInputToCaps)) {
+          statsArr.push(this.stats[school])  
+        }
+      }
+      return statsArr
+    }, [])
   }
 }
