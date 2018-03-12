@@ -11,6 +11,19 @@ export default class DistrictRepository {
     return this.stats[upperCaseName];
   }
 
+  findAllMatches(name) {
+    if (!name) {
+      return Object.keys(this.stats).map(key => {
+        return this.stats[key].data;
+      });
+    }
+
+    const upperCaseName = name.toUpperCase();
+
+    return Object.keys(this.stats).filter(key => key.includes(upperCaseName));
+
+  }
+
   cleanData(stats) {
     return stats.reduce((districts, stat)=> {
       const name = stat.Location.toUpperCase();
