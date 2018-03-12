@@ -1,17 +1,30 @@
 export default class DistrictRepository {
   constructor(data) {
+    this.stats = this.newData(data)
+  }
 
-    this.stats = data.reduce((schoolObj, district, index) => {
-
+  newData(data){
+   return data.reduce((schoolObj, district, index) => {
       const { TimeFrame, Data, Location } = district 
+      const upCaseLocation = Location.toUpperCase()
+      const roundedData = Math.round(Data * 1000) / 1000 || 0;
 
-      if (!schoolObj[Location]) {
-        schoolObj[Location] = {data: {[TimeFrame]: Data}, location: Location};
+
+      if (!schoolObj[upCaseLocation]) {
+        schoolObj[upCaseLocation] = {data: {[TimeFrame]: roundedData}, location: upCaseLocation};
       } 
-      schoolObj[Location].data[TimeFrame] = Data;
-      
-      return schoolObj
+      schoolObj[upCaseLocation].data[TimeFrame] = roundedData;
 
+      return schoolObj
     }, {})
   }
+
+  findByName(districtName){
+    
+    if (districtName) {
+      const upperCase = districtName.toUpperCase();
+      return this.stats[upperCase];
+    } 
+  }
+
 }
