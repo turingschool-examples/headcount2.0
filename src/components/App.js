@@ -9,7 +9,8 @@ class App extends Component {
   constructor () {
     super()
     this.state = {
-      districts: null
+      districtRepository: null,
+      districtsArray: null
     }
   }
 
@@ -19,15 +20,22 @@ class App extends Component {
 
   retrieveSchoolData = (schoolData) => {
     const districtRepository = new DistrictRepository(schoolData)
-    this.setState({districts: districtRepository})
+    const districtsArray = districtRepository.findAllMatches()
+    this.setState({ districtRepository, districtsArray })
+  }
+
+  handleSearch = (userInput) => {
+    const userSearch = this.state.districtRepository.findAllMatches(userInput)
+    this.setState({
+      districtsArray: userSearch
+    })
   }
 
   render() {
-
-  return (
+    return (
       <div>
-        <Header />
-        {this.state.districts && <Main districts={this.state.districts}/>}
+        <Header search={this.handleSearch}/>
+        {this.state.districtRepository && <Main districts={this.state.districtsArray} />}
       </div>
     );
   }

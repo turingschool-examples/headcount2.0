@@ -1,9 +1,13 @@
 import React from 'react';
 import '../styles/Header.css';
+import Nav from './Nav';
 
-const Header = () => {
+const Header = ({search}) => {
   return (
-    <header>Welcome to Headcount</header>
+    <header>
+      <h1>Welcome to Headcount</h1>
+      <Nav search={search}/>
+    </header>
   )
 }
 
