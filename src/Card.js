@@ -3,9 +3,13 @@ import PropTypes from 'prop-types';
 import './styles/Card.css';
 
 
-const Card = ({ district }) => {
+const Card = ({ district, selectLocation, compareLocations }) => {
+  const selected = compareLocations.includes(district.location) ? 'selected' : '';
+
   return (
-    <article className='district'>
+    <article 
+      className={`district ${selected}`}
+      onClick={() => selectLocation(district.location)} >
       <h3>{ district.location } </h3>
       <ul>
         {

@@ -3,7 +3,7 @@ import Card from './Card';
 import PropTypes from 'prop-types';
 import './styles/CardsContainer.css';
 
-const CardsContainer = ({ districts, searchValue }) => {
+const CardsContainer = ({ districts, searchValue, selectLocation, compareLocations }) => {
   if (searchValue){
     searchValue = searchValue.toUpperCase();
   }
@@ -15,7 +15,9 @@ const CardsContainer = ({ districts, searchValue }) => {
             if (districts.stats[district].location.includes(searchValue)) {
               return <Card 
                 district={districts.stats[district]}
-                key={index} />;
+                key={index} 
+                selectLocation={selectLocation} 
+                compareLocations={compareLocations} />;
             }
             return null;      
           })

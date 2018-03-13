@@ -66,7 +66,7 @@ export default class DistrictRepository {
     return {
       [location1UpperCase]: locationOneAvg,
       [location2UpperCase]: locationTwoAvg,
-      compared: (locationOneAvg - locationTwoAvg).toFixed(3)
+      compared: parseFloat((locationOneAvg / locationTwoAvg).toFixed(3))
     };
   }
 }

@@ -21,3 +21,7 @@ article {
   width: 20%;
   border: 2px black solid;
 }
+
+.selected {
+  border: 2px solid blue;
+}
