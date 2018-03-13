@@ -73,10 +73,10 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <input
-          onChange={[Function]}
-          type="search"
-          value=""
+        <Search
+          clearSearch={[Function]}
+          searchDistrict={[Function]}
+          searchValue=""
 />,
         <CardsContainer
           districts={
@@ -142,15 +142,15 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "function",
         "props": Object {
-          "onChange": [Function],
-          "type": "search",
-          "value": "",
+          "clearSearch": [Function],
+          "searchDistrict": [Function],
+          "searchValue": "",
         },
         "ref": null,
         "rendered": null,
-        "type": "input",
+        "type": [Function],
       },
       Object {
         "instance": null,
@@ -225,10 +225,10 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <input
-            onChange={[Function]}
-            type="search"
-            value=""
+          <Search
+            clearSearch={[Function]}
+            searchDistrict={[Function]}
+            searchValue=""
 />,
           <CardsContainer
             districts={
@@ -294,15 +294,15 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "function",
           "props": Object {
-            "onChange": [Function],
-            "type": "search",
-            "value": "",
+            "clearSearch": [Function],
+            "searchDistrict": [Function],
+            "searchValue": "",
           },
           "ref": null,
           "rendered": null,
-          "type": "input",
+          "type": [Function],
         },
         Object {
           "instance": null,
