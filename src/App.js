@@ -12,8 +12,8 @@ class App extends Component {
     }
   }
 
-  getData = (data) => {
-    this.district = new DistrictRepository(kinderData);
+  getData = (newData) => {
+    this.district = new DistrictRepository(newData);
     this.setState({
       data: this.district.stats
     })
@@ -28,8 +28,6 @@ class App extends Component {
       <div>
         <h1>Welcome To Headcount 2.0</h1>
         <CardContainer data={this.state.data} />
-
-
       </div>
 
     );
