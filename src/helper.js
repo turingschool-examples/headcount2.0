@@ -1,6 +1,10 @@
 export default class DistrictRepository {
   constructor(data) {
-    this.stats = data.reduce((obj, program) => {
+    this.stats = this.summarizeStats(data)
+  }
+
+  summarizeStats(data) {
+    return data.reduce((obj, program) => {
       if(!obj[program.Location]){
         obj[program.Location] = { location: '', data: {}} 
       } 
