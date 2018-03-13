@@ -3,26 +3,36 @@ export default class DistrictRepository {
   this.stats = this.cleanData(data)
   }
 
-  cleanData(data) {
+  cleanData = (data) => {
       return data.reduce( (districtObj, district) => {
         const { Location, TimeFrame, Data } = district;
         if (!districtObj[Location]) {
-          districtObj[Location] = { location: district.Location,
-                                    timeFrame: district.TimeFrame,
-                                    data: district.Data
-           }
+          districtObj[Location] = { 
+            location: district.Location,
+            timeFrame: district.TimeFrame,
+            data: district.Data
+          }
         }
        return districtObj
       }, {})
   }
 
-  findByName(userInput) {
-    let keyNames = Object.keys(this.stats);
+  findByName = (userInput) => {
 
-    return keyNames.filter((name)=> {
-      return this.stats[name]
-    })
-  
+    if(!userInput) {
+      return undefined
+    } else if (userInput) {
+
+      const keyNames = Object.keys(this.stats);
+
+      const matches = keyNames.reduce((acc, name)=> {
+    // want to create an object with a key of the name
+    // that matches the user input and a value of
+    // the district object
+       
+      }, {})
+
+      return matches
+    }
   }
-
-}
+}  
