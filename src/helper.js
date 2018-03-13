@@ -1,3 +1,5 @@
+
+
 export default class DistrictRepository {
   constructor(data) {
     this.stats = this.newData(data)
@@ -28,14 +30,17 @@ export default class DistrictRepository {
   findAllMatches(searchString) {
     const dataLocations = Object.keys(this.stats)
 
-    if (searchString) {
-      const upCaseSearchString = searchString.toUpperCase();
-
-      return dataLocations.filter(location => {
-        return location.startsWith(upCaseSearchString);
-      })
-    }
-    return dataLocations;
+    return dataLocations.reduce((accum, location) => {
+      if (searchString) {
+        const upCaseSearchString = searchString.toUpperCase();
+        if (location.startsWith(upCaseSearchString)) {
+          accum.push(this.stats[location]);
+        }
+      } else {
+        accum.push(this.stats[location])
+      }
+      return accum
+    }, [])
   }
 }
 
