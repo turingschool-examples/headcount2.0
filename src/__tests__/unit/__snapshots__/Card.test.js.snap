@@ -32,7 +32,9 @@ ShallowWrapper {
            
 </h3>,
         <ul>
-          <li>
+          <li
+                    className="red"
+          >
                     2017
                     :
                     0
@@ -66,7 +68,9 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <li>
+            <li
+              className="red"
+>
               2017
               :
               0
@@ -85,6 +89,7 @@ ShallowWrapper {
                 ":",
                 0,
               ],
+              "className": "red",
             },
             "ref": null,
             "rendered": Array [
@@ -112,7 +117,9 @@ ShallowWrapper {
              
 </h3>,
           <ul>
-            <li>
+            <li
+                        className="red"
+            >
                         2017
                         :
                         0
@@ -146,7 +153,9 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <li>
+              <li
+                className="red"
+>
                 2017
                 :
                 0
@@ -165,6 +174,7 @@ ShallowWrapper {
                   ":",
                   0,
                 ],
+                "className": "red",
               },
               "ref": null,
               "rendered": Array [

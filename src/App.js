@@ -7,15 +7,25 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      districts: props.districts
+      districts: props.districts,
+      searchValue: ''
     };
-
   }
+
+  searchDistrict = (e) => {
+    this.setState({
+      searchValue: e.target.value.toUpperCase()
+    });
+  } 
 
   render() {
     return (
       <div>
-        <CardsContainer districts={ this.state.districts }/>
+        <input 
+          type='search' 
+          value={this.state.searchValue} 
+          onChange={this.searchDistrict} />
+        <CardsContainer districts={ this.state.districts } searchValue={this.state.searchValue} />
       </div>
     );
   }
