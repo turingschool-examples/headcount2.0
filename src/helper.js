@@ -36,12 +36,22 @@ export default class DistrictRepository {
     return this.stats[findDistrict]
   }
 
+  // findAllMatches(name) {
+
+  //   if(!name) {
+  //     return Object.keys(this.stats).filter(district => district)
+  //   }
+
+  //   return Object.keys(this.stats).filter(district => district.toUpperCase().includes(name.toUpperCase()))
+  // }
+
   findAllMatches(name) {
 
-    if(!name) {
-      return Object.keys(this.stats).filter(district => district)
-    }
-
-    return Object.keys(this.stats).filter(district => district.toUpperCase().includes(name.toUpperCase()))
+  let keys = Object.keys(this.stats);
+  if (name) {
+    return keys.map(key => this.stats[key]).filter( district => district.location.includes(name.toUpperCase()))
+  } else {
+    return keys.map(key => this.stats[key])
   }
+}
 }

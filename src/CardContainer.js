@@ -5,15 +5,15 @@ import PropTypes from 'prop-types'
 
 export const CardContainer = ({data}) => {
 
-  const cardInfo = Object.keys(data).map(district => <Card location={data[district].location} data={data[district].data} key={district}/>)
+  const cardInfo = data.map(district => <Card location={district.location} data={district.data} key={district.location}/>)
+  
   return (
     <div className="card-container">
       {cardInfo}
     </div>
   )
-
 }
 
 CardContainer.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.array.isRequired
 }
