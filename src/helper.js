@@ -25,12 +25,20 @@ export default class DistrictRepository {
     if(name) {
       var caseInsensitive = name.toUpperCase();  
     }
+
     const findDistrict = Object.keys(this.stats).find(district => {
-      let newDistrict = district.toUpperCase();
-      return newDistrict === caseInsensitive
+      return district.toUpperCase() === caseInsensitive
     })
 
-
     return this.stats[findDistrict]
+  }
+
+  findAllMatches(name) {
+
+    if(!name) {
+      return Object.keys(this.stats).filter(district => district)
+    }
+
+    return Object.keys(this.stats).filter(district => district.toUpperCase().includes(name.toUpperCase()))
   }
 }
