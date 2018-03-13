@@ -7,20 +7,20 @@ import {CardContainer} from './CardContainer'
 class App extends Component {
   constructor(props) {
     super(props);
-    this.district = new DistrictRepository(kinderData);
     this.state={
       data: {}
     }
   }
 
-  getData = () => {
+  getData = (data) => {
+    this.district = new DistrictRepository(kinderData);
     this.setState({
       data: this.district.stats
     })
   }
 
   componentDidMount(){
-    this.getData()
+    this.getData(kinderData)
   }
 
   render() {
