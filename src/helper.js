@@ -29,7 +29,7 @@ export default class DistrictRepository {
     return stats.reduce((districts, stat)=> {
       const name = stat.Location.toUpperCase();
 
-      if (!districts[stat.Location]) {
+      if (!districts[name]) {
         districts[name] = { 
           location: name,
           stats: {} };
