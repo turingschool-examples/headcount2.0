@@ -1,7 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import DistrictRepository from './helper';
+import kinderData from './data/kindergartners_in_full_day_program';
+import App from './App';
 import './index.css';
 
-import App from './App';
+const kindergartnersInFullDayProgram = new DistrictRepository(kinderData);
 
-ReactDOM.render( <App />, document.getElementById('root') );
+ReactDOM.render(
+  <App districts={kindergartnersInFullDayProgram} />,
+  document.getElementById('root')
+);

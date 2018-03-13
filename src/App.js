@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import './App.css';
+import PropTypes from 'prop-types';
 import CardsContainer from './CardsContainer';
-import DistrictRepository from './helper';
-import kinderData from './data/kindergartners_in_full_day_program';
-
-
+import './App.css';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      districts: new DistrictRepository(kinderData)
+      districts: props.districts
     };
 
   }
@@ -23,5 +20,9 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  districts: PropTypes.objectOf(PropTypes.object).isRequired
+};
 
 export default App;
