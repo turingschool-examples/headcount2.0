@@ -1,6 +1,7 @@
 import React from 'react';
 import {Card} from './Card';
-import './styles/cardContainer.css'
+import './styles/cardContainer.css';
+import PropTypes from 'prop-types'
 
 export const CardContainer = ({data}) => {
 
@@ -11,4 +12,8 @@ export const CardContainer = ({data}) => {
     </div>
   )
 
+}
+
+CardContainer.propTypes = {
+  data: PropTypes.object.isRequired
 }
