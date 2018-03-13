@@ -14,7 +14,7 @@ export default class DistrictRepository {
   }
 
   cleanNumber(number) {
-    return typeof number === "number" ? parseFloat(Number(number).toFixed(3)) : 0
+    return typeof number === "number" ? parseFloat(number.toFixed(3)) : 0
   }
 
   findByName(district) {
