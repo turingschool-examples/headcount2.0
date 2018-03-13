@@ -2,6 +2,7 @@ export default class DistrictRepository {
   constructor(data) {
   this.stats = this.cleanData(data)
   }
+
   cleanData(data) {
       return data.reduce( (districtObj, district) => {
         const { Location, TimeFrame, Data } = district;
@@ -13,6 +14,15 @@ export default class DistrictRepository {
         }
        return districtObj
       }, {})
-    console.log(this.stats)
   }
+
+  findByName(userInput) {
+    let keyNames = Object.keys(this.stats);
+
+    return keyNames.filter((name)=> {
+      return this.stats[name]
+    })
+  
+  }
+
 }
