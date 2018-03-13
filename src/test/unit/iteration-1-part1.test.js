@@ -1,4 +1,4 @@
-import DistrictRepository from '../../src/helper.js';
+import DistrictRepository from '../../helpers/helper.js';
 import kinderData from '../../data/kindergartners_in_full_day_program.js';
 
 describe('DistrictRepository iteration 1 - part 1', () =>  {
@@ -13,7 +13,6 @@ describe('DistrictRepository iteration 1 - part 1', () =>  {
   });
 
   test('findByName returns an object with its individual district information', () => {
-
     expect(typeof district.findByName('Colorado')).toEqual('object');
     expect(district.findByName('Colorado').location).toEqual('COLORADO');
   });
