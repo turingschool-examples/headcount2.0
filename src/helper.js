@@ -4,13 +4,13 @@ export default class DistrictRepository {
   }
 
   summarizeStats(data) {
-    return data.reduce((obj, program) => {
-      if(!obj[program.Location]){
-        obj[program.Location] = { location: '', data: {}} 
+    return data.reduce((obj, enrollment) => {
+      if(!obj[enrollment.Location]){
+        obj[enrollment.Location] = { location: '', data: {}} 
       } 
 
-      obj[program.Location].location = program.Location.toUpperCase();
-      obj[program.Location].data[program.TimeFrame] = this.cleanData(program.Data)
+      obj[enrollment.Location].location = enrollment.Location.toUpperCase();
+      obj[enrollment.Location].data[enrollment.TimeFrame] = this.cleanData(enrollment.Data)
 
       return obj
     }, {})
