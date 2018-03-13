@@ -1,0 +1,14 @@
+.card {
+  border: 1px black solid;
+  width: 300px;
+  margin: 10px;
+
+}
+
+h2 {
+  padding-left: 10px;
+}
+
+p {
+  padding-left: 20px;
+}
