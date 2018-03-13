@@ -21,6 +21,9 @@ ShallowWrapper {
         <h1>
           Welcome To Headcount 2.0
 </h1>,
+        <Search
+          filterData={[Function]}
+/>,
         <Unknown
           data={
                     Object {
@@ -2937,6 +2940,17 @@ ShallowWrapper {
         "ref": null,
         "rendered": "Welcome To Headcount 2.0",
         "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "filterData": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
       },
       Object {
         "instance": null,
@@ -5859,6 +5873,9 @@ ShallowWrapper {
           <h1>
             Welcome To Headcount 2.0
 </h1>,
+          <Search
+            filterData={[Function]}
+/>,
           <Unknown
             data={
                         Object {
@@ -8775,6 +8792,17 @@ ShallowWrapper {
           "ref": null,
           "rendered": "Welcome To Headcount 2.0",
           "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "filterData": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
         },
         Object {
           "instance": null,

@@ -3,7 +3,6 @@ import './styles/card.css';
 import PropTypes from 'prop-types'
 
 export const Card = ({data, location}) => {
-
   const years = Object.keys(data).map(year => {
     let roundedPerc = parseFloat(data[year].toFixed(2));
     if (roundedPerc < 0.5) {
