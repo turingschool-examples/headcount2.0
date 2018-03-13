@@ -4,10 +4,6 @@ import './styles/Card.css';
 
 
 const Card = ({ district }) => {
-  const roundTimeFrame = (timeFrame) => {
-    return Math.round(district.stats[timeFrame] * 100) / 100;
-  };
-
   return (
     <article className='district'>
       <h3>{ district.location } </h3>
@@ -20,7 +16,7 @@ const Card = ({ district }) => {
                 className={district.stats[timeFrame] < 0.5 ? 'red' : ''}
               >
                 {timeFrame}:
-                {roundTimeFrame(timeFrame)}
+                {Math.round(district.stats[timeFrame] * 100) / 100}
               </li> 
             );
           })    

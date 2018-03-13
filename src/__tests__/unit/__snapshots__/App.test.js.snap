@@ -1,0 +1,382 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render the app 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App
+    districts={
+        Object {
+            "stats": Object {
+              "ASPEN 1": Object {
+                "location": "ASPEN 1",
+                "stats": Object {
+                  "2004": 0.302,
+                  "2005": 0.267,
+                  "2006": 0.354,
+                  "2007": 0.392,
+                  "2008": 0.385,
+                  "2009": 0.39,
+                  "2010": 0.436,
+                  "2011": 0.489,
+                  "2012": 0.479,
+                  "2013": 0.488,
+                  "2014": 0.49,
+                },
+              },
+              "OTIS R-3": Object {
+                "location": "OTIS R-3",
+                "stats": Object {
+                  "2004": 0.302,
+                  "2005": 0.267,
+                  "2006": 0.354,
+                  "2007": 0.392,
+                  "2008": 0.385,
+                  "2009": 0.39,
+                  "2010": 0.436,
+                  "2011": 0.489,
+                  "2012": 0.479,
+                  "2013": 0.488,
+                  "2014": 0.49,
+                },
+              },
+              "PRIMERO REORGANIZED 2": Object {
+                "location": "PRIMERO REORGANIZED 2",
+                "stats": Object {
+                  "2004": 0.302,
+                  "2005": 0.267,
+                  "2006": 0.354,
+                  "2007": 0.392,
+                  "2008": 0.385,
+                  "2009": 0.39,
+                  "2010": 0.436,
+                  "2011": 0.489,
+                  "2012": 0.479,
+                  "2013": 0.488,
+                  "2014": 0.49,
+                },
+              },
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <input
+          onChange={[Function]}
+          type="search"
+          value=""
+/>,
+        <CardsContainer
+          districts={
+                    Object {
+                              "stats": Object {
+                                "ASPEN 1": Object {
+                                  "location": "ASPEN 1",
+                                  "stats": Object {
+                                    "2004": 0.302,
+                                    "2005": 0.267,
+                                    "2006": 0.354,
+                                    "2007": 0.392,
+                                    "2008": 0.385,
+                                    "2009": 0.39,
+                                    "2010": 0.436,
+                                    "2011": 0.489,
+                                    "2012": 0.479,
+                                    "2013": 0.488,
+                                    "2014": 0.49,
+                                  },
+                                },
+                                "OTIS R-3": Object {
+                                  "location": "OTIS R-3",
+                                  "stats": Object {
+                                    "2004": 0.302,
+                                    "2005": 0.267,
+                                    "2006": 0.354,
+                                    "2007": 0.392,
+                                    "2008": 0.385,
+                                    "2009": 0.39,
+                                    "2010": 0.436,
+                                    "2011": 0.489,
+                                    "2012": 0.479,
+                                    "2013": 0.488,
+                                    "2014": 0.49,
+                                  },
+                                },
+                                "PRIMERO REORGANIZED 2": Object {
+                                  "location": "PRIMERO REORGANIZED 2",
+                                  "stats": Object {
+                                    "2004": 0.302,
+                                    "2005": 0.267,
+                                    "2006": 0.354,
+                                    "2007": 0.392,
+                                    "2008": 0.385,
+                                    "2009": 0.39,
+                                    "2010": 0.436,
+                                    "2011": 0.489,
+                                    "2012": 0.479,
+                                    "2013": 0.488,
+                                    "2014": 0.49,
+                                  },
+                                },
+                              },
+                            }
+          }
+          searchValue=""
+/>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "onChange": [Function],
+          "type": "search",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "districts": Object {
+            "stats": Object {
+              "ASPEN 1": Object {
+                "location": "ASPEN 1",
+                "stats": Object {
+                  "2004": 0.302,
+                  "2005": 0.267,
+                  "2006": 0.354,
+                  "2007": 0.392,
+                  "2008": 0.385,
+                  "2009": 0.39,
+                  "2010": 0.436,
+                  "2011": 0.489,
+                  "2012": 0.479,
+                  "2013": 0.488,
+                  "2014": 0.49,
+                },
+              },
+              "OTIS R-3": Object {
+                "location": "OTIS R-3",
+                "stats": Object {
+                  "2004": 0.302,
+                  "2005": 0.267,
+                  "2006": 0.354,
+                  "2007": 0.392,
+                  "2008": 0.385,
+                  "2009": 0.39,
+                  "2010": 0.436,
+                  "2011": 0.489,
+                  "2012": 0.479,
+                  "2013": 0.488,
+                  "2014": 0.49,
+                },
+              },
+              "PRIMERO REORGANIZED 2": Object {
+                "location": "PRIMERO REORGANIZED 2",
+                "stats": Object {
+                  "2004": 0.302,
+                  "2005": 0.267,
+                  "2006": 0.354,
+                  "2007": 0.392,
+                  "2008": 0.385,
+                  "2009": 0.39,
+                  "2010": 0.436,
+                  "2011": 0.489,
+                  "2012": 0.479,
+                  "2013": 0.488,
+                  "2014": 0.49,
+                },
+              },
+            },
+          },
+          "searchValue": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <input
+            onChange={[Function]}
+            type="search"
+            value=""
+/>,
+          <CardsContainer
+            districts={
+                        Object {
+                                    "stats": Object {
+                                      "ASPEN 1": Object {
+                                        "location": "ASPEN 1",
+                                        "stats": Object {
+                                          "2004": 0.302,
+                                          "2005": 0.267,
+                                          "2006": 0.354,
+                                          "2007": 0.392,
+                                          "2008": 0.385,
+                                          "2009": 0.39,
+                                          "2010": 0.436,
+                                          "2011": 0.489,
+                                          "2012": 0.479,
+                                          "2013": 0.488,
+                                          "2014": 0.49,
+                                        },
+                                      },
+                                      "OTIS R-3": Object {
+                                        "location": "OTIS R-3",
+                                        "stats": Object {
+                                          "2004": 0.302,
+                                          "2005": 0.267,
+                                          "2006": 0.354,
+                                          "2007": 0.392,
+                                          "2008": 0.385,
+                                          "2009": 0.39,
+                                          "2010": 0.436,
+                                          "2011": 0.489,
+                                          "2012": 0.479,
+                                          "2013": 0.488,
+                                          "2014": 0.49,
+                                        },
+                                      },
+                                      "PRIMERO REORGANIZED 2": Object {
+                                        "location": "PRIMERO REORGANIZED 2",
+                                        "stats": Object {
+                                          "2004": 0.302,
+                                          "2005": 0.267,
+                                          "2006": 0.354,
+                                          "2007": 0.392,
+                                          "2008": 0.385,
+                                          "2009": 0.39,
+                                          "2010": 0.436,
+                                          "2011": 0.489,
+                                          "2012": 0.479,
+                                          "2013": 0.488,
+                                          "2014": 0.49,
+                                        },
+                                      },
+                                    },
+                                  }
+            }
+            searchValue=""
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "onChange": [Function],
+            "type": "search",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "districts": Object {
+              "stats": Object {
+                "ASPEN 1": Object {
+                  "location": "ASPEN 1",
+                  "stats": Object {
+                    "2004": 0.302,
+                    "2005": 0.267,
+                    "2006": 0.354,
+                    "2007": 0.392,
+                    "2008": 0.385,
+                    "2009": 0.39,
+                    "2010": 0.436,
+                    "2011": 0.489,
+                    "2012": 0.479,
+                    "2013": 0.488,
+                    "2014": 0.49,
+                  },
+                },
+                "OTIS R-3": Object {
+                  "location": "OTIS R-3",
+                  "stats": Object {
+                    "2004": 0.302,
+                    "2005": 0.267,
+                    "2006": 0.354,
+                    "2007": 0.392,
+                    "2008": 0.385,
+                    "2009": 0.39,
+                    "2010": 0.436,
+                    "2011": 0.489,
+                    "2012": 0.479,
+                    "2013": 0.488,
+                    "2014": 0.49,
+                  },
+                },
+                "PRIMERO REORGANIZED 2": Object {
+                  "location": "PRIMERO REORGANIZED 2",
+                  "stats": Object {
+                    "2004": 0.302,
+                    "2005": 0.267,
+                    "2006": 0.354,
+                    "2007": 0.392,
+                    "2008": 0.385,
+                    "2009": 0.39,
+                    "2010": 0.436,
+                    "2011": 0.489,
+                    "2012": 0.479,
+                    "2013": 0.488,
+                    "2014": 0.49,
+                  },
+                },
+              },
+            },
+            "searchValue": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
