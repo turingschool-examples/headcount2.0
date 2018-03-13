@@ -8,7 +8,7 @@ const Card = ({ info }) => {
   })
 
   return (
-    <article>
+    <article className='card'>
       <h2>{location}</h2>
       <ul>
         {year}
