@@ -14,14 +14,15 @@ export default class DistrictRepository {
   findAllMatches(name) {
     if (!name) {
       return Object.keys(this.stats).map(key => {
-        return this.stats[key].data;
+        return this.stats[key].stats;
       });
     }
 
     const upperCaseName = name.toUpperCase();
 
-    return Object.keys(this.stats).filter(key => key.includes(upperCaseName));
-
+    return Object.keys(this.stats)
+      .filter(key => key.includes(upperCaseName))
+      .map( key => this.stats[key].stats);
   }
 
   cleanData(stats) {
@@ -31,7 +32,7 @@ export default class DistrictRepository {
       if (!districts[stat.Location]) {
         districts[name] = { 
           location: name,
-          data: {} };
+          stats: {} };
       }
       if (stat.Data === 'N/A') {
         stat.Data = 0;
@@ -40,7 +41,7 @@ export default class DistrictRepository {
         stat.Data = parseFloat(stat.Data).toFixed(3);
       }
 
-      districts[name].data[stat.TimeFrame] = parseFloat(stat.Data);
+      districts[name].stats[stat.TimeFrame] = parseFloat(stat.Data);
       return districts;
     }, {});
   }
