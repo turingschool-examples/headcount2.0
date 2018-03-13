@@ -1,0 +1,17 @@
+.card {
+  border: 1px solid black;
+  width: 250px;
+  height: 315px;
+  margin: 2% 0;
+}
+
+.card h2 {
+  text-align: center;
+}
+
+
+.card ul {
+  list-style: none;
+  margin: auto;
+  width: 38%;
+}
