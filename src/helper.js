@@ -34,11 +34,13 @@ export default class DistrictRepository {
           location: name,
           stats: {} };
       }
-      if (stat.Data === 'N/A') {
-        stat.Data = 0;
-      }
+     
       if (stat.Data < 1 && stat.Data > 0) {
         stat.Data = parseFloat(stat.Data).toFixed(3);
+      }
+
+      if (isNaN(stat.Data)) {
+        stat.Data = 0;
       }
 
       districts[name].stats[stat.TimeFrame] = parseFloat(stat.Data);
