@@ -1,8 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './styles/Card.css';
 
 
 const Card = ({ district }) => {
+  const roundTimeFrame = (timeFrame) => {
+    return Math.round(district.stats[timeFrame] * 100) / 100;
+  };
+
   return (
     <article className='district'>
       <h3>{ district.location } </h3>
@@ -10,9 +15,12 @@ const Card = ({ district }) => {
         {
           Object.keys(district.stats).map( (timeFrame, index) => {
             return (
-              <li key={index}>
+              <li 
+                key={index}
+                className={district.stats[timeFrame] < 0.5 ? 'red' : ''}
+              >
                 {timeFrame}:
-                {district.stats[timeFrame]}
+                {roundTimeFrame(timeFrame)}
               </li> 
             );
           })    
