@@ -12,7 +12,6 @@ describe('DistrictRepository iteration 0', () =>  {
   test('data coming in has no duplicates', () => {
     // uncomment out the tests that best fits your model
     // expect(district.stats.length).toBe(181);
-    console.log(district.stats)
     expect(Object.keys(district.stats).length).toBe(181);
   });
 
