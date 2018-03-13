@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import './styles/CardsContainer.css';
 
 const CardsContainer = ({ districts, searchValue }) => {
+  if (searchValue){
+    searchValue = searchValue.toUpperCase();
+  }
   return (
     <div className='CardsContainer'> 
       {
@@ -11,19 +14,19 @@ const CardsContainer = ({ districts, searchValue }) => {
           .map( (district, index) => {
             if (districts.stats[district].location.includes(searchValue)) {
               return <Card 
-              district={districts.stats[district]}
-              key={index} />
+                district={districts.stats[district]}
+                key={index} />;
             }
             return null;      
           })
-        }
       }
     </div>
   );
 };
 
 CardsContainer.propTypes = { 
-  districts: PropTypes.object.isRequired
+  districts: PropTypes.object.isRequired,
+  searchValue: PropTypes.string.isRequired
 };
 
 export default CardsContainer;

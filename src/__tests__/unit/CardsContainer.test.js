@@ -20,7 +20,11 @@ describe('CardsContainer', () => {
 }
 
 	it('should have array of objects as props', () => {
-		let cardsContainer = shallow(<CardsContainer districts={districts} />);
+		let cardsContainer = shallow(
+      <CardsContainer 
+        searchValue={''}
+        districts={districts} />
+    );
 		expect(cardsContainer).toMatchSnapshot();
 		expect(cardsContainer.props("districts")).toBeDefined();
 	});

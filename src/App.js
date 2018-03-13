@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CardsContainer from './CardsContainer';
+import Search from './Search.js';
 import './App.css';
 
 class App extends Component {
@@ -12,20 +13,26 @@ class App extends Component {
     };
   }
 
-  searchDistrict = (e) => {
+  searchDistrict = (event) => {
     this.setState({
-      searchValue: e.target.value.toUpperCase()
+      searchValue: event.target.value
     });
   } 
+
+  clearSearch = () => {
+    this.setState({searchValue: ''});
+  }
 
   render() {
     return (
       <div>
-        <input 
-          type='search' 
-          value={this.state.searchValue} 
-          onChange={this.searchDistrict} />
-        <CardsContainer districts={ this.state.districts } searchValue={this.state.searchValue} />
+        <Search 
+          clearSearch={this.clearSearch}
+          searchValue={this.state.searchValue}
+          searchDistrict={this.searchDistrict} />
+        <CardsContainer 
+          districts={ this.state.districts } 
+          searchValue={this.state.searchValue} />
       </div>
     );
   }

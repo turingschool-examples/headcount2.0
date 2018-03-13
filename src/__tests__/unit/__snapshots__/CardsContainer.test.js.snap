@@ -23,6 +23,7 @@ ShallowWrapper {
             },
           }
     }
+    searchValue=""
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -37,19 +38,63 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        Array [
-          null,
-          null,
-        ],
-        "}",
+        <Card
+          district={
+                    Object {
+                              "location": "COLORADO",
+                              "stats": Object {
+                                "2017": 0,
+                              },
+                            }
+          }
+/>,
+        <Card
+          district={
+                    Object {
+                              "location": "DENVER",
+                              "stats": Object {
+                                "2017": 0,
+                              },
+                            }
+          }
+/>,
       ],
       "className": "CardsContainer",
     },
     "ref": null,
     "rendered": Array [
-      null,
-      null,
-      "}",
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "district": Object {
+            "location": "COLORADO",
+            "stats": Object {
+              "2017": 0,
+            },
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "function",
+        "props": Object {
+          "district": Object {
+            "location": "DENVER",
+            "stats": Object {
+              "2017": 0,
+            },
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -60,19 +105,63 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          Array [
-            null,
-            null,
-          ],
-          "}",
+          <Card
+            district={
+                        Object {
+                                    "location": "COLORADO",
+                                    "stats": Object {
+                                      "2017": 0,
+                                    },
+                                  }
+            }
+/>,
+          <Card
+            district={
+                        Object {
+                                    "location": "DENVER",
+                                    "stats": Object {
+                                      "2017": 0,
+                                    },
+                                  }
+            }
+/>,
         ],
         "className": "CardsContainer",
       },
       "ref": null,
       "rendered": Array [
-        null,
-        null,
-        "}",
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "district": Object {
+              "location": "COLORADO",
+              "stats": Object {
+                "2017": 0,
+              },
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "function",
+          "props": Object {
+            "district": Object {
+              "location": "DENVER",
+              "stats": Object {
+                "2017": 0,
+              },
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
       ],
       "type": "div",
     },
