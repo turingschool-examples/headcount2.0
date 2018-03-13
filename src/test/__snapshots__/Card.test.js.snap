@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    info={
+        Object {
+            "data": Object {
+              "2006": 0.85,
+            },
+            "location": "Denver",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2>
+          Denver
+</h2>,
+        <ul>
+          <li
+                    className="over-fifty"
+          >
+                    2006
+                     : 
+                    0.85
+          </li>
+</ul>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Denver",
+        },
+        "ref": null,
+        "rendered": "Denver",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li
+              className="over-fifty"
+>
+              2006
+               : 
+              0.85
+</li>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2006",
+                " : ",
+                0.85,
+              ],
+              "className": "over-fifty",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2006",
+              " : ",
+              0.85,
+            ],
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2>
+            Denver
+</h2>,
+          <ul>
+            <li
+                        className="over-fifty"
+            >
+                        2006
+                         : 
+                        0.85
+            </li>
+</ul>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Denver",
+          },
+          "ref": null,
+          "rendered": "Denver",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li
+                className="over-fifty"
+>
+                2006
+                 : 
+                0.85
+</li>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2006",
+                  " : ",
+                  0.85,
+                ],
+                "className": "over-fifty",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2006",
+                " : ",
+                0.85,
+              ],
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
