@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/Search.css';
+import './Search.css';
 import PropTypes from 'prop-types';
 
 const Search = ({searchDistrict, searchValue, clearSearch}) => {
