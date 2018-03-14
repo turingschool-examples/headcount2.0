@@ -46,7 +46,7 @@ ShallowWrapper {
           </li>
 </ul>,
       ],
-      "className": "district selected",
+      "className": "district ",
       "onClick": [Function],
     },
     "ref": null,
@@ -132,7 +132,7 @@ ShallowWrapper {
             </li>
 </ul>,
         ],
-        "className": "district selected",
+        "className": "district ",
         "onClick": [Function],
       },
       "ref": null,

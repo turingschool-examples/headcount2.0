@@ -25,18 +25,21 @@ class App extends Component {
   }
 
   selectLocation = (location) => {
-    if (this.state.selectedLocations.includes(location)) {
+    const searchLocation = this.state.districts.findByName(location);
+
+    if (this.state.selectedLocations.includes(searchLocation)) {
       this.setState({ 
         selectedLocations: this.state.selectedLocations
-          .filter(compareLocation => compareLocation !== location)})
-      return
+          .filter(compareLocation => compareLocation !== searchLocation)});
+      return;
     }
     if (this.state.selectedLocations.length >= 1) {
-      this.setState({ selectedLocations: [...this.state.selectedLocations, location] })
-      return
+
+      this.setState({ selectedLocations: [this.state.selectedLocations[0], searchLocation] });
+      return;
     }
     this.setState({ 
-      selectedLocations: [location]
+      selectedLocations: [searchLocation]
     })
   }
 
