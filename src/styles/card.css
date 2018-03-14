@@ -14,5 +14,9 @@ p {
 }
 
 .goodSchool {
-  background-color: magenta
+  background-color: magenta;
+}
+
+.clicked {
+  background-color: grey;
 }
