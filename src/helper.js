@@ -31,5 +31,18 @@ export default class DistrictRepository {
       return undefined
     }
   }
+  findAllMatches(userInput) {
+    return Object.keys(this.stats).reduce( (dataArray, district) => {
+      if (!userInput) {
+        dataArray.push(this.stats[district])
+      } else {
+        if (district.includes(userInput.toUpperCase())) {
+          dataArray.push(this.stats[district])
+        }
+      }
+      return dataArray;
+    },[])
+  
+  }
 
 }
