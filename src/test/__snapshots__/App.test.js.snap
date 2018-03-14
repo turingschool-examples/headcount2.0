@@ -22,6 +22,7 @@ ShallowWrapper {
           search={[Function]}
 />,
         <Main
+          cards={Array []}
           districts={
                     Array [
                               Object {
@@ -2922,6 +2923,7 @@ ShallowWrapper {
                               },
                             ]
           }
+          handleSelection={[Function]}
 />,
       ],
     },
@@ -2943,6 +2945,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "cards": Array [],
           "districts": Array [
             Object {
               "data": Object {
@@ -5841,6 +5844,7 @@ ShallowWrapper {
               "location": "YUMA SCHOOL DISTRICT 1",
             },
           ],
+          "handleSelection": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -5860,6 +5864,7 @@ ShallowWrapper {
             search={[Function]}
 />,
           <Main
+            cards={Array []}
             districts={
                         Array [
                                     Object {
@@ -8760,6 +8765,7 @@ ShallowWrapper {
                                     },
                                   ]
             }
+            handleSelection={[Function]}
 />,
         ],
       },
@@ -8781,6 +8787,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "cards": Array [],
             "districts": Array [
               Object {
                 "data": Object {
@@ -11679,6 +11686,7 @@ ShallowWrapper {
                 "location": "YUMA SCHOOL DISTRICT 1",
               },
             ],
+            "handleSelection": [Function],
           },
           "ref": null,
           "rendered": null,
