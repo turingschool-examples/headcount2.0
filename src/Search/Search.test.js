@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
-import Search from  '../../Search.js';
+import Search from  './Search.js';
 
 describe('Search', () => {
   let wrapper;

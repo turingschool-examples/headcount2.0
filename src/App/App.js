@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import CardsContainer from './CardsContainer';
-import Search from './Search.js';
+import CardsContainer from '../CardsContainer/CardsContainer.js';
+import Search from '../Search/Search.js';
 import './App.css';
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {
       districts: props.districts,
       searchValue: '',
-      compareLocations: []
+      selectedLocations: []
     };
   }
 
@@ -25,18 +25,18 @@ class App extends Component {
   }
 
   selectLocation = (location) => {
-    if (this.state.compareLocations.includes(location)) {
+    if (this.state.selectedLocations.includes(location)) {
       this.setState({ 
-        compareLocations: this.state.compareLocations
+        selectedLocations: this.state.selectedLocations
           .filter(compareLocation => compareLocation !== location)})
       return
     }
-    if (this.state.compareLocations.length >= 1) {
-      this.setState({ compareLocations: [this.state.compareLocations[0], location] })
+    if (this.state.selectedLocations.length >= 1) {
+      this.setState({ selectedLocations: [...this.state.selectedLocations, location] })
       return
     }
     this.setState({ 
-      compareLocations: [location]
+      selectedLocations: [location]
     })
   }
 
@@ -51,7 +51,7 @@ class App extends Component {
           districts={ this.state.districts } 
           searchValue={this.state.searchValue}
           selectLocation={this.selectLocation} 
-          compareLocations={this.state.compareLocations} />
+          selectedLocations={this.state.selectedLocations} />
       </div>
     );
   }

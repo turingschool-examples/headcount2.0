@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardsContainer should have array of objects as props 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardsContainer
+    districts={
+        DistrictRepository {
+            "stats": Object {
+              "COLORADO": Object {
+                "location": "COLORADO",
+                "stats": Object {
+                  "2005": 0.278,
+                  "2006": 0.337,
+                  "2007": 0.395,
+                },
+              },
+            },
+          }
+    }
+    searchValue=""
+    selectLocation={[Function]}
+    selectedLocations={Array []}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          location="COLORADO"
+          selectLocation={[Function]}
+          selectedLocations={Array []}
+          stats={
+                    Object {
+                              "2005": 0.278,
+                              "2006": 0.337,
+                              "2007": 0.395,
+                            }
+          }
+/>,
+      ],
+      "className": "CardsContainer",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "location": "COLORADO",
+          "selectLocation": [Function],
+          "selectedLocations": Array [],
+          "stats": Object {
+            "2005": 0.278,
+            "2006": 0.337,
+            "2007": 0.395,
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            location="COLORADO"
+            selectLocation={[Function]}
+            selectedLocations={Array []}
+            stats={
+                        Object {
+                                    "2005": 0.278,
+                                    "2006": 0.337,
+                                    "2007": 0.395,
+                                  }
+            }
+/>,
+        ],
+        "className": "CardsContainer",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "location": "COLORADO",
+            "selectLocation": [Function],
+            "selectedLocations": Array [],
+            "stats": Object {
+              "2005": 0.278,
+              "2006": 0.337,
+              "2007": 0.395,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

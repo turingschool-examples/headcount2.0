@@ -11,18 +11,13 @@ export default class DistrictRepository {
     return this.stats[upperCaseName];
   }
 
-  findAllMatches(name) {
-    if (!name) {
-      return Object.keys(this.stats).map(key => {
-        return this.stats[key].stats;
-      });
-    }
-
-    const upperCaseName = name.toUpperCase();
-
-    return Object.keys(this.stats)
-      .filter(key => key.includes(upperCaseName))
-      .map( key => this.stats[key].stats);
+  findAllMatches(searchValue = '') {
+    return Object.keys(this.stats).reduce((allStats, stat) => {
+      if (stat.includes(searchValue.toUpperCase())) {
+        allStats.push(this.stats[stat]);
+      }
+      return allStats;
+    }, []);
   }
 
   cleanData(stats) {
