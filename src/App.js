@@ -44,7 +44,10 @@ class App extends Component {
       <div>
         <h1>Welcome To Headcount 2.0</h1>
         <Search filterData={this.filterData}/>
-        <CardContainer data={this.state.data} selectCard={this.selectCard} />
+        <CardContainer  data={this.state.data} 
+                        selectCard={this.selectCard}
+                        selectedCards={this.state.selectedCards} 
+        />
       </div>
 
     );

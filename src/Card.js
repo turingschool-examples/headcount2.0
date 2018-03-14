@@ -22,14 +22,14 @@ class Card extends Component {
   }
 
   handleClick = (event) => {
-    event.target.closest('div').classList.toggle('clicked');
+    // event.target.closest('div').classList.toggle('clicked');
     this.setState({selected: !this.state.selected})
     this.props.selectCard(this.props)
   }
 
-  render(){
+  render() {
     return (
-      <div className="card" onClick={this.handleClick}>
+      <div className={this.props.className} onClick={this.handleClick}>
         <h2>{this.props.location}</h2>
         {this.cleanYears(this.props.data)}
       </div>
