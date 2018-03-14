@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import '../styles/Nav.css';
+import PropTypes from 'prop-types';
 
 class Nav extends Component {
   constructor(props) {
@@ -34,6 +35,10 @@ class Nav extends Component {
       </nav>
     )
   }
+}
+
+Nav.propTypes = {
+  search: PropTypes.func
 }
 
 export default Nav;
