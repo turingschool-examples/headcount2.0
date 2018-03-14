@@ -38,4 +38,17 @@ export default class DistrictRepository {
       return statsArr
     }, [])
   }
+
+  findAverage(district) {
+    const foundDistrict = this.findByName(district);
+    return parseFloat((Object.values(foundDistrict.data).reduce((sum, year) => sum + year, 0)/Object.values(foundDistrict.data).length).toFixed(3))
+  }
+
+  compareDistrictAverages(district1, district2) {
+    return {
+      [district1.toUpperCase()]: this.findAverage(district1),
+      [district2.toUpperCase()]: this.findAverage(district2),
+      compared: parseFloat((this.findAverage(district1)/this.findAverage(district2)).toFixed(3))
+    }
+  }
 }
