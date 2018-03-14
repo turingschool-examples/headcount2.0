@@ -3,7 +3,7 @@ import '../styles/Main.css';
 import Card from './Card';
 import PropTypes from 'prop-types';
 
-const Main = ({ districts }) => {
+const Main = ( { districts } ) => {
   const district = districts.map((district, idx) => <Card info={district} key={idx}/>);
   return (
     <main className='card-container'>
