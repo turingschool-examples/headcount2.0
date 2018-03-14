@@ -48,13 +48,20 @@ export default class DistrictRepository {
 
   findAverage(name) {
     const district = this.findByName(name)
-    console.log(district.data)
     const percentagesList = Object.values(district.data)
     const sum = percentagesList.reduce((sum, percentage) => sum + percentage, 0)
     return parseFloat((sum / percentagesList.length).toFixed(3))
   }
 
-  compareDistrictAverages() {
-
+  compareDistrictAverages(district1name, district2name) {
+    const district1average = this.findAverage(district1name);
+    const district2average = this.findAverage(district2name);
+    const compared = parseFloat((district1average / district2average).toFixed(3))
+    return {
+      [district1name.toUpperCase()]: district1average,
+      [district2name.toUpperCase()]: district2average,
+      compared
+    }
+    
   }
 }
