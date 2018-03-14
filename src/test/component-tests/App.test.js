@@ -18,7 +18,7 @@ describe('App', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should change state with data from district', () => {
+  it('getData method should change state with data from district', () => {
     const before = {...wrapper.state('data')}
     const mockData = [
       {
@@ -30,4 +30,10 @@ describe('App', () => {
     wrapper.instance().getData(mockData)
     expect(wrapper.state('data')).not.toEqual(before)
   })
+
+  it('should update state with all districts that match user input', () => {
+    wrapper.instance().filterData('COL');
+    expect(wrapper.state('data').length).toEqual(2);
+  })
+
 })
