@@ -16,4 +16,8 @@ const ComparisonContainer = ({ cards }) => {
   )
 }
 
+ComparisonContainer.propTypes = {
+  cards: PropTypes.array
+}
+
 export default ComparisonContainer;
