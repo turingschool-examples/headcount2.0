@@ -9,10 +9,11 @@ export default class DistrictRepository {
         if (!districtObj[district.Location.toUpperCase()]) {
           districtObj[district.Location.toUpperCase()] = {
             location: district.Location.toUpperCase(),
-            timeFrame: district.TimeFrame,
-            data: district.Data
+            // timeFrame: district.TimeFrame,
+            data: {}
            }
         }
+        districtObj[district.Location.toUpperCase()].data[district.TimeFrame] = district.Data;
        return districtObj
       }, {})
   }
