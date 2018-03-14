@@ -36,22 +36,25 @@ export default class DistrictRepository {
     return this.stats[findDistrict]
   }
 
-  // findAllMatches(name) {
-
-  //   if(!name) {
-  //     return Object.keys(this.stats).filter(district => district)
-  //   }
-
-  //   return Object.keys(this.stats).filter(district => district.toUpperCase().includes(name.toUpperCase()))
-  // }
-
   findAllMatches(name) {
+    let keys = Object.keys(this.stats);
 
-  let keys = Object.keys(this.stats);
-  if (name) {
-    return keys.map(key => this.stats[key]).filter( district => district.location.includes(name.toUpperCase()))
-  } else {
-    return keys.map(key => this.stats[key])
+    if (name) {
+      return keys.map(key => this.stats[key]).filter(district => district.location.includes(name.toUpperCase()))
+    } else {
+      return keys.map(key => this.stats[key])
+    }
   }
-}
+
+  findAverage(name) {
+    const district = this.findByName(name)
+    console.log(district.data)
+    const percentagesList = Object.values(district.data)
+    const sum = percentagesList.reduce((sum, percentage) => sum + percentage, 0)
+    return parseFloat((sum / percentagesList.length).toFixed(3))
+  }
+
+  compareDistrictAverages() {
+
+  }
 }
