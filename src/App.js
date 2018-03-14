@@ -4,6 +4,7 @@ import DistrictRepository from './helper';
 import kinderData from './data/kindergartners_in_full_day_program.js';
 import { CardContainer } from './CardContainer';
 import Search from './Search';
+import ComparisonContainer from './ComparisonContainer';
 
 class App extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class App extends Component {
 
   getData = (newData) => {
     this.district = new DistrictRepository(newData);
-    const data= this.district.findAllMatches()
+    const data = this.district.findAllMatches()
     this.setState({
       data
     })
@@ -37,6 +38,13 @@ class App extends Component {
     { clickedCard.length < 2 ? clickedCard.push(card) : clickedCard[1] = card }
     console.log(clickedCard)
     this.setState({selectedCards: clickedCard})
+    if(clickedCard.length === 2){
+      this.compareCards(clickedCard[0].location, clickedCard[1].location)
+    }
+  }
+
+  compareCards = (district1, district2) => {
+    this.comparison = this.district.compareDistrictAverages(district1, district2)
   }
 
   render() {
@@ -44,6 +52,9 @@ class App extends Component {
       <div>
         <h1>Welcome To Headcount 2.0</h1>
         <Search filterData={this.filterData}/>
+        {
+          this.state.selectedCards.length && <ComparisonContainer selectedCards={this.state.selectedCards} comparison={this.comparison} />
+        }
         <CardContainer  data={this.state.data} 
                         selectCard={this.selectCard}
                         selectedCards={this.state.selectedCards} 
