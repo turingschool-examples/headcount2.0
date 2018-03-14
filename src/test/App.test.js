@@ -44,4 +44,20 @@ describe('App', () => {
     wrapper.find('input').simulate('change', {target: {value: 'a'}})
     expect(wrapper.state().districtsArray).toEqual(expected)
   })
+
+  it('should not filter districts if no input is provided', () => {
+    const wrapper = mount(<App />);
+    wrapper.find('input').props().value = ''
+    wrapper.find('input').simulate('change', {target: {value: ''}})
+    expect(wrapper.state().districtsArray.length).toEqual(181);
+    expect(wrapper.find('Card').length).toEqual(181);
+  })
+
+  it('should produce no cards if search input does not match district', () => {
+    const wrapper = mount(<App />);
+    wrapper.find('input').props().value = 'axy4'
+    wrapper.find('input').simulate('change', {target: {value: 'axy4'}})
+    expect(wrapper.state().districtsArray.length).toEqual(0);
+    expect(wrapper.find('Card').length).toEqual(0);
+  })
 })
