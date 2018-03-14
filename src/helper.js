@@ -13,11 +13,17 @@ export default class DistrictRepository {
             data: {}
            }
         }
-        districtObj[district.Location.toUpperCase()].data[district.TimeFrame] = district.Data;
+        districtObj[district.Location.toUpperCase()].data[district.TimeFrame] = this.numberHelper(district.Data);
        return districtObj
       }, {})
   }
-
+  numberHelper(num) {
+    if (isNaN(num)) {
+      return 0
+    } else {
+      return parseFloat(num.toFixed(3))
+    }
+  }
   findByName(userInput) {
     if (userInput) {
       return this.stats[userInput.toUpperCase()]
