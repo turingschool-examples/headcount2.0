@@ -6,10 +6,11 @@ export default class DistrictRepository {
   cleanData(data) {
       return data.reduce( (districtObj, district) => {
         const { Location, TimeFrame, Data } = district;
-        if (!districtObj[Location]) {
-          districtObj[Location] = { location: district.Location,
-                                    timeFrame: district.TimeFrame,
-                                    data: district.Data
+        if (!districtObj[district.Location.toUpperCase()]) {
+          districtObj[district.Location.toUpperCase()] = {
+            location: district.Location.toUpperCase(),
+            timeFrame: district.TimeFrame,
+            data: district.Data
            }
         }
        return districtObj
@@ -17,12 +18,11 @@ export default class DistrictRepository {
   }
 
   findByName(userInput) {
-    let keyNames = Object.keys(this.stats);
-
-    return keyNames.filter((name)=> {
-      return this.stats[name]
-    })
-  
+    if (userInput) {
+      return this.stats[userInput.toUpperCase()]
+    } else {
+      return undefined
+    }
   }
 
 }
