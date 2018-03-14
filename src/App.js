@@ -9,7 +9,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state={
-      data: []
+      data: [],
+      selectedCards: []
     }
   }
 
@@ -26,8 +27,16 @@ class App extends Component {
     this.setState({data: matchedData})
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.getData(kinderData)
+  }
+
+  selectCard = (card) => {
+    console.log(card)
+    const clickedCard = [...this.state.selectedCards ]
+    { clickedCard.length < 2 ? clickedCard.push(card) : clickedCard[1] = card }
+    console.log(clickedCard)
+    this.setState({selectedCards: clickedCard})
   }
 
   render() {
@@ -35,7 +44,7 @@ class App extends Component {
       <div>
         <h1>Welcome To Headcount 2.0</h1>
         <Search filterData={this.filterData}/>
-        <CardContainer data={this.state.data} />
+        <CardContainer data={this.state.data} selectCard={this.selectCard} />
       </div>
 
     );

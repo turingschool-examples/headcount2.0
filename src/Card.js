@@ -24,6 +24,7 @@ class Card extends Component {
   handleClick = (event) => {
     event.target.closest('div').classList.toggle('clicked');
     this.setState({selected: !this.state.selected})
+    this.props.selectCard(this.props)
   }
 
   render(){
@@ -39,7 +40,8 @@ class Card extends Component {
 
 Card.propTypes = {
   data: PropTypes.object.isRequired,
-  location: PropTypes.string.isRequired
+  location: PropTypes.string.isRequired,
+  selectCard: PropTypes.func
 }
 
 export default Card
