@@ -10,7 +10,8 @@ class App extends Component {
     super()
     this.state = {
       districtRepository: null,
-      districtsArray: null
+      districtsArray: null,
+      comparisonArray: []
     }
   }
 
@@ -31,11 +32,22 @@ class App extends Component {
     })
   }
 
+  handleSelection = (location) => {
+    const locationToCompare = this.state.districtsArray.find(district => district.location === location);
+    if (!this.state.comparisonArray.length) {
+      const newState = [...this.state.comparisonArray, locationToCompare ];
+      this.setState({comparisonArray: newState})
+    } else if (this.state.comparisonArray.length === 1){
+      const newState = [...this.state.comparisonArray, this.state.districtRepository.compareDistrictAverages(this.state.comparisonArray[0].location, locationToCompare.location), locationToCompare];
+      this.setState({comparisonArray: newState})
+    }
+  }
+
   render() {
     return (
       <div>
         <Header search={this.handleSearch}/>
-        {this.state.districtRepository && <Main districts={this.state.districtsArray} />}
+        {this.state.districtRepository && <Main districts={this.state.districtsArray} handleSelection={this.handleSelection}/>}
       </div>
     );
   }
