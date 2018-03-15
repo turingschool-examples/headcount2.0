@@ -9,7 +9,6 @@ export default class SearchBar extends Component {
     }
   }
 
-
   handleChange = (e) => {
     this.setState({'search':e.target.value})
   }
