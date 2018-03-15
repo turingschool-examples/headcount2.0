@@ -3,6 +3,7 @@ import './App.css';
 import KinderData from './data/kindergartners_in_full_day_program';
 import DistrictRepository from './helper';
 import CardContainer from './CardContainer';
+import SearchBar from './SearchBar';
 
 class App extends Component {
   constructor() {
@@ -27,6 +28,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <SearchBar />
         {
           this.state.districtObj &&
           <CardContainer schools={this.state.districtArray}/>
