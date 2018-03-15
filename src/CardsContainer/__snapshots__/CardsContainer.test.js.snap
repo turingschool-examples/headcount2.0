@@ -36,23 +36,45 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Card
-          location="COLORADO"
+        <CompareContainer
+          comparedAverage={undefined}
+          searchValue=""
           selectLocation={[Function]}
           selectedLocations={Array []}
-          stats={
-                    Object {
-                              "2005": 0.278,
-                              "2006": 0.337,
-                              "2007": 0.395,
-                            }
-          }
 />,
+        Array [
+          <Card
+            location="COLORADO"
+            selectLocation={[Function]}
+            selectedLocations={Array []}
+            stats={
+                        Object {
+                                    "2005": 0.278,
+                                    "2006": 0.337,
+                                    "2007": 0.395,
+                                  }
+            }
+/>,
+        ],
       ],
       "className": "CardsContainer",
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "comparedAverage": undefined,
+          "searchValue": "",
+          "selectLocation": [Function],
+          "selectedLocations": Array [],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
       Object {
         "instance": null,
         "key": "0",
@@ -81,23 +103,45 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Card
-            location="COLORADO"
+          <CompareContainer
+            comparedAverage={undefined}
+            searchValue=""
             selectLocation={[Function]}
             selectedLocations={Array []}
-            stats={
-                        Object {
-                                    "2005": 0.278,
-                                    "2006": 0.337,
-                                    "2007": 0.395,
-                                  }
-            }
 />,
+          Array [
+            <Card
+              location="COLORADO"
+              selectLocation={[Function]}
+              selectedLocations={Array []}
+              stats={
+                            Object {
+                                          "2005": 0.278,
+                                          "2006": 0.337,
+                                          "2007": 0.395,
+                                        }
+              }
+/>,
+          ],
         ],
         "className": "CardsContainer",
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "comparedAverage": undefined,
+            "searchValue": "",
+            "selectLocation": [Function],
+            "selectedLocations": Array [],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         Object {
           "instance": null,
           "key": "0",

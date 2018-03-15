@@ -52,7 +52,7 @@ export default class DistrictRepository {
     return Math.round(average * 1000) / 1000;
   }
 
-  compareDistrictAverages( location1, location2) {
+  compareDistrictAverages(location1 = '', location2 = '') {
     const location1UpperCase = location1.toUpperCase();
     const location2UpperCase = location2.toUpperCase();
     const locationOneAvg = this.findAverage(location1UpperCase);
