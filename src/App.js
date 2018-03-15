@@ -34,13 +34,23 @@ class App extends Component {
 
   selectCard = (card) => {
     console.log(card)
-    const clickedCard = [...this.state.selectedCards ]
-    { clickedCard.length < 2 ? clickedCard.push(card) : clickedCard[1] = card }
-    console.log(clickedCard)
-    this.setState({selectedCards: clickedCard})
-    if(clickedCard.length === 2){
-      this.compareCards(clickedCard[0].location, clickedCard[1].location)
+    const clickedCards = [...this.state.selectedCards ]
+    { clickedCards.length < 2 ? clickedCards.push(card) : clickedCards[1] = card }
+    this.setState({selectedCards: clickedCards})
+    if(clickedCards.length === 2){
+      this.compareCards(clickedCards[0].location, clickedCards[1].location)
     }
+  }
+
+  deselectCard = (card) => {
+    let clickedCards = [...this.state.selectedCards]
+    this.state.selectedCards.forEach( (selectedCard, index) => {
+      if(card.location === selectedCard.location) {
+        clickedCards.splice(index, 1)
+      }
+    });
+    this.setState({selectedCards: clickedCards})
+    console.log(this.state.selectedCards)
   }
 
   compareCards = (district1, district2) => {
@@ -53,10 +63,11 @@ class App extends Component {
         <h1>Welcome To Headcount 2.0</h1>
         <Search filterData={this.filterData}/>
         {
-          this.state.selectedCards.length && <ComparisonContainer selectedCards={this.state.selectedCards} comparison={this.comparison} />
+          this.state.selectedCards && <ComparisonContainer selectedCards={this.state.selectedCards} selectCard={this.selectCard} deselectCard={this.deselectCard} comparison={this.comparison} />
         }
         <CardContainer  data={this.state.data} 
                         selectCard={this.selectCard}
+                        deselectCard={this.deselectCard} 
                         selectedCards={this.state.selectedCards} 
         />
       </div>

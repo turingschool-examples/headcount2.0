@@ -4,10 +4,7 @@ import PropTypes from 'prop-types'
 
 class Card extends Component {
   constructor(props) {
-    super(props)
-    this.state = {
-      selected: false
-    }
+    super(props)   
   }
   
   cleanYears = (data) => {
@@ -22,9 +19,11 @@ class Card extends Component {
   }
 
   handleClick = (event) => {
-    // event.target.closest('div').classList.toggle('clicked');
-    this.setState({selected: !this.state.selected})
-    this.props.selectCard(this.props)
+    if(this.props.className.includes('clicked')) {
+      this.props.deselectCard(this.props)
+    } else {
+      this.props.selectCard(this.props)
+    }
   }
 
   render() {
