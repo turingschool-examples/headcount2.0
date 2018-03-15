@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { findbyName, findAllMatches } from './helper.js';
+import DistrictRepository from './helper.js';
 
 export default class SearchBar extends Component {
   constructor() {
@@ -9,10 +9,15 @@ export default class SearchBar extends Component {
     }
   }
 
+
+  handleChange = (e) => {
+    this.setState({'search':e.target.value})
+  }
+
   render() {
     return (
       <div>
-        <form>
+        <form >
           <input type='text' onChange={this.handleChange}/>
           <input type='submit'/>
         </form>
