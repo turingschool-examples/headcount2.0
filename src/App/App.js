@@ -26,7 +26,6 @@ class App extends Component {
 
   selectLocation = (location) => {
     const searchLocation = this.state.districts.findByName(location);
-
     if (this.state.selectedLocations.includes(searchLocation)) {
       this.setState({ 
         selectedLocations: this.state.selectedLocations
@@ -34,13 +33,14 @@ class App extends Component {
       return;
     }
     if (this.state.selectedLocations.length >= 1) {
-
-      this.setState({ selectedLocations: [this.state.selectedLocations[0], searchLocation] });
+      this.setState({
+        selectedLocations: [this.state.selectedLocations[0], searchLocation] 
+      });
       return;
     }
     this.setState({ 
       selectedLocations: [searchLocation]
-    })
+    });
   }
 
   render() {

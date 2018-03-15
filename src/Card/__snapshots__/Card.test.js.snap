@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card renders the article 1`] = `
+exports[`Card should match the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -9,8 +9,20 @@ ShallowWrapper {
     selectLocation={[Function]}
     selectedLocations={
         Array [
-            "COLORADO",
-            "COLORADO SPRINGS",
+            Object {
+              "location": "COLORADO",
+              "stats": Object {
+                "2016": 0.45,
+                "2017": 0.34,
+              },
+            },
+            Object {
+              "location": "COLORADO SPRINGS",
+              "stats": Object {
+                "2016": 0.45,
+                "2017": 0.34,
+              },
+            },
           ]
     }
     stats={
@@ -34,19 +46,18 @@ ShallowWrapper {
       "children": Array [
         <h3>
           COLORADO
-           
 </h3>,
         <ul>
           <li
                     className="red"
           >
                     2017
-                    :
+                    : 
                     0
           </li>
 </ul>,
       ],
-      "className": "district ",
+      "className": "district selected",
       "onClick": [Function],
     },
     "ref": null,
@@ -56,16 +67,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            "COLORADO",
-            " ",
-          ],
+          "children": "COLORADO",
         },
         "ref": null,
-        "rendered": Array [
-          "COLORADO",
-          " ",
-        ],
+        "rendered": "COLORADO",
         "type": "h3",
       },
       Object {
@@ -78,7 +83,7 @@ ShallowWrapper {
               className="red"
 >
               2017
-              :
+              : 
               0
 </li>,
           ],
@@ -92,7 +97,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 "2017",
-                ":",
+                ": ",
                 0,
               ],
               "className": "red",
@@ -100,7 +105,7 @@ ShallowWrapper {
             "ref": null,
             "rendered": Array [
               "2017",
-              ":",
+              ": ",
               0,
             ],
             "type": "li",
@@ -120,19 +125,18 @@ ShallowWrapper {
         "children": Array [
           <h3>
             COLORADO
-             
 </h3>,
           <ul>
             <li
                         className="red"
             >
                         2017
-                        :
+                        : 
                         0
             </li>
 </ul>,
         ],
-        "className": "district ",
+        "className": "district selected",
         "onClick": [Function],
       },
       "ref": null,
@@ -142,16 +146,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              "COLORADO",
-              " ",
-            ],
+            "children": "COLORADO",
           },
           "ref": null,
-          "rendered": Array [
-            "COLORADO",
-            " ",
-          ],
+          "rendered": "COLORADO",
           "type": "h3",
         },
         Object {
@@ -164,7 +162,7 @@ ShallowWrapper {
                 className="red"
 >
                 2017
-                :
+                : 
                 0
 </li>,
             ],
@@ -178,7 +176,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   "2017",
-                  ":",
+                  ": ",
                   0,
                 ],
                 "className": "red",
@@ -186,7 +184,7 @@ ShallowWrapper {
               "ref": null,
               "rendered": Array [
                 "2017",
-                ":",
+                ": ",
                 0,
               ],
               "type": "li",
