@@ -34,14 +34,13 @@ ShallowWrapper {
       "children": Array [
         <h3>
           COLORADO
-           
 </h3>,
         <ul>
           <li
                     className="red"
           >
                     2017
-                    :
+                    : 
                     0
           </li>
 </ul>,
@@ -56,16 +55,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            "COLORADO",
-            " ",
-          ],
+          "children": "COLORADO",
         },
         "ref": null,
-        "rendered": Array [
-          "COLORADO",
-          " ",
-        ],
+        "rendered": "COLORADO",
         "type": "h3",
       },
       Object {
@@ -78,7 +71,7 @@ ShallowWrapper {
               className="red"
 >
               2017
-              :
+              : 
               0
 </li>,
           ],
@@ -92,7 +85,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 "2017",
-                ":",
+                ": ",
                 0,
               ],
               "className": "red",
@@ -100,7 +93,7 @@ ShallowWrapper {
             "ref": null,
             "rendered": Array [
               "2017",
-              ":",
+              ": ",
               0,
             ],
             "type": "li",
@@ -120,14 +113,13 @@ ShallowWrapper {
         "children": Array [
           <h3>
             COLORADO
-             
 </h3>,
           <ul>
             <li
                         className="red"
             >
                         2017
-                        :
+                        : 
                         0
             </li>
 </ul>,
@@ -142,16 +134,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              "COLORADO",
-              " ",
-            ],
+            "children": "COLORADO",
           },
           "ref": null,
-          "rendered": Array [
-            "COLORADO",
-            " ",
-          ],
+          "rendered": "COLORADO",
           "type": "h3",
         },
         Object {
@@ -164,7 +150,7 @@ ShallowWrapper {
                 className="red"
 >
                 2017
-                :
+                : 
                 0
 </li>,
             ],
@@ -178,7 +164,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   "2017",
-                  ":",
+                  ": ",
                   0,
                 ],
                 "className": "red",
@@ -186,7 +172,7 @@ ShallowWrapper {
               "ref": null,
               "rendered": Array [
                 "2017",
-                ":",
+                ": ",
                 0,
               ],
               "type": "li",
