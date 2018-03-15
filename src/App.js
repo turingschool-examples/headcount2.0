@@ -3,34 +3,37 @@ import './App.css';
 import KinderData from './data/kindergartners_in_full_day_program';
 import DistrictRepository from './helper';
 import CardContainer from './CardContainer';
+import SearchBar from './SearchBar';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      districtObj: null,
-      districtArray: null
+      districtArray: [],
     }
   }
+
   retrieveData() {
     const district = new DistrictRepository(KinderData);
-
     const schools = district.findAllMatches();
-
-    this.setState({ districtArray: schools,
-                    districtObj: district
-     })
+    this.setState({ districtArray: schools})
   }
+
+  filterSchools(userInput) {
+    this.setState({districtArray: userInput});
+  }
+// Need a function that calls findAllMatches with
+// the state from SearchBar
+
   componentDidMount() {
     this.retrieveData()
   }
+
   render() {
     return (
       <div>
-        {
-          this.state.districtObj &&
-          <CardContainer schools={this.state.districtArray}/>
-        }
+        <SearchBar filterSchools={this.filterSchools}/>
+        <CardContainer schools={this.state.districtArray}/>
       </div>
     );
   }

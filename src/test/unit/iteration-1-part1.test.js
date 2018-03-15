@@ -5,7 +5,7 @@ describe('DistrictRepository iteration 1 - part 1', () =>  {
   const district = new DistrictRepository(kinderData);
 
   test('findByName returns undefined if no arguments are provided', () => {
-    expect(district.findByName()).toBe(undefined);
+      expect(district.findByName()).toBe(undefined);
   });
 
   test('findByName returns undefined when there are no matching arguments', () => {
