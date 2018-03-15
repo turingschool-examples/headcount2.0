@@ -1,0 +1,458 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CompareContainer Should render the Card when there are 2 selected locations 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CompareContainer
+    comparedAverage={
+        Object {
+            "COLORADO": 0.32,
+            "COLORADO SPRINGS": 0.76,
+            "compared": 0.5,
+          }
+    }
+    searchValue=""
+    selectLocation={[Function]}
+    selectedLocations={
+        Array [
+            Object {
+              "location": "COLORADO",
+              "stats": Object {
+                "2016": 0.45,
+                "2017": 0.34,
+              },
+            },
+            Object {
+              "location": "COLORADO SPRINGS",
+              "stats": Object {
+                "2016": 0.45,
+                "2017": 0.34,
+              },
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        Array [
+          <Card
+            className="left"
+            location="COLORADO"
+            searchValue=""
+            selectLocation={[Function]}
+            selectedLocations={
+                        Array [
+                                    Object {
+                                      "location": "COLORADO",
+                                      "stats": Object {
+                                        "2016": 0.45,
+                                        "2017": 0.34,
+                                      },
+                                    },
+                                    Object {
+                                      "location": "COLORADO SPRINGS",
+                                      "stats": Object {
+                                        "2016": 0.45,
+                                        "2017": 0.34,
+                                      },
+                                    },
+                                  ]
+            }
+            stats={
+                        Object {
+                                    "2016": 0.45,
+                                    "2017": 0.34,
+                                  }
+            }
+/>,
+          <Card
+            className="right"
+            location="COLORADO SPRINGS"
+            searchValue=""
+            selectLocation={[Function]}
+            selectedLocations={
+                        Array [
+                                    Object {
+                                      "location": "COLORADO",
+                                      "stats": Object {
+                                        "2016": 0.45,
+                                        "2017": 0.34,
+                                      },
+                                    },
+                                    Object {
+                                      "location": "COLORADO SPRINGS",
+                                      "stats": Object {
+                                        "2016": 0.45,
+                                        "2017": 0.34,
+                                      },
+                                    },
+                                  ]
+            }
+            stats={
+                        Object {
+                                    "2016": 0.45,
+                                    "2017": 0.34,
+                                  }
+            }
+/>,
+        ],
+        <ComparisonCard
+          comparedAverage={
+                    Object {
+                              "COLORADO": 0.32,
+                              "COLORADO SPRINGS": 0.76,
+                              "compared": 0.5,
+                            }
+          }
+/>,
+      ],
+      "className": "Compared-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "className": "left",
+          "location": "COLORADO",
+          "searchValue": "",
+          "selectLocation": [Function],
+          "selectedLocations": Array [
+            Object {
+              "location": "COLORADO",
+              "stats": Object {
+                "2016": 0.45,
+                "2017": 0.34,
+              },
+            },
+            Object {
+              "location": "COLORADO SPRINGS",
+              "stats": Object {
+                "2016": 0.45,
+                "2017": 0.34,
+              },
+            },
+          ],
+          "stats": Object {
+            "2016": 0.45,
+            "2017": 0.34,
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "function",
+        "props": Object {
+          "className": "right",
+          "location": "COLORADO SPRINGS",
+          "searchValue": "",
+          "selectLocation": [Function],
+          "selectedLocations": Array [
+            Object {
+              "location": "COLORADO",
+              "stats": Object {
+                "2016": 0.45,
+                "2017": 0.34,
+              },
+            },
+            Object {
+              "location": "COLORADO SPRINGS",
+              "stats": Object {
+                "2016": 0.45,
+                "2017": 0.34,
+              },
+            },
+          ],
+          "stats": Object {
+            "2016": 0.45,
+            "2017": 0.34,
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "comparedAverage": Object {
+            "COLORADO": 0.32,
+            "COLORADO SPRINGS": 0.76,
+            "compared": 0.5,
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          Array [
+            <Card
+              className="left"
+              location="COLORADO"
+              searchValue=""
+              selectLocation={[Function]}
+              selectedLocations={
+                            Array [
+                                          Object {
+                                            "location": "COLORADO",
+                                            "stats": Object {
+                                              "2016": 0.45,
+                                              "2017": 0.34,
+                                            },
+                                          },
+                                          Object {
+                                            "location": "COLORADO SPRINGS",
+                                            "stats": Object {
+                                              "2016": 0.45,
+                                              "2017": 0.34,
+                                            },
+                                          },
+                                        ]
+              }
+              stats={
+                            Object {
+                                          "2016": 0.45,
+                                          "2017": 0.34,
+                                        }
+              }
+/>,
+            <Card
+              className="right"
+              location="COLORADO SPRINGS"
+              searchValue=""
+              selectLocation={[Function]}
+              selectedLocations={
+                            Array [
+                                          Object {
+                                            "location": "COLORADO",
+                                            "stats": Object {
+                                              "2016": 0.45,
+                                              "2017": 0.34,
+                                            },
+                                          },
+                                          Object {
+                                            "location": "COLORADO SPRINGS",
+                                            "stats": Object {
+                                              "2016": 0.45,
+                                              "2017": 0.34,
+                                            },
+                                          },
+                                        ]
+              }
+              stats={
+                            Object {
+                                          "2016": 0.45,
+                                          "2017": 0.34,
+                                        }
+              }
+/>,
+          ],
+          <ComparisonCard
+            comparedAverage={
+                        Object {
+                                    "COLORADO": 0.32,
+                                    "COLORADO SPRINGS": 0.76,
+                                    "compared": 0.5,
+                                  }
+            }
+/>,
+        ],
+        "className": "Compared-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "className": "left",
+            "location": "COLORADO",
+            "searchValue": "",
+            "selectLocation": [Function],
+            "selectedLocations": Array [
+              Object {
+                "location": "COLORADO",
+                "stats": Object {
+                  "2016": 0.45,
+                  "2017": 0.34,
+                },
+              },
+              Object {
+                "location": "COLORADO SPRINGS",
+                "stats": Object {
+                  "2016": 0.45,
+                  "2017": 0.34,
+                },
+              },
+            ],
+            "stats": Object {
+              "2016": 0.45,
+              "2017": 0.34,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "function",
+          "props": Object {
+            "className": "right",
+            "location": "COLORADO SPRINGS",
+            "searchValue": "",
+            "selectLocation": [Function],
+            "selectedLocations": Array [
+              Object {
+                "location": "COLORADO",
+                "stats": Object {
+                  "2016": 0.45,
+                  "2017": 0.34,
+                },
+              },
+              Object {
+                "location": "COLORADO SPRINGS",
+                "stats": Object {
+                  "2016": 0.45,
+                  "2017": 0.34,
+                },
+              },
+            ],
+            "stats": Object {
+              "2016": 0.45,
+              "2017": 0.34,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "comparedAverage": Object {
+              "COLORADO": 0.32,
+              "COLORADO SPRINGS": 0.76,
+              "compared": 0.5,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`CompareContainer should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CompareContainer
+    comparedAverage={
+        Object {
+            "COLORADO": 0.32,
+            "COLORADO SPRINGS": 0.76,
+            "compared": 0.5,
+          }
+    }
+    searchValue=""
+    selectLocation={[Function]}
+    selectedLocations={Array []}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        Array [],
+        false,
+      ],
+      "className": "Compared-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      false,
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          Array [],
+          false,
+        ],
+        "className": "Compared-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        false,
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
