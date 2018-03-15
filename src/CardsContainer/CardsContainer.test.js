@@ -17,14 +17,15 @@ describe('CardsContainer', () => {
         districts={districts} 
         selectLocation={selectLocation} 
         selectedLocations={selectedLocations} />
-    )});
+    );
+  });
 
   it('should match its snapShot', () => {
     expect(cardsContainer).toMatchSnapshot();
   });
 
-  it('should have a comparedAverage object if the selectedLocations array has a length > 1', () => {
-    expect
+  /*eslint max-len: [2, 80, 4]*/
+  it('should have a comparedAverage object if the \n selectedLocations array has a length > 1', () => {
     selectedLocations = [{ 
       location: 'COLORADO', 
       stats: {
@@ -37,8 +38,8 @@ describe('CardsContainer', () => {
         '2017': 0.34,
         '2016': 0.45
       } 
-    }]
+    }];
     expect(cardsContainer.props('comparedAverage')).toBeDefined();
   });
 
-})
+});
