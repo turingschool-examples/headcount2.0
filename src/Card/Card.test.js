@@ -4,9 +4,21 @@ import Card from './Card';
 import {shallow} from 'enzyme';
 
 describe('Card', () => {
-	let card, district, stats;
+	let card, district, stats, selectedLocations;
 	const selectLocation = jest.fn();
-	const selectedLocations = ['COLORADO', 'COLORADO SPRINGS'];
+	selectedLocations = [{ 
+      location: 'COLORADO', 
+      stats: {
+        '2017': 0.34,
+        '2016': 0.45
+      } 
+    }, { 
+      location: 'COLORADO SPRINGS', 
+      stats: {
+        '2017': 0.34,
+        '2016': 0.45
+      } 
+    }];
 
 	beforeEach(() => { 
 		stats = { '2017': 0 }
@@ -16,14 +28,60 @@ describe('Card', () => {
 			selectLocation={selectLocation} 
 			selectedLocations={selectedLocations} />);
 	});
-
-	it('renders the article' , () => {
+	
+	it('should match the snapshot' , () => {
 		expect(card).toMatchSnapshot();
 	});
 
+	// why is district passing?
 	it('has props district which is an object', () => {
 		expect(card.props("district")).toBeDefined();
 	});
+
+	it('has a prop of location that is a string',() => {
+		expect(card.props("location")).toBeDefined();
+	})
+
+	it('has a prop of stats that is a object', () => {
+		expect(card.props("stats")).toBeDefined();
+	})
+
+	it('has a prop of selectLocation that is a function', ()=> {
+		expect(card.props("selectLocation")).toBeDefined();
+	})
+
+	it('has a prop of selectedLocations that is an array of locations', () => {
+		expect(card.props("selectedLocations")).toBeDefined();
+	})
+
+	it('has a class of selected if the location prop matches a location in the selectedLocations array', () => {
+		selectedLocations = [];
+		card = shallow(<Card 
+			location="COLORADO"
+			stats={stats} 
+			selectLocation={selectLocation} 
+			selectedLocations={selectedLocations} />);
+		expect(card.find('.selected').length).toEqual(0);
+		selectedLocations = [{ 
+      location: 'COLORADO', 
+      stats: {
+        '2017': 0.34,
+        '2016': 0.45
+      } 
+    }, { 
+      location: 'COLORADO SPRINGS', 
+      stats: {
+        '2017': 0.34,
+        '2016': 0.45
+      } 
+    }]
+    card = shallow(<Card 
+			location="COLORADO"
+			stats={stats} 
+			selectLocation={selectLocation} 
+			selectedLocations={selectedLocations} />);
+    expect(card.find('.selected').length).toEqual(1);
+	})
 
 	it('has a class "red" if district percentile is less than 0.5', () => {
 		expect(card.find('.red').length).toEqual(1);
@@ -35,5 +93,10 @@ describe('Card', () => {
 			selectedLocations={selectedLocations} />);
 		expect(card.find('.red').length).toEqual(0);
 	});
+
+	it('When the article is clicked it should call the selectedLocations function', ()=> {
+		card.find('article').simulate('click');
+		expect(selectLocation).toHaveBeenCalled()
+	})
 
 })
