@@ -6,7 +6,7 @@ export default class DistrictRepository {
   cleanData(data) {
     return data.reduce((statsObj, school) => {
       if(!statsObj[school.Location.toUpperCase()]) {
-        statsObj[school.Location.toUpperCase()] = {location: school.Location.toUpperCase(), data: {}}
+        statsObj[school.Location.toUpperCase()] = {location: school.Location.toUpperCase(), data: {}, selected:false}
       }
       statsObj[school.Location.toUpperCase()].data[school.TimeFrame] = this.cleanNumber(school.Data)
       return statsObj; 

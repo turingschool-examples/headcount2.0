@@ -3,17 +3,19 @@ import '../styles/Card.css';
 import PropTypes from 'prop-types'
 
 const Card = ({ info, handleSelection}) => {
-  const { location, data } = info
+  const { location, data, selected } = info;
+  let className = selected ? 'card selected' : 'card';
+
   const year = Object.keys(data).map((year, idx) => {
     return data[year] > 0.5 ? <li className="over-fifty" key={idx}>{year} : {data[year]}</li> : <li className="under-fifty" key={idx}>{year} : {data[year]}</li>
   })
 
   return (
     <article 
-      className='card'
+      className={className}
       onClick={() => {
-        handleSelection(location) 
-        // document.getElementById(location).classList.toggle('selected')
+        handleSelection(location)
+         
         }
       }>
       <h2>{location}</h2>
