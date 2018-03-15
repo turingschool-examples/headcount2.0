@@ -11,6 +11,7 @@ export default class SearchBar extends Component {
 
   handleChange = (e) => {
     this.setState({'search':e.target.value})
+    this.props.filterSchools(this.state.search)
   }
 
   render() {

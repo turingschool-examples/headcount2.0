@@ -13,15 +13,16 @@ class App extends Component {
     }
   }
 
-  retrieveData() {
+  retrieveData = (userInput = '') =>{
     const district = new DistrictRepository(KinderData);
-    const schools = district.findAllMatches();
+    const schools = district.findAllMatches(userInput);
     this.setState({ districtArray: schools})
   }
 
-  filterSchools(userInput) {
-    this.setState({districtArray: userInput});
-  }
+  // filterSchools = (userInput) => {
+
+  //   this.setState({districtArray: userInput});
+  // }
 // Need a function that calls findAllMatches with
 // the state from SearchBar
 
@@ -32,7 +33,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <SearchBar filterSchools={this.filterSchools}/>
+        <SearchBar filterSchools={this.retrieveData}/>
         <CardContainer schools={this.state.districtArray}/>
       </div>
     );
