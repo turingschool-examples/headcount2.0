@@ -8,7 +8,7 @@ const Main = ( { districts, handleSelection, cards } ) => {
   const district = districts.map((district, idx) => <Card info={district} key={idx} handleSelection={handleSelection}/>);
   return (
     <main>
-      {cards.length > 0 && <ComparisonContainer cards={cards} />}
+      {cards.length > 0 && <ComparisonContainer cards={cards} handleSelection={handleSelection} />}
       <section className='card-container'>{district}</section>
       
     </main>

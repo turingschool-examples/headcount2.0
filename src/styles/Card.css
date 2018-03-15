@@ -15,3 +15,7 @@
   margin: auto;
   width: 38%;
 }
+
+.selected {
+  background-color: red;
+}
