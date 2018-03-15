@@ -23,14 +23,17 @@ const ComparisonContainer = ({selectedCards, comparison, selectCard, deselectCar
   return(
     <div className="comparison-container">
       {comparisonCards[0]}
-      <div className="comparison-card">
-      <h2>{newDistricts[0]}</h2>
-      <p>{newDistrictValues[0]}</p>
-      <h2>{newDistricts[1]}</h2>
-      <p>{newDistrictValues[1]}</p>
-      <h2>{newDistricts[2]}</h2>
-      <p>{newDistrictValues[2]}</p>
-      </div>
+
+      {selectedCards.length === 2 &&
+        <div className="comparison-card">
+          <h2>{newDistricts[0]}</h2>
+          <p>{newDistrictValues[0]}</p>
+          <h2>{newDistricts[2]}</h2>
+          <p>{newDistrictValues[2]}</p>          
+          <h2>{newDistricts[1]}</h2>
+          <p>{newDistrictValues[1]}</p>
+        </div>
+      }
       {comparisonCards[1]}
     </div>
   )

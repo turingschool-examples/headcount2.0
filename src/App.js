@@ -33,11 +33,10 @@ class App extends Component {
   }
 
   selectCard = (card) => {
-    console.log(card)
     const clickedCards = [...this.state.selectedCards ]
     { clickedCards.length < 2 ? clickedCards.push(card) : clickedCards[1] = card }
     this.setState({selectedCards: clickedCards})
-    if(clickedCards.length === 2){
+    if(clickedCards.length === 2) {
       this.compareCards(clickedCards[0].location, clickedCards[1].location)
     }
   }
@@ -59,10 +58,17 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Welcome To Headcount 2.0</h1>
-        <Search filterData={this.filterData}/>
+        <header>
+          <h1>Welcome To Headcount 2.0</h1>
+          <Search filterData={this.filterData}/>
+        </header>
         {
-          this.state.selectedCards && <ComparisonContainer selectedCards={this.state.selectedCards} selectCard={this.selectCard} deselectCard={this.deselectCard} comparison={this.comparison} />
+          this.state.selectedCards.length > 0 && 
+            <ComparisonContainer  selectedCards={this.state.selectedCards} 
+                                  selectCard={this.selectCard} 
+                                  deselectCard={this.deselectCard} 
+                                  comparison={this.comparison} 
+            />
         }
         <CardContainer  data={this.state.data} 
                         selectCard={this.selectCard}

@@ -4,8 +4,9 @@
   justify-content: center;
 }
 
-.card {
+.comparison-card {
   border: 1px black solid;
   width: 300px;
   margin: 10px;
 }
+

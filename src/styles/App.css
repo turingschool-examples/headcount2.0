@@ -1,1 +1,13 @@
-/*APP COMPONENT RELATED CSS GOES HERE*/
+h1 {
+  text-align: center;
+  font-size: 64px;
+  color: white;
+  margin-top: 0;
+  padding-top: 50px;
+ 
+}
+
+header {
+  background-color: black;
+  height: 200px;
+}
