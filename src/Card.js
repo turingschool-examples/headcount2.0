@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import './styles/card.css';
 import PropTypes from 'prop-types'
 
-class Card extends Component {
-  constructor(props) {
-    super(props)   
-  }
-  
+class Card extends Component {  
   cleanYears = (data) => {
     return Object.keys(data).map(year => {
       let roundedPerc = parseFloat(data[year].toFixed(2));

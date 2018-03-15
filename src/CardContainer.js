@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 
 export const CardContainer = ({data, selectCard, deselectCard, selectedCards}) => {
 
-
   const cardInfo = data.map(district => {
     let result = 'card';
     
@@ -34,6 +33,8 @@ export const CardContainer = ({data, selectCard, deselectCard, selectedCards}) =
 }
 
 CardContainer.propTypes = {
-  data: PropTypes.array.isRequired,
-  selectCard: PropTypes.func
+  data: PropTypes.array,
+  selectCard: PropTypes.func,
+  deselectCard: PropTypes.func,
+  selectedCards: PropTypes.array
 }

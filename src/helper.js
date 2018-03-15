@@ -1,23 +1,23 @@
 export default class DistrictRepository {
   constructor(data) {
-    this.stats = this.summarizeStats(data)
+    this.stats = this.summarizeStats(data);
   }
 
   summarizeStats(data) {
     return data.reduce((obj, enrollment) => {
-      if(!obj[enrollment.Location]){
+      if (!obj[enrollment.Location]){
         obj[enrollment.Location] = { location: '', data: {}} 
       } 
 
       obj[enrollment.Location].location = enrollment.Location.toUpperCase();
       obj[enrollment.Location].data[enrollment.TimeFrame] = this.cleanData(enrollment.Data)
 
-      return obj
-    }, {})
+      return obj;
+    }, {});
   }
 
   cleanData(data) {
-    if(typeof data === 'string') {
+    if (typeof data === 'string') {
       data = 0;
     }
 

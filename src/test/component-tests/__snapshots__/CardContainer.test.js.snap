@@ -1,10 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ComparisonContainer should match the snapshot 1`] = `
+exports[`CardContainer should match the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ComparisonContainer
+  Symbol(enzyme.__unrendered__): <Unknown
+    data={
+        Array [
+            Object {
+              "2004": 0.24,
+              "2005": 0.278,
+            },
+          ]
+    }
     selectedCards={
         Array [
             Object {
@@ -34,10 +42,8 @@ ShallowWrapper {
           location={undefined}
           selectCard={undefined}
 />,
-        false,
-        undefined,
       ],
-      "className": "comparison-container",
+      "className": "card-container",
     },
     "ref": null,
     "rendered": Array [
@@ -56,8 +62,6 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
-      false,
-      undefined,
     ],
     "type": "div",
   },
@@ -75,10 +79,8 @@ ShallowWrapper {
             location={undefined}
             selectCard={undefined}
 />,
-          false,
-          undefined,
         ],
-        "className": "comparison-container",
+        "className": "card-container",
       },
       "ref": null,
       "rendered": Array [
@@ -97,8 +99,6 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
-        false,
-        undefined,
       ],
       "type": "div",
     },

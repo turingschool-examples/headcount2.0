@@ -18,12 +18,15 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1>
-          Welcome To Headcount 2.0
-</h1>,
-        <Search
-          filterData={[Function]}
-/>,
+        <header>
+          <h1>
+                    Welcome To Headcount 2.0
+          </h1>
+          <Search
+                    filterData={[Function]}
+          />
+</header>,
+        false,
         <Unknown
           data={
                     Array [
@@ -2925,6 +2928,9 @@ ShallowWrapper {
                               },
                             ]
           }
+          deselectCard={[Function]}
+          selectCard={[Function]}
+          selectedCards={Array []}
 />,
       ],
     },
@@ -2935,23 +2941,43 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Welcome To Headcount 2.0",
+          "children": Array [
+            <h1>
+              Welcome To Headcount 2.0
+</h1>,
+            <Search
+              filterData={[Function]}
+/>,
+          ],
         },
         "ref": null,
-        "rendered": "Welcome To Headcount 2.0",
-        "type": "h1",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Welcome To Headcount 2.0",
+            },
+            "ref": null,
+            "rendered": "Welcome To Headcount 2.0",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "filterData": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "header",
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "filterData": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
+      false,
       Object {
         "instance": null,
         "key": undefined,
@@ -5855,6 +5881,9 @@ ShallowWrapper {
               "location": "YUMA SCHOOL DISTRICT 1",
             },
           ],
+          "deselectCard": [Function],
+          "selectCard": [Function],
+          "selectedCards": Array [],
         },
         "ref": null,
         "rendered": null,
@@ -5870,12 +5899,15 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1>
-            Welcome To Headcount 2.0
-</h1>,
-          <Search
-            filterData={[Function]}
-/>,
+          <header>
+            <h1>
+                        Welcome To Headcount 2.0
+            </h1>
+            <Search
+                        filterData={[Function]}
+            />
+</header>,
+          false,
           <Unknown
             data={
                         Array [
@@ -8777,6 +8809,9 @@ ShallowWrapper {
                                     },
                                   ]
             }
+            deselectCard={[Function]}
+            selectCard={[Function]}
+            selectedCards={Array []}
 />,
         ],
       },
@@ -8787,23 +8822,43 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Welcome To Headcount 2.0",
+            "children": Array [
+              <h1>
+                Welcome To Headcount 2.0
+</h1>,
+              <Search
+                filterData={[Function]}
+/>,
+            ],
           },
           "ref": null,
-          "rendered": "Welcome To Headcount 2.0",
-          "type": "h1",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Welcome To Headcount 2.0",
+              },
+              "ref": null,
+              "rendered": "Welcome To Headcount 2.0",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "filterData": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "header",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "filterData": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
+        false,
         Object {
           "instance": null,
           "key": undefined,
@@ -11707,6 +11762,9 @@ ShallowWrapper {
                 "location": "YUMA SCHOOL DISTRICT 1",
               },
             ],
+            "deselectCard": [Function],
+            "selectCard": [Function],
+            "selectedCards": Array [],
           },
           "ref": null,
           "rendered": null,
