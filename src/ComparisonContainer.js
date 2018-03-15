@@ -4,13 +4,11 @@ import PropTypes from 'prop-types';
 import './styles/comparisonContainer.css'
 
 const ComparisonContainer = ({selectedCards, comparison, selectCard, deselectCard}) => {
-  console.log(comparison)
   let newDistricts = []
   let newDistrictValues = []
   if (comparison) {
     newDistricts = Object.keys(comparison)
     newDistrictValues = Object.values(comparison)
-    console.log(newDistricts)
   }
   const comparisonCards = selectedCards.map((district, index) => {
     return (

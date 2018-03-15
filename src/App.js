@@ -50,7 +50,6 @@ class App extends Component {
       }
     });
     this.setState({selectedCards: clickedCards})
-    console.log(this.state.selectedCards)
   }
 
   compareCards = (district1, district2) => {
