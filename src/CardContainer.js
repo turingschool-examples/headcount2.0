@@ -2,12 +2,14 @@ import React from 'react';
 import Card from './Card';
 
 const CardContainer = ({ schools }) => {
-  console.log('cardcon', schools)
-  // const schoolCards = Object.keys(schools).map( (school) => {
-  //   console.log('card', school)
-  // })
+  const schoolCards = schools.map( (school) => {
+    console.log(school)
+    return <Card 
+      {...school}
+      key={school.location}/>
+  })
   return (
-    <div>taco</div>
+    <div>{schoolCards}</div>
   )
 }
 
