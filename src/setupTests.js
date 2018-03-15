@@ -21,5 +21,41 @@ export const kinderData = [
     "TimeFrame": 2005,
     "DataFormat": "Percent",
     "Data": 0.27807
+  },
+  {
+    "Location": "Colorado Springs",
+    "TimeFrame": 2007,
+    "DataFormat": "Percent",
+    "Data": 0.39465
+  },
+  {
+    "Location": "Colorado Springs",
+    "TimeFrame": 2006,
+    "DataFormat": "Percent",
+    "Data": 0.33677
+  },
+  {
+    "Location": "Colorado Springs",
+    "TimeFrame": 2005,
+    "DataFormat": "Percent",
+    "Data": 0.27807
+  },
+  {
+    "Location": "Academy 20",
+    "TimeFrame": 2007,
+    "DataFormat": "Percent",
+    "Data": 0.39465
+  },
+  {
+    "Location": "Academy 20",
+    "TimeFrame": 2006,
+    "DataFormat": "Percent",
+    "Data": 0.33677
+  },
+  {
+    "Location": "Academy 20",
+    "TimeFrame": 2005,
+    "DataFormat": "Percent",
+    "Data": 0.27807
   }
 ];

@@ -18,7 +18,6 @@ const CardsContainer = ({ districts, searchValue, selectLocation, selectedLocati
         searchValue={searchValue} 
         selectLocation={selectLocation}
         selectedLocations={selectedLocations}
-
         comparedAverage={comparedAverage}
       />
       {

@@ -4,7 +4,9 @@ import './Card.css';
 
 
 const Card = ({ location, stats, selectLocation, selectedLocations }) => {
-  const selected = selectedLocations.some(district => district.location === location) ? 'selected' : '';
+  const selected = selectedLocations.some(district =>
+    district.location === location) ? 'selected' : '';
+
 
   return (
     <article 

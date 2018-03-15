@@ -8,8 +8,24 @@ ShallowWrapper {
     districts={
         DistrictRepository {
             "stats": Object {
+              "ACADEMY 20": Object {
+                "location": "ACADEMY 20",
+                "stats": Object {
+                  "2005": 0.278,
+                  "2006": 0.337,
+                  "2007": 0.395,
+                },
+              },
               "COLORADO": Object {
                 "location": "COLORADO",
+                "stats": Object {
+                  "2005": 0.278,
+                  "2006": 0.337,
+                  "2007": 0.395,
+                },
+              },
+              "COLORADO SPRINGS": Object {
+                "location": "COLORADO SPRINGS",
                 "stats": Object {
                   "2005": 0.278,
                   "2006": 0.337,
@@ -45,6 +61,30 @@ ShallowWrapper {
         Array [
           <Card
             location="COLORADO"
+            selectLocation={[Function]}
+            selectedLocations={Array []}
+            stats={
+                        Object {
+                                    "2005": 0.278,
+                                    "2006": 0.337,
+                                    "2007": 0.395,
+                                  }
+            }
+/>,
+          <Card
+            location="COLORADO SPRINGS"
+            selectLocation={[Function]}
+            selectedLocations={Array []}
+            stats={
+                        Object {
+                                    "2005": 0.278,
+                                    "2006": 0.337,
+                                    "2007": 0.395,
+                                  }
+            }
+/>,
+          <Card
+            location="ACADEMY 20"
             selectLocation={[Function]}
             selectedLocations={Array []}
             stats={
@@ -93,6 +133,42 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "function",
+        "props": Object {
+          "location": "COLORADO SPRINGS",
+          "selectLocation": [Function],
+          "selectedLocations": Array [],
+          "stats": Object {
+            "2005": 0.278,
+            "2006": 0.337,
+            "2007": 0.395,
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "function",
+        "props": Object {
+          "location": "ACADEMY 20",
+          "selectLocation": [Function],
+          "selectedLocations": Array [],
+          "stats": Object {
+            "2005": 0.278,
+            "2006": 0.337,
+            "2007": 0.395,
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -112,6 +188,30 @@ ShallowWrapper {
           Array [
             <Card
               location="COLORADO"
+              selectLocation={[Function]}
+              selectedLocations={Array []}
+              stats={
+                            Object {
+                                          "2005": 0.278,
+                                          "2006": 0.337,
+                                          "2007": 0.395,
+                                        }
+              }
+/>,
+            <Card
+              location="COLORADO SPRINGS"
+              selectLocation={[Function]}
+              selectedLocations={Array []}
+              stats={
+                            Object {
+                                          "2005": 0.278,
+                                          "2006": 0.337,
+                                          "2007": 0.395,
+                                        }
+              }
+/>,
+            <Card
+              location="ACADEMY 20"
               selectLocation={[Function]}
               selectedLocations={Array []}
               stats={
@@ -148,6 +248,42 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "location": "COLORADO",
+            "selectLocation": [Function],
+            "selectedLocations": Array [],
+            "stats": Object {
+              "2005": 0.278,
+              "2006": 0.337,
+              "2007": 0.395,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "function",
+          "props": Object {
+            "location": "COLORADO SPRINGS",
+            "selectLocation": [Function],
+            "selectedLocations": Array [],
+            "stats": Object {
+              "2005": 0.278,
+              "2006": 0.337,
+              "2007": 0.395,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "function",
+          "props": Object {
+            "location": "ACADEMY 20",
             "selectLocation": [Function],
             "selectedLocations": Array [],
             "stats": Object {

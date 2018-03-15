@@ -21,10 +21,6 @@ describe('Card', () => {
 		expect(card).toMatchSnapshot();
 	});
 
-	it('has props district which is an object', () => {
-		expect(card.props("district")).toBeDefined();
-	});
-
 	it('has a class "red" if district percentile is less than 0.5', () => {
 		expect(card.find('.red').length).toEqual(1);
 		stats['2017'] = 0.51;

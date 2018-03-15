@@ -18,7 +18,6 @@ describe('CardsContainer', () => {
 				selectedLocations={selectedLocations} />
     );
 		expect(cardsContainer).toMatchSnapshot();
-		expect(cardsContainer.props("districts")).toBeDefined();
 	});
 
 })
