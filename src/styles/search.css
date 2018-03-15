@@ -1,0 +1,8 @@
+input {
+  display: block;
+  width: 50%;
+  /*height: 50px;*/
+  margin: auto;
+  /*font-size: 36px;*/
+  outline: none;
+}

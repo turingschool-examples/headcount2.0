@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './styles/search.css';
 
 
 class Search extends Component {
@@ -14,10 +15,10 @@ class Search extends Component {
 
   render() {
     return (
-      <input  type="search"
-              placeholder="Search for a district"
-              onChange={this.handleChange}
-      />
+        <input  type="search"
+                placeholder="Search for a district"
+                onChange={this.handleChange}
+        />
     )
   }
 }
