@@ -18,7 +18,7 @@ class App extends Component {
     const schools = district.findAllMatches();
 
     this.setState({ districtArray: schools,
-                    districtObj: schools
+                    districtObj: district
      })
   }
   componentDidMount() {
@@ -27,7 +27,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <CardContainer schools={this.state.districtArray}/>
+        {
+          this.state.districtObj &&
+          <CardContainer schools={this.state.districtArray}/>
+        }
       </div>
     );
   }
