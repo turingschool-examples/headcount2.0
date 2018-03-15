@@ -1,22 +1,24 @@
 export default class DistrictRepository {
   constructor(data) {
-  this.stats = this.cleanData(data)
+    this.stats = this.cleanData(data)
   }
 
-  cleanData(data) {
-      return data.reduce( (districtObj, district) => {
-        const { Location, TimeFrame, Data } = district;
-        if (!districtObj[district.Location.toUpperCase()]) {
-          districtObj[district.Location.toUpperCase()] = {
-            location: district.Location.toUpperCase(),
-            // timeFrame: district.TimeFrame,
-            data: {}
-           }
-        }
-        districtObj[district.Location.toUpperCase()].data[district.TimeFrame] = this.numberHelper(district.Data);
-       return districtObj
-      }, {})
-  }
+  cleanData = (data) => {
+    return data.reduce( (districtObj, district) => {
+      const { Location, TimeFrame, Data } = district;
+
+      if (!districtObj[district.Location.toUpperCase()]) {
+        districtObj[district.Location.toUpperCase()] = {
+          location: district.Location.toUpperCase(),
+          // timeFrame: district.TimeFrame,
+          data: {}
+         }
+      }
+      districtObj[district.Location.toUpperCase()].data[district.TimeFrame] = this.numberHelper(district.Data);
+     return districtObj
+    }, {})
+  } 
+
   numberHelper(num) {
     if (isNaN(num)) {
       return 0
@@ -24,6 +26,7 @@ export default class DistrictRepository {
       return parseFloat(num.toFixed(3))
     }
   }
+
   findByName(userInput) {
     if (userInput) {
       return this.stats[userInput.toUpperCase()]
@@ -31,6 +34,7 @@ export default class DistrictRepository {
       return undefined
     }
   }
+
   findAllMatches(userInput) {
     return Object.keys(this.stats).reduce( (dataArray, district) => {
       if (!userInput) {
@@ -44,5 +48,4 @@ export default class DistrictRepository {
     },[])
   
   }
-
-}
+}  
