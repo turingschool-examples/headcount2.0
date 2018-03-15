@@ -33,20 +33,34 @@ class App extends Component {
   }
 
   handleSelection = (location) => {
-    const comparisonArray = this.state.comparisonArray;
+
+    let newState = this.addToComparisonArray(location)
+    let newRepositoryState = this.state.districtRepository;
+    newRepositoryState.stats[location].selected = !newRepositoryState.stats[location].selected;
+    let newDistrictArray = newRepositoryState.findAllMatches();  
+    this.setState({
+      comparisonArray: newState,
+      districtsArray: newDistrictArray,
+      districtRepository: newRepositoryState});
+  }
+
+  addToComparisonArray = (location) => {
     let newState;
+    const comparisonArray = this.state.comparisonArray;
     const locationToCompare = this.state.districtsArray.find(district => district.location === location);
     if (!comparisonArray.length) {
-      
       newState = [...comparisonArray, locationToCompare ];
     } else if (comparisonArray.length === 1 && comparisonArray[0].location !== location){
       newState = [...comparisonArray, this.state.districtRepository.compareDistrictAverages(comparisonArray[0].location, locationToCompare.location), locationToCompare];
     } else if (comparisonArray.length === 1 && comparisonArray[0].location === location) {
       newState = [];
-    } else if (comparisonArray.length === 3) {
+    } else if (comparisonArray.length === 3 && comparisonArray.filter(item => item.location === location).length > 0) {
       newState = comparisonArray.filter(item => item.location && item.location !== location);
+    } else {
+      this.state.districtRepository.stats[comparisonArray[0].location].selected = false;
+      newState = [comparisonArray[2], this.state.districtRepository.compareDistrictAverages(comparisonArray[2].location, locationToCompare.location), locationToCompare];
     }
-    this.setState({comparisonArray: newState});
+    return newState;
   }
 
   render() {
