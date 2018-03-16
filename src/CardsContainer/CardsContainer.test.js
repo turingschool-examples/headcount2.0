@@ -24,8 +24,7 @@ describe('CardsContainer', () => {
     expect(cardsContainer).toMatchSnapshot();
   });
 
-  /*eslint max-len: [2, 80, 4]*/
-  it('should have a comparedAverage object if the \n selectedLocations array has a length > 1', () => {
+  it('can compare average when selecting two locations', () => {
     selectedLocations = [{ 
       location: 'COLORADO', 
       stats: {
