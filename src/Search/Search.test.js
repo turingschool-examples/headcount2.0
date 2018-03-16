@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import Search from  './Search.js';
 
 describe('Search', () => {
@@ -31,7 +31,7 @@ describe('Search', () => {
 
     input.simulate('change', event);
 
-    expect(mockSearchDistrict).toHaveBeenCalledWith(event)
+    expect(mockSearchDistrict).toHaveBeenCalledWith(event);
   });
 
   it('should invoke clearSearch when the clear button is clicked', () => {
