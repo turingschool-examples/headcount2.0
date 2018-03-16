@@ -8,8 +8,24 @@ ShallowWrapper {
     districts={
         DistrictRepository {
             "stats": Object {
+              "ACADEMY 20": Object {
+                "location": "ACADEMY 20",
+                "stats": Object {
+                  "2005": 0.278,
+                  "2006": 0.337,
+                  "2007": 0.395,
+                },
+              },
               "COLORADO": Object {
                 "location": "COLORADO",
+                "stats": Object {
+                  "2005": 0.278,
+                  "2006": 0.337,
+                  "2007": 0.395,
+                },
+              },
+              "COLORADO SPRINGS": Object {
+                "location": "COLORADO SPRINGS",
                 "stats": Object {
                   "2005": 0.278,
                   "2006": 0.337,
@@ -42,8 +58,24 @@ ShallowWrapper {
           districts={
                     DistrictRepository {
                               "stats": Object {
+                                "ACADEMY 20": Object {
+                                  "location": "ACADEMY 20",
+                                  "stats": Object {
+                                    "2005": 0.278,
+                                    "2006": 0.337,
+                                    "2007": 0.395,
+                                  },
+                                },
                                 "COLORADO": Object {
                                   "location": "COLORADO",
+                                  "stats": Object {
+                                    "2005": 0.278,
+                                    "2006": 0.337,
+                                    "2007": 0.395,
+                                  },
+                                },
+                                "COLORADO SPRINGS": Object {
+                                  "location": "COLORADO SPRINGS",
                                   "stats": Object {
                                     "2005": 0.278,
                                     "2006": 0.337,
@@ -81,8 +113,24 @@ ShallowWrapper {
         "props": Object {
           "districts": DistrictRepository {
             "stats": Object {
+              "ACADEMY 20": Object {
+                "location": "ACADEMY 20",
+                "stats": Object {
+                  "2005": 0.278,
+                  "2006": 0.337,
+                  "2007": 0.395,
+                },
+              },
               "COLORADO": Object {
                 "location": "COLORADO",
+                "stats": Object {
+                  "2005": 0.278,
+                  "2006": 0.337,
+                  "2007": 0.395,
+                },
+              },
+              "COLORADO SPRINGS": Object {
+                "location": "COLORADO SPRINGS",
                 "stats": Object {
                   "2005": 0.278,
                   "2006": 0.337,
@@ -118,8 +166,24 @@ ShallowWrapper {
             districts={
                         DistrictRepository {
                                     "stats": Object {
+                                      "ACADEMY 20": Object {
+                                        "location": "ACADEMY 20",
+                                        "stats": Object {
+                                          "2005": 0.278,
+                                          "2006": 0.337,
+                                          "2007": 0.395,
+                                        },
+                                      },
                                       "COLORADO": Object {
                                         "location": "COLORADO",
+                                        "stats": Object {
+                                          "2005": 0.278,
+                                          "2006": 0.337,
+                                          "2007": 0.395,
+                                        },
+                                      },
+                                      "COLORADO SPRINGS": Object {
+                                        "location": "COLORADO SPRINGS",
                                         "stats": Object {
                                           "2005": 0.278,
                                           "2006": 0.337,
@@ -157,8 +221,24 @@ ShallowWrapper {
           "props": Object {
             "districts": DistrictRepository {
               "stats": Object {
+                "ACADEMY 20": Object {
+                  "location": "ACADEMY 20",
+                  "stats": Object {
+                    "2005": 0.278,
+                    "2006": 0.337,
+                    "2007": 0.395,
+                  },
+                },
                 "COLORADO": Object {
                   "location": "COLORADO",
+                  "stats": Object {
+                    "2005": 0.278,
+                    "2006": 0.337,
+                    "2007": 0.395,
+                  },
+                },
+                "COLORADO SPRINGS": Object {
+                  "location": "COLORADO SPRINGS",
                   "stats": Object {
                     "2005": 0.278,
                     "2006": 0.337,

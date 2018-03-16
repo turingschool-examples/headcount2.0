@@ -33,27 +33,6 @@ describe('Card', () => {
 		expect(card).toMatchSnapshot();
 	});
 
-	// why is district passing?
-	it('has props district which is an object', () => {
-		expect(card.props("district")).toBeDefined();
-	});
-
-	it('has a prop of location that is a string',() => {
-		expect(card.props("location")).toBeDefined();
-	})
-
-	it('has a prop of stats that is a object', () => {
-		expect(card.props("stats")).toBeDefined();
-	})
-
-	it('has a prop of selectLocation that is a function', ()=> {
-		expect(card.props("selectLocation")).toBeDefined();
-	})
-
-	it('has a prop of selectedLocations that is an array of locations', () => {
-		expect(card.props("selectedLocations")).toBeDefined();
-	})
-
 	it('has a class of selected if the location prop matches a location in the selectedLocations array', () => {
 		selectedLocations = [];
 		card = shallow(<Card 

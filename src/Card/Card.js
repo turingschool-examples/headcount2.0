@@ -4,6 +4,7 @@ import './Card.css';
 
 
 const Card = ({ location, stats, selectLocation, selectedLocations }) => {
+
   const isSelected = selectedLocations.some(district => {
     return district.location === location;
   });

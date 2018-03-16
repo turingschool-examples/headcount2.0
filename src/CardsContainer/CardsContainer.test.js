@@ -17,29 +17,11 @@ describe('CardsContainer', () => {
         districts={districts} 
         selectLocation={selectLocation} 
         selectedLocations={selectedLocations} />
-    );
-  })
+    )});
 
   it('should match its snapShot', () => {
     expect(cardsContainer).toMatchSnapshot();
-  })
-
-	it('should have an array of objects as props', () => {
-		
-		expect(cardsContainer.props("districts")).toBeDefined();
-	});
-
-  it('should have an searchValue that is passed as a props', ()=> {
-    expect(cardsContainer.props('searchValue')).toBeDefined();
-  })
-
-  it('should have a select location function that is passed as props', () =>{
-    expect(cardsContainer.props('selectLocation')).toBeDefined();
-  })
-
-  it('should have a array of selectedLocations as props', () => {
-    expect(cardsContainer.props('selectedLocations')).toBeDefined();
-  })
+  });
 
   it('should have a comparedAverage object if the selectedLocations array has a length > 1', () => {
     expect
@@ -56,7 +38,7 @@ describe('CardsContainer', () => {
         '2016': 0.45
       } 
     }]
-    expect(cardsContainer.props('comparedAverage')).toBeDefined()
-  })
+    expect(cardsContainer.props('comparedAverage')).toBeDefined();
+  });
 
 })
