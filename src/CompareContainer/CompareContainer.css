@@ -3,6 +3,14 @@
   width: 100%;
 }
 
+#left {
+  order: 0;
+}
+
+#right {
+  order: 2
+}
+
 
 
 
