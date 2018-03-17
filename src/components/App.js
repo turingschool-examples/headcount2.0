@@ -67,11 +67,12 @@ class App extends Component {
     return (
       <div>
         <Header search={this.handleSearch}/>
-        {this.state.districtRepository && <Main 
-                                          districts={this.state.districtsArray} 
-                                          handleSelection={this.handleSelection}
-                                          cards={this.state.comparisonArray}
-                                          />}
+        {this.state.districtRepository 
+          && <Main 
+              districts={this.state.districtsArray} 
+              handleSelection={this.handleSelection}
+              cards={this.state.comparisonArray}
+              />}
       </div>
     );
   }

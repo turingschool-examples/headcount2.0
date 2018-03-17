@@ -1,7 +1,8 @@
 .card {
   border: 1px solid black;
+  border-radius: 25px;
   width: 250px;
-  height: 345px;
+  height: 360px;
   margin: 2% 0;
   background-color: #edeae0;
   color: #6f6d5d;
@@ -10,17 +11,54 @@
 .card h2 {
   text-align: center;
   font-family: 'Libre Baskerville', serif;
+  height: 40px;
 }
 
+.card-label {
+  margin-bottom: 5px;
+  text-align: center;
+}
 
 .card ul {
+  height: 220px;
   list-style: none;
   margin: auto;
-  width: 38%;
+  width: 50%;
+}
+
+.card li {
+  display: flex;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: 105px;
+}
+
+.card button {
+  border: none;
+  background-color: transparent;
+  display: block;
+  margin: auto;
+  width: 250px;
+  height: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #6f6d5d;
+}
+
+.card button:hover {
+  color: #ddbe45;
 }
 
 .selected {
-  border: 1px solid #e4c64c;
+  border: 3px solid #e4c64c;
+}
+
+.over-fifty {
+  background-image: url('./checkmark.png');
+}
+
+.under-fifty {
+  background-image: url('./fail.png');
 }
 
 

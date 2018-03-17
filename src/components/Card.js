@@ -7,21 +7,21 @@ const Card = ({ info, handleSelection}) => {
   let className = selected ? 'card selected' : 'card';
 
   const year = Object.keys(data).map((year, idx) => {
-    return data[year] > 0.5 ? <li className="over-fifty" key={idx}>{year} : {data[year]}</li> : <li className="under-fifty" key={idx}>{year} : {data[year]}</li>
-  })
+    let className = data[year] > 0.5 ? 'over-fifty' : 'under-fifty';
+    return  <li className={className} key={idx}><span>{year}</span><span> : {(data[year] * 100).toFixed(1)}%</span></li> 
+   })
 
   return (
     <article 
       className={className}
-      onClick={() => {
-        handleSelection(location)
-         
-        }
+      onClick={() => {handleSelection(location)}
       }>
       <h2>{location}</h2>
+      <p className='card-label'>Attendance:</p>
       <ul>
         {year}
       </ul>
+      <button>{selected ? 'Remove Comparison' : 'Compare District'}</button>
     </article>
   )
 }
