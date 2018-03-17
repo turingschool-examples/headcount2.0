@@ -19,3 +19,6 @@ You can run the testing suite with `npm test`.
 ## Future
 
 Additional data is available that will allow for a future feature to include buttons in the header that would allow the user to select what kind of district data they wish to compare, including but not limited to highschool enrollment and graduation rates.
+
+## Screenshot
+![full page screenshot](./src/images/Headcount-screenshot-full.png)

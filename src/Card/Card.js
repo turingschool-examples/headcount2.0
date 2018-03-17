@@ -38,7 +38,7 @@ Card.propTypes = {
   stats: PropTypes.object.isRequired,
   selectLocation: PropTypes.func.isRequired,
   selectedLocations: PropTypes.array.isRequired,
-  id: PropTypes.number.isRequired
+  id: PropTypes.string
 };
 
 export default Card;
