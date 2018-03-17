@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './ComparisonCard.css'
+import './ComparisonCard.css';
 
 const ComparisonCard = ({comparedAverage}) => {
   const [locationNameA, locationNameB, compared] = Object.keys(comparedAverage);
@@ -26,6 +26,5 @@ const ComparisonCard = ({comparedAverage}) => {
 ComparisonCard.propTypes = {
   comparedAverage: PropTypes.object.isRequired
 };
-
 
 export default ComparisonCard;
