@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/Card.css';
 import PropTypes from 'prop-types'
 
-const Card = ({ info, handleSelection}) => {
+const Card = ({ info, handleComparison}) => {
   const { location, data, selected } = info;
   let className = selected ? 'card selected' : 'card';
 
@@ -14,7 +14,7 @@ const Card = ({ info, handleSelection}) => {
   return (
     <article 
       className={className}
-      onClick={() => {handleSelection(location)}
+      onClick={() => {handleComparison(location)}
       }>
       <h2>{location}</h2>
       <p className='card-label'>Attendance:</p>

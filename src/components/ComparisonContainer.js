@@ -4,15 +4,15 @@ import Card from './Card'
 import PropTypes from 'prop-types';
 import '../styles/ComparisonContainer.css'
 
-const ComparisonContainer = ({ cards, handleSelection }) => {
-
-  const [cardA, comparisonCard, cardB] = cards
-  
+const ComparisonContainer = ({ cards, handleComparison, clearedComparison, generateComparisons }) => {
+  const [cardA , cardB] = cards
   return (
     <section className='comparison-container'>
-      <Card info={cardA} handleSelection={handleSelection} />
-      { comparisonCard && <ComparisonCard comparisonCard={comparisonCard} />}
-      { comparisonCard && <Card info={cardB} handleSelection={handleSelection} />}
+      <Card info={cardA} handleComparison={handleComparison} />
+       { cardB && <ComparisonCard 
+            comparisonCard={generateComparisons(cardA.location, cardB.location)}
+            clearedComparison={clearedComparison} />}
+      { cardB && <Card info={cardB} handleComparison={handleComparison} />}
     </section>
   )
 }

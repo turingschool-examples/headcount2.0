@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/ComparisonCard.css';
 
-const ComparisonCard = ({ comparisonCard }) => {
+const ComparisonCard = ({ comparisonCard, clearedComparison }) => {
   const [ cardAAvg, cardBAvg, comparedValue ] = Object.values(comparisonCard);
   const [ cardALocation, cardBLocation ] = Object.keys(comparisonCard);
 
@@ -20,7 +20,7 @@ const ComparisonCard = ({ comparisonCard }) => {
         <h2>{cardBLocation}:</h2>
         <p className='comparison-value'>Attendance: {(cardBAvg * 100).toFixed(1)}%</p>
       </div>
-      <button>Clear Comparison</button>
+      <button onClick={clearedComparison}>Clear Comparison</button>
     </article>
   )
 }
