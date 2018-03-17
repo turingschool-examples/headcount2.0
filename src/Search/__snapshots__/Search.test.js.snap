@@ -24,23 +24,27 @@ ShallowWrapper {
       "children": <div
         className="Header"
 >
-        <h1>
-                Headcount 2.0
-        </h1>
-        <input
-                className="Search-bar"
-                onChange={[Function]}
-                type="search"
-                value=""
-        />
-        <button
-                className="Search-btn"
-                onClick={[Function]}
+        <form
+                className="Search"
         >
-                CLEAR
-        </button>
+                <h1>
+                        Headcount 2.0
+                </h1>
+                <input
+                        className="Search-bar"
+                        onChange={[Function]}
+                        placeholder="Enter school district"
+                        type="search"
+                        value=""
+                />
+                <button
+                        className="Search-btn"
+                        onClick={[Function]}
+                >
+                        CLEAR
+                </button>
+        </form>
 </div>,
-      "className": "Search",
     },
     "ref": null,
     "rendered": Object {
@@ -48,78 +52,8 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [
-          <h1>
-            Headcount 2.0
-</h1>,
-          <input
-            className="Search-bar"
-            onChange={[Function]}
-            type="search"
-            value=""
-/>,
-          <button
-            className="Search-btn"
-            onClick={[Function]}
->
-            CLEAR
-</button>,
-        ],
-        "className": "Header",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Headcount 2.0",
-          },
-          "ref": null,
-          "rendered": "Headcount 2.0",
-          "type": "h1",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "Search-bar",
-            "onChange": [Function],
-            "type": "search",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "CLEAR",
-            "className": "Search-btn",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "CLEAR",
-          "type": "button",
-        },
-      ],
-      "type": "div",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <div
-          className="Header"
+        "children": <form
+          className="Search"
 >
           <h1>
                     Headcount 2.0
@@ -127,6 +61,7 @@ ShallowWrapper {
           <input
                     className="Search-bar"
                     onChange={[Function]}
+                    placeholder="Enter school district"
                     type="search"
                     value=""
           />
@@ -136,8 +71,8 @@ ShallowWrapper {
           >
                     CLEAR
           </button>
-</div>,
-        "className": "Search",
+</form>,
+        "className": "Header",
       },
       "ref": null,
       "rendered": Object {
@@ -152,6 +87,7 @@ ShallowWrapper {
             <input
               className="Search-bar"
               onChange={[Function]}
+              placeholder="Enter school district"
               type="search"
               value=""
 />,
@@ -162,7 +98,7 @@ ShallowWrapper {
               CLEAR
 </button>,
           ],
-          "className": "Header",
+          "className": "Search",
         },
         "ref": null,
         "rendered": Array [
@@ -184,6 +120,7 @@ ShallowWrapper {
             "props": Object {
               "className": "Search-bar",
               "onChange": [Function],
+              "placeholder": "Enter school district",
               "type": "search",
               "value": "",
             },
@@ -205,6 +142,141 @@ ShallowWrapper {
             "type": "button",
           },
         ],
+        "type": "form",
+      },
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="Header"
+>
+          <form
+                    className="Search"
+          >
+                    <h1>
+                              Headcount 2.0
+                    </h1>
+                    <input
+                              className="Search-bar"
+                              onChange={[Function]}
+                              placeholder="Enter school district"
+                              type="search"
+                              value=""
+                    />
+                    <button
+                              className="Search-btn"
+                              onClick={[Function]}
+                    >
+                              CLEAR
+                    </button>
+          </form>
+</div>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <form
+            className="Search"
+>
+            <h1>
+                        Headcount 2.0
+            </h1>
+            <input
+                        className="Search-bar"
+                        onChange={[Function]}
+                        placeholder="Enter school district"
+                        type="search"
+                        value=""
+            />
+            <button
+                        className="Search-btn"
+                        onClick={[Function]}
+            >
+                        CLEAR
+            </button>
+</form>,
+          "className": "Header",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1>
+                Headcount 2.0
+</h1>,
+              <input
+                className="Search-bar"
+                onChange={[Function]}
+                placeholder="Enter school district"
+                type="search"
+                value=""
+/>,
+              <button
+                className="Search-btn"
+                onClick={[Function]}
+>
+                CLEAR
+</button>,
+            ],
+            "className": "Search",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Headcount 2.0",
+              },
+              "ref": null,
+              "rendered": "Headcount 2.0",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "Search-bar",
+                "onChange": [Function],
+                "placeholder": "Enter school district",
+                "type": "search",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "CLEAR",
+                "className": "Search-btn",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "CLEAR",
+              "type": "button",
+            },
+          ],
+          "type": "form",
+        },
         "type": "div",
       },
       "type": "div",
