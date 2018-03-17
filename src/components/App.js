@@ -32,35 +32,58 @@ class App extends Component {
     })
   }
 
-  handleSelection = (location) => {
+  clearComparisonArray = () => {
+    let clearedComparison = [];
+    this.updateComparisonArray(clearedComparison)
+  }
 
-    let newState = this.addToComparisonArray(location)
-    let newRepositoryState = this.state.districtRepository;
-    newRepositoryState.stats[location].selected = !newRepositoryState.stats[location].selected;
+  handleComparison = (location) => {
+    this.updateSelectedFlag(location);
+    const {comparisonArray} = this.fetchCurrentState(location);
+    const inComparisonArray = comparisonArray.find(district => district.location === location);
+    inComparisonArray ? this.removeCardFromComparison(location) : this.addCardToComparison(location); 
+  }
+
+  updateSelectedFlag = (location) => {
+    const { newRepositoryState, locationToCompare } = this.fetchCurrentState(location);
+    locationToCompare.selected = !locationToCompare.selected;
     let newDistrictArray = newRepositoryState.findAllMatches();  
     this.setState({
-      comparisonArray: newState,
       districtsArray: newDistrictArray,
       districtRepository: newRepositoryState});
   }
 
-  addToComparisonArray = (location) => {
-    let newState;
-    const comparisonArray = this.state.comparisonArray;
-    const locationToCompare = this.state.districtsArray.find(district => district.location === location);
-    if (!comparisonArray.length) {
-      newState = [...comparisonArray, locationToCompare ];
-    } else if (comparisonArray.length === 1 && comparisonArray[0].location !== location){
-      newState = [...comparisonArray, this.state.districtRepository.compareDistrictAverages(comparisonArray[0].location, locationToCompare.location), locationToCompare];
-    } else if (comparisonArray.length === 1 && comparisonArray[0].location === location) {
-      newState = [];
-    } else if (comparisonArray.length === 3 && comparisonArray.filter(item => item.location === location).length > 0) {
-      newState = comparisonArray.filter(item => item.location && item.location !== location);
-    } else {
-      this.state.districtRepository.stats[comparisonArray[0].location].selected = false;
-      newState = [comparisonArray[2], this.state.districtRepository.compareDistrictAverages(comparisonArray[2].location, locationToCompare.location), locationToCompare];
+  addCardToComparison = (location) => {
+    const {locationToCompare, comparisonArray} = this.fetchCurrentState(location)
+    comparisonArray.push(locationToCompare)
+    if(comparisonArray.length === 3) {
+      let unselectedLocation = comparisonArray.shift();
+      this.updateSelectedFlag(unselectedLocation.location);
     }
-    return newState;
+    this.updateComparisonArray(comparisonArray)
+  }
+
+  removeCardFromComparison = (location) => {
+    const {comparisonArray } = this.fetchCurrentState(location);
+    comparisonArray[0].location === location ? comparisonArray.shift() : comparisonArray.pop();
+    this.updateComparisonArray(comparisonArray);
+  }
+
+  updateComparisonArray = (comparisonArray) => {
+    this.setState({comparisonArray});
+  }
+
+  generateComparisons = (location1, location2) => {
+    return this.state.districtRepository.compareDistrictAverages(location1, location2)
+  }
+
+  fetchCurrentState = (location) => {
+    return {
+      locationToCompare: this.state.districtsArray.find(district => district.location === location),
+      comparisonArray: [...this.state.comparisonArray],
+      compareDistrictAverages: this.state.districtRepository.compareDistrictAverages,
+      newRepositoryState: Object.assign(new DistrictRepository(kinderData), this.state.districtRepository)
+    }
   }
 
   render() {
@@ -70,8 +93,10 @@ class App extends Component {
         {this.state.districtRepository 
           && <Main 
               districts={this.state.districtsArray} 
-              handleSelection={this.handleSelection}
+              handleComparison={this.handleComparison}
               cards={this.state.comparisonArray}
+              clearedComparison={this.clearComparisonArray}
+              generateComparisons={this.generateComparisons}
               />}
       </div>
     );
