@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import CardsContainer from '../CardsContainer/CardsContainer.js';
 import Search from '../Search/Search.js';
 import './App.css';
+import '../index.css';
 
 class App extends Component {
   constructor(props) {
