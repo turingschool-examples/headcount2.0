@@ -6,6 +6,7 @@
 	background-color: #309B96;
 	font-size: 25px;
 	text-align: center;
+	z-index: 1;
 }
 
 .Search {

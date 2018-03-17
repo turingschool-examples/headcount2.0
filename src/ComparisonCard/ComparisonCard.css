@@ -55,4 +55,16 @@
   font-size: 30px;
   text-align: center;
 }
+ 
+@media screen and (max-width: 1300px) {
+  .comparison-card {
+    margin: 3px auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .comparison-card {
+    margin: 10px auto;
+  }
+}
 

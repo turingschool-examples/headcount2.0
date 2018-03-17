@@ -54,7 +54,7 @@ li {
   border: 6px solid #309B96;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
   .selected {
     margin: 5px;
   }
