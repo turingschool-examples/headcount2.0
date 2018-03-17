@@ -90,6 +90,7 @@ ShallowWrapper {
           selectedLocations={Array []}
 />,
       ],
+      "className": "App",
     },
     "ref": null,
     "rendered": Array [
@@ -198,6 +199,7 @@ ShallowWrapper {
             selectedLocations={Array []}
 />,
         ],
+        "className": "App",
       },
       "ref": null,
       "rendered": Array [
