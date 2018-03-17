@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Card.css';
 
 
-const Card = ({ location, stats, selectLocation, selectedLocations }) => {
+const Card = ({ location, stats, selectLocation, selectedLocations, id }) => {
 
   const isSelected = selectedLocations.some(district => {
     return district.location === location;
@@ -20,6 +20,7 @@ const Card = ({ location, stats, selectLocation, selectedLocations }) => {
 
   return (
     <article 
+      id={id}
       className={`district ${selected}`}
       onClick={() => selectLocation(location)} >
       <header>
@@ -36,7 +37,8 @@ Card.propTypes = {
   location: PropTypes.string.isRequired,
   stats: PropTypes.object.isRequired,
   selectLocation: PropTypes.func.isRequired,
-  selectedLocations: PropTypes.array.isRequired
+  selectedLocations: PropTypes.array.isRequired,
+  id: PropTypes.number.isRequired
 };
 
 export default Card;
