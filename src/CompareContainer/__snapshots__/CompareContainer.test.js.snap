@@ -48,7 +48,7 @@ ShallowWrapper {
       "children": Array [
         Array [
           <Card
-            className="left"
+            id="left"
             location="COLORADO"
             searchValue=""
             selectLocation={[Function]}
@@ -78,7 +78,7 @@ ShallowWrapper {
             }
 />,
           <Card
-            className="right"
+            id="right"
             location="COLORADO SPRINGS"
             searchValue=""
             selectLocation={[Function]}
@@ -127,7 +127,7 @@ ShallowWrapper {
         "key": "0",
         "nodeType": "function",
         "props": Object {
-          "className": "left",
+          "id": "left",
           "location": "COLORADO",
           "searchValue": "",
           "selectLocation": [Function],
@@ -161,7 +161,7 @@ ShallowWrapper {
         "key": "1",
         "nodeType": "function",
         "props": Object {
-          "className": "right",
+          "id": "right",
           "location": "COLORADO SPRINGS",
           "searchValue": "",
           "selectLocation": [Function],
@@ -217,7 +217,7 @@ ShallowWrapper {
         "children": Array [
           Array [
             <Card
-              className="left"
+              id="left"
               location="COLORADO"
               searchValue=""
               selectLocation={[Function]}
@@ -247,7 +247,7 @@ ShallowWrapper {
               }
 />,
             <Card
-              className="right"
+              id="right"
               location="COLORADO SPRINGS"
               searchValue=""
               selectLocation={[Function]}
@@ -296,7 +296,7 @@ ShallowWrapper {
           "key": "0",
           "nodeType": "function",
           "props": Object {
-            "className": "left",
+            "id": "left",
             "location": "COLORADO",
             "searchValue": "",
             "selectLocation": [Function],
@@ -330,7 +330,7 @@ ShallowWrapper {
           "key": "1",
           "nodeType": "function",
           "props": Object {
-            "className": "right",
+            "id": "right",
             "location": "COLORADO SPRINGS",
             "searchValue": "",
             "selectLocation": [Function],
