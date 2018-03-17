@@ -1,1 +1,11 @@
-/*APP COMPONENT RELATED CSS GOES HERE*/
+.App {
+	background-image: url('../images/higher-ed.jpg'); 
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100vh;
+}
+
+.Cards-container {
+	margin-top: 150px;
+}

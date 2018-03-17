@@ -45,16 +45,18 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="App">
         <Search 
           clearSearch={this.clearSearch}
           searchValue={this.state.searchValue}
           searchDistrict={this.searchDistrict} />
-        <CardsContainer 
-          districts={ this.state.districts } 
-          searchValue={this.state.searchValue}
-          selectLocation={this.selectLocation} 
-          selectedLocations={this.state.selectedLocations} />
+        <div className="Cards-container">
+          <CardsContainer 
+            districts={this.state.districts} 
+            searchValue={this.state.searchValue}
+            selectLocation={this.selectLocation} 
+            selectedLocations={this.state.selectedLocations} />
+        </div>
       </div>
     );
   }
