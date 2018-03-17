@@ -9,6 +9,7 @@ const Card = ({ location, stats, selectLocation, selectedLocations }) => {
     return district.location === location;
   });
   const selected = isSelected ? 'selected' : '';
+  
   const dataPoints = Object.keys(stats).map((timeFrame, index) => {
     return (
       <li key={index} className={stats[timeFrame] < 0.5 ? 'red' : ''}>

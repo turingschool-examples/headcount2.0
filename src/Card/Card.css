@@ -19,8 +19,8 @@ header {
   padding-top: 10px;
   width: 100%;
   height: 100px;
-  border-top-right-radius: 23px;
-  border-top-left-radius: 23px;
+  border-top-right-radius: 19px;
+  border-top-left-radius: 19px;
   background-color: #fc7753bd;
   font-size: 1.3em;
   text-align: center;
@@ -53,5 +53,5 @@ li {
 
 
 .selected {
-  border: 2px solid blue;
+  border: 6px solid #309B96;
 }
