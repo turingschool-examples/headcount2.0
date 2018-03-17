@@ -1,0 +1,24 @@
+.card h3 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.card-a,
+.card-b {
+  height: 100px;
+}
+
+.comparison {
+  height: 60px;
+}
+
+.card .card-a h2,
+.card .card-b h2 {
+  height: 60px;
+  margin-bottom: 0;
+}
+
+.comparison-value {
+  text-align: center;
+  margin: 0;
+}
