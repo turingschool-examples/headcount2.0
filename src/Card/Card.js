@@ -9,10 +9,11 @@ const Card = ({ location, stats, selectLocation, selectedLocations }) => {
     return district.location === location;
   });
   const selected = isSelected ? 'selected' : '';
+  
   const dataPoints = Object.keys(stats).map((timeFrame, index) => {
     return (
       <li key={index} className={stats[timeFrame] < 0.5 ? 'red' : ''}>
-        {timeFrame}: {Math.round(stats[timeFrame] * 100) / 100}
+        {timeFrame}: {Math.round(stats[timeFrame] * 100) / 100} %
       </li>
     );
   });    
@@ -21,7 +22,9 @@ const Card = ({ location, stats, selectLocation, selectedLocations }) => {
     <article 
       className={`district ${selected}`}
       onClick={() => selectLocation(location)} >
-      <h3>{location}</h3>
+      <header>
+        <h3>{location}</h3>
+      </header>
       <ul>
         {dataPoints}
       </ul>
