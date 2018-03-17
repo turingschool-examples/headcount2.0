@@ -11,7 +11,7 @@ const CompareContainer = (
       return (
         <Card {...district} 
           key={index}
-          className={index < 1 ? 'left' : 'right'}
+          id={index < 1 ? 'left' : 'right'}
           searchValue={searchValue} 
           selectLocation={selectLocation}
           selectedLocations={selectedLocations}
