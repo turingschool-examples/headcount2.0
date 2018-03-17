@@ -5,3 +5,9 @@
 .Cards-container {
 	margin-top: 150px;
 }
+
+@media screen and (max-width: 600px) {
+  .Cards-container {
+    margin-top: 200px;
+  }
+}

@@ -54,6 +54,27 @@ li {
   border: 6px solid #309B96;
 }
 
+@media screen and (max-width: 1200px) {
+  .selected {
+    margin: 5px;
+  }
+
+  .selected header {
+    font-size: 1em;
+  }
+
+  .selected ul {
+    width: 100%;
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .selected {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 600px) {
   ul {
     font-size: 1em;
