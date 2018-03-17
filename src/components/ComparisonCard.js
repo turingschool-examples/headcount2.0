@@ -20,7 +20,7 @@ const ComparisonCard = ({ comparisonCard, clearedComparison }) => {
         <h2>{cardBLocation}:</h2>
         <p className='comparison-value'>Attendance: {(cardBAvg * 100).toFixed(1)}%</p>
       </div>
-      <button onClick={clearedComparison}>Clear Comparison</button>
+      <button onClick={() => clearedComparison(cardALocation, cardBLocation)}>Clear Comparison</button>
     </article>
   )
 }

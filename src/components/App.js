@@ -32,9 +32,11 @@ class App extends Component {
     })
   }
 
-  clearComparisonArray = () => {
+  clearComparisonArray = (location1, location2) => {
     let clearedComparison = [];
-    this.updateComparisonArray(clearedComparison)
+    this.updateComparisonArray(clearedComparison);
+    this.updateSelectedFlag(location1);
+    this.updateSelectedFlag(location2);
   }
 
   handleComparison = (location) => {
