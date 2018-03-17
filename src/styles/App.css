@@ -1,1 +1,13 @@
 /*APP COMPONENT RELATED CSS GOES HERE*/
+
+body {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(75, 77, 62, 1);
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+/*font-family: 'Libre Baskerville', serif;
+font-family: 'Montserrat', sans-serif;*/

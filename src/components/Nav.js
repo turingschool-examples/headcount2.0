@@ -27,10 +27,6 @@ class Nav extends Component {
             value={this.state.search}
             onChange={this.searchInput}
           />
-          <button 
-            type='submit'
-            >Submit
-            </button>
         </form>
       </nav>
     )
