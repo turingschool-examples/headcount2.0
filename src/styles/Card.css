@@ -1,12 +1,15 @@
 .card {
   border: 1px solid black;
   width: 250px;
-  height: 315px;
+  height: 345px;
   margin: 2% 0;
+  background-color: #edeae0;
+  color: #6f6d5d;
 }
 
 .card h2 {
   text-align: center;
+  font-family: 'Libre Baskerville', serif;
 }
 
 
@@ -17,5 +20,8 @@
 }
 
 .selected {
-  background-color: red;
+  border: 1px solid #e4c64c;
 }
+
+
+/*rgba(128, 26, 63, .7); */
