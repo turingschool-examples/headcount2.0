@@ -54,41 +54,45 @@ ShallowWrapper {
           searchDistrict={[Function]}
           searchValue=""
 />,
-        <CardsContainer
-          districts={
-                    DistrictRepository {
-                              "stats": Object {
-                                "ACADEMY 20": Object {
-                                  "location": "ACADEMY 20",
-                                  "stats": Object {
-                                    "2005": 0.278,
-                                    "2006": 0.337,
-                                    "2007": 0.395,
-                                  },
-                                },
-                                "COLORADO": Object {
-                                  "location": "COLORADO",
-                                  "stats": Object {
-                                    "2005": 0.278,
-                                    "2006": 0.337,
-                                    "2007": 0.395,
-                                  },
-                                },
-                                "COLORADO SPRINGS": Object {
-                                  "location": "COLORADO SPRINGS",
-                                  "stats": Object {
-                                    "2005": 0.278,
-                                    "2006": 0.337,
-                                    "2007": 0.395,
-                                  },
-                                },
-                              },
-                            }
-          }
-          searchValue=""
-          selectLocation={[Function]}
-          selectedLocations={Array []}
-/>,
+        <div
+          className="Cards-container"
+>
+          <CardsContainer
+                    districts={
+                              DistrictRepository {
+                                        "stats": Object {
+                                          "ACADEMY 20": Object {
+                                            "location": "ACADEMY 20",
+                                            "stats": Object {
+                                              "2005": 0.278,
+                                              "2006": 0.337,
+                                              "2007": 0.395,
+                                            },
+                                          },
+                                          "COLORADO": Object {
+                                            "location": "COLORADO",
+                                            "stats": Object {
+                                              "2005": 0.278,
+                                              "2006": 0.337,
+                                              "2007": 0.395,
+                                            },
+                                          },
+                                          "COLORADO SPRINGS": Object {
+                                            "location": "COLORADO SPRINGS",
+                                            "stats": Object {
+                                              "2005": 0.278,
+                                              "2006": 0.337,
+                                              "2007": 0.395,
+                                            },
+                                          },
+                                        },
+                                      }
+                    }
+                    searchValue=""
+                    selectLocation={[Function]}
+                    selectedLocations={Array []}
+          />
+</div>,
       ],
       "className": "App",
     },
@@ -110,60 +114,9 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "host",
         "props": Object {
-          "districts": DistrictRepository {
-            "stats": Object {
-              "ACADEMY 20": Object {
-                "location": "ACADEMY 20",
-                "stats": Object {
-                  "2005": 0.278,
-                  "2006": 0.337,
-                  "2007": 0.395,
-                },
-              },
-              "COLORADO": Object {
-                "location": "COLORADO",
-                "stats": Object {
-                  "2005": 0.278,
-                  "2006": 0.337,
-                  "2007": 0.395,
-                },
-              },
-              "COLORADO SPRINGS": Object {
-                "location": "COLORADO SPRINGS",
-                "stats": Object {
-                  "2005": 0.278,
-                  "2006": 0.337,
-                  "2007": 0.395,
-                },
-              },
-            },
-          },
-          "searchValue": "",
-          "selectLocation": [Function],
-          "selectedLocations": Array [],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <Search
-            clearSearch={[Function]}
-            searchDistrict={[Function]}
-            searchValue=""
-/>,
-          <CardsContainer
+          "children": <CardsContainer
             districts={
                         DistrictRepository {
                                     "stats": Object {
@@ -198,25 +151,10 @@ ShallowWrapper {
             selectLocation={[Function]}
             selectedLocations={Array []}
 />,
-        ],
-        "className": "App",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "clearSearch": [Function],
-            "searchDistrict": [Function],
-            "searchValue": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "className": "Cards-container",
         },
-        Object {
+        "ref": null,
+        "rendered": Object {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
@@ -256,6 +194,166 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": [Function],
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Search
+            clearSearch={[Function]}
+            searchDistrict={[Function]}
+            searchValue=""
+/>,
+          <div
+            className="Cards-container"
+>
+            <CardsContainer
+                        districts={
+                                    DistrictRepository {
+                                                "stats": Object {
+                                                  "ACADEMY 20": Object {
+                                                    "location": "ACADEMY 20",
+                                                    "stats": Object {
+                                                      "2005": 0.278,
+                                                      "2006": 0.337,
+                                                      "2007": 0.395,
+                                                    },
+                                                  },
+                                                  "COLORADO": Object {
+                                                    "location": "COLORADO",
+                                                    "stats": Object {
+                                                      "2005": 0.278,
+                                                      "2006": 0.337,
+                                                      "2007": 0.395,
+                                                    },
+                                                  },
+                                                  "COLORADO SPRINGS": Object {
+                                                    "location": "COLORADO SPRINGS",
+                                                    "stats": Object {
+                                                      "2005": 0.278,
+                                                      "2006": 0.337,
+                                                      "2007": 0.395,
+                                                    },
+                                                  },
+                                                },
+                                              }
+                        }
+                        searchValue=""
+                        selectLocation={[Function]}
+                        selectedLocations={Array []}
+            />
+</div>,
+        ],
+        "className": "App",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "clearSearch": [Function],
+            "searchDistrict": [Function],
+            "searchValue": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <CardsContainer
+              districts={
+                            DistrictRepository {
+                                          "stats": Object {
+                                            "ACADEMY 20": Object {
+                                              "location": "ACADEMY 20",
+                                              "stats": Object {
+                                                "2005": 0.278,
+                                                "2006": 0.337,
+                                                "2007": 0.395,
+                                              },
+                                            },
+                                            "COLORADO": Object {
+                                              "location": "COLORADO",
+                                              "stats": Object {
+                                                "2005": 0.278,
+                                                "2006": 0.337,
+                                                "2007": 0.395,
+                                              },
+                                            },
+                                            "COLORADO SPRINGS": Object {
+                                              "location": "COLORADO SPRINGS",
+                                              "stats": Object {
+                                                "2005": 0.278,
+                                                "2006": 0.337,
+                                                "2007": 0.395,
+                                              },
+                                            },
+                                          },
+                                        }
+              }
+              searchValue=""
+              selectLocation={[Function]}
+              selectedLocations={Array []}
+/>,
+            "className": "Cards-container",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "districts": DistrictRepository {
+                "stats": Object {
+                  "ACADEMY 20": Object {
+                    "location": "ACADEMY 20",
+                    "stats": Object {
+                      "2005": 0.278,
+                      "2006": 0.337,
+                      "2007": 0.395,
+                    },
+                  },
+                  "COLORADO": Object {
+                    "location": "COLORADO",
+                    "stats": Object {
+                      "2005": 0.278,
+                      "2006": 0.337,
+                      "2007": 0.395,
+                    },
+                  },
+                  "COLORADO SPRINGS": Object {
+                    "location": "COLORADO SPRINGS",
+                    "stats": Object {
+                      "2005": 0.278,
+                      "2006": 0.337,
+                      "2007": 0.395,
+                    },
+                  },
+                },
+              },
+              "searchValue": "",
+              "selectLocation": [Function],
+              "selectedLocations": Array [],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
         },
       ],
       "type": "div",

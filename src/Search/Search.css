@@ -47,29 +47,8 @@
 	top: 52px;
 }
 
-@media screen and (max-width: 600px) {
-	.Header {
-		height: 200px;
-		font-size: 20px;
-	}
-
-	.Search-btn {
-    position: absolute;
-    right: 10%;
-    top: 95px;
-    width: 327px;
-	}
-}
-
-@media screen and (max-width: 500px) {
-	.Search-bar {
+@media screen and (max-width: 614px) {
+	.Search {
 		width: 100%;
-	}
-
-	.Search-btn {
-    position: absolute;
-    right: 0%;
-    top: 125px;
-    width: 100%;
 	}
 }
