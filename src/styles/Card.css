@@ -1,17 +1,18 @@
 .card {
   border: 1px solid black;
   border-radius: 25px;
-  width: 250px;
-  height: 360px;
   margin: 2% 0;
+  height: 360px;
+  width: 250px;
   background-color: #edeae0;
+  box-shadow: 0px 3px 10px 2px #2f3026;
   color: #6f6d5d;
 }
 
 .card h2 {
-  text-align: center;
-  font-family: 'Libre Baskerville', serif;
   height: 40px;
+  font-family: 'Libre Baskerville', serif;
+  text-align: center;
 }
 
 .card-label {
@@ -20,29 +21,29 @@
 }
 
 .card ul {
-  height: 220px;
-  list-style: none;
   margin: auto;
+  height: 220px;
   width: 50%;
+  list-style: none;
 }
 
 .card li {
   display: flex;
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
   background-position: 105px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
 }
 
 .card button {
-  border: none;
-  background-color: transparent;
   display: block;
+  border: none;
   margin: auto;
-  width: 250px;
   height: 30px;
+  width: 250px;
+  background-color: transparent;
+  color: #6f6d5d;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
-  color: #6f6d5d;
 }
 
 .card button:hover {
@@ -53,13 +54,22 @@
   border: 3px solid #e4c64c;
 }
 
+.year {
+  width: 40px;
+}
+
 .over-fifty {
   background-image: url('./checkmark.png');
+}
+
+.over-fifty .card-data {
+  color: #377D22;
 }
 
 .under-fifty {
   background-image: url('./fail.png');
 }
 
-
-/*rgba(128, 26, 63, .7); */
+.under-fifty .card-data {
+  color: #BA261A;
+}

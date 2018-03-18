@@ -4,7 +4,7 @@ import Nav from './Nav';
 import PropTypes from 'prop-types';
 import '../styles/Header.css';
 
-const Header = ({search}) => {
+const Header = ({search, currentData}) => {
   return (
     <header>
       <div className='header-container'>

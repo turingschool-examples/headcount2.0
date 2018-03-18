@@ -1,7 +1,8 @@
 /* eslint-disable */
 
-module.exports =
-  [
+module.exports = {
+  title: 'Kindergartners in full day program',
+  data: [
   {
     "Location": "Colorado",
     "TimeFrame": 2007,
@@ -11949,3 +11950,4 @@ module.exports =
     "Data": 1
   }
 ]
+}

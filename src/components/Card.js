@@ -8,7 +8,7 @@ const Card = ({ info, handleComparison}) => {
 
   const year = Object.keys(data).map((year, idx) => {
     let className = data[year] > 0.5 ? 'over-fifty' : 'under-fifty';
-    return  <li className={className} key={idx}><span>{year}</span><span> : {(data[year] * 100).toFixed(1)}%</span></li> 
+    return  <li className={className} key={idx}><span className='year'>{year}</span><span className='card-data'> : {(data[year] * 100).toFixed(1)}%</span></li> 
    })
 
   return (

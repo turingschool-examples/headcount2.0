@@ -17,44 +17,19 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
+      "children": <div
+        className="header-container"
+>
         <h1>
-          Welcome to Headcount
-</h1>,
+                Welcome to Headcount
+        </h1>
         <Nav
-          search={undefined}
-/>,
-      ],
+                search={undefined}
+        />
+</div>,
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Welcome to Headcount",
-        },
-        "ref": null,
-        "rendered": "Welcome to Headcount",
-        "type": "h1",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "search": undefined,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": "header",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
@@ -67,6 +42,7 @@ ShallowWrapper {
             search={undefined}
 />,
         ],
+        "className": "header-container",
       },
       "ref": null,
       "rendered": Array [
@@ -93,6 +69,70 @@ ShallowWrapper {
           "type": [Function],
         },
       ],
+      "type": "div",
+    },
+    "type": "header",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="header-container"
+>
+          <h1>
+                    Welcome to Headcount
+          </h1>
+          <Nav
+                    search={undefined}
+          />
+</div>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1>
+              Welcome to Headcount
+</h1>,
+            <Nav
+              search={undefined}
+/>,
+          ],
+          "className": "header-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Welcome to Headcount",
+            },
+            "ref": null,
+            "rendered": "Welcome to Headcount",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "search": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
       "type": "header",
     },
   ],

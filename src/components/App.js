@@ -11,7 +11,8 @@ class App extends Component {
     this.state = {
       districtRepository: null,
       districtsArray: null,
-      comparisonArray: []
+      comparisonArray: [],
+      currentDataTitle: ''
     }
   }
 
@@ -22,7 +23,7 @@ class App extends Component {
   retrieveSchoolData = (schoolData) => {
     const districtRepository = new DistrictRepository(schoolData)
     const districtsArray = districtRepository.findAllMatches()
-    this.setState({ districtRepository, districtsArray })
+    this.setState({ districtRepository, districtsArray , currentDataTitle: schoolData.title})
   }
 
   handleSearch = (userInput) => {
@@ -91,9 +92,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header search={this.handleSearch}/>
+        <Header 
+          search={this.handleSearch}
+          currentData={this.state.currentDataTitle}/>
         {this.state.districtRepository 
-          && <Main 
+          && <Main
+              title={this.state.currentDataTitle} 
               districts={this.state.districtsArray} 
               handleComparison={this.handleComparison}
               cards={this.state.comparisonArray}
