@@ -1,14 +1,27 @@
 header {
+  padding-top: 10px;
   height: 150px;
+  box-sizing: border-box;
   background-image: url('https://images.unsplash.com/photo-1453749024858-4bca89bd9edc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3fce436c0d414fb71dac3ffcd421725f&auto=format&fit=crop&w=1414&q=80');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100% 44%;
 }
 
+.header-container {
+  border: 2px solid rgba(75, 77, 62, 1);
+  border-radius: 30px;
+  margin: auto;
+  height: 130px;
+  width: 45%;
+  background-color: rgba(75, 77, 62, 0.3);
+}
+
 h1 {
   margin: 0;
   padding: 0;
+  text-align: center;
   font-family: 'Libre Baskerville', serif;
+  font-size: 3.5vw;
   color: #edeae0;
 }
