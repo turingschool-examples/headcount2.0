@@ -13,9 +13,9 @@ This project is currently the minimum viable product. Users can view the percent
 
 ## Project Screen Shots
 
-![Project base state]('./images/app-base.png')
+![Project base state](images/app-base.png)
 
-![Comparing Districts]('./images/app-comparison.png')
+![Comparing Districts](images/app-comparison.png)
 
 ## Installation and Setup Instructions
 
