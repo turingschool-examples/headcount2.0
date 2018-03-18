@@ -1,10 +1,9 @@
 import React from 'react';
-import '../styles/Header.css';
 import Nav from './Nav';
 import PropTypes from 'prop-types';
 import '../styles/Header.css';
 
-const Header = ({search, currentData}) => {
+const Header = ({search}) => {
   return (
     <header>
       <div className='header-container'>
@@ -12,11 +11,11 @@ const Header = ({search, currentData}) => {
         <Nav search={search}/>
       </div>
     </header>
-  )
-}
+  );
+};
 
 Header.propTypes = {
   search: PropTypes.func
-}
+};
 
-export default Header
+export default Header;
