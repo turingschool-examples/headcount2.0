@@ -4,3 +4,14 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+main h4 {
+  padding: 1%;
+  border: 2px solid #e4c64c;
+  border-radius: 25px;
+  margin: 20px auto;
+  width: 37vw;
+  background-color: rgba(237, 234, 224, 0.3);
+  font-size: 2vw;
+  color: #edeae0;
+}
