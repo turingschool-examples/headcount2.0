@@ -20,13 +20,15 @@ ShallowWrapper {
       "children": <form>
         <input
                 onChange={[Function]}
+                placeholder="Search District information (i.e. Academy 20)"
                 type="text"
                 value=""
         />
         <button
-                type="submit"
+                className="clear-search"
+                onClick={[Function]}
         >
-                Submit
+                X
         </button>
 </form>,
     },
@@ -36,16 +38,35 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
+        "children": <input
+          onChange={[Function]}
+          placeholder="Search District information (i.e. Academy 20)"
+          type="text"
+          value=""
+/>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "onChange": [Function],
+          "placeholder": "Search District information (i.e. Academy 20)",
+          "type": "text",
+          "value": "",
         "children": Array [
           <input
             onChange={[Function]}
+            placeholder="Search District information (i.e. Academy 20)"
             type="text"
             value=""
 />,
           <button
-            type="submit"
+            className="clear-search"
+            onClick={[Function]}
 >
-            Submit
+            X
 </button>,
         ],
       },
@@ -57,6 +78,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "onChange": [Function],
+            "placeholder": "Search District information (i.e. Academy 20)",
             "type": "text",
             "value": "",
           },
@@ -69,14 +91,18 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Submit",
-            "type": "submit",
+            "children": "X",
+            "className": "clear-search",
+            "onClick": [Function],
           },
           "ref": null,
-          "rendered": "Submit",
+          "rendered": "X",
           "type": "button",
         },
-      ],
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
       "type": "form",
     },
     "type": "nav",
@@ -90,13 +116,15 @@ ShallowWrapper {
         "children": <form>
           <input
                     onChange={[Function]}
+                    placeholder="Search District information (i.e. Academy 20)"
                     type="text"
                     value=""
           />
           <button
-                    type="submit"
+                    className="clear-search"
+                    onClick={[Function]}
           >
-                    Submit
+                    X
           </button>
 </form>,
       },
@@ -106,16 +134,35 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": <input
+            onChange={[Function]}
+            placeholder="Search District information (i.e. Academy 20)"
+            type="text"
+            value=""
+/>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "onChange": [Function],
+            "placeholder": "Search District information (i.e. Academy 20)",
+            "type": "text",
+            "value": "",
           "children": Array [
             <input
               onChange={[Function]}
+              placeholder="Search District information (i.e. Academy 20)"
               type="text"
               value=""
 />,
             <button
-              type="submit"
+              className="clear-search"
+              onClick={[Function]}
 >
-              Submit
+              X
 </button>,
           ],
         },
@@ -127,6 +174,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "onChange": [Function],
+              "placeholder": "Search District information (i.e. Academy 20)",
               "type": "text",
               "value": "",
             },
@@ -139,14 +187,18 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Submit",
-              "type": "submit",
+              "children": "X",
+              "className": "clear-search",
+              "onClick": [Function],
             },
             "ref": null,
-            "rendered": "Submit",
+            "rendered": "X",
             "type": "button",
           },
-        ],
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
         "type": "form",
       },
       "type": "nav",
