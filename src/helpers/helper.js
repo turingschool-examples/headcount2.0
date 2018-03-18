@@ -3,52 +3,62 @@ export default class DistrictRepository {
     this.stats = this.cleanData(kinderData);
   }
 
-  cleanData(data) {
-    return data.data.reduce((statsObj, school) => {
-      if(!statsObj[school.Location.toUpperCase()]) {
-        statsObj[school.Location.toUpperCase()] = {location: school.Location.toUpperCase(), data: {}, selected:false}
+  cleanData(stats) {
+    return stats.stats.reduce((statsObj, school) => {
+      if (!statsObj[school.Location.toUpperCase()]) {
+        statsObj[school.Location.toUpperCase()] = {
+          location: school.Location.toUpperCase(), 
+          stats: {}, selected:false
+        };
       }
-      statsObj[school.Location.toUpperCase()].data[school.TimeFrame] = this.cleanNumber(school.Data)
+      statsObj[school.Location.toUpperCase()]
+        .stats[school.TimeFrame] = this.cleanNumber(school.stats);
       return statsObj; 
-    }, {})   
+    }, {});
   }
 
   cleanNumber(number) {
-    return typeof number === "number" ? parseFloat(number.toFixed(3)) : 0
+    return typeof number === "number" ? parseFloat(number.toFixed(3)) : 0;
   }
 
   findByName(district) {
     let districtToCaps;
     if (district) {
-      districtToCaps = district.toUpperCase()
-      return this.stats[districtToCaps]
-    }  
+      districtToCaps = district.toUpperCase();
+      return this.stats[districtToCaps];
+    }
   }
 
   findAllMatches(userInput) {
     return Object.keys(this.stats).reduce((statsArr, school) => {
       if (!userInput) {
-        statsArr.push(this.stats[school])
+        statsArr.push(this.stats[school]);
       } else {
         let userInputToCaps = userInput.toUpperCase();
-          if (school.includes(userInputToCaps)) {
-          statsArr.push(this.stats[school])  
+        if (school.includes(userInputToCaps)) {
+          statsArr.push(this.stats[school]);
         }
       }
-      return statsArr
-    }, [])
+      return statsArr;
+    }, []);
   }
 
   findAverage(district) {
     const foundDistrict = this.findByName(district);
-    return parseFloat((Object.values(foundDistrict.data).reduce((sum, year) => sum + year, 0)/Object.values(foundDistrict.data).length).toFixed(3))
+    return parseFloat((Object.values(foundDistrict.data)
+      .reduce((sum, year) => sum + year, 0)/Object
+        .values(foundDistrict.stats).length)
+      .toFixed(3));
   }
 
   compareDistrictAverages(district1, district2) {
     return {
       [district1.toUpperCase()]: this.findAverage(district1),
       [district2.toUpperCase()]: this.findAverage(district2),
-      compared: parseFloat((this.findAverage(district1)/this.findAverage(district2)).toFixed(3))
-    }
+      compared: parseFloat((this
+        .findAverage(district1)/this
+          .findAverage(district2))
+        .toFixed(3))
+    };
   }
 }

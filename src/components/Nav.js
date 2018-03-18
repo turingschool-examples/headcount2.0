@@ -1,28 +1,27 @@
 import React, {Component} from 'react';
 import '../styles/Nav.css';
 import PropTypes from 'prop-types';
-import '../styles/Nav.css';
 
 class Nav extends Component {
   constructor(props) {
     super(props);
     this.state = {
       search: ''
-    }
-    this.searchInput = this.searchInput.bind(this)
+    };
+    this.searchInput = this.searchInput.bind(this);
   }
 
-  searchInput(e) {
-    this.props.search(e.target.value)
+  searchInput(event) {
+    this.props.search(event.target.value);
     this.setState({
-      search: e.target.value
-    })
+      search: event.target.value
+    });
   }
 
-  clearSearch = (e) => {
-    e.preventDefault();
+  clearSearch = (event) => {
+    event.preventDefault();
     this.props.search('');
-    this.setState({search: ''})
+    this.setState({search: ''});
   }
 
   render() {
@@ -40,12 +39,12 @@ class Nav extends Component {
             className='clear-search'>X</button>
         </form>
       </nav>
-    )
+    );
   }
 }
 
 Nav.propTypes = {
   search: PropTypes.func
-}
+};
 
 export default Nav;
