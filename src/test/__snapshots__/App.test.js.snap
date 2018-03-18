@@ -23,6 +23,7 @@ ShallowWrapper {
 />,
         <Main
           cards={Array []}
+          clearedComparison={[Function]}
           districts={
                     Array [
                               Object {
@@ -3104,7 +3105,8 @@ ShallowWrapper {
                               },
                             ]
           }
-          handleSelection={[Function]}
+          generateComparisons={[Function]}
+          handleComparison={[Function]}
 />,
       ],
     },
@@ -3127,6 +3129,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "cards": Array [],
+          "clearedComparison": [Function],
           "districts": Array [
             Object {
               "data": Object {
@@ -6206,7 +6209,8 @@ ShallowWrapper {
               "selected": false,
             },
           ],
-          "handleSelection": [Function],
+          "generateComparisons": [Function],
+          "handleComparison": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -6227,6 +6231,7 @@ ShallowWrapper {
 />,
           <Main
             cards={Array []}
+            clearedComparison={[Function]}
             districts={
                         Array [
                                     Object {
@@ -9308,7 +9313,8 @@ ShallowWrapper {
                                     },
                                   ]
             }
-            handleSelection={[Function]}
+            generateComparisons={[Function]}
+            handleComparison={[Function]}
 />,
         ],
       },
@@ -9331,6 +9337,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "cards": Array [],
+            "clearedComparison": [Function],
             "districts": Array [
               Object {
                 "data": Object {
@@ -12410,7 +12417,8 @@ ShallowWrapper {
                 "selected": false,
               },
             ],
-            "handleSelection": [Function],
+            "generateComparisons": [Function],
+            "handleComparison": [Function],
           },
           "ref": null,
           "rendered": null,

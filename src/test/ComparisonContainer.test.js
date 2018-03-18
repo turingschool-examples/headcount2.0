@@ -5,18 +5,18 @@ import ComparisonContainer from '../components/ComparisonContainer'
 describe('Comparison Container', () => {
 
   it('should match the snapshot', () => {
-    const comparisonCard = {COLORADO: 0.53, ACADEMY: 0.407, compared: 1.302}
     const clearedComparison = jest.fn() 
     const generateComparisons = jest.fn()
+    const handleComparison = jest.fn()
+    const cards = [{ location: 'Denver', data: {'2006': .098}}, 
+    { location: 'Golden', data: {'2006': .848}}]
 
     const wrapper = shallow(<ComparisonContainer 
-      cards={}  
-      clearedComparison={clearedComparison} 
+      cards={cards}  
+      handleComparison={handleComparison}
+      clearedComparison={clearedComparison}
+      generateComparisons={generateComparisons} 
       />)
-
-    cards, handleComparison, clearedComparison, generateComparisons
-
     expect(wrapper).toMatchSnapshot()
   })
-
 })

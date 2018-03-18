@@ -5,7 +5,7 @@ import DistrictRepository from '../helpers/helper.js';
 import kinderData from '../data/kindergartners_in_full_day_program.js';
 
 describe('App', () => {
-  it.skip('should match the snapshot', () => {
+  it('should match the snapshot', () => {
     const wrapper = shallow(<App />);
     expect(wrapper).toMatchSnapshot()
   });
@@ -78,15 +78,6 @@ describe('App', () => {
     expect(location2.selected).toEqual(false)
   })
 
-  // Set State
-
-  // it('should do some shit', () => {
-  //   const wrapper = mount(<App />);
-  //   const location1 = new DistrictRepository(kinderData).findByName("ACADEMY 20")
-  //   wrapper.instance().handleComparison("ACADEMY 20")
-  //   expect(wrapper.instance().removeCardFromComparison("ACADEMY 20")).toHaveBeenCalled()
-  // })
-
   it('should change the district\'s selected flag when update Selected Flag is called', () => {
     const wrapper = mount(<App />);
     const location1 = new DistrictRepository(kinderData).findByName("Colorado")
@@ -152,5 +143,4 @@ describe('App', () => {
     expect(typeof answer.compareDistrictAverages).toBe('function')
     expect(answer.newRepositoryState).toEqual(new DistrictRepository(kinderData))
   })
-
 })
