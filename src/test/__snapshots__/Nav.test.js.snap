@@ -20,6 +20,7 @@ ShallowWrapper {
       "children": <form>
         <input
                 onChange={[Function]}
+                placeholder="Search District information (i.e. Academy 20)"
                 type="text"
                 value=""
         />
@@ -33,6 +34,7 @@ ShallowWrapper {
       "props": Object {
         "children": <input
           onChange={[Function]}
+          placeholder="Search District information (i.e. Academy 20)"
           type="text"
           value=""
 />,
@@ -44,6 +46,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "onChange": [Function],
+          "placeholder": "Search District information (i.e. Academy 20)",
           "type": "text",
           "value": "",
         },
@@ -64,6 +67,7 @@ ShallowWrapper {
         "children": <form>
           <input
                     onChange={[Function]}
+                    placeholder="Search District information (i.e. Academy 20)"
                     type="text"
                     value=""
           />
@@ -77,6 +81,7 @@ ShallowWrapper {
         "props": Object {
           "children": <input
             onChange={[Function]}
+            placeholder="Search District information (i.e. Academy 20)"
             type="text"
             value=""
 />,
@@ -88,6 +93,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "onChange": [Function],
+            "placeholder": "Search District information (i.e. Academy 20)",
             "type": "text",
             "value": "",
           },

@@ -1,0 +1,534 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comparison Card should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ComparisonCard
+    clearedComparison={[Function]}
+    comparisonCard={
+        Object {
+            "ACADEMY 20": 0.407,
+            "COLORADO": 0.53,
+            "compared": 1.302,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="card-a"
+>
+          <h2>
+                    COLORADO
+                    :
+          </h2>
+          <p
+                    className="comparison-value"
+          >
+                    Attendance: 
+                    53.0
+                    %
+          </p>
+</div>,
+        <div
+          className="comparison"
+>
+          <h3>
+                    130.2
+                    %
+          </h3>
+          <p
+                    className="comparison-value"
+          >
+                    to
+          </p>
+</div>,
+        <div
+          className="card-b"
+>
+          <h2>
+                    ACADEMY 20
+                    :
+          </h2>
+          <p
+                    className="comparison-value"
+          >
+                    Attendance: 
+                    40.7
+                    %
+          </p>
+</div>,
+        <button
+          onClick={[Function]}
+>
+          Clear Comparison
+</button>,
+      ],
+      "className": "card selected",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2>
+              COLORADO
+              :
+</h2>,
+            <p
+              className="comparison-value"
+>
+              Attendance: 
+              53.0
+              %
+</p>,
+          ],
+          "className": "card-a",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "COLORADO",
+                ":",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "COLORADO",
+              ":",
+            ],
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Attendance: ",
+                "53.0",
+                "%",
+              ],
+              "className": "comparison-value",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Attendance: ",
+              "53.0",
+              "%",
+            ],
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3>
+              130.2
+              %
+</h3>,
+            <p
+              className="comparison-value"
+>
+              to
+</p>,
+          ],
+          "className": "comparison",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "130.2",
+                "%",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "130.2",
+              "%",
+            ],
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "to",
+              "className": "comparison-value",
+            },
+            "ref": null,
+            "rendered": "to",
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2>
+              ACADEMY 20
+              :
+</h2>,
+            <p
+              className="comparison-value"
+>
+              Attendance: 
+              40.7
+              %
+</p>,
+          ],
+          "className": "card-b",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "ACADEMY 20",
+                ":",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "ACADEMY 20",
+              ":",
+            ],
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Attendance: ",
+                "40.7",
+                "%",
+              ],
+              "className": "comparison-value",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Attendance: ",
+              "40.7",
+              "%",
+            ],
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Clear Comparison",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Clear Comparison",
+        "type": "button",
+      },
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="card-a"
+>
+            <h2>
+                        COLORADO
+                        :
+            </h2>
+            <p
+                        className="comparison-value"
+            >
+                        Attendance: 
+                        53.0
+                        %
+            </p>
+</div>,
+          <div
+            className="comparison"
+>
+            <h3>
+                        130.2
+                        %
+            </h3>
+            <p
+                        className="comparison-value"
+            >
+                        to
+            </p>
+</div>,
+          <div
+            className="card-b"
+>
+            <h2>
+                        ACADEMY 20
+                        :
+            </h2>
+            <p
+                        className="comparison-value"
+            >
+                        Attendance: 
+                        40.7
+                        %
+            </p>
+</div>,
+          <button
+            onClick={[Function]}
+>
+            Clear Comparison
+</button>,
+        ],
+        "className": "card selected",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2>
+                COLORADO
+                :
+</h2>,
+              <p
+                className="comparison-value"
+>
+                Attendance: 
+                53.0
+                %
+</p>,
+            ],
+            "className": "card-a",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "COLORADO",
+                  ":",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "COLORADO",
+                ":",
+              ],
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Attendance: ",
+                  "53.0",
+                  "%",
+                ],
+                "className": "comparison-value",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Attendance: ",
+                "53.0",
+                "%",
+              ],
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3>
+                130.2
+                %
+</h3>,
+              <p
+                className="comparison-value"
+>
+                to
+</p>,
+            ],
+            "className": "comparison",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "130.2",
+                  "%",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "130.2",
+                "%",
+              ],
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "to",
+                "className": "comparison-value",
+              },
+              "ref": null,
+              "rendered": "to",
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2>
+                ACADEMY 20
+                :
+</h2>,
+              <p
+                className="comparison-value"
+>
+                Attendance: 
+                40.7
+                %
+</p>,
+            ],
+            "className": "card-b",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "ACADEMY 20",
+                  ":",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "ACADEMY 20",
+                ":",
+              ],
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Attendance: ",
+                  "40.7",
+                  "%",
+                ],
+                "className": "comparison-value",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Attendance: ",
+                "40.7",
+                "%",
+              ],
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Clear Comparison",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Clear Comparison",
+          "type": "button",
+        },
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
