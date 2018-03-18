@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../styles/Nav.css';
 import PropTypes from 'prop-types';
+import '../styles/Nav.css';
 
 class Nav extends Component {
   constructor(props) {
@@ -26,6 +27,7 @@ class Nav extends Component {
             type='text'
             value={this.state.search}
             onChange={this.searchInput}
+            placeholder='Search District information (i.e. Academy 20)'
           />
         </form>
       </nav>
