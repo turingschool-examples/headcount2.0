@@ -4,20 +4,24 @@ import ComparisonCard from '../components/ComparisonCard';
 
 describe('Comparison Card', () => {
 
-  // it('should match snapshot', () => {
-  //   const wrapper = shallow(<ComparisonCard />)
-  //   expect(wrapper).toMatchSnapshot()
-  // })
+  it('should match snapshot', () => {
+    const comparisonCard = {COLORADO: 0.53, 'ACADEMY 20': 0.407, compared: 1.302}
+    const clearedComparison = jest.fn()
+    const wrapper = shallow(<ComparisonCard comparisonCard={comparisonCard} clearedComparison={clearedComparison}/>)
+    expect(wrapper).toMatchSnapshot()
+  })
 
   it('should have the correct props', () => {
     const comparisonCard = {COLORADO: 0.53, 'ACADEMY 20': 0.407, compared: 1.302}
-    const wrapper = mount(<ComparisonCard comparisonCard={comparisonCard}/>)
+    const clearedComparison = jest.fn()
+    const wrapper = mount(<ComparisonCard comparisonCard={comparisonCard} clearedComparison={clearedComparison}/>)
     expect(wrapper.props().comparisonCard).toEqual(comparisonCard)
   })
 
   it('should destructure the props values to set Averages and Comparison Value', () => {
     const comparisonCard = {COLORADO: 0.53, 'ACADEMY 20': 0.407, compared: 1.302}
-    const wrapper = mount(<ComparisonCard comparisonCard={comparisonCard}/>)
+    const clearedComparison = jest.fn()
+    const wrapper = mount(<ComparisonCard comparisonCard={comparisonCard} clearedComparison={clearedComparison}/>)
     const [ cardAAvg, cardBAvg, comparedValue ] = Object.values(comparisonCard);
     expect(cardAAvg).toEqual(0.53)
     expect(cardBAvg).toEqual(0.407)
@@ -26,7 +30,8 @@ describe('Comparison Card', () => {
 
   it('should destructure the props keys to set Location', () => {
     const comparisonCard = {COLORADO: 0.53, 'ACADEMY 20': 0.407, compared: 1.302}
-    const wrapper = mount(<ComparisonCard comparisonCard={comparisonCard}/>)
+    const clearedComparison = jest.fn()
+    const wrapper = mount(<ComparisonCard comparisonCard={comparisonCard} clearedComparison={clearedComparison}/>)
     const [ cardALocation, cardBLocation ] = Object.keys(comparisonCard);
     expect(cardALocation).toEqual('COLORADO')
     expect(cardBLocation).toEqual('ACADEMY 20')

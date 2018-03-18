@@ -5,7 +5,6 @@ import '../styles/ComparisonCard.css';
 const ComparisonCard = ({ comparisonCard, clearedComparison }) => {
   const [ cardAAvg, cardBAvg, comparedValue ] = Object.values(comparisonCard);
   const [ cardALocation, cardBLocation ] = Object.keys(comparisonCard);
-
   return (
     <article className='card selected'>
       <div className='card-a'>
