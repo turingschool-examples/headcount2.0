@@ -66,7 +66,7 @@ class App extends Component {
   }
 
   removeCardFromComparison = (location) => {
-    const {comparisonArray } = this.fetchCurrentState(location);
+    const { comparisonArray } = this.fetchCurrentState(location);
     comparisonArray[0].location === location ? comparisonArray.shift() : comparisonArray.pop();
     this.updateComparisonArray(comparisonArray);
   }

@@ -30,15 +30,28 @@ ShallowWrapper {
         <h2>
           Denver
 </h2>,
+        <p
+          className="card-label"
+>
+          Attendance:
+</p>,
         <ul>
           <li
                     className="over-fifty"
           >
-                    2006
-                     : 
-                    0.85
+                    <span>
+                              2006
+                    </span>
+                    <span>
+                               : 
+                              85.0
+                              %
+                    </span>
           </li>
 </ul>,
+        <button>
+          Compare District
+</button>,
       ],
       "className": "card",
       "onClick": [Function],
@@ -61,13 +74,30 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": "Attendance:",
+          "className": "card-label",
+        },
+        "ref": null,
+        "rendered": "Attendance:",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
           "children": Array [
             <li
               className="over-fifty"
 >
-              2006
-               : 
-              0.85
+              <span>
+                            2006
+              </span>
+              <span>
+                             : 
+                            85.0
+                            %
+              </span>
 </li>,
           ],
         },
@@ -79,22 +109,65 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "2006",
-                " : ",
-                0.85,
+                <span>
+                  2006
+</span>,
+                <span>
+                   : 
+                  85.0
+                  %
+</span>,
               ],
               "className": "over-fifty",
             },
             "ref": null,
             "rendered": Array [
-              "2006",
-              " : ",
-              0.85,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2006",
+                },
+                "ref": null,
+                "rendered": "2006",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " : ",
+                    "85.0",
+                    "%",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " : ",
+                  "85.0",
+                  "%",
+                ],
+                "type": "span",
+              },
             ],
             "type": "li",
           },
         ],
         "type": "ul",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Compare District",
+        },
+        "ref": null,
+        "rendered": "Compare District",
+        "type": "button",
       },
     ],
     "type": "article",
@@ -109,15 +182,28 @@ ShallowWrapper {
           <h2>
             Denver
 </h2>,
+          <p
+            className="card-label"
+>
+            Attendance:
+</p>,
           <ul>
             <li
                         className="over-fifty"
             >
-                        2006
-                         : 
-                        0.85
+                        <span>
+                                    2006
+                        </span>
+                        <span>
+                                     : 
+                                    85.0
+                                    %
+                        </span>
             </li>
 </ul>,
+          <button>
+            Compare District
+</button>,
         ],
         "className": "card",
         "onClick": [Function],
@@ -140,13 +226,30 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "children": "Attendance:",
+            "className": "card-label",
+          },
+          "ref": null,
+          "rendered": "Attendance:",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
             "children": Array [
               <li
                 className="over-fifty"
 >
-                2006
-                 : 
-                0.85
+                <span>
+                                2006
+                </span>
+                <span>
+                                 : 
+                                85.0
+                                %
+                </span>
 </li>,
             ],
           },
@@ -158,22 +261,65 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "2006",
-                  " : ",
-                  0.85,
+                  <span>
+                    2006
+</span>,
+                  <span>
+                     : 
+                    85.0
+                    %
+</span>,
                 ],
                 "className": "over-fifty",
               },
               "ref": null,
               "rendered": Array [
-                "2006",
-                " : ",
-                0.85,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2006",
+                  },
+                  "ref": null,
+                  "rendered": "2006",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " : ",
+                      "85.0",
+                      "%",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " : ",
+                    "85.0",
+                    "%",
+                  ],
+                  "type": "span",
+                },
               ],
               "type": "li",
             },
           ],
           "type": "ul",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Compare District",
+          },
+          "ref": null,
+          "rendered": "Compare District",
+          "type": "button",
         },
       ],
       "type": "article",
