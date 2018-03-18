@@ -4,7 +4,7 @@ import Card from './Card';
 import ComparisonContainer from './ComparisonContainer'
 import PropTypes from 'prop-types';
 
-const Main = ( { districts, handleComparison, cards, clearedComparison, generateComparisons } ) => {
+const Main = ( { title, districts, handleComparison, cards, clearedComparison, generateComparisons } ) => {
   const district = districts.map((district, idx) => {
     return (<Card 
       info={district} 
@@ -14,6 +14,7 @@ const Main = ( { districts, handleComparison, cards, clearedComparison, generate
   
   return (
     <main>
+      <h4>{title}</h4>
       {cards.length > 0 
         && <ComparisonContainer 
             cards={cards} 

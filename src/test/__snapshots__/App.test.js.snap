@@ -19,6 +19,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Header
+          currentData="Kindergartners in full day program"
           search={[Function]}
 />,
         <Main
@@ -3107,6 +3108,7 @@ ShallowWrapper {
           }
           generateComparisons={[Function]}
           handleComparison={[Function]}
+          title="Kindergartners in full day program"
 />,
       ],
     },
@@ -3117,6 +3119,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "currentData": "Kindergartners in full day program",
           "search": [Function],
         },
         "ref": null,
@@ -6211,6 +6214,7 @@ ShallowWrapper {
           ],
           "generateComparisons": [Function],
           "handleComparison": [Function],
+          "title": "Kindergartners in full day program",
         },
         "ref": null,
         "rendered": null,
@@ -6227,6 +6231,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Header
+            currentData="Kindergartners in full day program"
             search={[Function]}
 />,
           <Main
@@ -9315,6 +9320,7 @@ ShallowWrapper {
             }
             generateComparisons={[Function]}
             handleComparison={[Function]}
+            title="Kindergartners in full day program"
 />,
         ],
       },
@@ -9325,6 +9331,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "currentData": "Kindergartners in full day program",
             "search": [Function],
           },
           "ref": null,
@@ -12419,6 +12426,8 @@ ShallowWrapper {
             ],
             "generateComparisons": [Function],
             "handleComparison": [Function],
+            "title": "Kindergartners in full day program",
+
           },
           "ref": null,
           "rendered": null,

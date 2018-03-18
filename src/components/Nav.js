@@ -19,6 +19,12 @@ class Nav extends Component {
     })
   }
 
+  clearSearch = (e) => {
+    e.preventDefault();
+    this.props.search('');
+    this.setState({search: ''})
+  }
+
   render() {
     return (
       <nav>
@@ -29,6 +35,9 @@ class Nav extends Component {
             onChange={this.searchInput}
             placeholder='Search District information (i.e. Academy 20)'
           />
+          <button 
+            onClick={this.clearSearch}
+            className='clear-search'>X</button>
         </form>
       </nav>
     )

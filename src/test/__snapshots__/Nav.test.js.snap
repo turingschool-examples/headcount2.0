@@ -24,6 +24,12 @@ ShallowWrapper {
                 type="text"
                 value=""
         />
+        <button
+                className="clear-search"
+                onClick={[Function]}
+        >
+                X
+        </button>
 </form>,
     },
     "ref": null,
@@ -49,6 +55,49 @@ ShallowWrapper {
           "placeholder": "Search District information (i.e. Academy 20)",
           "type": "text",
           "value": "",
+        "children": Array [
+          <input
+            onChange={[Function]}
+            placeholder="Search District information (i.e. Academy 20)"
+            type="text"
+            value=""
+/>,
+          <button
+            className="clear-search"
+            onClick={[Function]}
+>
+            X
+</button>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "onChange": [Function],
+            "placeholder": "Search District information (i.e. Academy 20)",
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "X",
+            "className": "clear-search",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "X",
+          "type": "button",
         },
         "ref": null,
         "rendered": null,
@@ -71,6 +120,12 @@ ShallowWrapper {
                     type="text"
                     value=""
           />
+          <button
+                    className="clear-search"
+                    onClick={[Function]}
+          >
+                    X
+          </button>
 </form>,
       },
       "ref": null,
@@ -96,6 +151,49 @@ ShallowWrapper {
             "placeholder": "Search District information (i.e. Academy 20)",
             "type": "text",
             "value": "",
+          "children": Array [
+            <input
+              onChange={[Function]}
+              placeholder="Search District information (i.e. Academy 20)"
+              type="text"
+              value=""
+/>,
+            <button
+              className="clear-search"
+              onClick={[Function]}
+>
+              X
+</button>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "onChange": [Function],
+              "placeholder": "Search District information (i.e. Academy 20)",
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "X",
+              "className": "clear-search",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "X",
+            "type": "button",
           },
           "ref": null,
           "rendered": null,
