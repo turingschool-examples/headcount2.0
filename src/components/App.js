@@ -7,30 +7,36 @@ import '../styles/App.css';
 
 class App extends Component {
   constructor () {
-    super()
+    super();
     this.state = {
       districtRepository: null,
       districtsArray: null,
       comparisonArray: [],
       currentDataTitle: ''
-    }
+    };
   }
 
   componentDidMount() {
-    this.retrieveSchoolData(kinderData)
+    this.retrieveSchoolData(kinderData);
   }
 
   retrieveSchoolData = (schoolData) => {
-    const districtRepository = new DistrictRepository(schoolData)
-    const districtsArray = districtRepository.findAllMatches()
-    this.setState({ districtRepository, districtsArray , currentDataTitle: schoolData.title})
+    const districtRepository = new DistrictRepository(schoolData);
+    const districtsArray = districtRepository.findAllMatches();
+    this.setState(
+      { 
+        districtRepository, 
+        districtsArray, 
+        currentDataTitle: schoolData.title
+      }
+    );
   }
 
   handleSearch = (userInput) => {
-    const userSearch = this.state.districtRepository.findAllMatches(userInput)
+    const userSearch = this.state.districtRepository.findAllMatches(userInput);
     this.setState({
       districtsArray: userSearch
-    })
+    });
   }
 
   clearComparisonArray = (location1, location2) => {
@@ -43,12 +49,19 @@ class App extends Component {
   handleComparison = (location) => {
     this.updateSelectedFlag(location);
     const {comparisonArray} = this.fetchCurrentState(location);
-    const inComparisonArray = comparisonArray.find(district => district.location === location);
-    inComparisonArray ? this.removeCardFromComparison(location) : this.addCardToComparison(location); 
+    const inComparisonArray = comparisonArray.find(district => {
+      return district.location === location;
+    });
+    inComparisonArray ? 
+      this.removeCardFromComparison(location) 
+      : this.addCardToComparison(location); 
   }
 
   updateSelectedFlag = (location) => {
-    const { newRepositoryState, locationToCompare } = this.fetchCurrentState(location);
+    const { 
+      newRepositoryState, 
+      locationToCompare 
+    } = this.fetchCurrentState(location);
     locationToCompare.selected = !locationToCompare.selected;
     let newDistrictArray = newRepositoryState.findAllMatches();  
     this.setState({
@@ -57,18 +70,23 @@ class App extends Component {
   }
 
   addCardToComparison = (location) => {
-    const {locationToCompare, comparisonArray} = this.fetchCurrentState(location)
-    comparisonArray.push(locationToCompare)
-    if(comparisonArray.length === 3) {
+    const {
+      locationToCompare, 
+      comparisonArray
+    } = this.fetchCurrentState(location);
+    comparisonArray.push(locationToCompare);
+    if (comparisonArray.length === 3) {
       let unselectedLocation = comparisonArray.shift();
       this.updateSelectedFlag(unselectedLocation.location);
     }
-    this.updateComparisonArray(comparisonArray)
+    this.updateComparisonArray(comparisonArray);
   }
 
   removeCardFromComparison = (location) => {
     const { comparisonArray } = this.fetchCurrentState(location);
-    comparisonArray[0].location === location ? comparisonArray.shift() : comparisonArray.pop();
+    comparisonArray[0].location === location ? 
+      comparisonArray.shift() 
+      : comparisonArray.pop();
     this.updateComparisonArray(comparisonArray);
   }
 
@@ -77,16 +95,19 @@ class App extends Component {
   }
 
   generateComparisons = (location1, location2) => {
-    return this.state.districtRepository.compareDistrictAverages(location1, location2)
+    const districtRepository = this.state.districtRepository;
+    return districtRepository.compareDistrictAverages(location1, location2);
   }
 
   fetchCurrentState = (location) => {
     return {
-      locationToCompare: this.state.districtsArray.find(district => district.location === location),
-      comparisonArray: [...this.state.comparisonArray],
-      compareDistrictAverages: this.state.districtRepository.compareDistrictAverages,
-      newRepositoryState: Object.assign(new DistrictRepository(kinderData), this.state.districtRepository)
-    }
+      locationToCompare: this.state.districtsArray.find(district => {
+        return  district.location === location;
+      }), 
+      comparisonArray: [...this.state.comparisonArray], 
+      newRepositoryState: Object.assign(new DistrictRepository(kinderData), 
+        this.state.districtRepository) 
+    };
   }
 
   render() {
@@ -95,15 +116,15 @@ class App extends Component {
         <Header 
           search={this.handleSearch}
           currentData={this.state.currentDataTitle}/>
-        {this.state.districtRepository 
-          && <Main
-              title={this.state.currentDataTitle} 
-              districts={this.state.districtsArray} 
-              handleComparison={this.handleComparison}
-              cards={this.state.comparisonArray}
-              clearedComparison={this.clearComparisonArray}
-              generateComparisons={this.generateComparisons}
-              />}
+        {this.state.districtRepository && 
+          <Main
+            title={this.state.currentDataTitle} 
+            districts={this.state.districtsArray} 
+            handleComparison={this.handleComparison}
+            cards={this.state.comparisonArray}
+            clearedComparison={this.clearComparisonArray}
+            generateComparisons={this.generateComparisons}
+          />}
       </div>
     );
   }
