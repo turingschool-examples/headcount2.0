@@ -45,7 +45,7 @@ export default class DistrictRepository {
 
   findAverage(district) {
     const foundDistrict = this.findByName(district);
-    return parseFloat((Object.values(foundDistrict.data)
+    return parseFloat((Object.values(foundDistrict.stats) 
       .reduce((sum, year) => sum + year, 0)/Object
         .values(foundDistrict.stats).length)
       .toFixed(3));

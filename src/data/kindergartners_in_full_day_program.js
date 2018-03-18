@@ -2,7 +2,7 @@
 
 module.exports = {
   title: 'Kindergartners in full day program',
-  data: [
+  stats: [
   {
     "Location": "Colorado",
     "TimeFrame": 2007,
