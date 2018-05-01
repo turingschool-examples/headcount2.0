@@ -3,15 +3,27 @@ export default class DistrictRepository {
     this.stats = this.dataCleaner(data);
   }
 
-  dataCleaner(dataList) {
-    return dataList.reduce((cleanedData, data) => {
-      const sanitizedLocation = data.Location.toUpperCase()
-      if(!cleanedData[sanitizedLocation]) {
-        cleanedData[sanitizedLocation] = {location: sanitizedLocation, dataSet: []}
+  removeNa (dataList) {
+    return dataList.map(data => {
+      if (data.Data === 'N/A') {
+        data.Data = 0;
       }
-      cleanedData[sanitizedLocation].dataSet.push(
-        { [data.TimeFrame]: data.Data }
-      );
+      return data;
+    });
+  }
+
+  dataCleaner(dataList) {
+    const dataWithOutNa= this.removeNa(dataList);
+
+    return dataWithOutNa.reduce((cleanedData, data) => {
+      const sanitizedLocation = data.Location.toUpperCase();
+      const sanitizedNumber = parseFloat(parseFloat(data.Data).toFixed(3));
+
+      if(!cleanedData[sanitizedLocation]) {
+        cleanedData[sanitizedLocation] = {location: sanitizedLocation, stats: {}}
+      }
+
+      cleanedData[sanitizedLocation].stats[data.TimeFrame] = sanitizedNumber;
 
       return cleanedData
     }, {});
