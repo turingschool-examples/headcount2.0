@@ -14,9 +14,12 @@ export default class DistrictRepository {
         };
       } 
 
-      if (!cleanedInfo[upperCaseDistrict].stats[school.TimeFrame]) {
-        cleanedInfo[upperCaseDistrict].stats[school.TimeFrame] = school.Data;
-      } 
+      if (!cleanedInfo[upperCaseDistrict].stats[school.TimeFrame] && typeof(school.Data) !== 'string' ) {
+        cleanedInfo[upperCaseDistrict].stats[school.TimeFrame] = Math.round(1000 * school.Data) / 1000;
+      } else {
+        cleanedInfo[upperCaseDistrict].stats[school.TimeFrame] = 0;
+      }
+
 
       return cleanedInfo;
 
