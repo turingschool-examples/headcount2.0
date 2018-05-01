@@ -39,4 +39,19 @@ export default class DistrictRepository {
     return Object.assign({}, {stats: dataObj, location: upperCaseName}) 
    }
 
+  findAllMatches = (district) => {
+    let statsKeys = Object.keys(this.stats);
+    let allDistrictData = statsKeys.map(district => {
+        return { [district]: this.stats[district] }
+      })
+
+    if (!district) {
+      return allDistrictData; 
+    } else {
+      let upperCaseDistrict = district.toUpperCase();
+
+      return allDistrictData.filter(districtObj => Object.keys(districtObj)[0].includes(upperCaseDistrict));
+    }
+
+  }
 }
