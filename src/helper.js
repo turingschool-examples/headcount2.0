@@ -30,10 +30,23 @@ export default class DistrictRepository {
   }
 
   findByName(district) {
-    if(!district) {
+    if (!district) {
       return undefined
     }
     const sanitizedDistrict = district.toUpperCase()
     return this.stats[sanitizedDistrict]
+  }
+
+  findAllMatches(district) {
+    if (!district) {
+      return Object.keys(this.stats);
+    }
+    const sanitizedDistrict = district.toUpperCase()
+
+    if (!this.stats[sanitizedDistrict]) {
+      return []
+    }
+
+    return Object.keys(this.stats[sanitizedDistrict])
   }
 }
