@@ -1,7 +1,6 @@
 export default class DistrictRepository {
    constructor(data) {
      this.stats = this.cleanData(data)
-    // console.log(this.stats)
    }
 
   cleanData = (data) => {
@@ -12,12 +11,14 @@ export default class DistrictRepository {
         cleanData[upperCaseLocation] = [];
       }
 
+      let dataNum
+      if (typeof dataObj.Data === 'string') {
+        dataNum = 0; 
+      } else {
+        dataNum = parseFloat(dataObj.Data.toFixed(3))
+      }
       
-      let newDataObj = { [dataObj.TimeFrame]: parseInt(dataObj.Data).toFixed(3) }
-      //Build conditional redefining NANs to 0 in Obj
-      
-
-
+      let newDataObj = { [dataObj.TimeFrame]: dataNum }
       cleanData[upperCaseLocation] = [...cleanData[upperCaseLocation], newDataObj]
 
       return cleanData;
