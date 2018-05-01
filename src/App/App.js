@@ -19,8 +19,6 @@ class App extends Component {
     this.setState({ districts })
   }
 
-  
-
   render() {
     return (
       <div>
