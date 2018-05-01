@@ -5,13 +5,25 @@ export default class DistrictRepository {
 
   organizeData(districts) {
     const districtData = districts.reduce((districtAcc, data) => {
-      if(!districtAcc[data.Location]) {
-        districtAcc[data.Location] = {};
+      const dataLocation = data.Location.toUpperCase();
+      if(!districtAcc[dataLocation]) {
+        districtAcc[dataLocation] = {location: data.Location.toUpperCase()};
       }   
       return districtAcc;
     }, {});
-    console.log(districtData)
+    // console.log(districtData)
     return districtData;
+  }
+
+  findByName(districtName) {
+    if (districtName) {
+      districtName = districtName.toUpperCase();
+    }  
+    if (Object.keys(this.stats).includes(districtName)) {
+      return this.stats[districtName];
+    } else {
+      return undefined;
+    }
   }
 }
 
