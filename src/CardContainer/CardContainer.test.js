@@ -1,13 +1,30 @@
-// import React from 'react';
-// import CardContainer from './CardContainer.js';
-// import ReactDOM from 'react-dom';
-// import renderer from 'react-test-renderer';
-// import { shallow, mount } from 'enzyme';
+import React from 'react';
+import CardContainer from './CardContainer.js';
+import Card from '../Card/Card.js'
+import ReactDOM from 'react-dom';
+import renderer from 'react-test-renderer';
+import { shallow, mount } from 'enzyme';
 
-// describe('Car')
+describe('CardContainer', () => {
+  let wrapper;
+  const districts = {
+    'COLORADO': {
+      'location': 'COLORADO',
+      'stats': [ { 2007: 0.013 }, { 2009: 3.004 }, { 2013: 1.101 } ]
+    }
+  }
 
-// //setup 
+  beforeEach(() => {
+    wrapper = shallow(<CardContainer data={districts}/>);
+  });
 
-// //execution
+  it('should render the card components', () => {
+    expect(wrapper.find(Card).length).toEqual(1);
+  });
+});
+
+//setup 
+
+//execution
  
-// //assertion
+//assertion
