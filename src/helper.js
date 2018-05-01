@@ -14,8 +14,8 @@ export default class DistrictRepository {
 
       
       let newDataObj = { [dataObj.TimeFrame]: parseInt(dataObj.Data).toFixed(3) }
-      //Build conditional redefining NANs to 0 
-      //
+      //Build conditional redefining NANs to 0 in Obj
+      
 
 
       cleanData[upperCaseLocation] = [...cleanData[upperCaseLocation], newDataObj]
