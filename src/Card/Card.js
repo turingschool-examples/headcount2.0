@@ -22,7 +22,7 @@ const Card = ( props ) => {
 }
 
 Card.propTypes = {
-  location: PropTypes.string.isRequired,
+  location: PropTypes.string,
   stats: PropTypes.arrayOf(PropTypes.object)
 }
 
