@@ -1,24 +1,36 @@
 export default class DistrictRepository {
-  constructor(districts) {
-    this.stats = this.organizeData(districts)
+  constructor (districts) {
+    this.stats = this.organizeData(districts);
   }
+  organizeData (districts) {
+    const districtData = districts.reduce((districtAcc, districtData) => {
+      const dataLocation = districtData.Location.toUpperCase();
+      const dataNum = (
+        districtData.Data === 'N/A' ?
+          0 :
+          Math.round(1000 * districtData.Data)/1000
+      );
 
-  organizeData(districts) {
-    const districtData = districts.reduce((districtAcc, data) => {
-      const dataLocation = data.Location.toUpperCase();
-      if(!districtAcc[dataLocation]) {
-        districtAcc[dataLocation] = {location: data.Location.toUpperCase()};
-      }   
+      if (!districtAcc[dataLocation]) {
+        districtAcc[dataLocation] = {
+          data: {},
+          location: districtData.Location.toUpperCase()
+        };
+      }
+      districtAcc[dataLocation].data = {
+        ...districtAcc[dataLocation].data,
+        [districtData.TimeFrame]: dataNum
+      };
       return districtAcc;
     }, {});
-    // console.log(districtData)
+    
     return districtData;
   }
 
-  findByName(districtName) {
+  findByName (districtName) {
     if (districtName) {
       districtName = districtName.toUpperCase();
-    }  
+    }
     if (Object.keys(this.stats).includes(districtName)) {
       return this.stats[districtName];
     } else {
