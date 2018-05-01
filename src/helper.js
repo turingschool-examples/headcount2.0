@@ -20,7 +20,6 @@ export default class DistrictRepository {
         cleanedInfo[upperCaseDistrict].stats[school.TimeFrame] = 0;
       }
 
-
       return cleanedInfo;
 
     }, {}); 
@@ -28,8 +27,26 @@ export default class DistrictRepository {
 
   findByName = (location) => {
     const upperCaseLocation = location.toUpperCase();
-    const districtKeys = Object.keys(this.stats);
 
     return this.stats[upperCaseLocation]
+  }
+
+  findAllMatches = (district) => {
+    const locationKeys = Object.keys(this.stats);
+    if(district) {
+      const upperCaseLocation = district.toUpperCase(); 
+      return locationKeys.reduce((matchedArray, area) => {
+        if(this.stats[area].location.includes(upperCaseLocation)) {
+          matchedArray.push(this.stats[area])
+        }
+        return matchedArray;
+      }, []);
+    }  else {
+      const statsArr = [];
+      locationKeys.forEach(location => {
+        statsArr.push(this.stats[location])
+      })
+      return statsArr;
+    }
   }
 }
