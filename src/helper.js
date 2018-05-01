@@ -26,4 +26,15 @@ export default class DistrictRepository extends Component {
       return this.stats[uppercaseDistrict];
     }
   }
+
+  findAllMatches = ( district ) => {
+    if (!district){
+      return Object.keys(this.stats)
+    }
+    const uppercaseDistrict = district.toUpperCase();
+    if (!this.stats[uppercaseDistrict]){
+      return [];
+    }
+    return Object.keys(this.stats[uppercaseDistrict])
+  }
 }
