@@ -4,7 +4,7 @@ export default class DistrictRepository {
   }
 
   cleanedData = (schoolData) => {
-    const cleanedData = schoolData.reduce((cleanedInfo, school) => {
+    return schoolData.reduce((cleanedInfo, school) => {
 
       if (!cleanedInfo[school.Location]) {
         cleanedInfo[school.Location] = {};
@@ -13,13 +13,17 @@ export default class DistrictRepository {
       if (!cleanedInfo[school.Location][school.TimeFrame]) {
         cleanedInfo[school.Location][school.TimeFrame] = school.Data;
       } 
-
       return cleanedInfo;
-      
-    }, {}); 
-
-    return cleanedData;
+    }, []); 
   }
+
+  findByName = (district) => {
+    // const upperCaseDistrict = district.toUpperCase();
+    const districtKeys = Object.keys(this.stats);
+
+    districtKeys.find(district => this.stats[district] );
+  }
+
+
+
 }
-
-
