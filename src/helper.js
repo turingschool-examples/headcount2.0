@@ -5,25 +5,28 @@ export default class DistrictRepository {
 
   cleanedData = (schoolData) => {
     return schoolData.reduce((cleanedInfo, school) => {
+      const upperCaseDistrict = school.Location.toUpperCase();
 
-      if (!cleanedInfo[school.Location]) {
-        cleanedInfo[school.Location] = {};
+      if (!cleanedInfo[upperCaseDistrict]) {
+        cleanedInfo[upperCaseDistrict] = {
+          location: upperCaseDistrict,
+          stats: {}
+        };
       } 
-      
-      if (!cleanedInfo[school.Location][school.TimeFrame]) {
-        cleanedInfo[school.Location][school.TimeFrame] = school.Data;
+
+      if (!cleanedInfo[upperCaseDistrict].stats[school.TimeFrame]) {
+        cleanedInfo[upperCaseDistrict].stats[school.TimeFrame] = school.Data;
       } 
+
       return cleanedInfo;
-    }, []); 
+
+    }, {}); 
   }
 
-  findByName = (district) => {
-    // const upperCaseDistrict = district.toUpperCase();
+  findByName = (location) => {
+    const upperCaseLocation = location.toUpperCase();
     const districtKeys = Object.keys(this.stats);
 
-    districtKeys.find(district => this.stats[district] );
+    return this.stats[upperCaseLocation]
   }
-
-
-
 }
