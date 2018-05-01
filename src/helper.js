@@ -23,7 +23,7 @@ export default class DistrictRepository {
       };
       return districtAcc;
     }, {});
-    
+
     return districtData;
   }
 
