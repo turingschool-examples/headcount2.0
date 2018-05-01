@@ -5,14 +5,23 @@ export default class DistrictRepository {
 
   dataCleaner(dataList) {
     return dataList.reduce((cleanedData, data) => {
-      if(!cleanedData[data.Location]) {
-        cleanedData[data.Location] = []
+      const sanitizedLocation = data.Location.toUpperCase()
+      if(!cleanedData[sanitizedLocation]) {
+        cleanedData[sanitizedLocation] = {location: sanitizedLocation, dataSet: []}
       }
-      cleanedData[data.Location].push({ [data.TimeFrame]: data.Data });
+      cleanedData[sanitizedLocation].dataSet.push(
+        { [data.TimeFrame]: data.Data }
+      );
 
       return cleanedData
-    }, {})
+    }, {});
   }
-// findByName(place).location => location === place.toUpperCase()
-// location [{ colorado: {'year' : 0.992, year: '0101201'} }, {academy: {stuff}}
+
+  findByName(district) {
+    if(!district) {
+      return undefined
+    }
+    const sanitizedDistrict = district.toUpperCase()
+    return this.stats[sanitizedDistrict]
+  }
 }
