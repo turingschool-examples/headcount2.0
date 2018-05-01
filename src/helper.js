@@ -3,9 +3,9 @@ export default class DistrictRepository {
     this.stats = this.dataCleaner(data);
   }
 
-  removeNa (dataList) {
+  removeNan (dataList) {
     return dataList.map(data => {
-      if (data.Data === 'N/A') {
+      if (typeof data.Data === NaN) {
         data.Data = 0;
       }
       return data;
@@ -13,7 +13,7 @@ export default class DistrictRepository {
   }
 
   dataCleaner(dataList) {
-    const dataWithOutNa= this.removeNa(dataList);
+    const dataWithOutNa= this.removeNan(dataList);
 
     return dataWithOutNa.reduce((cleanedData, data) => {
       const sanitizedLocation = data.Location.toUpperCase();
