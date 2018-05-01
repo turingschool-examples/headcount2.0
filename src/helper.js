@@ -2,6 +2,7 @@ export default class DistrictRepository {
   constructor (districts) {
     this.stats = this.organizeData(districts);
   }
+  
   organizeData (districts) {
     const districtData = districts.reduce((districtAcc, districtData) => {
       const dataLocation = districtData.Location.toUpperCase();
@@ -13,8 +14,8 @@ export default class DistrictRepository {
 
       if (!districtAcc[dataLocation]) {
         districtAcc[dataLocation] = {
-          data: {},
-          location: districtData.Location.toUpperCase()
+          location: dataLocation,
+          data: {}
         };
       }
       districtAcc[dataLocation].data = {
@@ -37,5 +38,24 @@ export default class DistrictRepository {
       return undefined;
     }
   }
+
+  findAllMatches(districtName) {
+    const queriedData = [];
+
+    if(!districtName) {
+      Object.keys(this.stats).forEach(district => {
+        queriedData.push(this.stats[district]);
+      });
+    } else {
+      Object.keys(this.stats).forEach(district => {
+        if (this.stats[district].location.includes(districtName.toUpperCase())) {
+          queriedData.push(this.stats[district]);
+        }
+      });
+    }
+
+    return queriedData;
+  }
+
 }
 
