@@ -1,0 +1,15 @@
+.district-form {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  width: 100vw;
+}
+
+.district-input {
+  display: flex;
+  justify-content: center;
+  width: 80%; 
+  height: 80px;
+  padding-left: 20px;
+  font-size: 2.5rem;
+}

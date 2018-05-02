@@ -1,6 +1,4 @@
 /*APP COMPONENT RELATED CSS GOES HERE*/
 .app {
-  display: flex;
   height: 100vh;
-  justify-content: center;
 }
