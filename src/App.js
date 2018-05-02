@@ -15,7 +15,20 @@ class App extends Component {
     }
   };
 
+  // addClass() {
+  //   const dataSpans = document.querySelectorAll('li span');
+    
+  //   dataSpans.forEach(span => {
+  //     if(span.innerHTML < 0.5) {
+  //       console.log(span)
+  //       span.classList.add('below'); 
+  //     }
+  //   })
+
+  //   }
+
   componentDidMount() {
+    // this.addClass();
     this.setState({
       stats: DistrictRepository.stats
     })

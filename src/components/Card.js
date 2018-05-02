@@ -1,19 +1,19 @@
 import React from 'react';
 
 const Card = ({ location, stats }) => {
-  console.log(stats)
   const statKeys = Object.keys(stats);
   const districtStats = statKeys.map(year => {
-    return <ul>
-              <li>{year}: {stats[year]}</li>
-            </ul>
+    return  <li className={stats[year] < 0.5 ? "below": ""} >{year}: <span>{stats[year]}</span></li>
   });
 
   return (
-    <div>
+    <article className="card">
       <h2>{location}</h2>
-      <h3>{districtStats}</h3>
-    </div>
+      <hr />
+      <ul>
+        {districtStats}
+      </ul>
+    </article>
   )
 }
 
