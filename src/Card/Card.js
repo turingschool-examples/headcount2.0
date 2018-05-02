@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'
+import './Card.css'
 
 const Card = ( props ) => {
   let districtKeys = Object.keys(props.district.stats)
@@ -10,10 +11,10 @@ const Card = ( props ) => {
   })
   
   return (
-    <div> 
-      <h1>
+    <div className="card"> 
+      <h3>
         { props.district.location }
-      </h1>
+      </h3>
       <ul>
         { listItems }
       </ul>
