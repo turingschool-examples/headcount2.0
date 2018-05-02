@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../Card/Card.js';
 import PropTypes from 'prop-types';
+import './CardContainer.css'
 
 const CardContainer = ({districtsData}) => {
   const districtCards = Object.keys(districtsData).map((key, index) => {
@@ -10,7 +11,7 @@ const CardContainer = ({districtsData}) => {
   });
 
   return(
-    <div>
+    <div className="card-container">
       {districtCards}
     </div>
   )
