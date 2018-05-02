@@ -3,7 +3,7 @@ import DistrictRepository from '../helper'
 
 class Search extends Component {
   constructor(props){
-    super(props);
+		super(props);
     this.state=  {
       userInput: ""
     };
@@ -17,7 +17,7 @@ class Search extends Component {
 
 	handleSubmit = (event) => {
 		event.preventDefault();
-		
+		this.props.setLocationData(this.state);
 	}
 	
 	render() {
