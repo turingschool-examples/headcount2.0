@@ -6,26 +6,30 @@ const DistrictCard = (props) => {
   const districtAnnualData = individualDistrict.map((annualData, index) => {
     const data = props.districtData.data[annualData];
     return (
-        <li
-          style={{
-            color: data > .5 ? 'green' : 'red'
-          }}
-          key={`card${index}`}  
-        >
+      <li
+        style={{
+          color: data > .5 ? 'green' : '9E0C09'
+        }}
+        key={`card${index}`}
+      >
         {annualData}: {data}
-        </li>
-    )
-  })
+      </li>
+    );
+  });
 
   return (
-    <div className="district-card">
-      <h1 className="district-name">{props.districtData.location}</h1>
-      <h3>Yearly Progress</h3>
-    <ul className="district-data"> 
-      {districtAnnualData}
-    </ul>
-    </div>
-  )
-}
+    <article className="district-card">
+      <section className="district-card-header">
+        <h2 className="district-name">{props.districtData.location}</h2>
+      </section>
+      <section className="district-card-body">
+        <h3>Yearly Progress</h3>
+        <ul className="district-data">
+          {districtAnnualData}
+        </ul>
+      </section>
+    </article>
+  );
+};
 
 export default DistrictCard;

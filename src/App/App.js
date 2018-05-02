@@ -5,38 +5,39 @@ import kinderData from '../data/kindergartners_in_full_day_program.js';
 import DistrictsContainer from './../DistrictsContainer/DistrictsContainer';
 import Search from './../Search/Search';
 
-const allDistricts = new DistrictRepository(kinderData)
+const allDistricts = new DistrictRepository(kinderData);
+
 class App extends Component {
-  constructor() {
+  constructor () {
     super();
 
     this.state = {
       districts: ''
-    }
+    };
   }
 
-  componentDidMount() {
+  componentDidMount () {
     const districts = allDistricts.stats;
-    this.setState({ districts });
+    this.setState({districts});
   }
 
   handleSearchEvent = (event) => {
     event.preventDefault();
-    const { value } = event.target;
+    const {value} = event.target;
     const districts = allDistricts.findAllMatches(value);
     this.setState({districts});
-  }
+  };
 
-  render() {
+  render () {
     return (
       <div className='app'>
-        <Search 
+        <Search
           handleSearchEvent={this.handleSearchEvent}
         />
         {
           this.state.districts &&
-          <DistrictsContainer 
-            districts={this.state.districts} 
+          <DistrictsContainer
+            districts={this.state.districts}
           />
         }
       </div>
