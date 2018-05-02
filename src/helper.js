@@ -7,7 +7,7 @@ export default class DistrictRepository {
     const districtData = districts.reduce((districtAcc, districtData) => {
       const dataLocation = districtData.Location.toUpperCase();
       const dataNum = (
-        districtData.Data === 'N/A' ?
+       isNaN(parseInt(districtData.Data)) ?
           0 :
           Math.round(1000 * districtData.Data)/1000
       );
