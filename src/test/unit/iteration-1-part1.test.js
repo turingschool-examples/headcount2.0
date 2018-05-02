@@ -12,10 +12,10 @@ describe('DistrictRepository iteration 1 - part 1', () =>  {
     expect(district.findByName('Vikings')).toBe(undefined);
   });
 
-  test('findByName returns an object with its individual district information', () => {
+  test.only('findByName returns an object with its individual district information', () => {
 
-    expect(typeof district.findByName('Colorado')).toEqual('object');
-    expect(district.findByName('Colorado').location).toEqual('COLORADO');
+    expect(typeof district.findByName('Academy 20')).toEqual('object');
+    expect(district.findByName('Academy 20').location).toEqual('ACADEMY 20');
   });
 
   test('findByName search is not case sensitive', () => {
