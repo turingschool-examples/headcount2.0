@@ -1,12 +1,25 @@
 import React, { Component } from 'react';
 import './App.css';
+import CardContainer from '../CardContainer/CardContainer.js'
 
 class App extends Component {
+  constructor( props ){
+    super( props );
+    this.state = {
+      districtsData: {}
+    }
+  }
+
   render() {
     return (
-      <div>Welcome To Headcount 2.0</div>
+      <div> 
+        <CardContainer 
+          districtsData ={ this.state.districtsData }
+        />
+      </div>
     );
   }
 }
+
 
 export default App;
