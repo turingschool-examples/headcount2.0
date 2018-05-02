@@ -383,7 +383,7 @@ exports[`App matches the snapsnot 1`] = `
           2006: 0.125
         </li>
         <li>
-          2007: NaN
+          2007: 0
         </li>
         <li>
           2008: 1
@@ -721,7 +721,7 @@ exports[`App matches the snapsnot 1`] = `
           2012: 0.23
         </li>
         <li>
-          2013: NaN
+          2013: 0
         </li>
         <li>
           2014: 0.279
@@ -1094,7 +1094,7 @@ exports[`App matches the snapsnot 1`] = `
       </h3>
       <ul>
         <li>
-          2004: NaN
+          2004: 0
         </li>
         <li>
           2005: 0
@@ -1321,7 +1321,7 @@ exports[`App matches the snapsnot 1`] = `
           2012: 0.187
         </li>
         <li>
-          2013: NaN
+          2013: 0
         </li>
         <li>
           2014: 0.13
@@ -2214,37 +2214,37 @@ exports[`App matches the snapsnot 1`] = `
       </h3>
       <ul>
         <li>
-          2004: NaN
+          2004: 0
         </li>
         <li>
-          2005: NaN
+          2005: 0
         </li>
         <li>
-          2006: NaN
+          2006: 0
         </li>
         <li>
-          2007: NaN
+          2007: 0
         </li>
         <li>
-          2008: NaN
+          2008: 0
         </li>
         <li>
-          2009: NaN
+          2009: 0
         </li>
         <li>
-          2010: NaN
+          2010: 0
         </li>
         <li>
-          2011: NaN
+          2011: 0
         </li>
         <li>
-          2012: NaN
+          2012: 0
         </li>
         <li>
-          2013: NaN
+          2013: 0
         </li>
         <li>
-          2014: NaN
+          2014: 0
         </li>
       </ul>
     </div>
@@ -6854,37 +6854,37 @@ exports[`App matches the snapsnot 1`] = `
       </h3>
       <ul>
         <li>
-          2004: NaN
+          2004: 0
         </li>
         <li>
-          2005: NaN
+          2005: 0
         </li>
         <li>
-          2006: NaN
+          2006: 0
         </li>
         <li>
-          2007: NaN
+          2007: 0
         </li>
         <li>
-          2008: NaN
+          2008: 0
         </li>
         <li>
-          2009: NaN
+          2009: 0
         </li>
         <li>
-          2010: NaN
+          2010: 0
         </li>
         <li>
-          2011: NaN
+          2011: 0
         </li>
         <li>
-          2012: NaN
+          2012: 0
         </li>
         <li>
-          2013: NaN
+          2013: 0
         </li>
         <li>
-          2014: NaN
+          2014: 0
         </li>
       </ul>
     </div>

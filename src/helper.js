@@ -5,7 +5,7 @@ export default class DistrictRepository {
 
   removeNan (dataList) {
     return dataList.map(data => {
-      if (typeof data.Data === NaN) {
+      if (parseInt(data.Data) === NaN || data.Data === "N/A") {
         data.Data = 0;
       }
       return data;
