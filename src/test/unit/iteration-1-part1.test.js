@@ -1,4 +1,4 @@
-import DistrictRepository from '../../src/helper.js';
+import DistrictRepository from '../../helper.js';
 import kinderData from '../../data/kindergartners_in_full_day_program.js';
 
 describe('DistrictRepository iteration 1 - part 1', () =>  {
@@ -27,21 +27,21 @@ describe('DistrictRepository iteration 1 - part 1', () =>  {
     const academy = district.findByName('ACADEmY 20');
 
     expect(academy.location).toEqual('ACADEMY 20');
-    expect(typeof academy.stats).toBe('object');
+    expect(typeof academy.data).toBe('object');
   });
 
   test('district data is rounded to the nearest hundredth', () => {
     const result = {"2004": 0.302, "2005": 0.267, "2006": 0.354, "2007": 0.392, "2008": 0.385, "2009": 0.39, "2010": 0.436, "2011": 0.489, "2012": 0.479, "2013": 0.488, "2014": 0.49}
     const academy = district.findByName('ACADEmY 20');
 
-    expect(academy.stats).toEqual(result);
+    expect(academy.data).toEqual(result);
   });
 
   test('district data is sanitized and defaults to 0', () => {
     const academy = district.findByName('ARICKAREE R-2');
     const result = {"2004": 1, "2005": 0, "2006": 0.125, "2007": 0, "2008": 1, "2009": 1, "2010": 1, "2011": 1, "2012": 1, "2013": 1, "2014": 1}
 
-    expect(academy.stats).toEqual(result)
+    expect(academy.data).toEqual(result)
   });
 
 });
