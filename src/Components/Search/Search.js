@@ -4,8 +4,10 @@ import './Search.css';
 
 const Search = ( {handleSearch} ) => {
   return (
-      <div>
+      <div className="search-container">
         <input 
+        placeholder="Search for district..."
+        className="search"
         onChange={ (e) => handleSearch(e.target.value) }/>
       </div>
     )

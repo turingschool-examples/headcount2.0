@@ -8,7 +8,10 @@ const Card = ( {title, listOfData} ) => {
       const year = Object.keys(data)[0]
       const dataNum = Object.values(data)[0]
       const listItem = `${year}: ${dataNum}`
-      return <li key={`listItem${index}`}> {listItem}</li>
+      let dataStyle 
+
+      dataNum >= 0.5 ? dataStyle = 'above' : dataStyle = 'below'
+      return <li className={dataStyle} key={`listItem${index}`}> {listItem}</li>
 
   })
 
