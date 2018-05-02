@@ -49,4 +49,14 @@ export default class DistrictRepository {
       return statsArr;
     }
   }
+
+  findAverage = (district) => {
+    const selectedDistrict = this.findByName(district);
+    const districtValues = Object.values(selectedDistrict.stats);
+    const average = districtValues.reduce((valuesSum, value) => {
+      return valuesSum + value;
+    }, 0) / districtValues.length;
+    return Math.round(1000 * average) / 1000;
+  }
+
 }
