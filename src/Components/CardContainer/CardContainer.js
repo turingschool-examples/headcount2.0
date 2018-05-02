@@ -3,7 +3,7 @@ import Card from '../Card/Card.js';
 
 const CardContainer = ( { repo } ) => {
   const repoKeys = Object.keys(repo)
-  console.log(repoKeys)
+  // console.log(repoKeys)
   const cardList = repoKeys.map(district => {
     let title = district;
     let listOfData = repo[district];
