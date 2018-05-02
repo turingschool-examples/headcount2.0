@@ -1,7 +1,6 @@
 export default class DistrictRepository {
   constructor(data) {
     this.stats = this.sanitize(data)
-
     // this.stats = stats;
   }
 
@@ -29,7 +28,6 @@ export default class DistrictRepository {
 
     const schoolKeys = Object.keys(this.stats)
     const upperCaseKeys = schoolKeys.map(key => key.toUpperCase())
-
     const match = upperCaseKeys.find(key => {
       return key === upperCaseInput
     })
@@ -37,6 +35,7 @@ export default class DistrictRepository {
     if (match === undefined) {
       return undefined
     } else {
+
       return this.stats[match]
     }
   }
