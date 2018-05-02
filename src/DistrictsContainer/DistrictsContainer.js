@@ -1,5 +1,6 @@
 import React from 'react';
-import DistrictCard from './../DistrictCard/DistrictCard'
+import DistrictCard from './../DistrictCard/DistrictCard';
+import './DistrictsContainer.css'
 
 const DistrictContainer = ({districts}) => {
   const allDistrictCards = Object.keys(districts).map(district => {
@@ -8,7 +9,7 @@ const DistrictContainer = ({districts}) => {
     )
   })
   return (
-    <div>
+    <div className="district-container">
       {allDistrictCards}
     </div>
   )

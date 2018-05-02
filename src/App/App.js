@@ -21,7 +21,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='app'>
         {this.state.districts ?
         <DistrictsContainer districts={this.state.districts} /> :
         <h1> hey </h1> 
