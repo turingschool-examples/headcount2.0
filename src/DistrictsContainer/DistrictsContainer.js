@@ -3,9 +3,12 @@ import DistrictCard from './../DistrictCard/DistrictCard';
 import './DistrictsContainer.css'
 
 const DistrictContainer = ({districts}) => {
-  const allDistrictCards = Object.keys(districts).map(district => {
+  const allDistrictCards = Object.keys(districts).map((district, index) => {
     return (
-      <DistrictCard districtData={districts[district]}/> 
+      <DistrictCard 
+        key={`district${index}`}
+        districtData={districts[district]}
+      /> 
     )
   })
   return (
