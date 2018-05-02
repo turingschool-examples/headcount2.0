@@ -1,7 +1,14 @@
 export default class DistrictRepository {
   constructor(data) {
-    const schools = data;
-    this.cleanData = schools.reduce((acc, schoolObj) => {
+    
+
+    this.cleanData = this.sanitize(data)
+    
+    // this.stats = cleanData;
+  }
+
+  sanitize = (schools) => {
+    return schools.reduce((acc, schoolObj) => {
       if (!acc[schoolObj.Location]) {
         acc[schoolObj.Location] = {}
       }
@@ -14,11 +21,7 @@ export default class DistrictRepository {
       };
       return acc
     }, {})
-
-    // this.stats = cleanData;
   }
-
-
 
   findByName = (userInput) => {
     if (!userInput) {
@@ -28,17 +31,25 @@ export default class DistrictRepository {
 
     const schoolKeys = Object.keys(this.cleanData)
     const upperCaseKeys = schoolKeys.map(key => key.toUpperCase())
-  
+
 
     const match = upperCaseKeys.find(key => {
       return key === upperCaseInput
     })
-    console.log(match)
+  
     if (match === undefined) {
       return undefined
     } else {
-      console.log(this.cleanData[match])
       return this.cleanData[match]
+    }
+  }
+
+  findAllMatches = (characters) => {
+    const keys = Object.keys(this.cleanData)
+    if (!characters) {
+      return keys.map((key) => {
+        return this.cleanData[key]
+      })
     }
   }
 }
