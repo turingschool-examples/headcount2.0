@@ -6,28 +6,36 @@ import Districts from './components/Districts';
 import Search from './components/Search';
 
 class App extends Component {
-  constructor() {
-    super();
-
-    const district = new DistrictRepository(kinderData);
+  constructor(props) {
+    super(props);
 
     this.state = {
-      schoolStats: null || district.stats
-    }
-  };
+      schoolStats: null || props.districts.stats,
+      districts: props.districts
 
+    };
+  }
 
+  setLocationData = ({userInput}) => {
+    // const district = new DistrictRepository(kinderData);
+    console.log(userInput)
+    this.setState({
+      schoolStats: this.state.districts.findAllMatches(userInput)
+    });
+  }
+  
   componentDidMount() {
+    console.log(DistrictRepository)
     this.setState({
       stats: DistrictRepository.stats
-    })
+    });
   }
  
   render() {
     return (
       <main>
         <h1>HeadCount 2.0</h1>
-        <Search />
+        <Search  setLocationData={this.setLocationData}/>
         <Districts stats={this.state.schoolStats} />
       </main>
     );
