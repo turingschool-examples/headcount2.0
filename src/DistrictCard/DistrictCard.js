@@ -1,4 +1,5 @@
 import React from 'react';
+import './DistrictCard.css';
 
 const DistrictCard = (props) => {
 
@@ -10,9 +11,9 @@ const DistrictCard = (props) => {
   })
   return (
     <div className="district-card">
-      <h1>{props.districtData.location}</h1>
+      <h1 className="district-name">{props.districtData.location}</h1>
       <h3>Yearly Progress</h3>
-    <ul> 
+    <ul className="district-data"> 
       {districtAnnualData}
     </ul>
     </div>
