@@ -9,9 +9,9 @@ const Districts = ({ stats }) => {
   });
 
   return (
-    <div>
+    <section className="districtCards">
       {districtCards}
-    </div>
+    </section>
   );
 };
 
