@@ -11,32 +11,29 @@ class App extends Component {
 
     this.state = {
       schoolStats: null || props.districts.stats,
-      districts: props.districts
-
+      districts: props.districts,
+      selectedCard: null
     };
   }
 
   setLocationData = ({userInput}) => {
-    // const district = new DistrictRepository(kinderData);
-    console.log(userInput)
     this.setState({
       schoolStats: this.state.districts.findAllMatches(userInput)
     });
-  }
-  
-  componentDidMount() {
-    console.log(DistrictRepository)
+  };
+
+  setSelectedCard = (location) => {
     this.setState({
-      stats: DistrictRepository.stats
-    });
+      selectedCard: this.state.schoolStats[location]
+    })
   }
  
   render() {
     return (
       <main>
         <h1>HeadCount 2.0</h1>
-        <Search  setLocationData={this.setLocationData}/>
-        <Districts stats={this.state.schoolStats} />
+        <Search setLocationData={this.setLocationData}/>
+        <Districts stats={this.state.schoolStats} setSelectedCard={this.setSelectedCard} selectedCard={this.state.selectedCard} />
       </main>
     );
   }
