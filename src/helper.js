@@ -6,19 +6,50 @@ export default class DistrictRepository {
 
   sanitize = (schools) => {
     return schools.reduce((acc, schoolObj) => {
-      if (!acc[schoolObj.Location]) {
-        acc[schoolObj.Location] = {}
+      const key = schoolObj.Location.toUpperCase()
+      if (!acc[key]) {
+        acc[key] = {}
       }
-      if (acc[schoolObj.Location].location !== schoolObj.Location) {
-        acc[schoolObj.Location].location = schoolObj.Location.toUpperCase();
+      if (acc[key].location !== key) {
+        acc[key].location = key.toUpperCase();
       }
-      acc[schoolObj.Location].stats = {
-        ...acc[schoolObj.Location].stats,
-        [schoolObj.TimeFrame]: Math.round(1000 * schoolObj.Data) / 1000
-      };
+      if (schoolObj.Data === 'N/A') {
+        acc[key].stats = {
+          ...acc[key].stats,
+          [schoolObj.TimeFrame]: 0
+        };
+      } else {
+        acc[key].stats = {
+          ...acc[key].stats,
+          [schoolObj.TimeFrame]: Math.round(1000 * schoolObj.Data) / 1000
+        }
+      }
       return acc
     }, {})
   }
+
+  // this.stats = schools.reduce((acc, schoolObj) => {
+  //   const key = schoolObj.Location.toUpperCase()
+  //   if (!acc[key]) {
+  //     acc[key] = {}
+  //   }
+  //   if (acc[key].location !== schoolObj.Location) {
+  //     acc[key].location = key;
+  //   }
+    // if (schoolObj.Data === 'N/A') {
+    //   acc[key].stats = {
+    //     ...acc[key].stats,
+    //     [schoolObj.TimeFrame]: 0
+    //   };
+    // } else {
+    //   acc[key].stats = {
+    //     ...acc[key].stats,
+    //     [schoolObj.TimeFrame]: Math.round(1000 * schoolObj.Data) / 1000
+    //   };
+  //   }
+  //   return acc
+  // }, {})
+
 
   findByName = (userInput) => {
     if (!userInput) {
