@@ -1,1 +1,4 @@
-/*APP COMPONENT RELATED CSS GOES HERE*/
+.app {
+  width: 100%;
+  height: 100%;
+}
