@@ -2,16 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types'
 
 const Card = ( props ) => {
-  const listItems = props.stats.map(( item, index ) => {
+  let districtKeys = Object.keys(props.district.stats)
+  const listItems = districtKeys.map(( stat, index ) => {
     return (
-      <li key={ index }> { item } </li>
+      <li key={ index }> { `${stat}: ${props.district.stats[stat]}` } </li>
     )
   })
   
   return (
     <div> 
       <h1>
-        { props.location }
+        { props.district.location }
       </h1>
       <ul>
         { listItems }

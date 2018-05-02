@@ -1,16 +1,18 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 
-export default class DistrictRepository extends Component {
+export default class DistrictRepository {
   constructor(props) {
-    super(props);
+    // super(props);
+
     const cleanData = props.reduce((stats, locationData) => {
+      let sanitizedLocation = locationData.Location.toUpperCase()
       if (!stats[locationData.Location]) {
-        stats[locationData.Location.toUpperCase()] = {
-          location: locationData.Location.toUpperCase(), 
+        stats[sanitizedLocation] = {
+          location: sanitizedLocation, 
           stats: {}
         }
       }
-      stats[locationData.Location.toUpperCase()].stats = { ...stats[locationData.Location.toUpperCase()].stats, [locationData.TimeFrame]: parseFloat(parseFloat(locationData.Data).toFixed(3)) || 0 }
+      stats[sanitizedLocation].stats = { ...stats[sanitizedLocation].stats, [locationData.TimeFrame]: parseFloat(parseFloat(locationData.Data).toFixed(3)) || 0 }
       return stats;
     }, {});
 

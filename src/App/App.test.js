@@ -13,7 +13,7 @@ describe('App', () => {
     app.state.districtsData = { 
       COLORADO: { 
           location: "COLORADO", 
-          stats: [{ 2007: 0.013 }, { 2009: 3.004 }, { 2013: 1.101 }]
+          stats: { 2007: 0.013, 2009: 3.004, 2013: 1.101 }
       } 
     };
   }) 
