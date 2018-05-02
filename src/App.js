@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './styles/App.css';
 import DistrictRepository from './helper';
-import kinderData from './data/kindergartners_in_full_day_program.js';
+import kinderData from './data/kindergartners_in_full_day_program';
 import Districts from './components/Districts';
+import Search from './components/Search';
 
 class App extends Component {
   constructor() {
@@ -15,20 +16,8 @@ class App extends Component {
     }
   };
 
-  // addClass() {
-  //   const dataSpans = document.querySelectorAll('li span');
-    
-  //   dataSpans.forEach(span => {
-  //     if(span.innerHTML < 0.5) {
-  //       console.log(span)
-  //       span.classList.add('below'); 
-  //     }
-  //   })
-
-  //   }
 
   componentDidMount() {
-    // this.addClass();
     this.setState({
       stats: DistrictRepository.stats
     })
@@ -38,6 +27,7 @@ class App extends Component {
     return (
       <main>
         <h1>HeadCount 2.0</h1>
+        <Search />
         <Districts stats={this.state.schoolStats} />
       </main>
     );
