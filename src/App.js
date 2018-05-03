@@ -21,13 +21,12 @@ class App extends Component {
     this.setState({
       schoolStats: this.state.districts.findAllMatches(userInput)
     });
-  };
+  }
 
   setSelectedCard = (location) => {
     this.setState({
       selectedCard: this.state.schoolStats[location]
     });
-    console.log(this.state.selectedCard)
   }
  
   render() {

@@ -28,7 +28,7 @@ export default class DistrictRepository {
   findByName = (location) => {
     const upperCaseLocation = location.toUpperCase();
 
-    return this.stats[upperCaseLocation]
+    return this.stats[upperCaseLocation];
   }
 
   findAllMatches = (district) => {
@@ -37,14 +37,14 @@ export default class DistrictRepository {
       const upperCaseLocation = district.toUpperCase(); 
       return locationKeys.reduce((matchedArray, area) => {
         if(this.stats[area].location.includes(upperCaseLocation)) {
-          matchedArray.push(this.stats[area])
+          matchedArray.push(this.stats[area]);
         }
         return matchedArray;
       }, []);
     }  else {
       const statsArr = [];
       locationKeys.forEach(location => {
-        statsArr.push(this.stats[location])
+        statsArr.push(this.stats[location]);
       })
       return statsArr;
     }
@@ -64,7 +64,7 @@ export default class DistrictRepository {
     const districtB = locationB.toUpperCase();
     const averageA = this.findAverage(districtA);
     const averageB = this.findAverage(districtB);
-    const averageCompared = Math.round(1000 * (averageA / averageB)) / 1000
+    const averageCompared = Math.round(1000 * (averageA / averageB)) / 1000;
     const comparedData = {
       [districtA]: averageA,
       [districtB]: averageB,
