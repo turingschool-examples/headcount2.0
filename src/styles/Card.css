@@ -6,36 +6,37 @@ h2 {
     margin: 0;
   }
   
-  ul {
-    padding: 0;
-    margin: 0 0 5px 0;
-  }
-  
-  li {
-    list-style: none;
-    font-family: 'Work Sans', sans-serif;
-    margin: 10px 0;
-    color: #fff;
-    font-weight: 700;
-  }
-  
-  li span{
-    font-weight: 300;
-  }
-  
-  li.below {
-    color: #7faccd;
-  }
-  
-  .card {
-    width: 17%;
-    background:#323844;
-    padding: 30px 40px 20px 40px;
-    box-shadow: 3px 2px 2px rgba(0,0,0,0.1);
-    margin-bottom: 2%;
-  }
+ul {
+  padding: 0;
+  margin: 0 0 5px 0;
+}
 
-  .selected {
-    background: #000;
-  }
+li {
+  list-style: none;
+  font-family: 'Work Sans', sans-serif;
+  margin: 10px 0;
+  color: #fff;
+  font-weight: 700;
+}
+
+li span{
+  font-weight: 300;
+}
+
+li.below {
+  color: #7faccd;
+}
+
+.card {
+  width: 17%;
+  background:#323844;
+  padding: 30px 40px 20px 40px;
+  box-shadow: 3px 2px 2px rgba(0,0,0,0.1);
+  margin-bottom: 2%;
+}
+
+.card:focus {
+  background: #000;
+}
+
   

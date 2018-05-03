@@ -1,0 +1,13 @@
+.comparisonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.comparisonContainer .card {
+  width: 340px;
+}
+
+.selected {
+  border: double #ea8e4f;
+  text-align: center;
+}

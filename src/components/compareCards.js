@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card';
+import '../styles/CompareCards.css';
 
 const CompareCards = ({selectedCard, setSelectedCard}) => {
   if(selectedCard) {
