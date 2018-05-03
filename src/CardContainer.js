@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import Card from './Card';
 
-const CardContainer = ({schoolObj}) => {
-  const keys = Object.keys(schoolObj);
-  const cards = keys.map((key, index) => {
-    return <Card data={schoolObj[key]}/>
+const CardContainer = ({ schoolData }) => {
+  const schoolNames = Object.keys(schoolData);
+
+  const cards = schoolNames.map((schoolName, index) => {
+    const cardData = schoolData[schoolName]
+    return <Card cardData={cardData} key={index}/>
   })
  return cards;
 

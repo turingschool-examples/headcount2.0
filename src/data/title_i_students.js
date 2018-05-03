@@ -5431,4 +5431,3 @@ module.exports = {
     "Data": 0.28519
   }
 ]
-}
