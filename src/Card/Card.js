@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import './Card.css'
 
 const Card = ( props ) => {
+  // console.log(props)
   let districtKeys = Object.keys(props.district.stats)
   const listItems = districtKeys.map(( stat, index ) => {
     return (
