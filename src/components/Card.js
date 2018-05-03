@@ -3,6 +3,7 @@ import '../styles/Card.css';
 
 const Card = ({ location, stats, selected, setSelectedCard}) => {
   let statKeys = Object.keys(stats)
+
   const districtStats = statKeys.map(year => {
     return  <li className={stats[year] < 0.5 ? "below": ""} >{year}: <span>{stats[year]}</span></li>
   });

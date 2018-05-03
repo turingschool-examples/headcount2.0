@@ -21,7 +21,7 @@ class App extends Component {
     this.setState({
       schoolStats: this.state.districts.findAllMatches(userInput)
     });
-  };
+  }
 
   setSelectedCard = (location) => {
     const selectedState = this.state.schoolStats[location].selected ? false: true;
