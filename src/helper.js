@@ -5,7 +5,7 @@ export default class DistrictRepository {
 
   removeNan (dataList) {
     return dataList.map(data => {
-      if (parseInt(data.Data) === NaN || data.Data === "N/A") {
+      if (isNaN(data.Data) || data.Data === "N/A") {
         data.Data = 0;
       }
       return data;
@@ -13,9 +13,9 @@ export default class DistrictRepository {
   }
 
   dataCleaner(dataList) {
-    const dataWithOutNa= this.removeNan(dataList);
+    const dataWithOutNan = this.removeNan(dataList);
 
-    return dataWithOutNa.reduce((cleanedData, data) => {
+    const cleanedData = dataWithOutNan.reduce((cleanedData, data) => {
       const sanitizedLocation = data.Location.toUpperCase();
       const sanitizedNumber = parseFloat(parseFloat(data.Data).toFixed(3));
 
@@ -27,6 +27,8 @@ export default class DistrictRepository {
 
       return cleanedData
     }, {});
+
+    return Object.values(cleanedData)
   }
 
   findByName(district) {
@@ -34,19 +36,31 @@ export default class DistrictRepository {
       return undefined
     }
     const sanitizedDistrict = district.toUpperCase()
-    return this.stats[sanitizedDistrict]
+    let matchingObject;
+
+    this.stats.forEach(stat => {
+      if (stat.location === sanitizedDistrict) {
+        matchingObject = stat;
+      }
+    });
+
+    return matchingObject;
   }
 
   findAllMatches(district) {
     if (!district) {
-      return Object.keys(this.stats);
+      return this.stats;
     }
+
     const sanitizedDistrict = district.toUpperCase()
+    const resultsArray = [];
 
-    if (!this.stats[sanitizedDistrict]) {
-      return []
-    }
+    this.stats.forEach(stat => {
+      if (stat.location.includes(sanitizedDistrict)) {
+        resultsArray.push(stat)
+      }
+    });
 
-    return Object.keys(this.stats[sanitizedDistrict])
+    return resultsArray;
   }
 }
