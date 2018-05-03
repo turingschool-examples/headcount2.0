@@ -15,12 +15,24 @@ describe('CardContainer', () => {
   }
 
   beforeEach(() => {
-    wrapper = shallow(<CardContainer data={districts}/>);
+    wrapper = shallow(<CardContainer districtsData={districts}/>);
   });
 
+  it('should match the snapshot with cards', () => {
+    expect( wrapper ).toMatchSnapshot();
+  })
+
+  it('should match the snapshots with no cards', () => {
+    const districts = { };
+    wrapper = shallow(<CardContainer districtsData={districts} />);
+    expect(wrapper).toMatchSnapshot();
+  })
+  
   it('should render the card components', () => {
     expect(wrapper.find(Card).length).toEqual(1);
   });
+
+
 });
 
 //setup 
