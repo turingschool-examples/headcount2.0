@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DistrictRepository from '../helper'
+import DistrictRepository from '../helper';
 import '../styles/Search.css';
 
 class Search extends Component {
@@ -19,6 +19,7 @@ class Search extends Component {
 	handleSubmit = (event) => {
 		event.preventDefault();
 		this.props.setLocationData(this.state);
+		this.state.userInput = "";
 	}
 	
 	render() {
@@ -38,4 +39,4 @@ class Search extends Component {
 }
 
 
-export default Search
+export default Search;
