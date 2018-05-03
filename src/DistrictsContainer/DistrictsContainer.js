@@ -6,21 +6,20 @@ import PropTypes from 'prop-types';
 const DistrictContainer = ({districts}) => {
   const allDistrictCards = Object.keys(districts).map((district, index) => {
     return (
-      <DistrictCard 
+      <DistrictCard
         key={`district${index}`}
         districtData={districts[district]}
-      />  
-    )
-  })
+      />
+    );
+  });
   return (
     <div className="district-container">
       {allDistrictCards}
     </div>
-  )
-} 
+  );
+};
 
 DistrictContainer.propTypes = {
-   districts: PropTypes.objectOf(PropTypes.object)
-}
+  districts: PropTypes.objectOf(PropTypes.object)
+};
 
-export default DistrictContainer
