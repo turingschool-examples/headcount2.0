@@ -3,7 +3,7 @@ import DistrictCard from './../DistrictCard/DistrictCard';
 import './DistrictsContainer.css';
 import PropTypes from 'prop-types';
 
-const DistrictContainer = ({districts}) => {
+const DistrictsContainer = ({districts}) => {
   const allDistrictCards = Object.keys(districts).map((district, index) => {
     return (
       <DistrictCard
@@ -19,7 +19,8 @@ const DistrictContainer = ({districts}) => {
   );
 };
 
-DistrictContainer.propTypes = {
+DistrictsContainer.propTypes = {
   districts: PropTypes.objectOf(PropTypes.object)
 };
 
+export default DistrictsContainer;
