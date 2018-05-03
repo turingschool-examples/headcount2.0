@@ -13,7 +13,7 @@ export default class DistrictRepository {
       if (acc[key].location !== key) {
         acc[key].location = key.toUpperCase();
       }
-      if (schoolObj.Data === 'N/A') {
+      if (typeof(schoolObj.Data) !== 'number') {
         acc[key].stats = {
           ...acc[key].stats,
           [schoolObj.TimeFrame]: 0

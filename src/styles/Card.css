@@ -1,0 +1,30 @@
+th {
+  color: darkslateblue;
+}
+
+h1 {
+  font-size: 1rem;
+  color: darkgoldenrod;
+  text-align: center;
+}
+
+table {
+  margin: auto;
+}
+
+.card {
+  display: inline-block;
+  width: 250px;
+  border: 1px solid black;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.low-value {
+  background: lemonchiffon;
+}
+
+.high-value {
+  background: peachpuff
+}
