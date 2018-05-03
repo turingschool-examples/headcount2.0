@@ -4,7 +4,7 @@ import DistrictRepository from './helper';
 import kinderData from './data/kindergartners_in_full_day_program';
 import Districts from './components/Districts';
 import Search from './components/Search';
-import CompareCards from './components/CompareCards';
+import CompareCards from './components/compareCards';
 
 class App extends Component {
   constructor(props) {

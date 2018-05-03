@@ -10,7 +10,7 @@ const Districts = ({ stats, setSelectedCard, selectedCards }) => {
 
   return (
     <section className="districtCards">
-        {districtCards}
+      {districtCards}
     </section>
   );
 };

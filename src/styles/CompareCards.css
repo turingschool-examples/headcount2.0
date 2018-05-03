@@ -1,10 +1,11 @@
 .comparisonContainer {
-    display: flex;
-    justify-content: center;
+  margin: 0 auto;
+  width: 80%;
 }
 
-.comparisonContainer .card {
-  width: 340px;
+.comparisonContainer div {
+  justify-content: space-around;
+  display: flex;
 }
 
 .selected {
