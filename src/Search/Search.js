@@ -12,10 +12,14 @@ updateUserInput = (e) => {
   this.setState({ userInput: e.target.value })
 }
 
+updateFilterInfo = (e) => {
+  this.props.searchFilter( this.state.userInput );
+}
+
   render(){
     return(
       <form className="search">
-        <input type="text" placeholder="Search Yo skuuurls hurr..." onChange={ this.updateUserInput } value={this.state.userInput} />
+        <input type="text" placeholder="Search Yo skuuurls hurr..." onKeyUp={ this.updateFilterInfo } onChange={ this.updateUserInput } value={  this.state.userInput } />
       </form>   
     )
   }

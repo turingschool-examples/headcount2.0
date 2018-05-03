@@ -14,11 +14,24 @@ class App extends Component {
   }
   }
 
+  searchFilter = ( userInput ) => {
+    // debugger;
+ const sanitizedUserInput = userInput.toUpperCase();
+  
+    const filteredDistricts = Object.keys(this.state.districtsData).map( districtKey => this.state.districtsData[districtKey]).filter( district => {
+      return district.location.includes( sanitizedUserInput );
+    })
+
+    this.setState({ districtsData: filteredDistricts})
+  }
+  
   componentDidMount() {
     let newData = new DistrictRepository(kinderData)
     this.setState({
       districtsData: newData.stats
     })
+  // console.log(this.state.districtsData.COLORADO);
+  
   }
 
   render() {
@@ -30,9 +43,10 @@ class App extends Component {
     return (
       <div className="app"> 
         <Compare />
-        <Search />
+        <Search
+          searchFilter={ this.searchFilter } />
         <CardContainer 
-          districtsData ={ this.state.districtsData }
+          districtsData={ this.state.districtsData }
         />
       </div>
     );
