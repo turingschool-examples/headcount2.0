@@ -13,7 +13,7 @@ class App extends Component {
     this.state = {
       schoolStats: null || props.districts.stats,
       districts: props.districts,
-      selectedCard: null
+      selectedCards: []
     };
   }
 
@@ -24,12 +24,22 @@ class App extends Component {
   }
 
   setSelectedCard = (location) => {
-    const selectedState = this.state.schoolStats[location].selected ? false: true;
-    const selectedCard = Object.assign(this.state.schoolStats[location], {selected: selectedState});
- 
-    this.setState({
-      selectedCard: selectedCard.selected ? selectedCard: null
-    });
+    if(this.state.selectedCards.length < 2 && this.state.schoolStats[location].selected === false) {
+      var selectedState = this.state.schoolStats[location].selected ? false: true;
+      var selectedCard = Object.assign(this.state.schoolStats[location], {selected: selectedState});
+
+      this.setState({
+        selectedCards: [selectedCard, ...this.state.selectedCards]
+      });
+
+    } else if (this.state.schoolStats[location].selected === true) {
+      var selectedState = this.state.schoolStats[location].selected ? false: true;
+      var selectedCard = Object.assign(this.state.schoolStats[location], {selected: selectedState});
+
+      this.setState({
+        selectedCards: this.state.selectedCards.filter(card => card.location !== location)
+      });
+    };
   }
  
   render() {
@@ -38,9 +48,9 @@ class App extends Component {
         <h1>HeadCount 2.0</h1>
         <Search setLocationData={this.setLocationData}/>
         <section className="comparisonContainer">
-          <CompareCards selectedCard={this.state.selectedCard} setSelectedCard={this.setSelectedCard} />
+          <CompareCards selectedCards={this.state.selectedCards} setSelectedCard={this.setSelectedCard} />
         </section>
-        <Districts stats={this.state.schoolStats} setSelectedCard={this.setSelectedCard} selectedCard={this.state.selectedCard} />
+        <Districts stats={this.state.schoolStats} setSelectedCard={this.setSelectedCard} selectedCards={this.state.selectedCards} />
       </main>
     );
   }
