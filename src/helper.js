@@ -7,10 +7,12 @@ export default class DistrictRepository {
     return schoolData.reduce((cleanedInfo, school) => {
       const upperCaseDistrict = school.Location.toUpperCase();
 
+
       if (!cleanedInfo[upperCaseDistrict]) {
         cleanedInfo[upperCaseDistrict] = {
           location: upperCaseDistrict,
-          stats: {}
+          stats: {},
+          selected: false
         };
       } 
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import Card from './Card';
 
-const CompareCards = ({selectedCard}) => {
+const CompareCards = ({selectedCard, setSelectedCard}) => {
   if(selectedCard) {
-    return <Card {...selectedCard} />
+    return <Card {...selectedCard} setSelectedCard={setSelectedCard} />
   } 
   return CompareCards;
 }
