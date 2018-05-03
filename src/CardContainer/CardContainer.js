@@ -18,7 +18,7 @@ const CardContainer = ({districtsData}) => {
 }
 
 CardContainer.propTypes = {
-  districtsData: PropTypes.object
+  districtsData: PropTypes.any.isRequired
 }
 
 export default CardContainer;

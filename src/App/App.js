@@ -1,41 +1,41 @@
 import React, { Component } from 'react';
 import './App.css';
-import CardContainer from '../CardContainer/CardContainer.js'
+import CardContainer from '../CardContainer/CardContainer.js';
 import DistrictRepository from '../helper.js';
 import kinderData from '../data/kindergartners_in_full_day_program.js'
 import Compare from '../Compare/Compare.js';
 import Search from '../Search/Search.js';
 
+const data = new DistrictRepository(kinderData);
+
 class App extends Component {
-  constructor( props ){
+  constructor( props ) {
     super( props );
     this.state = {
-        districtsData: null
+        districtsData: []
   }
   }
 
   searchFilter = ( userInput ) => {
-    // debugger;
- const sanitizedUserInput = userInput.toUpperCase();
+    const sanitizedUserInput = userInput.toUpperCase();
   
-    const filteredDistricts = Object.keys(this.state.districtsData).map( districtKey => this.state.districtsData[districtKey]).filter( district => {
-      return district.location.includes( sanitizedUserInput );
-    })
+    const filteredDistricts = Object.keys(data.stats)
+      .map( districtKey => data.stats[districtKey])
+      .filter( district => district.location.includes( sanitizedUserInput ))
 
-    this.setState({ districtsData: filteredDistricts})
+      if(filteredDistricts.length >= 1) {
+        this.setState({ districtsData: filteredDistricts})
+      }
   }
   
   componentDidMount() {
-    let newData = new DistrictRepository(kinderData)
     this.setState({
-      districtsData: newData.stats
+      districtsData: data.stats
     })
-  // console.log(this.state.districtsData.COLORADO);
-  
   }
 
   render() {
-    if(this.state.districtsData === null) {
+    if(this.state.districtsData.length === 0) {
       return(
         <p>Please Wait</p>
       )
