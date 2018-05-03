@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 
-const TableRow = ( year ) => {
-  const foo = Object.values(year)
-  console.log(foo)
+const TableRow = ( year, value ) => {
+  const tableCellYear = Object.values(year)
+  const tableCellData = Object.values(value)
+
   return (
     <tr>
-      <td>{foo}</td>
-      <td></td>
+      <td>{tableCellYear}</td>
+      <td>{tableCellData}</td>
     </tr>
   )
 

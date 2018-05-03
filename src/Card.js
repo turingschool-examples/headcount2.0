@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import TableRow from './TableRow';
 
 const Card = ({data}) => {
-  const foo = data.stats;
-  const keys = Object.keys(foo);
+  const statsObj = data.stats;
+  const keys = Object.keys(statsObj);
   // console.log(keys)
   const tableRows = keys.map(year => {
-    return <TableRow year={year} />
+    return <TableRow year={year} value={statsObj[year]}/>
   })
   return (
     <div>
