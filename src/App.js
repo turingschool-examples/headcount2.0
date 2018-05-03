@@ -9,12 +9,15 @@ class App extends Component {
     super(props)
     this.state = {
       schools: new DistrictRepository(kinderData),
-      data: []
+      data: [],
+      schoolObject: new DistrictRepository(kinderData).stats
     }
-    }
-  componentDidMount(){
+  }
+  
+    componentDidMount(){
     const data = this.state.schools.findAllMatches()
     this.setState({data})
+    // console.log('pew', this.state.schoolObject)
   }
 
   
@@ -22,7 +25,8 @@ class App extends Component {
     return (
       <div>
         <h1>HeadCount</h1>
-        {/* <CardContainer schools={this.state.schools}/> */}
+        {/* <SearchField /> */}
+        <CardContainer schoolObj={this.state.schoolObject}/>
       </div>
     );
   }
