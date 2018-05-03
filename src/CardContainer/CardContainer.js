@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import './CardContainer.css'
 
 const CardContainer = ({districtsData}) => {
+  // console.log(districtsData);
+  
   const districtCards = Object.keys(districtsData).map((key, index) => {
     return (
       <Card key={index} district={districtsData[key]} />
