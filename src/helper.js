@@ -5,7 +5,7 @@ export default class DistrictRepository {
 
   organizeData (districts) {
     const districtData = districts.reduce((districtAcc, districtData) => {
-      const dataLocation = districtData.Location.toUpperCase();
+      const dataLocation = districtData.Location;
       const dataNum = (
         isNaN(parseInt(districtData.Data)) ?
           0 :
@@ -14,7 +14,7 @@ export default class DistrictRepository {
 
       if (!districtAcc[dataLocation]) {
         districtAcc[dataLocation] = {
-          location: dataLocation,
+          location: dataLocation.toUpperCase(),
           data: {}
         };
       }
@@ -29,32 +29,27 @@ export default class DistrictRepository {
   }
 
   findByName (districtName) {
-    if (districtName) {
-      districtName = districtName.toUpperCase();
-    }
-    if (Object.keys(this.stats).includes(districtName)) {
-      return this.stats[districtName];
+    if(districtName) {
+      const caseInsensitiveSearch = new RegExp(districtName, 'gi');
+      const foundDistrict = Object.keys(this.stats).find(district => {
+        return caseInsensitiveSearch.test(district)
+      })
+      return this.stats[foundDistrict]
     } else {
-      return undefined;
+      return undefined
     }
   }
 
   findAllMatches (districtName) {
-    const queriedData = [];
-
-    if (!districtName) {
-      Object.keys(this.stats).forEach(district => {
-        queriedData.push(this.stats[district]);
-      });
+    if(!districtName) {
+      return Object.entries(this.stats)
     } else {
-      Object.keys(this.stats).forEach(district => {
-        if (this.stats[district].location.includes(districtName.toUpperCase())) {
-          queriedData.push(this.stats[district]);
-        }
-      });
+      const caseInsensitiveSearch = new RegExp(districtName, 'gi');
+      const foundDistricts = Object.values(this.stats).filter(district => {
+        return caseInsensitiveSearch.test(district.location)
+      })
+      return foundDistricts
     }
-
-    return queriedData;
   }
 
   findAverage (districtName) {
