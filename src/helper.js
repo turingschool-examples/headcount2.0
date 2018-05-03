@@ -66,13 +66,10 @@ export default class DistrictRepository {
     const districtAverage = districtTotal / districtKeys.length;
     return Math.round(districtAverage * 1000) / 1000;
   }
-
-  // {
-    // "ACADEMY 20": 0.407,
-    // "YUMA SCHOOL DISTRICT 1": 0.909,
-    // "compared": 0.448
-  // }
+  
   compareDistrictAverages(districtName1, districtName2) {
+    districtName1 = districtName1.toUpperCase();
+    districtName2 = districtName2.toUpperCase();
     const districtName1Avg = this.findAverage(districtName1);
     const districtName2Avg = this.findAverage(districtName2);
     const comparedValue = Math.round(districtName1Avg / districtName2Avg * 1000) / 1000;
