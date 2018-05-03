@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
 import TableRow from './TableRow';
 
-const Card = ({data}) => {
-  const statsObj = data.stats;
-  const keys = Object.keys(statsObj);
-  // console.log(keys)
-  const tableRows = keys.map(year => {
-    return <TableRow year={year} value={statsObj[year]}/>
+const Card = ({ cardData }) => {
+  const { location, stats } = cardData;
+  const years = Object.keys(stats);
+
+  const tableRows = years.map((year, index) => {
+    const yearData = stats[year]
+    return <TableRow 
+    year={year} 
+    yearData={yearData}
+    key={index}
+    />
   })
+
   return (
     <div>
-      <h1>{data.location}</h1>
+      <h1>{cardData.location}</h1>
       <table>
         {tableRows}
       </table>
