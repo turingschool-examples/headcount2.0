@@ -24,10 +24,12 @@ class App extends Component {
   };
 
   setSelectedCard = (location) => {
+    const selectedState = this.state.schoolStats[location].selected ? false: true;
+    const selectedCard = Object.assign(this.state.schoolStats[location], {selected: selectedState});
+ 
     this.setState({
-      selectedCard: this.state.schoolStats[location]
+      selectedCard: selectedCard.selected ? selectedCard: null
     });
-    console.log(this.state.selectedCard)
   }
  
   render() {
@@ -35,7 +37,7 @@ class App extends Component {
       <main>
         <h1>HeadCount 2.0</h1>
         <Search setLocationData={this.setLocationData}/>
-        <CompareCards selectedCard={this.state.selectedCard} />
+        <CompareCards selectedCard={this.state.selectedCard} setSelectedCard={this.setSelectedCard} />
         <Districts stats={this.state.schoolStats} setSelectedCard={this.setSelectedCard} selectedCard={this.state.selectedCard} />
       </main>
     );
