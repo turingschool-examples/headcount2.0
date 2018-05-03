@@ -5,9 +5,10 @@ import PropTypes from 'prop-types';
 import renderer from 'react-test-renderer';
 
 describe('Search', () => {
+
   it('renders without crashing', () => {
-    const handleSearchMock = jest.fn()
-    shallow(<Search handleSearch={handleSearchMock}/>)
+    const updateRepoInStateMock = jest.fn()
+    shallow(<Search updateRepoInState={ updateRepoInStateMock } />)
   })
 
 })
