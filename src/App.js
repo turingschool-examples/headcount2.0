@@ -4,7 +4,7 @@ import DistrictRepository from './helper';
 import kinderData from './data/kindergartners_in_full_day_program';
 import Districts from './components/Districts';
 import Search from './components/Search';
-import CompareCards from './components/compareCards';
+import CompareCards from './components/CompareCards';
 
 class App extends Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class App extends Component {
     this.state = {
       schoolStats: null || props.districts.stats,
       districts: props.districts,
-      selectedCard: null
+      selectedCards: []
     };
   }
 
@@ -24,12 +24,22 @@ class App extends Component {
   }
 
   setSelectedCard = (location) => {
-    const selectedState = this.state.schoolStats[location].selected ? false: true;
-    const selectedCard = Object.assign(this.state.schoolStats[location], {selected: selectedState});
- 
-    this.setState({
-      selectedCard: selectedCard.selected ? selectedCard: null
-    });
+    if(this.state.selectedCards.length < 2 && this.state.schoolStats[location].selected === false) {
+      var selectedState = this.state.schoolStats[location].selected ? false: true;
+      var selectedCard = Object.assign(this.state.schoolStats[location], {selected: selectedState});
+
+      this.setState({
+        selectedCards: [selectedCard, ...this.state.selectedCards]
+      });
+
+    } else if (this.state.schoolStats[location].selected === true) {
+      var selectedState = this.state.schoolStats[location].selected ? false: true;
+      var selectedCard = Object.assign(this.state.schoolStats[location], {selected: selectedState});
+
+      this.setState({
+        selectedCards: this.state.selectedCards.filter(card => card.location !== location)
+      });
+    };
   }
  
   render() {
@@ -37,8 +47,10 @@ class App extends Component {
       <main>
         <h1>HeadCount 2.0</h1>
         <Search setLocationData={this.setLocationData}/>
-        <CompareCards selectedCard={this.state.selectedCard} setSelectedCard={this.setSelectedCard} />
-        <Districts stats={this.state.schoolStats} setSelectedCard={this.setSelectedCard} selectedCard={this.state.selectedCard} />
+        <section className="comparisonContainer">
+          <CompareCards selectedCards={this.state.selectedCards} setSelectedCard={this.setSelectedCard} />
+        </section>
+        <Districts stats={this.state.schoolStats} setSelectedCard={this.setSelectedCard} selectedCards={this.state.selectedCards} />
       </main>
     );
   }
