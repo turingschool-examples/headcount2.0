@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
+import './styles/TableRow.css';
 
-const TableRow = ( year, yearData ) => {
-  const tableCellYear = Object.values(year)
-  const tableCellData = Object.values(yearData)
-
+const TableRow = ( {year, yearData, className} ) => {
   return (
-    <tr>
-      <td>{tableCellYear}</td>
-      <td>{tableCellData}</td>
+    <tr className={className}>
+      <td>{year}</td>
+      <td>{yearData}</td>
     </tr>
   )
 
