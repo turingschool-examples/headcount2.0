@@ -2,19 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Search.css';
 
-const Search = ( {handleSearch} ) => {
+const Search = ({ updateRepoInState }) => {
   return (
-      <div className="search-container">
-        <input 
-        placeholder="Search for district..."
+    <div className="search-container">
+      <input 
+        placeholder="Search for a district..."
         className="search"
-        onChange={ (e) => handleSearch(e.target.value) }/>
-      </div>
-    )
+        onChange={ (e) => updateRepoInState(e.target.value) }
+      />
+    </div>
+  );
+
 }
 
 Search.propTypes = {
-  handleSearch: PropTypes.func.isRequired
+  updateRepoInState: PropTypes.func.isRequired
 }
 
 export default Search;
