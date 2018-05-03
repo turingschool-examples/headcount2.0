@@ -6,7 +6,7 @@ export default class DistrictRepository {
 
     const cleanData = props.reduce((stats, locationData) => {
       let sanitizedLocation = locationData.Location.toUpperCase()
-      if (!stats[locationData.Location]) {
+      if (!stats[sanitizedLocation]) {
         stats[sanitizedLocation] = {
           location: sanitizedLocation, 
           stats: {}
