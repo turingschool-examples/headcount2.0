@@ -22,8 +22,10 @@
   font-size: 1.2rem;
   height: 76px;
   margin: 0;
-  padding: 1rem .5rem 0 .5rem;
+  padding: 0 .5rem 0 .5rem;
   letter-spacing: 1px;
+  display: flex;
+  align-items: center;
 }
 
 .district-card-body {

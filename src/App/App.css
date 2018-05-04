@@ -384,7 +384,9 @@ p, ul, li {
 
 .district-form {
   display: flex;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  align-items: center;
   margin: 0 2rem;
 }
 
