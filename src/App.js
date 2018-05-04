@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './styles/App.css';
-import DistrictRepository from './helper'
-import kinderData from './data/kindergartners_in_full_day_program'
-import CardContainer from './CardContainer'
+import DistrictRepository from './helper';
+import kinderData from './data/kindergartners_in_full_day_program';
+import CardContainer from './CardContainer';
+import logo from './images/HeadCount.svg';
+
 
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       schoolRepository: new DistrictRepository(kinderData),
       schoolNames: [],
@@ -16,20 +18,25 @@ class App extends Component {
 
   componentDidMount() {
     const schoolNames = this.state.schoolRepository.findAllMatches()
-    const schoolData = this.state.schoolRepository.stats
+    const schoolData = this.state.schoolRepository.stats;
     this.setState({ 
       schoolNames, 
       schoolData
-     })
+    });
   }
 
   render() {
     return (
       <div>
-        <h1>HeadCount</h1>
-        {/* <SearchField /> */}
+        <nav className="nav-head">
+          <img className="logo" src={logo}/>
+          {/* <SearchField /> */}
+        </nav>
         <div className="wrapper">
-          <CardContainer schoolData={this.state.schoolData} className="card-container"/>
+          <CardContainer 
+            schoolData={this.state.schoolData} 
+            className="card-container"
+          />
         </div>
       </div>
     );
