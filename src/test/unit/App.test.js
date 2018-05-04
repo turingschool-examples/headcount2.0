@@ -10,7 +10,7 @@ describe('App', () => {
 
   beforeEach(() => {
     app = shallow(<App />);
-  })
+  });
 
   it.skip('matches snapshot', () => {
     expect(app).toMatchSnapshot();
@@ -26,7 +26,7 @@ describe('App', () => {
 
   it('renders CardContainer with correct props', () => {
     expect(app.find(CardContainer).prop('schoolData')).toBeInstanceOf(Object);
-  })
+  });
 
   it('initiates having state with correct properties', () => {
     const actual = Object.keys(app.instance().state);
