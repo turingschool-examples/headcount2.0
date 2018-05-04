@@ -12,7 +12,7 @@ class SearchField extends Component {
 
   handleSearch = (event) => {
     this.setState({inputValue: event.target.value});
-    this.props.searchSchools(this.state.inputValue);
+    this.props.searchSchools(event.target.value);
   }
 
 
