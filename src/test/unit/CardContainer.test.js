@@ -7,11 +7,11 @@ describe('CardContainer', () => {
   let cardContainer;
 
   beforeEach(() => {
-    cardContainer = shallow(<CardContainer />)
-  })
+    cardContainer = shallow(<CardContainer />);
+  });
 
   it('matches snapshot', () => {
 
-    expect(cardContainer).toMatchSnapshot()
+    expect(cardContainer).toMatchSnapshot();
   });
-})
+});

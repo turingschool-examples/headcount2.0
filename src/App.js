@@ -13,11 +13,11 @@ class App extends Component {
       schoolRepository: new DistrictRepository(kinderData),
       schoolNames: [],
       schoolData: {}
-    }
+    };
   }
 
   componentDidMount() {
-    const schoolNames = this.state.schoolRepository.findAllMatches()
+    const schoolNames = this.state.schoolRepository.findAllMatches();
     const schoolData = this.state.schoolRepository.stats;
     this.setState({ 
       schoolNames, 
