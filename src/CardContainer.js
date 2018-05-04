@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
-import './styles/CardContainer.css'
+import './styles/CardContainer.css';
 
 const CardContainer = ({ schoolData }) => {
   const schoolNames = Object.keys(schoolData);

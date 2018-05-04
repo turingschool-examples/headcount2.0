@@ -1,10 +1,16 @@
 th {
-  color: darkslateblue;
+  background-color: rgb(224, 164, 164);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 5px 15px;
 }
 
 h1 {
   font-size: 1rem;
-  color: darkgoldenrod;
+  color: rgb(100, 100, 100);
+  font-weight: 900;
+  font-style: italic;
   text-align: center;
 }
 
@@ -15,16 +21,22 @@ table {
 .card {
   display: inline-block;
   width: 250px;
-  border: 1px solid black;
-  padding: 20px;
+  border: none;
+  padding: 20px 10px;
   margin: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0px 2px 6px 0px rgba(168, 168, 168, 0.48);
 }
 
 .low-value {
-  background: lemonchiffon;
+  background: rgb(250, 250, 250);
+  color: rgb(100, 100, 100);
 }
 
 .high-value {
-  background: peachpuff
+  background: rgb(247, 235, 235);
+  font-style: italic;
+  font-weight: 700;
+  color: rgb(100, 100, 100);
 }
