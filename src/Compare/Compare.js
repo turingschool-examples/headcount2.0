@@ -4,7 +4,6 @@ import DistrictRepository from '../helper.js'
 import Card from '../Card/Card.js'
 
 const Compare = ({ updateCompareState, comparedCards }) => {
-console.log(comparedCards)
   const comparedCardInfo = comparedCards.map(( districtCard, index) => {
     return ( 
     <Card key = { index }
