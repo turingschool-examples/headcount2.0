@@ -29,11 +29,29 @@ class App extends Component {
       }
   }
 
-  updateCompareState = ( comparedCard ) => {
-    
-    this.setState({comparedCards: [ ...this.state.comparedCards, comparedCard ] })
+  updateCompareState = ( clickedState, comparedCard ) => {
+      if(clickedState) {
+        if(this.state.comparedCards.length < 2) {
+          this.addComparedCard(comparedCard);
+        }
+      } else {
+        this.removeComparedCard(comparedCard);
+      }
+  }
+
+  addComparedCard(cardInfo) {
+
+    this.setState({comparedCards: [ ...this.state.comparedCards, cardInfo] })
   }
   
+  removeComparedCard(cardInfo) {
+    const comparedCards = this.state.comparedCards.filter(card => {
+      return card.district.location !== cardInfo.district.location
+    });
+    this.setState({ comparedCards });
+  }
+
+
   componentDidMount() {
     this.setState({
       districtsData: data.stats
