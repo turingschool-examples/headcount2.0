@@ -18,7 +18,7 @@ const DistrictCard = (props) => {
   });
 
   return (
-    <article className="district-card">
+    <article className="district-card" onClick={() => props.handleSelect(props.districtData.location)}>
       <section className="district-card-header">
         <h2 className="district-name">{props.districtData.location}</h2>
       </section>

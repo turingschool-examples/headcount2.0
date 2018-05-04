@@ -4,6 +4,7 @@ import DistrictRepository from './../helper';
 import kinderData from '../data/kindergartners_in_full_day_program.js';
 import DistrictsContainer from './../DistrictsContainer/DistrictsContainer';
 import Search from './../Search/Search';
+import CompareDistricts from './../CompareDistricts/CompareDistricts';
 
 const allDistricts = new DistrictRepository(kinderData);
 
@@ -12,7 +13,10 @@ class App extends Component {
     super();
 
     this.state = {
-      districts: ''
+      districts: '',
+      selectedDistricts: [null, null],
+      firstSelectedDistrict: null,
+      secondSelectedDistrict: null
     };
   }
 
@@ -28,16 +32,36 @@ class App extends Component {
     this.setState({districts});
   };
 
+  handleSelect = (district) => {
+    const districtObj = allDistricts.findByName(district);
+    let firstSelectedDistrict = this.state.firstSelectedDistrict || null;
+    let secondSelectedDistrict = this.state.secondSelectedDistrict || null;
+
+    if(this.state.selectedDistricts[0] === null) {
+      firstSelectedDistrict = districtObj;
+    } else {
+      secondSelectedDistrict = districtObj;
+    }
+
+    this.setState({
+      selectedDistricts: [firstSelectedDistrict, secondSelectedDistrict],
+      firstSelectedDistrict,
+      secondSelectedDistrict
+    })
+  }
+
   render () {
     return (
       <div className='app'>
         <Search
           handleSearchEvent={this.handleSearchEvent}
         />
+        <CompareDistricts selectedDistricts={this.state.selectedDistricts}/>
         {
           this.state.districts &&
           <DistrictsContainer
             districts={this.state.districts}
+            handleSelect={this.handleSelect}
           />
         }
       </div>
