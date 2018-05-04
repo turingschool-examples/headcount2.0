@@ -1,0 +1,51 @@
+.district-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 0;
+  /*-webkit-box-shadow: 1px 6px 30px 5px rgba(0,0,0,0.65);*/
+  /*box-shadow: 1px 6px 30px 5px rgba(0,0,0,0.65);*/
+  -webkit-box-shadow: 4px 4px 5px 0px rgba(10, 10, 10, 0.65);
+  -moz-box-shadow: 4px 4px 5px 0px rgba(10, 10, 10, 0.65);
+  box-shadow: 4px 4px 5px 0px rgba(10, 10, 10, 0.65);
+  border-radius: 8px;
+  background-color: #075057;
+  color: #fff;
+  height: 350px;
+  width: 250px;
+}
+
+.district-name {
+  text-align: center;
+  font-size: 1.2rem;
+  height: 76px;
+  margin: 0;
+  padding: 0 .5rem 0 .5rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.district-card-body {
+  width: 100%;
+  background-color: #ecf2f3;
+  height: 100vh;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.district-card-body h3 {
+  text-align: center;
+  color: #9e0c09;
+}
+
+.district-card-body li {
+  color: #9e0c09;
+}
+
+.district-data {
+  list-style-type: none;
+  width: 90%;
+}

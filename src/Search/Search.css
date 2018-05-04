@@ -1,0 +1,11 @@
+.card-container {
+  background-color: #9CB16A;
+}
+
+.district-input {
+  width: 20%;
+  height: 2rem;
+  padding-left: 10px;
+  font-size: 1.2rem;
+  margin: 2.5rem 0;
+}
