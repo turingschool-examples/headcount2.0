@@ -5,6 +5,7 @@ import kinderData from './data/kindergartners_in_full_day_program';
 import Districts from './components/Districts';
 import Search from './components/Search';
 import CompareCards from './components/compareCards';
+import ComparisonCard from './components/ComparisonCard';
 
 class App extends Component {
   constructor(props) {
@@ -48,6 +49,10 @@ class App extends Component {
         <h1>HeadCount 2.0</h1>
         <Search setLocationData={this.setLocationData}/>
         <section className="comparisonContainer">
+          <ComparisonCard 
+            selectedCards={this.state.selectedCards}
+            districts={this.state.districts}
+          />
           <CompareCards selectedCards={this.state.selectedCards} setSelectedCard={this.setSelectedCard} />
         </section>
         <Districts stats={this.state.schoolStats} setSelectedCard={this.setSelectedCard} selectedCards={this.state.selectedCards} />
