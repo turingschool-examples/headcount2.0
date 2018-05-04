@@ -12,8 +12,9 @@ class App extends Component {
   constructor( props ) {
     super( props );
     this.state = {
-        districtsData: []
-  }
+        districtsData: [],
+        comparedCards: []
+    }
   }
 
   searchFilter = ( userInput ) => {
@@ -26,6 +27,11 @@ class App extends Component {
       if(filteredDistricts.length >= 1) {
         this.setState({ districtsData: filteredDistricts})
       }
+  }
+
+  updateCompareState = ( comparedCard ) => {
+    
+    this.setState({comparedCards: [ ...this.state.comparedCards, comparedCard ] })
   }
   
   componentDidMount() {
@@ -42,11 +48,15 @@ class App extends Component {
     }
     return (
       <div className="app"> 
-        <Compare />
+        <Compare 
+          comparedCards={ this.state.comparedCards }
+          updateCompareState = { this.updateCompareState }
+          />
         <Search
           searchFilter={ this.searchFilter } />
         <CardContainer 
           districtsData={ this.state.districtsData }
+          updateCompareState={ this.updateCompareState }
         />
       </div>
     );

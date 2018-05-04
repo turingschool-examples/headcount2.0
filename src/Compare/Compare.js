@@ -1,21 +1,24 @@
 import React, { Component } from 'react';
 import './Compare.css';
+import DistrictRepository from '../helper.js'
+import Card from '../Card/Card.js'
 
-class Compare extends Component {
-  constructor( props ){
-    super( props );
-    this.state = {
-      comparedCards: []
-    }
-  }
-
-  render(){
-    return (
-      <div className="compare">
-        Compare cards here...
-      </div>
+const Compare = ({ updateCompareState, comparedCards }) => {
+console.log(comparedCards)
+  const comparedCardInfo = comparedCards.map(( districtCard, index) => {
+    return ( 
+    <Card key = { index }
+      district = { districtCard.district }
+      updateCompareState = { updateCompareState }
+    />
     )
-  }
+  });
+  return (
+    <div className="compare">
+      { comparedCardInfo }
+    </div>
+  )
 }
+
 
 export default Compare;
