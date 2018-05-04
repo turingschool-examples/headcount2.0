@@ -17,7 +17,6 @@
   "rules": {
     "eqeqeq": ["error", "always"],
     "getter-return": ["error", { "allowImplicit": true }],
-    "indent": ["warn", 2],
     "no-template-curly-in-string": "error",
     "semi": ["error", "always"],
     "array-bracket-spacing": ["error", "never"],
@@ -29,7 +28,7 @@
     "comma-style": ["error", "last"],
     "computed-property-spacing": ["error", "never"],
     "func-call-spacing": ["error", "never"],
-    "indent": [2, 4, {"indentSwitchCase": true}],
+    "indent": ["warn", 2, {"SwitchCase": 1}],
     "keyword-spacing": ["error", { "before": true, "after": true }],
     "max-len": ["warn", 80],
     "no-duplicate-imports": "error",
