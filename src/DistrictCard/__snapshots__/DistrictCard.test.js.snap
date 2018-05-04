@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Component renders the data for the district in an unordered list 1`] = `
+<article
+  className="district-card"
+>
+  <section
+    className="district-card-header"
+  >
+    <h2
+      className="district-name"
+    >
+      COLORADO
+    </h2>
+  </section>
+  <section
+    className="district-card-body"
+  >
+    <h3>
+      Yearly Progress
+    </h3>
+    <ul
+      className="district-data"
+    >
+      <li
+        style={
+          Object {
+            "color": "9E0C09",
+          }
+        }
+      >
+        2004
+        : 
+        0.24
+      </li>
+    </ul>
+  </section>
+</article>
+`;
