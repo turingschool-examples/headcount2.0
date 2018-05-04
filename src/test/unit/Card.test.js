@@ -7,12 +7,10 @@ describe('Card', () => {
   let card;
 
   beforeEach(() => {
-    card = mount(<Card />)
-  })
+    card = mount(<Card />);
+  });
 
   it('matches snapshot', () => {
-    // const mockCardData = {location: 'Colorado', stats: {}}
-
-    expect(card).toMatchSnapshot()
+    expect(card).toMatchSnapshot();
   });
-})
+});

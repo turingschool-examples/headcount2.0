@@ -7,8 +7,7 @@ const TableRow = ( {year, yearData, className} ) => {
       <td>{year}</td>
       <td>{yearData}</td>
     </tr>
-  )
-
-}
+  );
+};
 
 export default TableRow;

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import TableRow from './TableRow';
-import './styles/Card.css'
+import './styles/Card.css';
 
 const Card = ({ cardData, className }) => {
   const { location, stats } = cardData;
   const years = Object.keys(stats);
 
   const tableRows = years.map((year, index) => {
-    const yearData = stats[year]
+    const yearData = stats[year];
     return (
       yearData > 0.5 ?
         <TableRow
@@ -23,8 +23,8 @@ const Card = ({ cardData, className }) => {
           key={index}
           className="low-value"
         />
-    )
-  })
+    );
+  });
 
   return (
     <div className="card">
@@ -37,8 +37,7 @@ const Card = ({ cardData, className }) => {
         {tableRows}
       </table>
     </div>
-  )
+  );
+};
 
-}
-
-export default Card
+export default Card;
