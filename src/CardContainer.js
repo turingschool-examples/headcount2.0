@@ -2,8 +2,7 @@ import React from 'react';
 import Card from './Card';
 import './styles/CardContainer.css';
 
-const CardContainer = ({ schoolData }) => {
-  const schoolNames = Object.keys(schoolData);
+const CardContainer = ({ schoolData, schoolNames }) => {
 
   const cards = schoolNames.map((schoolName, index) => {
     const cardData = schoolData[schoolName];
