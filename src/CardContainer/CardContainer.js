@@ -3,12 +3,16 @@ import Card from '../Card/Card.js';
 import PropTypes from 'prop-types';
 import './CardContainer.css'
 
-const CardContainer = ({districtsData}) => {
-  // console.log(districtsData);
+const CardContainer = ({ districtsData, updateCompareState }) => {
+  // console.log("districtsData", districtsData.COLORADO);
   
   const districtCards = Object.keys(districtsData).map((key, index) => {
     return (
-      <Card key={index} district={districtsData[key]} />
+      <Card 
+        key={ index } 
+        district={ districtsData[key] }
+        updateCompareState={ updateCompareState }
+      />
     )
   });
 

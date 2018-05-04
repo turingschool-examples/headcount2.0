@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import './Card.css'
 
 const Card = ( props ) => {
-  // console.log(props)
+  console.log(props)
   let districtKeys = Object.keys(props.district.stats)
   const listItems = districtKeys.map(( stat, index ) => {
     return (
@@ -12,7 +12,7 @@ const Card = ( props ) => {
   })
   
   return (
-    <div className="card"> 
+    <div className="card" onClick={()=>{ props.updateCompareState( props )}}> 
       <h3>
         { props.district.location }
       </h3>
