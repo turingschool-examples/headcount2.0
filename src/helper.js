@@ -13,7 +13,7 @@ export default class DistrictRepository {
       if (acc[key].location !== key) {
         acc[key].location = key.toUpperCase();
       }
-      if (typeof(schoolObj.Data) !== 'number') {
+      if (typeof (schoolObj.Data) !== 'number') {
         acc[key].stats = {
           ...acc[key].stats,
           [schoolObj.TimeFrame]: 0
@@ -28,35 +28,11 @@ export default class DistrictRepository {
     }, {})
   }
 
-  // this.stats = schools.reduce((acc, schoolObj) => {
-  //   const key = schoolObj.Location.toUpperCase()
-  //   if (!acc[key]) {
-  //     acc[key] = {}
-  //   }
-  //   if (acc[key].location !== schoolObj.Location) {
-  //     acc[key].location = key;
-  //   }
-    // if (schoolObj.Data === 'N/A') {
-    //   acc[key].stats = {
-    //     ...acc[key].stats,
-    //     [schoolObj.TimeFrame]: 0
-    //   };
-    // } else {
-    //   acc[key].stats = {
-    //     ...acc[key].stats,
-    //     [schoolObj.TimeFrame]: Math.round(1000 * schoolObj.Data) / 1000
-    //   };
-  //   }
-  //   return acc
-  // }, {})
-
-
   findByName = (userInput) => {
     if (!userInput) {
       return undefined
     }
     let upperCaseInput = userInput.toUpperCase();
-
     const schoolKeys = Object.keys(this.stats)
     const upperCaseKeys = schoolKeys.map(key => key.toUpperCase())
     const match = upperCaseKeys.find(key => {
@@ -66,7 +42,6 @@ export default class DistrictRepository {
     if (match === undefined) {
       return undefined
     } else {
-
       return this.stats[match]
     }
   }
@@ -80,9 +55,7 @@ export default class DistrictRepository {
       const keys = Object.keys(this.stats).filter((key) => {
         return wantToMatch.test(key);
       })
-      console.log(keys)
       return keys
     }
-
   }
 }

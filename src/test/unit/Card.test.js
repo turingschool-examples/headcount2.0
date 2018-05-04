@@ -7,10 +7,11 @@ describe('Card', () => {
   let card;
 
   beforeEach(() => {
-    card = shallow(<Card />)
+    card = mount(<Card />)
   })
 
   it('matches snapshot', () => {
+    // const mockCardData = {location: 'Colorado', stats: {}}
 
     expect(card).toMatchSnapshot()
   });
