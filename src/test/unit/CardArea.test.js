@@ -24,7 +24,7 @@ describe('CardArea', () => {
     //execute
 
     //expect
-    expect(cardArea.find(Card).length).toEqual(1)
+    expect(cardArea.length).toEqual(1)
   })
 
   

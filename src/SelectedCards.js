@@ -1,8 +1,9 @@
 import React from 'react';
 import Card from './Card';
-import './SelectedCards.css'
-import DistrictRepository from './helper.js'
-import data from './data/kindergartners_in_full_day_program'
+import './SelectedCards.css';
+import DistrictRepository from './helper.js';
+import data from './data/kindergartners_in_full_day_program';
+import PropTypes from 'prop-types';
 
 const district = new DistrictRepository(data);
 
@@ -37,5 +38,10 @@ const SelectedCards = (props) => {
     </div>
   );
 }
+
+// SelectedCards.propTypes = {
+//     selectedCards: PropTypes.array,
+//     data: PropTypes.array
+// }
 
 export default SelectedCards;
