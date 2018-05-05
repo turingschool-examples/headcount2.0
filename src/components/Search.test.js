@@ -41,19 +41,3 @@ describe('Search', () => {
 
   }); 
 });
-
-
-
-// const mockedSubmit = jest.fn();
-// const wrapper = shallow(
-//   <CreateThought createThought={mockedSubmit} />
-// );
-// const expectedState = {
-//   title: '',
-//   body: ''
-// };
-
-// // How do we call handleSubmit?
-
-// // How do we assert that our mock was called with the
-// // correct params?
