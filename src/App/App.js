@@ -25,7 +25,10 @@ class App extends Component {
       .filter( district => district.location.includes( sanitizedUserInput ))
 
       if(filteredDistricts.length >= 1) {
-        this.setState({ districtsData: filteredDistricts})
+        const newCompared = this.state.comparedCards.map(district => {
+          return district.district
+        })
+        this.setState({ districtsData: [...newCompared, ...filteredDistricts]})
       }
   }
 
