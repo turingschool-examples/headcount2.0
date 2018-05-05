@@ -14,21 +14,22 @@ const SelectedCards = (props) => {
     }
     return districtCards
   }, []);
-  console.log(districtCards)
+
   let district0;
   let district1;
   let districtsAverage;
-  if(districtCards.length) {
-    district0 = districtCards.findAverage(districtCards[0].props.location);
-    district1 = districtCards.findAverage(districtCards[1].props.location);
-    districtsAverage = districtCards.compareDistrictAverages(districtCards[0].props.location, districtCards[1].props.location)
+
+  if(districtCards.length === 2) {
+    district0 = <h3>{props.selectedCards[1]} {':'} {district.findAverage(districtCards[0].props.location)}</h3>;
+    district1 = <h3>{props.selectedCards[0]} {':'} {district.findAverage(districtCards[1].props.location)}</h3>;
+    districtsAverage = <h2>{"<------ "} {district.compareDistrictAverages(districtCards[0].props.location, districtCards[1].props.location).compared} { " ------>"}</h2>;
   }
 
   return (
     <div className='selected-cards'>
       { districtCards[0] }
-      <div className='compare-shit'>
-        {district0} 
+      <div className='compare-cards'>
+        {district0}
         {districtsAverage}
         {district1}
       </div>
