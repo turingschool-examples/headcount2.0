@@ -22,11 +22,20 @@ class App extends Component {
     this.setState({ repo: filteredDistricts });
   }
 
+  getCompareData = () => {
+    if(this.state.compareCards.length === 2) {
+      const comparison = repoHelper.compareDistrictAverages(Object.keys(this.state.compareCards[0])[0], Object.keys(this.state.compareCards[1])[0])
+      this.setState({compareData: comparison})
+    }
+  }
+
   addCompareCard = (title) => {
-    const matchingDistrict = this.state.repo.find(district => {
-      return Object.keys(district)[0] === title 
-    }) 
-    this.setState({compareCards: [...this.state.compareCards, matchingDistrict]})
+    if(this.state.compareCards.length < 2) {
+      const matchingDistrict = this.state.repo.find(district => {
+        return Object.keys(district)[0] === title 
+      }) 
+      this.setState({compareCards: [...this.state.compareCards, matchingDistrict]}, this.getCompareData)
+    }
   }
 
   render() {
