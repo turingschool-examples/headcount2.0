@@ -22,14 +22,5 @@ describe('App', () => {
     expect(wrapper.state().selectedCards).toEqual([]);
   });
 
-  // it('updates state of districts on user input', () => {
-  //   const districts = new DistrictRepository(kinderData);
-  //   const setLocationData = jest.fn();
-  //   const wrapper = mount(<App districts={ districts }  setLocationData={setLocationData}/>);
-    
-  
-   
-    
-  // });
 });
 

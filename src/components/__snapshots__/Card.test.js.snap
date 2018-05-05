@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    selectedCards={Array []}
+    setSelectedCard={[Function]}
+    stats={
+        Object {
+            "COLORADO": Object {
+              "location": "COLORADO",
+              "selected": false,
+              "stats": Object {},
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2 />,
+        <hr />,
+        <ul>
+          <li
+                    className=""
+          >
+                    COLORADO
+                    : 
+                    <span>
+                              Object {
+                                        "location": "COLORADO",
+                                        "selected": false,
+                                        "stats": Object {},
+                                      }
+                    </span>
+          </li>
+</ul>,
+      ],
+      "className": "card ",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "hr",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li
+              className=""
+>
+              COLORADO
+              : 
+              <span>
+                            Object {
+                                          "location": "COLORADO",
+                                          "selected": false,
+                                          "stats": Object {},
+                                        }
+              </span>
+</li>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "COLORADO",
+                ": ",
+                <span>
+                  Object {
+                                    "location": "COLORADO",
+                                    "selected": false,
+                                    "stats": Object {},
+                                  }
+</span>,
+              ],
+              "className": "",
+            },
+            "ref": null,
+            "rendered": Array [
+              "COLORADO",
+              ": ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Object {
+                    "location": "COLORADO",
+                    "selected": false,
+                    "stats": Object {},
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "location": "COLORADO",
+                  "selected": false,
+                  "stats": Object {},
+                },
+                "type": "span",
+              },
+            ],
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2 />,
+          <hr />,
+          <ul>
+            <li
+                        className=""
+            >
+                        COLORADO
+                        : 
+                        <span>
+                                    Object {
+                                                "location": "COLORADO",
+                                                "selected": false,
+                                                "stats": Object {},
+                                              }
+                        </span>
+            </li>
+</ul>,
+        ],
+        "className": "card ",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "hr",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li
+                className=""
+>
+                COLORADO
+                : 
+                <span>
+                                Object {
+                                                "location": "COLORADO",
+                                                "selected": false,
+                                                "stats": Object {},
+                                              }
+                </span>
+</li>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "COLORADO",
+                  ": ",
+                  <span>
+                    Object {
+                                        "location": "COLORADO",
+                                        "selected": false,
+                                        "stats": Object {},
+                                      }
+</span>,
+                ],
+                "className": "",
+              },
+              "ref": null,
+              "rendered": Array [
+                "COLORADO",
+                ": ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Object {
+                      "location": "COLORADO",
+                      "selected": false,
+                      "stats": Object {},
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "location": "COLORADO",
+                    "selected": false,
+                    "stats": Object {},
+                  },
+                  "type": "span",
+                },
+              ],
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

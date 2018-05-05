@@ -36,8 +36,8 @@ describe('Search', () => {
       userInput: ""
     };
 
-    wrapper.instance().handleSubmit(mockEvent)
-    expect(wrapper.state()).toEqual(expectedState)
+    wrapper.instance().handleSubmit(mockEvent);
+    expect(wrapper.state()).toEqual(expectedState);
 
   }); 
 });

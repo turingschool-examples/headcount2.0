@@ -4,7 +4,6 @@ import Card from './Card';
 import {shallow, mount} from 'enzyme';
 
 describe('Districts', () => {
-
   
   it('should match the snapshot', () => {
     const wrapper = shallow(<Districts stats={{location: 'Colorado', stats:{}, selected: false}} setSelectedCard={jest.fn()} selectedCards={[]} />);
