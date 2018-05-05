@@ -1,12 +1,13 @@
 import React from 'react';
 
 
-const ComparisonCard = ({ findAverage, compareDistrictAverages, comparedSchools } ) => {
+const ComparisonCard = ({ schoolRepository, comparedSchools } ) => {
   
-  // const { findAverage, compareDistrictAverages } = schoolRepository;
+  const { findAverage, compareDistrictAverages } = schoolRepository;
   const schoolOneAvg = findAverage(comparedSchools[0]);
   const schoolTwoAvg = findAverage(comparedSchools[1]);
-  const comparisonInfo = compareDistrictAverages(comparedSchools[0], comparedSchools[1]);
+  const comparisonInfo = 
+    compareDistrictAverages(comparedSchools[0], comparedSchools[1]);
 
   return (
     <div>
