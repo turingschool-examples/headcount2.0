@@ -56,7 +56,6 @@ export default class DistrictRepository {
     district2 = district2.toUpperCase();
     const avg1 = this.findAverage( district1 );
     const avg2 = this.findAverage( district2 );
-    console.log(this.stats[district1].location);
     const roundedAverge = Math.round((avg1 / avg2) * 1000) / 1000;
     const comparedValue = { [this.stats[district1].location]: avg1, [this.stats[district2].location]: avg2, compared: roundedAverge };
     return comparedValue;
