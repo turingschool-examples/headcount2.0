@@ -3,7 +3,7 @@ import Card from '../Card/Card.js';
 import PropTypes from 'prop-types';
 import './CardContainer.css'
 
-const CardContainer = ({ districtsData, updateCompareState }) => {
+const CardContainer = ({ districtsData, updateCompareState, comparedCards }) => {
   // console.log("districtsData", districtsData.COLORADO);
   
   const districtCards = Object.keys(districtsData).map((key, index) => {
@@ -12,6 +12,7 @@ const CardContainer = ({ districtsData, updateCompareState }) => {
         key={ index } 
         district={ districtsData[key] }
         updateCompareState={ updateCompareState }
+        comparedCards = {comparedCards}
       />
     )
   });
