@@ -15,7 +15,6 @@ const CardArea = (props) => {
       {districtCards}
     </div>
   )
-
 }
 
 CardArea.propTypes = {

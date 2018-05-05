@@ -1,5 +1,4 @@
 import React from 'react';
-import DistrictRepository from './helper';
 import PropTypes from 'prop-types';
 
 const Search = ({ changeData }) => {
