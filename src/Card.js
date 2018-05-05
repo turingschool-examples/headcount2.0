@@ -2,6 +2,7 @@ import React from 'react';
 import './Card.css';
 
 const Card = (props) => {
+  let locationMatch = props.selectedCards.includes(props.location)
   const yearKeys = Object.keys(props.stats);
   const dataElement = yearKeys.map((year, index) => {
     let lowStat =  <span className="card-low-stat">{props.stats[year]}</span>;
@@ -16,7 +17,7 @@ const Card = (props) => {
   })
 
   return (
-    <div className="card">
+    <div className={locationMatch ? 'selected card' : 'card'} onClick={props.selectCard} >
       <h3>{props.location}</h3>
       <hr />
       <ul>
