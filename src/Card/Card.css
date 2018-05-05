@@ -19,3 +19,12 @@ h3 {
   font-size: 15px;
   padding: 0 7px;
 }
+
+.greater-than {
+  color: orange;
+  font-weight: bold
+}
+
+.less-than {
+  color: blueviolet
+}

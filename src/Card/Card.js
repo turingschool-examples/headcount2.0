@@ -14,6 +14,7 @@ class Card extends Component {
 
   handleCardClick = () => {
     this.setState({ clicked: !this.state.clicked });
+    console.log(this.props)
     this.props.updateCompareState(this.state.clicked, this.props);
   }
 
@@ -21,7 +22,10 @@ class Card extends Component {
     let districtKeys = Object.keys(this.props.district.stats);
     const listItems = districtKeys.map(( stat, index ) => {
       return (
-        <li key={ index }> { `${stat}: ${this.props.district.stats[stat]}` } </li>
+        <li 
+        key={ index }
+          className={ this.props.district.stats[stat] > 0.5 ? 'greater-than' : 'less-than'}
+        > { `${stat}: ${this.props.district.stats[stat]}` } </li>
       )
     });
   
