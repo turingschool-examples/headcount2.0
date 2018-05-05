@@ -49,11 +49,7 @@ class App extends Component {
         <h1>HeadCount 2.0</h1>
         <Search setLocationData={this.setLocationData}/>
         <section className="comparisonContainer">
-          <ComparisonCard 
-            selectedCards={this.state.selectedCards}
-            districts={this.state.districts}
-          />
-          <CompareCards selectedCards={this.state.selectedCards} setSelectedCard={this.setSelectedCard} />
+          <CompareCards selectedCards={this.state.selectedCards} setSelectedCard={this.setSelectedCard} districts={this.state.districts} />
         </section>
         <Districts stats={this.state.schoolStats} setSelectedCard={this.setSelectedCard} selectedCards={this.state.selectedCards} />
       </main>
