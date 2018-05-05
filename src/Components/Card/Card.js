@@ -15,7 +15,7 @@ const Card = ({ section, title, listOfData, addCompareCard, removeCompareCard })
 
   let clickFunc
   if (section === 'compare') {
-    clickFunc = () => removeCompareCard(title)
+    clickFunc = () => removeCompareCard(title) 
   } else {
     clickFunc = () => addCompareCard(title)
   }

@@ -18,21 +18,20 @@ const Compare = ({ compareCards, compareData, removeCompareCard }) => {
 
   function createCompareCard() {
     if (compareCards.length === 2 && compareData) {
-      console.log(compareData)
-    const compareDataEntries = Object.entries(compareData)
-    const district1Title = compareDataEntries[0][0]
-    const district1Average = compareDataEntries[0][1]
-    const district2Title = compareDataEntries[1][0]
-    const district2Average = compareDataEntries[1][1]
-    const compared = compareDataEntries[2][1]
+      const compareDataEntries = Object.entries(compareData)
+      const district1Title = compareDataEntries[0][0]
+      const district1Average = compareDataEntries[0][1]
+      const district2Title = compareDataEntries[1][0]
+      const district2Average = compareDataEntries[1][1]
+      const compared = compareDataEntries[2][1]
 
-    return (
-        <div className="card compare-data">
-          <h3>{district1Title}: {district1Average}</h3>
-          <h3>{compared}</h3>
-          <h3>{district2Title}: {district2Average}</h3>
-        </div>
-      )
+      return (
+          <div className="card compare-data">
+            <h3>{district1Title}: {district1Average}</h3>
+            <h3>{compared}</h3>
+            <h3>{district2Title}: {district2Average}</h3>
+          </div>
+        )
    }
   }
 
