@@ -27,12 +27,10 @@ describe('SearchField component', ()=>{
   });
 
   it('updates state when handleSearch is called', () => {
-    
     const mockEvent = {target: {value: 'l'}};
-    wrapper.instance().handleSearch(mockEvent)
+    wrapper.instance().handleSearch(mockEvent);
 
-    expect(wrapper.state('inputValue')).toBe(mockEvent)
-
+    expect(wrapper.state('inputValue')).toBe(mockEvent);
   });
 
 });
