@@ -5,6 +5,7 @@ import kinderData from './data/kindergartners_in_full_day_program';
 import CardContainer from './CardContainer';
 import logo from './images/HeadCount.svg';
 import SearchField from './SearchField';
+import ComparisonContainer from './ComparisonContainer';
 
 
 class App extends Component {
@@ -22,14 +23,14 @@ class App extends Component {
     const filteredSchoolNames = this.state.schoolRepository.findAllMatches(inputValue);
     this.setState({ schoolNames: filteredSchoolNames });
     console.log("WHY THO")
-    
+
   }
 
   componentDidMount() {
     const schoolNames = this.state.schoolRepository.findAllMatches();
     const schoolData = this.state.schoolRepository.stats;
-    this.setState({ 
-      schoolNames, 
+    this.setState({
+      schoolNames,
       schoolData
     });
   }
@@ -43,20 +44,35 @@ class App extends Component {
     return (
       <div>
         <nav className="nav-head">
-          <img className="logo" src={logo}/>
-          <SearchField 
+          <img className="logo" src={logo} alt="head-count" />
+          <SearchField
             searchSchools={this.searchSchools}
           />
         </nav>
+        {this.state.comparedSchools.length &&
+          <div>
+            <ComparisonContainer
+              schoolData={this.state.schoolData}
+              schoolRepository={this.state.schoolRepository}
+              comparedSchools={this.state.comparedSchools}
+            />
+          </div>
+        }
         <div className="wrapper">
-          <CardContainer 
-            schoolData={this.state.schoolData} 
+          <CardContainer
+            schoolData={this.state.schoolData}
             className="card-container"
             schoolNames={this.state.schoolNames}
             updateComparedSchools={this.updateComparedSchools}
           />
         </div>
       </div>
+
+
+
+
+
+
     );
   }
 }

@@ -66,7 +66,7 @@ export default class DistrictRepository {
       return acc + dataPoint
     }, 0)/schoolValues.length;
 
-    const roundedAvg = Math.round(1000 * avg)/1000
+    const roundedAvg = Math.round(1000 * avg)/1000;
     return roundedAvg;
   }
 
