@@ -14,11 +14,11 @@ class Card extends Component {
 
   handleCardClick = () => {
     this.setState({ clicked: !this.state.clicked });
-    console.log(this.props)
     this.props.updateCompareState(this.state.clicked, this.props);
   }
 
   render() {
+
     let districtKeys = Object.keys(this.props.district.stats);
     const listItems = districtKeys.map(( stat, index ) => {
       return (

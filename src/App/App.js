@@ -31,16 +31,17 @@ class App extends Component {
 
   updateCompareState = ( clickedState, comparedCard ) => {
       if(clickedState) {
-        if(this.state.comparedCards.length < 2) {
+
+        if(this.state.comparedCards.length <2) {
           this.addComparedCard(comparedCard);
-        }
-      } else {
+        } 
+    } else {
         this.removeComparedCard(comparedCard);
       }
   }
 
-  addComparedCard(cardInfo) {
 
+  addComparedCard(cardInfo) {
     this.setState({comparedCards: [ ...this.state.comparedCards, cardInfo] })
   }
   
