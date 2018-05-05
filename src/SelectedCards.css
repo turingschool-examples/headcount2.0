@@ -1,8 +1,20 @@
 .selected-cards {
+  color: rgb(255, 222, 173);
   display: flex;
   justify-content: space-between;
   max-width: 110rem;
   margin: 0 auto;
   height: 25rem;
   align-items: center;
+}
+
+.compare-cards {
+  color: white;
+  font-size: 1.5rem;
+  /* background-color: rgb(32, 56, 69); */
+  text-align: center;
+  margin: .5rem;
+  width: 35rem;
+  height: 15rem;
+
 }
