@@ -5,7 +5,7 @@ import './CardArea.css';
 const CardArea = (props) => {
   const districtKeys = Object.keys(props.data)
   const districtCards = districtKeys.map((districtKey, index) =>
-    <Card key={index} {...props.data[districtKey]} />
+    <Card key={index} {...props.data[districtKey]} selectCard={props.selectCard} selectedCards={props.selectedCards}/>
   );
 
   return(

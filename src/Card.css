@@ -1,5 +1,6 @@
 .card {
   background-color: rgb(32, 56, 69);
+  border: 1px solid rgba(32, 56, 69, 0);
   margin: .5rem;
   width: 35rem;
   height: 15rem;
@@ -37,4 +38,8 @@
 
 .card-low-stat {
   color: rgb(255, 173, 148);
+}
+
+.selected {
+  border: 1px solid goldenrod;
 }
