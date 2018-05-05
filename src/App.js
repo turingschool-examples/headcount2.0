@@ -13,7 +13,8 @@ class App extends Component {
     this.state = {
       schoolRepository: new DistrictRepository(kinderData),
       schoolNames: [],
-      schoolData: {}
+      schoolData: {},
+      comparedSchools: [],
     };
   }
 
@@ -33,6 +34,11 @@ class App extends Component {
     });
   }
 
+  updateComparedSchools = (string) => {
+    const comparedSchools = [string, ...this.state.comparedSchools]
+    this.setState({ comparedSchools })
+  }
+
   render() {
     return (
       <div>
@@ -47,6 +53,7 @@ class App extends Component {
             schoolData={this.state.schoolData} 
             className="card-container"
             schoolNames={this.state.schoolNames}
+            updateComparedSchools={this.updateComparedSchools}
           />
         </div>
       </div>

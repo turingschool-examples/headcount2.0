@@ -3,7 +3,7 @@ import TableRow from './TableRow';
 import './styles/Card.css';
 import PropTypes from 'prop-types';
 
-const Card = ({ cardData }) => {
+const Card = ({ cardData, updateComparedSchools }) => {
   const { stats } = cardData;
   const years = Object.keys(stats);
 
@@ -28,7 +28,9 @@ const Card = ({ cardData }) => {
   });
 
   return (
-    <div className="card">
+    <div
+      className="card"
+      onClick={() => updateComparedSchools(cardData.location)} >
       <h1>{cardData.location}</h1>
       <table>
         <tr>
