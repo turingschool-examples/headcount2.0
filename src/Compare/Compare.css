@@ -1,4 +1,6 @@
 .compare {
   height: 245px;
   background-color: blanchedalmond;
+  display: flex;
+  justify-content: center;
 }
