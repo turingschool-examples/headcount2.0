@@ -1,6 +1,6 @@
 export default class DistrictRepository {
-  constructor(data) {
-    this.stats = this.sanitize(data);
+  constructor(rawSchoolData) {
+    this.stats = this.sanitize(rawSchoolData);
     // this.stats = stats;
   }
 
@@ -51,7 +51,6 @@ export default class DistrictRepository {
       return Object.keys(this.stats);
     } else {
       const wantToMatch = new RegExp(userInput, 'i');
-      const uppers = userInput.toUpperCase();
       const keys = Object.keys(this.stats).filter((key) => {
         return wantToMatch.test(key);
       });

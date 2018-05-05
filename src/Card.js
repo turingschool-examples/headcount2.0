@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TableRow from './TableRow';
 import './styles/Card.css';
+import PropTypes from 'prop-types';
 
-const Card = ({ cardData, className }) => {
-  const { location, stats } = cardData;
+const Card = ({ cardData }) => {
+  const { stats } = cardData;
   const years = Object.keys(stats);
 
   const tableRows = years.map((year, index) => {
@@ -38,6 +39,10 @@ const Card = ({ cardData, className }) => {
       </table>
     </div>
   );
+};
+
+Card.propTypes = {
+  cardData: PropTypes.object.isRequired
 };
 
 export default Card;

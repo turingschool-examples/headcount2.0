@@ -4,6 +4,7 @@ import DistrictRepository from './helper';
 import kinderData from './data/kindergartners_in_full_day_program';
 import CardContainer from './CardContainer';
 import logo from './images/HeadCount.svg';
+import SearchField from './SearchField';
 
 
 class App extends Component {
@@ -14,6 +15,13 @@ class App extends Component {
       schoolNames: [],
       schoolData: {}
     };
+  }
+
+  searchSchools = (inputValue) => {
+    const filteredSchoolNames = this.state.schoolRepository.findAllMatches(inputValue);
+    this.setState({ schoolNames: filteredSchoolNames });
+    console.log("WHY THO")
+    
   }
 
   componentDidMount() {
@@ -30,12 +38,15 @@ class App extends Component {
       <div>
         <nav className="nav-head">
           <img className="logo" src={logo}/>
-          {/* <SearchField /> */}
+          <SearchField 
+            searchSchools={this.searchSchools}
+          />
         </nav>
         <div className="wrapper">
           <CardContainer 
             schoolData={this.state.schoolData} 
             className="card-container"
+            schoolNames={this.state.schoolNames}
           />
         </div>
       </div>
