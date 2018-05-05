@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Card.css';
 
-const Card = ({ title, listOfData }) => {
+const Card = ({ title, listOfData, addCompareCard }) => {
   const listItems = listOfData.map((data, index) => {
     const year = Object.keys(data)[0];
     const dataNum = Object.values(data)[0];
@@ -14,7 +14,8 @@ const Card = ({ title, listOfData }) => {
   })
 
   return (
-    <div className="card">
+    <div className="card" 
+          onClick={() => addCompareCard(title)}>
       <h3>{ title }</h3>
       <ul>{ listItems }</ul>
     </div>
