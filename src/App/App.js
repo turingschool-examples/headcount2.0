@@ -35,6 +35,7 @@ class App extends Component {
         if(this.state.comparedCards.length <2) {
           this.addComparedCard(comparedCard);
         } 
+
     } else {
         this.removeComparedCard(comparedCard);
       }
@@ -46,6 +47,7 @@ class App extends Component {
   }
   
   removeComparedCard(cardInfo) {
+    console.log(cardInfo)
     const comparedCards = this.state.comparedCards.filter(card => {
       return card.district.location !== cardInfo.district.location
     });

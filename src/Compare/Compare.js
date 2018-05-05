@@ -18,7 +18,7 @@ const Compare = ({ updateCompareState, comparedCards }) => {
         updateCompareState={updateCompareState}
       />
       <CompareCard compareInfo={compareInfo} />
-      <Card key={Date.now()}
+      <Card key={(Date.now()+1)}
         district={comparedCards[1].district}
         updateCompareState={updateCompareState}
       />
