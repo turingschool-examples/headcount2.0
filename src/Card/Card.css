@@ -6,6 +6,10 @@
     margin: 7px;
 }
 
+.clicked {
+background-color: aqua;
+}
+
 ul {
   list-style-type: none;
 }

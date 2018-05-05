@@ -33,7 +33,7 @@ class App extends Component {
   }
 
   updateCompareState = ( clickedState, comparedCard ) => {
-      if(clickedState) {
+      if(!clickedState) {
 
         if(this.state.comparedCards.length <2) {
           this.addComparedCard(comparedCard);
@@ -50,7 +50,6 @@ class App extends Component {
   }
   
   removeComparedCard(cardInfo) {
-    console.log(cardInfo)
     const comparedCards = this.state.comparedCards.filter(card => {
       return card.district.location !== cardInfo.district.location
     });
@@ -81,6 +80,7 @@ class App extends Component {
         <CardContainer 
           districtsData={ this.state.districtsData }
           updateCompareState={ this.updateCompareState }
+          comparedCards={ this.state.comparedCards }
         />
       </div>
     );

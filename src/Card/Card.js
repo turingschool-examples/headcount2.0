@@ -7,12 +7,18 @@ class Card extends Component {
     super(props);
 
     this.state = {
-      clicked: true
+      clicked: false
     }
 
   }
 
   handleCardClick = () => {
+    
+    if (this.props.comparedCards.length === 2  && !this.props.comparedCards.find(district => {
+      return district.district.location === this.props.district.location
+    })) {
+      return
+    }
     this.setState({ clicked: !this.state.clicked });
     this.props.updateCompareState(this.state.clicked, this.props);
   }
@@ -30,7 +36,10 @@ class Card extends Component {
     });
   
     return (
-      <div className="card" onClick={ this.handleCardClick }> 
+      <div 
+        className={this.state.clicked ? 'card clicked' : 'card'} 
+        onClick={ this.handleCardClick }
+      > 
         <h3>
           { this.props.district.location }
         </h3>
