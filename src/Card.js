@@ -4,6 +4,7 @@ import './styles/Card.css';
 import PropTypes from 'prop-types';
 
 const Card = ({ cardData, updateComparedSchools }) => {
+  
   const { stats } = cardData;
   const years = Object.keys(stats);
 

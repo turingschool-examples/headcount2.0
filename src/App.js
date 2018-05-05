@@ -5,6 +5,7 @@ import kinderData from './data/kindergartners_in_full_day_program';
 import CardContainer from './CardContainer';
 import logo from './images/HeadCount.svg';
 import SearchField from './SearchField';
+import ComparisonContainer from './ComparisonContainer';
 
 
 class App extends Component {
@@ -40,7 +41,7 @@ class App extends Component {
   }
 
   render() {
-    return (
+    return ( 
       <div>
         <nav className="nav-head">
           <img className="logo" src={logo}/>
@@ -48,7 +49,14 @@ class App extends Component {
             searchSchools={this.searchSchools}
           />
         </nav>
+        {this.state.comparedSchools.length &&
+        <div>
+          <ComparisonContainer comparedSchools={this.state.comparedSchools} schoolData={this.state.schoolData}/>
+        </div>
+        }
+
         <div className="wrapper">
+          
           <CardContainer 
             schoolData={this.state.schoolData} 
             className="card-container"
@@ -57,6 +65,12 @@ class App extends Component {
           />
         </div>
       </div>
+    
+      
+    
+      
+
+
     );
   }
 }
