@@ -15,7 +15,6 @@ class SearchField extends Component {
     this.props.searchSchools(event.target.value);
   }
 
-
   render() {
     return (
       <form className="search-form">
@@ -25,6 +24,7 @@ class SearchField extends Component {
           placeholder="Search school"
           value={this.state.inputValue}
           onChange={this.handleSearch}
+          className="user-input"
         />
       </form>
     );
@@ -32,7 +32,7 @@ class SearchField extends Component {
 }
 
 SearchField.propTypes = {
-  findAllMatches: PropTypes.func.isRequired
+  searchSchools: PropTypes.func
 };
 
 export default SearchField;
