@@ -38,3 +38,7 @@
 .card-low-stat {
   color: rgb(255, 173, 148);
 }
+
+.selected {
+  border: 1px solid goldenrod;
+}

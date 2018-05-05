@@ -1,0 +1,8 @@
+.selected-cards {
+  display: flex;
+  justify-content: space-between;
+  max-width: 110rem;
+  margin: 0 auto;
+  height: 25rem;
+  align-items: center;
+}
