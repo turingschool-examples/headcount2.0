@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card'
+import './CardArea.css';
 
 const CardArea = (props) => {
   const districtKeys = Object.keys(props.data)
@@ -8,7 +9,7 @@ const CardArea = (props) => {
   );
 
   return(
-    <div>
+    <div className="card-area">
       {districtCards}
     </div>
   )
