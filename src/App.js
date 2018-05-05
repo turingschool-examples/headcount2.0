@@ -44,14 +44,20 @@ class App extends Component {
     return ( 
       <div>
         <nav className="nav-head">
-          <img className="logo" src={logo}/>
+          <img className="logo" src={logo} alt="head-count"/>
           <SearchField 
             searchSchools={this.searchSchools}
           />
         </nav>
         {this.state.comparedSchools.length &&
         <div>
-          <ComparisonContainer comparedSchools={this.state.comparedSchools} schoolData={this.state.schoolData}/>
+          <ComparisonContainer
+            
+            schoolData={this.state.schoolData}
+            findAverage={this.state.schoolRepository.findAverage}
+            compareDistrictAverages={this.state.schoolRepository.compareDistrictAverages}
+            comparedSchools={this.state.comparedSchools}
+            />
         </div>
         }
 

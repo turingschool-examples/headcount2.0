@@ -4,7 +4,7 @@ import './styles/Card.css';
 import PropTypes from 'prop-types';
 
 const Card = ({ cardData, updateComparedSchools }) => {
-  
+
   const { stats } = cardData;
   const years = Object.keys(stats);
 
@@ -34,18 +34,24 @@ const Card = ({ cardData, updateComparedSchools }) => {
       onClick={() => updateComparedSchools(cardData.location)} >
       <h1>{cardData.location}</h1>
       <table>
-        <tr>
-          <th>Year</th>
-          <th>Mystery Data</th>
-        </tr>
-        {tableRows}
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Mystery Data</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tableRows}
+        </tbody>
       </table>
     </div>
   );
 };
 
 Card.propTypes = {
-  cardData: PropTypes.object.isRequired
+  cardData: PropTypes.object.isRequired,
+  updateComparedSchools: PropTypes.func
+
 };
 
 export default Card;
