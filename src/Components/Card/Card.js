@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Card.css';
 
-const Card = ({ title, listOfData, addCompareCard }) => {
+const Card = ({ section, title, listOfData, addCompareCard, removeCompareCard }) => {
   const listItems = listOfData.map((data, index) => {
     const year = Object.keys(data)[0];
     const dataNum = Object.values(data)[0];
@@ -13,9 +13,16 @@ const Card = ({ title, listOfData, addCompareCard }) => {
     return <li className={ dataStyle } key={ `listItem${index}` }>{ listItem }</li>;
   })
 
+  let clickFunc
+  if (section === 'compare') {
+    clickFunc = () => removeCompareCard(title)
+  } else {
+    clickFunc = () => addCompareCard(title)
+  }
+
   return (
     <div className="card" 
-          onClick={() => addCompareCard(title)}>
+          onClick={clickFunc}>
       <h3>{ title }</h3>
       <ul>{ listItems }</ul>
     </div>

@@ -38,13 +38,21 @@ class App extends Component {
     }
   }
 
+  removeCompareCard = (title) => {
+    const newCompareCards = this.state.compareCards.filter(district => {
+      return Object.keys(district)[0] !== title
+    })
+    this.setState({compareCards: newCompareCards})
+  }
+
   render() {
     return (
       <div>
         <h1 className="header">Welcome To Headcount 2.0</h1>
         <Search updateRepoInState={ this.updateRepoInState } />
         <Compare compareCards={this.state.compareCards}
-                  compareData={this.state.compareData} />
+                  compareData={this.state.compareData} 
+                  removeCompareCard={this.removeCompareCard}/>
         <CardContainer repo={ this.state.repo } 
                        addCompareCard={this.addCompareCard}/>
       </div>
