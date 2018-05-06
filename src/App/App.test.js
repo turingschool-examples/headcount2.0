@@ -50,19 +50,7 @@ describe('App', () => {
 
     beforeEach(() => {
       app = shallow(<App />);
-      app.setState({
-        districtsData: {
-          COLORADO: {
-            location: "COLORADO",
-            stats: { 2007: 0.013, 2009: 3.004, 2013: 1.101 }
-          },
-          Pueblo: {
-            location: "PUEBLO",
-            stats: { 2007: 0.013, 2009: 3.004, 2013: 1.101 }
-          }
-        },
-        comparedCards: []
-      })
+      
     })
 
     it('should change the state of districtsData based on the value it is passed', () => {
@@ -99,27 +87,12 @@ describe('App', () => {
   })
 
   describe('updateCompareState method', () => {
-
-    beforeEach(() => {
       let app;
 
       beforeEach(() => {
         app = shallow(<App />);
-        app.setState({
-          districtsData: {
-            COLORADO: {
-              location: "COLORADO",
-              stats: { 2007: 0.013, 2009: 3.004, 2013: 1.101 }
-            },
-            Pueblo: {
-              location: "PUEBLO",
-              stats: { 2007: 0.013, 2009: 3.004, 2013: 1.101 }
-            }
-          },
-          comparedCards: []
-        })
       })
-    })
+    
 
     it('should call addComparedCard if the clicked state is false', () => {
       const mockClickedState = false;
@@ -149,6 +122,24 @@ describe('App', () => {
 
       app.instance().updateCompareState(mockClickedState, mockComparedCard)
       expect(spy).not.toHaveBeenCalled()
+    })
+  })
+
+  describe('addComparedCard method', () => {
+    let app;
+
+    beforeEach(() => {
+      app = shallow(<App />);
+      
+    })
+
+    it('should add a card to the comparedCards state', () => {
+      const mockCardInfo = {};
+
+      expect(app.state('comparedCards')).toHaveLength(0)
+      app.instance().addComparedCard(mockCardInfo)
+      expect(app.state('comparedCards')).toHaveLength(1)
+      
     })
   })
 })
