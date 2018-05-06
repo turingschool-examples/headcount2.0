@@ -10,15 +10,17 @@ describe('App', () => {
 
   beforeEach(()=>{
     app = shallow(<App />);
-    app.state.districtsData = { 
-      COLORADO: { 
-          location: "COLORADO", 
-          stats: { 2007: 0.013, 2009: 3.004, 2013: 1.101 }
-      } 
-    };
+    app.setState({
+      districtsData: { 
+        COLORADO: { 
+            location: "COLORADO", 
+            stats: { 2007: 0.013, 2009: 3.004, 2013: 1.101 }
+        } 
+      }
+    })
   }) 
 
-  it.skip('renders without crashing', () => {
+  it('matches the snapshot', () => {
     const app = renderer.create(<App />);
 
     expect(app).toMatchSnapshot();
@@ -29,13 +31,71 @@ describe('App', () => {
   })
 
   it('should have a districtsData state of an object', () => {
-    console.log(app.state.districtsData);
-    
-    expect(app.state('districtsData')).toEqual({});
+    const expectedState = {
+        COLORADO: {
+          location: "COLORADO",
+          stats: { 2007: 0.013, 2009: 3.004, 2013: 1.101 }
+        }
+    }
+
+    expect(app.state('districtsData')).toEqual(expectedState);
   })
 
-  it('should render CardContainer component with the correct prop', () => {
-    expect(app.find(CardContainer).prop('districtsData')).toEqual({});
+  it('should start with a default comparedCards state of an empty array', () => {
+    expect(app.state('comparedCards')).toEqual([]);
+  })
+
+  describe('searchFilter method', () => {
+    let app;
+
+    beforeEach(() => {
+      app = shallow(<App />);
+      app.setState({
+        districtsData: {
+          COLORADO: {
+            location: "COLORADO",
+            stats: { 2007: 0.013, 2009: 3.004, 2013: 1.101 }
+          },
+          Pueblo: {
+            location: "PUEBLO",
+            stats: { 2007: 0.013, 2009: 3.004, 2013: 1.101 }
+          }
+        },
+        comparedCards: []
+      })
+    })
+
+    it('should change the state of districtsData based on the value it is passed', () => {
+      const mockInput = 'TOP'
+      const expectedState = [{ 
+        "location": "COTOPAXI RE-3", 
+        "stats": { "2004": 0, "2005": 0, "2006": 0, "2007": 0, "2008": 1, "2009": 1, "2010": 1, "2011": 1, "2012": 1, "2013": 1, "2014": 1 } }]
+
+      app.instance().searchFilter(mockInput)
+      expect(app.state('districtsData')).toEqual(expectedState)
+    })
+
+    it('should not be case sensitive', () => {
+      const mockInput = 'Top'
+      const expectedState = [{
+        "location": "COTOPAXI RE-3",
+        "stats": { "2004": 0, "2005": 0, "2006": 0, "2007": 0, "2008": 1, "2009": 1, "2010": 1, "2011": 1, "2012": 1, "2013": 1, "2014": 1 }
+      }]
+
+      app.instance().searchFilter(mockInput)
+      expect(app.state('districtsData')).toEqual(expectedState)
+    })
+
+    it('should work with numbers', () => {
+      const mockInput = '51'
+      const expectedState = [{ 
+        "location": "MESA COUNTY VALLEY 51", 
+        "stats": { "2004": 0.307, "2005": 0.305, "2006": 0.255, "2007": 0.245, "2008": 0.262, "2009": 0.18, "2010": 0.182, "2011": 0.224, "2012": 0.198, "2013": 0.179, "2014": 0.482 } 
+      }]
+
+      app.instance().searchFilter(mockInput)
+      expect(app.state('districtsData')).toEqual(expectedState)
+    })
   })
 })
 
