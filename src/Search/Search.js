@@ -19,7 +19,13 @@ updateFilterInfo = (e) => {
   render(){
     return(
       <form className="search">
-        <input type="text" placeholder="Search for a district" onKeyUp={ this.updateFilterInfo } onChange={ this.updateUserInput } value={  this.state.userInput } />
+        <input 
+          type="text" 
+          placeholder="Search for a district" 
+          onKeyUp={ this.updateFilterInfo } 
+          onChange={ this.updateUserInput } 
+          value={  this.state.userInput } 
+        />
       </form>   
     )
   }
