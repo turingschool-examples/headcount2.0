@@ -28,6 +28,7 @@ const SelectedCards = (props) => {
 
   return (
     <div className='selected-cards'>
+      <p className='info-text'>Selected Comparisons</p>
       { districtCards[0] }
       <div className='compare-cards'>
         {district0}

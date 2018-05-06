@@ -2,19 +2,45 @@
   color: rgb(255, 222, 173);
   display: flex;
   justify-content: space-between;
-  max-width: 110rem;
+  max-width: 107rem;
   margin: 0 auto;
   height: 25rem;
   align-items: center;
+  background-color: rgba(0, 255, 127, 0.2);
+  
 }
+
+.selected-cards div {
+  margin: 1rem;
+}
+
+.info-text {
+  align-self: start;
+    position: absolute;
+    margin: 0rem;
+    color: rgb(0, 255, 127);
+}
+
 
 .compare-cards {
   color: white;
   font-size: 1.5rem;
-  /* background-color: rgb(32, 56, 69); */
   text-align: center;
   margin: .5rem;
   width: 35rem;
   height: 15rem;
+}
 
+@media only screen and (max-width: 1100px) {
+  .selected-cards {
+    width: 80vw;
+    flex-direction: column;
+    height: 50rem;
+    margin: 5rem auto;
+    padding: 1rem;
+  }
+
+  .info-text {
+    margin: -1rem;
+  }
 }
