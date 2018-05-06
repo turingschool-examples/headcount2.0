@@ -5,13 +5,19 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Districts
-    selectedCards={Array []}
     setSelectedCard={[Function]}
     stats={
         Object {
-            "location": "Colorado",
-            "selected": false,
-            "stats": Object {},
+            "ARAPAHOE": Object {
+              "location": "ARAPAHOE",
+              "selected": false,
+              "stats": Object {},
+            },
+            "COLORADO": Object {
+              "location": "COLORADO",
+              "selected": false,
+              "stats": Object {},
+            },
           }
     }
 />,
@@ -29,24 +35,16 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Card
-          0="C"
-          1="o"
-          2="l"
-          3="o"
-          4="r"
-          5="a"
-          6="d"
-          7="o"
-          selectedCards={Array []}
+          location="COLORADO"
+          selected={false}
           setSelectedCard={[Function]}
+          stats={Object {}}
 />,
         <Card
-          selectedCards={Array []}
+          location="ARAPAHOE"
+          selected={false}
           setSelectedCard={[Function]}
-/>,
-        <Card
-          selectedCards={Array []}
-          setSelectedCard={[Function]}
+          stats={Object {}}
 />,
       ],
       "className": "districtCards",
@@ -58,16 +56,10 @@ ShallowWrapper {
         "key": "0district",
         "nodeType": "function",
         "props": Object {
-          "0": "C",
-          "1": "o",
-          "2": "l",
-          "3": "o",
-          "4": "r",
-          "5": "a",
-          "6": "d",
-          "7": "o",
-          "selectedCards": Array [],
+          "location": "COLORADO",
+          "selected": false,
           "setSelectedCard": [Function],
+          "stats": Object {},
         },
         "ref": null,
         "rendered": null,
@@ -78,20 +70,10 @@ ShallowWrapper {
         "key": "1district",
         "nodeType": "function",
         "props": Object {
-          "selectedCards": Array [],
+          "location": "ARAPAHOE",
+          "selected": false,
           "setSelectedCard": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "2district",
-        "nodeType": "function",
-        "props": Object {
-          "selectedCards": Array [],
-          "setSelectedCard": [Function],
+          "stats": Object {},
         },
         "ref": null,
         "rendered": null,
@@ -108,24 +90,16 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Card
-            0="C"
-            1="o"
-            2="l"
-            3="o"
-            4="r"
-            5="a"
-            6="d"
-            7="o"
-            selectedCards={Array []}
+            location="COLORADO"
+            selected={false}
             setSelectedCard={[Function]}
+            stats={Object {}}
 />,
           <Card
-            selectedCards={Array []}
+            location="ARAPAHOE"
+            selected={false}
             setSelectedCard={[Function]}
-/>,
-          <Card
-            selectedCards={Array []}
-            setSelectedCard={[Function]}
+            stats={Object {}}
 />,
         ],
         "className": "districtCards",
@@ -137,16 +111,10 @@ ShallowWrapper {
           "key": "0district",
           "nodeType": "function",
           "props": Object {
-            "0": "C",
-            "1": "o",
-            "2": "l",
-            "3": "o",
-            "4": "r",
-            "5": "a",
-            "6": "d",
-            "7": "o",
-            "selectedCards": Array [],
+            "location": "COLORADO",
+            "selected": false,
             "setSelectedCard": [Function],
+            "stats": Object {},
           },
           "ref": null,
           "rendered": null,
@@ -157,20 +125,10 @@ ShallowWrapper {
           "key": "1district",
           "nodeType": "function",
           "props": Object {
-            "selectedCards": Array [],
+            "location": "ARAPAHOE",
+            "selected": false,
             "setSelectedCard": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "2district",
-          "nodeType": "function",
-          "props": Object {
-            "selectedCards": Array [],
-            "setSelectedCard": [Function],
+            "stats": Object {},
           },
           "ref": null,
           "rendered": null,

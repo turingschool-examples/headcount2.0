@@ -44,7 +44,13 @@ export default class DistrictRepository {
 
         return matchedArray;
       }, []);
-    } 
+    } else {
+      const statsArr = [];
+      locationKeys.forEach(location => {
+        statsArr.push(this.stats[location]);
+      })
+      return statsArr;
+    };
   }
 
   findAverage = (district) => {

@@ -5,17 +5,10 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Card
-    selectedCards={Array []}
+    location="COLORADO"
+    selected={true}
     setSelectedCard={[Function]}
-    stats={
-        Object {
-            "COLORADO": Object {
-              "location": "COLORADO",
-              "selected": false,
-              "stats": Object {},
-            },
-          }
-    }
+    stats={Object {}}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -30,25 +23,15 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h2 />,
+        <h2>
+          COLORADO
+</h2>,
         <hr />,
         <ul>
-          <li
-                    className=""
-          >
-                    COLORADO
-                    : 
-                    <span>
-                              Object {
-                                        "location": "COLORADO",
-                                        "selected": false,
-                                        "stats": Object {},
-                                      }
-                    </span>
-          </li>
+          
 </ul>,
       ],
-      "className": "card ",
+      "className": "card selected",
       "onClick": [Function],
     },
     "ref": null,
@@ -58,10 +41,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": "COLORADO",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": "COLORADO",
         "type": "h2",
       },
       Object {
@@ -78,69 +61,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            <li
-              className=""
->
-              COLORADO
-              : 
-              <span>
-                            Object {
-                                          "location": "COLORADO",
-                                          "selected": false,
-                                          "stats": Object {},
-                                        }
-              </span>
-</li>,
-          ],
+          "children": Array [],
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                "COLORADO",
-                ": ",
-                <span>
-                  Object {
-                                    "location": "COLORADO",
-                                    "selected": false,
-                                    "stats": Object {},
-                                  }
-</span>,
-              ],
-              "className": "",
-            },
-            "ref": null,
-            "rendered": Array [
-              "COLORADO",
-              ": ",
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Object {
-                    "location": "COLORADO",
-                    "selected": false,
-                    "stats": Object {},
-                  },
-                },
-                "ref": null,
-                "rendered": Object {
-                  "location": "COLORADO",
-                  "selected": false,
-                  "stats": Object {},
-                },
-                "type": "span",
-              },
-            ],
-            "type": "li",
-          },
-        ],
+        "rendered": Array [],
         "type": "ul",
       },
     ],
@@ -153,25 +77,15 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h2 />,
+          <h2>
+            COLORADO
+</h2>,
           <hr />,
           <ul>
-            <li
-                        className=""
-            >
-                        COLORADO
-                        : 
-                        <span>
-                                    Object {
-                                                "location": "COLORADO",
-                                                "selected": false,
-                                                "stats": Object {},
-                                              }
-                        </span>
-            </li>
+            
 </ul>,
         ],
-        "className": "card ",
+        "className": "card selected",
         "onClick": [Function],
       },
       "ref": null,
@@ -181,10 +95,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": "COLORADO",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": "COLORADO",
           "type": "h2",
         },
         Object {
@@ -201,69 +115,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <li
-                className=""
->
-                COLORADO
-                : 
-                <span>
-                                Object {
-                                                "location": "COLORADO",
-                                                "selected": false,
-                                                "stats": Object {},
-                                              }
-                </span>
-</li>,
-            ],
+            "children": Array [],
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  "COLORADO",
-                  ": ",
-                  <span>
-                    Object {
-                                        "location": "COLORADO",
-                                        "selected": false,
-                                        "stats": Object {},
-                                      }
-</span>,
-                ],
-                "className": "",
-              },
-              "ref": null,
-              "rendered": Array [
-                "COLORADO",
-                ": ",
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Object {
-                      "location": "COLORADO",
-                      "selected": false,
-                      "stats": Object {},
-                    },
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "location": "COLORADO",
-                    "selected": false,
-                    "stats": Object {},
-                  },
-                  "type": "span",
-                },
-              ],
-              "type": "li",
-            },
-          ],
+          "rendered": Array [],
           "type": "ul",
         },
       ],

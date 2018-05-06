@@ -6210,7 +6210,6 @@ ShallowWrapper {
           />
 </section>,
         <Districts
-          selectedCards={Array []}
           setSelectedCard={[Function]}
           stats={
                     Object {
@@ -15525,7 +15524,6 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "selectedCards": Array [],
           "setSelectedCard": [Function],
           "stats": Object {
             "ACADEMY 20": Object {
@@ -21724,7 +21722,6 @@ ShallowWrapper {
             />
 </section>,
           <Districts
-            selectedCards={Array []}
             setSelectedCard={[Function]}
             stats={
                         Object {
@@ -31039,7 +31036,6 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "selectedCards": Array [],
             "setSelectedCard": [Function],
             "stats": Object {
               "ACADEMY 20": Object {

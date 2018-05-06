@@ -13,23 +13,22 @@ describe('App', () => {
     districts = new DistrictRepository(kinderData);
     wrapper = shallow(<App districts={ districts } />);
   });
+
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should have an initial state', ()=> {
-
     expect(wrapper.state().schoolStats).toBe(districts.stats);
     expect(wrapper.state().districts).toBe(districts);
     expect(wrapper.state().selectedCards).toEqual([]);
   });
 
   it('should set schoolStats to the districts matching the user input', ()=> {
-    wrapper = mount(<App districts={ districts } />);
+    const userInput = 'colorado';
 
-    wrapper.instance().setLocationData('colorado');
-    expect(wrapper.state().schoolStats).toEqual(0);
-    
+    wrapper.instance().setLocationData({userInput});
+    expect(wrapper.state().schoolStats.length).toEqual(2);
   });
 
   describe('Set selected card function', () => {
@@ -92,12 +91,6 @@ describe('App', () => {
       wrapper.instance().setSelectedCard(location1);
       expect(wrapper.state('selectedCards')).toEqual(expected);
     });
-
-    it('should toggle selected value to true when selected', () => {
- 
-    });
-
-});
-
+  });
 });
 
