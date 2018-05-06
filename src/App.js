@@ -18,7 +18,7 @@ class App extends Component {
     };
   }
 
-  setLocationData = ({userInput}) => {
+  setLocationData = ({ userInput }) => {
     this.setState({
       schoolStats: this.state.districts.findAllMatches(userInput)
     });
@@ -35,10 +35,8 @@ class App extends Component {
       this.setState({
         selectedCards: [selectedCard, ...this.state.selectedCards]
       });
-
     } else if (this.state.schoolStats[location].selected === true) {
-      var selectedState = this.state.schoolStats[location].selected ? false: true;
-      var selectedCard = Object.assign(this.state.schoolStats[location], {selected: selectedState});
+      var selectedCard = Object.assign(this.state.schoolStats[location], {selected: false});
 
       this.setState({
         selectedCards: this.state.selectedCards.filter(card => card.location !== location)
@@ -54,7 +52,7 @@ class App extends Component {
         <section className="comparisonContainer">
           <CompareCards selectedCards={this.state.selectedCards} setSelectedCard={this.setSelectedCard} districts={this.state.districts} />
         </section>
-        <Districts stats={this.state.schoolStats} setSelectedCard={this.setSelectedCard} selectedCards={this.state.selectedCards} />
+        <Districts stats={this.state.schoolStats} setSelectedCard={this.setSelectedCard} />
       </main>
     );
   }
