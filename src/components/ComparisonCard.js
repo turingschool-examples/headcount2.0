@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/ComparisonCard.css';
+import PropTypes from 'prop-types';
 
 const ComparisonCard = ({ selectedCards, districts }) => {
   if (selectedCards.length === 2) {
@@ -23,5 +24,10 @@ const ComparisonCard = ({ selectedCards, districts }) => {
   }
   return null;
 };
+
+ComparisonCard.propTypes = {
+  districts: PropTypes.string.isRequired,
+  selectedCards: PropTypes.array.isRequired
+}
 
 export default ComparisonCard;

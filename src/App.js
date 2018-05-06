@@ -25,8 +25,11 @@ class App extends Component {
   }
 
   setSelectedCard = (location) => {
-    if (this.state.selectedCards.length < 2 && this.state.schoolStats[location].selected === false) {
-      var selectedState = this.state.schoolStats[location].selected ? false: true;
+    if (this.state.selectedCards.length < 2 && 
+      this.state.schoolStats[location].selected === false) {
+      var selectedState = this.state.schoolStats[location].selected ?
+        false: 
+        true;
       var selectedCard = Object.assign(this.state.schoolStats[location], {selected: selectedState});
 
       this.setState({
