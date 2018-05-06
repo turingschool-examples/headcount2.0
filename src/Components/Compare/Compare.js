@@ -11,6 +11,7 @@ const Compare = ({ compareCards, compareData, removeCompareCard }) => {
                 listOfData={listOfData}
                 section='compare'
                 removeCompareCard={removeCompareCard}
+                selected={ district.selected }
                 key={`compareCard${index}`}
     />
 

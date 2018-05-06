@@ -35,7 +35,20 @@ class App extends Component {
         return Object.keys(district)[0] === title 
       }) 
       this.setState({compareCards: [...this.state.compareCards, matchingDistrict]}, this.getCompareData)
+      
+      this.changeSelectedInState(title);
     }
+  }
+
+  changeSelectedInState = (title) => {
+    const newRepo = this.state.repo.map(district => {
+      if (Object.keys(district)[0] === title) {
+        district.selected = !district.selected;
+      }
+      return district;
+    })
+
+    this.setState({ repo: newRepo });
   }
 
   removeCompareCard = (title) => {
@@ -43,6 +56,7 @@ class App extends Component {
       return Object.keys(district)[0] !== title
     })
     this.setState({compareCards: newCompareCards})
+    this.changeSelectedInState(title)
   }
 
   render() {
@@ -54,7 +68,8 @@ class App extends Component {
                   compareData={this.state.compareData} 
                   removeCompareCard={this.removeCompareCard}/>
         <CardContainer repo={ this.state.repo } 
-                       addCompareCard={this.addCompareCard}/>
+                       addCompareCard={this.addCompareCard}
+                       removeCompareCard={ this.removeCompareCard } /> 
       </div>
     );
   }

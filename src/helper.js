@@ -42,7 +42,9 @@ export default class DistrictRepository {
   findAllMatches = (district) => {
     const statsKeys = Object.keys(this.stats);
     const allDistrictData = statsKeys.map(district => {
-      return { [district]: this.stats[district] }
+      return { [district]: this.stats[district], 
+                selected: false         
+      }
     });
 
     if (!district) {

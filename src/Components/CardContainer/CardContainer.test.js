@@ -13,7 +13,7 @@ describe('CardContainer', () => {
   })
 
   it('should render correct amount of card based on the props passed', () => {
-    const mockProp = [{ 'DISTRICT': [{ "2009": 0.986 }] }];
+    const mockProp = [{ 'DISTRICT': [{ "2009": 0.986 }] } ];
     const cardContainer = shallow(<CardContainer repo={ mockProp } />);
     expect(cardContainer.find(Card).length).toEqual(1);
   })
