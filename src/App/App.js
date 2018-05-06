@@ -25,16 +25,14 @@ class App extends Component {
       .filter( district => district.location.includes( sanitizedUserInput ))
 
       if(filteredDistricts.length >= 1) {
-        const newCompared = this.state.comparedCards.map(district => {
-          return district.district
-        })
+        const newCompared = this.state.comparedCards
+        .map( district =>  district.district);          
         this.setState({ districtsData: [...newCompared, ...filteredDistricts]})
       }
   }
 
   updateCompareState = ( clickedState, comparedCard ) => {
       if(!clickedState) {
-
         if(this.state.comparedCards.length <2) {
           this.addComparedCard(comparedCard);
         } 
@@ -50,9 +48,8 @@ class App extends Component {
   }
   
   removeComparedCard(cardInfo) {
-    const comparedCards = this.state.comparedCards.filter(card => {
-      return card.district.location !== cardInfo.district.location
-    });
+    const comparedCards = this.state.comparedCards
+    .filter(card => card.district.location !== cardInfo.district.location);
     this.setState({ comparedCards });
   }
 
