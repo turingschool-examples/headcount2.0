@@ -15,8 +15,10 @@ export default class DistrictRepository {
         };
       } 
 
-      if (!cleanedInfo[upperCaseDistrict].stats[school.TimeFrame] && typeof(school.Data) !== 'string' ) {
-        cleanedInfo[upperCaseDistrict].stats[school.TimeFrame] = Math.round(1000 * school.Data) / 1000;
+      if (!cleanedInfo[upperCaseDistrict].stats[school.TimeFrame] 
+        && typeof(school.Data) !== 'string' ) {
+        cleanedInfo[upperCaseDistrict].stats[school.TimeFrame] = 
+        Math.round(1000 * school.Data) / 1000;
       } else {
         cleanedInfo[upperCaseDistrict].stats[school.TimeFrame] = 0;
       }
@@ -35,10 +37,10 @@ export default class DistrictRepository {
   findAllMatches = (district) => {
     const locationKeys = Object.keys(this.stats);
 
-    if(district) {
+    if (district) {
       const upperCaseLocation = district.toUpperCase(); 
       return locationKeys.reduce((matchedArray, area) => {
-        if(this.stats[area].location.includes(upperCaseLocation)) {
+        if (this.stats[area].location.includes(upperCaseLocation)) {
           matchedArray.push(this.stats[area]);
         }
 
