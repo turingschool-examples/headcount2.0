@@ -44,7 +44,7 @@ class App extends Component {
 
 
   addComparedCard(cardInfo) {
-    this.setState({comparedCards: [ ...this.state.comparedCards, cardInfo] })
+    this.setState({ncomparedCards: [ ...this.state.comparedCards, cardInfo] })
   }
   
   removeComparedCard(cardInfo) {

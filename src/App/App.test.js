@@ -97,6 +97,60 @@ describe('App', () => {
       expect(app.state('districtsData')).toEqual(expectedState)
     })
   })
+
+  describe('updateCompareState method', () => {
+
+    beforeEach(() => {
+      let app;
+
+      beforeEach(() => {
+        app = shallow(<App />);
+        app.setState({
+          districtsData: {
+            COLORADO: {
+              location: "COLORADO",
+              stats: { 2007: 0.013, 2009: 3.004, 2013: 1.101 }
+            },
+            Pueblo: {
+              location: "PUEBLO",
+              stats: { 2007: 0.013, 2009: 3.004, 2013: 1.101 }
+            }
+          },
+          comparedCards: []
+        })
+      })
+    })
+
+    it('should call addComparedCard if the clicked state is false', () => {
+      const mockClickedState = false;
+      const mockComparedCard = {};
+      const spy = spyOn(app.instance(), 'addComparedCard')
+
+      app.instance().updateCompareState(mockClickedState, mockComparedCard)
+      expect(spy).toHaveBeenCalled()
+    })
+
+    it('should call removeComparedCard if the clicked state is true', () => {
+      const mockClickedState = true;
+      const mockComparedCard = {};
+      const spy = spyOn(app.instance(), 'removeComparedCard')
+
+      app.instance().updateCompareState(mockClickedState, mockComparedCard)
+      expect(spy).toHaveBeenCalled()
+    })
+
+    it('should only call addComparedCard if the comparedCards array length is less than 2', () => {
+      const mockClickedState = false;
+      const mockComparedCard = {};
+      app.setState({
+        comparedCards: ['thing1', 'thing2']
+      })
+      const spy = spyOn(app.instance(), 'addComparedCard')
+
+      app.instance().updateCompareState(mockClickedState, mockComparedCard)
+      expect(spy).not.toHaveBeenCalled()
+    })
+  })
 })
 
 
