@@ -2,6 +2,19 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
+  padding-left: 2rem;
   max-width: 110rem;
   color:rgb(255, 222, 173);
+}
+
+@media only screen and (max-width: 1100px) {
+  .card-area {
+    max-width: 75rem;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .card-area {
+    max-width: 38rem;
+  }
 }

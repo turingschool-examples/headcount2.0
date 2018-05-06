@@ -1,7 +1,5 @@
 import React from 'react';
-import DistrictRepository from './helper';
-
-// const district = new DistrictRepository;
+import PropTypes from 'prop-types';
 
 const Search = ({ changeData }) => {
     return (
@@ -10,9 +8,12 @@ const Search = ({ changeData }) => {
           type="text"
           onChange={ changeData }
         />
-        <button>Search</button>
       </form>
     )
+}
+
+Search.propTypes = {
+  changeData: PropTypes.func
 }
 
 export default Search;

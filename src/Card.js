@@ -1,5 +1,7 @@
 import React from 'react';
 import './Card.css';
+import PropTypes from 'prop-types';
+
 
 const Card = (props) => {
   let locationMatch = props.selectedCards.includes(props.location)
@@ -25,7 +27,15 @@ const Card = (props) => {
       </ul>
     </div>
   )
+  console.log(props)
+}
 
+Card.propTypes = {
+  props: PropTypes.objectOf(PropTypes.shape({
+    data: PropTypes.object,
+    selectCard: PropTypes.func,
+    selectedCards: PropTypes.array
+  }))
 }
 
 export default Card;

@@ -1,6 +1,6 @@
 export default class DistrictRepository {
   constructor(data) {
-    this.stats = this.dataCleaner(data);
+    this.stats = Array.from(this.dataCleaner(data));
   }
 
   removeNan (dataList) {
@@ -17,7 +17,7 @@ export default class DistrictRepository {
 
     const cleanedData = dataWithOutNan.reduce((cleanedData, data) => {
       const sanitizedLocation = data.Location.toUpperCase();
-      const sanitizedNumber = parseFloat(parseFloat(data.Data).toFixed(3));
+      const sanitizedNumber = parseFloat(data.Data.toFixed(3));
 
       if(!cleanedData[sanitizedLocation]) {
         cleanedData[sanitizedLocation] = {location: sanitizedLocation, stats: {}}

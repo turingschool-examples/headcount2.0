@@ -6,8 +6,16 @@ import renderer from 'react-test-renderer';
 import App from '../../App'
 
 describe('Card', () => {
-  it('should equal true', () => {
-    expect(true).toEqual(true);
+  it('should match snapshot', () => {
+    const props = {
+      location: 'COLORADO',
+      stats: [{2007: 1}],
+      selectedCards: []
+    }
+
+    const card = shallow(<Card {...props} selectCard={jest.fn()} />)
+
+    expect(card).toMatchSnapshot();
   })
 
 
