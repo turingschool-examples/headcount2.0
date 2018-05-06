@@ -42,7 +42,6 @@ class App extends Component {
       }
   }
 
-
   addComparedCard(cardInfo) {
     this.setState({comparedCards: [ ...this.state.comparedCards, cardInfo] })
   }
@@ -52,7 +51,6 @@ class App extends Component {
     .filter(card => card.district.location !== cardInfo.district.location);
     this.setState({ comparedCards });
   }
-
 
   componentDidMount() {
     this.setState({
