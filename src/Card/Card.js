@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types'
-import './Card.css'
+import PropTypes from 'prop-types';
+import './Card.css';
 
 class Card extends Component {
   constructor(props) {
@@ -8,15 +8,16 @@ class Card extends Component {
 
     this.state = {
       clicked: this.props.clickedState || false
-    }
+    };
   }
 
   handleCardClick = () => {
     
-    if (this.props.comparedCards.length === 2  && !this.props.comparedCards.find(district => {
-      return district.district.location === this.props.district.location
-    })) {
-      return
+    if (this.props.comparedCards.length === 2  && 
+      !this.props.comparedCards.find(district => {
+        return district.district.location === this.props.district.location;
+      })) {
+      return;
     }
     this.setState({ clicked: !this.state.clicked });
     this.props.updateCompareState(this.state.clicked, this.props);
@@ -28,10 +29,10 @@ class Card extends Component {
     const listItems = districtKeys.map(( stat, index ) => {
       return (
         <li 
-        key={ index }
+          key={ index }
           className={ this.props.district.stats[stat] > 0.5 ? 'greater-than' : 'less-than'}
         > { `${stat}: ${this.props.district.stats[stat]}` } </li>
-      )
+      );
     });
   
     return (
@@ -46,14 +47,16 @@ class Card extends Component {
           { listItems }
         </ul>
       </div>
-    )
+    );
   }
 }
 
 Card.propTypes = {
-  location: PropTypes.string,
-  stats: PropTypes.arrayOf(PropTypes.object)
-}
+  district: PropTypes.string.isRequired,
+  comparedCards: PropTypes.arrayOf(PropTypes.object),
+  updateCompareState: PropTypes.func.isRequired,
+  clickedState: PropTypes.bool
+};
 
 
 
