@@ -30,18 +30,25 @@ class App extends Component {
       var selectedState = this.state.schoolStats[location].selected ?
         false: 
         true;
-      var selectedCard = Object.assign(this.state.schoolStats[location], {selected: selectedState});
+      var selectedCard = Object.assign(
+        this.state.schoolStats[location], 
+        {selected: selectedState}
+      );
 
       this.setState({
         selectedCards: [selectedCard, ...this.state.selectedCards]
       });
     } else if (this.state.schoolStats[location].selected === true) {
-      var selectedCard = Object.assign(this.state.schoolStats[location], {selected: false});
+      var selectedCard = Object.assign(
+        this.state.schoolStats[location], 
+        {selected: false}
+      );
 
       this.setState({
-        selectedCards: this.state.selectedCards.filter(card => card.location !== location)
+        selectedCards: 
+        this.state.selectedCards.filter(card => card.location !== location)
       });
-    };
+    }
   }
  
   render() {
@@ -50,9 +57,16 @@ class App extends Component {
         <h1>HeadCount 2.0</h1>
         <Search setLocationData={this.setLocationData}/>
         <section className="comparisonContainer">
-          <CompareCards selectedCards={this.state.selectedCards} setSelectedCard={this.setSelectedCard} districts={this.state.districts} />
+          <CompareCards
+            selectedCards={this.state.selectedCards} 
+            setSelectedCard={this.setSelectedCard} 
+            districts={this.state.districts} 
+          />
         </section>
-        <Districts stats={this.state.schoolStats} setSelectedCard={this.setSelectedCard} />
+        <Districts 
+          stats={this.state.schoolStats} 
+          setSelectedCard={this.setSelectedCard} 
+        />
       </main>
     );
   }
