@@ -10,10 +10,7 @@ To install run `npm install`, `npm start`, then visit `localhost:3030`
 ![Original HeadCount Comp](https://camo.githubusercontent.com/9634c098661def5c80db623422919e9839e4a7bc/687474703a2f2f692e696d6775722e636f6d2f477a684f32454f2e706e67 "original comp")
 
 ## Our Comp
-Coming Soon!
-
-## Project Reflections
-Coming Soon!
+![Our HeadCountComp](https://i.imgur.com/bB3OIGs.png "our comp")
 
 ## The Team
 This project was built by:

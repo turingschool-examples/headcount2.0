@@ -20,6 +20,16 @@ const SelectedCards = (props) => {
   let district1;
   let districtsAverage;
 
+  if (props.selectedCards[0] === props.selectedCards[1]) {
+    props.selectedCards.shift();
+    props.selectedCards.shift();
+    districtCards.pop();
+  }
+
+  if (districtCards.length >= 1 && props.selectedCards.includes(districtCards[0].props.location)) {
+    districtsAverage = <h2>{props.selectedCards[0]} {':'} {district.findAverage(districtCards[0].props.location)}</h2>;
+  }
+
   if (districtCards.length === 2) {
     district0 = <h3>{props.selectedCards[1]} {':'} {district.findAverage(districtCards[0].props.location)}</h3>;
     district1 = <h3>{props.selectedCards[0]} {':'} {district.findAverage(districtCards[1].props.location)}</h3>;
