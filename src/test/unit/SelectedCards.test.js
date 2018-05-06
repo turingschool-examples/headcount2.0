@@ -1,24 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
+import SelectedCards from '../../SelectedCards.js'
 
 describe('SelectedCards', () =>  {
+  it('should display a single card when a card is clicked', () => {
+    const data = []
+    const selectedCards = []
+    const wrapper = shallow(<SelectedCards data={data} selectedCards={selectedCards}/>)
 
-  test('should update the state of the selected cards array', () => {
-    
-    it('should of have a length of one when a card is added', () => {
-        // Setup
-      const selectCardMock = jest.fn()
-      const selectCard = mount(<SelectedCards selectCard={selectCardMock} />)
-      const spy = spyOn(selectCard.instance(), 'selectCard')
-      selectCard.instance().forceUpdate()
-      const mockEvent = { target: { value: 'something' } }
-
-      
-      selectCard.find('div').simulate('click', mockEvent)
-
-      // Expectation
-      expect(spy).toHaveBeenCalled()
-    })
+    expect(wrapper.find('.selected-cards').length).toEqual(1)
   })
 })

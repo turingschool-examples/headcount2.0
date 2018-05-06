@@ -27,7 +27,7 @@ class App extends Component {
 
   selectCard = (event) => {
     const locationText = event.target.closest('div').children[0].innerText;
-    const newSelection = this.state.selectedCards.filter(locationName => 
+    const newSelection = this.state.selectedCards.filter(locationName =>
       locationText !== locationName);
 
     if (this.state.selectedCards.length === 2) {
