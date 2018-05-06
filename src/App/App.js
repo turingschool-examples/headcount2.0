@@ -52,7 +52,6 @@ class App extends Component {
     this.setState({ comparedCards });
   }
 
-
   componentDidMount() {
     this.setState({
       districtsData: data.stats

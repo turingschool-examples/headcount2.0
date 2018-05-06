@@ -142,6 +142,48 @@ describe('App', () => {
       
     })
   })
+
+  describe('removeComparedCard method', () => {
+    let app;
+
+    beforeEach(() => {
+      app = shallow(<App />);
+      app.setState({
+        comparedCards: [{
+          district: {
+            location: "COLORADO",
+            stats: { 2007: 0.013, 2009: 3.004, 2013: 1.101 }
+          }}, 
+          {
+            district: {
+              location: 'PUEBLO',
+              stats: { 2007: 0.013, 2009: 3.004, 2013: 1.101 }
+            }
+          }]
+      })
+    })
+
+    it('should add remove the card it was passed as an argument from the comparedCards state', () => {
+      const mockCardInfo = {
+        district: {
+          location: "COLORADO",
+          stats: { 2007: 0.013, 2009: 3.004, 2013: 1.101 }
+        }
+      };
+      const expectedState = [{
+        district: {
+          location: 'PUEBLO',
+          stats: { 2007: 0.013, 2009: 3.004, 2013: 1.101 }
+        }
+      }]
+
+      expect(app.state('comparedCards')).toHaveLength(2)
+      app.instance().removeComparedCard(mockCardInfo)
+      expect(app.state('comparedCards')).toHaveLength(1)
+      expect(app.state('comparedCards')).toEqual(expectedState)
+
+    })
+  })
 })
 
 
