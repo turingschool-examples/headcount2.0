@@ -36,7 +36,7 @@ class ComparisonCard extends Component {
 }
 
 ComparisonCard.propTypes = {
-  districts: PropTypes.string.isRequired,
+  districts: PropTypes.object.isRequired,
   selectedCards: PropTypes.array.isRequired
 };
 

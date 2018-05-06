@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import DistrictRepository from './helper';
+import App from '../App';
+import DistrictRepository from '../helper';
 import {shallow, mount} from 'enzyme';
-import kinderData from './data/kindergartners_in_full_day_program';
+import kinderData from '../data/kindergartners_in_full_day_program';
 
 describe('App', () => {
   let wrapper;

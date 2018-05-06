@@ -1,7 +1,7 @@
 import React from 'react';
-import Districts from './Districts';
-import Card from './Card';
-import {shallow, mount} from 'enzyme';
+import Districts from '../components/Districts';
+import Card from '../components/Card';
+import { shallow, mount } from 'enzyme';
 
 describe('Card', () => {
   let wrapper;

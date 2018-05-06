@@ -25,7 +25,7 @@ const CompareCards = ({selectedCards, setSelectedCard, districts}) => {
 }
 
 CompareCards.propTypes = {
-  districts: PropTypes.string.isRequired,
+  districts: PropTypes.object.isRequired,
   setSelectedCard: PropTypes.func.isRequired,
   selectedCards: PropTypes.array.isRequired
 }

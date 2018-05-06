@@ -16,9 +16,11 @@ const Districts = ({ stats, setSelectedCard}) => {
 };
 
 Districts.propTypes = {
-  stats: PropTypes.string.isRequired,
+  stats: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array
+  ]),
   setSelectedCard: PropTypes.func.isRequired,
-  selected: PropTypes.array.isRequired
 }
 
 export default Districts;

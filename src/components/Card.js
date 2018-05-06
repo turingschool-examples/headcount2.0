@@ -22,9 +22,9 @@ const Card = ({ location, stats, selected, setSelectedCard}) => {
 
 Card.propTypes = {
   location: PropTypes.string.isRequired,
-  stats: PropTypes.string.isRequired,
+  stats: PropTypes.object.isRequired,
   setSelectedCard: PropTypes.func.isRequired,
-  selected: PropTypes.array.isRequired
+  selected: PropTypes.bool
 }
 
 export default Card;

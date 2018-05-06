@@ -40,7 +40,7 @@ class Search extends Component {
 }
 
 Search.propTypes = {
-	setLocationData: PropTypes.string.isRequired
+	setLocationData: PropTypes.func
 }
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import Districts from './Districts';
-import Card from './Card';
+import Districts from '../components/Districts';
+import Card from '../components/Card';
 import { shallow } from 'enzyme';
 
 describe('Districts', () => {
