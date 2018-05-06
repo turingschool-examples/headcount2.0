@@ -1,0 +1,45 @@
+.card {
+  background-color: rgb(32, 56, 69);
+  border: 1px solid rgba(32, 56, 69, 0);
+  margin: .5rem;
+  width: 35rem;
+  height: 15rem;
+}
+
+.card h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem;
+}
+
+.card hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+
+.card ul {
+  display: flex;
+  flex-flow: column wrap;
+  font-size: 1.5rem;
+  color: rgb(90, 217, 255);
+  height: 8rem;
+}
+
+.card li {
+  padding-right: .4rem;
+  list-style: none;
+}
+
+.card-year {
+  color: rgb(255, 255, 255);
+}
+
+.card-low-stat {
+  color: rgb(255, 173, 148);
+}
+
+.selected {
+  border: 1px solid goldenrod;
+}
