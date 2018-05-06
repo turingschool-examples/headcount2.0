@@ -26,7 +26,6 @@ describe('App', () => {
 
   it('matches the snapsnot', () => {
     const app = renderer.create(<App />).toJSON();
-
     expect(app).toMatchSnapshot();
   })
 });
