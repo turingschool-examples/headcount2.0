@@ -1,9 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { shallow, mount } from 'enzyme';
-import Card from '../../Card';
-import renderer from 'react-test-renderer';
-import App from '../../App'
+import { shallow } from 'enzyme';
+import Card from '../../Card/Card';
 
 describe('Card', () => {
   it('should match snapshot', () => {
@@ -11,12 +8,9 @@ describe('Card', () => {
       location: 'COLORADO',
       stats: [{2007: 1}],
       selectedCards: []
-    }
-
-    const card = shallow(<Card {...props} selectCard={jest.fn()} />)
+    };
+    const card = shallow(<Card {...props} selectCard={jest.fn()} />);
 
     expect(card).toMatchSnapshot();
-  })
-
-
-})
+  });
+});

@@ -19,7 +19,10 @@ const Card = (props) => {
   });
 
   return (
-    <div className={locationMatch ? 'selected card' : 'card'} onClick={props.selectCard} >
+    <div 
+      className={locationMatch ? 'selected card' : 'card'}
+      onClick={props.selectCard}
+    >
       <h3>{props.location}</h3>
       <hr />
       <ul>
@@ -31,13 +34,13 @@ const Card = (props) => {
 
 Card.propTypes = {
   props: PropTypes.objectOf(PropTypes.shape({
-    data: PropTypes.object,
-    selectCard: PropTypes.func,
-    selectedCards: PropTypes.array
+    cleanData: PropTypes.object.isRequired,
+    selectCard: PropTypes.func.isRequired,
+    selectedCards: PropTypes.array.isRequired
   })),
-  selectCard: PropTypes.func,
-  selectedCards: PropTypes.array,
-  location: PropTypes.string
+  selectCard: PropTypes.func.isRequired,
+  selectedCards: PropTypes.array.isRequired,
+  location: PropTypes.string.isRequired
 };
 
 export default Card;

@@ -62,9 +62,7 @@ ShallowWrapper {
 >
           <h2>
                     COLORADO
-                     
                     :
-                     
                     0.53
           </h2>
 </div>,
@@ -115,9 +113,7 @@ ShallowWrapper {
             undefined,
             <h2>
               COLORADO
-               
               :
-               
               0.53
 </h2>,
             undefined,
@@ -134,18 +130,14 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 "COLORADO",
-                " ",
                 ":",
-                " ",
                 0.53,
               ],
             },
             "ref": null,
             "rendered": Array [
               "COLORADO",
-              " ",
               ":",
-              " ",
               0.53,
             ],
             "type": "h2",
@@ -191,9 +183,7 @@ ShallowWrapper {
 >
             <h2>
                         COLORADO
-                         
                         :
-                         
                         0.53
             </h2>
 </div>,
@@ -244,9 +234,7 @@ ShallowWrapper {
               undefined,
               <h2>
                 COLORADO
-                 
                 :
-                 
                 0.53
 </h2>,
               undefined,
@@ -263,18 +251,14 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   "COLORADO",
-                  " ",
                   ":",
-                  " ",
                   0.53,
                 ],
               },
               "ref": null,
               "rendered": Array [
                 "COLORADO",
-                " ",
                 ":",
-                " ",
                 0.53,
               ],
               "type": "h2",

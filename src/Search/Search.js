@@ -13,7 +13,7 @@ const Search = ({ changeData }) => {
 };
 
 Search.propTypes = {
-  changeData: PropTypes.func
+  changeData: PropTypes.func.isRequired
 };
 
 export default Search;

@@ -11,5 +11,4 @@ describe('DistrictRepository iteration 0', () =>  {
   test('data coming in has no duplicates', () => {
     expect(Object.keys(district.stats).length).toBe(181);
   });
-
 });
