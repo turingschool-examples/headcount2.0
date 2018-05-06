@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card';
+import PropTypes from 'prop-types';
 
 const Districts = ({ stats, setSelectedCard, selectedCards }) => {
 
@@ -14,5 +15,11 @@ const Districts = ({ stats, setSelectedCard, selectedCards }) => {
     </section>
   );
 };
+
+Districts.propTypes = {
+  stats: PropTypes.string.isRequired,
+  setSelectedCard: PropTypes.func.isRequired,
+  selected: PropTypes.array.isRequired
+}
 
 export default Districts;

@@ -2,6 +2,7 @@ import React from 'react';
 import Card from './Card';
 import '../styles/CompareCards.css';
 import ComparisonCard from '../components/ComparisonCard';
+import PropTypes from 'prop-types';
 
 const CompareCards = ({selectedCards, setSelectedCard, districts}) => {
 
@@ -21,6 +22,12 @@ const CompareCards = ({selectedCards, setSelectedCard, districts}) => {
     );
   }
   return null
+}
+
+CompareCards.propTypes = {
+  districts: PropTypes.string.isRequired,
+  setSelectedCard: PropTypes.func.isRequired,
+  selectedCards: PropTypes.array.isRequired
 }
 
 export default CompareCards;

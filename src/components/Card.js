@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Card.css';
+import PropTypes from 'prop-types';
 
 const Card = ({ location, stats, selected, setSelectedCard}) => {
   let statKeys = Object.keys(stats)
@@ -17,6 +18,13 @@ const Card = ({ location, stats, selected, setSelectedCard}) => {
       </ul>
     </article>
   )
+}
+
+Card.propTypes = {
+  location: PropTypes.string.isRequired,
+  stats: PropTypes.string.isRequired,
+  setSelectedCard: PropTypes.func.isRequired,
+  selected: PropTypes.array.isRequired
 }
 
 export default Card;
