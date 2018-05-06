@@ -48,8 +48,16 @@ class App extends Component {
           <h1>Welcome To Headcount 2.0</h1>
           <Search changeData={this.changeData} />
         </header>
-        <SelectedCards selectedCards={this.state.selectedCards} data={this.state.cleanData}/>
-        <CardArea data={this.state.cleanData} selectCard={this.selectCard} selectedCards={this.state.selectedCards}/>
+        <SelectedCards
+          data={this.state.cleanData}
+          selectCard={this.selectCard}
+          selectedCards={this.state.selectedCards}
+        />
+        <CardArea
+          data={this.state.cleanData}
+          selectCard={this.selectCard}
+          selectedCards={this.state.selectedCards}
+        />
       </div>
     );
   }

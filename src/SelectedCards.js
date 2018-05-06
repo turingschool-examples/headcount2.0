@@ -8,10 +8,10 @@ import PropTypes from 'prop-types';
 const district = new DistrictRepository(sampleData);
 
 const SelectedCards = (props) => {
-  const districtKeys = Object.keys(props.data);
-  const districtCards = districtKeys.reduce((districtCards, districtKey, index) => {
-    if (props.selectedCards.includes(props.data[districtKey].location)){
-      districtCards.push(<Card key={index} {...props.data[districtKey]} selectCard={props.selectCard} selectedCards={props.selectedCards}/>);
+  let cardObjectList = Array.from(props.data);
+  const districtCards = cardObjectList.reduce((districtCards, cardObject, index) => {
+    if (props.selectedCards.includes(props.data[index].location)){
+      districtCards.push(<Card key={index} {...props.data[index]} selectCard={props.selectCard} selectedCards={props.selectedCards}/>);
     }
     return districtCards;
   }, []);
@@ -50,9 +50,10 @@ const SelectedCards = (props) => {
   );
 };
 
-// SelectedCards.propTypes = {
-//     selectedCards: PropTypes.array,
-//     data: PropTypes.array
-// }
+SelectedCards.propTypes = {
+  data: PropTypes.array,
+  selectCard: PropTypes.func,
+  selectedCards: PropTypes.array
+}
 
 export default SelectedCards;
