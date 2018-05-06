@@ -1,11 +1,10 @@
 .card-container {
   display: flexbox;
   flex-wrap: wrap;
-  border: black 1px solid;
   display: flex;
   flex-wrap: wrap;
   width: 84%;
-  height: 500px;
+  height: 510px;
   margin: 5px auto;
   justify-content: center;
   overflow-y: scroll;

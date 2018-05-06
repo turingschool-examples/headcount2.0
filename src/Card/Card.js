@@ -7,7 +7,7 @@ class Card extends Component {
     super(props);
 
     this.state = {
-      clicked: false
+      clicked: false  || this.props.clickedState
     }
 
   }

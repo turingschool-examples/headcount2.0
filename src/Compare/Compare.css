@@ -1,6 +1,10 @@
 .compare {
-  height: 245px;
-  background-color: blanchedalmond;
+  height: 255px;
+  width: 100vw;
+  /* background-color: blanchedalmond; */
+  background: url(books.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
 }

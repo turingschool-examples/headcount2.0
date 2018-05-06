@@ -16,11 +16,13 @@ const Compare = ({ updateCompareState, comparedCards }) => {
       <Card key={Date.now()}
         district={comparedCards[0].district}
         updateCompareState={updateCompareState}
+        // clickedState={true}
       />
       <CompareCard compareInfo={compareInfo} />
       <Card key={(Date.now()+1)}
         district={comparedCards[1].district}
         updateCompareState={updateCompareState}
+        // clickedState={true}
       />
       </div>
     )
@@ -31,6 +33,7 @@ const Compare = ({ updateCompareState, comparedCards }) => {
       <Card key = { index }
         district = { districtCard.district }
         updateCompareState = { updateCompareState }
+        // clickedState={true}
       />
       )
     });
