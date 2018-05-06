@@ -9,7 +9,6 @@ import PropTypes from 'prop-types';
 const districtRepository = new DistrictRepository(kinderData);
 
 const Compare = ({ updateCompareState, comparedCards }) => {
-
   if (comparedCards.length === 2) {
     const compareInfo = districtRepository.compareDistrictAverages(
       comparedCards[0].district.location, 
@@ -53,6 +52,5 @@ Compare.propTypes = {
   comparedCards: PropTypes.arrayOf(PropTypes.object),
   updateCompareState: PropTypes.func.isRequired
 };
-
 
 export default Compare;

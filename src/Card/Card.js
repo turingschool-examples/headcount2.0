@@ -24,7 +24,6 @@ class Card extends Component {
   }
 
   render() {
-
     let districtKeys = Object.keys(this.props.district.stats);
     const listItems = districtKeys.map(( stat, index ) => {
       return (
