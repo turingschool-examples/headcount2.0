@@ -15,20 +15,19 @@ class App extends Component {
       schoolRepository: new DistrictRepository(kinderData),
       schoolNames: [],
       schoolData: {},
-      comparedSchools: [],
+      comparedSchools: []
     };
   }
 
   searchSchools = (inputValue) => {
     const filteredSchoolNames = this.state.schoolRepository.findAllMatches(inputValue);
     this.setState({ schoolNames: filteredSchoolNames });
-    console.log("WHY THO")
-
-  }
+}
 
   componentDidMount() {
     const schoolNames = this.state.schoolRepository.findAllMatches();
     const schoolData = this.state.schoolRepository.stats;
+    
     this.setState({
       schoolNames,
       schoolData
@@ -36,8 +35,15 @@ class App extends Component {
   }
 
   updateComparedSchools = (string) => {
-    const comparedSchools = [string, ...this.state.comparedSchools]
-    this.setState({ comparedSchools })
+    const comparedSchools = this.state.comparedSchools
+
+    if (comparedSchools.includes(string)) {
+      comparedSchools.splice(comparedSchools.indexOf(string), 1)
+      this.setState({ comparedSchools })
+    } else if (comparedSchools.length < 2) {
+      comparedSchools.push(string);
+      this.setState({ comparedSchools });
+    }
   }
 
   render() {
@@ -49,12 +55,15 @@ class App extends Component {
             searchSchools={this.searchSchools}
           />
         </nav>
-        {this.state.comparedSchools.length &&
+        <div className="nav-padding"> 
+        </div>
+        {this.state.comparedSchools.length > 0 &&
           <div>
             <ComparisonContainer
               schoolData={this.state.schoolData}
               schoolRepository={this.state.schoolRepository}
               comparedSchools={this.state.comparedSchools}
+              updateComparedSchools={this.updateComparedSchools}
             />
           </div>
         }

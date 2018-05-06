@@ -2,13 +2,16 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 225px 40px 40px 40px;
-  
+  padding: 20px 40px 40px 40px;
+}
+
+.nav-padding {
+  height: 150px;
+  width: 100%;
 }
 
 .logo {
   width: 300px;
-  /* margin: 0 auto; */
   padding: 40px 0;
   
 }

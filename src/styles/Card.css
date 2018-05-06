@@ -45,3 +45,8 @@ table {
   font-weight: 700;
   color: rgb(100, 100, 100);
 }
+
+.border {
+  border: solid 3px rgb(224, 164, 164);
+  box-shadow: 0px 2px 6px 0px rgba(224, 164, 164, 0.48);
+}

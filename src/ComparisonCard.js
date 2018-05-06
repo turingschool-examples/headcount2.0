@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/ComparisonCard.css';
 
 
 const ComparisonCard = ({ schoolRepository, comparedSchools } ) => {
@@ -10,13 +11,12 @@ const ComparisonCard = ({ schoolRepository, comparedSchools } ) => {
     compareDistrictAverages(comparedSchools[0], comparedSchools[1]);
 
   return (
-    <div>
-      <h1>{comparedSchools[0]}</h1>
-      <h2>{schoolOneAvg}</h2>
-      <h1>{comparisonInfo.compared}</h1>
-      <h1>{comparedSchools[1]}</h1>
-      <h2>{schoolTwoAvg}</h2>
-
+    <div className="compare-card">
+      <h1 className="school-name">{comparedSchools[0]}</h1>
+      <h2 className="school-avg">Mystery Data Avg: {schoolOneAvg}</h2>
+      <h1 className="comparison" >{comparisonInfo.compared}</h1>
+      <h1 className="school-name">{comparedSchools[1]}</h1>
+      <h2 className="school-avg">Mystery Data Avg: {schoolTwoAvg}</h2>
     </div>
   );
 

@@ -1,0 +1,9 @@
+.compare-wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 20px 40px 20px 40px;
+  border-bottom: 2px solid rgb(224, 164, 164);
+  background: rgba(247, 235, 235, 0.5);
+}
