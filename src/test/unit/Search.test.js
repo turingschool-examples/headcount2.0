@@ -6,17 +6,12 @@ import Search from '../../Search';
 
 describe('Search', () =>  {
 
-  it('calls  when title is changed', () => {
+  it('calls changeData when text is entered in input field', () => {
     const changeDataMock = jest.fn()
-    const search = mount(<Search changeData={changeDataMock} />)
-    const searchInstance = search.instance()
-    console.log(searchInstance)
-    const spy = spyOn(search, 'changeData')
-    search.instance().forceUpdate()
-    const mockEvent = { target: { value: 'something' } }
+    const wrapper = mount(<Search changeData={changeDataMock} />)
+    const mockEvent = { target: { value: 'string' } }
 
-    search.find('input').simulate('change', mockEvent)
-
-    expect(spy).toHaveBeenCalled()
+    wrapper.find('input').simulate('change', mockEvent)
+    expect(changeDataMock).toHaveBeenCalled()
   })
 })

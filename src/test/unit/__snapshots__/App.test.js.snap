@@ -16,6 +16,11 @@ exports[`App matches the snapsnot 1`] = `
   <div
     className="selected-cards"
   >
+    <p
+      className="info-text"
+    >
+      Selected Comparisons
+    </p>
     <div
       className="compare-cards"
     />

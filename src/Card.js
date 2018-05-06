@@ -15,7 +15,7 @@ const Card = (props) => {
         <span className="card-year">{year + ": "}</span>
         {props.stats[year] < .5 ? lowStat : highStat}
       </li>
-    ); 
+    );
   });
 
   return (
@@ -37,8 +37,7 @@ Card.propTypes = {
   })),
   selectCard: PropTypes.func,
   selectedCards: PropTypes.array,
-  location: PropTypes.string,
-  stats: PropTypes.object
+  location: PropTypes.string
 };
 
 export default Card;

@@ -9,35 +9,13 @@ import App from '../../App'
 
 describe('CardArea', () => {
 
-  it('should receive the correct props', () => {
-    const props = {
-      data: {
-        COLORADO: {
-          location: 'COLORADO',
-          stats: [{2007: 1}]
-        }
-      }
-    }
-    const cardArea = shallow(<CardArea data={props} />)
-
-
-    expect(cardArea.length).toEqual(1)
-  })
-
   it('should match snapshot', () => {
-    const props = {
-      data: {
-        COLORADO: {
-          location: 'COLORADO',
-          stats: [{2007: 1}]
-        }
-      }
-    }
+    const props = [{
+      location: 'COLORADO',
+      stats: [{2007: 1}]
+    }]  
     const cardArea = shallow(<CardArea data={props} />)
-    
+
     expect(cardArea).toMatchSnapshot();
   })
-
-
-  
 })

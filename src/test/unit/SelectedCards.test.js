@@ -1,24 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
+import SelectedCards from '../../SelectedCards.js'
 
-describe('SelectedCards', () =>  {
+describe('SelectedCards', () => {
 
-  test('should update the state of the selected cards array', () => {
-    
-    it('should of have a length of one when a card is added', () => {
-        // Setup
-      const selectCardMock = jest.fn()
-      const selectCard = mount(<SelectedCards selectCard={selectCardMock} />)
-      const spy = spyOn(selectCard.instance(), 'selectCard')
-      selectCard.instance().forceUpdate()
-      const mockEvent = { target: { value: 'something' } }
+  it('should match snapshot', () => {
+    const props = [{
+      location: 'COLORADO',
+      stats: [{2007: 1}]
+    }]
+    const selectedCard = ['COLORADO']
+    const selectedCards = shallow(<SelectedCards data={props} selectedCards={selectedCard}/>)
 
-      
-      selectCard.find('div').simulate('click', mockEvent)
-
-      // Expectation
-      expect(spy).toHaveBeenCalled()
-    })
+    expect(selectedCards).toMatchSnapshot();
   })
 })
