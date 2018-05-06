@@ -39,13 +39,13 @@ export default class DistrictRepository {
 
     if (district) {
       const upperCaseLocation = district.toUpperCase(); 
-      return locationKeys.reduce((matchedArray, area) => {
+      return locationKeys.reduce((matchedObject, area) => {
         if (this.stats[area].location.includes(upperCaseLocation)) {
-          matchedArray.push(this.stats[area]);
+          matchedObject[area] = this.stats[area];
         }
 
-        return matchedArray;
-      }, []);
+        return matchedObject;
+      }, {});
     } else {
       const statsArr = [];
       locationKeys.forEach(location => {

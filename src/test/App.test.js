@@ -28,7 +28,9 @@ describe('App', () => {
     const userInput = 'colorado';
 
     wrapper.instance().setLocationData({userInput});
-    expect(wrapper.state().schoolStats.length).toEqual(2);
+    const statsKeys = Object.keys(wrapper.state().schoolStats);
+
+    expect(statsKeys.length).toEqual(2);
   });
 
   describe('Set selected card function', () => {
