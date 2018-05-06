@@ -3,12 +3,16 @@ import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
 import SelectedCards from '../../SelectedCards.js'
 
-describe('SelectedCards', () =>  {
-  it('should display a single card when a card is clicked', () => {
-    const data = []
-    const selectedCards = []
-    const wrapper = shallow(<SelectedCards data={data} selectedCards={selectedCards}/>)
+describe('SelectedCards', () => {
 
-    expect(wrapper.find('.selected-cards').length).toEqual(1)
+  it('should match snapshot', () => {
+    const props = [{
+      location: 'COLORADO',
+      stats: [{2007: 1}]
+    }]
+    const selectedCard = ['COLORADO']
+    const selectedCards = shallow(<SelectedCards data={props} selectedCards={selectedCard}/>)
+
+    expect(selectedCards).toMatchSnapshot();
   })
 })

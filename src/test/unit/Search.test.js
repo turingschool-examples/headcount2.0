@@ -8,10 +8,10 @@ describe('Search', () =>  {
 
   it('calls changeData when text is entered in input field', () => {
     const changeDataMock = jest.fn()
-    const search = mount(<Search changeData={changeDataMock} />)
+    const wrapper = mount(<Search changeData={changeDataMock} />)
     const mockEvent = { target: { value: 'string' } }
 
-    search.find('input').simulate('change', mockEvent)
+    wrapper.find('input').simulate('change', mockEvent)
     expect(changeDataMock).toHaveBeenCalled()
   })
 })
