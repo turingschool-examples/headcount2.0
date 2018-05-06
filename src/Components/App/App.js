@@ -61,7 +61,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="page-background">
         <h1 className="header">Welcome To Headcount 2.0</h1>
         <Search updateRepoInState={ this.updateRepoInState } />
         <Compare compareCards={this.state.compareCards}

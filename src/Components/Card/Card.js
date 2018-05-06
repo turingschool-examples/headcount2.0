@@ -31,8 +31,8 @@ const Card = ({ selected, section, title, listOfData, addCompareCard, removeComp
   return (
     <div className={ `card ${selectClass}` } 
           onClick={ clickFunc }>
-      <h3>{ title }</h3>
-      <ul>{ listItems }</ul>
+      <h3 className="title">{ title }</h3>
+      <ul className='list-items'>{ listItems }</ul>
     </div>
   )
 

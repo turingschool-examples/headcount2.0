@@ -1,12 +1,16 @@
 .search-container{
   margin: 0 auto;
   width: 40%;
+
 }
 
 .search{
   width: 100%;
   height: 40px;
   font-size: x-large;
+  border-left: 6px solid red;
+  /*background-color: lightgrey;*/
+
 }
 
 .search::placeholder {
