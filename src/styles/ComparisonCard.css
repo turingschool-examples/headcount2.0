@@ -1,0 +1,42 @@
+.school-avg {
+  font-size: 0.9rem;
+  color: white;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.school-name {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.comparison{
+   font-size: 1.8rem;
+   color: white;
+   font-weight: 900;
+   font-style: italic;
+   text-align: center;
+   padding:20px 0;
+   border-top: 2px solid white;
+   border-bottom: 2px solid white;
+   
+}
+
+.compare-card {
+   display: inline-block;
+   width: 250px;
+   border: solid 3px transparent;
+   vertical-align: top;
+   padding: 20px 10px;
+   margin: 10px;
+   border-radius: 5px;
+   background-color: rgb(224, 164, 164);
+   box-shadow: 0px 2px 6px 0px rgba(168, 168, 168, 0.48);
+}

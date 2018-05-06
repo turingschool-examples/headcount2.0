@@ -1,0 +1,22 @@
+.search-form {
+  margin-right: 60px;
+} 
+
+.user-input {
+  width: 400px;
+  height:35px;
+  margin-right: 60px;
+  margin-top: 55px;
+  font-size: 0.9rem;
+  border: 1px solid rgb(224, 164, 164);
+  border-radius: 3px;
+  padding: 0 0 0 10px;
+
+}
+
+input:focus {
+  border-color: rgba(224, 164, 164, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset,
+  0 0 8px rgba(224, 164, 164, 0.6);
+  outline: 0 none;
+}
