@@ -6,18 +6,16 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CardArea
     data={
-        Object {
-            "data": Object {
-              "COLORADO": Object {
-                "location": "COLORADO",
-                "stats": Array [
-                  Object {
-                    "2007": 1,
-                  },
-                ],
-              },
+        Array [
+            Object {
+              "location": "COLORADO",
+              "stats": Array [
+                Object {
+                  "2007": 1,
+                },
+              ],
             },
-          }
+          ]
     }
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -32,11 +30,43 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [],
+      "children": Array [
+        <Card
+          location="COLORADO"
+          selectCard={undefined}
+          selectedCards={undefined}
+          stats={
+                    Array [
+                              Object {
+                                "2007": 1,
+                              },
+                            ]
+          }
+/>,
+      ],
       "className": "card-area",
     },
     "ref": null,
-    "rendered": Array [],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "location": "COLORADO",
+          "selectCard": undefined,
+          "selectedCards": undefined,
+          "stats": Array [
+            Object {
+              "2007": 1,
+            },
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -45,11 +75,43 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [],
+        "children": Array [
+          <Card
+            location="COLORADO"
+            selectCard={undefined}
+            selectedCards={undefined}
+            stats={
+                        Array [
+                                    Object {
+                                      "2007": 1,
+                                    },
+                                  ]
+            }
+/>,
+        ],
         "className": "card-area",
       },
       "ref": null,
-      "rendered": Array [],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "location": "COLORADO",
+            "selectCard": undefined,
+            "selectedCards": undefined,
+            "stats": Array [
+              Object {
+                "2007": 1,
+              },
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
       "type": "div",
     },
   ],
