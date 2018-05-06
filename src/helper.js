@@ -1,41 +1,41 @@
 export default class DistrictRepository {
-  constructor(data) {
-    this.stats = Array.from(this.dataCleaner(data));
+  constructor(district) {
+    this.stats = this.dataCleaner(district);
   }
 
   removeNan (dataList) {
-    return dataList.map(data => {
-      if (isNaN(data.Data) || data.Data === "N/A") {
-        data.Data = 0;
+    return dataList.map(district => {
+      if (isNaN(district.Data) || district.Data === "N/A") {
+        district.Data = 0;
       }
-      return data;
+      return district;
     });
   }
 
   dataCleaner(dataList) {
     const dataWithOutNan = this.removeNan(dataList);
 
-    const cleanedData = dataWithOutNan.reduce((cleanedData, data) => {
-      const sanitizedLocation = data.Location.toUpperCase();
-      const sanitizedNumber = parseFloat(data.Data.toFixed(3));
+    const cleanedData = dataWithOutNan.reduce((cleanedData, district) => {
+      const sanitizedLocation = district.Location.toUpperCase();
+      const sanitizedNumber = parseFloat(parseFloat(district.Data).toFixed(3));
 
-      if(!cleanedData[sanitizedLocation]) {
-        cleanedData[sanitizedLocation] = {location: sanitizedLocation, stats: {}}
+      if (!cleanedData[sanitizedLocation]) {
+        cleanedData[sanitizedLocation] = {location: sanitizedLocation, stats: {}};
       }
 
-      cleanedData[sanitizedLocation].stats[data.TimeFrame] = sanitizedNumber;
+      cleanedData[sanitizedLocation].stats[district.TimeFrame] = sanitizedNumber;
 
-      return cleanedData
+      return cleanedData;
     }, {});
 
-    return Object.values(cleanedData)
+    return Object.values(cleanedData);
   }
 
   findByName(district) {
     if (!district) {
-      return undefined
+      return undefined;
     }
-    const sanitizedDistrict = district.toUpperCase()
+    const sanitizedDistrict = district.toUpperCase();
     let matchingObject;
 
     this.stats.forEach(stat => {
@@ -52,12 +52,12 @@ export default class DistrictRepository {
       return this.stats;
     }
 
-    const sanitizedDistrict = district.toUpperCase()
+    const sanitizedDistrict = district.toUpperCase();
     const resultsArray = [];
 
     this.stats.forEach(stat => {
       if (stat.location.includes(sanitizedDistrict)) {
-        resultsArray.push(stat)
+        resultsArray.push(stat);
       }
     });
 
@@ -75,7 +75,7 @@ export default class DistrictRepository {
 
     const districtAverage = 
       districtValues.reduce((districtAverage, districtValue) =>
-       districtAverage + districtValue, 0) / districtValues.length
+        districtAverage + districtValue, 0) / districtValues.length;
 
     return parseFloat(districtAverage.toFixed(3));
   }
@@ -90,6 +90,6 @@ export default class DistrictRepository {
       [santizedDistrict1]: this.findAverage(district1),
       [santizedDistrict2]: this.findAverage(district2),
       compared: finalAverage 
-    }
+    };
   }
 }

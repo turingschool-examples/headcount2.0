@@ -4,9 +4,9 @@ import CardArea from './CardArea';
 import Search from './Search';
 import DistrictRepository from './helper';
 import SelectedCards from './SelectedCards';
-import data from './data/kindergartners_in_full_day_program';
+import sampleData from './data/kindergartners_in_full_day_program';
 
-const district = new DistrictRepository(data);
+const district = new DistrictRepository(sampleData);
 
 class App extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class App extends Component {
     this.state = {
       cleanData: district.stats,
       selectedCards: []
-    }
+    };
   }
 
   changeData = (event) => {
@@ -30,7 +30,7 @@ class App extends Component {
     const newSelection = this.state.selectedCards.filter(locationName => 
       locationText !== locationName);
 
-    if(this.state.selectedCards.length === 2) {
+    if (this.state.selectedCards.length === 2) {
       this.setState({
         selectedCards: [...newSelection]
       });
@@ -38,7 +38,7 @@ class App extends Component {
       this.setState({
         selectedCards: [locationText, ...this.state.selectedCards]
       });
-    };
+    }
   }
 
   render() {
@@ -51,7 +51,7 @@ class App extends Component {
         <SelectedCards selectedCards={this.state.selectedCards} data={this.state.cleanData}/>
         <CardArea data={this.state.cleanData} selectCard={this.selectCard} selectedCards={this.state.selectedCards}/>
       </div>
-    )
+    );
   }
 }
 

@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import CardArea from '../../CardArea';
 import renderer from 'react-test-renderer';
 import App from '../../App';
@@ -27,5 +26,5 @@ describe('App', () => {
   it('matches the snapsnot', () => {
     const app = renderer.create(<App />).toJSON();
     expect(app).toMatchSnapshot();
-  })
+  });
 });
