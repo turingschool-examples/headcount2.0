@@ -1,0 +1,18 @@
+.search {
+  margin: 0 auto;
+  width: 400px;
+}
+
+input {
+  width: 393px;
+  height: 25px;
+  color: #000000;
+  margin: 5px 0 0;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 0 0 0 10px;
+}
+
+/* input:placeholder {
+  font-size: 15px;
+} */

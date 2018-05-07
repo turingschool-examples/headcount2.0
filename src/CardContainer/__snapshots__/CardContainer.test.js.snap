@@ -1,0 +1,214 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardContainer should match the snapshot with cards 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    districtsData={
+        Object {
+            "COLORADO": Object {
+              "location": "COLORADO",
+              "stats": Array [
+                Object {
+                  "2007": 0.013,
+                },
+                Object {
+                  "2009": 3.004,
+                },
+                Object {
+                  "2013": 1.101,
+                },
+              ],
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          comparedCards={undefined}
+          district={
+                    Object {
+                              "location": "COLORADO",
+                              "stats": Array [
+                                Object {
+                                  "2007": 0.013,
+                                },
+                                Object {
+                                  "2009": 3.004,
+                                },
+                                Object {
+                                  "2013": 1.101,
+                                },
+                              ],
+                            }
+          }
+          updateCompareState={undefined}
+/>,
+      ],
+      "className": "card-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "class",
+        "props": Object {
+          "comparedCards": undefined,
+          "district": Object {
+            "location": "COLORADO",
+            "stats": Array [
+              Object {
+                "2007": 0.013,
+              },
+              Object {
+                "2009": 3.004,
+              },
+              Object {
+                "2013": 1.101,
+              },
+            ],
+          },
+          "updateCompareState": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            comparedCards={undefined}
+            district={
+                        Object {
+                                    "location": "COLORADO",
+                                    "stats": Array [
+                                      Object {
+                                        "2007": 0.013,
+                                      },
+                                      Object {
+                                        "2009": 3.004,
+                                      },
+                                      Object {
+                                        "2013": 1.101,
+                                      },
+                                    ],
+                                  }
+            }
+            updateCompareState={undefined}
+/>,
+        ],
+        "className": "card-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "class",
+          "props": Object {
+            "comparedCards": undefined,
+            "district": Object {
+              "location": "COLORADO",
+              "stats": Array [
+                Object {
+                  "2007": 0.013,
+                },
+                Object {
+                  "2009": 3.004,
+                },
+                Object {
+                  "2013": 1.101,
+                },
+              ],
+            },
+            "updateCompareState": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`CardContainer should match the snapshots with no cards 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    districtsData={Object {}}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [],
+      "className": "card-container",
+    },
+    "ref": null,
+    "rendered": Array [],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [],
+        "className": "card-container",
+      },
+      "ref": null,
+      "rendered": Array [],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

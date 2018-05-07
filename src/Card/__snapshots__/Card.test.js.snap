@@ -1,0 +1,328 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    district={
+        Object {
+            "location": "Colorado",
+            "stats": Object {
+              "2007": 0.013,
+              "2009": 3.004,
+              "2013": 1.101,
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3>
+          Colorado
+</h3>,
+        <ul>
+          <li
+                    className="less-than"
+          >
+                     
+                    2007: 0.013
+                     
+          </li>
+          <li
+                    className="greater-than"
+          >
+                     
+                    2009: 3.004
+                     
+          </li>
+          <li
+                    className="greater-than"
+          >
+                     
+                    2013: 1.101
+                     
+          </li>
+</ul>,
+      ],
+      "className": "card",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Colorado",
+        },
+        "ref": null,
+        "rendered": "Colorado",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li
+              className="less-than"
+>
+               
+              2007: 0.013
+               
+</li>,
+            <li
+              className="greater-than"
+>
+               
+              2009: 3.004
+               
+</li>,
+            <li
+              className="greater-than"
+>
+               
+              2013: 1.101
+               
+</li>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " ",
+                "2007: 0.013",
+                " ",
+              ],
+              "className": "less-than",
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              "2007: 0.013",
+              " ",
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " ",
+                "2009: 3.004",
+                " ",
+              ],
+              "className": "greater-than",
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              "2009: 3.004",
+              " ",
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "2",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " ",
+                "2013: 1.101",
+                " ",
+              ],
+              "className": "greater-than",
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              "2013: 1.101",
+              " ",
+            ],
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3>
+            Colorado
+</h3>,
+          <ul>
+            <li
+                        className="less-than"
+            >
+                         
+                        2007: 0.013
+                         
+            </li>
+            <li
+                        className="greater-than"
+            >
+                         
+                        2009: 3.004
+                         
+            </li>
+            <li
+                        className="greater-than"
+            >
+                         
+                        2013: 1.101
+                         
+            </li>
+</ul>,
+        ],
+        "className": "card",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Colorado",
+          },
+          "ref": null,
+          "rendered": "Colorado",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li
+                className="less-than"
+>
+                 
+                2007: 0.013
+                 
+</li>,
+              <li
+                className="greater-than"
+>
+                 
+                2009: 3.004
+                 
+</li>,
+              <li
+                className="greater-than"
+>
+                 
+                2013: 1.101
+                 
+</li>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  "2007: 0.013",
+                  " ",
+                ],
+                "className": "less-than",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                "2007: 0.013",
+                " ",
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  "2009: 3.004",
+                  " ",
+                ],
+                "className": "greater-than",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                "2009: 3.004",
+                " ",
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "2",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  "2013: 1.101",
+                  " ",
+                ],
+                "className": "greater-than",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                "2013: 1.101",
+                " ",
+              ],
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
