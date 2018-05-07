@@ -38,6 +38,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Card
+          comparedCards={undefined}
           district={
                     Object {
                               "location": "COLORADO",
@@ -54,6 +55,7 @@ ShallowWrapper {
                               ],
                             }
           }
+          updateCompareState={undefined}
 />,
       ],
       "className": "card-container",
@@ -63,8 +65,9 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "0",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
+          "comparedCards": undefined,
           "district": Object {
             "location": "COLORADO",
             "stats": Array [
@@ -79,6 +82,7 @@ ShallowWrapper {
               },
             ],
           },
+          "updateCompareState": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -95,6 +99,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Card
+            comparedCards={undefined}
             district={
                         Object {
                                     "location": "COLORADO",
@@ -111,6 +116,7 @@ ShallowWrapper {
                                     ],
                                   }
             }
+            updateCompareState={undefined}
 />,
         ],
         "className": "card-container",
@@ -120,8 +126,9 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "0",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
+            "comparedCards": undefined,
             "district": Object {
               "location": "COLORADO",
               "stats": Array [
@@ -136,6 +143,7 @@ ShallowWrapper {
                 },
               ],
             },
+            "updateCompareState": undefined,
           },
           "ref": null,
           "rendered": null,

@@ -51,9 +51,9 @@ class Card extends Component {
 }
 
 Card.propTypes = {
-  district: PropTypes.string.isRequired,
+  district: PropTypes.object.isRequired,
   comparedCards: PropTypes.arrayOf(PropTypes.object),
-  updateCompareState: PropTypes.func.isRequired,
+  updateCompareState: PropTypes.func,
   clickedState: PropTypes.bool
 };
 

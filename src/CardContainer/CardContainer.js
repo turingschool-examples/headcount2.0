@@ -26,7 +26,7 @@ const CardContainer = ({ districtsData, updateCompareState, comparedCards }) => 
 CardContainer.propTypes = {
   districtsData: PropTypes.any.isRequired,
   updateCompareState: PropTypes.func,
-  comparedCards: PropTypes.arrayOf(PropTypes.object)
+  comparedCards: PropTypes.arrayOf(PropTypes.any)
 };
 
 export default CardContainer;
