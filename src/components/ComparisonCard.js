@@ -22,7 +22,7 @@ class ComparisonCard extends Component {
           <h3>{this.props.districts.findAverage(this.props.selectedCards[0].location)}</h3>
         </div>
         <div>
-          <h4>{'<'} + {this.averageSelected(this.props.selectedCards)} {'>'}</h4>
+          <h4>{'<'} {this.averageSelected(this.props.selectedCards)} {'>'}</h4>
         </div>
         <div>
           <h2>{this.props.selectedCards[1].location}</h2>

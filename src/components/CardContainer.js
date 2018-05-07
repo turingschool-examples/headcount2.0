@@ -1,8 +1,9 @@
 import React from 'react';
 import Card from './Card';
 import PropTypes from 'prop-types';
+import '../styles/CardContainer.css';
 
-const Districts = ({ stats, setSelectedCard}) => {
+const CardContainer = ({ stats, setSelectedCard}) => {
   const statKeys = Object.keys(stats);
   const districtCards = statKeys.map((stat, index) => {
     return <Card {...stats[stat]} key={index + 'district'} setSelectedCard={setSelectedCard} />
@@ -15,7 +16,7 @@ const Districts = ({ stats, setSelectedCard}) => {
   );
 };
 
-Districts.propTypes = {
+CardContainer.propTypes = {
   stats: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array
@@ -23,4 +24,4 @@ Districts.propTypes = {
   setSelectedCard: PropTypes.func.isRequired,
 }
 
-export default Districts;
+export default CardContainer;

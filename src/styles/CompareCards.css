@@ -5,16 +5,18 @@
 }
 
 .comparisonContainer div {
-  justify-content: space-around;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
-.selected {
-  border: double #ea8e4f;
-  text-align: center;
+.comparisonContainer :nth-child(1) { 
+  order: 2; 
+}
+.comparisonContainer :nth-child(2) { 
+  order: 3; 
 }
 
-.comparisonContainer :nth-child(1) { order: 2; }
-.comparisonContainer :nth-child(2) { order: 3; }
-.comparisonContainer :nth-child(3) { order: 1; }
+.comparisonContainer :nth-child(3) { 
+  order: 1; 
+}

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './styles/App.css';
 import DistrictRepository from './helper';
 import kinderData from './data/kindergartners_in_full_day_program';
-import Districts from './components/Districts';
+import CardContainer from './components/CardContainer';
 import Search from './components/Search';
 import CompareCards from './components/CompareCards';
 import ComparisonCard from './components/ComparisonCard';
@@ -63,7 +63,7 @@ class App extends Component {
             districts={this.state.districts} 
           />
         </section>
-        <Districts 
+        <CardContainer
           stats={this.state.schoolStats} 
           setSelectedCard={this.setSelectedCard} 
         />

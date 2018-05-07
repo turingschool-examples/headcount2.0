@@ -1,17 +1,17 @@
 .comparisonCard {
-    width: 17%;
-    height: 375px;
     -ms-flex-direction: column;
-    flex-direction: column;
+    -ms-flex-pack: justify;
+    -webkit-box-shadow: 3px 2px 2px rgba(0,0,0,0.1);
+    background: #eee;
+    box-shadow: 3px 2px 2px rgba(0,0,0,0.1);
     display: -ms-flexbox;
     display: flex;
-    background: #eee;
-    padding: 40px 40px 40px 40px;
-    -webkit-box-shadow: 3px 2px 2px rgba(0,0,0,0.1);
-    box-shadow: 3px 2px 2px rgba(0,0,0,0.1);
-    margin-bottom: 2%;
-    -ms-flex-pack: justify;
+    flex-direction: column;
+    height: 375px;
     justify-content: space-between;
+    margin-bottom: 2%;
+    padding: 40px 40px 40px 40px;
+    width: 17%;
 }
 
 .comparisonCard div {
@@ -28,10 +28,18 @@
 }
 
 .comparisonCard h4 {
-    font-size: 2rem;
     color: #555;
+    font-size: 2rem;
 }
 
-.comparisonCard :nth-child(1) { order: 1; }
-.comparisonCard :nth-child(2) { order: 2; }
-.comparisonCard :nth-child(3) { order: 3; }
+.comparisonCard :nth-child(1) { 
+    order: 1; 
+}
+
+.comparisonCard :nth-child(2) { 
+    order: 2; 
+}
+
+.comparisonCard :nth-child(3) { 
+    order: 3; 
+}
