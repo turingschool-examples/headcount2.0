@@ -33,17 +33,23 @@ ShallowWrapper {
           Colorado
 </h3>,
         <ul>
-          <li>
+          <li
+                    className="less-than"
+          >
                      
                     2007: 0.013
                      
           </li>
-          <li>
+          <li
+                    className="greater-than"
+          >
                      
                     2009: 3.004
                      
           </li>
-          <li>
+          <li
+                    className="greater-than"
+          >
                      
                     2013: 1.101
                      
@@ -51,6 +57,7 @@ ShallowWrapper {
 </ul>,
       ],
       "className": "card",
+      "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -71,17 +78,23 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <li>
+            <li
+              className="less-than"
+>
                
               2007: 0.013
                
 </li>,
-            <li>
+            <li
+              className="greater-than"
+>
                
               2009: 3.004
                
 </li>,
-            <li>
+            <li
+              className="greater-than"
+>
                
               2013: 1.101
                
@@ -100,6 +113,7 @@ ShallowWrapper {
                 "2007: 0.013",
                 " ",
               ],
+              "className": "less-than",
             },
             "ref": null,
             "rendered": Array [
@@ -119,6 +133,7 @@ ShallowWrapper {
                 "2009: 3.004",
                 " ",
               ],
+              "className": "greater-than",
             },
             "ref": null,
             "rendered": Array [
@@ -138,6 +153,7 @@ ShallowWrapper {
                 "2013: 1.101",
                 " ",
               ],
+              "className": "greater-than",
             },
             "ref": null,
             "rendered": Array [
@@ -164,17 +180,23 @@ ShallowWrapper {
             Colorado
 </h3>,
           <ul>
-            <li>
+            <li
+                        className="less-than"
+            >
                          
                         2007: 0.013
                          
             </li>
-            <li>
+            <li
+                        className="greater-than"
+            >
                          
                         2009: 3.004
                          
             </li>
-            <li>
+            <li
+                        className="greater-than"
+            >
                          
                         2013: 1.101
                          
@@ -182,6 +204,7 @@ ShallowWrapper {
 </ul>,
         ],
         "className": "card",
+        "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -202,17 +225,23 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <li>
+              <li
+                className="less-than"
+>
                  
                 2007: 0.013
                  
 </li>,
-              <li>
+              <li
+                className="greater-than"
+>
                  
                 2009: 3.004
                  
 </li>,
-              <li>
+              <li
+                className="greater-than"
+>
                  
                 2013: 1.101
                  
@@ -231,6 +260,7 @@ ShallowWrapper {
                   "2007: 0.013",
                   " ",
                 ],
+                "className": "less-than",
               },
               "ref": null,
               "rendered": Array [
@@ -250,6 +280,7 @@ ShallowWrapper {
                   "2009: 3.004",
                   " ",
                 ],
+                "className": "greater-than",
               },
               "ref": null,
               "rendered": Array [
@@ -269,6 +300,7 @@ ShallowWrapper {
                   "2013: 1.101",
                   " ",
                 ],
+                "className": "greater-than",
               },
               "ref": null,
               "rendered": Array [
