@@ -25,10 +25,9 @@ class App extends Component {
     });
   }
 
-  selectCard = (event) => {
-    const locationText = event.target.closest('div').children[0].innerText;
+  selectCard = (location) => {
     const newSelection = this.state.selectedCards.filter(locationName =>
-      locationText !== locationName);
+      location !== locationName);
 
     if (this.state.selectedCards.length === 2) {
       this.setState({
@@ -36,7 +35,7 @@ class App extends Component {
       });
     } else {
       this.setState({
-        selectedCards: [locationText, ...this.state.selectedCards]
+        selectedCards: [location, ...this.state.selectedCards]
       });
     }
   }

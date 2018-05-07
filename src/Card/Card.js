@@ -21,7 +21,9 @@ const Card = (props) => {
   return (
     <div 
       className={locationMatch ? 'selected card' : 'card'}
-      onClick={props.selectCard}
+      onClick={() => {
+        props.selectCard(props.location)}
+      }
     >
       <h3>{props.location}</h3>
       <hr />

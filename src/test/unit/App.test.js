@@ -38,4 +38,11 @@ describe('App', () => {
     app.instance().changeData(mockEvent);
     expect(app.instance().state.cleanData).toHaveLength(2);
   });
+
+  it('should populate selectedCards array', () => {
+    const app = shallow(<App />);
+    const location = 'COLORADO';
+    app.instance().selectCard(location);
+    expect(app.instance().state.selectedCards).toHaveLength(1);
+  });
 });
