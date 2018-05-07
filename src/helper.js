@@ -50,9 +50,10 @@ export default class DistrictRepository {
       const statsArr = [];
       locationKeys.forEach(location => {
         statsArr.push(this.stats[location]);
-      })
+      });
+
       return statsArr;
-    };
+    }
   }
 
   findAverage = (district) => {

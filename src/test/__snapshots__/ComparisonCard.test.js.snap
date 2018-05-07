@@ -3157,7 +3157,7 @@ ShallowWrapper {
         <div>
           <h4>
                     &lt;
-                     + 
+                     
                     1.302
                      
                     &gt;
@@ -3235,7 +3235,7 @@ ShallowWrapper {
         "props": Object {
           "children": <h4>
             &lt;
-             + 
+             
             1.302
              
             &gt;
@@ -3249,7 +3249,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               "<",
-              " + ",
+              " ",
               1.302,
               " ",
               ">",
@@ -3258,7 +3258,7 @@ ShallowWrapper {
           "ref": null,
           "rendered": Array [
             "<",
-            " + ",
+            " ",
             1.302,
             " ",
             ">",
@@ -3340,7 +3340,7 @@ ShallowWrapper {
           <div>
             <h4>
                         &lt;
-                         + 
+                         
                         1.302
                          
                         &gt;
@@ -3418,7 +3418,7 @@ ShallowWrapper {
           "props": Object {
             "children": <h4>
               &lt;
-               + 
+               
               1.302
                
               &gt;
@@ -3432,7 +3432,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 "<",
-                " + ",
+                " ",
                 1.302,
                 " ",
                 ">",
@@ -3441,7 +3441,7 @@ ShallowWrapper {
             "ref": null,
             "rendered": Array [
               "<",
-              " + ",
+              " ",
               1.302,
               " ",
               ">",

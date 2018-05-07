@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import './styles/App.css';
-import DistrictRepository from './helper';
-import kinderData from './data/kindergartners_in_full_day_program';
 import CardContainer from './components/CardContainer';
 import Search from './components/Search';
 import CompareCards from './components/CompareCards';
-import ComparisonCard from './components/ComparisonCard';
+import PropTypes from 'prop-types';
 
 class App extends Component {
   constructor(props) {
@@ -27,10 +25,10 @@ class App extends Component {
   setSelectedCard = (location) => {
     if (this.state.selectedCards.length < 2 && 
       this.state.schoolStats[location].selected === false) {
-      var selectedState = this.state.schoolStats[location].selected ?
+      let selectedState = this.state.schoolStats[location].selected ?
         false: 
         true;
-      var selectedCard = Object.assign(
+      let selectedCard = Object.assign(
         this.state.schoolStats[location], 
         {selected: selectedState}
       );
@@ -39,7 +37,7 @@ class App extends Component {
         selectedCards: [selectedCard, ...this.state.selectedCards]
       });
     } else if (this.state.schoolStats[location].selected === true) {
-      var selectedCard = Object.assign(
+      Object.assign(
         this.state.schoolStats[location], 
         {selected: false}
       );
@@ -71,5 +69,9 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  districts: PropTypes.object.isRequired
+};
 
 export default App;

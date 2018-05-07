@@ -1,5 +1,5 @@
 import React from 'react';
-import Districts from '../components/Districts';
+import CardContainer from '../components/CardContainer';
 import Card from '../components/Card';
 import { shallow, mount } from 'enzyme';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Districts from '../components/Districts';
+import CardContainer from '../components/CardContainer';
 import Card from '../components/Card';
 import { shallow } from 'enzyme';
 
@@ -19,7 +19,7 @@ describe('Districts', () => {
   };
 
   beforeEach(() => {
-    wrapper = shallow(<Districts stats={mockStats} setSelectedCard={jest.fn()} />);
+    wrapper = shallow(<CardContainer stats={mockStats} setSelectedCard={jest.fn()} />);
   });
   
   it('should match the snapshot', () => {    
