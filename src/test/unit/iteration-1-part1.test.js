@@ -1,4 +1,4 @@
-import DistrictRepository from '../../src/helper.js';
+import DistrictRepository from '../../helper.js';
 import kinderData from '../../data/kindergartners_in_full_day_program.js';
 
 describe('DistrictRepository iteration 1 - part 1', () =>  {
@@ -41,7 +41,6 @@ describe('DistrictRepository iteration 1 - part 1', () =>  {
     const academy = district.findByName('ARICKAREE R-2');
     const result = {"2004": 1, "2005": 0, "2006": 0.125, "2007": 0, "2008": 1, "2009": 1, "2010": 1, "2011": 1, "2012": 1, "2013": 1, "2014": 1}
 
-    expect(academy.stats).toEqual(result)
+    expect(academy.stats).toEqual(result);
   });
-
 });

@@ -1,0 +1,284 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectedCards should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SelectedCards
+    cleanData={
+        Array [
+            Object {
+              "location": "COLORADO",
+              "stats": Array [
+                Object {
+                  "2007": 1,
+                },
+              ],
+            },
+          ]
+    }
+    selectCard={[Function]}
+    selectedCards={
+        Array [
+            "COLORADO",
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <p
+          className="info-text"
+>
+          Selected Comparisons
+</p>,
+        <Card
+          location="COLORADO"
+          selectCard={[Function]}
+          selectedCards={
+                    Array [
+                              "COLORADO",
+                            ]
+          }
+          stats={
+                    Array [
+                              Object {
+                                "2007": 1,
+                              },
+                            ]
+          }
+/>,
+        <div
+          className="compare-cards"
+>
+          <h2>
+                    COLORADO
+                     : 
+                    0.53
+          </h2>
+</div>,
+        undefined,
+      ],
+      "className": "selected-cards",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Selected Comparisons",
+          "className": "info-text",
+        },
+        "ref": null,
+        "rendered": "Selected Comparisons",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "location": "COLORADO",
+          "selectCard": [Function],
+          "selectedCards": Array [
+            "COLORADO",
+          ],
+          "stats": Array [
+            Object {
+              "2007": 1,
+            },
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            undefined,
+            <h2>
+              COLORADO
+               : 
+              0.53
+</h2>,
+            undefined,
+          ],
+          "className": "compare-cards",
+        },
+        "ref": null,
+        "rendered": Array [
+          undefined,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "COLORADO",
+                " : ",
+                0.53,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "COLORADO",
+              " : ",
+              0.53,
+            ],
+            "type": "h2",
+          },
+          undefined,
+        ],
+        "type": "div",
+      },
+      undefined,
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <p
+            className="info-text"
+>
+            Selected Comparisons
+</p>,
+          <Card
+            location="COLORADO"
+            selectCard={[Function]}
+            selectedCards={
+                        Array [
+                                    "COLORADO",
+                                  ]
+            }
+            stats={
+                        Array [
+                                    Object {
+                                      "2007": 1,
+                                    },
+                                  ]
+            }
+/>,
+          <div
+            className="compare-cards"
+>
+            <h2>
+                        COLORADO
+                         : 
+                        0.53
+            </h2>
+</div>,
+          undefined,
+        ],
+        "className": "selected-cards",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Selected Comparisons",
+            "className": "info-text",
+          },
+          "ref": null,
+          "rendered": "Selected Comparisons",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "location": "COLORADO",
+            "selectCard": [Function],
+            "selectedCards": Array [
+              "COLORADO",
+            ],
+            "stats": Array [
+              Object {
+                "2007": 1,
+              },
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              undefined,
+              <h2>
+                COLORADO
+                 : 
+                0.53
+</h2>,
+              undefined,
+            ],
+            "className": "compare-cards",
+          },
+          "ref": null,
+          "rendered": Array [
+            undefined,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "COLORADO",
+                  " : ",
+                  0.53,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "COLORADO",
+                " : ",
+                0.53,
+              ],
+              "type": "h2",
+            },
+            undefined,
+          ],
+          "type": "div",
+        },
+        undefined,
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
