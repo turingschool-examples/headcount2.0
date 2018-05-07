@@ -1,0 +1,20 @@
+body {
+  font-family: 'Exo 2', sans-serif;
+  text-align: center;
+}
+
+main {
+  background: #2b2e35;
+  background-image: url('../assets/cap.png');
+  background-repeat: no-repeat;
+  background-position-x: 0px
+}
+
+h1 {
+  color: #fff;
+  font-size: 3.5rem;
+  margin: 0 0 60px 0;
+  padding-top: 60px;
+  text-align: center;
+  text-transform: uppercase;
+}

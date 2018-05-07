@@ -1,0 +1,22 @@
+.comparisonContainer {
+  margin: 0 auto;
+  width: 80%;
+
+}
+
+.comparisonContainer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.comparisonContainer :nth-child(1) { 
+  order: 2; 
+}
+.comparisonContainer :nth-child(2) { 
+  order: 3; 
+}
+
+.comparisonContainer :nth-child(3) { 
+  order: 1; 
+}
