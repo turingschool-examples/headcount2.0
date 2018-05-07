@@ -10,7 +10,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      schoolStats: null || props.districts.stats,
+      schoolStats: props.districts.stats,
       districts: props.districts,
       selectedCards: []
     };
@@ -25,12 +25,9 @@ class App extends Component {
   setSelectedCard = (location) => {
     if (this.state.selectedCards.length < 2 && 
       this.state.schoolStats[location].selected === false) {
-      let selectedState = this.state.schoolStats[location].selected ?
-        false: 
-        true;
       let selectedCard = Object.assign(
         this.state.schoolStats[location], 
-        {selected: selectedState}
+        {selected: true}
       );
 
       this.setState({
