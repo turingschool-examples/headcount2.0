@@ -1,11 +1,16 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import CardArea from '../../CardArea';
 import renderer from 'react-test-renderer';
-import App from '../../App';
-import Card from '../../Card';
+import App from '../../App/App';
+import CardArea from '../../CardArea/CardArea';
 
 describe('App', () => {
+  it('matches the snapsnot', () => {
+    const app = renderer.create(<App />).toJSON();
+
+    expect(app).toMatchSnapshot();
+  });
+  
   it('renders', () => {
     const app = shallow(<App />);
     
@@ -23,12 +28,6 @@ describe('App', () => {
     const app = shallow(<App />);
 
     expect(app.find(CardArea)).toHaveLength(1);
-  });
-
-  it('matches the snapsnot', () => {
-    const app = renderer.create(<App />).toJSON();
-
-    expect(app).toMatchSnapshot();
   });
 
   it('should change data', () => {

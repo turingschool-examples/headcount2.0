@@ -18,7 +18,6 @@
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
 }
 
-
 .card ul {
   display: flex;
   flex-flow: column wrap;

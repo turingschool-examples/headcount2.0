@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import CardArea from './CardArea';
-import Search from './Search';
-import DistrictRepository from './helper';
-import SelectedCards from './SelectedCards';
-import sampleData from './data/kindergartners_in_full_day_program';
+import DistrictRepository from '../helper';
+import CardArea from '../CardArea/CardArea';
+import Search from '../Search/Search';
+import SelectedCards from '../SelectedCards/SelectedCards';
+import sampleData from '../data/kindergartners_in_full_day_program';
 
 const district = new DistrictRepository(sampleData);
 
@@ -49,12 +49,12 @@ class App extends Component {
           <Search changeData={this.changeData} />
         </header>
         <SelectedCards
-          data={this.state.cleanData}
+          cleanData={this.state.cleanData}
           selectCard={this.selectCard}
           selectedCards={this.state.selectedCards}
         />
         <CardArea
-          data={this.state.cleanData}
+          cleanData={this.state.cleanData}
           selectCard={this.selectCard}
           selectedCards={this.state.selectedCards}
         />
