@@ -5,7 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CardArea
-    data={
+    cleanData={
         Array [
             Object {
               "location": "COLORADO",
@@ -17,6 +17,8 @@ ShallowWrapper {
             },
           ]
     }
+    selectCard={[Function]}
+    selectedCards={Array []}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -33,8 +35,8 @@ ShallowWrapper {
       "children": Array [
         <Card
           location="COLORADO"
-          selectCard={undefined}
-          selectedCards={undefined}
+          selectCard={[Function]}
+          selectedCards={Array []}
           stats={
                     Array [
                               Object {
@@ -54,8 +56,8 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "location": "COLORADO",
-          "selectCard": undefined,
-          "selectedCards": undefined,
+          "selectCard": [Function],
+          "selectedCards": Array [],
           "stats": Array [
             Object {
               "2007": 1,
@@ -78,8 +80,8 @@ ShallowWrapper {
         "children": Array [
           <Card
             location="COLORADO"
-            selectCard={undefined}
-            selectedCards={undefined}
+            selectCard={[Function]}
+            selectedCards={Array []}
             stats={
                         Array [
                                     Object {
@@ -99,8 +101,8 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "location": "COLORADO",
-            "selectCard": undefined,
-            "selectedCards": undefined,
+            "selectCard": [Function],
+            "selectedCards": Array [],
             "stats": Array [
               Object {
                 "2007": 1,

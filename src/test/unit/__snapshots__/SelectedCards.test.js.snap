@@ -5,7 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SelectedCards
-    data={
+    cleanData={
         Array [
             Object {
               "location": "COLORADO",
@@ -17,6 +17,7 @@ ShallowWrapper {
             },
           ]
     }
+    selectCard={[Function]}
     selectedCards={
         Array [
             "COLORADO",
@@ -43,7 +44,7 @@ ShallowWrapper {
 </p>,
         <Card
           location="COLORADO"
-          selectCard={undefined}
+          selectCard={[Function]}
           selectedCards={
                     Array [
                               "COLORADO",
@@ -62,7 +63,7 @@ ShallowWrapper {
 >
           <h2>
                     COLORADO
-                    :
+                     : 
                     0.53
           </h2>
 </div>,
@@ -90,7 +91,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "location": "COLORADO",
-          "selectCard": undefined,
+          "selectCard": [Function],
           "selectedCards": Array [
             "COLORADO",
           ],
@@ -113,7 +114,7 @@ ShallowWrapper {
             undefined,
             <h2>
               COLORADO
-              :
+               : 
               0.53
 </h2>,
             undefined,
@@ -130,14 +131,14 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 "COLORADO",
-                ":",
+                " : ",
                 0.53,
               ],
             },
             "ref": null,
             "rendered": Array [
               "COLORADO",
-              ":",
+              " : ",
               0.53,
             ],
             "type": "h2",
@@ -164,7 +165,7 @@ ShallowWrapper {
 </p>,
           <Card
             location="COLORADO"
-            selectCard={undefined}
+            selectCard={[Function]}
             selectedCards={
                         Array [
                                     "COLORADO",
@@ -183,7 +184,7 @@ ShallowWrapper {
 >
             <h2>
                         COLORADO
-                        :
+                         : 
                         0.53
             </h2>
 </div>,
@@ -211,7 +212,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "location": "COLORADO",
-            "selectCard": undefined,
+            "selectCard": [Function],
             "selectedCards": Array [
               "COLORADO",
             ],
@@ -234,7 +235,7 @@ ShallowWrapper {
               undefined,
               <h2>
                 COLORADO
-                :
+                 : 
                 0.53
 </h2>,
               undefined,
@@ -251,14 +252,14 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   "COLORADO",
-                  ":",
+                  " : ",
                   0.53,
                 ],
               },
               "ref": null,
               "rendered": Array [
                 "COLORADO",
-                ":",
+                " : ",
                 0.53,
               ],
               "type": "h2",
