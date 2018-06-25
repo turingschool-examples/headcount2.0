@@ -15,8 +15,15 @@ export default class DistrictRepository {
         }
       }
 
-      cleanedKinder[school] = {...school}
       return cleanedKinder
-    }, {})
+    }, [])
+  }
+
+  findByName = (location) => {
+    if(!location) {
+      return undefined
+    }
+    const upperCaseLocation = location.toUpperCase()
+    return this.stats[upperCaseLocation]
   }
 }
