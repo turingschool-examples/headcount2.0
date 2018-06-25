@@ -7,7 +7,7 @@ export default class DistrictRepository {
 
   } 
 
-  compiledData(kinderData) {
+  compiledData = (kinderData) => {
     const results = kinderData.reduce((district, obj) => {
       let location = obj.Location
       if(!district[location]) {
@@ -22,5 +22,32 @@ export default class DistrictRepository {
    
 
   }
+
+  
+  findByName = (district) => { 
+    if(!district) {
+      return
+    }
+
+    const cleanedDistrict = district.toUpperCase()
+    const districtKeys = Object.keys(this.stats)
+    console.log(cleanedDistrict)
+ 
+    const matchingDistricts = districtKeys.reduce((matchingDistricts, key) => {
+      if(key.toUpperCase() === cleanedDistrict) {
+        console.log(this.stats)
+        return this.stats[key]
+      }
+      return matchingDistricts
+    }, [])
+
+    if(!matchingDistricts.length) {
+      return
+    }
+    return matchingDistricts
+ }
+
+
+  
 }
 
