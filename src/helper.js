@@ -15,6 +15,13 @@ export default class DistrictRepository {
         }
       }
 
+      if (!cleanedKinder[upperCaseDistrict].stats[school.TimeFrame] && typeof(school.Data) !== 'string') {
+        cleanedKinder[upperCaseDistrict].stats[school.TimeFrame] = 
+        Math.round(1000 * school.Data)/1000
+      } else {
+        cleanedKinder[upperCaseDistrict].stats[school.TimeFrame] = 0
+      }
+
       return cleanedKinder
     }, [])
   }
