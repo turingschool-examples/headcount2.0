@@ -4,7 +4,7 @@ export default class DistrictRepository {
   }
 
   cleanedData = (kinderData) => {
-    return kinderData.reduce((cleanedKinder, school) => {
+    const cleanedKinder = kinderData.reduce((cleanedKinder, school) => {
       const upperCaseDistrict = school.Location.toUpperCase()
 
       if (!cleanedKinder[upperCaseDistrict]) {
@@ -23,7 +23,11 @@ export default class DistrictRepository {
       }
 
       return cleanedKinder
-    }, [])
+    }, {})
+
+    return Object.keys(cleanedKinder).map(school => {
+      return cleanedKinder[school]
+    })
   }
 
   findByName = (location) => {
@@ -31,6 +35,18 @@ export default class DistrictRepository {
       return undefined
     }
     const upperCaseLocation = location.toUpperCase()
-    return this.stats[upperCaseLocation]
+    return this.stats.find(school => school.location === upperCaseLocation)
+  }
+
+  findAllMatches = (location) => {
+    if (!location) {
+      return this.stats
+    } else {
+      const upperCaseLocation = location.toUpperCase()
+
+      return this.stats.filter(school => {
+        return school.location.includes(upperCaseLocation)
+      })
+    }
   }
 }
