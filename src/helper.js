@@ -7,7 +7,7 @@ export default class DistrictRepository {
 
 dataCleaner = (data) => {
     let dataObj = data.reduce((dataObj, district) => {
-      let location = district.Location
+      let location = district.Location.toUpperCase()
         if(!dataObj[location]) {
           dataObj[location] = [district]
         } else {
@@ -16,6 +16,13 @@ dataCleaner = (data) => {
       return dataObj
     },{})
     return dataObj
+  }
+
+  findByName = (str) => {
+    Object.keys(this.stats).find(district => {
+      return district === str
+    })
+
   }
 }
 
