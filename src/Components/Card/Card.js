@@ -1,4 +1,5 @@
 import React from 'react';
+import './card.css'
 
 const Card = (props) => {
   const {location, stats, selected} = props
@@ -15,7 +16,7 @@ const Card = (props) => {
   
 
   return (
-    <div>
+    <div className="card">
       <h1>{location}</h1>
       {spreadStats}
     </div>
