@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import DistrictRepository from '../../helper'
-import data from '../../data/kindergartners_in_full_day_program'
 import CardContainer from '../CardContainer/CardContainer';
 
 class App extends Component {
