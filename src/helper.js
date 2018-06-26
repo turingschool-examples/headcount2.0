@@ -1,20 +1,26 @@
 export default class DistrictRepository {
-  constructor(kindergartnerData) {
-    this.stats = this.removeDuplicates(kindergartnerData);
+  constructor(schoolData) {
+    this.stats = this.organizeSchoolDistricts(schoolData);
   }
 
-  removeDuplicates(initialData) {
-    const noDuplicateSchools = initialData.reduce((arrangedSchools, school) => {
+  organizeSchoolDistricts(initialData) {
+    const organizedSchools = initialData.reduce((arrangedSchools, school) => {
       const sanitizedLocation = school.Location.toUpperCase();
 
       if (!arrangedSchools[sanitizedLocation]) {
-        arrangedSchools[sanitizedLocation] = [school];
+        arrangedSchools[sanitizedLocation] = {
+          location: school.Location,
+          dataPoints: [school]
+        };
       } else {
-        arrangedSchools[sanitizedLocation] = [...arrangedSchools[sanitizedLocation], school];
+        arrangedSchools[sanitizedLocation] = {
+          location: school.Location,
+          dataPoints: [...arrangedSchools[sanitizedLocation].dataPoints, school]
+        };
       }
       return arrangedSchools;
     }, {});
-    return noDuplicateSchools;
+    return organizedSchools;
   }
 
   findByName(searchCriteria) {
@@ -28,17 +34,15 @@ export default class DistrictRepository {
     }
   }
 
-  findAllMatches(searchCriteria) {
+  findAllMatches(searchString) {
     const statsKeys = Object.keys(this.stats);
 
-    if (!searchCriteria) {
-      return statsKeys.map(school => this.stats[school]);
+    if (!searchString) {
+      return statsKeys;
     }
 
-    const sanitizedLocation = searchCriteria.toUpperCase();
-
     return statsKeys.reduce((acc, school) => {
-      if (school.includes(sanitizedLocation)) {
+      if (school.includes(searchString.toUpperCase())) {
         acc = [...acc, this.stats[school]];
       }
       return acc;
