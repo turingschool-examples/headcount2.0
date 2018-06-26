@@ -43,7 +43,7 @@ export default class DistrictRepository {
 
   findAllMatches(searchCriteria) {
     const statsKeys = Object.keys(this.stats);
-    
+
     if (!searchCriteria) {
       return statsKeys;
     }
@@ -53,5 +53,13 @@ export default class DistrictRepository {
       }
       return acc;
     }, []);
+  }
+
+  findAverage(searchCriteria) {
+    const sanitizedLocation = searchCriteria.toUpperCase();
+    const statsValues = Object.values(this.stats[sanitizedLocation].stats);
+    const sum = statsValues.reduce((acc, value) => acc += value, 0);
+    const average = Math.round(1000 * (sum / statsValues.length)) / 1000;
+    return average;
   }
 }
