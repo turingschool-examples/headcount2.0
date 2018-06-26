@@ -36,8 +36,10 @@ export default class DistrictRepository {
 
 
 
-  findAllMatching = (data) => {
-    const matches = kinderData.map(stat => stat.stuff)
-
+  findAllMatches = () => {
+    return Object.values(this.stats);
+    // const values = statsVals.filter(value => 
+    // statsVals.length
   }
+
 }
