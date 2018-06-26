@@ -9,12 +9,11 @@ export default class DistrictRepository {
 
       if (!arrangedSchools[sanitizedLocation]) {
         arrangedSchools[sanitizedLocation] = {
-          location: school.Location,
           dataPoints: [school]
         };
       } else {
         arrangedSchools[sanitizedLocation] = {
-          location: school.Location,
+          location: sanitizedLocation,
           dataPoints: [...arrangedSchools[sanitizedLocation].dataPoints, school]
         };
       }
@@ -28,7 +27,7 @@ export default class DistrictRepository {
       const sanitizedLocation = searchCriteria.toUpperCase();
       if (this.stats[sanitizedLocation]) {
         return {
-          location: this.stats[sanitizedLocation]
+          location: this.stats[sanitizedLocation].location
         };
       }
     }
