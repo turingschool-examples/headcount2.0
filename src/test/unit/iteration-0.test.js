@@ -1,14 +1,11 @@
 import DistrictRepository from '../../helper.js';
 import kinderData from '../../data/kindergartners_in_full_day_program.js';
-import util from 'util';
 
 describe.only('DistrictRepository iteration 0', () =>  {
   const district = new DistrictRepository(kinderData);
 
   test('district has data in an object', () => {
     // remember that an array is also just an object.
-    console.log(util.inspect(district.stats, false, null));
-
     expect(typeof district.stats).toBe('object');
   });
 
