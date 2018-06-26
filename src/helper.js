@@ -1,7 +1,5 @@
-import kindergartnerData from './data/kindergartners_in_full_day_program';
-
 export default class DistrictRepository {
-  constructor() {
+  constructor(kindergartnerData) {
     this.stats = this.removeDuplicates(kindergartnerData);
   }
 
@@ -19,14 +17,25 @@ export default class DistrictRepository {
     return noDuplicateSchools;
   }
 
-  findAllMatches(searchString) {
+  findByName(searchCriteria) {
+    if (searchCriteria) {
+      const sanitizedLocation = searchCriteria.toUpperCase();
+      if (this.stats[sanitizedLocation]) {
+        return {
+          location: this.stats[sanitizedLocation]
+        };
+      }
+    }
+  }
+
+  findAllMatches(searchCriteria) {
     const statsKeys = Object.keys(this.stats);
 
-    if (!searchString) {
+    if (!searchCriteria) {
       return statsKeys.map(school => this.stats[school]);
     }
 
-    const sanitizedLocation = searchString.toUpperCase();
+    const sanitizedLocation = searchCriteria.toUpperCase();
 
     return statsKeys.reduce((acc, school) => {
       if (school.includes(sanitizedLocation)) {
