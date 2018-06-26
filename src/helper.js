@@ -6,15 +6,21 @@ export default class DistrictRepository {
   organizeSchoolDistricts(initialData) {
     const organizedSchools = initialData.reduce((arrangedSchools, school) => {
       const sanitizedLocation = school.Location.toUpperCase();
+      const roundedPercentage = isNaN(school.Data) ? 0 : Math.round(1000 * school.Data) / 1000;
 
       if (!arrangedSchools[sanitizedLocation]) {
         arrangedSchools[sanitizedLocation] = {
-          dataPoints: [school]
+          stats: {
+            [school.TimeFrame]: roundedPercentage
+          }
         };
       } else {
         arrangedSchools[sanitizedLocation] = {
           location: sanitizedLocation,
-          dataPoints: [...arrangedSchools[sanitizedLocation].dataPoints, school]
+          stats: {
+            ...arrangedSchools[sanitizedLocation].stats,
+            [school.TimeFrame]: roundedPercentage
+          }
         };
       }
       return arrangedSchools;
@@ -26,22 +32,23 @@ export default class DistrictRepository {
     if (searchCriteria) {
       const sanitizedLocation = searchCriteria.toUpperCase();
       if (this.stats[sanitizedLocation]) {
+        const { location, stats } = this.stats[sanitizedLocation];
         return {
-          location: this.stats[sanitizedLocation].location
+          location,
+          stats
         };
       }
     }
   }
 
-  findAllMatches(searchString) {
+  findAllMatches(searchCriteria) {
     const statsKeys = Object.keys(this.stats);
-
-    if (!searchString) {
+    
+    if (!searchCriteria) {
       return statsKeys;
     }
-
     return statsKeys.reduce((acc, school) => {
-      if (school.includes(searchString.toUpperCase())) {
+      if (school.includes(searchCriteria.toUpperCase())) {
         acc = [...acc, this.stats[school]];
       }
       return acc;
