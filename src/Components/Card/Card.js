@@ -8,7 +8,7 @@ const Card = (props) => {
     Object.keys(stats).map((stat, index) => {
       return (
         <div>
-          <h5>{stat}</h5>
+          <h5 className="year">{stat}</h5>
           <p>{stats[stat]}</p>
         </div>
       )
@@ -17,7 +17,7 @@ const Card = (props) => {
 
   return (
     <div className="card">
-      <h1>{location}</h1>
+      <h1 className="location">{location}</h1>
       {spreadStats}
     </div>
   )

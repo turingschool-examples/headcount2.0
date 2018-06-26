@@ -1,5 +1,11 @@
 .card {
     border: 1px solid black;
-    height: 350px;
-    width: 200px;
+    height: 375px;
+    margin: 2%;
+    padding-left: 2%;
+    width: 20%;
+}
+
+.location {
+    margin-bottom: 2%;
 }
