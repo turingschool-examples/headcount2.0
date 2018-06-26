@@ -23,13 +23,11 @@ export default class DistrictRepository {
     const statsKeys = Object.keys(this.stats);
 
     if (!searchString) {
-      return statsKeys.map(school => this.stats[school]);
+      return statsKeys;
     }
 
-    const sanitizedLocation = searchString.toUpperCase();
-
     return statsKeys.reduce((acc, school) => {
-      if (school.includes(sanitizedLocation)) {
+      if (school.includes(searchString.toUpperCase())) {
         acc = [...acc, this.stats[school]];
       }
       return acc;
