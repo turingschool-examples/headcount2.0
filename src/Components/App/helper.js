@@ -1,4 +1,4 @@
-import kinderData from './data/kindergartners_in_full_day_program.js';
+import kinderData from '../../data/kindergartners_in_full_day_program.js';
 
 export default class DistrictRepository {
   constructor() { 
@@ -53,11 +53,9 @@ export default class DistrictRepository {
     }
   }
 
-  findAllMatches = (district) => {
+  findAllMatches = (district = '') => {
     const statValues = Object.values(this.stats);
-    if (!district) {
-      return statValues;
-    }
+   
     return statValues.filter(value => {
       return value.location.includes(district.toUpperCase());
     });

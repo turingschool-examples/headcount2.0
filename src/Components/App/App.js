@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import ControlledForm from '../ControlledForm/ControlledForm'
+import ControlledForm from '../ControlledForm/ControlledForm';
+import DistrictRepository from './helper';
+import CardContainer from '../CardContainer/CardContainer'
 
 class App extends Component {
   constructor() {
@@ -10,6 +12,11 @@ class App extends Component {
     }
   }
 
+  findDistrict = (input) => {
+
+  }
+
+  
 
 
   render() {
@@ -17,6 +24,9 @@ class App extends Component {
       <div>
         <h1>Count dem Heads</h1>
         <ControlledForm />
+        <CardContainer 
+          matchingDistricts={this.state.matchingDistricts}
+        />
       </div>
     );
   }

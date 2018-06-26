@@ -1,12 +1,14 @@
 import React from 'react';
 
-const DistrictCard = props => {
+const DistrictCard = (location, stats) => {
   return (
     <section> 
-      <h2>{props.location}</h2>
+      <h2>{ location }</h2>
       <ul>
-        {props.stats.map}
+        <span>{stats.map} : {stats.data} </span>
       </ul>
     </section>
   )
 }
+
+export default DistrictCard;
