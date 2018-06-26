@@ -60,7 +60,6 @@ export default class DistrictRepository {
     const statsValues = Object.values(this.stats[sanitizedLocation].stats);
     const sum = statsValues.reduce((acc, value) => acc += value, 0);
     const average = Math.round(1000 * (sum / statsValues.length)) / 1000;
-    // const moreAverage = ;
     return average;
   }
 }
