@@ -1,20 +1,26 @@
 export default class DistrictRepository {
-  constructor(kindergartnerData) {
-    this.stats = this.removeDuplicates(kindergartnerData);
+  constructor(schoolData) {
+    this.stats = this.organizeSchoolDistricts(schoolData);
   }
 
-  removeDuplicates(initialData) {
-    const noDuplicateSchools = initialData.reduce((arrangedSchools, school) => {
+  organizeSchoolDistricts(initialData) {
+    const organizedSchools = initialData.reduce((arrangedSchools, school) => {
       const sanitizedLocation = school.Location.toUpperCase();
 
       if (!arrangedSchools[sanitizedLocation]) {
-        arrangedSchools[sanitizedLocation] = [school];
+        arrangedSchools[sanitizedLocation] = {
+          location: school.Location,
+          dataPoints: [school]
+        };
       } else {
-        arrangedSchools[sanitizedLocation] = [...arrangedSchools[sanitizedLocation], school];
+        arrangedSchools[sanitizedLocation] = {
+          location: school.Location,
+          dataPoints: [...arrangedSchools[sanitizedLocation].dataPoints, school]
+        };
       }
       return arrangedSchools;
     }, {});
-    return noDuplicateSchools;
+    return organizedSchools;
   }
 
   findByName(searchCriteria) {
