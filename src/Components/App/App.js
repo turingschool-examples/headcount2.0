@@ -14,7 +14,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>Welcome To Headcount 2.0
+      <div className="app">Welcome To Headcount 2.0
         <CardContainer
           schoolStats={this.state.schoolStats}
         />
