@@ -6,17 +6,20 @@ export default class DistrictRepository {
   organizeSchoolDistricts(initialData) {
     const organizedSchools = initialData.reduce((arrangedSchools, school) => {
       const sanitizedLocation = school.Location.toUpperCase();
+      const roundedPercentage = isNaN(school.Data) ? 0 : Math.round(1000 * school.Data) / 1000;
 
       if (!arrangedSchools[sanitizedLocation]) {
         arrangedSchools[sanitizedLocation] = {
-          stats: {}
+          stats: {
+            [school.TimeFrame]: roundedPercentage
+          }
         };
       } else {
         arrangedSchools[sanitizedLocation] = {
           location: sanitizedLocation,
           stats: {
             ...arrangedSchools[sanitizedLocation].stats,
-            [school.TimeFrame]: school.Data
+            [school.TimeFrame]: roundedPercentage
           }
         };
       }
@@ -30,8 +33,6 @@ export default class DistrictRepository {
       const sanitizedLocation = searchCriteria.toUpperCase();
       if (this.stats[sanitizedLocation]) {
         const { location, stats } = this.stats[sanitizedLocation];
-
-
         return {
           location,
           stats
@@ -40,15 +41,14 @@ export default class DistrictRepository {
     }
   }
 
-  findAllMatches(searchString) {
+  findAllMatches(searchCriteria) {
     const statsKeys = Object.keys(this.stats);
-
-    if (!searchString) {
+    
+    if (!searchCriteria) {
       return statsKeys;
     }
-
     return statsKeys.reduce((acc, school) => {
-      if (school.includes(searchString.toUpperCase())) {
+      if (school.includes(searchCriteria.toUpperCase())) {
         acc = [...acc, this.stats[school]];
       }
       return acc;
