@@ -3,7 +3,10 @@ import kinderData from './data/kindergartners_in_full_day_program.js'
 export default class DistrictRepository {
   constructor() {
     this.stats = kinderData.reduce((stats, stat) => {
-      const statObj = { [stat.TimeFrame] : stat.Data }
+      if (stat.Data === 'N/A') {
+        stat.Data = 0
+      }
+      const statObj = { [stat.TimeFrame] : Number(parseFloat(stat.Data).toFixed(3)) }
         if (!stats[stat.Location]) {
           stats[stat.Location] = statObj
         } 
