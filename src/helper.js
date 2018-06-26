@@ -12,19 +12,36 @@ export default class DistrictRepository {
       } else {
         arrangedSchools[sanitizedLocation] = [...arrangedSchools[sanitizedLocation], school];
       }
-        return arrangedSchools;
+      return arrangedSchools;
     }, {});
     return noDuplicateSchools;
   }
 
   findByName(searchCriteria) {
     if (searchCriteria) {
-      const upperCaseSearchCriteria = searchCriteria.toUpperCase();
-      if (this.stats[upperCaseSearchCriteria]) {
+      const sanitizedLocation = searchCriteria.toUpperCase();
+      if (this.stats[sanitizedLocation]) {
         return {
-          location: this.stats[upperCaseSearchCriteria]
+          location: this.stats[sanitizedLocation]
         };
       }
     }
+  }
+
+  findAllMatches(searchCriteria) {
+    const statsKeys = Object.keys(this.stats);
+
+    if (!searchCriteria) {
+      return statsKeys.map(school => this.stats[school]);
+    }
+
+    const sanitizedLocation = searchCriteria.toUpperCase();
+
+    return statsKeys.reduce((acc, school) => {
+      if (school.includes(sanitizedLocation)) {
+        acc = [...acc, this.stats[school]];
+      }
+      return acc;
+    }, []);
   }
 }
