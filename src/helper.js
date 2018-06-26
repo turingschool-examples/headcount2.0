@@ -1,62 +1,67 @@
 import kinderData from './data/kindergartners_in_full_day_program.js';
 
 export default class DistrictRepository {
-  constructor(kinderData) { 
+  constructor() { 
 
-    this.stats = this.compiledData(kinderData)
-
+    this.stats = this.compiledData(kinderData);
   } 
 
   compiledData = (kinderData) => {
-    const results = kinderData.reduce((district, obj) => {
-      let location = obj.Location.toUpperCase();
-      let year = obj.TimeFrame;
+    const results = kinderData.reduce((district, academicYear) => {
+      let location = academicYear.Location.toUpperCase();
+      let year = academicYear.TimeFrame;
      
-      let data = this.parseData(obj.Data)
+      let info = this.parseData(academicYear.Data);
     
-      if(!district[location]) {
-       district[location] = {stats:{[year]: data}, location}
+      if (!district[location]) {
+        district[location] = {stats:{[year]: info}, location};
       } else {
-        district[location].stats = {...district[location].stats, [year]: data}
+        district[location].stats = {...district[location].stats, [year]: info};
       }
       return district;
-    }, {})
+    }, {});
    
-    return results;
-   
+    return results; 
   }
 
   parseData = (input) => {
-    if(typeof input !== 'number') {
-      return 0
+    if (typeof input !== 'number') {
+      return 0;
     } else {
-      return input.toFixed(3)
+      return (Math.round(1000 * input) / 1000);
     }
   }
 
-
   
   findByName = (district) => { 
-    if(!district) {
-      return
+    if (!district) {
+      return;
     }
 
-    const cleanedDistrict = district.toUpperCase()
-    const districtKeys = Object.keys(this.stats)
+    const cleanedDistrict = district.toUpperCase();
+    const districtKeys = Object.keys(this.stats);
  
     const matchingDistricts = districtKeys.reduce((matchingDistricts, key) => {
-      if(key.toUpperCase() === cleanedDistrict) {
-        return this.stats[key]
+      if (key.toUpperCase() === cleanedDistrict) {
+        return this.stats[key];
       }
-      return matchingDistricts
-    }, {})
+      return matchingDistricts;
+    }, {});
 
-    if(matchingDistricts.location) {
-      return matchingDistricts
+    if (matchingDistricts.location) {
+      return matchingDistricts;
     }
+  }
 
- }
-
+  findAllMatches = (district) => {
+    const statValues = Object.values(this.stats);
+    if (!district) {
+      return statValues;
+    }
+    return statValues.filter(value => {
+      return value.location.includes(district.toUpperCase());
+    });
+  }
 
   
 }
