@@ -3,7 +3,10 @@ import kinderData from './data/kindergartners_in_full_day_program.js'
 export default class DistrictRepository {
   constructor() {
     this.stats = kinderData.reduce((stats, stat) => {
-      const statObj = { [stat.TimeFrame] : stat.Data }
+      if (stat.Data === 'N/A') {
+        stat.Data = 0
+      }
+      const statObj = { [stat.TimeFrame] : Number(parseFloat(stat.Data).toFixed(3)) }
         if (!stats[stat.Location]) {
           stats[stat.Location] = statObj
         } 
@@ -13,26 +16,22 @@ export default class DistrictRepository {
   }
 
   findByName = (search) => {
-      // if (!search) {
-      //   return 
-      // } 
-
-    let stats = kinderData.reduce((stats, stat) => {
-      const statObj = { [stat.TimeFrame] : stat.Data }
-        if (!stats[stat.Location]) {
-          stats[stat.Location] = statObj
-        } 
-      stats[stat.Location] = { ...statObj, ...stats[stat.Location]}
-      return stats
-      }, {})
-
-    const items = Object.keys(stats).reduce((items, stat) => {
-      if(stat === search) {
-        items['location'] = stat.toUpperCase()
+    if (!search) {
+      return;
+    }
+    const statsKeys = Object.keys(this.stats);
+    const districtData = statsKeys.reduce((districtData, stat) => {
+      if (stat.toUpperCase() === search.toUpperCase()) {
+        districtData = {
+          location: stat.toUpperCase(),
+          stats: this.stats[stat]
+        };
       }
-        // console.log(items.location )
-      return items
-    }, {}) 
+      return districtData;
+    }, {});
+    if (districtData.location) {
+      return districtData;
+    }
   }
 
 
