@@ -8,11 +8,25 @@ class ControlledForm extends Component {
     }
   }
 
+  handleChange = (event) => {
+    const input = event.target.value;
+    this.setState({district: input})
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.props.findDistrict(this.state.district)
+  }
+
 
   render() {
     return (
-      <form>
-        <input/>
+      <form onSubmit={this.handleSubmit}>
+        <input 
+          onChange={this.handleChange} 
+          value={this.state.district} 
+          placeholder='Enter District'
+        />
         <button>
           Submit
         </button>
