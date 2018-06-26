@@ -7,13 +7,32 @@ export default class DistrictRepository {
 
   removeDuplicates(initialData) {
     const noDuplicateSchools = initialData.reduce((arrangedSchools, school) => {
-      if (!arrangedSchools[school.Location]) {
-        arrangedSchools[school.Location] = [school];
+      const sanitizedLocation = school.Location.toUpperCase();
+
+      if (!arrangedSchools[sanitizedLocation]) {
+        arrangedSchools[sanitizedLocation] = [school];
       } else {
-        arrangedSchools[school.Location] = [...arrangedSchools[school.Location], school];
+        arrangedSchools[sanitizedLocation] = [...arrangedSchools[sanitizedLocation], school];
       }
-        return arrangedSchools;
+      return arrangedSchools;
     }, {});
     return noDuplicateSchools;
+  }
+
+  findAllMatches(searchString) {
+    const statsKeys = Object.keys(this.stats);
+
+    if (!searchString) {
+      return statsKeys.map(school => this.stats[school]);
+    }
+
+    const sanitizedLocation = searchString.toUpperCase();
+
+    return statsKeys.reduce((acc, school) => {
+      if (school.includes(sanitizedLocation)) {
+        acc = [...acc, this.stats[school]];
+      }
+      return acc;
+    }, []);
   }
 }
