@@ -9,19 +9,31 @@ export default class DistrictRepository {
 
   compiledData = (kinderData) => {
     const results = kinderData.reduce((district, obj) => {
-      let location = obj.Location
+      let location = obj.Location.toUpperCase();
+      let year = obj.TimeFrame;
+     
+      let data = this.parseData(obj.Data)
+    
       if(!district[location]) {
-       district[location] = [obj]
+       district[location] = {stats:{[year]: data}, location}
       } else {
-        district[location].push(obj)
+        district[location].stats = {...district[location].stats, [year]: data}
       }
-      return district
+      return district;
     }, {})
    
-    return results
+    return results;
    
-
   }
+
+  parseData = (input) => {
+    if(typeof input !== 'number') {
+      return 0
+    } else {
+      return input.toFixed(3)
+    }
+  }
+
 
   
   findByName = (district) => { 
@@ -31,20 +43,18 @@ export default class DistrictRepository {
 
     const cleanedDistrict = district.toUpperCase()
     const districtKeys = Object.keys(this.stats)
-    console.log(cleanedDistrict)
  
     const matchingDistricts = districtKeys.reduce((matchingDistricts, key) => {
       if(key.toUpperCase() === cleanedDistrict) {
-        console.log(this.stats)
         return this.stats[key]
       }
       return matchingDistricts
-    }, [])
+    }, {})
 
-    if(!matchingDistricts.length) {
-      return
+    if(matchingDistricts.location) {
+      return matchingDistricts
     }
-    return matchingDistricts
+
  }
 
 
