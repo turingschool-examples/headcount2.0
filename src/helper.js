@@ -11,4 +11,23 @@ export default class DistrictRepository {
       return stats
       }, {})
   }
+
+  findByName = (data) => {
+    const items = kinderData.reduce((items, item) => {
+      if (item.Location === data){
+
+      const location = item.Location
+      items[location] = data
+      }
+      return items
+      console.log(items)
+
+    }, {})
+    return items
   }
+
+  findAllMatching = (data) => {
+    const matches = data.filter(match => match.stuff)
+
+  }
+}
