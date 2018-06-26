@@ -1,6 +1,7 @@
 export default class DistrictRepository {
   constructor(kindergartnerData) {
     this.stats = this.removeDuplicates(kindergartnerData);
+    console.log(this.findByName('Colorado'))
   }
 
   removeDuplicates(initialData) {
