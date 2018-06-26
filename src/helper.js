@@ -28,17 +28,15 @@ export default class DistrictRepository {
     }
   }
 
-  findAllMatches(searchCriteria) {
+  findAllMatches(searchString) {
     const statsKeys = Object.keys(this.stats);
 
-    if (!searchCriteria) {
-      return statsKeys.map(school => this.stats[school]);
+    if (!searchString) {
+      return statsKeys;
     }
 
-    const sanitizedLocation = searchCriteria.toUpperCase();
-
     return statsKeys.reduce((acc, school) => {
-      if (school.includes(sanitizedLocation)) {
+      if (school.includes(searchString.toUpperCase())) {
         acc = [...acc, this.stats[school]];
       }
       return acc;
