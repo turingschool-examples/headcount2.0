@@ -1,8 +1,8 @@
 .card {
     align-items: center;
-    /* border: 1px solid black; */
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.30);
-    background-color: white;
+    background-color: #fff;
+
     display: flex;
     flex-direction: column;
     height: 450px;
@@ -11,7 +11,16 @@
     width: 20%;
 }
 
+#high-stat {
+    color: #7f9daf; 
+}
+
+#low-stat {
+    color: #900c3f;
+}
+
 .location {
+    color: #414A54;
     font-size: 20px;
     margin-bottom: 10%;
     text-align: center;
