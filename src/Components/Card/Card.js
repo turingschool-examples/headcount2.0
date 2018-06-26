@@ -1,5 +1,6 @@
 import React from 'react';
 import './card.css'
+import PropTypes from 'prop-types';
 
 const Card = (props) => {
   const {location, stats, selected} = props
@@ -25,6 +26,12 @@ const Card = (props) => {
       </div>
     </div>
   )
+}
+
+Card.propTypes = {
+  location: PropTypes.string,
+  stats: PropTypes.object,
+  selected: PropTypes.bool
 }
 
 export default Card;
