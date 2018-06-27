@@ -10,35 +10,27 @@ class Search extends Component {
         }
     }
 
-    handleSearch = (event) => {
-        const searchValue = event.target.value;
-        this.setState({
-            search: searchValue
-        })
-    }
-
-    handleSubmit = (event) => {
+    handleChange = (event) => {
         event.preventDefault()
-        const search = this.state.search
+        const search = event.target.value
 
-        this.props.submitSearch(search)
+        this.setState({search})
+
+        this.props.submitSearch(this.state.search)
     }
 
     render(){
         return (
             <div className="search-container">
                 <h3>Find A School</h3>
-                <form onSubmit={this.handleSubmit}>
                     <input
                     className="search-input"
                     type="text"
                     name="school"
                     placeholder="Search"
                     value={this.state.search}
-                    onChange={this.handleSearch}
+                    onChange={this.handleChange}
                     />
-                    <button className="search-button">Submit</button>
-                </form>
             </div>
         )
     }
