@@ -15,7 +15,7 @@ class App extends Component {
       <div>Welcome To Headcount 2.0
         <SearchForm />
         {/* <ComparisonContainer /> */}
-        <CardContainer />
+        <CardContainer cards={this.state.cards}/>
       </div>
     );
   }

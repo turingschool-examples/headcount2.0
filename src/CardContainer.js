@@ -6,9 +6,9 @@ const CardContainer = (cards) => {
                                             key={card.id}
                                       />)
   return(
-    <div>
+    <main>
       {container}
-    </div>
+    </main>
   )
 
 }
