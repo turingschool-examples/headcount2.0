@@ -3,7 +3,7 @@ import CardContainer from './CardContainer';
 import { shallow } from 'enzyme';
 import Card from '../Card/Card'
 
-describe('CardContainer', () => {
+describe.skip('CardContainer', () => {
 
   let wrapper;
   let mockSchoolStats = [{}, {}]

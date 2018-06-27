@@ -66,7 +66,19 @@ export default class DistrictRepository {
     return Math.round(1000 * statsAverage) / 1000
   }
 
-  compareDistrictAverage = () => {
+  compareDistrictAverages = (schoolA, schoolB) => {
+    const schoolAverageA = this.findAverage(schoolA)
+    const schoolAverageB = this.findAverage(schoolB)
+    const comparedAverage = schoolAverageA / schoolAverageB
 
+    const comparedRounded = Math.round(1000 * comparedAverage) / 1000;
+
+    const combinedAverage = { 
+            [schoolA.toUpperCase()]: schoolAverageA, 
+            [schoolB.toUpperCase()]: schoolAverageB, 
+            compared: comparedRounded
+          }
+          
+    return combinedAverage
   }
 }
