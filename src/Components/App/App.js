@@ -13,6 +13,7 @@ class App extends Component {
     }
   }
 
+  submitSearch(search)
 
   render() {
     return (

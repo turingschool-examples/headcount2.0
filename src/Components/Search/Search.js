@@ -17,11 +17,18 @@ class Search extends Component {
         })
     }
 
+    handleSubmit = (event) => {
+        event.preventDefault()
+        const search = this.state.search
+
+        this.props.submitSearch(search)
+    }
+
     render(){
         return (
             <div className="search-container">
                 <h3>Find A School</h3>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <input
                     className="search-input"
                     type="text"
