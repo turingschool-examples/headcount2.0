@@ -1,11 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Card from '../Card/Card';
 
-const CardContainer = () => {
-
+const CardContainer = props => {
   return (
-    <Card />
+    <div>
+      <h1>Card Container</h1>
+    </div>
   );
-}
+};
 
-export CardContainer;
+CardContainer.propTypes = {
+  districts: PropTypes.arrayOf(PropTypes.object).isRequired
+};
+
+export default CardContainer;
