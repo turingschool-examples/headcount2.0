@@ -18,7 +18,6 @@ class ControlledForm extends Component {
     this.props.findDistrict(this.state.district)
   }
 
-
   render() {
     return (
       <form onSubmit={this.handleSubmit}>

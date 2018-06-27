@@ -1,11 +1,11 @@
 import React from 'react';
 import DistrictCard from '../DistrictCard/DistrictCard'
 
-const CardContainer = props => {
+const CardContainer = ({ matchingDistricts }) => {
+  const districtNames = Object.keys(matchingDistricts)
   return (
-    props.matchingDistricts.map(district => {
-      return <DistrictCard location={props.location} stats={props.stats}/>
-      
+    districtNames.map(district => {
+      return <DistrictCard district={matchingDistricts[district]}/>
     })
 
     )

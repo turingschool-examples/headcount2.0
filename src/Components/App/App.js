@@ -8,16 +8,18 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      matchingDistricts: [],
+      matchingDistricts: {},
     }
+  }
+
+  componentDidMount() {
+    const districtRepository = new DistrictRepository()
+    this.setState({ matchingDistricts: districtRepository.stats })
   }
 
   findDistrict = (input) => {
 
   }
-
-  
-
 
   render() {
     return (

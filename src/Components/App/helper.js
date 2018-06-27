@@ -37,11 +37,9 @@ export default class DistrictRepository {
     if (!district) {
       return;
     }
-
     const cleanedDistrict = district.toUpperCase();
     const districtKeys = Object.keys(this.stats);
  
-
     if (this.stats[cleanedDistrict]) {
       return this.stats[cleanedDistrict];
     }
