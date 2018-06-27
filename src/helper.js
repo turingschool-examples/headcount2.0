@@ -62,4 +62,19 @@ export default class DistrictRepository {
     const average = Math.round(1000 * (sum / statsValues.length)) / 1000;
     return average;
   }
+
+  compareDistrictAverages(districtOne, districtTwo) {
+    const sanitizedLocationOne = districtOne.toUpperCase();
+    const sanitizedLocationTwo = districtTwo.toUpperCase();
+    const districtOneAverage = this.findAverage(sanitizedLocationOne);
+    const districtTwoAverage = this.findAverage(sanitizedLocationTwo);
+    const comparedAverage = Math.round(1000 * districtOneAverage / districtTwoAverage) / 1000;
+    return { 
+      [sanitizedLocationOne]: districtOneAverage,
+      [sanitizedLocationTwo]: districtTwoAverage,
+      compared: comparedAverage
+    };
+  }
 }
+
+
