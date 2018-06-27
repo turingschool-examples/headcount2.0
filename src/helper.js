@@ -78,7 +78,7 @@ export default class DistrictRepository {
             [schoolB.toUpperCase()]: schoolAverageB, 
             compared: comparedRounded
           }
-          
+
     return combinedAverage
   }
 }

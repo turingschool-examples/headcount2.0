@@ -3,7 +3,9 @@ import './card.css'
 import PropTypes from 'prop-types';
 
 const Card = (props) => {
-  const {location, stats, selected} = props
+  const {location, stats, selected, selectCard} = props
+
+  const active = selected ? 'selected' : 'unselected'
 
   const spreadStats =
     Object.keys(stats).map((stat, index) => {
@@ -19,7 +21,11 @@ const Card = (props) => {
   
 
   return (
-    <div className="card">
+    <div 
+      onClick={() => selectCard(location)} 
+      className="card" 
+      id={active} 
+    >
       <h1 className="location">{location}</h1>
       <div>
       {spreadStats}
