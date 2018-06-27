@@ -24,10 +24,14 @@ class App extends Component {
 
   selectCard = (location) => {
     const foundCard = this.props.districts.findByName(location)
-    foundCard.selected = true
+    foundCard.selected = !foundCard.selected
+    this.setSelected()
+  }
 
-    if (this.state.selectedCards.length < 2) {
-      this.setState({selectedCards: [...this.state.selectedCards, foundCard]})
+  setSelected = () => {
+    if (this.state.selectedCards.length <= 2) {
+      const selectedCards = this.state.schoolStats.filter(school => school.selected)
+      this.setState({ selectedCards })
     }
   }
 
