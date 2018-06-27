@@ -14,15 +14,15 @@ export default class DistrictRepository {
             [school.TimeFrame]: roundedPercentage
           }
         };
+      } else {
+        arrangedSchools[sanitizedLocation] = {
+          location: sanitizedLocation,
+          stats: {
+            ...arrangedSchools[sanitizedLocation].stats,
+            [school.TimeFrame]: roundedPercentage
+          }
+        };
       }
-
-      arrangedSchools[sanitizedLocation] = {
-        location: sanitizedLocation,
-        stats: {
-          ...arrangedSchools[sanitizedLocation].stats,
-          [school.TimeFrame]: roundedPercentage
-        }
-      };
 
       return arrangedSchools;
     }, {});
