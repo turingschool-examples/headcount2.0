@@ -31,6 +31,7 @@ class App extends Component {
         />
         <CardContainer
           schoolStats={this.state.schoolStats}
+          searchResults={this.state.searchResult}
         />
       </div>
     );
