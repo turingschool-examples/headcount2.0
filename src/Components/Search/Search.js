@@ -4,6 +4,17 @@ import './search.css'
 class Search extends Component {
     constructor(props) {
         super(props)
+
+        this.state = {
+            search: ''
+        }
+    }
+
+    handleSearch = (event) => {
+        const searchValue = event.target.value;
+        this.setState({
+            search: searchValue
+        })
     }
 
     render(){
@@ -16,6 +27,8 @@ class Search extends Component {
                     type="text"
                     name="school"
                     placeholder="Search"
+                    value={this.state.search}
+                    onChange={this.handleSearch}
                     />
                     <button className="search-button">Submit</button>
                 </form>
