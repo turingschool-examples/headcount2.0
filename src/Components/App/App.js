@@ -9,10 +9,16 @@ class App extends Component {
     super(props)
     
     this.state = {
-      schoolStats: this.props.districts.stats
+      schoolStats: this.props.districts.stats,
+      searchResult: []
     }
   }
 
+  submitSearch = (search) => {
+    const searchEntry = this.props.districts.findAllMatches(search)
+    
+    this.setState({searchResult: searchEntry})
+  }
 
   render() {
     return (
@@ -20,7 +26,9 @@ class App extends Component {
         <header className="app-header">
           <Header /> 
         </header>
-        <Search />
+        <Search
+          submitSearch={this.submitSearch}
+        />
         <CardContainer
           schoolStats={this.state.schoolStats}
         />
