@@ -14,13 +14,21 @@ class App extends Component {
       searchResult: [],
       selectedCards: []
     }
-    console.log(this.state.schoolStats[0])
   }
 
   submitSearch = (search) => {
     const searchEntry = this.props.districts.findAllMatches(search)
     
     this.setState({searchResult: searchEntry})
+  }
+
+  selectCard = (location) => {
+    const foundCard = this.props.districts.findByName(location)
+    foundCard.selected = true
+
+    if (this.state.selectedCards.length < 2) {
+      this.setState({selectedCards: [...this.state.selectedCards, foundCard]})
+    }
   }
 
   render() {
@@ -34,10 +42,12 @@ class App extends Component {
         />
         <ComparedContainer 
           selectedCards={this.state.selectedCards}
+          selectCard={this.selectCard}
         />
         <CardContainer
           schoolStats={this.state.schoolStats}
           searchResults={this.state.searchResult}
+          selectCard={this.selectCard}
         />
       </div>
     );
