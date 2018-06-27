@@ -12,6 +12,7 @@ class App extends Component {
       schoolStats: this.props.districts.stats,
       searchResult: []
     }
+    console.log(this.state.schoolStats[0])
   }
 
   submitSearch = (search) => {

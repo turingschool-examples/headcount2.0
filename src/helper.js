@@ -1,6 +1,8 @@
 export default class DistrictRepository {
   constructor(kinderData) {
     this.stats = this.cleanedData(kinderData)
+
+    
   }
 
   cleanedData = (kinderData) => {
@@ -48,5 +50,35 @@ export default class DistrictRepository {
         return school.location.includes(upperCaseLocation)
       })
     }
+  }
+
+  findAverage = (school) => {
+    const foundSchool = this.findByName(school)
+
+    const foundSchoolStats = Object.keys(foundSchool.stats)
+
+    const statsSum = foundSchoolStats.reduce((average, year) => {
+      return average + foundSchool.stats[year]
+    }, 0)
+    
+    const statsAverage = statsSum / foundSchoolStats.length
+
+    return Math.round(1000 * statsAverage) / 1000
+  }
+
+  compareDistrictAverages = (schoolA, schoolB) => {
+    const schoolAverageA = this.findAverage(schoolA)
+    const schoolAverageB = this.findAverage(schoolB)
+    const comparedAverage = schoolAverageA / schoolAverageB
+
+    const comparedRounded = Math.round(1000 * comparedAverage) / 1000;
+
+    const combinedAverage = { 
+            [schoolA.toUpperCase()]: schoolAverageA, 
+            [schoolB.toUpperCase()]: schoolAverageB, 
+            compared: comparedRounded
+          }
+          
+    return combinedAverage
   }
 }
