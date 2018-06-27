@@ -8,7 +8,7 @@ const ComparedContainer = ({selectedCards, selectCard}) => {
   })
   
   return (
-    <div>
+    <div className="compared-container" >
       {displaySelected}
     </div>
   )

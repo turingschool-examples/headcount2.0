@@ -19,6 +19,10 @@
     color: #900c3f;
 }
 
+#selected {
+    border: 1px solid blue;
+}
+
 .location {
     color: #414A54;
     font-size: 20px;

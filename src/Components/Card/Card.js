@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 const Card = (props) => {
   const {location, stats, selected, selectCard} = props
 
+  const active = selected ? 'selected' : 'unselected'
+
   const spreadStats =
     Object.keys(stats).map((stat, index) => {
       const statLevel = stats[stat] > .5 ? 'high-stat' : 'low-stat';
@@ -19,7 +21,11 @@ const Card = (props) => {
   
 
   return (
-    <div onClick={() => selectCard(location)} className="card">
+    <div 
+      onClick={() => selectCard(location)} 
+      className="card" 
+      id={active} 
+    >
       <h1 className="location">{location}</h1>
       <div>
       {spreadStats}
