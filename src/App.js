@@ -4,6 +4,12 @@ import SearchForm from './SearchForm.js';
 import CardContainer from './CardContainer.js'
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      cards: []
+    }
+  }
   render() {
     return (
       <div>Welcome To Headcount 2.0

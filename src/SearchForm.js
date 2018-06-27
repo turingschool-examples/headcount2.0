@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 export default class SearchForm extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = {
       district: ''
@@ -17,7 +17,7 @@ export default class SearchForm extends Component {
 
   render() {
     return(
-        <form onSubmit={this.updateDistricts}>
+        <form onSubmit={this.props.updateDistricts}>
           <label>Search</label>
           <input 
             type="text" 
