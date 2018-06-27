@@ -1,13 +1,19 @@
 .header {
+    align-items: center;
     background-color: #414A54;
+    display: flex;
     height: 175px;
+    justify-content: center;
+    margin-bottom: 3%;
     width: 100%;
 }
 
 .logo {
+    align-items: center;
     display: flex;
     flex-direction: column;
     height: 100%;
+    /* text-align: center; */
 }
 
 .logo-img {
@@ -15,4 +21,10 @@
     width: 20%;
 }
 
-.logo-tex
+.logo-text {
+    color: #fff;
+}
+
+.search-container {
+    float: right;
+}
