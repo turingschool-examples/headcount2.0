@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import CardContainer from '../CardContainer/CardContainer';
+import Header from '../Header/Header'
+
 
 class App extends Component {
   constructor(props) {
@@ -14,7 +16,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app">Welcome To Headcount 2.0
+      <div className="app">
+        <header>
+          <Header /> 
+        </header>
         <CardContainer
           schoolStats={this.state.schoolStats}
         />
