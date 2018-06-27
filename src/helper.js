@@ -14,15 +14,16 @@ export default class DistrictRepository {
             [school.TimeFrame]: roundedPercentage
           }
         };
-      } else {
-        arrangedSchools[sanitizedLocation] = {
-          location: sanitizedLocation,
-          stats: {
-            ...arrangedSchools[sanitizedLocation].stats,
-            [school.TimeFrame]: roundedPercentage
-          }
-        };
       }
+
+      arrangedSchools[sanitizedLocation] = {
+        location: sanitizedLocation,
+        stats: {
+          ...arrangedSchools[sanitizedLocation].stats,
+          [school.TimeFrame]: roundedPercentage
+        }
+      };
+
       return arrangedSchools;
     }, {});
     return organizedSchools;
@@ -47,6 +48,7 @@ export default class DistrictRepository {
     if (!searchCriteria) {
       return statsKeys;
     }
+
     return statsKeys.reduce((acc, school) => {
       if (school.includes(searchCriteria.toUpperCase())) {
         acc = [...acc, this.stats[school]];
@@ -69,7 +71,7 @@ export default class DistrictRepository {
     const districtOneAverage = this.findAverage(sanitizedLocationOne);
     const districtTwoAverage = this.findAverage(sanitizedLocationTwo);
     const comparedAverage = Math.round(1000 * districtOneAverage / districtTwoAverage) / 1000;
-    return { 
+    return {
       [sanitizedLocationOne]: districtOneAverage,
       [sanitizedLocationTwo]: districtTwoAverage,
       compared: comparedAverage
