@@ -41,15 +41,9 @@ export default class DistrictRepository {
     const cleanedDistrict = district.toUpperCase();
     const districtKeys = Object.keys(this.stats);
  
-    const matchingDistricts = districtKeys.reduce((matchingDistricts, key) => {
-      if (key.toUpperCase() === cleanedDistrict) {
-        return this.stats[key];
-      }
-      return matchingDistricts;
-    }, {});
 
-    if (matchingDistricts.location) {
-      return matchingDistricts;
+    if (this.stats[cleanedDistrict]) {
+      return this.stats[cleanedDistrict];
     }
   }
 
