@@ -36,8 +36,10 @@ export default class DistrictRepository {
 
 
 
-  findAllMatching = (data) => {
-    const matches = kinderData.map(stat => stat.stuff)
-
+  findAllMatches = (search) => {
+    if(!search){
+      return Object.values(this.stats)
+    }
+    return Object.keys(this.stats).filter(stat => stat.toUpperCase().includes(search.toUpperCase()));
   }
 }
