@@ -12,7 +12,8 @@ class App extends Component {
     this.state = {
       schoolStats: this.props.districts.stats,
       searchResult: [],
-      selectedCards: []
+      selectedCards: [],
+      comparisonCard: {}
     }
   }
 
@@ -32,6 +33,18 @@ class App extends Component {
     if (this.state.selectedCards.length <= 2) {
       const selectedCards = this.state.schoolStats.filter(school => school.selected)
       this.setState({ selectedCards })
+      this.createCompareCard()
+    }
+  }
+
+  createCompareCard = () => {
+    console.log(this.state.selectedCards.length)
+    if (this.state.selectedCards.length === 1) {
+      const schoolA = this.state.selectedCards[0]
+      const schoolB = this.state.selectedCards[1]
+  
+      const comparisonCard = this.props.districts.compareDistrictAverages(schoolA, schoolB)
+      this.setState({comparisonCard})
     }
   }
 
@@ -47,6 +60,7 @@ class App extends Component {
         <ComparedContainer 
           selectedCards={this.state.selectedCards}
           selectCard={this.selectCard}
+          comparisonCard={this.state.comparisonCard}
         />
         <CardContainer
           schoolStats={this.state.schoolStats}

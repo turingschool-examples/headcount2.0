@@ -3,7 +3,7 @@ import './compared-container.css';
 import Card from '../Card/Card';
 import CompareCard from '../CompareCard/CompareCard';
 
-const ComparedContainer = ({selectedCards, selectCard}) => {
+const ComparedContainer = ({selectedCards, selectCard, comparisonCard}) => {
   const displaySelected = selectedCards.map(card => {
     return <Card {...card} selectCard={selectCard} />
   })
@@ -11,7 +11,7 @@ const ComparedContainer = ({selectedCards, selectCard}) => {
   return (
     <div className="compared-container" >
       {displaySelected}
-      <CompareCard />
+      <CompareCard comparisonCard={comparisonCard} />
     </div>
   )
 } 
