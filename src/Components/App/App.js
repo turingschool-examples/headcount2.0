@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import CardContainer from '../CardContainer/CardContainer';
-import Header from '../Header/Header'
-import Search from '../Search/Search'
+import Header from '../Header/Header';
+import Search from '../Search/Search';
+import ComparedContainer from '../ComparedContainer/ComparedContainer';
 
 class App extends Component {
   constructor(props) {
@@ -10,7 +11,8 @@ class App extends Component {
     
     this.state = {
       schoolStats: this.props.districts.stats,
-      searchResult: []
+      searchResult: [],
+      selectedCards: []
     }
     console.log(this.state.schoolStats[0])
   }
@@ -29,6 +31,9 @@ class App extends Component {
         </header>
         <Search
           submitSearch={this.submitSearch}
+        />
+        <ComparedContainer 
+          selectedCards={this.state.selectedCards}
         />
         <CardContainer
           schoolStats={this.state.schoolStats}
