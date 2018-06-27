@@ -36,10 +36,10 @@ export default class DistrictRepository {
 
 
 
-  findAllMatches = () => {
-    return Object.values(this.stats);
-    // const values = statsVals.filter(value => 
-    // statsVals.length
+  findAllMatches = (search) => {
+    if(!search){
+      return Object.values(this.stats)
+    }
+    return Object.keys(this.stats).filter(stat => stat.toUpperCase().includes(search.toUpperCase()));
   }
-
 }
