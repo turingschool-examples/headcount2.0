@@ -34,8 +34,6 @@ export default class DistrictRepository {
     }
   }
 
-
-
   findAllMatches = (search) => {
     if(!search){
       return Object.values(this.stats)

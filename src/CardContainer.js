@@ -1,14 +1,13 @@
 import React from 'react';
 import Card from './Card.js';
 
-const CardContainer = (cards) => {
-  const container = cards.map(card => <Card {...card}
-                                            key={card.id}
-                                      />)
+const CardContainer = ({ cards, title, content}) => {
+  const container = title.map(card => <Card title={title}
+                                            content={content}/>)
   return(
-    <main>
-      {container}
-    </main>
+    <div className="Container">
+    {container}
+    </div>
   )
 
 }
