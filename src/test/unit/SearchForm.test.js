@@ -58,6 +58,7 @@ describe('Search From unit test suite', () => {
 
     expect(filterSchoolsMock).toHaveBeenCalled();
   });
+
   test('matches sanpshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
