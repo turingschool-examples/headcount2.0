@@ -1,10 +1,71 @@
 .App {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-.App .Card {
-  border: .25rem solid pink;
-  background-color: lightblue;
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: x-large;
+  text-align: center;
+  text-shadow: .2rem .2rem .2rem purple;
+  color: yellow;
+  height: 30vh;
+  width: 100vw;
+  background-image: url('https://www.wikihow.com/images/thumb/b/b4/Play-Duck-Duck-Goose-Step-8.jpg/aid260783-v4-728px-Play-Duck-Duck-Goose-Step-8.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+header form {
+  margin-top: -2rem;
+}
+
+header label {
+  font-size: x-large;
+}
+
+header input {
+  height: 1.75rem;
+  width: 10rem;
+  line-height: 2rem;
+  border: .05rem solid orange;
+  background-color: lightyellow;
+}
+header button {
+  border: .05rem solid orange;
+  color: purple;
+  height: 2rem;
+}
+
+.Container {
+  height: 70vh;
+  width: 100vw;
+  background-color: #C2B2B4;
+  padding: 1.5rem; 
+  overflow: scroll;
+  text-align: center;
+}
+
+.Card {
+  display: inline-block;
+  height: 19rem;
+  width: 12rem;
+  border: 2px solid #938284;
+  background-color: #fff;
+  color: #3E2A35;
+  margin: 2rem;
+}
+
+.Card h3 {
+  text-align: center;
+}
+
+.Card p {
+}
+
+.Card ul {
+  text-align: left;
+  list-style-type: none;
 }

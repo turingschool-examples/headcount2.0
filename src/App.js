@@ -23,8 +23,11 @@ updateDistricts = (event) => {
 
   render() {
     return (
-      <div className="App">Welcome To Headcount 2.0
-        <SearchForm updateDistricts={this.updateDistricts}/>
+      <div className="App">
+        <header>
+          <h1>Welcome To Headcount 2.0</h1>
+          <SearchForm updateDistricts={this.updateDistricts}/>
+        </header>
         {/* <ComparisonContainer /> */}
         <CardContainer cards={this.state.cards}/>
       </div>
