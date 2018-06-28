@@ -69,3 +69,11 @@ header button {
   text-align: left;
   list-style-type: none;
 }
+
+.low {
+  color: purple;
+}
+
+.high {
+  color: orange;
+}
