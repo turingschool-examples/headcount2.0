@@ -26,7 +26,7 @@ updateDistricts = (event) => {
       <div className="App">Welcome To Headcount 2.0
         <SearchForm updateDistricts={this.updateDistricts}/>
         {/* <ComparisonContainer /> */}
-        <CardContainer title={this.state.schools} content={this.state.status}/>
+        <CardContainer cards={this.state.cards}/>
       </div>
     );
   }
