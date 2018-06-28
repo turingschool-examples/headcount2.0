@@ -10,7 +10,6 @@ export default class DistrictRepository {
     const results = kinderData.reduce((district, academicYear) => {
       let location = academicYear.Location.toUpperCase();
       let year = academicYear.TimeFrame;
-     
       let info = this.parseData(academicYear.Data);
     
       if (!district[location]) {
@@ -25,18 +24,12 @@ export default class DistrictRepository {
   }
 
   parseData = (input) => {
-    if (typeof input !== 'number') {
-      return 0;
-    } else {
-      return (Math.round(1000 * input) / 1000);
-    }
+    return typeof input === 'number' ? (Math.round(1000 * input) / 1000) : 0;
   }
 
   
   findByName = (district) => { 
-    if (!district) {
-      return;
-    }
+    if (!district) { return }
     const cleanedDistrict = district.toUpperCase();
     const districtKeys = Object.keys(this.stats);
  

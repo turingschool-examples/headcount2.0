@@ -19,14 +19,18 @@ class App extends Component {
   }
 
   findDistrict = (input) => {
-
+    console.log('hi')
+    const districtRepository = new DistrictRepository()
+    const filteredDistricts = districtRepository.findAllMatches(input)
+    this.setState({ matchingDistricts: filteredDistricts })
   }
 
   render() {
     return (
       <div>
         <h1>Count dem Heads</h1>
-        <ControlledForm />
+        <ControlledForm 
+          findDistrict={this.findDistrict}/>
         <CardContainer 
           matchingDistricts={this.state.matchingDistricts}
         />
