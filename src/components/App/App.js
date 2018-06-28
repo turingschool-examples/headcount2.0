@@ -25,7 +25,6 @@ class App extends Component {
 
   render() {
     const { districts } = this.state;
-
     return (
       <CardContainer
         districts={districts}
