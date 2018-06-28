@@ -7,4 +7,5 @@ import DistrictRepository from './helper'
 import App from './Components/App/App';
 
 const districts = new DistrictRepository(data)
+
 render( <App districts={districts} />, document.getElementById('root') );
