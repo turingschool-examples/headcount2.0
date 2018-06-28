@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import App from '../../components/App/App';
 import CardContainer from '../../components/CardContainer/CardContainer';
+import SearchForm from '../../components/SearchForm/SearchForm';
 
 describe('App unit test suite', () => {
   let wrapper;
@@ -25,7 +26,9 @@ describe('App unit test suite', () => {
 
   test('should render children components', () => {
     const cardContainer = wrapper.find(CardContainer).length;
+    const searchForm = wrapper.find(SearchForm).length;
     expect(cardContainer).toBe(1);
+    expect(searchForm).toBe(1);
   });
 
   test('matches snapshot', () => {
