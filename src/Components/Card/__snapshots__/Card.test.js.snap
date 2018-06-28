@@ -32,6 +32,8 @@ ShallowWrapper {
 </div>,
       ],
       "className": "card",
+      "id": "selected",
+      "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -78,6 +80,8 @@ ShallowWrapper {
 </div>,
         ],
         "className": "card",
+        "id": "selected",
+        "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [
