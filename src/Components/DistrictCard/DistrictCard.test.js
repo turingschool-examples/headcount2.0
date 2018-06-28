@@ -1,8 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import DistrictCard from './DistrictCard';
-// import DistrictRepository from '../App/helper.js'
-// import kinderData from '../../data/kindergartners_in_full_day_program.js';
+
 
 describe('DistrictCard unit test', () => {
   it('should match the snapshot with all data passed in correctly', () => {

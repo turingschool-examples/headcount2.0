@@ -1,34 +1,23 @@
 import React, { Component } from 'react';
 
 class ControlledForm extends Component {
-  constructor() {
-    super()
-    this.state = {
-      district: '',
-    }
+  constructor(props) {
+    super(props)
   }
 
   handleChange = (event) => {
     const input = event.target.value;
-    this.setState({district: input})
+    this.props.findDistrict(input)
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-    this.props.findDistrict(this.state.district)
-  }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form>
         <input 
           onChange={this.handleChange} 
-          value={this.state.district} 
           placeholder='Enter District'
         />
-        <button>
-          Submit
-        </button>
       </form>
     )
   }
