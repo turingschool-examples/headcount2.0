@@ -1,1 +1,10 @@
-/*APP COMPONENT RELATED CSS GOES HERE*/
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App .Card {
+  border: .25rem solid pink;
+  background-color: lightblue;
+}

@@ -1,8 +1,13 @@
 import React from 'react';
+import Card from './Card.js';
 
-const CardContainer = (props) => {
+const CardContainer = ({ cards, title, content}) => {
+  const container = title.map(card => <Card title={title}
+                                            content={content}/>)
   return(
-    <div> Card holder </div>
+    <div className="Container">
+    {container}
+    </div>
   )
 
 }
