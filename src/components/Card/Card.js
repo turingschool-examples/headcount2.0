@@ -6,7 +6,14 @@ import './Card.css';
 const Card = props => {
   const { location, stats } = props;
 
-  const districtStats = Object.keys(stats).map(stat => <li className="card-stats" key={stat}>{stats[stat]}</li>);
+  const districtStats = Object.keys(stats).map(stat =>
+    <li className="card-stats" key={stat}>
+      <span className="card-stats-year">{stat}</span>
+      <span className="logic for high and low class names goes here">
+        {stats[stat]}
+      </span>
+    </li>
+  );
 
   return (
     <div className="card">
