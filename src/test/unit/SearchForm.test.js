@@ -35,7 +35,7 @@ describe('Search From unit test suite', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  test('should invoke filterSchools method and clear state on submit', () => {
+  test('should invoke handleSubmit and clear state on submit', () => {
     const spy = spyOn(wrapper.instance(), 'handleSubmit');
     const mockEvent = {
       preventDefault: jest.fn()
@@ -46,9 +46,18 @@ describe('Search From unit test suite', () => {
 
     expect(spy).toHaveBeenCalled();
     expect(wrapper.state('query')).toBe('');
-    expect(filterSchoolsMock).toHaveBeenCalled();
   });
 
+  test('should invoke filterSchools on when handleSubmit is invoked', () => {
+    const mockEvent = {
+      preventDefault: jest.fn()
+    };
+
+    wrapper.find('form').simulate('submit', mockEvent);
+    wrapper.instance().handleSubmit(mockEvent);
+
+    expect(filterSchoolsMock).toHaveBeenCalled();
+  });
   test('matches sanpshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
