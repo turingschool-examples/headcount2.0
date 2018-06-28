@@ -1,0 +1,11 @@
+.card {
+  border: 1px solid red;
+  border-radius: .4rem;
+  box-shadow: 8px 10px 20px 0 rgba(46,61,73,.15);
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-list {
+  list-style: none;
+}
