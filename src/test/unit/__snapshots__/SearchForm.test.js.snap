@@ -1,10 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App unit test suite matches snapshot 1`] = `
+exports[`Search From unit test suite matches sanpshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__unrendered__): <SearchForm
+    filterSchools={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -18,36 +20,48 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <SearchForm />,
-        <CardContainer
-          districts={Array []}
+        <input
+          name="query"
+          onChange={[Function]}
+          type="text"
+          value=""
 />,
+        <button>
+          Search
+</button>,
       ],
+      "className": "search-form",
+      "onSubmit": [Function],
     },
     "ref": null,
     "rendered": Array [
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
+        "nodeType": "host",
+        "props": Object {
+          "name": "query",
+          "onChange": [Function],
+          "type": "text",
+          "value": "",
+        },
         "ref": null,
         "rendered": null,
-        "type": [Function],
+        "type": "input",
       },
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "host",
         "props": Object {
-          "districts": Array [],
+          "children": "Search",
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": "Search",
+        "type": "button",
       },
     ],
-    "type": "main",
+    "type": "form",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -56,36 +70,48 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <SearchForm />,
-          <CardContainer
-            districts={Array []}
+          <input
+            name="query"
+            onChange={[Function]}
+            type="text"
+            value=""
 />,
+          <button>
+            Search
+</button>,
         ],
+        "className": "search-form",
+        "onSubmit": [Function],
       },
       "ref": null,
       "rendered": Array [
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
+          "nodeType": "host",
+          "props": Object {
+            "name": "query",
+            "onChange": [Function],
+            "type": "text",
+            "value": "",
+          },
           "ref": null,
           "rendered": null,
-          "type": [Function],
+          "type": "input",
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "host",
           "props": Object {
-            "districts": Array [],
+            "children": "Search",
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": "Search",
+          "type": "button",
         },
       ],
-      "type": "main",
+      "type": "form",
     },
   ],
   Symbol(enzyme.__options__): Object {

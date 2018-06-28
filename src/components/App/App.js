@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CardContainer from '../CardContainer/CardContainer';
+import SearchForm from '../SearchForm/SearchForm';
 import DistrictRepository from '../../helper';
 import kinderGardenerData from '../../data/kindergartners_in_full_day_program';
 import './App.css';
@@ -23,13 +24,22 @@ class App extends Component {
     this.setState({ districts });
   }
 
+  filterSchools(district) {
+    console.log(district);
+  }
+
   render() {
     const { districts } = this.state;
 
     return (
-      <CardContainer
-        districts={districts}
-      />
+      <main>
+        <SearchForm
+          filterSchools={this.filterSchools}
+        />
+        <CardContainer
+          districts={districts}
+        />
+      </main>
     );
   }
 }
