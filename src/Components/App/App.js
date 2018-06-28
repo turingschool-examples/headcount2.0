@@ -11,8 +11,9 @@ class App extends Component {
     
     this.state = {
       schoolStats: this.props.districts.stats,
+      districtMethods: this.props.districts,
       searchResult: [],
-      selectedCards: []
+      selectedCards: [],
     }
   }
 
@@ -35,6 +36,13 @@ class App extends Component {
     }
   }
 
+  createCompareCard = () => {
+    if (this.state.selectedCards.length === 2) {
+       this.state.districtMethods.compareDistrictAverages(this.state.selectedCards[0].location, this.state.selectedCards[1].location)
+    }
+
+  }
+
   render() {
     return (
       <div className="app">
@@ -47,6 +55,7 @@ class App extends Component {
         <ComparedContainer 
           selectedCards={this.state.selectedCards}
           selectCard={this.selectCard}
+          districtMethods={this.state.districtMethods}
         />
         <CardContainer
           schoolStats={this.state.schoolStats}
