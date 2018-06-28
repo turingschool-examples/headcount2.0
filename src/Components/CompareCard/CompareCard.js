@@ -19,12 +19,12 @@ const CompareCard = ({districtMethods, selectedCards}) => {
      locationAverageB = displayCompared[selectedCards[1].location]
     
      return (
-       <div className="compare-card">
+       <div className="compared-card">
         <div className="school-a-div">
           <h3 className="school-a" >{locationA}</h3>
           <h4 className="school-average">{locationAverageA}</h4>
          </div>
-         <div className="compare-div">
+         <div className="compared-div">
          <h4 className="compared-average">{"<---"}{compared} {"--->"}</h4>
          </div>
          <div className="school-b-div">

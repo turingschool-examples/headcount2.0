@@ -1,4 +1,4 @@
-.compare-card {
+.compared-card {
     align-items: center;
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.30);
     background-color:	#ffffff;
@@ -17,8 +17,19 @@
   font-size: 20px;
 }
 
-.compare-div {
+.compared-div {
   color: #7f9daf;
   font-size: 20px;
 }
 
+.compared-card :nth-child(1) {
+  order: 1;
+}
+
+.compared-card :nth-child(2) {
+  order: 2;
+}
+
+.compared-card :nth-child(3) {
+  order: 3;
+}
