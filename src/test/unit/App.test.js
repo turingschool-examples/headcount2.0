@@ -28,7 +28,7 @@ describe('App unit test suite', () => {
     expect(cardContainer).toBe(1);
   });
 
-  test('matches snapshot whit initial state', () => {
+  test('matches snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });

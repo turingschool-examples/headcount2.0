@@ -1,4 +1,8 @@
-:root {}
+:root {
+  --primary-font-light: #f7f7f7;
+  --primary-red: #eb4d4b;
+  --primary-green: #27ae60;
+}
 
 * {
   margin: 0;
