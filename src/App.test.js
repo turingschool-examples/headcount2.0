@@ -10,11 +10,9 @@ describe('App', () => {
     // ReactDOM.render(<App />, div);
   });
 
-  it('should have a default state with a key of cards that is an array', () => {
-    // setup
+  it('should have a default state with a key of cards that contains all 181 districts', () => {
     const wrapper = shallow(<App />)
-    // execution
-    // expectation
-    expect(wrapper.state('cards')).toEqual([])
+
+    expect(Object.keys(wrapper.state('cards')).length).toEqual(181)
   })
 })
