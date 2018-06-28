@@ -18,7 +18,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <SearchForm />,
+        <SearchForm
+          filterSchools={[Function]}
+/>,
         <CardContainer
           districts={Array []}
 />,
@@ -30,7 +32,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "filterSchools": [Function],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -56,7 +60,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <SearchForm />,
+          <SearchForm
+            filterSchools={[Function]}
+/>,
           <CardContainer
             districts={Array []}
 />,
@@ -68,7 +74,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "filterSchools": [Function],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
