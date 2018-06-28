@@ -1,9 +1,14 @@
 import React from 'react';
 import Card from './Card.js';
 
-const CardContainer = ({ cards, title, content}) => {
-  const container = title.map(card => <Card title={title}
-                                            content={content}/>)
+const CardContainer = ({ cards }) => {
+  const cardsKeys = Object.keys(cards)
+  
+  const container = cardsKeys.map(location => {
+  const districtToDisplay = cards[location]
+  
+                                return <Card title={location}
+                                            content={districtToDisplay}/>})
   return(
     <div className="Container">
     {container}

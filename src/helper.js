@@ -36,7 +36,7 @@ export default class DistrictRepository {
 
   findAllMatches = (search) => {
     if(!search){
-      return Object.values(this.stats)
+      return [Object.values(this.stats)]
     }
     return Object.keys(this.stats).filter(stat => stat.toUpperCase().includes(search.toUpperCase()));
   }
