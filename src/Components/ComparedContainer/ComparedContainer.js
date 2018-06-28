@@ -3,7 +3,7 @@ import './compared-container.css';
 import Card from '../Card/Card';
 import CompareCard from '../CompareCard/CompareCard';
 
-const ComparedContainer = ({selectedCards, selectCard, comparisonCard}) => {
+const ComparedContainer = ({selectedCards, selectCard, districtMethods}) => {
   const displaySelected = selectedCards.map(card => {
     return <Card {...card} selectCard={selectCard} />
   })
@@ -11,7 +11,7 @@ const ComparedContainer = ({selectedCards, selectCard, comparisonCard}) => {
   return (
     <div className="compared-container" >
       {displaySelected}
-      <CompareCard comparisonCard={comparisonCard} />
+      <CompareCard districtMethods={districtMethods} selectedCards={selectedCards} />
     </div>
   )
 } 
