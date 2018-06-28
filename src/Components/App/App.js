@@ -36,13 +36,6 @@ class App extends Component {
     }
   }
 
-  createCompareCard = () => {
-    if (this.state.selectedCards.length === 2) {
-       this.state.districtMethods.compareDistrictAverages(this.state.selectedCards[0].location, this.state.selectedCards[1].location)
-    }
-
-  }
-
   render() {
     return (
       <div className="app">
