@@ -67,7 +67,6 @@ export default class DistrictRepository {
   }
 
   compareDistrictAverages = (schoolA, schoolB) => {
-    console.log(schoolA)
     const schoolAverageA = this.findAverage(schoolA)
     const schoolAverageB = this.findAverage(schoolB)
     const comparedAverage = schoolAverageA / schoolAverageB
