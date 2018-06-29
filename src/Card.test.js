@@ -3,9 +3,9 @@ import Card from './Card.js';
 import { shallow } from 'enzyme';
 
 describe('Card', () => {
-  it('should render props within a list item', () => { const mockData = { 2004: 0.75 }
+  it('should render each data point in a list item', () => { const mockData = { 2004: 0.75, 2005: 0.9 }
     const wrapper = shallow(<Card title="Colorado" content={mockData}/>)
-    expect(wrapper.find('li').length).toEqual(1)
+    expect(wrapper.find('li').length).toEqual(2)
   })
 
   it('should match the snapshot', () => {
