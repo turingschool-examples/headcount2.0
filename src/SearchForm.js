@@ -19,10 +19,11 @@ export default class SearchForm extends Component {
 
   render() {
     return(
-        <form onSubmit={this.props.updateDistricts}>
+        <form>
           <input 
             type="text" 
             placeholder="Search for your district by name"
+            aria-label="search field"
             value={this.state.district}
             onChange={this.handleInput}/>
         </form>

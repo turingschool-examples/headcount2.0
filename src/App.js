@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import './App.css';
 import SearchForm from './SearchForm.js';
 import CardContainer from './CardContainer.js';
-import DistrictRepository from './helper.js';
+import DistrictRepository  from './helper.js';
 import kinderData from './data/kindergartners_in_full_day_program.js';
+const districts = new DistrictRepository(kinderData)
 
 class App extends Component {
   constructor() {
     super()
-    const districts = new DistrictRepository(kinderData)
     this.state = {
       schools: Object.keys(districts.stats),
       status: Object.keys(Object.values(districts.stats)),
@@ -17,7 +17,12 @@ class App extends Component {
   }
 
 updateDistricts = (district) => {
-  console.log(district)
+
+  const foundDistricts = districts.findByName(district)
+  console.log(foundDistricts)
+  this.setState({
+    cards: {...foundDistricts}
+  })
 }
 
   render() {
