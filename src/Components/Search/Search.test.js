@@ -1,6 +1,6 @@
 import React from 'react';
 import Search from './Search';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('Search', () => {
 
