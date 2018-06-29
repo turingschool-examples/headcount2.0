@@ -26,7 +26,6 @@ export default class DistrictRepository {
   parseData = (input) => {
     return typeof input === 'number' ? (Math.round(1000 * input) / 1000) : 0;
   }
-
   
   findByName = (district) => { 
     if (!district) { return }
@@ -50,7 +49,35 @@ export default class DistrictRepository {
 
     })
     return districtMatches;
+  }
 
-  
+  findAverage = (district) => {
+    const matchingDistrict = this.findByName(district);
+    const percentages = Object.values(matchingDistrict.stats);
+    const total = percentages.reduce((total, percentage) => total += percentage)
+    return this.parseData((total / percentages.length))
+  }
+
+  compareDistrictAverages = ((district1, district2) => {
+    const capitals1 = district1.toUpperCase();
+    const capitals2 = district2.toUpperCase();
+    const firstAverage = this.findAverage(district1);
+    const secondAverage = this.findAverage(district2);
+    const compared = this.parseData((firstAverage / secondAverage))
+    const comparision = {[capitals1]: firstAverage,
+                         [capitals2]: secondAverage,
+                         compared: compared}
+    return comparision
+  })
+
+
 }
-}
+
+
+
+
+
+
+
+
+
