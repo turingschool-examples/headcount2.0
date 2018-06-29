@@ -18,6 +18,12 @@ describe('App unit test suite', () => {
     expect(wrapper.state()).toEqual(defaultState);
   });
 
+  test('should call invoke getSchoolDistrictData on mount', () => {
+    const spy = spyOn(wrapper.instance(), 'getSchoolDistrictData');
+    wrapper.instance().componentDidMount();
+    expect(spy).toHaveBeenCalled();
+  });
+
   test('it should update state when getSchoolDistrictData is invoked', () => {
     expect(wrapper.state('districts').length).toBe(0);
     wrapper.instance().getSchoolDistrictData();
@@ -42,6 +48,13 @@ describe('App unit test suite', () => {
     wrapper.instance().filterDistricts('adkfljl');
     expect(wrapper.state('districts').length).toBe(0);
   });
+
+  test('should have been called with a parameter', () => {
+    const spy = spyOn(wrapper.instance(), 'filterDistricts');
+    wrapper.instance().filterDistricts('Colo');
+    expect(spy).toHaveBeenCalledWith('Colo');
+  });
+
 
   test('matches snapshot', () => {
     expect(wrapper).toMatchSnapshot();
