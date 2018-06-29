@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {shallow} from 'enzyme';
 import App from './App';
 
 
@@ -14,11 +15,11 @@ describe('App', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should update state after componentDidMount runs', () => {
+  it('should update state.matchingDistricts after componentDidMount runs', () => {
     const initialState = {};
     
  })
-  it('findDistrict function should filter the state', () => {
+  it('findDistrict function should filter the state.matchingDistricts', () => {
 
   })
 

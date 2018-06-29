@@ -23,7 +23,7 @@ class ControlledForm extends Component {
   }
 }
 
-  ControlledForm.PropTypes = {
+  ControlledForm.propTypes = {
   findDistrict: PropTypes.func.isRequired
 }
 
