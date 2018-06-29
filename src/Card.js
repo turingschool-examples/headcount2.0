@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({ title, content}) => {
+const Card = ({ title, content }) => {
   const cardData =
 
-    Object.keys(props.content).map(year => {
-      const toggle = props.content[year] <= .5 ? 'low' : 'high'
-      return <aside className={toggle}> {year}: {props.content[year]} </aside>
+    Object.keys(content).map(year => {
+      const toggle = content[year] <= .5 ? 'low' : 'high'
+      return <aside className={toggle}> {year}: {content[year]} </aside>
 
     })
 
