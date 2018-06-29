@@ -4,7 +4,7 @@ exports[`Search From unit test suite matches sanpshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SearchForm
+  Symbol(enzyme.__unrendered__): <Search
     filterDistricts={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {

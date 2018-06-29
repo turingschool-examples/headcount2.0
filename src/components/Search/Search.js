@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export class SearchForm extends Component {
+export class Search extends Component {
   constructor() {
     super();
     this.state = {
@@ -32,8 +32,8 @@ export class SearchForm extends Component {
   }
 }
 
-SearchForm.propTypes = {
+Search.propTypes = {
   filterDistricts: PropTypes.func.isRequired
 };
 
-export default SearchForm;
+export default Search;

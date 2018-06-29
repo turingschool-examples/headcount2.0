@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CardContainer from '../CardContainer/CardContainer';
-import SearchForm from '../SearchForm/SearchForm';
+import Search from '../Search/Search';
 import DistrictRepository from '../../helper';
 import kinderGardenerData from '../../data/kindergartners_in_full_day_program';
 import './App.css';
@@ -40,7 +40,7 @@ class App extends Component {
 
     return (
       <main>
-        <SearchForm
+        <Search
           filterDistricts={this.filterDistricts}
         />
         <CardContainer

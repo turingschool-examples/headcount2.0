@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import SearchForm from '../../components/SearchForm/SearchForm';
+import Search from '../../components/Search/Search';
 
 describe('Search From unit test suite', () => {
   let wrapper;
@@ -8,7 +8,7 @@ describe('Search From unit test suite', () => {
 
   beforeEach(() => {
     filterSchoolsMock = jest.fn();
-    wrapper = shallow(<SearchForm filterDistricts={filterSchoolsMock} />);
+    wrapper = shallow(<Search filterDistricts={filterSchoolsMock} />);
   });
 
   afterEach(() => wrapper.unmount());

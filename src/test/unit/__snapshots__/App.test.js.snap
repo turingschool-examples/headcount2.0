@@ -18,7 +18,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <SearchForm
+        <Search
           filterDistricts={[Function]}
 />,
         <CardContainer
@@ -60,7 +60,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <SearchForm
+          <Search
             filterDistricts={[Function]}
 />,
           <CardContainer
@@ -125,7 +125,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <SearchForm
+        <Search
           filterDistricts={[Function]}
 />,
         <CardContainer
@@ -167,7 +167,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <SearchForm
+          <Search
             filterDistricts={[Function]}
 />,
           <CardContainer
@@ -232,7 +232,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <SearchForm
+        <Search
           filterDistricts={[Function]}
 />,
         <CardContainer
@@ -274,7 +274,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <SearchForm
+          <Search
             filterDistricts={[Function]}
 />,
           <CardContainer
