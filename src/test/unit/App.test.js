@@ -70,4 +70,3 @@ describe('App unit test suite', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
-
