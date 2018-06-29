@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class SearchForm extends Component {
   constructor(props) {
@@ -24,8 +25,12 @@ export default class SearchForm extends Component {
             placeholder="Enter your district"
             value={this.state.district}
             onChange={this.handleInput}/>
-          <button type="submit">Submit</button>
+        <button onSubmit={this.props.updateDistricts} >Submit</button>
         </form>
     )
   }
 }
+
+SearchForm.propTypes = {
+  updateDistricts: PropTypes.func
+};

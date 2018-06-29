@@ -1,8 +1,24 @@
 import SearchForm from './SearchForm.js';
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 describe('SearchForm Tests', () => {
+
+  it('updates the state of when the input value changes', () => {
+    const mockInput = jest.fn()
+    const wrapper = shallow(<SearchForm
+                            type="text"
+                            placeholder="Enter your district"
+                            value={jest.fn()}
+                            onChange={mockInput}
+                            onSubmit={jest.fn()} />);
+    const mockEvent = { target: { value: 'abc'} }
+    const expectedState = {
+      district: 'abc' };
+    wrapper.instance().handleInput(mockEvent)
+    expect(wrapper.state()).toEqual(expectedState);
+  });
+
   it('should invoke handleInput when the input value changes', () => {
     const mockInput = jest.fn()
     const wrapper = shallow(<SearchForm 
@@ -29,14 +45,11 @@ describe('SearchForm Tests', () => {
 
   it('should invoke updateDistricts when the submit button is clicked', () => {
     const mockUpdateDistricts = jest.fn()
-    const wrapper = shallow(<SearchForm
-      type="text"
-      placeholder="Enter your district"
-      value={jest.fn()}
-      onChange={jest.fn()}
-      onSubmit={mockUpdateDistricts} />)
+    const wrapper = mount(<SearchForm
+                              updateDistricts={mockUpdateDistricts} />)
 
     wrapper.find('button').simulate('click')
-    expect(mockUpdateDistricts).toHaveBeenCalled()
+
+    expect(mockUpdateDistricts.toHaveBeenCalled())
   })
 })
