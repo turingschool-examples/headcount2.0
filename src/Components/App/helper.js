@@ -40,12 +40,17 @@ export default class DistrictRepository {
 
   findAllMatches = (district = '') => {
     const statValues = Object.values(this.stats);
-   
-    return statValues.filter(value => {
+    const districtMatches = {};
+    const matchingDistricts = statValues.filter(value => {
       return value.location.includes(district.toUpperCase());
     });
-  }
+    matchingDistricts.forEach(value => {
+      const key = value.location;
+      districtMatches[key] = value
+
+    })
+    return districtMatches;
 
   
 }
-
+}

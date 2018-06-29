@@ -3,6 +3,7 @@ import './DistrictCard.css';
 import PropTypes from 'prop-types';
 
 const DistrictCard = ({district}) => {
+  // console.log(district.stats)
   const years = Object.keys(district.stats)
 
   const determineColor = (stats) => {
@@ -13,7 +14,8 @@ const DistrictCard = ({district}) => {
     const stats = district.stats[year]
 
     return (
-      <li className={determineColor(stats)}>
+      <li className={determineColor(stats)}
+  >
         {[year]}: {stats}
       </li>
       )

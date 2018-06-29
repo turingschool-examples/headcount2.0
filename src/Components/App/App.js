@@ -19,7 +19,6 @@ class App extends Component {
   }
 
   findDistrict = (input) => {
-    console.log('hi')
     const districtRepository = new DistrictRepository()
     const filteredDistricts = districtRepository.findAllMatches(input)
     this.setState({ matchingDistricts: filteredDistricts })
