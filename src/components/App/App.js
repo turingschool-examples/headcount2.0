@@ -22,10 +22,17 @@ class App extends Component {
   getSchoolDistrictData = () => {
     const districts = Object.values(schoolDistricts.stats);
     this.setState({ districts });
+    return districts;
   }
 
-  filterSchools(district) {
-    console.log(district);
+  filterDistricts = (query) => {
+    const queriedDistrict = schoolDistricts.findAllMatches(query);
+
+    if (query === '') {
+      this.setState({districts: this.getSchoolDistrictData() });
+    } else {
+      this.setState({districts: queriedDistrict});
+    }
   }
 
   render() {
@@ -34,7 +41,7 @@ class App extends Component {
     return (
       <main>
         <SearchForm
-          filterSchools={this.filterSchools}
+          filterDistricts={this.filterDistricts}
         />
         <CardContainer
           districts={districts}

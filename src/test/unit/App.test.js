@@ -24,14 +24,36 @@ describe('App unit test suite', () => {
     expect(wrapper.state('districts').length).toBe(181);
   });
 
-  test('should render children components', () => {
-    const cardContainer = wrapper.find(CardContainer).length;
-    const searchForm = wrapper.find(SearchForm).length;
-    expect(cardContainer).toBe(1);
-    expect(searchForm).toBe(1);
+  test('it should filter districts when filterDistricts is invoked', () => {
+    wrapper.instance().getSchoolDistrictData();
+    expect(wrapper.state('districts').length).toBe(181);
+    wrapper.instance().filterDistricts('Color');
+    expect(wrapper.state('districts').length).toBe(2);
+  });
+
+  test('it should reset districts when a no query is passed to filterDistricts', () => {
+    wrapper.instance().getSchoolDistrictData();
+    wrapper.instance().filterDistricts('');
+    expect(wrapper.state('districts').length).toBe(181);
+  });
+
+  test('it if no matches present filterSchools should not display cards ', () => {
+    wrapper.instance().getSchoolDistrictData();
+    wrapper.instance().filterDistricts('adkfljl');
+    expect(wrapper.state('districts').length).toBe(0);
   });
 
   test('matches snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  test('should render children components when getSchoolDistricts is invoked', () => {
+    wrapper.instance().getSchoolDistrictData();
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  test('should match snapshot when filterDistricts in invoked', () => {
+    wrapper.instance().filterDistricts('Colo');
     expect(wrapper).toMatchSnapshot();
   });
 });

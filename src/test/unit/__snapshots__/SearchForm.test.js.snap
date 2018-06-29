@@ -5,7 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SearchForm
-    filterSchools={[Function]}
+    filterDistricts={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -19,49 +19,15 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        <input
-          name="query"
-          onChange={[Function]}
-          type="text"
-          value=""
-/>,
-        <button>
-          Search
-</button>,
-      ],
-      "className": "search-form",
-      "onSubmit": [Function],
+      "name": "query",
+      "onChange": [Function],
+      "placeholder": "Search",
+      "type": "text",
+      "value": "",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "name": "query",
-          "onChange": [Function],
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Search",
-        },
-        "ref": null,
-        "rendered": "Search",
-        "type": "button",
-      },
-    ],
-    "type": "form",
+    "rendered": null,
+    "type": "input",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -69,49 +35,15 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [
-          <input
-            name="query"
-            onChange={[Function]}
-            type="text"
-            value=""
-/>,
-          <button>
-            Search
-</button>,
-        ],
-        "className": "search-form",
-        "onSubmit": [Function],
+        "name": "query",
+        "onChange": [Function],
+        "placeholder": "Search",
+        "type": "text",
+        "value": "",
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "name": "query",
-            "onChange": [Function],
-            "type": "text",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Search",
-          },
-          "ref": null,
-          "rendered": "Search",
-          "type": "button",
-        },
-      ],
-      "type": "form",
+      "rendered": null,
+      "type": "input",
     },
   ],
   Symbol(enzyme.__options__): Object {
