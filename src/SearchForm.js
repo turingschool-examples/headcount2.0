@@ -20,10 +20,9 @@ export default class SearchForm extends Component {
   render() {
     return(
         <form onSubmit={this.props.updateDistricts}>
-          <label>Search : </label>
           <input 
             type="text" 
-            placeholder="Enter your district"
+            placeholder="Search for your district by name"
             value={this.state.district}
             onChange={this.handleInput}/>
         </form>
