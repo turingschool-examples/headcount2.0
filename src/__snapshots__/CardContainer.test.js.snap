@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Container should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    cards={
+        Object {
+            "ACADEMY 20": Object {
+              "2004": 0.75,
+            },
+            "TacoLand": Object {
+              "2004": 0.75,
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          content={
+                    Object {
+                              "2004": 0.75,
+                            }
+          }
+          title="ACADEMY 20"
+/>,
+        <Card
+          content={
+                    Object {
+                              "2004": 0.75,
+                            }
+          }
+          title="TacoLand"
+/>,
+      ],
+      "className": "Container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "content": Object {
+            "2004": 0.75,
+          },
+          "title": "ACADEMY 20",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "content": Object {
+            "2004": 0.75,
+          },
+          "title": "TacoLand",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            content={
+                        Object {
+                                    "2004": 0.75,
+                                  }
+            }
+            title="ACADEMY 20"
+/>,
+          <Card
+            content={
+                        Object {
+                                    "2004": 0.75,
+                                  }
+            }
+            title="TacoLand"
+/>,
+        ],
+        "className": "Container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "content": Object {
+              "2004": 0.75,
+            },
+            "title": "ACADEMY 20",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "content": Object {
+              "2004": 0.75,
+            },
+            "title": "TacoLand",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
