@@ -55,7 +55,6 @@ describe('App unit test suite', () => {
     expect(spy).toHaveBeenCalledWith('Colo');
   });
 
-
   test('matches snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
