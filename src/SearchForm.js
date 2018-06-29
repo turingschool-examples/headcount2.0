@@ -14,18 +14,18 @@ export default class SearchForm extends Component {
     this.setState({
       district: event.target.value
     })
+    this.props.updateDistricts(this.state.district)
   }
 
   render() {
     return(
-        <form onSubmit={this.props.updateDistricts}>
-          <label>Search : </label>
+        <form>
           <input 
             type="text" 
-            placeholder="Enter your district"
+            placeholder="Search for your district by name"
+            aria-label="search field"
             value={this.state.district}
             onChange={this.handleInput}/>
-        <button onSubmit={this.props.updateDistricts} >Submit</button>
         </form>
     )
   }
