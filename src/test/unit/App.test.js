@@ -55,7 +55,6 @@ describe('App unit test suite', () => {
     expect(spy).toHaveBeenCalledWith('Colo');
   });
 
-
   test('matches snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
@@ -69,4 +68,5 @@ describe('App unit test suite', () => {
     wrapper.instance().filterDistricts('Colo');
     expect(wrapper).toMatchSnapshot();
   });
+  
 });

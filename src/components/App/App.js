@@ -37,7 +37,6 @@ class App extends Component {
 
   render() {
     const { districts } = this.state;
-
     return (
       <main>
         <Search
