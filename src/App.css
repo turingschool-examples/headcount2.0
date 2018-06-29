@@ -28,7 +28,7 @@ header label {
 
 header input {
   height: 1.75rem;
-  width: 10rem;
+  width: 20rem;
   line-height: 2rem;
   border: .05rem solid orange;
   background-color: lightyellow;
