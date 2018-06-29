@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import CardContainer from '../CardContainer/CardContainer';
 import Search from '../Search/Search';
+import ComparedDistricts from '../ComparedDistricts/ComparedDistricts';
+
 import DistrictRepository from '../../helper';
 import kinderGardenerData from '../../data/kindergartners_in_full_day_program';
+
 import './App.css';
 
 const schoolDistricts = new DistrictRepository(kinderGardenerData);
@@ -11,7 +14,13 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      districts: []
+      districts: [],
+      comparedDistricts: [
+        {
+          location: 'hellow',
+          stats: {2000: 0.29293}
+        }
+      ]
     };
   }
 
@@ -36,9 +45,13 @@ class App extends Component {
   }
 
   render() {
-    const { districts } = this.state;
+    const { districts, comparedDistricts } = this.state;
+
     return (
       <main>
+        <ComparedDistricts 
+          comparedDistricts={comparedDistricts} 
+        />
         <Search
           filterDistricts={this.filterDistricts}
         />

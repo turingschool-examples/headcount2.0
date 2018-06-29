@@ -18,6 +18,18 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <ComparedDistricts
+          comparedDistricts={
+                    Array [
+                              Object {
+                                "location": "hellow",
+                                "stats": Object {
+                                  "2000": 0.29293,
+                                },
+                              },
+                            ]
+          }
+/>,
         <Search
           filterDistricts={[Function]}
 />,
@@ -28,6 +40,24 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "comparedDistricts": Array [
+            Object {
+              "location": "hellow",
+              "stats": Object {
+                "2000": 0.29293,
+              },
+            },
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -60,6 +90,18 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <ComparedDistricts
+            comparedDistricts={
+                        Array [
+                                    Object {
+                                      "location": "hellow",
+                                      "stats": Object {
+                                        "2000": 0.29293,
+                                      },
+                                    },
+                                  ]
+            }
+/>,
           <Search
             filterDistricts={[Function]}
 />,
@@ -70,6 +112,24 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "comparedDistricts": Array [
+              Object {
+                "location": "hellow",
+                "stats": Object {
+                  "2000": 0.29293,
+                },
+              },
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         Object {
           "instance": null,
           "key": undefined,
@@ -125,6 +185,18 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <ComparedDistricts
+          comparedDistricts={
+                    Array [
+                              Object {
+                                "location": "hellow",
+                                "stats": Object {
+                                  "2000": 0.29293,
+                                },
+                              },
+                            ]
+          }
+/>,
         <Search
           filterDistricts={[Function]}
 />,
@@ -135,6 +207,24 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "comparedDistricts": Array [
+            Object {
+              "location": "hellow",
+              "stats": Object {
+                "2000": 0.29293,
+              },
+            },
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -167,6 +257,18 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <ComparedDistricts
+            comparedDistricts={
+                        Array [
+                                    Object {
+                                      "location": "hellow",
+                                      "stats": Object {
+                                        "2000": 0.29293,
+                                      },
+                                    },
+                                  ]
+            }
+/>,
           <Search
             filterDistricts={[Function]}
 />,
@@ -177,6 +279,24 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "comparedDistricts": Array [
+              Object {
+                "location": "hellow",
+                "stats": Object {
+                  "2000": 0.29293,
+                },
+              },
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         Object {
           "instance": null,
           "key": undefined,
@@ -232,6 +352,18 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <ComparedDistricts
+          comparedDistricts={
+                    Array [
+                              Object {
+                                "location": "hellow",
+                                "stats": Object {
+                                  "2000": 0.29293,
+                                },
+                              },
+                            ]
+          }
+/>,
         <Search
           filterDistricts={[Function]}
 />,
@@ -242,6 +374,24 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "comparedDistricts": Array [
+            Object {
+              "location": "hellow",
+              "stats": Object {
+                "2000": 0.29293,
+              },
+            },
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -274,6 +424,18 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <ComparedDistricts
+            comparedDistricts={
+                        Array [
+                                    Object {
+                                      "location": "hellow",
+                                      "stats": Object {
+                                        "2000": 0.29293,
+                                      },
+                                    },
+                                  ]
+            }
+/>,
           <Search
             filterDistricts={[Function]}
 />,
@@ -284,6 +446,24 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "comparedDistricts": Array [
+              Object {
+                "location": "hellow",
+                "stats": Object {
+                  "2000": 0.29293,
+                },
+              },
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         Object {
           "instance": null,
           "key": undefined,

@@ -14,7 +14,7 @@ describe('CardContainer test suite', () => {
         2002: 1,
         2003: 6,
         2004: 8,
-        2005: 0,
+        2005: 0
       }
     },
     {
@@ -23,7 +23,7 @@ describe('CardContainer test suite', () => {
         2002: 1,
         2007: 6,
         2004: 8,
-        2009: 0,
+        2009: 0
       }
     },
     {
@@ -32,7 +32,7 @@ describe('CardContainer test suite', () => {
         2002: 1,
         2009: 6,
         2010: 8,
-        2004: 0,
+        2004: 0
       }
     }
   ];
@@ -48,8 +48,8 @@ describe('CardContainer test suite', () => {
 
   test('There should be 181 cards created, one for each district', () => {
     const getDistricts = new DistrictRepository(kinderData);
-    const districts = Object.values(getDistricts.stats)
-    wrapper = shallow(<CardContainer districts={districts} />)
+    const districts = Object.values(getDistricts.stats);
+    wrapper = shallow(<CardContainer districts={districts} />);
     expect(wrapper).toMatchSnapshot();
   });
 

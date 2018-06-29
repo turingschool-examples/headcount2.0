@@ -13,7 +13,8 @@ describe('App unit test suite', () => {
 
   test('should have a default state properties', () => {
     const defaultState = {
-      districts: []
+      districts: [],
+      comparedDistricts: []
     };
     expect(wrapper.state()).toEqual(defaultState);
   });
