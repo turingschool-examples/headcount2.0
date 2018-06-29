@@ -14,6 +14,7 @@ export default class SearchForm extends Component {
     this.setState({
       district: event.target.value
     })
+    this.props.updateDistricts(this.state.district)
   }
 
   render() {
@@ -25,7 +26,6 @@ export default class SearchForm extends Component {
             placeholder="Enter your district"
             value={this.state.district}
             onChange={this.handleInput}/>
-        <button onSubmit={this.props.updateDistricts} >Submit</button>
         </form>
     )
   }

@@ -16,9 +16,8 @@ class App extends Component {
     }
   }
 
-updateDistricts = (event) => {
-  event.preventDefault();
-  console.log('yaaayyy it\'s working')
+updateDistricts = (district) => {
+  console.log(district)
 }
 
   render() {
