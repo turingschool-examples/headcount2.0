@@ -1,0 +1,730 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card unit test suite When Card is rendered it should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    location="The Moon"
+    stats={
+        Object {
+            "2002": 1,
+            "2003": 6,
+            "2004": 8,
+            "2005": 0,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2
+          className="card-location"
+>
+          The Moon
+</h2>,
+        <ul
+          className="card-list"
+>
+          <li
+                    className="card-stats"
+          >
+                    <span
+                              className="card-stats-year"
+                    >
+                              2002
+                    </span>
+                    <span
+                              className="card-stats-high"
+                    >
+                              1
+                    </span>
+          </li>
+          <li
+                    className="card-stats"
+          >
+                    <span
+                              className="card-stats-year"
+                    >
+                              2003
+                    </span>
+                    <span
+                              className="card-stats-high"
+                    >
+                              6
+                    </span>
+          </li>
+          <li
+                    className="card-stats"
+          >
+                    <span
+                              className="card-stats-year"
+                    >
+                              2004
+                    </span>
+                    <span
+                              className="card-stats-high"
+                    >
+                              8
+                    </span>
+          </li>
+          <li
+                    className="card-stats"
+          >
+                    <span
+                              className="card-stats-year"
+                    >
+                              2005
+                    </span>
+                    <span
+                              className="card-stats-low"
+                    />
+          </li>
+</ul>,
+      ],
+      "className": "card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "The Moon",
+          "className": "card-location",
+        },
+        "ref": null,
+        "rendered": "The Moon",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li
+              className="card-stats"
+>
+              <span
+                            className="card-stats-year"
+              >
+                            2002
+              </span>
+              <span
+                            className="card-stats-high"
+              >
+                            1
+              </span>
+</li>,
+            <li
+              className="card-stats"
+>
+              <span
+                            className="card-stats-year"
+              >
+                            2003
+              </span>
+              <span
+                            className="card-stats-high"
+              >
+                            6
+              </span>
+</li>,
+            <li
+              className="card-stats"
+>
+              <span
+                            className="card-stats-year"
+              >
+                            2004
+              </span>
+              <span
+                            className="card-stats-high"
+              >
+                            8
+              </span>
+</li>,
+            <li
+              className="card-stats"
+>
+              <span
+                            className="card-stats-year"
+              >
+                            2005
+              </span>
+              <span
+                            className="card-stats-low"
+              />
+</li>,
+          ],
+          "className": "card-list",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "2002",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span
+                  className="card-stats-year"
+>
+                  2002
+</span>,
+                <span
+                  className="card-stats-high"
+>
+                  1
+</span>,
+              ],
+              "className": "card-stats",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2002",
+                  "className": "card-stats-year",
+                },
+                "ref": null,
+                "rendered": "2002",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 1,
+                  "className": "card-stats-high",
+                },
+                "ref": null,
+                "rendered": 1,
+                "type": "span",
+              },
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "2003",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span
+                  className="card-stats-year"
+>
+                  2003
+</span>,
+                <span
+                  className="card-stats-high"
+>
+                  6
+</span>,
+              ],
+              "className": "card-stats",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2003",
+                  "className": "card-stats-year",
+                },
+                "ref": null,
+                "rendered": "2003",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 6,
+                  "className": "card-stats-high",
+                },
+                "ref": null,
+                "rendered": 6,
+                "type": "span",
+              },
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "2004",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span
+                  className="card-stats-year"
+>
+                  2004
+</span>,
+                <span
+                  className="card-stats-high"
+>
+                  8
+</span>,
+              ],
+              "className": "card-stats",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2004",
+                  "className": "card-stats-year",
+                },
+                "ref": null,
+                "rendered": "2004",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 8,
+                  "className": "card-stats-high",
+                },
+                "ref": null,
+                "rendered": 8,
+                "type": "span",
+              },
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "2005",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span
+                  className="card-stats-year"
+>
+                  2005
+</span>,
+                <span
+                  className="card-stats-low"
+/>,
+              ],
+              "className": "card-stats",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2005",
+                  "className": "card-stats-year",
+                },
+                "ref": null,
+                "rendered": "2005",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 0,
+                  "className": "card-stats-low",
+                },
+                "ref": null,
+                "rendered": 0,
+                "type": "span",
+              },
+            ],
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2
+            className="card-location"
+>
+            The Moon
+</h2>,
+          <ul
+            className="card-list"
+>
+            <li
+                        className="card-stats"
+            >
+                        <span
+                                    className="card-stats-year"
+                        >
+                                    2002
+                        </span>
+                        <span
+                                    className="card-stats-high"
+                        >
+                                    1
+                        </span>
+            </li>
+            <li
+                        className="card-stats"
+            >
+                        <span
+                                    className="card-stats-year"
+                        >
+                                    2003
+                        </span>
+                        <span
+                                    className="card-stats-high"
+                        >
+                                    6
+                        </span>
+            </li>
+            <li
+                        className="card-stats"
+            >
+                        <span
+                                    className="card-stats-year"
+                        >
+                                    2004
+                        </span>
+                        <span
+                                    className="card-stats-high"
+                        >
+                                    8
+                        </span>
+            </li>
+            <li
+                        className="card-stats"
+            >
+                        <span
+                                    className="card-stats-year"
+                        >
+                                    2005
+                        </span>
+                        <span
+                                    className="card-stats-low"
+                        />
+            </li>
+</ul>,
+        ],
+        "className": "card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "The Moon",
+            "className": "card-location",
+          },
+          "ref": null,
+          "rendered": "The Moon",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li
+                className="card-stats"
+>
+                <span
+                                className="card-stats-year"
+                >
+                                2002
+                </span>
+                <span
+                                className="card-stats-high"
+                >
+                                1
+                </span>
+</li>,
+              <li
+                className="card-stats"
+>
+                <span
+                                className="card-stats-year"
+                >
+                                2003
+                </span>
+                <span
+                                className="card-stats-high"
+                >
+                                6
+                </span>
+</li>,
+              <li
+                className="card-stats"
+>
+                <span
+                                className="card-stats-year"
+                >
+                                2004
+                </span>
+                <span
+                                className="card-stats-high"
+                >
+                                8
+                </span>
+</li>,
+              <li
+                className="card-stats"
+>
+                <span
+                                className="card-stats-year"
+                >
+                                2005
+                </span>
+                <span
+                                className="card-stats-low"
+                />
+</li>,
+            ],
+            "className": "card-list",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "2002",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span
+                    className="card-stats-year"
+>
+                    2002
+</span>,
+                  <span
+                    className="card-stats-high"
+>
+                    1
+</span>,
+                ],
+                "className": "card-stats",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2002",
+                    "className": "card-stats-year",
+                  },
+                  "ref": null,
+                  "rendered": "2002",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 1,
+                    "className": "card-stats-high",
+                  },
+                  "ref": null,
+                  "rendered": 1,
+                  "type": "span",
+                },
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "2003",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span
+                    className="card-stats-year"
+>
+                    2003
+</span>,
+                  <span
+                    className="card-stats-high"
+>
+                    6
+</span>,
+                ],
+                "className": "card-stats",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2003",
+                    "className": "card-stats-year",
+                  },
+                  "ref": null,
+                  "rendered": "2003",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 6,
+                    "className": "card-stats-high",
+                  },
+                  "ref": null,
+                  "rendered": 6,
+                  "type": "span",
+                },
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "2004",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span
+                    className="card-stats-year"
+>
+                    2004
+</span>,
+                  <span
+                    className="card-stats-high"
+>
+                    8
+</span>,
+                ],
+                "className": "card-stats",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2004",
+                    "className": "card-stats-year",
+                  },
+                  "ref": null,
+                  "rendered": "2004",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 8,
+                    "className": "card-stats-high",
+                  },
+                  "ref": null,
+                  "rendered": 8,
+                  "type": "span",
+                },
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "2005",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span
+                    className="card-stats-year"
+>
+                    2005
+</span>,
+                  <span
+                    className="card-stats-low"
+/>,
+                ],
+                "className": "card-stats",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2005",
+                    "className": "card-stats-year",
+                  },
+                  "ref": null,
+                  "rendered": "2005",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 0,
+                    "className": "card-stats-low",
+                  },
+                  "ref": null,
+                  "rendered": 0,
+                  "type": "span",
+                },
+              ],
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

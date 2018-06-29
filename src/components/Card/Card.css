@@ -1,0 +1,49 @@
+.card {
+  border: 1px solid red;
+  border-radius: 0.4rem;
+  box-shadow: 0.8rem 1rem 2rem 0 rgba(46, 61, 73, 0.15);
+  padding: 2rem 3rem;
+  text-align: center;
+}
+
+.card-location {
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+}
+
+.card-list {
+  list-style: none;
+  vertical-align: baseline;
+}
+
+.card-stats {
+  display: flex;
+  font-size: 1.4rem;
+  justify-content: space-between;
+}
+
+.card-stats:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.card-stats-year {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.4rem 0;
+}
+
+.card-stats-low,
+.card-stats-high {
+  border-radius: 0.4rem;
+  color: var(--primary-font-light);
+  padding: 0.4rem 1rem;
+  width: 6rem;
+}
+
+.card-stats-low {
+  background-color: var(--primary-red);
+}
+
+.card-stats-high {
+  background-color: var(--primary-green);
+}
