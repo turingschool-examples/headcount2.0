@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import DistrictRepository from './helper.js';
+const districts = new DistrictRepository()
 
-const Card = ({ title, content }) => {
+
+const Card = ({ title, content, cardAverage, value }) => {
   const cardData =
 
     Object.keys(content).map(year => {
@@ -11,7 +14,8 @@ const Card = ({ title, content }) => {
     })
 
   return(
-    <div className="Card">
+    <div className="Card" onClick={() => districts.findAverage(title)} 
+     value={value}>
       <h3>{title}</h3>
       <ul>{cardData}</ul>
     </div>

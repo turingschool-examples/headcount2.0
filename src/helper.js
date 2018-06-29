@@ -35,6 +35,15 @@ export default class DistrictRepository {
       return districtArray;
   }
 
+  findAverage = (district) => {
+    const distObj = this.findByName(district)
+    const statsVals = Object.values(distObj[district]);
+    const totalVal = statsVals.reduce((sum, num) => {
+      return sum += num
+    }, 0)
+    return  totalVal/statsVals.length
+  }
+
   findAllMatches = (search) => {
     if(!search){
       return [Object.values(this.stats)]

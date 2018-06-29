@@ -10,18 +10,15 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      schools: Object.keys(districts.stats),
-      status: Object.keys(Object.values(districts.stats)),
       cards: districts.stats
     }
   }
 
 updateDistricts = (district) => {
-
   const foundDistricts = districts.findByName(district)
   console.log(foundDistricts)
   this.setState({
-    cards: {...foundDistricts}
+    cards: {...foundDistricts, key:Date.now()}
   })
 }
 
@@ -33,7 +30,7 @@ updateDistricts = (district) => {
           <SearchForm updateDistricts={this.updateDistricts}/>
         </header>
         {/* <ComparisonContainer /> */}
-        <CardContainer cards={this.state.cards}/>
+        <CardContainer cards={this.state.cards} cardAverage={this.cardAverage}/>
       </div>
     );
   }
