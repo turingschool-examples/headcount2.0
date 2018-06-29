@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CardContainer from '../CardContainer/CardContainer';
-import SearchForm from '../SearchForm/SearchForm';
+import Search from '../Search/Search';
 import DistrictRepository from '../../helper';
 import kinderGardenerData from '../../data/kindergartners_in_full_day_program';
 import './App.css';
@@ -22,18 +22,25 @@ class App extends Component {
   getSchoolDistrictData = () => {
     const districts = Object.values(schoolDistricts.stats);
     this.setState({ districts });
+    return districts;
   }
 
-  filterSchools(district) {
-    console.log(district);
+  filterDistricts = (query) => {
+    const queriedDistrict = schoolDistricts.findAllMatches(query);
+
+    if (query === '') {
+      this.setState({districts: this.getSchoolDistrictData() });
+    } else {
+      this.setState({districts: queriedDistrict});
+    }
   }
 
   render() {
     const { districts } = this.state;
     return (
       <main>
-        <SearchForm
-          filterSchools={this.filterSchools}
+        <Search
+          filterDistricts={this.filterDistricts}
         />
         <CardContainer
           districts={districts}

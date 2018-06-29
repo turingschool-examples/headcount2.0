@@ -1,13 +1,14 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import SearchForm from '../../components/SearchForm/SearchForm';
+import Search from '../../components/Search/Search';
 
 describe('Search From unit test suite', () => {
   let wrapper;
   let filterSchoolsMock;
+
   beforeEach(() => {
     filterSchoolsMock = jest.fn();
-    wrapper = shallow(<SearchForm filterSchools={filterSchoolsMock} />);
+    wrapper = shallow(<Search filterDistricts={filterSchoolsMock} />);
   });
 
   afterEach(() => wrapper.unmount());
@@ -35,26 +36,16 @@ describe('Search From unit test suite', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  test('should invoke handleSubmit and clear state on submit', () => {
-    const spy = spyOn(wrapper.instance(), 'handleSubmit');
+
+  test('should invoke filterSchools on when handleChange is invoked', () => {
     const mockEvent = {
-      preventDefault: jest.fn()
+      target: {
+        value: 'Colo'
+      }
     };
 
-    wrapper.find('form').simulate('submit', mockEvent);
-    wrapper.instance().handleSubmit(mockEvent);
-
-    expect(spy).toHaveBeenCalled();
-    expect(wrapper.state('query')).toBe('');
-  });
-
-  test('should invoke filterSchools on when handleSubmit is invoked', () => {
-    const mockEvent = {
-      preventDefault: jest.fn()
-    };
-
-    wrapper.find('form').simulate('submit', mockEvent);
-    wrapper.instance().handleSubmit(mockEvent);
+    wrapper.find('input').simulate('change', mockEvent);
+    wrapper.instance().handleChange(mockEvent);
 
     expect(filterSchoolsMock).toHaveBeenCalled();
   });

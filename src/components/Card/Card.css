@@ -1,6 +1,6 @@
 .card {
   border: 1px solid red;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   box-shadow: 0.8rem 1rem 2rem 0 rgba(46, 61, 73, 0.15);
   padding: 2rem 3rem;
   text-align: center;
@@ -29,14 +29,14 @@
 .card-stats-year {
   font-size: 1.5rem;
   font-weight: 700;
-  padding: .4rem 0;
+  padding: 0.4rem 0;
 }
 
 .card-stats-low,
 .card-stats-high {
   border-radius: 0.4rem;
   color: var(--primary-font-light);
-  padding: .4rem 1rem;
+  padding: 0.4rem 1rem;
   width: 6rem;
 }
 
