@@ -1,0 +1,382 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardContainer test suite When CardContainer is rendered it should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    districts={
+        Array [
+            Object {
+              "location": "The Moon",
+              "stats": Object {
+                "2002": 1,
+                "2003": 6,
+                "2004": 8,
+                "2005": 0,
+              },
+            },
+            Object {
+              "location": "The Sun",
+              "stats": Object {
+                "2002": 1,
+                "2004": 8,
+                "2007": 6,
+                "2009": 0,
+              },
+            },
+            Object {
+              "location": "Jupiter",
+              "stats": Object {
+                "2002": 1,
+                "2004": 0,
+                "2009": 6,
+                "2010": 8,
+              },
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          Card Container
+</h1>,
+        <div
+          className="card-container"
+>
+          <Card
+                    location="The Moon"
+                    stats={
+                              Object {
+                                        "2002": 1,
+                                        "2003": 6,
+                                        "2004": 8,
+                                        "2005": 0,
+                                      }
+                    }
+          />
+          <Card
+                    location="The Sun"
+                    stats={
+                              Object {
+                                        "2002": 1,
+                                        "2004": 8,
+                                        "2007": 6,
+                                        "2009": 0,
+                                      }
+                    }
+          />
+          <Card
+                    location="Jupiter"
+                    stats={
+                              Object {
+                                        "2002": 1,
+                                        "2004": 0,
+                                        "2009": 6,
+                                        "2010": 8,
+                                      }
+                    }
+          />
+</div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Card Container",
+        },
+        "ref": null,
+        "rendered": "Card Container",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Card
+              location="The Moon"
+              stats={
+                            Object {
+                                          "2002": 1,
+                                          "2003": 6,
+                                          "2004": 8,
+                                          "2005": 0,
+                                        }
+              }
+/>,
+            <Card
+              location="The Sun"
+              stats={
+                            Object {
+                                          "2002": 1,
+                                          "2004": 8,
+                                          "2007": 6,
+                                          "2009": 0,
+                                        }
+              }
+/>,
+            <Card
+              location="Jupiter"
+              stats={
+                            Object {
+                                          "2002": 1,
+                                          "2004": 0,
+                                          "2009": 6,
+                                          "2010": 8,
+                                        }
+              }
+/>,
+          ],
+          "className": "card-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "The Moon",
+            "nodeType": "function",
+            "props": Object {
+              "location": "The Moon",
+              "stats": Object {
+                "2002": 1,
+                "2003": 6,
+                "2004": 8,
+                "2005": 0,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "The Sun",
+            "nodeType": "function",
+            "props": Object {
+              "location": "The Sun",
+              "stats": Object {
+                "2002": 1,
+                "2004": 8,
+                "2007": 6,
+                "2009": 0,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "Jupiter",
+            "nodeType": "function",
+            "props": Object {
+              "location": "Jupiter",
+              "stats": Object {
+                "2002": 1,
+                "2004": 0,
+                "2009": 6,
+                "2010": 8,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            Card Container
+</h1>,
+          <div
+            className="card-container"
+>
+            <Card
+                        location="The Moon"
+                        stats={
+                                    Object {
+                                                "2002": 1,
+                                                "2003": 6,
+                                                "2004": 8,
+                                                "2005": 0,
+                                              }
+                        }
+            />
+            <Card
+                        location="The Sun"
+                        stats={
+                                    Object {
+                                                "2002": 1,
+                                                "2004": 8,
+                                                "2007": 6,
+                                                "2009": 0,
+                                              }
+                        }
+            />
+            <Card
+                        location="Jupiter"
+                        stats={
+                                    Object {
+                                                "2002": 1,
+                                                "2004": 0,
+                                                "2009": 6,
+                                                "2010": 8,
+                                              }
+                        }
+            />
+</div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Card Container",
+          },
+          "ref": null,
+          "rendered": "Card Container",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Card
+                location="The Moon"
+                stats={
+                                Object {
+                                                "2002": 1,
+                                                "2003": 6,
+                                                "2004": 8,
+                                                "2005": 0,
+                                              }
+                }
+/>,
+              <Card
+                location="The Sun"
+                stats={
+                                Object {
+                                                "2002": 1,
+                                                "2004": 8,
+                                                "2007": 6,
+                                                "2009": 0,
+                                              }
+                }
+/>,
+              <Card
+                location="Jupiter"
+                stats={
+                                Object {
+                                                "2002": 1,
+                                                "2004": 0,
+                                                "2009": 6,
+                                                "2010": 8,
+                                              }
+                }
+/>,
+            ],
+            "className": "card-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "The Moon",
+              "nodeType": "function",
+              "props": Object {
+                "location": "The Moon",
+                "stats": Object {
+                  "2002": 1,
+                  "2003": 6,
+                  "2004": 8,
+                  "2005": 0,
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "The Sun",
+              "nodeType": "function",
+              "props": Object {
+                "location": "The Sun",
+                "stats": Object {
+                  "2002": 1,
+                  "2004": 8,
+                  "2007": 6,
+                  "2009": 0,
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "Jupiter",
+              "nodeType": "function",
+              "props": Object {
+                "location": "Jupiter",
+                "stats": Object {
+                  "2002": 1,
+                  "2004": 0,
+                  "2009": 6,
+                  "2010": 8,
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

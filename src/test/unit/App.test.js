@@ -4,10 +4,6 @@ import App from '../../components/App/App';
 import CardContainer from '../../components/CardContainer/CardContainer';
 import SearchForm from '../../components/SearchForm/SearchForm';
 
-test('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-
 describe('App unit test suite', () => {
   let wrapper;
 
@@ -38,5 +34,4 @@ describe('App unit test suite', () => {
   test('matches snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
-
 });

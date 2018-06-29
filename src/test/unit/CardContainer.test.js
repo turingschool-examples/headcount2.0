@@ -4,7 +4,6 @@ import Card from '../../components/Card/Card';
 import { shallow } from 'enzyme';
 
 describe('CardContainer test suite', () => {
-
   let wrapper;
   const mockData = [
     {
@@ -38,10 +37,15 @@ describe('CardContainer test suite', () => {
 
   beforeEach(() => wrapper = shallow(<CardContainer districts={mockData}/>));
 
-  test('', () => {
+  afterEach(() => wrapper.unmount());
+
+  test('There should be three cards created in the CardContainer when given props array', () => {
     const cards = wrapper.find(Card).length;
-    console.log(wrapper.debug())
     expect(cards).toBe(3);
-  })
+  });
+
+  test('When CardContainer is rendered it should match the snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
 });
