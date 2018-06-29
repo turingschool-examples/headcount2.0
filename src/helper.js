@@ -36,12 +36,23 @@ export default class DistrictRepository {
   }
 
   findAverage = (district) => {
-    const distObj = this.findByName(district)
+    const distObj = this.findByName(district.toUpperCase())
     const statsVals = Object.values(distObj[district]);
     const totalVal = statsVals.reduce((sum, num) => {
       return sum += num
     }, 0)
     return Number(parseFloat(totalVal/statsVals.length).toFixed(3))
+  }
+
+  compareDistrictAverages = (district1, district2) => {
+    const dist1Ave = this.findAverage(district1);
+    const dist2Ave = this.findAverage(district2)
+    const result = {
+      [district1.toUpperCase()]: dist1Ave,
+      [district2.toUpperCase()]: dist2Ave,
+      compared: Number(parseFloat(dist1Ave / dist2Ave).toFixed(3))
+    }
+    return result
   }
 
   findAllMatches = (search) => {
