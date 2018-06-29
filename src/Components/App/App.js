@@ -4,6 +4,7 @@ import CardContainer from '../CardContainer/CardContainer';
 import Header from '../Header/Header';
 import Search from '../Search/Search';
 import ComparedContainer from '../ComparedContainer/ComparedContainer';
+import PropTypes from 'prop-types'
 
 class App extends Component {
   constructor(props) {
@@ -58,6 +59,10 @@ class App extends Component {
       </div>
     );
   }
+}
+
+App.propTypes = {
+  districts: PropTypes.object
 }
 
 export default App;

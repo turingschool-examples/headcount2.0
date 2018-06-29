@@ -1,5 +1,6 @@
 import React from 'react';
 import './compare-card.css';
+import PropTypes from 'prop-types';
 
 const CompareCard = ({districtMethods, selectedCards}) => {
   
@@ -39,6 +40,11 @@ const CompareCard = ({districtMethods, selectedCards}) => {
       </div>
     )
   }
+}
+
+CompareCard.propTypes = {
+  districtMethods: PropTypes.object.isRequired,
+  selectedCards: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default CompareCard;

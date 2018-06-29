@@ -9,8 +9,16 @@ ShallowWrapper {
         Array [
             Object {},
             Object {},
+            Object {},
           ]
     }
+    searchResults={
+        Array [
+            Object {},
+            Object {},
+          ]
+    }
+    selectCard={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -25,8 +33,12 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Card />,
-        <Card />,
+        <Card
+          selectCard={[Function]}
+/>,
+        <Card
+          selectCard={[Function]}
+/>,
       ],
       "className": "card-container",
     },
@@ -36,7 +48,9 @@ ShallowWrapper {
         "instance": null,
         "key": "0",
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "selectCard": [Function],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -45,7 +59,9 @@ ShallowWrapper {
         "instance": null,
         "key": "1",
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "selectCard": [Function],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -60,8 +76,12 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Card />,
-          <Card />,
+          <Card
+            selectCard={[Function]}
+/>,
+          <Card
+            selectCard={[Function]}
+/>,
         ],
         "className": "card-container",
       },
@@ -71,7 +91,9 @@ ShallowWrapper {
           "instance": null,
           "key": "0",
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "selectCard": [Function],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -80,7 +102,9 @@ ShallowWrapper {
           "instance": null,
           "key": "1",
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "selectCard": [Function],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

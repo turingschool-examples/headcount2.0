@@ -7,8 +7,8 @@ const Card = (props) => {
 
   const active = selected ? 'selected' : 'unselected'
 
-  const spreadStats =
-    Object.keys(stats).map((stat, index) => {
+  const statKeys = Object.keys(stats)
+  const spreadStats = statKeys.map(stat => {
       const statLevel = stats[stat] > .5 ? 'high-stat' : 'low-stat';
 
       return (
@@ -22,7 +22,7 @@ const Card = (props) => {
 
   return (
     <div 
-      onClick={() => selectCard(location)} 
+      onClick={() => selectCard(location)}
       className="card" 
       id={active} 
     >
@@ -37,7 +37,8 @@ const Card = (props) => {
 Card.propTypes = {
   location: PropTypes.string,
   stats: PropTypes.object,
-  selected: PropTypes.bool
+  selected: PropTypes.bool,
+  selectCard: PropTypes.func
 }
 
 export default Card;

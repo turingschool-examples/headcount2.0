@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './search.css'
+import PropTypes from 'prop-types';
 
 class Search extends Component {
     constructor(props) {
@@ -11,7 +12,6 @@ class Search extends Component {
     }
 
     handleChange = (event) => {
-        event.preventDefault()
         const search = event.target.value
 
         this.setState({search})
@@ -34,6 +34,10 @@ class Search extends Component {
             </div>
         )
     }
+}
+
+Search.propTypes = {
+    submitSearch: PropTypes.func
 }
 
 export default Search

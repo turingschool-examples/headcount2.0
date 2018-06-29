@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Card
     location="Denver"
+    selectCard={[Function]}
     selected={true}
     stats={Object {}}
 />,
@@ -32,6 +33,8 @@ ShallowWrapper {
 </div>,
       ],
       "className": "card",
+      "id": "selected",
+      "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -78,6 +81,8 @@ ShallowWrapper {
 </div>,
         ],
         "className": "card",
+        "id": "selected",
+        "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [
