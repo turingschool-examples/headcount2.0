@@ -18,7 +18,7 @@ export default class SearchForm extends Component {
   render() {
     return(
         <form onSubmit={this.props.updateDistricts}>
-          <label>Search</label>
+          <label>Search : </label>
           <input 
             type="text" 
             placeholder="Enter your district"

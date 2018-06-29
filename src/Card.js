@@ -2,8 +2,10 @@ import React from 'react';
 
 const Card = (props) => {
   const cardData =
+
     Object.keys(props.content).map(year => {
-      return <li> {year}: {props.content[year]} </li>
+      const toggle = props.content[year] <= .5 ? 'low' : 'high'
+      return <aside className={toggle}> {year}: {props.content[year]} </aside>
     })
 
   return(
