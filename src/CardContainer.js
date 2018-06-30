@@ -4,16 +4,15 @@ import PropTypes from 'prop-types';
 
 const CardContainer = ({ cards, cardAverage }) => {
   const cardsKeys = Object.keys(cards)
-  
   const container = cardsKeys.map(location => {
   const districtToDisplay = cards[location]
   
-                                return <Card title={location}
-                                              value={location}
-                                            content={districtToDisplay}
-                                            cardAverage={cardAverage}
-                                            key={Math.random()*100} 
-                                        />})
+    return <Card title={location}
+                  value={location}
+                content={districtToDisplay}
+                cardAverage={cardAverage}
+                key={Math.random()*100} 
+            />})
   return(
     <div className="Container">
     {container}
