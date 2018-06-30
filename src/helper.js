@@ -1,6 +1,4 @@
 import kinderData from './data/kindergartners_in_full_day_program.js'
-import { ENETDOWN } from 'constants';
-import { networkInterfaces } from 'os';
 
 export default class DistrictRepository {
   constructor() {
@@ -18,26 +16,30 @@ export default class DistrictRepository {
   }
 
   findByName = (search) => {
-    let districtArray = {}
+    let districtResults = {}
     if (!search) {
       return;
     }
     const statsKeys = Object.keys(this.stats);
-    const districtData = statsKeys.reduce((districtData, stat) => {
+    statsKeys.reduce((districtData, stat) => {
       if (stat.toUpperCase().includes(search.toUpperCase())) {
          districtData = {
           [stat]: this.stats[stat]
         };
-        Object.assign(districtArray, districtData)
-      }
+        Object.assign(districtResults, districtData)
+      } 
       return districtData;
     }, {});
-      return districtArray;
+    if 
+    (Object.keys(districtResults).length === 0) {
+      return;
+    }
+      return districtResults;
   }
 
   findAverage = (district) => {
-    const distObj = this.findByName(district.toUpperCase())
-    const statsVals = Object.values(distObj[district]);
+    const distResults = this.findByName(district.toUpperCase())
+    const statsVals = Object.values(distResults[district]);
     const totalVal = statsVals.reduce((sum, num) => {
       return sum += num
     }, 0)

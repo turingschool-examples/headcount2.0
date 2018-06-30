@@ -46,10 +46,11 @@ header button {
   padding: 1.5rem; 
   overflow: scroll;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .Card {
-  display: inline-block;
   height: 19rem;
   width: 12rem;
   border: 2px solid #938284;
