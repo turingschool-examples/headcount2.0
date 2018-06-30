@@ -5,3 +5,23 @@
 .lowStats {
   color: chartreuse;
 }
+
+.card {
+  /*display: inline-block;*/
+  border: solid black 2px;
+  width: 15%;
+  border-radius: 5%;
+
+}
+
+.card:hover {
+
+}
+
+.district {
+  font-size: 1.25em;
+}
+
+.stats {
+  font-size: 1em;
+}
