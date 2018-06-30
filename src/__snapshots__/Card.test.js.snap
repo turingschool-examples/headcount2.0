@@ -141,6 +141,8 @@ ShallowWrapper {
 </ul>,
       ],
       "className": "Card",
+      "onClick": [Function],
+      "value": undefined,
     },
     "ref": null,
     "rendered": Array [
@@ -647,6 +649,8 @@ ShallowWrapper {
 </ul>,
         ],
         "className": "Card",
+        "onClick": [Function],
+        "value": undefined,
       },
       "ref": null,
       "rendered": Array [

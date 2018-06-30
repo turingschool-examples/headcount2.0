@@ -14,7 +14,8 @@ export default class SearchForm extends Component {
     this.setState({
       district: event.target.value
     })
-    this.props.updateDistricts(this.state.district)
+    this.props.updateDistricts(event.target.value)
+    
   }
 
   render() {

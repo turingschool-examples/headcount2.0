@@ -15,6 +15,7 @@ class App extends Component {
   }
 
 updateDistricts = (district) => {
+  console.log(district)
   const foundDistricts = districts.findByName(district)
   console.log(foundDistricts)
   this.setState({
@@ -30,7 +31,7 @@ updateDistricts = (district) => {
           <SearchForm updateDistricts={this.updateDistricts}/>
         </header>
         {/* <ComparisonContainer /> */}
-        <CardContainer cards={this.state.cards} cardAverage={this.cardAverage}/>
+        <CardContainer cards={this.state.cards}/>
       </div>
     );
   }

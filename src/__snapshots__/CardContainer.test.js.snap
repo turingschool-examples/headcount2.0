@@ -30,20 +30,24 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Card
+          cardAverage={undefined}
           content={
                     Object {
                               "2004": 0.75,
                             }
           }
           title="ACADEMY 20"
+          value="ACADEMY 20"
 />,
         <Card
+          cardAverage={undefined}
           content={
                     Object {
                               "2004": 0.75,
                             }
           }
           title="TacoLand"
+          value="TacoLand"
 />,
       ],
       "className": "Container",
@@ -55,10 +59,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "cardAverage": undefined,
           "content": Object {
             "2004": 0.75,
           },
           "title": "ACADEMY 20",
+          "value": "ACADEMY 20",
         },
         "ref": null,
         "rendered": null,
@@ -69,10 +75,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "cardAverage": undefined,
           "content": Object {
             "2004": 0.75,
           },
           "title": "TacoLand",
+          "value": "TacoLand",
         },
         "ref": null,
         "rendered": null,
@@ -89,20 +97,24 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Card
+            cardAverage={undefined}
             content={
                         Object {
                                     "2004": 0.75,
                                   }
             }
             title="ACADEMY 20"
+            value="ACADEMY 20"
 />,
           <Card
+            cardAverage={undefined}
             content={
                         Object {
                                     "2004": 0.75,
                                   }
             }
             title="TacoLand"
+            value="TacoLand"
 />,
         ],
         "className": "Container",
@@ -114,10 +126,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "cardAverage": undefined,
             "content": Object {
               "2004": 0.75,
             },
             "title": "ACADEMY 20",
+            "value": "ACADEMY 20",
           },
           "ref": null,
           "rendered": null,
@@ -128,10 +142,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "cardAverage": undefined,
             "content": Object {
               "2004": 0.75,
             },
             "title": "TacoLand",
+            "value": "TacoLand",
           },
           "ref": null,
           "rendered": null,

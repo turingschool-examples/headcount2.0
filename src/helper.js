@@ -1,6 +1,4 @@
 import kinderData from './data/kindergartners_in_full_day_program.js'
-import { ENETDOWN } from 'constants';
-import { networkInterfaces } from 'os';
 
 export default class DistrictRepository {
   constructor() {
@@ -29,9 +27,13 @@ export default class DistrictRepository {
           [stat]: this.stats[stat]
         };
         Object.assign(districtArray, districtData)
-      }
+      } 
       return districtData;
     }, {});
+    if 
+    (Object.keys(districtArray).length === 0) {
+      return;
+    }
       return districtArray;
   }
 
