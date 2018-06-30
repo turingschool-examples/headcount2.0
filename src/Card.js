@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DistrictRepository from './helper.js';
-const districts = new DistrictRepository()
+// import DistrictRepository from './helper.js';
+// const districts = new DistrictRepository()
 
 
 const Card = ({ title, content, cardAverage, value, updateClickedCard }) => {

@@ -1,27 +1,29 @@
 import React from 'react';
+import './ComparisonContainer.css';
 
-const ComparisonContainer = ({ clickedCards }) => {
-  console.log(clickedCards)
-  if(clickedCards) {
-    const newCards = Object.keys(clickedCards).map(location => {
-      
-        const cardData =
+const ComparisonContainer = ({ firstClickedCard }) => {
+  console.log(firstClickedCard)
+  // firstClickedCard.forEach(district => {
+  //   console.log(district)
+  // })
+  if(firstClickedCard) {
+    const newCards = Object.keys(firstClickedCard).map(location => {
+      const cardData =
 
-          Object.keys(clickedCards[location]).map(year => {
-            const toggle = clickedCards[location][year] <= .5 ? 'low' : 'high'
-            return <aside key={Math.random() * 10} className={toggle}> {year}: {clickedCards[location][year]} </aside>
-
+        Object.keys(firstClickedCard[location]).map(year => {
+          const toggle = firstClickedCard[location][year] <= .5 ? 'low' : 'high'
+          return <aside key={Math.random() * 10} className={toggle}> {year}: {firstClickedCard[location][year]} </aside>
           })
     
       return (
-        <div className="Card" >
+        <div className="comp-card" key={Math.floor(Math.random*100)}>
           <h3>{location}</h3>
           <ul>{cardData}</ul>
         </div>
       )
     })
     return (
-      <div> {newCards} </div>
+      <div className="comp-container"> {newCards} </div>
     )
     
   } else {
