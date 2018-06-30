@@ -15,9 +15,7 @@ class App extends Component {
   }
 
 updateDistricts = (district) => {
-  console.log(district)
   const foundDistricts = districts.findByName(district)
-  console.log(foundDistricts)
   this.setState({
     cards: {...foundDistricts}
   })

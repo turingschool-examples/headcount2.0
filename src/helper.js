@@ -21,7 +21,7 @@ export default class DistrictRepository {
       return;
     }
     const statsKeys = Object.keys(this.stats);
-    const districtData = statsKeys.reduce((districtData, stat) => {
+    statsKeys.reduce((districtData, stat) => {
       if (stat.toUpperCase().includes(search.toUpperCase())) {
          districtData = {
           [stat]: this.stats[stat]
@@ -43,7 +43,6 @@ export default class DistrictRepository {
     const totalVal = statsVals.reduce((sum, num) => {
       return sum += num
     }, 0)
-    console.log(Number(parseFloat(totalVal / statsVals.length).toFixed(3)))
     return Number(parseFloat(totalVal/statsVals.length).toFixed(3))
   }
 
