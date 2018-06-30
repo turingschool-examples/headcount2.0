@@ -28,11 +28,15 @@ updateClickedCard = (district) => {
   const oldDistrict = this.state.clickedCards
   const districtStats = districts.findByName(district)
   console.log(districtAvg)
-  // if(oldDistrict) {
+  console.log(oldDistrict)
+  console.log(districtStats)
+  if(oldDistrict) {
     this.setState({
-      clickedCards:  districtStats
-    // })
-  })
+      clickedCards: [...oldDistrict, districtStats]
+      // 
+      // clickedCards:  districtStats
+    })
+  }
 }
 
 // this.setState({
@@ -46,7 +50,7 @@ updateClickedCard = (district) => {
           <h1>Welcome To Headcount 2.0</h1>
           <SearchForm updateDistricts={this.updateDistricts}/>
         </header>
-        <ComparisonContainer firstClickedCard={this.state.clickedCards}/>
+        <ComparisonContainer cardArray={this.state.clickedCards}/>
         <CardContainer 
           cards={this.state.cards}
           updateClickedCard={this.updateClickedCard}/>
