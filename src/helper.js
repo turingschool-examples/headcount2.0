@@ -16,7 +16,7 @@ export default class DistrictRepository {
   }
 
   findByName = (search) => {
-    let districtArray = {}
+    let districtResults = {}
     if (!search) {
       return;
     }
@@ -26,20 +26,20 @@ export default class DistrictRepository {
          districtData = {
           [stat]: this.stats[stat]
         };
-        Object.assign(districtArray, districtData)
+        Object.assign(districtResults, districtData)
       } 
       return districtData;
     }, {});
     if 
-    (Object.keys(districtArray).length === 0) {
+    (Object.keys(districtResults).length === 0) {
       return;
     }
-      return districtArray;
+      return districtResults;
   }
 
   findAverage = (district) => {
-    const distObj = this.findByName(district.toUpperCase())
-    const statsVals = Object.values(distObj[district]);
+    const distResults = this.findByName(district.toUpperCase())
+    const statsVals = Object.values(distResults[district]);
     const totalVal = statsVals.reduce((sum, num) => {
       return sum += num
     }, 0)
