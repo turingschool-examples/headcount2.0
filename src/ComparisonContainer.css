@@ -1,6 +1,10 @@
 
 .comp-container {
-    background-color: #C2B2B4;
+  background-color: #C2B2B4;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
 }
 
 .comp-card {

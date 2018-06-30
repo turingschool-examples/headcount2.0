@@ -3,9 +3,6 @@ import './ComparisonContainer.css';
 
 const ComparisonContainer = ({ firstClickedCard }) => {
   console.log(firstClickedCard)
-  // firstClickedCard.forEach(district => {
-  //   console.log(district)
-  // })
   if(firstClickedCard) {
     const newCards = Object.keys(firstClickedCard).map(location => {
       const cardData =
