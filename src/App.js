@@ -11,7 +11,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      cards: districts.stats
+      cards: districts.stats,
+      clickedCards: []
     }
   }
 
@@ -22,6 +23,14 @@ updateDistricts = (district) => {
   })
 }
 
+updateClickedCard = (district) => {
+  const districtAvg = districts.findAverage(district)
+  const districtStats = districts.findByName(district)
+  this.setState({
+    clickedCards: {districtStats}
+  })
+}
+
   render() {
     return (
       <div className="App">
@@ -29,8 +38,10 @@ updateDistricts = (district) => {
           <h1>Welcome To Headcount 2.0</h1>
           <SearchForm updateDistricts={this.updateDistricts}/>
         </header>
-        <ComparisonContainer />
-        <CardContainer cards={this.state.cards}/>
+        <ComparisonContainer clickedCards={this.state.clickedCards.districtStats}/>
+        <CardContainer 
+          cards={this.state.cards}
+          updateClickedCard={this.updateClickedCard}/>
       </div>
     );
   }

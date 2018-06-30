@@ -4,7 +4,7 @@ import DistrictRepository from './helper.js';
 const districts = new DistrictRepository()
 
 
-const Card = ({ title, content, cardAverage, value }) => {
+const Card = ({ title, content, cardAverage, value, updateClickedCard }) => {
   const cardData =
 
     Object.keys(content).map(year => {
@@ -14,7 +14,7 @@ const Card = ({ title, content, cardAverage, value }) => {
     })
 
   return(
-    <div className="Card" onClick={() => districts.findAverage(title)} 
+    <div className="Card" onClick={() => updateClickedCard(title)} 
      value={value}>
       <h3>{title}</h3>
       <ul>{cardData}</ul>
