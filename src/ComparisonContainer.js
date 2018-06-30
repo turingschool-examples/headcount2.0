@@ -4,8 +4,15 @@ const ComparisonContainer = ({ clickedCards }) => {
   console.log(clickedCards)
   if(clickedCards) {
     const newCards = Object.keys(clickedCards).map(location => {
-      const toggle = 0.4 <= .5 ? 'low' : 'high'
-      const cardData = <aside key={Math.random() * 10} className={toggle}> year: stats </aside>
+      
+        const cardData =
+
+          Object.keys(clickedCards[location]).map(year => {
+            const toggle = clickedCards[location][year] <= .5 ? 'low' : 'high'
+            return <aside key={Math.random() * 10} className={toggle}> {year}: {clickedCards[location][year]} </aside>
+
+          })
+    
       return (
         <div className="Card" >
           <h3>{location}</h3>
