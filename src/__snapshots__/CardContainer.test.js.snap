@@ -56,7 +56,7 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "62.41051927110275",
         "nodeType": "function",
         "props": Object {
           "cardAverage": undefined,
@@ -72,7 +72,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "83.11725845194053",
         "nodeType": "function",
         "props": Object {
           "cardAverage": undefined,
@@ -123,7 +123,7 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "62.41051927110275",
           "nodeType": "function",
           "props": Object {
             "cardAverage": undefined,
@@ -139,7 +139,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "83.11725845194053",
           "nodeType": "function",
           "props": Object {
             "cardAverage": undefined,

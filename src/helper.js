@@ -43,6 +43,7 @@ export default class DistrictRepository {
     const totalVal = statsVals.reduce((sum, num) => {
       return sum += num
     }, 0)
+    console.log(Number(parseFloat(totalVal / statsVals.length).toFixed(3)))
     return Number(parseFloat(totalVal/statsVals.length).toFixed(3))
   }
 

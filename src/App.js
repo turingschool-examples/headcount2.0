@@ -19,7 +19,7 @@ updateDistricts = (district) => {
   const foundDistricts = districts.findByName(district)
   console.log(foundDistricts)
   this.setState({
-    cards: {...foundDistricts, key:Date.now()}
+    cards: {...foundDistricts}
   })
 }
 

@@ -9,7 +9,7 @@ const Card = ({ title, content, cardAverage, value }) => {
 
     Object.keys(content).map(year => {
       const toggle = content[year] <= .5 ? 'low' : 'high'
-      return <aside className={toggle}> {year}: {content[year]} </aside>
+      return <aside key={Math.random() * 10} className={toggle}> {year}: {content[year]} </aside>
 
     })
 

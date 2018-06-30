@@ -11,7 +11,8 @@ const CardContainer = ({ cards, cardAverage }) => {
                                 return <Card title={location}
                                               value={location}
                                             content={districtToDisplay}
-                                            cardAverage={cardAverage} 
+                                            cardAverage={cardAverage}
+                                            key={Math.random()*100} 
                                         />})
   return(
     <div className="Container">
