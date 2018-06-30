@@ -1,0 +1,10 @@
+
+.comp-container {
+    background-color: #C2B2B4;
+}
+
+.comp-card {
+  border: 2px solid chartreuse;
+  width: 15vw;
+  background-color: #ffffff;
+}

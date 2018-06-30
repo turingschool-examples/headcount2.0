@@ -11,7 +11,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      cards: districts.stats
+      cards: districts.stats,
+      clickedCards: []
     }
   }
 
@@ -22,6 +23,22 @@ updateDistricts = (district) => {
   })
 }
 
+updateClickedCard = (district) => {
+  const districtAvg = districts.findAverage(district)
+  const oldDistrict = this.state.clickedCards
+  const districtStats = districts.findByName(district)
+  console.log(districtAvg)
+  // if(oldDistrict) {
+    this.setState({
+      clickedCards:  districtStats
+    // })
+  })
+}
+
+// this.setState({
+  // clickedCards: [...oldDistrict, districtStats]
+    // })
+
   render() {
     return (
       <div className="App">
@@ -29,8 +46,10 @@ updateDistricts = (district) => {
           <h1>Welcome To Headcount 2.0</h1>
           <SearchForm updateDistricts={this.updateDistricts}/>
         </header>
-        <ComparisonContainer />
-        <CardContainer cards={this.state.cards}/>
+        <ComparisonContainer firstClickedCard={this.state.clickedCards}/>
+        <CardContainer 
+          cards={this.state.cards}
+          updateClickedCard={this.updateClickedCard}/>
       </div>
     );
   }
