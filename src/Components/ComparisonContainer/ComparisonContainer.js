@@ -3,11 +3,13 @@ import DistrictCard from '../DistrictCard/DistrictCard'
 import PropTypes from 'prop-types';
 
 
-const ComparisonContainer = ({ comparedDistricts }) => {
+const ComparisonContainer = ({ comparedDistricts, selectDistrict }) => {
   const districtNames = Object.keys(comparedDistricts)
   const districtCards = districtNames.map(district => {
     return <DistrictCard 
+              key={comparedDistricts[district].key}
               district={comparedDistricts[district]} 
+              selectDistrict={selectDistrict}
             />
   })
 
