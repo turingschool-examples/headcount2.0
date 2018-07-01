@@ -1,14 +1,26 @@
 
 .comp-container {
+  padding-top: 2rem;
   background-color: #C2B2B4;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-
 }
 
 .comp-card {
   border: 2px solid chartreuse;
   width: 15vw;
   background-color: #ffffff;
+}
+
+.total-card {
+  display: flex;
+  height: 15rem;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid chartreuse;
+  width: 15vw;
+  background-color: #ffffff;
+
 }

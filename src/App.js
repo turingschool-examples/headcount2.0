@@ -24,8 +24,6 @@ updateDistricts = (district) => {
 }
 
 updateClickedCard = (district, content) => {
-
-  const districtAvg = districts.findAverage(district)
   const oldDistrict = this.state.clickedCards
   const districtStats = {[district]: content}
   let toggleDistrict = oldDistrict.filter(item => !item[district])
