@@ -2,7 +2,6 @@ import React from 'react';
 import './ComparisonContainer.css';
 
 const ComparisonContainer = ( { cardArray } ) => {
-  console.log(cardArray)
   if(cardArray.length === 0) {
     return (
       <div> Compare Districts by Clicking on 2 Cards</div>

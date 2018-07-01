@@ -24,11 +24,15 @@ updateDistricts = (district) => {
 }
 
 updateClickedCard = (district, content) => {
+
   const districtAvg = districts.findAverage(district)
   const oldDistrict = this.state.clickedCards
   const districtStats = {[district]: content}
-  console.log(districtStats)
-  if(oldDistrict) {
+  let toggleDistrict = oldDistrict.filter(item => !item[district])
+  this.setState({
+    clickedCards: toggleDistrict
+  })
+  if(oldDistrict.length < 2) {
     this.setState({
       clickedCards: [...oldDistrict, districtStats]
     })
