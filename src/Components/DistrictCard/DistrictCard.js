@@ -23,8 +23,8 @@ const DistrictCard = ({district}) => {
 
   return (
     <section className="card"> 
-      <h2>District Name: {district.location}</h2>
-      <ul>
+      <h2 className="district">District Name: {district.location}</h2>
+      <ul className="stats">
         {createStats}
       </ul>
 
