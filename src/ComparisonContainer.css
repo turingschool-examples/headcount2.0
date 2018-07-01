@@ -8,12 +8,14 @@
 }
 
 .comp-card {
+  padding: .5rem;
   border: 2px solid chartreuse;
   width: 15vw;
   background-color: #ffffff;
 }
 
 .total-card {
+  padding: .5rem;
   display: flex;
   height: 15rem;
   flex-direction: column;
