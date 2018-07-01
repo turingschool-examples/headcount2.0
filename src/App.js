@@ -47,7 +47,8 @@ updateClickedCard = (district, content) => {
         <ComparisonContainer cardArray={this.state.clickedCards}/>
         <CardContainer 
           cards={this.state.cards}
-          updateClickedCard={this.updateClickedCard}/>
+          updateClickedCard={this.updateClickedCard}
+        />
       </div>
     );
   }

@@ -5,9 +5,7 @@ const districts = new DistrictRepository();
 
 const ComparisonContainer = ( { cardArray } ) => {
   if(cardArray.length === 0) {
-    return (
-      <div> Compare Districts by Clicking on 2 Cards</div>
-    )
+    return (<div></div>)
   }
   if(cardArray.length > 0) {
     var newCards = cardArray.map(location => {
@@ -28,7 +26,6 @@ const ComparisonContainer = ( { cardArray } ) => {
                   </div>)
         })
         return cardData
-
     })
 
     if(cardArray.length === 1) {

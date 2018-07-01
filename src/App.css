@@ -59,6 +59,10 @@ header button {
   margin: 2rem;
 }
 
+.Card:active {
+  border: 2px solid chartreuse;
+}
+
 .Card h3 {
   text-align: center;
 }
