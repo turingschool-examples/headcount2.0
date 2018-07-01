@@ -4,14 +4,20 @@ import PropTypes from 'prop-types';
 
 
 const ComparisonContainer = ({ comparedDistricts }) => {
-
   const districtNames = Object.keys(comparedDistricts)
+  const districtCards = districtNames.map(district => {
+    return <DistrictCard 
+              district={comparedDistricts[district]} 
+            />
+  })
+
   return (
-    districtNames.map(district => {
-      return <DistrictCard district={comparedDistricts[district]} />
-    })
+    <div className="comparison-container">
+      { districtCards }
+    </div>
   )
-}
+} 
+
 
 ComparisonContainer.propTypes = {
   comparedDistricts: PropTypes.object.isRequired
