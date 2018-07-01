@@ -22,7 +22,7 @@ const DistrictCard = ({district}) => {
   })
 
   return (
-    <section className="card"> 
+    <section className="card" id={district.key}  key={district.key}> 
       <h2 className="district">District Name: {district.location}</h2>
       <ul className="stats">
         {createStats}
