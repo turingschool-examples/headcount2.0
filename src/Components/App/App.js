@@ -10,14 +10,13 @@ class App extends Component {
     super()
     this.state = {
       matchingDistricts: {},
-      comparedDistricts: []
+      comparedDistricts: {}
     }
   }
 
   componentDidMount() {
     const districtRepository = new DistrictRepository()
     this.setState({ matchingDistricts: districtRepository.stats })
-  
   }
 
   findDistrict = (input) => {
@@ -29,7 +28,8 @@ class App extends Component {
   selectDistrict = (districtName) => {
     const districtRepository = new DistrictRepository();
     const clickedDistrict = districtRepository.findByName(districtName);
-    
+    console.log(clickedDistrict)
+    this.setState({ comparedDistricts: {...this.state.comparedDistricts, [clickedDistrict.location]:clickedDistrict}})
   } 
 
   runComparison = () => {
@@ -38,10 +38,6 @@ class App extends Component {
     if (districtToCompare.length > 1) {
       return districtRepository.compareDistrictAverages(districtToCompare[0], districtToCompare[1])
     }
-  }
-
-  compareCard = (id) => {
-
   }
 
   render() {
@@ -56,6 +52,7 @@ class App extends Component {
         />
         <CardContainer 
           matchingDistricts={this.state.matchingDistricts}
+          selectDistrict={this.selectDistrict}
         />
       </div>
     );

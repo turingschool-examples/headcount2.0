@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class ControlledForm extends Component {
-  constructor(props) {
-    super(props)
-  }
 
   handleChange = (event) => {
     const input = event.target.value;

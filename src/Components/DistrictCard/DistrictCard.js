@@ -12,22 +12,15 @@ const DistrictCard = ({district , selectDistrict}) => {
 
   const createStats = years.map((year, index) => {
     const stats = district.stats[year]
-
     return (
-      <li className={determineColor(stats)}
-          key={index}
-      >
+      <li className={determineColor(stats)} key={index}>
         {[year]}: {stats}
       </li>
       )
   })
 
-  const toggleClass = () => {
-
-  }
-
-  const handleClick = (id) => {
-    this.compareCard(id)
+  const handleClick = (location) => {
+    selectDistrict(location)
   }
 
   return (
@@ -35,13 +28,12 @@ const DistrictCard = ({district , selectDistrict}) => {
       className={`card ${district.selected ? 'selected' : ''}`} 
       id={district.key}
       key={district.key}
-      onClick={selectDistrict(district.location)}
+      onClick={() => {handleClick(district.location)}}
     > 
       <h2 className="district">District Name: {district.location}</h2>
       <ul className="stats">
         {createStats}
       </ul>
-
     </section>
   )
 }
