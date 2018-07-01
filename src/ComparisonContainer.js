@@ -8,7 +8,7 @@ const ComparisonContainer = ( { cardArray } ) => {
       <div> Compare Districts by Clicking on 2 Cards</div>
     )
   }
-  if(cardArray.length === 1) {
+  if(cardArray.length > 0) {
     const newCards = cardArray.map(location => {
       const cardData =
         Object.keys(location).map(district => { 

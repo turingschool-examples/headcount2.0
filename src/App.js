@@ -23,25 +23,17 @@ updateDistricts = (district) => {
   })
 }
 
-updateClickedCard = (district) => {
+updateClickedCard = (district, content) => {
   const districtAvg = districts.findAverage(district)
   const oldDistrict = this.state.clickedCards
-  const districtStats = districts.findByName(district)
-  console.log(districtAvg)
-  console.log(oldDistrict)
+  const districtStats = {[district]: content}
   console.log(districtStats)
   if(oldDistrict) {
     this.setState({
       clickedCards: [...oldDistrict, districtStats]
-      // 
-      // clickedCards:  districtStats
     })
   }
 }
-
-// this.setState({
-  // clickedCards: [...oldDistrict, districtStats]
-    // })
 
   render() {
     return (

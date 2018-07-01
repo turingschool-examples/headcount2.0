@@ -14,7 +14,7 @@ const Card = ({ title, content, cardAverage, value, updateClickedCard }) => {
     })
 
   return(
-    <div className="Card" onClick={() => updateClickedCard(title)} 
+    <div className="Card" onClick={() => updateClickedCard(title, content)} 
      value={value}>
       <h3>{title}</h3>
       <ul>{cardData}</ul>
