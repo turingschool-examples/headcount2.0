@@ -3,7 +3,6 @@ import './DistrictCard.css';
 import PropTypes from 'prop-types';
 
 const DistrictCard = ({district}) => {
-  // console.log(district.stats)
   const years = Object.keys(district.stats)
 
   const determineColor = (stats) => {
@@ -14,15 +13,28 @@ const DistrictCard = ({district}) => {
     const stats = district.stats[year]
 
     return (
-      <li className={determineColor(stats)}
-  >
+      <li className={determineColor(stats)}>
         {[year]}: {stats}
       </li>
       )
   })
 
+  const toggleClass = () => {
+
+  }
+
+  const handleClick = (id) => {
+    this.compareCard(id)
+  }
+
   return (
-    <section className="card" id={district.key}  key={district.key}> 
+    <section 
+      className="card" 
+      id={district.key}
+      key={district.key}
+      onClick={toggleClass}
+      onClick={compareCard(district.key)}
+    > 
       <h2 className="district">District Name: {district.location}</h2>
       <ul className="stats">
         {createStats}
