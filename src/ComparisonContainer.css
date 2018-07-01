@@ -1,0 +1,33 @@
+
+.comp-container {
+  padding-top: 2rem;
+  background-color: #C2B2B4;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.comp-card {
+  padding: .5rem;
+  border: 2px solid chartreuse;
+  height: 20rem;
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #ffffff;
+  border-radius: .9rem;
+}
+
+.total-card {
+  padding: .5rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid chartreuse;
+  width: 15vw;
+  background-color: #ffffff;
+
+}
