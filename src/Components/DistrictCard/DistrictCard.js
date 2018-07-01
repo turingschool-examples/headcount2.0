@@ -2,8 +2,8 @@ import React from 'react';
 import './DistrictCard.css';
 import PropTypes from 'prop-types';
 
-const DistrictCard = ({district , selectDistrict}) => {
 
+const DistrictCard = ({district , selectDistrict}) => {
   const years = Object.keys(district.stats)
 
   const determineColor = (stats) => {
@@ -21,6 +21,14 @@ const DistrictCard = ({district , selectDistrict}) => {
       </li>
       )
   })
+
+  const toggleClass = () => {
+
+  }
+
+  const handleClick = (id) => {
+    this.compareCard(id)
+  }
 
   return (
     <section 
