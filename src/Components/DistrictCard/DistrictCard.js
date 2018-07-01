@@ -2,18 +2,21 @@ import React from 'react';
 import './DistrictCard.css';
 import PropTypes from 'prop-types';
 
-const DistrictCard = ({district}) => {
+
+const DistrictCard = ({district , selectDistrict}) => {
   const years = Object.keys(district.stats)
 
   const determineColor = (stats) => {
     return stats > 0.5 ? "highStats" : "lowStats"
   }
 
-  const createStats = years.map(year => {
+  const createStats = years.map((year, index) => {
     const stats = district.stats[year]
 
     return (
-      <li className={determineColor(stats)}>
+      <li className={determineColor(stats)}
+          key={index}
+      >
         {[year]}: {stats}
       </li>
       )
@@ -29,11 +32,10 @@ const DistrictCard = ({district}) => {
 
   return (
     <section 
-      className="card" 
+      className={`card ${district.selected ? 'selected' : ''}`} 
       id={district.key}
       key={district.key}
-      onClick={toggleClass}
-      onClick={compareCard(district.key)}
+      onClick={selectDistrict(district.location)}
     > 
       <h2 className="district">District Name: {district.location}</h2>
       <ul className="stats">
