@@ -10,14 +10,19 @@
 .comp-card {
   padding: .5rem;
   border: 2px solid chartreuse;
+  height: 20rem;
   width: 15vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   background-color: #ffffff;
+  border-radius: .9rem;
 }
 
 .total-card {
   padding: .5rem;
-  display: flex;
   height: 15rem;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;

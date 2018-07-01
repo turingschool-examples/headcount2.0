@@ -53,10 +53,11 @@ header button {
 .Card {
   height: 19rem;
   width: 12rem;
-  border: 2px solid #938284;
+  border: 2px solid purple;
   background-color: #fff;
   color: #3E2A35;
   margin: 2rem;
+  border-radius: .9rem;
 }
 
 .Card:active {
