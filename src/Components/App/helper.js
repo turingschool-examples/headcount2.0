@@ -11,9 +11,9 @@ export default class DistrictRepository {
       let location = academicYear.Location.toUpperCase();
       let year = academicYear.TimeFrame;
       let info = this.parseData(academicYear.Data);
-    
+      let key = Date.now();    
       if (!district[location]) {
-        district[location] = {stats:{[year]: info}, location};
+        district[location] = {stats:{[year]: info}, location, key: key}
       } else {
         district[location].stats = {...district[location].stats, [year]: info};
       }
