@@ -19,10 +19,16 @@ class App extends Component {
   }
 
   findDistrict = (input) => {
-    const districtRepository = new DistrictRepository()
-    const filteredDistricts = districtRepository.findAllMatches(input)
-    this.setState({ matchingDistricts: filteredDistricts })
+    const districtRepository = new DistrictRepository();
+    const filteredDistricts = districtRepository.findAllMatches(input);
+    this.setState({ matchingDistricts: filteredDistricts });
   }
+ 
+  selectDistrict = (districtName) => {
+    const districtRepository = new DistrictRepository();
+    const clickedDistrict = districtRepository.findByName(districtName);
+    
+  } 
 
   render() {
     return (
