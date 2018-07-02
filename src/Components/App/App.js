@@ -24,6 +24,7 @@ class App extends Component {
     const filteredDistricts = districtRepository.findAllMatches(input);
     this.setState({ matchingDistricts: filteredDistricts });
   }
+  
  
   selectDistrict = (districtName) => {
     const clickedDistrict = districtRepository.findByName(districtName);
@@ -53,13 +54,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Count dem Heads</h1>
+        <h1 className='main-header'>Count dem Heads</h1>
         <ControlledForm 
           findDistrict={this.findDistrict}/>
         <ComparisonContainer
           comparedDistricts={this.state.comparedDistricts}
           compareDistrictAverages={districtRepository.compareDistrictAverages}
           selectDistrict={this.selectDistrict}
+          findAverage={districtRepository.findAverage}
         />
         <CardContainer 
           matchingDistricts={this.state.matchingDistricts}

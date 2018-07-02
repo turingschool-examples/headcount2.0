@@ -8,6 +8,7 @@ ShallowWrapper {
     district={
         Object {
             "location": "COLORADO",
+            "selected": true,
             "stats": Object {
               "2004": 0.24,
               "2005": 0.278,
@@ -23,6 +24,7 @@ ShallowWrapper {
             },
           }
     }
+    selectDistrict={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -40,7 +42,6 @@ ShallowWrapper {
         <h2
           className="district"
 >
-          District Name: 
           COLORADO
 </h2>,
         <ul
@@ -125,7 +126,7 @@ ShallowWrapper {
           </li>
 </ul>,
       ],
-      "className": "card ",
+      "className": "card selected",
       "id": undefined,
       "onClick": [Function],
     },
@@ -136,17 +137,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            "District Name: ",
-            "COLORADO",
-          ],
+          "children": "COLORADO",
           "className": "district",
         },
         "ref": null,
-        "rendered": Array [
-          "District Name: ",
-          "COLORADO",
-        ],
+        "rendered": "COLORADO",
         "type": "h2",
       },
       Object {
@@ -495,7 +490,6 @@ ShallowWrapper {
           <h2
             className="district"
 >
-            District Name: 
             COLORADO
 </h2>,
           <ul
@@ -580,7 +574,7 @@ ShallowWrapper {
             </li>
 </ul>,
         ],
-        "className": "card ",
+        "className": "card selected",
         "id": undefined,
         "onClick": [Function],
       },
@@ -591,17 +585,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              "District Name: ",
-              "COLORADO",
-            ],
+            "children": "COLORADO",
             "className": "district",
           },
           "ref": null,
-          "rendered": Array [
-            "District Name: ",
-            "COLORADO",
-          ],
+          "rendered": "COLORADO",
           "type": "h2",
         },
         Object {

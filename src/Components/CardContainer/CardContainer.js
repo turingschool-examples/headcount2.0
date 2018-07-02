@@ -1,5 +1,6 @@
 import React from 'react';
-import DistrictCard from '../DistrictCard/DistrictCard';
+import './CardContainer.css';
+import DistrictCard from '../DistrictCard/DistrictCard'
 import PropTypes from 'prop-types';
 
 
