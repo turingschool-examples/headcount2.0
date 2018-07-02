@@ -44,5 +44,5 @@ describe('DistrictCard unit test', () => {
     const expectedState =  1
     expect(actualState).toEqual(expectedState)
     });
-
   });
+});

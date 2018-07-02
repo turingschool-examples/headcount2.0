@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ComparisonContainer from './ComparisonContainer'
+import ComparisonContainer from './ComparisonContainer';
 
 describe('ComparisonContainer unit test', () => {
   let wrapper;
@@ -59,5 +59,4 @@ describe('ComparisonContainer unit test', () => {
     const expectedState = 1
     expect(actualState).toEqual(expectedState);
     })
-
-})
+});

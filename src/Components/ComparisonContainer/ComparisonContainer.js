@@ -11,8 +11,8 @@ const ComparisonContainer = ({ comparedDistricts, selectDistrict, compareDistric
               key={comparedDistricts[district].key}
               district={comparedDistricts[district]} 
               selectDistrict={selectDistrict}
-            />
-  })
+            />;
+  });
 
   if (districtNames.length === 2 ) {
     const comparison = compareDistrictAverages(districtNames[0], districtNames[1]);
@@ -28,19 +28,19 @@ const ComparisonContainer = ({ comparedDistricts, selectDistrict, compareDistric
           <h2>{districtNames[1]}:</h2>
         </div>
       </div>
-    )
+    );
 
   }
-    return (
-      <div className="comparison-container">
-        { districtCards }
-      </div>
-    )
-} 
+  return (
+    <div className="comparison-container">
+      { districtCards }
+    </div>
+  );
+}; 
 
 
 ComparisonContainer.propTypes = {
   comparedDistricts: PropTypes.object.isRequired
-}
+};
 
 export default ComparisonContainer;

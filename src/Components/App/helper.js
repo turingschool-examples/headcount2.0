@@ -15,7 +15,7 @@ export default class DistrictRepository {
       let info = this.parseData(academicYear.Data);
       let key = uuidv4();    
       if (!district[location]) {
-        district[location] = {stats:{[year]: info}, location, key: key}
+        district[location] = {stats:{[year]: info}, location, key: key};
       } else {
         district[location].stats = {...district[location].stats, [year]: info};
       }
@@ -30,7 +30,7 @@ export default class DistrictRepository {
   }
   
   findByName = (district) => { 
-    if (!district) { return }
+    if (!district) { return };
     const cleanedDistrict = district.toUpperCase();
  
     if (this.stats[cleanedDistrict]) {
@@ -46,17 +46,17 @@ export default class DistrictRepository {
     });
     matchingDistricts.forEach(value => {
       const key = value.location;
-      districtMatches[key] = value
+      districtMatches[key] = value;
 
-    })
+    });
     return districtMatches;
   }
 
   findAverage = (district) => {
     const matchingDistrict = this.findByName(district);
     const percentages = Object.values(matchingDistrict.stats);
-    const total = percentages.reduce((total, percentage) => total += percentage)
-    return this.parseData((total / percentages.length))
+    const total = percentages.reduce((total, percentage) => total += percentage);
+    return this.parseData((total / percentages.length));
   }
 
   compareDistrictAverages = ((district1, district2) => {
@@ -64,11 +64,11 @@ export default class DistrictRepository {
     const capitals2 = district2.toUpperCase();
     const firstAverage = this.findAverage(district1);
     const secondAverage = this.findAverage(district2);
-    const compared = this.parseData((firstAverage / secondAverage))
+    const compared = this.parseData((firstAverage / secondAverage));
     const comparision = {[capitals1]: firstAverage,
                          [capitals2]: secondAverage,
-                         compared: compared}
-    return comparision
+                         compared: compared};
+    return comparision;
   })
 
 
