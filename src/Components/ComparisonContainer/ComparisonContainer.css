@@ -1,0 +1,23 @@
+.comparison-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto
+}
+
+.comparison-card {
+  font-family: avenir, sans-serif;
+  font-size: 1em;
+  text-align: center;
+}
+
+.district-average {
+  font-size: 1.5em;
+}
+
+.comparison-figure {
+  font-size: 3em;
+  color: red;
+}

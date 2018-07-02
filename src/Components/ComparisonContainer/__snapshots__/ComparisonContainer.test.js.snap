@@ -1,0 +1,416 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComparisonContainer unit test should match the snapshot with all data passed in correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ComparisonContainer
+    compareDistrictAverages={[Function]}
+    comparedDistricts={
+        Object {
+            "ACADEMY20": Object {
+              "location": "ACADEMY 20",
+              "stats": Object {
+                "2004": 0.302,
+                "2005": 0.267,
+                "2006": 0.354,
+                "2007": 0.392,
+                "2008": 0.385,
+                "2009": 0.39,
+                "2010": 0.436,
+                "2011": 0.489,
+                "2012": 0.479,
+                "2013": 0.488,
+                "2014": 0.49,
+              },
+            },
+            "COLORADO": Object {
+              "location": "COLORADO",
+              "stats": Object {
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.337,
+                "2007": 0.395,
+                "2008": 0.536,
+                "2009": 0.598,
+                "2010": 0.64,
+                "2011": 0.672,
+                "2012": 0.695,
+                "2013": 0.703,
+                "2014": 0.741,
+              },
+            },
+          }
+    }
+    selectDistrict={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        Array [
+          <DistrictCard
+            district={
+                        Object {
+                                    "location": "COLORADO",
+                                    "stats": Object {
+                                      "2004": 0.24,
+                                      "2005": 0.278,
+                                      "2006": 0.337,
+                                      "2007": 0.395,
+                                      "2008": 0.536,
+                                      "2009": 0.598,
+                                      "2010": 0.64,
+                                      "2011": 0.672,
+                                      "2012": 0.695,
+                                      "2013": 0.703,
+                                      "2014": 0.741,
+                                    },
+                                  }
+            }
+            selectDistrict={[Function]}
+/>,
+          <DistrictCard
+            district={
+                        Object {
+                                    "location": "ACADEMY 20",
+                                    "stats": Object {
+                                      "2004": 0.302,
+                                      "2005": 0.267,
+                                      "2006": 0.354,
+                                      "2007": 0.392,
+                                      "2008": 0.385,
+                                      "2009": 0.39,
+                                      "2010": 0.436,
+                                      "2011": 0.489,
+                                      "2012": 0.479,
+                                      "2013": 0.488,
+                                      "2014": 0.49,
+                                    },
+                                  }
+            }
+            selectDistrict={[Function]}
+/>,
+        ],
+        <div
+          className="comparison-card"
+>
+          <h2>
+                    COLORADO
+          </h2>
+          <h3 />
+          <h2>
+                    ACADEMY20
+          </h2>
+</div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "district": Object {
+            "location": "COLORADO",
+            "stats": Object {
+              "2004": 0.24,
+              "2005": 0.278,
+              "2006": 0.337,
+              "2007": 0.395,
+              "2008": 0.536,
+              "2009": 0.598,
+              "2010": 0.64,
+              "2011": 0.672,
+              "2012": 0.695,
+              "2013": 0.703,
+              "2014": 0.741,
+            },
+          },
+          "selectDistrict": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "district": Object {
+            "location": "ACADEMY 20",
+            "stats": Object {
+              "2004": 0.302,
+              "2005": 0.267,
+              "2006": 0.354,
+              "2007": 0.392,
+              "2008": 0.385,
+              "2009": 0.39,
+              "2010": 0.436,
+              "2011": 0.489,
+              "2012": 0.479,
+              "2013": 0.488,
+              "2014": 0.49,
+            },
+          },
+          "selectDistrict": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2>
+              COLORADO
+</h2>,
+            <h3 />,
+            <h2>
+              ACADEMY20
+</h2>,
+          ],
+          "className": "comparison-card",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "COLORADO",
+            },
+            "ref": null,
+            "rendered": "COLORADO",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "ACADEMY20",
+            },
+            "ref": null,
+            "rendered": "ACADEMY20",
+            "type": "h2",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          Array [
+            <DistrictCard
+              district={
+                            Object {
+                                          "location": "COLORADO",
+                                          "stats": Object {
+                                            "2004": 0.24,
+                                            "2005": 0.278,
+                                            "2006": 0.337,
+                                            "2007": 0.395,
+                                            "2008": 0.536,
+                                            "2009": 0.598,
+                                            "2010": 0.64,
+                                            "2011": 0.672,
+                                            "2012": 0.695,
+                                            "2013": 0.703,
+                                            "2014": 0.741,
+                                          },
+                                        }
+              }
+              selectDistrict={[Function]}
+/>,
+            <DistrictCard
+              district={
+                            Object {
+                                          "location": "ACADEMY 20",
+                                          "stats": Object {
+                                            "2004": 0.302,
+                                            "2005": 0.267,
+                                            "2006": 0.354,
+                                            "2007": 0.392,
+                                            "2008": 0.385,
+                                            "2009": 0.39,
+                                            "2010": 0.436,
+                                            "2011": 0.489,
+                                            "2012": 0.479,
+                                            "2013": 0.488,
+                                            "2014": 0.49,
+                                          },
+                                        }
+              }
+              selectDistrict={[Function]}
+/>,
+          ],
+          <div
+            className="comparison-card"
+>
+            <h2>
+                        COLORADO
+            </h2>
+            <h3 />
+            <h2>
+                        ACADEMY20
+            </h2>
+</div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "district": Object {
+              "location": "COLORADO",
+              "stats": Object {
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.337,
+                "2007": 0.395,
+                "2008": 0.536,
+                "2009": 0.598,
+                "2010": 0.64,
+                "2011": 0.672,
+                "2012": 0.695,
+                "2013": 0.703,
+                "2014": 0.741,
+              },
+            },
+            "selectDistrict": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "district": Object {
+              "location": "ACADEMY 20",
+              "stats": Object {
+                "2004": 0.302,
+                "2005": 0.267,
+                "2006": 0.354,
+                "2007": 0.392,
+                "2008": 0.385,
+                "2009": 0.39,
+                "2010": 0.436,
+                "2011": 0.489,
+                "2012": 0.479,
+                "2013": 0.488,
+                "2014": 0.49,
+              },
+            },
+            "selectDistrict": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2>
+                COLORADO
+</h2>,
+              <h3 />,
+              <h2>
+                ACADEMY20
+</h2>,
+            ],
+            "className": "comparison-card",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "COLORADO",
+              },
+              "ref": null,
+              "rendered": "COLORADO",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "ACADEMY20",
+              },
+              "ref": null,
+              "rendered": "ACADEMY20",
+              "type": "h2",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
