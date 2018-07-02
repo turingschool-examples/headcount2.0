@@ -9,4 +9,4 @@ This application was built using the `create-react-app` boilerplate and opens wi
 * Run `npm install` to use the application or `npm i -D` to receive developer dependencies  
 * Run `npm start` 
 
-<img src="headcount2.0/images/Screen Shot 2018-07-02 at 9.51.05 AM.png">
+<img src="https://github.com/marikaross/headcount2.0/blob/master/images/Screen%20Shot%202018-07-02%20at%209.51.05%20AM.png?raw=true">
