@@ -42,7 +42,7 @@ describe('App', () => {
     expect(Object.keys(actualState.comparedDistricts).length).toEqual(1);
   });
 
-  it.only('selectDictrict removes a district from the state when the card is clicked again', () => {
+  it('selectDictrict removes a district from the state when the card is clicked again', () => {
     const wrapper = shallow(<App />);
     const mockInput = 'ACADEMY 20';
     const initialState = { COLORADO: 
@@ -74,7 +74,7 @@ describe('App', () => {
                                 2013: 0.488,
                                 2014: 0.49 },
                            location: 'ACADEMY 20',
-                           selected: true} };
+                           selected: true} }
     const expectedState = { COLORADO: 
                              { stats: 
                                 { 2004: 0.24,
@@ -88,7 +88,9 @@ describe('App', () => {
                                   2012: 0.695,
                                   2013: 0.703,
                                   2014: 0.741 },
-                             location: 'COLORADO' } };
+                             location: 'COLORADO',
+                             selected: true }
+                          }
     wrapper.setState({comparedDistricts: initialState});
     wrapper.instance().selectDistrict(mockInput);
     expect(initialState).toEqual(expectedState);
