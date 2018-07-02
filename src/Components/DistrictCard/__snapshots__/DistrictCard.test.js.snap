@@ -8,6 +8,7 @@ ShallowWrapper {
     district={
         Object {
             "location": "COLORADO",
+            "selected": true,
             "stats": Object {
               "2004": 0.24,
               "2005": 0.278,
@@ -125,7 +126,7 @@ ShallowWrapper {
           </li>
 </ul>,
       ],
-      "className": "card ",
+      "className": "card selected",
       "id": undefined,
       "onClick": [Function],
     },
@@ -573,7 +574,7 @@ ShallowWrapper {
             </li>
 </ul>,
         ],
-        "className": "card ",
+        "className": "card selected",
         "id": undefined,
         "onClick": [Function],
       },

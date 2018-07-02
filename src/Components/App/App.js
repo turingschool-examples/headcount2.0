@@ -24,6 +24,7 @@ class App extends Component {
     const filteredDistricts = districtRepository.findAllMatches(input);
     this.setState({ matchingDistricts: filteredDistricts });
   }
+  
  
   selectDistrict = (districtName) => {
     const clickedDistrict = districtRepository.findByName(districtName);

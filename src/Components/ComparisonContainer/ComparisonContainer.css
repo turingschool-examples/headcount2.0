@@ -1,16 +1,17 @@
 .comparison-container {
   display: flex;
-  justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: auto;
   max-width: 1200px;
-  margin: auto
 }
 
 .comparison-card {
   font-family: avenir, sans-serif;
   font-size: 1em;
   text-align: center;
+  color: #4F4C47;
 }
 
 .district-average {
@@ -19,5 +20,5 @@
 
 .comparison-figure {
   font-size: 3em;
-  color: red;
+  color: #B81F38;
 }

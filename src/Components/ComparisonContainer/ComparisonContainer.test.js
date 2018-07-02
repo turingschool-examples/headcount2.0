@@ -7,6 +7,7 @@ describe('ComparisonContainer unit test', () => {
   let mockComparedDistricts; 
   let mockcompareDistrictAverages;
   let mockselectDistrict;
+  let mockFindAverage;
 
   beforeEach(() => {
     mockComparedDistricts = { COLORADO: 
@@ -39,11 +40,13 @@ describe('ComparisonContainer unit test', () => {
                                 location: 'ACADEMY 20' }
                             }
     mockselectDistrict = jest.fn();
+    mockFindAverage = jest.fn();
     mockcompareDistrictAverages = jest.fn().mockReturnValue({comparison: {compared: 1}});                        
     wrapper = shallow(<ComparisonContainer 
                               comparedDistricts={mockComparedDistricts} 
                               selectDistrict={mockselectDistrict}
                               compareDistrictAverages={mockcompareDistrictAverages}
+                              findAverage={mockFindAverage}
                             />)
 
   })

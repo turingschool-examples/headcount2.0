@@ -42,6 +42,7 @@ ShallowWrapper {
             },
           }
     }
+    findAverage={[Function]}
     selectDistrict={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -106,13 +107,24 @@ ShallowWrapper {
 >
           <h2>
                     COLORADO
+                    :
           </h2>
-          <h3 />
+          <p
+                    className="district-average"
+          />
+          <h3
+                    className="comparison-figure"
+          />
+          <p
+                    className="district-average"
+          />
           <h2>
                     ACADEMY20
+                    :
           </h2>
 </div>,
       ],
+      "className": "comparison-container",
     },
     "ref": null,
     "rendered": Array [
@@ -178,10 +190,20 @@ ShallowWrapper {
           "children": Array [
             <h2>
               COLORADO
+              :
 </h2>,
-            <h3 />,
+            <p
+              className="district-average"
+/>,
+            <h3
+              className="comparison-figure"
+/>,
+            <p
+              className="district-average"
+/>,
             <h2>
               ACADEMY20
+              :
 </h2>,
           ],
           "className": "comparison-card",
@@ -193,10 +215,16 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "COLORADO",
+              "children": Array [
+                "COLORADO",
+                ":",
+              ],
             },
             "ref": null,
-            "rendered": "COLORADO",
+            "rendered": Array [
+              "COLORADO",
+              ":",
+            ],
             "type": "h2",
           },
           Object {
@@ -205,6 +233,19 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": undefined,
+              "className": "district-average",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "comparison-figure",
             },
             "ref": null,
             "rendered": null,
@@ -215,10 +256,28 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "ACADEMY20",
+              "children": undefined,
+              "className": "district-average",
             },
             "ref": null,
-            "rendered": "ACADEMY20",
+            "rendered": null,
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "ACADEMY20",
+                ":",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "ACADEMY20",
+              ":",
+            ],
             "type": "h2",
           },
         ],
@@ -283,13 +342,24 @@ ShallowWrapper {
 >
             <h2>
                         COLORADO
+                        :
             </h2>
-            <h3 />
+            <p
+                        className="district-average"
+            />
+            <h3
+                        className="comparison-figure"
+            />
+            <p
+                        className="district-average"
+            />
             <h2>
                         ACADEMY20
+                        :
             </h2>
 </div>,
         ],
+        "className": "comparison-container",
       },
       "ref": null,
       "rendered": Array [
@@ -355,10 +425,20 @@ ShallowWrapper {
             "children": Array [
               <h2>
                 COLORADO
+                :
 </h2>,
-              <h3 />,
+              <p
+                className="district-average"
+/>,
+              <h3
+                className="comparison-figure"
+/>,
+              <p
+                className="district-average"
+/>,
               <h2>
                 ACADEMY20
+                :
 </h2>,
             ],
             "className": "comparison-card",
@@ -370,10 +450,16 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "COLORADO",
+                "children": Array [
+                  "COLORADO",
+                  ":",
+                ],
               },
               "ref": null,
-              "rendered": "COLORADO",
+              "rendered": Array [
+                "COLORADO",
+                ":",
+              ],
               "type": "h2",
             },
             Object {
@@ -382,6 +468,19 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": undefined,
+                "className": "district-average",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "comparison-figure",
               },
               "ref": null,
               "rendered": null,
@@ -392,10 +491,28 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "ACADEMY20",
+                "children": undefined,
+                "className": "district-average",
               },
               "ref": null,
-              "rendered": "ACADEMY20",
+              "rendered": null,
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "ACADEMY20",
+                  ":",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "ACADEMY20",
+                ":",
+              ],
               "type": "h2",
             },
           ],
