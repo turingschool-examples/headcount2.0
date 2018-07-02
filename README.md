@@ -9,8 +9,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 **Installing
 
-Clone the repositorys (git clone https://github.com/daughedm/Movie-Tracker.git) & (git clone https://github.com/turingschool-examples/movie-tracker).
+Clone the repositorys (git clone https://github.com/quinhill/headcount2.0)
+
 npm install
+
 npm start
 
 **Running the tests
