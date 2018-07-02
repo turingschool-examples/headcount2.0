@@ -28,7 +28,7 @@ const DistrictCard = ({district , selectDistrict}) => {
       className={`card ${district.selected ? 'selected' : ''}`} 
       id={district.key}
       key={district.location}
-      onClick={() => { handleClick(district.location) }};
+      onClick={() => { handleClick(district.location) }}
     > 
       <h2 className="district">{district.location}</h2>
       <ul className="stats">
