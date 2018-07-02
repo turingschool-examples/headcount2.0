@@ -1,6 +1,6 @@
 # HeadCount 2.0
 
-HeadCount 2.0 is a project designed to hone our data manipulation skills while practicing the creation and implementation of small, reusable React components. This project was built in one week with an assigned partner.  Marika and Jeremiah have collaborated on previous projects and continue to hone their developer skills.
+HeadCount 2.0 is a project designed to hone our data manipulation skills while practicing the creation and implementation of small, reusable React components. This project was built in one week with an assigned partner.  [Marika] and [Jeremiah](https://github.com/jeremiahjstanley) have collaborated on previous projects and continue to hone their developer skills.
 
 
 <img src="headcount2.0/images/Screen Shot 2018-07-02 at 9.51.05 AM.png>
