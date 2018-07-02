@@ -2,12 +2,12 @@ import React from 'react';
 import CompareCard from './CompareCard';
 import { shallow } from 'enzyme';
 import DistrictRepository from '../../helper';
-import data from '../../data/kindergartners_in_full_day_program';
+import Kiddata from '../../data/kindergartners_in_full_day_program';
 
 describe('CompareCard', () => {
 
   let wrapper;
-  const mockDistrictMethods = new DistrictRepository(data);
+  const mockDistrictMethods = new DistrictRepository(Kiddata);
   const mockSelectedCards = [{
     location: "ACADEMY 20",
     selected: true,
