@@ -28,3 +28,9 @@ Creat-React-App - The web framework used
 **Authors
 
 *Alan Charles - Initial work - abomb14c *Quin Hill- Initial work - quinhill
+
+![screenshot 1](../src/assets/headcount-screen-shot-1.png)
+
+![screenshot 2](../src/assets/headcount-screen-shot-2.png)
+
+![screenshot 3](../src/assets/headcount-screen-shot-3.png)
