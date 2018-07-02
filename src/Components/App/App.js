@@ -53,7 +53,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Count dem Heads</h1>
+        <h1 className='main-header'>Count dem Heads</h1>
         <ControlledForm 
           findDistrict={this.findDistrict}/>
         <ComparisonContainer

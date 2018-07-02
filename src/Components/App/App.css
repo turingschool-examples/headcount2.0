@@ -1,1 +1,6 @@
-/*APP COMPONENT RELATED CSS GOES HERE*/
+.main-header {
+  font-family: avenir, sans-serif;
+  font-size: 4rem;
+  display: flex;
+  justify-content: space-around;
+}

@@ -23,6 +23,7 @@ ShallowWrapper {
             },
           }
     }
+    selectDistrict={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -40,7 +41,6 @@ ShallowWrapper {
         <h2
           className="district"
 >
-          District Name: 
           COLORADO
 </h2>,
         <ul
@@ -136,17 +136,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            "District Name: ",
-            "COLORADO",
-          ],
+          "children": "COLORADO",
           "className": "district",
         },
         "ref": null,
-        "rendered": Array [
-          "District Name: ",
-          "COLORADO",
-        ],
+        "rendered": "COLORADO",
         "type": "h2",
       },
       Object {
@@ -495,7 +489,6 @@ ShallowWrapper {
           <h2
             className="district"
 >
-            District Name: 
             COLORADO
 </h2>,
           <ul
@@ -591,17 +584,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              "District Name: ",
-              "COLORADO",
-            ],
+            "children": "COLORADO",
             "className": "district",
           },
           "ref": null,
-          "rendered": Array [
-            "District Name: ",
-            "COLORADO",
-          ],
+          "rendered": "COLORADO",
           "type": "h2",
         },
         Object {
