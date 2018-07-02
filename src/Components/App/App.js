@@ -60,6 +60,7 @@ class App extends Component {
           comparedDistricts={this.state.comparedDistricts}
           compareDistrictAverages={districtRepository.compareDistrictAverages}
           selectDistrict={this.selectDistrict}
+          findAverage={districtRepository.findAverage}
         />
         <CardContainer 
           matchingDistricts={this.state.matchingDistricts}

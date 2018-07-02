@@ -12,18 +12,27 @@
   display: inline-block;
   margin: 1rem;
   padding: .5rem;
-  width: 200px;
+  width: 300px;
 
+}
+
+.selected {
+  background-color: green;
+  border: solid black 4px;
 }
 
 .card:hover {
-
+  border: solid black 4px;
 }
 
 .district {
-  font-size: 1.25em;
+  font-family: avenir, sans-serif;
+  font-size: 1.5em;
+  text-align: center;
 }
 
 .stats {
-  font-size: 1em;
+  font-family: avenir, sans-serif;
+  font-size: 1.25em;
+  padding-left: 5rem;
 }
