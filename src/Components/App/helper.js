@@ -1,5 +1,7 @@
 import kinderData from '../../data/kindergartners_in_full_day_program.js';
 
+const uuidv4 = require('uuid/v4');
+
 export default class DistrictRepository {
   constructor() { 
 
@@ -11,7 +13,7 @@ export default class DistrictRepository {
       let location = academicYear.Location.toUpperCase();
       let year = academicYear.TimeFrame;
       let info = this.parseData(academicYear.Data);
-      let key = Date.now();    
+      let key = uuidv4();    
       if (!district[location]) {
         district[location] = {stats:{[year]: info}, location, key: key}
       } else {

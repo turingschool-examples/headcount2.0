@@ -7,6 +7,7 @@ const CardContainer = ({ matchingDistricts , selectDistrict }) => {
   const districtNames = Object.keys(matchingDistricts)
   const districtCards = districtNames.map(district => {
     return <DistrictCard 
+              key={matchingDistricts[district].key}
               district={matchingDistricts[district]} 
               selectDistrict={selectDistrict}
             />

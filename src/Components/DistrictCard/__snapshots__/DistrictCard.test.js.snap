@@ -33,15 +33,19 @@ ShallowWrapper {
   },
   Symbol(enzyme.__node__): Object {
     "instance": null,
-    "key": undefined,
+    "key": "COLORADO",
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h2>
+        <h2
+          className="district"
+>
           District Name: 
           COLORADO
 </h2>,
-        <ul>
+        <ul
+          className="stats"
+>
           <li
                     className="lowStats"
           >
@@ -121,7 +125,9 @@ ShallowWrapper {
           </li>
 </ul>,
       ],
-      "className": "card",
+      "className": "card ",
+      "id": undefined,
+      "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -134,6 +140,7 @@ ShallowWrapper {
             "District Name: ",
             "COLORADO",
           ],
+          "className": "district",
         },
         "ref": null,
         "rendered": Array [
@@ -226,12 +233,13 @@ ShallowWrapper {
               0.741
 </li>,
           ],
+          "className": "stats",
         },
         "ref": null,
         "rendered": Array [
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "0",
             "nodeType": "host",
             "props": Object {
               "children": Array [
@@ -253,7 +261,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "1",
             "nodeType": "host",
             "props": Object {
               "children": Array [
@@ -275,7 +283,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "2",
             "nodeType": "host",
             "props": Object {
               "children": Array [
@@ -297,7 +305,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "3",
             "nodeType": "host",
             "props": Object {
               "children": Array [
@@ -319,7 +327,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "4",
             "nodeType": "host",
             "props": Object {
               "children": Array [
@@ -341,7 +349,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "5",
             "nodeType": "host",
             "props": Object {
               "children": Array [
@@ -363,7 +371,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "6",
             "nodeType": "host",
             "props": Object {
               "children": Array [
@@ -385,7 +393,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "7",
             "nodeType": "host",
             "props": Object {
               "children": Array [
@@ -407,7 +415,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "8",
             "nodeType": "host",
             "props": Object {
               "children": Array [
@@ -429,7 +437,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "9",
             "nodeType": "host",
             "props": Object {
               "children": Array [
@@ -451,7 +459,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "10",
             "nodeType": "host",
             "props": Object {
               "children": Array [
@@ -480,15 +488,19 @@ ShallowWrapper {
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
-      "key": undefined,
+      "key": "COLORADO",
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h2>
+          <h2
+            className="district"
+>
             District Name: 
             COLORADO
 </h2>,
-          <ul>
+          <ul
+            className="stats"
+>
             <li
                         className="lowStats"
             >
@@ -568,7 +580,9 @@ ShallowWrapper {
             </li>
 </ul>,
         ],
-        "className": "card",
+        "className": "card ",
+        "id": undefined,
+        "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -581,6 +595,7 @@ ShallowWrapper {
               "District Name: ",
               "COLORADO",
             ],
+            "className": "district",
           },
           "ref": null,
           "rendered": Array [
@@ -673,12 +688,13 @@ ShallowWrapper {
                 0.741
 </li>,
             ],
+            "className": "stats",
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "0",
               "nodeType": "host",
               "props": Object {
                 "children": Array [
@@ -700,7 +716,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "1",
               "nodeType": "host",
               "props": Object {
                 "children": Array [
@@ -722,7 +738,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "2",
               "nodeType": "host",
               "props": Object {
                 "children": Array [
@@ -744,7 +760,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "3",
               "nodeType": "host",
               "props": Object {
                 "children": Array [
@@ -766,7 +782,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "4",
               "nodeType": "host",
               "props": Object {
                 "children": Array [
@@ -788,7 +804,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "5",
               "nodeType": "host",
               "props": Object {
                 "children": Array [
@@ -810,7 +826,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "6",
               "nodeType": "host",
               "props": Object {
                 "children": Array [
@@ -832,7 +848,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "7",
               "nodeType": "host",
               "props": Object {
                 "children": Array [
@@ -854,7 +870,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "8",
               "nodeType": "host",
               "props": Object {
                 "children": Array [
@@ -876,7 +892,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "9",
               "nodeType": "host",
               "props": Object {
                 "children": Array [
@@ -898,7 +914,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "10",
               "nodeType": "host",
               "props": Object {
                 "children": Array [

@@ -5,6 +5,8 @@ import DistrictRepository from './helper';
 import CardContainer from '../CardContainer/CardContainer';
 import ComparisonContainer from '../ComparisonContainer/ComparisonContainer'
 
+const districtRepository = new DistrictRepository()
+
 class App extends Component {
   constructor() {
     super()
@@ -15,30 +17,38 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const districtRepository = new DistrictRepository()
     this.setState({ matchingDistricts: districtRepository.stats })
   }
 
   findDistrict = (input) => {
-    const districtRepository = new DistrictRepository();
     const filteredDistricts = districtRepository.findAllMatches(input);
     this.setState({ matchingDistricts: filteredDistricts });
   }
  
   selectDistrict = (districtName) => {
-    const districtRepository = new DistrictRepository();
     const clickedDistrict = districtRepository.findByName(districtName);
-    console.log(clickedDistrict)
-    this.setState({ comparedDistricts: {...this.state.comparedDistricts, [clickedDistrict.location]:clickedDistrict}})
+    const districtsToCompare = Object.keys(this.state.comparedDistricts)
+
+    if (!clickedDistrict.selected && districtsToCompare.length < 2) {
+      clickedDistrict.selected = true;
+      this.setState({ matchingDistricts: {...this.state.matchingDistricts, 
+                                          [clickedDistrict.location]: clickedDistrict}})
+      this.setState({ comparedDistricts: {...this.state.comparedDistricts, 
+                                          [clickedDistrict.location]: clickedDistrict}})
+
+    } else if (clickedDistrict.selected) {
+      delete clickedDistrict.selected
+      districtsToCompare.reduce((newComparison, district) => {
+        if (this.state.comparedDistricts[district].selected) {
+            newComparison[district] = this.state.comparedDistricts[district]
+        }
+        this.setState({comparedDistricts: newComparison})
+        return newComparison
+      }, {})
+      this.setState({ matchingDistricts: {...this.state.matchingDistricts, [clickedDistrict.location]: clickedDistrict}})
+    }
   } 
 
-  runComparison = () => {
-    const districtRepository = new  DistrictRepository()
-    const districtToCompare = Object.keys(this.state.comparedDistricts);
-    if (districtToCompare.length > 1) {
-      return districtRepository.compareDistrictAverages(districtToCompare[0], districtToCompare[1])
-    }
-  }
 
   render() {
     return (
@@ -48,7 +58,8 @@ class App extends Component {
           findDistrict={this.findDistrict}/>
         <ComparisonContainer
           comparedDistricts={this.state.comparedDistricts}
-          runComparison={this.runComparison}
+          compareDistrictAverages={districtRepository.compareDistrictAverages}
+          selectDistrict={this.selectDistrict}
         />
         <CardContainer 
           matchingDistricts={this.state.matchingDistricts}
