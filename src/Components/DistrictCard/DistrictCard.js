@@ -30,7 +30,7 @@ const DistrictCard = ({district , selectDistrict}) => {
       key={district.location}
       onClick={() => {handleClick(district.location)}}
     > 
-      <h2 className="district">District Name: {district.location}</h2>
+      <h2 className="district">{district.location}</h2>
       <ul className="stats">
         {createStats}
       </ul>

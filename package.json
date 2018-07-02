@@ -20,5 +20,14 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "jest": {
+   "collectCoverageFrom": [
+     "src/**/*.{js,jsx}",
+     "!src/index.js",
+     "!src/data/3rd_grade_tests.js",
+     "!src/data/remediation_in_higher_education.js"
+   ]
+ }
+
 }

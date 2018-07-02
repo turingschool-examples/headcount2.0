@@ -1,28 +1,38 @@
 .highStats {
-  color: magenta;
+  color: #7097B2;
 }
 
 .lowStats {
-  color: chartreuse;
+  color: #B81F38;
 }
 
 .card {
-  min-width: 5rem;
+  border-radius: 18px;
+  border: solid #4F4C47 2px;
+  color: #4F4C47;
   display: inline-block;
-  border: solid black 2px;
-  width: 15%;
-  border-radius: 5%;
+  margin: 1rem;
+  padding: .5rem;
+  width: 300px;
+}
 
+.selected {
+  background-color: #F7F5F1;
+  border: solid #21201E 4px;
 }
 
 .card:hover {
-
+  border: solid #4F4C47 4px;
 }
 
 .district {
-  font-size: 1.25em;
+  font-family: avenir, sans-serif;
+  font-size: 1.5em;
+  text-align: center;
 }
 
 .stats {
-  font-size: 1em;
+  font-family: avenir, sans-serif;
+  font-size: 1.25em;
+  padding-left: 5rem;
 }
