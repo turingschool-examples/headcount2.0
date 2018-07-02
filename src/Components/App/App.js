@@ -4,36 +4,37 @@ import CardContainer from '../CardContainer/CardContainer';
 import Header from '../Header/Header';
 import Search from '../Search/Search';
 import ComparedContainer from '../ComparedContainer/ComparedContainer';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     
     this.state = {
       schoolStats: this.props.districts.stats,
       districtMethods: this.props.districts,
       searchResult: [],
-      selectedCards: [],
-    }
+      selectedCards: []
+    };
   }
 
   submitSearch = (search) => {
-    const searchEntry = this.props.districts.findAllMatches(search)
+    const searchEntry = this.props.districts.findAllMatches(search);
     
-    this.setState({searchResult: searchEntry})
+    this.setState({searchResult: searchEntry});
   }
 
   selectCard = (location) => {
-    const foundCard = this.props.districts.findByName(location)
-    foundCard.selected = !foundCard.selected
-    this.setSelected()
+    const foundCard = this.props.districts.findByName(location);
+    foundCard.selected = !foundCard.selected;
+    this.setSelected();
   }
 
   setSelected = () => {
     if (this.state.selectedCards.length <= 2) {
-      const selectedCards = this.state.schoolStats.filter(school => school.selected)
-      this.setState({ selectedCards })
+      const selectedCards = 
+        this.state.schoolStats.filter(school => school.selected);
+      this.setState({ selectedCards });
     }
   }
 
@@ -63,6 +64,6 @@ class App extends Component {
 
 App.propTypes = {
   districts: PropTypes.object
-}
+};
 
 export default App;
