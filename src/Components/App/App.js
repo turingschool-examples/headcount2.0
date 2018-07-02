@@ -3,21 +3,21 @@ import './App.css';
 import ControlledForm from '../ControlledForm/ControlledForm';
 import DistrictRepository from './helper';
 import CardContainer from '../CardContainer/CardContainer';
-import ComparisonContainer from '../ComparisonContainer/ComparisonContainer'
+import ComparisonContainer from '../ComparisonContainer/ComparisonContainer';
 
-const districtRepository = new DistrictRepository()
+const districtRepository = new DistrictRepository();
 
 class App extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       matchingDistricts: {},
       comparedDistricts: {}
-    }
+    };
   }
 
   componentDidMount() {
-    this.setState({ matchingDistricts: districtRepository.stats })
+    this.setState({ matchingDistricts: districtRepository.stats });
   }
 
   findDistrict = (input) => {
@@ -27,25 +27,25 @@ class App extends Component {
  
   selectDistrict = (districtName) => {
     const clickedDistrict = districtRepository.findByName(districtName);
-    const districtsToCompare = Object.keys(this.state.comparedDistricts)
+    const districtsToCompare = Object.keys(this.state.comparedDistricts);
 
     if (!clickedDistrict.selected && districtsToCompare.length < 2) {
       clickedDistrict.selected = true;
       this.setState({ matchingDistricts: {...this.state.matchingDistricts, 
-                                          [clickedDistrict.location]: clickedDistrict}})
+                                          [clickedDistrict.location]: clickedDistrict}});
       this.setState({ comparedDistricts: {...this.state.comparedDistricts, 
-                                          [clickedDistrict.location]: clickedDistrict}})
+                                          [clickedDistrict.location]: clickedDistrict}});
 
     } else if (clickedDistrict.selected) {
-      delete clickedDistrict.selected
+      delete clickedDistrict.selected;
       districtsToCompare.reduce((newComparison, district) => {
         if (this.state.comparedDistricts[district].selected) {
-            newComparison[district] = this.state.comparedDistricts[district]
+          newComparison[district] = this.state.comparedDistricts[district];
         }
-        this.setState({comparedDistricts: newComparison})
-        return newComparison
-      }, {})
-      this.setState({ matchingDistricts: {...this.state.matchingDistricts, [clickedDistrict.location]: clickedDistrict}})
+        this.setState({comparedDistricts: newComparison});
+        return newComparison;
+      }, {});
+      this.setState({ matchingDistricts: {...this.state.matchingDistricts, [clickedDistrict.location]: clickedDistrict}});
     }
   } 
 

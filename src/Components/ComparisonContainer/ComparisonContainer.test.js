@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ComparisonContainer from './ComparisonContainer'
+import ComparisonContainer from './ComparisonContainer';
 
 describe('ComparisonContainer unit test', () => {
   it('should match the snapshot with all data passed in correctly', () => {
@@ -18,10 +18,10 @@ describe('ComparisonContainer unit test', () => {
                                   2013: 0.703,
                                   2014: 0.741 },
                                location: 'COLORADO' }
-                              }
-    const wrapper = shallow(<ComparisonContainer comparedDistricts={mockDistrict}/>)
+                              };
+    const wrapper = shallow(<ComparisonContainer comparedDistricts={mockDistrict}/>);
 
     expect(wrapper).toMatchSnapshot();
-  })
+  });
 
-})
+});

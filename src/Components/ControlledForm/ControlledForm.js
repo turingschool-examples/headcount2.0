@@ -5,7 +5,7 @@ class ControlledForm extends Component {
 
   handleChange = (event) => {
     const input = event.target.value;
-    this.props.findDistrict(input)
+    this.props.findDistrict(input);
   }
 
   render() {
@@ -16,12 +16,12 @@ class ControlledForm extends Component {
           placeholder='Enter District'
         />
       </form>
-    )
+    );
   }
 }
 
-  ControlledForm.propTypes = {
+ControlledForm.propTypes = {
   findDistrict: PropTypes.func.isRequired
-}
+};
 
-export default ControlledForm
+export default ControlledForm;

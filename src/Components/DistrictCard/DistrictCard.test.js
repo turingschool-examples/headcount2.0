@@ -18,12 +18,13 @@ describe('DistrictCard unit test', () => {
                                 2012: 0.695,
                                 2013: 0.703,
                                 2014: 0.741 },
-                             location: 'COLORADO' }
+                             location: 'COLORADO' };
                            
     const wrapper = shallow(<DistrictCard district={mockDistrict}/>);
 
    
 
     expect(wrapper).toMatchSnapshot();
-    });
   });
+
+});

@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import ControlledForm from './ControlledForm'
+import ControlledForm from './ControlledForm';
 
 describe('ControlledForm', () => {
   it('should match the snapshot', () => {
     const wrapper = shallow(<ControlledForm />);
     expect(wrapper).toMatchSnapshot();
-  })
+  });
 
   it('should call findDistrict prop function with the proper arguments', () => {
     const mockChange = jest.fn();
@@ -17,5 +17,5 @@ describe('ControlledForm', () => {
     wrapper.instance().handleChange(mockEvent);
     expect(mockChange).toBeCalledWith('COLORADO');
 
-  })
-})
+  });
+});
