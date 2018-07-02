@@ -47,15 +47,8 @@ class App extends Component {
       }, {})
       this.setState({ matchingDistricts: {...this.state.matchingDistricts, [clickedDistrict.location]: clickedDistrict}})
     }
-
-    if (districtsToCompare.length === 2 ) {
-      const comparison = this.runComparison(districtsToCompare)
-    }
   } 
 
-  runComparison = (districtsToCompare) => {
-      return districtRepository.compareDistrictAverages(districtsToCompare[0], districtsToCompare[1])
-  }
 
   render() {
     return (
@@ -65,7 +58,7 @@ class App extends Component {
           findDistrict={this.findDistrict}/>
         <ComparisonContainer
           comparedDistricts={this.state.comparedDistricts}
-          runComparison={this.runComparison}
+          compareDistrictAverages={districtRepository.compareDistrictAverages}
           selectDistrict={this.selectDistrict}
         />
         <CardContainer 

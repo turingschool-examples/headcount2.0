@@ -3,7 +3,7 @@ import DistrictCard from '../DistrictCard/DistrictCard'
 import PropTypes from 'prop-types';
 
 
-const ComparisonContainer = ({ comparedDistricts, selectDistrict }) => {
+const ComparisonContainer = ({ comparedDistricts, selectDistrict, compareDistrictAverages }) => {
   const districtNames = Object.keys(comparedDistricts)
   const districtCards = districtNames.map(district => {
     return <DistrictCard 
@@ -13,11 +13,26 @@ const ComparisonContainer = ({ comparedDistricts, selectDistrict }) => {
             />
   })
 
-  return (
-    <div className="comparison-container">
+  if (districtNames.length === 2 ) {
+    const comparison = compareDistrictAverages(districtNames[0], districtNames[1]);
+
+    return (
+      <div>
       { districtCards }
-    </div>
-  )
+        <div className="comparison-card">
+          <h2>{districtNames[0]}</h2>
+          <h3>{comparison.compared}</h3>
+          <h2>{districtNames[1]}</h2>
+        </div>
+      </div>
+    )
+
+  }
+    return (
+      <div className="comparison-container">
+        { districtCards }
+      </div>
+    )
 } 
 
 
