@@ -1,0 +1,7 @@
+.main-header {
+  color: #4F4C47;
+  display: flex;
+  font-family: avenir, sans-serif;
+  font-size: 4rem;
+  justify-content: space-around;
+}

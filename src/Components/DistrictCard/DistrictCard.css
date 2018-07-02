@@ -1,0 +1,38 @@
+.highStats {
+  color: #7097B2;
+}
+
+.lowStats {
+  color: #B81F38;
+}
+
+.card {
+  border-radius: 18px;
+  border: solid #4F4C47 2px;
+  color: #4F4C47;
+  display: inline-block;
+  margin: 1rem;
+  padding: .5rem;
+  width: 300px;
+}
+
+.selected {
+  background-color: #F7F5F1;
+  border: solid #21201E 4px;
+}
+
+.card:hover {
+  border: solid #4F4C47 4px;
+}
+
+.district {
+  font-family: avenir, sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.stats {
+  font-family: avenir, sans-serif;
+  font-size: 1.25em;
+  padding-left: 5rem;
+}
