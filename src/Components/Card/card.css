@@ -1,0 +1,46 @@
+.card {
+    align-items: center;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.30);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    margin: 1%;
+    padding: 1%;
+    width: 20%;
+}
+
+#high-stat {
+    color: #7f9daf; 
+}
+
+#low-stat {
+    color: #900c3f;
+}
+
+#selected {
+    border: 1px solid blue;
+}
+
+.location {
+    color: #414A54;
+    font-size: 20px;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+.stat {
+    margin: 0;
+    font-size: 18px;
+}
+
+.stat-container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.year {
+    margin: 0px;
+    margin-right: 5px;
+    font-size: 18px;
+}
