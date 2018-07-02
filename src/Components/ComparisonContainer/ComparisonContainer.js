@@ -40,7 +40,10 @@ const ComparisonContainer = ({ comparedDistricts, selectDistrict, compareDistric
 
 
 ComparisonContainer.propTypes = {
-  comparedDistricts: PropTypes.object.isRequired
+  comparedDistricts: PropTypes.object.isRequired,
+  selectDistrict: PropTypes.func.isRequired,
+  compareDistrictAverages: PropTypes.func.isRequired,
+  findAverage: PropTypes.func.isRequired
 };
 
 export default ComparisonContainer;

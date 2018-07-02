@@ -39,7 +39,8 @@ const DistrictCard = ({district , selectDistrict}) => {
 };
 
 DistrictCard.propTypes = { 
-  district: PropTypes.object
+  district: PropTypes.object.isRequired,
+  selectDistrict: PropTypes.func.isRequired
 };
 
 

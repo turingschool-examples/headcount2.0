@@ -23,7 +23,8 @@ const CardContainer = ({ matchingDistricts, selectDistrict }) => {
 
 
 CardContainer.propTypes = {
-  matchingDistricts: PropTypes.object.isRequired
+  matchingDistricts: PropTypes.object.isRequired,
+  selectDistrict: PropTypes.func.isRequired
 };
 
 export default CardContainer;
