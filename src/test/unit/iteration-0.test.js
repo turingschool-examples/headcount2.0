@@ -1,6 +1,5 @@
 import DistrictRepository from '../../helper.js';
 import kinderData from '../../data/kindergartners_in_full_day_program.js';
-import { shallow, mount, render } from 'enzyme';
 
 describe('DistrictRepository iteration 0', () => {
   const district = new DistrictRepository(kinderData);
@@ -10,7 +9,7 @@ describe('DistrictRepository iteration 0', () => {
   });
 
   test('data coming in has no duplicates', () => {
-    // expect(district.stats.length).toBe(181);
+    console.log(district.stats);
     expect(Object.keys(district.stats).length).toBe(181);
   });
 });
