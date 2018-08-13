@@ -7,23 +7,24 @@ export default class DistrictRepository {
 
   removeDuplicates = array => {
     return array.reduce((noDuplicates, stat) => {
-      const { Location } = stat;
+      let { Location, TimeFrame, Data } = stat;
+      Location = Location.toUpperCase();
       if (!noDuplicates[Location]) {
-        noDuplicates[Location] = stat;
+        noDuplicates[Location] = {
+          location: Location,
+          stats: {}
+        };
       }
+
+      noDuplicates[Location].stats[TimeFrame] =
+        Math.round(Data * 1000) / 1000 || 0;
+
       return noDuplicates;
     }, {});
   };
 
   findByName = name => {
-    // const foundStat = Object.keys(this.stats).find(statKey => {
-    //   return statKey === name;
-    // });
-    // return foundStat;
-    //   if (!name) return undefined;
-    //   const foundLocation = this.stats.find(stat => {
-    //     return stat.Location.toLowerCase() === name.toLowerCase();
-    //   });
-    //   return foundLocation;
+    if (!name) return undefined;
+    return this.stats[name.toUpperCase()];
   };
 }
