@@ -1,3 +1,1 @@
-export default class DistrictRepository {
-
-}
+export default class DistrictRepository {}
