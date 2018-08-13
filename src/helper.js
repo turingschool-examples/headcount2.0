@@ -1,1 +1,5 @@
-export default class DistrictRepository {}
+export default class DistrictRepository {
+  constructor(data) {
+    this.stats = data;
+  }
+}
