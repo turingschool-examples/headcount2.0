@@ -1,10 +1,10 @@
 export default class DistrictRepository {
   constructor(stats) {
-    this.stats = stats;
+    this.stats = this.removeDuplicates(stats);
   }
 
-  removeDuplicates = () => {
-    const uniqueDistricts = this.stats.reduce(
+  removeDuplicates = array => {
+    return array.reduce(
       (notDuplicates, { Location, TimeFrame, DataFormat, Data }) => {
         if (!notDuplicates[Location]) {
           notDuplicates[Location] = {
@@ -18,6 +18,9 @@ export default class DistrictRepository {
       },
       {}
     );
-    this.stats = Object.values(uniqueDistricts);
+  };
+
+  findByName = districtName => {
+    return this.stats.find(name => name.location === districtName);
   };
 }
