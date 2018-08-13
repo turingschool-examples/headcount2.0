@@ -16,4 +16,8 @@ export default class DistrictRepository {
       return acc
     }, {})
   }
+
+  findByName = () => {
+    
+  }
 }
