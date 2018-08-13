@@ -3,16 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "1.1.0"
+    "enzyme": "^3.4.1",
+    "enzyme-adapter-react-15": "^1.0.6",
+    "eslint-plugin-react": "^7.10.0",
+    "react-scripts": "1.1.0",
+    "react-test-renderer": "^15.6.2"
   },
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js"
   }
 }
