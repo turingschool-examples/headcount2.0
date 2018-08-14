@@ -8,7 +8,7 @@ const CardContainer = ({districtData}) => {
 		// let location = districtData.stats[district].location
 		<Card
 			location = {districtData.stats[district].location}
-			stats = {Object.entries(districtData.stats[district].stats)}
+			stats = {(districtData.stats[district].stats)}
 		/>
 	))
 
