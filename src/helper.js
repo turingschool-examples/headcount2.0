@@ -38,9 +38,14 @@ export default class DistrictRepository {
   }
 
   findAllMatches(userInput) {
-    const schoolKeys = Object.keys(this.stats);
-    schoolKeys.reduce((filterMatches, district) => {
-      return this.stats[district];
-    }, []);
+    const schoolValues = Object.values(this.stats);
+    if (userInput) {
+      const sanitizedInput = userInput.toUpperCase();
+      return schoolValues.filter(district => {
+        district.location === sanitizedInput;
+      });
+    } else {
+      return schoolValues;
+    }
   }
 }
