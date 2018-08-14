@@ -25,8 +25,9 @@ export default class DistrictRepository {
 
   findAllMatches = (name) => {
     const statsKeys = Object.keys(this.stats)
-    return statsKeys.map((district) => {
-      return district
+    const newName = name.toUpperCase()
+    return statsKeys.filter((district) => {
+      return district.includes(newName)
     })
   }
 }
