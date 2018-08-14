@@ -21,9 +21,12 @@ class App extends Component {
         <header>
           <h1>Welcome To Headcount 2.0</h1>
         </header>
+        <CardCont />
       </div>
     );
   }
+
+  
 }
 
 export default App;
