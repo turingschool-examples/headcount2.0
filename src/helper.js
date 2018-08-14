@@ -18,7 +18,8 @@ class DistrictRepository {
           stats: {}
         };
       }
-
+      isNaN(yearData) ? yearData = 0 : '';
+      
       dupelessDataObj[upperCaseLocation].stats[TimeFrame] = yearData;
 
       return dupelessDataObj;
