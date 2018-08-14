@@ -6,9 +6,9 @@ const DistrictList = ({ districts }) => {
     return <DistrictCard location={districts[district].location} stats={districts[district].stats}/> 
   })
   return(
-    <div>
+    <React.Fragment>
      {districtCards}
-    </div>
+    </React.Fragment>
   )
 }
 

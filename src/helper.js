@@ -17,10 +17,7 @@ export default class DistrictRepository {
         }, {})
     }
 
-    findByName = (name) => {
-      if(!name) {
-       return
-      }
+    findByName = (name = '') => {
       name = name.toUpperCase();
       return this.stats[name];
     }
