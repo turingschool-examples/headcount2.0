@@ -6,7 +6,7 @@ const DistrictCard = ({ location, stats }) => {
   const yearStats = Object.keys(stats).map((yearKey, index) => (
     <p key={`${index}-${yearKey}`}>
       {yearKey} :{' '}
-      <span className={stats[yearKey] < 0.5 && 'subPointFive'}>
+      <span className={stats[yearKey] < 0.5 ? 'subPointFive' : ''}>
         {stats[yearKey]}
       </span>
     </p>
