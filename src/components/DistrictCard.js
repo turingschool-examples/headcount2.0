@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 import '../css/DistrictCard.css';
 
 const DistrictCard = ({ location, stats }) => {
-  const yearStats = Object.keys(stats).map((yearKey, i) => (
-    <p key={`${i}-${yearKey}`}>
-      {yearKey} : <span>{stats[yearKey]}</span>
+  const yearStats = Object.keys(stats).map((yearKey, index) => (
+    <p key={`${index}-${yearKey}`}>
+      {yearKey} :{' '}
+      <span className={stats[yearKey] < 0.5 && 'subPointFive'}>
+        {stats[yearKey]}
+      </span>
     </p>
   ));
   return (
