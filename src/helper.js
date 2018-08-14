@@ -5,7 +5,7 @@ export default class DistrictRepository {
 
   removeDuplicates = array => {
     return array.reduce((notDuplicates, stat) => {
-      let { Location, TimeFrame, DataFormat, Data } = stat;
+      let { Location, TimeFrame, Data } = stat;
       Location = Location.toUpperCase();
       if (!notDuplicates[Location]) {
         notDuplicates[Location] = {
