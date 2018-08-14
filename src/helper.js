@@ -11,7 +11,6 @@ export default class DistrictRepository {
       let upperCaseName = location.Location.toUpperCase();
 
       let newData = Math.round(location.Data * 1000) / 1000
-        // console.log(newData)
        
         if(!acc[location.Location]) {
           acc[upperCaseName] = {
@@ -27,7 +26,7 @@ export default class DistrictRepository {
 
   findByName = (data) => {
     if(!data) return undefined;
-    // console.log(this.stats) 
+
     return this.stats[data.toUpperCase()]
   }
 
@@ -46,8 +45,6 @@ export default class DistrictRepository {
   }
 }
 
-
-//{'COLORADO'}
 
 
 
