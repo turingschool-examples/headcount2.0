@@ -1,6 +1,7 @@
 import React from "react";
 import DistrictCard from "./DistrictCard";
 import "./DistrictsContainer.css";
+import PropTypes from "prop-types";
 
 const DistrictsContainer = ({ schoolData }) => {
   let districtCard;
@@ -12,6 +13,10 @@ const DistrictsContainer = ({ schoolData }) => {
     });
   }
   return <div className="district-container">{districtCard}</div>;
+};
+
+DistrictCard.propTypes = {
+  schoolData: PropTypes.object.isRequired
 };
 
 export default DistrictsContainer;
