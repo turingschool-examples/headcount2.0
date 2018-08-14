@@ -4,7 +4,6 @@ export default class DistrictRepository {
     }
     removeDuplicates = (data) => {
         return data.reduce((newObject, pieceOfData) => {
-            console.log(pieceOfData.TimeFrame)
             let upperCasedData = pieceOfData.Location.toUpperCase();
             if (!newObject[upperCasedData]) {
                 newObject[upperCasedData] = 
@@ -13,8 +12,7 @@ export default class DistrictRepository {
                 };
        
             }
-            newObject[upperCasedData].stats[pieceOfData.TimeFrame] = Math.round(pieceOfData.Data)
-            console.log(newObject['COLORADO'].stats)
+            newObject[upperCasedData].stats[pieceOfData.TimeFrame] = Math.round(pieceOfData.Data * 1000)/1000 || 0
             return newObject
         }, {})
     }
