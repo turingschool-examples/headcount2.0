@@ -1,15 +1,24 @@
 import React from "react";
-import DistrictRepository from "./helper";
-import kindergarners from "./data/kindergartners_in_full_day_program";
+
 import { DistrictCard } from "./DistrictCard";
 import "./CSS/DistrictCardContainer.css";
 
-this.districtRepository = new DistrictRepository(kindergarners);
-
-export const DistrictCardContainer = ({ districts }) => {
-  console.log(districts);
+export const DistrictCardContainer = ({ districts, selectCard, cardClick }) => {
   const districtCard = districts.map((district, i) => {
-    return <DistrictCard key={i} {...district} />;
+    return (
+      <DistrictCard
+        key={i}
+        {...cardClick}
+        {...district}
+        selectCard={selectCard}
+      />
+    );
   });
   return <div className="district-card-container"> {districtCard} </div>;
 };
+
+// const { shape, string, objectOf, number, func, object } = PropTypes;
+
+// DistrictCardContainer.propTypes = {
+//   location: PropTypes.array.isRequired
+// };
