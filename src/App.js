@@ -22,7 +22,11 @@ class App extends Component {
 
   selectLocation = (location) => {
     const locationData = this.state.locations[location]
-    if (!this.state.cards.includes(locationData) && this.state.cards.length < 2) {
+
+    if (this.state.cards.includes(locationData)) {
+      const selectedCards = this.state.cards.filter(card => card.location !== locationData.location)
+      this.setState({ cards: selectedCards })
+    } else if (this.state.cards.length < 2) {
       this.setState({ cards: [...this.state.cards, locationData] })
     }
   }
