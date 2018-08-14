@@ -38,6 +38,9 @@ export default class DistrictRepository {
   }
 
   findAllMatches(userInput) {
-    
+    const schoolKeys = Object.keys(this.stats);
+    schoolKeys.reduce((filterMatches, district) => {
+      return this.stats[district];
+    }, []);
   }
 }
