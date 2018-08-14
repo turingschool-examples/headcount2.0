@@ -10,7 +10,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      category: {}
+      category: {},
+      loading: true
     };
   }
 
@@ -21,7 +22,8 @@ class App extends Component {
   populateDistrictData = data => {
     const category = new DistrictRepository(data);
     this.setState({
-      category
+      category,
+      loading: false
     });
   };
 
