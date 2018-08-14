@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DistrictCard from './DistrictCard';
+import '../css/DistrictContainer.css';
 
 const DistrictContainer = ({ category }) => {
   let districts;
