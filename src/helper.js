@@ -1,4 +1,3 @@
-import React from 'react';
 import kinderData from './data/kindergartners_in_full_day_program';
 
 
