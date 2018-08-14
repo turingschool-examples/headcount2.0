@@ -4,21 +4,26 @@ import DistrictRepository from "./helper";
 import kinderData from "./data/kindergartners_in_full_day_program";
 import "./App.css";
 
-const districtRepository = new DistrictRepository(kinderData);
-
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      district: []
+      schoolData: {}
     };
+  }
+
+  componentDidMount() {
+    const schoolData = new DistrictRepository(kinderData);
+    this.setState({
+      schoolData
+    });
   }
 
   render() {
     return (
       <div>
         <h1 className="header">Welcome To Headcount 2.0</h1>
-        <DistrictsContainer districts={districtRepository} />
+        <DistrictsContainer schoolData={this.state.schoolData} />
       </div>
     );
   }
