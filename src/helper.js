@@ -3,12 +3,33 @@ export default class DistrictRepository {
     this.stats = this.filterDuplicates(data) || []
   }
   filterDuplicates(data) {
-    const cleaner = data.reduce((cleaner, location) => {
-      if(!cleaner[location.Location]) {
-        cleaner[location.Location] = []
-      }
+    const cleaner = data.reduce((cleaner, school) => {
+      if(!cleaner[school.Location.toUpperCase()]) {
+        cleaner[school.Location.toUpperCase()] = {
+          location: school.Location.toUpperCase(),
+          stats: {}
+        } 
+      } 
+      cleaner[school.Location.toUpperCase()].stats[school.TimeFrame] = Math.round(school.Data*1000)/1000 || 0
      return cleaner
    }, {})
    return cleaner
+  }
+
+  findByName(name) {
+    if(!name) {
+      return 
+    }  
+    name = name.toUpperCase()
+    return this.stats[name]
+  }
+  findAllMatches(name) {
+    const schoolKeys = Object.keys(this.stats)
+    if(!name) {
+      return schoolKeys
+    }
+    name = name.toUpperCase()
+    console.log(this.stats.schoolKeys[name])
+    return this.stats.schoolKeys[name]
   }
 }
