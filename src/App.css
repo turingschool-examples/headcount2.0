@@ -1,9 +1,10 @@
-/* .App {
+.App {
   display: grid; 
   grid-template-columns: auto auto auto auto auto auto;
   grid-auto-rows: minmax(16.7rem, auto);
-  /* grid-template-areas:  */
-/* } */ 
+  /* grid-template-areas:   */
+ }
+
 
 .App {
   display: flex;
