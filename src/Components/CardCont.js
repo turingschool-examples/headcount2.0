@@ -2,10 +2,11 @@ import React from 'react';
 import Card from './Card';
 
 const CardCont = ({ data }) => {
-  console.log(Object.values(data))
-  const districtCards = Object.entries(data).map((district, i) => {
-    <Card {...district} 
-          key={ i }
+  const districtCards = Object.values(data).map((district, i) => {
+    console.log(district)
+    return <Card  location={ district.location }
+                  stats={ district.stats }
+                  key={ i }
     />
   })
 
