@@ -6,26 +6,63 @@ export default class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userSearch: []
+      userInput: "",
+      searchSuggestions: []
     };
     this.districtRepository = new DistrictRepository(kindergarners);
-    this.districtRepository.removeDuplicates();
   }
 
-  searchDistrict = input => {
-    let userSearch = this.districtRepository.findAllMatches(input);
-    this.setState({ userSearch });
-    console.log(this.state.userSearch);
+  handleChange = ({ name, value }) => {
+    this.setState({ [name]: value });
+    this.suggestDistricts(this.state.userInput);
+  };
+
+  suggestDistricts = e => {
+    let suggestions = this.districtRepository.findAllMatches(
+      this.state.userInput
+    );
+    this.setState({ searchSuggestions: suggestions });
+    if (e.length > 2) {
+      this.props.handleSubmit(this.state.searchSuggestions);
+    }
+  };
+
+  searchDistrict = district => {
+    const filteredDistricts = this.districtRepository.findByName(district);
+    this.props.handleSubmit([filteredDistricts]);
   };
 
   render() {
     return (
-      <form>
-        <input
-          placeholder="Search District"
-          onChange={e => this.searchDistrict(e.target.value)}
-        />
-      </form>
+      <div>
+        <form>
+          <input
+            placeholder="Search District"
+            name="userInput"
+            onChange={e => this.handleChange(e.target)}
+            value={this.state.userInput}
+          />
+          {/* <button onClick={e => this.searchDistrict(e)}>Search</button> */}
+        </form>
+        <div>
+          {this.state.searchSuggestions.map((district, i) => {
+            if (
+              this.state.searchSuggestions &&
+              this.state.userInput.length > 3
+            ) {
+              return (
+                <p
+                  className="suggestions"
+                  key={i}
+                  onClick={e => this.searchDistrict(e.target.textContent)}
+                >
+                  {district.location}
+                </p>
+              );
+            }
+          })}
+        </div>
+      </div>
     );
   }
 }
