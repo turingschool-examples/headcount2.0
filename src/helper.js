@@ -12,6 +12,8 @@ export default class DistrictRepository {
           stats: {}
         };
       }
+      newObject[upperCaseLocation].stats[data.TimeFrame] =
+        Math.round(data.Data * 1000) / 1000 || 0;
       return newObject;
     }, {});
   };
