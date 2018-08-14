@@ -3,16 +3,9 @@ import React from "react";
 import { DistrictCard } from "./DistrictCard";
 import "./CSS/DistrictCardContainer.css";
 
-export const DistrictCardContainer = ({ districts, selectCard, cardClick }) => {
+export const DistrictCardContainer = ({ districts, selectCard }) => {
   const districtCard = districts.map((district, i) => {
-    return (
-      <DistrictCard
-        key={i}
-        {...cardClick}
-        {...district}
-        selectCard={selectCard}
-      />
-    );
+    return <DistrictCard key={i} {...district} selectCard={selectCard} />;
   });
   return <div className="district-card-container"> {districtCard} </div>;
 };

@@ -2,11 +2,13 @@ import React from "react";
 import { DistrictCard } from "./DistrictCard";
 import { ComparisonCard } from "./ComparisonCard";
 
-export const ControlCards = ({ comparisonData }) => {
+export const ControlCards = ({ comparisonData, cardClick }) => {
+  console.log(cardClick);
   const controlCards = Object.keys(comparisonData).map((district, i) => {
     if (comparisonData[district].hasOwnProperty("location")) {
       return (
         <DistrictCard
+          cardClick={cardClick}
           key={i}
           location={district}
           stats={comparisonData[district].stats}
