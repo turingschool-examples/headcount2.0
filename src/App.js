@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DistrictRepository from '../../helper.js';
+import DistrictRepository from './helper.js';
 import './App.css';
 
 class App extends Component {
