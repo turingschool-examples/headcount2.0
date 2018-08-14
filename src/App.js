@@ -1,10 +1,23 @@
 import React, { Component } from 'react';
 import './App.css';
+import DistrictList from './DistrictList'
 
 class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      districts: []
+    }
+  }
+
+
+
   render() {
     return (
-      <div>Welcome To Headcount 2.0</div>
+      <React.Fragment> 
+        <DistrictList />
+      </React.Fragment>
     );
   }
 }
