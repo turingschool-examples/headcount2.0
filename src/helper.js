@@ -9,15 +9,27 @@ export default class DistrictRepository {
 
   filterData = (data) => {
     return data.reduce((acc, location) => {
+      let newLocation = location.Location.toUpperCase();
+
       if (!acc[location.Location]) {
-        acc[location.Location] = []
+        acc[newLocation] = {
+          location: newLocation,
+          stats: {}
+        }
       }
-      acc[location.Location].push(location)
+     
+      
       return acc
     }, {})
   }
 
-  findByName = () => {
+  findByName = (name) => {
+    if (!name) {
+      return undefined
+    }
+    // if (this.stats[name.toUpperCase()]) {
+      return this.stats[name.toUpperCase()]
+    // }
     
   }
 }
