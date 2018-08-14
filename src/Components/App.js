@@ -17,8 +17,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <header>Welcome To Headcount 2.0</h1>
-
+        <header>
+          <h1>Welcome To Headcount 2.0</h1>
+        </header>
       </div>
     );
   }
