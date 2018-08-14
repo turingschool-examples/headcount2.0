@@ -30,6 +30,7 @@ export default class DistrictRepository {
 
   findAllMatches = name => {
     const nameKeys = Object.keys(this.stats);
+
     if (!name) {
       return nameKeys;
     }
