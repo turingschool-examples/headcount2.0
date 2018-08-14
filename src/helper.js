@@ -27,10 +27,13 @@ export default class DistrictRepository {
 
     findAllMatches = (name) => {
         if (!name) {
-          const objectLength  = Object.keys(this.stats);
-          return objectLength
+            const objectLength  = Object.keys(this.stats);
+            return objectLength
+        } else if (!Object.keys(this.stats).includes(name.toUpperCase())) {
+            return []
+        } else {
+            name = name.toUpperCase();
+            return Object.keys(this.stats[name]);
         }
-        name = name.toUpperCase();
-        return Object.keys(this.stats[name]);
     }
 }
