@@ -1,9 +1,13 @@
 import React from 'react';
+import DistrictCard from './DistrictCard';
 
-const DistrictList = () => {
+const DistrictList = ({ districts }) => {
+  const districtCards = Object.keys(districts).map(district => {
+    return <DistrictCard location={districts[district].location} stats={districts[district].stats}/> 
+  })
   return(
     <div>
-      Hello World
+     {districtCards}
     </div>
   )
 }
