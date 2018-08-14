@@ -1,11 +1,9 @@
 import React from "react";
-import { DistrictCard } from "./DistrictCard";
-import DistrictRepository from "./helper";
-import kinderData from "./data/kindergartners_in_full_day_program";
+import DistrictCard from "./DistrictCard";
 
 const DistrictsContainer = ({ districts }) => {
-  const districtCard = districts.map((district, index) => {
-    return <DistrictCard {...district} key={index} />;
+  const districtCard = Object.keys(districts.stats).map((district, index) => {
+    return <DistrictCard districts={districts.stats[district]} key={index} />;
   });
   return <div>{districtCard}</div>;
 };
