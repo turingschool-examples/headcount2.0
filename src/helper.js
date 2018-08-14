@@ -7,29 +7,34 @@ export default class DistrictRepository {
 
     removeDuplicates = (data) => {
         return data.reduce((dataLocationObj, dataObj) => {
+            let location = dataObj.Location.toUpperCase();
             let yearData = Math.round(dataObj.Data * 1000) / 1000;
 
             if (isNaN(dataObj.Data)) {
                 yearData = 0;
             }
 
-            if (!dataLocationObj[dataObj.Location]) {
-                dataLocationObj[dataObj.Location] = {
-                    location: dataObj.Location.toUpperCase(),
+            if (!dataLocationObj[location]) {
+                dataLocationObj[location] = {
+                    location: location,
                     stats: {}
                 };
             }
 
-            dataLocationObj[dataObj.Location].stats[dataObj.TimeFrame] = yearData;
+            dataLocationObj[location].stats[dataObj.TimeFrame] = yearData;
 
             return dataLocationObj;
         }, {})
     }
 
-    findByName = (name = '') => {
-        const locations = Object.keys(this.stats);
-        const matchingLocation = locations.find(location => location.toLowerCase() === name.toLowerCase());
+    findByName = (location = '') => {
+        return this.stats[location.toUpperCase()];
+    }
 
-        return this.stats[matchingLocation];
+    findAllMatches = (searchInput = '') => {
+        const locations = Object.keys(this.stats);
+        const matchingLocations = locations.filter(location => location.toLowerCase().includes(searchInput.toLowerCase()));
+
+        return matchingLocations;
     }
 }
