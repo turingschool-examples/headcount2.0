@@ -38,6 +38,14 @@ export default class DistrictRepository {
   }
 
   findAllMatches(userInput) {
-    
+    const schoolValues = Object.values(this.stats);
+    if (userInput) {
+      const sanitizedInput = userInput.toUpperCase();
+      return schoolValues.filter(district => {
+        return district.location.includes([sanitizedInput]);
+      });
+    } else {
+      return schoolValues;
+    }
   }
 }
