@@ -1,0 +1,12 @@
+.below-five {
+  color: red;
+}
+
+.above-five {
+  color: blue;
+}
+
+section,
+h1 {
+  text-align: center;
+}
