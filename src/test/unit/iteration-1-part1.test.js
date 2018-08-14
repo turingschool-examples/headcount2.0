@@ -44,7 +44,6 @@ describe('DistrictRepository iteration 1 - part 1', () => {
       '2014': 0.49
     };
     const academy = district.findByName('ACADEmY 20');
-
     expect(academy.stats).toEqual(result);
   });
 

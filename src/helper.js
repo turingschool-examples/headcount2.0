@@ -18,15 +18,20 @@ export default class DistrictRepository {
     }, {});
   };
 
-  findByName = name => {
-    if (!name) {
-      return;
-    }
+  findByName = (name = '') => {
     name = name.toUpperCase();
     return this.stats[name];
   };
 
-  //   findAllMatching = name => {
-
-  //   }
+  findAllMatches = name => {
+    const districtData = Object.keys(this.stats);
+    if (!name) {
+      return districtData;
+    }
+    name = name.toUpperCase();
+    const filteredData = districtData.filter(district =>
+      district.includes(name)
+    );
+    return filteredData;
+  };
 }
