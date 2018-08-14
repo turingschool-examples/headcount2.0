@@ -2,14 +2,22 @@ import React from 'react';
 import Card from './Card';
 
 const CardContainer = ({ cards }) => {
-    const displayCards = Object.keys(cards).map((card, i) => (
+    const cardNames = Object.keys(cards).map((card, i) => (
+        <button key={i}>{card}</button>
+    ));
+    const displayCard = Object.keys(cards).map((card, i) => (
         <Card {...cards[card]} key={i} />
-    ))
+    ));
 
     return (
-        <section>
-            {displayCards}
-        </section>
+        <div>
+            <aside>
+                {cardNames}
+            </aside>
+            <section>
+                {displayCard}
+            </section>
+        </div>
     )
 }
 
