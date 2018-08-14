@@ -24,4 +24,13 @@ export default class DistrictRepository {
       name = name.toUpperCase();
       return this.stats[name];
     }
+
+    findAllMatches = (name) => {
+        if (!name) {
+          const objectLength  = Object.keys(this.stats);
+          return objectLength
+        }
+        name = name.toUpperCase();
+        return Object.keys(this.stats[name]);
+    }
 }
