@@ -21,12 +21,10 @@ class App extends Component {
         <header>
           <h1>Welcome To Headcount 2.0</h1>
         </header>
-        <CardCont />
+        <CardCont data={ this.props.data } />
       </div>
     );
   }
-
-  
 }
 
 export default App;
