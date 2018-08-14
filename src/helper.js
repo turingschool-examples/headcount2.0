@@ -10,6 +10,7 @@ export default class DistrictRepository {
   filterData = (data) => {
     return data.reduce((acc, location) => {
       let newLocation = location.Location.toUpperCase();
+      let newData = Math.round(location.Data * 1000) / 1000
 
       if (!acc[location.Location]) {
         acc[newLocation] = {
@@ -17,7 +18,7 @@ export default class DistrictRepository {
           stats: {}
         }
       }
-     
+      acc[newLocation].stats[location.TimeFrame] = newData 
       
       return acc
     }, {})
@@ -27,9 +28,6 @@ export default class DistrictRepository {
     if (!name) {
       return undefined
     }
-    // if (this.stats[name.toUpperCase()]) {
-      return this.stats[name.toUpperCase()]
-    // }
-    
+      return this.stats[name.toUpperCase()]    
   }
 }
