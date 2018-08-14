@@ -19,4 +19,9 @@ const Card = ({ stats, location }) => {
   );
 };
 
+Card.propTypes = {
+  stats: PropTypes.object,
+  location: PropTypes.string
+};
+
 export default Card;

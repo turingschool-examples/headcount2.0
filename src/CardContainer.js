@@ -18,4 +18,8 @@ const CardContainer = ({ districts }) => {
   return <React.Fragment>{displayDistrictData}</React.Fragment>;
 };
 
+CardContainer.propTypes = {
+  districts: PropTypes.object
+};
+
 export default CardContainer;
