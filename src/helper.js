@@ -1,14 +1,17 @@
-import React from 'react'
+import React from 'react';
 import kinderData from './data/kindergartners_in_full_day_program.js';
 
 export default class DistrictRepository {
-  constructor(stats) {
-    this.stats = this.removeDuplicates(kinderData)
+  constructor() {
+    this.stats = this.removeDuplicates(kinderData);
   }
 
   removeDuplicates = (data) => {
     return data.reduce((acc, location) => {
-        let upperCaseName = location.Location.toUpperCase()
+      let upperCaseName = location.Location.toUpperCase();
+
+      let newData = Math.round(location.Data * 1000) / 1000
+        // console.log(newData)
        
         if(!acc[location.Location]) {
           acc[upperCaseName] = {
@@ -16,6 +19,7 @@ export default class DistrictRepository {
             stats: {}
           }
         }
+        acc[upperCaseName].stats[location.TimeFrame] = newData || 0
         return acc
 
     },{})
@@ -25,6 +29,20 @@ export default class DistrictRepository {
     if(!data) return undefined;
     // console.log(this.stats) 
     return this.stats[data.toUpperCase()]
+  }
+
+  findAllMatches = (districtName) => {
+    let statsVals = Object.values(this.stats)
+ 
+    if (!districtName) {
+      return statsVals
+    } 
+    return statsVals.reduce((acc, district) => {
+      if(district.location.includes(districtName.toUpperCase())) {
+        acc.push(district)
+      } 
+      return acc
+    },[])
   }
 }
 
