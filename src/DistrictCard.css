@@ -1,0 +1,19 @@
+.below-five {
+  color: red;
+}
+
+.above-five {
+  color: blue;
+}
+
+.each-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 14rem;
+}
+
+section,
+h1 {
+  text-align: center;
+}
