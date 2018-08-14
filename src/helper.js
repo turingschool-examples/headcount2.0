@@ -1,47 +1,28 @@
-class DistrictRepository {
+export default class DistrictRepository {
   constructor(data) {
     this.stats = this.removeDuplicates(data);
   }
 
   removeDuplicates = data => {
-    return data.reduce((dupelessDataObj, stat) => {
-      let {
-        Location,
-        TimeFrame,
-        Data
-      } = stat;
+    return data.reduce((cleanData, stat) => {
+      const { Location, TimeFrame, Data } = stat;
+      const location = Location.toUpperCase();
       let yearData = Math.round(Data * 1000) / 1000;
-      let upperCaseLocation = Location.toUpperCase();
-      if (!dupelessDataObj[upperCaseLocation]) {
-        dupelessDataObj[upperCaseLocation] = {
-          location: upperCaseLocation,
+      if (!cleanData[location]) {
+        cleanData[location] = {
+          location,
           stats: {}
         };
       }
-      isNaN(yearData) ? yearData = 0 : '';
-      
-      dupelessDataObj[upperCaseLocation].stats[TimeFrame] = yearData;
-
-      return dupelessDataObj;
+      cleanData[location].stats[TimeFrame] = isNaN(yearData) ? 0 : yearData;
+      return cleanData;
     }, {});
   }
 
-  findByName = name => {
-    if (!name) {
-      return undefined;
-    }
-    return this.stats[name.toUpperCase()];
-  };
+  findByName = name => !name ? undefined : this.stats[name.toUpperCase()];
 
   findAllMatches = name => {
-    const matches = Object.keys(this.stats).filter(key => {
-      if (!name) {
-        return true;
-      }
-      return key.includes(name.toUpperCase());
-    });
+    const matches = Object.keys(this.stats).filter(key => !name ? true : key.includes(name.toUpperCase()));
     return matches.map(key => this.stats[key]);
   };
 }
-
-export default DistrictRepository;
