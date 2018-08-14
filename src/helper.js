@@ -14,18 +14,15 @@ export default class DistrictRepository {
   }
 
   findByName = (name) => {
-    const upName = name.toUpperCase()
-    console.log(upName)
     const statsKeys = Object.keys(this.stats)
-      if (statsKeys.includes(upName)) {
-        return statsKeys.reduce((districtObject, district) => {
-          if (upName === district) {
+    if (statsKeys.includes(name)) {
+      return statsKeys.reduce((districtObject, district) => {
+        if (name === district) {
             districtObject.location = district.toUpperCase()
-            districtObject.data = this.stats[upName]
+            districtObject.data = this.stats[name]
           }
             return districtObject
           }, {})
       }
     }
-  
-}
+  }
