@@ -5,16 +5,21 @@ class DistrictRepository {
 
   removeDuplicates = data => {
     return data.reduce((dupelessDataObj, stat) => {
-      let { Location, TimeFrame, Data } = stat;
+      let {
+        Location,
+        TimeFrame,
+        Data
+      } = stat;
       let yearData = Math.round(Data * 1000) / 1000;
-      if (!dupelessDataObj[Location]) {
-        dupelessDataObj[Location] = {
-          location: Location.toUpperCase(),
+      let upperCaseLocation = Location.toUpperCase();
+      if (!dupelessDataObj[upperCaseLocation]) {
+        dupelessDataObj[upperCaseLocation] = {
+          location: upperCaseLocation,
           stats: {}
         };
       }
 
-      dupelessDataObj[Location].stats[TimeFrame] = yearData;
+      dupelessDataObj[upperCaseLocation].stats[TimeFrame] = yearData;
 
       return dupelessDataObj;
     }, {});
@@ -24,8 +29,7 @@ class DistrictRepository {
     if (!name) {
       return undefined;
     }
-    console.log(this.stats[name]);
-    return this.stats[name];
+    return this.stats[name.toUpperCase()];
   };
 
   findAllMatches = name => {
