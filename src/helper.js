@@ -24,7 +24,8 @@ class DistrictRepository {
     if (!name) {
       return undefined;
     }
-    return this.stats[name.toUpperCase()];
+    console.log(this.stats[name]);
+    return this.stats[name];
   };
 
   findAllMatches = name => {
