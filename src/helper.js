@@ -27,4 +27,14 @@ export default class DistrictRepository {
     }
     return this.stats[name.toUpperCase()];
   };
+
+  findAllMatches = name => {
+    const nameKeys = Object.keys(this.stats);
+    if (!name) {
+      return nameKeys;
+    }
+    return nameKeys.filter(district => {
+      return district.includes(name.toUpperCase());
+    });
+  };
 }
