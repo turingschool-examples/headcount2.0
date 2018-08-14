@@ -8,16 +8,28 @@ export default class DistrictRepository {
 
   removeDuplicates = (data) => {
     return data.reduce((acc, location) => {
+        let upperCaseName = location.Location.toUpperCase()
+       
         if(!acc[location.Location]) {
-          acc[location.Location] = []
+          acc[upperCaseName] = {
+            location: upperCaseName,
+            stats: {}
+          }
         }
-        acc[location.Location].push(location)
-  
         return acc
 
     },{})
   }
+
+  findByName = (data) => {
+    if(!data) return undefined;
+    // console.log(this.stats) 
+    return this.stats[data.toUpperCase()]
+  }
 }
+
+
+//{'COLORADO'}
 
 
 
