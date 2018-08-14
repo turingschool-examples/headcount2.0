@@ -30,4 +30,8 @@ export default class DistrictRepository {
     }
       return this.stats[name.toUpperCase()]    
   }
+
+  findAllMatches = () => {
+    return Object.keys(this.stats)
+  }
 }
