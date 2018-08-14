@@ -21,7 +21,7 @@ class App extends Component {
         <header>
           <h1>Welcome To Headcount 2.0</h1>
         </header>
-        <CardCont data={ this.props.data } />
+        <CardCont data={ this.state.data } />
       </div>
     );
   }
