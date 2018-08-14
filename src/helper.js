@@ -18,7 +18,7 @@ export default class DistrictRepository {
           stats: {}
         }
       }
-      acc[newLocation].stats[location.TimeFrame] = newData 
+      acc[newLocation].stats[location.TimeFrame] = newData || 0;
       
       return acc
     }, {})
