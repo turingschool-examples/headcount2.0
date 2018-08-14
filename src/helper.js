@@ -12,7 +12,7 @@ export default class DistrictRepository {
       let newLocation = location.Location.toUpperCase();
       let newData = Math.round(location.Data * 1000) / 1000
 
-      if (!acc[location.Location]) {
+      if (!acc[newLocation]) {
         acc[newLocation] = {
           location: newLocation,
           stats: {}
