@@ -1,12 +1,12 @@
 import React from "react";
 import "./DistrictCard.css";
 
-const DistrictCard = ({ districts }) => {
+const DistrictCard = ({ schoolData }) => {
   return (
     <div className="each-card">
-      <h1>{districts.location}</h1>
-      {Object.keys(districts.stats).map((year, index) => {
-        const average = districts.stats[year];
+      <h1>{schoolData.location}</h1>
+      {Object.keys(schoolData.stats).map((year, index) => {
+        const average = schoolData.stats[year];
         return (
           <section
             className={average < 0.5 ? "below-five" : "above-five"}
