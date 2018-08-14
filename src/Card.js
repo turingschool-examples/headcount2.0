@@ -1,11 +1,11 @@
 import React from 'react';
-import './App.css';
+import './Card.css';
 import PropTypes from 'prop-types';
 
 const Card = ({ stats, location }) => {
   return (
     <div className="Card">
-      <h3>{location}</h3>
+      <h2>{location}</h2>
       {Object.keys(stats).map(stat => {
         return (
           <article>

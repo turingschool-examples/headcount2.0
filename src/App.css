@@ -1,9 +1,10 @@
-/* .App {
+.App {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-auto-rows: minmax(16.5rem, auto);
-} */
-
-.App {
-  display: flex;
 }
+
+/* .App {
+  display: flex;
+  flex-direction: column;
+} */
