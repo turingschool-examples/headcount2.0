@@ -1,10 +1,10 @@
 import React from 'react';
 
-const LocationList = ({ locations, handleClick }) => {
+const LocationList = ({ locations, selectLocation }) => {
     const locationButtons = locations.map((location, i) => (
         <button key={i}
             name={location}
-            onClick={handleClick} >
+            onClick={selectLocation} >
             {location}
         </button>
     ))

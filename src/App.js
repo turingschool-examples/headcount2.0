@@ -9,14 +9,18 @@ import LocationList from './LocationList';
 class App extends Component {
   constructor() {
     super()
-    this.district = new DistrictRepository(kinderData);
     this.state = {
-      locations: this.district.stats,
+      locations: {},
       cards: []
     }
   }
 
-  handleClick = (e) => {
+  componentDidMount() {
+    const district = new DistrictRepository(kinderData);
+    this.setState({ locations: district.stats })
+  }
+
+  selectLocation = (e) => {
     const locationData = this.state.locations[e.target.name]
     if (!this.state.cards.includes(locationData) && this.state.cards.length < 2) {
       this.setState({ cards: [...this.state.cards, locationData] })
@@ -28,7 +32,7 @@ class App extends Component {
     return (
       <div>
         <h1>KINDERGARTNERS IN FULL DAY PROGRAM</h1>
-        <LocationList locations={Object.keys(this.state.locations)} handleClick={this.handleClick} />
+        <LocationList locations={Object.keys(this.state.locations)} selectLocation={this.selectLocation} />
         <CardContainer cards={this.state.cards} />
       </div>
     );
