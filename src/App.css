@@ -1,1 +1,9 @@
-/*APP COMPONENT RELATED CSS GOES HERE*/
+/* .App {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: minmax(16.5rem, auto);
+} */
+
+.App {
+  display: flex;
+}
