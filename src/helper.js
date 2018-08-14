@@ -2,17 +2,29 @@ export default class DistrictRepository {
   constructor(data) {
     this.stats = this.removeDuplicates(data);
   }
+
   removeDuplicates = data => {
     return data.reduce((newObject, data) => {
-      if (!newObject[data.Location]) {
-        newObject[data.Location] = {};
+      let upperCaseLocation = data.Location.toUpperCase();
+      if (!newObject[upperCaseLocation]) {
+        newObject[upperCaseLocation] = {
+          location: upperCaseLocation,
+          stats: {}
+        };
       }
-      newObject[data.Location][data.TimeFrame] = data.Data;
       return newObject;
     }, {});
   };
 
   findByName = name => {
+    if (!name) {
+      return;
+    }
+    name = name.toUpperCase();
     return this.stats[name];
   };
+
+  //   findAllMatching = name => {
+
+  //   }
 }
