@@ -29,7 +29,9 @@ export default class DistrictRepository {
       return schoolKeys
     }
     name = name.toUpperCase()
-    console.log(this.stats.schoolKeys[name])
-    return this.stats.schoolKeys[name]
+    const matches = schoolKeys.filter(key => {
+      return key.includes(name)
+    })
+    return matches
   }
 }
