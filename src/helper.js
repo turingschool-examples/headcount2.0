@@ -42,7 +42,7 @@ export default class DistrictRepository {
     if (userInput) {
       const sanitizedInput = userInput.toUpperCase();
       return schoolValues.filter(district => {
-        district.location === sanitizedInput;
+        return district.location.includes([sanitizedInput]);
       });
     } else {
       return schoolValues;
