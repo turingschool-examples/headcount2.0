@@ -20,12 +20,11 @@ class App extends Component {
     this.setState({ locations: district.stats })
   }
 
-  selectLocation = (e) => {
-    const locationData = this.state.locations[e.target.name]
+  selectLocation = (location) => {
+    const locationData = this.state.locations[location]
     if (!this.state.cards.includes(locationData) && this.state.cards.length < 2) {
       this.setState({ cards: [...this.state.cards, locationData] })
     }
-    console.log(this.state.cards)
   }
 
   render() {
