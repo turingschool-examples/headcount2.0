@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card.js';
+import './DistrictContainer.css';
 
 export default class DistrictContainer extends Component {
 
@@ -10,7 +11,7 @@ export default class DistrictContainer extends Component {
     });
     return (
 
-      <div>
+      <div class="district-card-container">
         {districtArray.map((district, index) => <Card district ={district} key={index} />)}
       </div>
     );
