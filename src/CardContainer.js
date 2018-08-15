@@ -1,18 +1,20 @@
 import React from 'react'
 import Card from './Card'
+import './CardContainer.css'
 
-const CardContainer = ({districtData}) => { 
-  let districtKeys = Object.keys(districtData.stats)
+const CardContainer = ({ data }) => { 
+  let districtKeys = Object.values(data)
+  
+  let displayCards = districtKeys.map(district => {
 
-  const displayCards = districtKeys.map(district => {
    return <Card
-      location={districtData.stats[district].location}
-      stats={Object.entries(districtData.stats[district].stats)}
+      location={district.location}
+      stats={district.stats}
     />
   })
 
   return(
-    <div>
+    <div className="cardContainer">
       <h1>{displayCards}</h1>
     </div>
   )

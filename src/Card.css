@@ -1,0 +1,11 @@
+.card {
+  display: block;
+  width: 20%;
+  border: 1px solid grey;
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+  font-size: 1em;
+}
