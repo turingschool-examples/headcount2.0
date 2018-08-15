@@ -36,4 +36,18 @@ export default class DistrictRepository {
 
     return matchKeys.map(key => this.stats[key]);
   };
+
+  findAverage = name => {
+    const values = Object.values(this.stats[name].stats);
+    const longAvg =
+      values.reduce((sum, value) => sum + value, 0) / values.length;
+    return Math.round(longAvg * 1000) / 1000;
+  };
+
+  // compareDistrictAverages = (district1, district2) => {
+  //   console.log(this.stats[district1].stats);
+  //   // const lower = Math.min(dOneData, dTwoData);
+  //   // const higher = Math.max(dOneData, dTwoData);
+  //   // return Math.round((lower / higher) * 1000) / 1000;
+  // };
 }
