@@ -1,14 +1,22 @@
 import React from "react";
 import App from "./App";
-import { shallow, mount } from "enzyme";
+import { shallow } from "enzyme";
 
 describe("App", () => {
   let shallowWrapper;
-  let mountWrapper;
 
   beforeEach(() => {
     shallowWrapper = shallow(<App />);
-    mountWrapper = mount(<App />);
+  });
+
+  it("should match the snapshot", () => {
+    expect(shallowWrapper).toMatchSnapshot();
+  });
+
+  it("should have 181 districts in schoolData.stats object", () => {
+    expect(Object.keys(shallowWrapper.state().schoolData.stats).length).toEqual(
+      181
+    );
   });
 
   it("should populate the schoolData state when component mounts", () => {
