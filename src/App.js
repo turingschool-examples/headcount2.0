@@ -6,6 +6,8 @@ import kinderData from './data/kindergartners_in_full_day_program';
 import CardContainer from './CardContainer';
 import LocationList from './LocationList';
 
+const district = new DistrictRepository(kinderData)
+
 class App extends Component {
   constructor() {
     super()
@@ -17,7 +19,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const district = new DistrictRepository(kinderData);
+    ;
     this.setState({ locations: district.stats, displayedLocations: district.findAllMatches() })
   }
 
@@ -40,7 +42,6 @@ class App extends Component {
   }
 
   searchLocations = (e) => {
-    const district = new DistrictRepository(kinderData);
     const matchingDistricts = district.findAllMatches(e.target.value)
 
     this.setState({ displayedLocations: matchingDistricts })
