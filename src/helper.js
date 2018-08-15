@@ -11,8 +11,8 @@ export default class DistrictRepository {
       let upperCaseName = location.Location.toUpperCase();
 
       let newData = Math.round(location.Data * 1000) / 1000
-       
-        if(!acc[location.Location]) {
+    
+        if(!acc[upperCaseName]) {
           acc[upperCaseName] = {
             location: upperCaseName,
             stats: {}
@@ -44,7 +44,3 @@ export default class DistrictRepository {
     },[])
   }
 }
-
-
-
-
