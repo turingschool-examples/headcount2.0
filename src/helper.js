@@ -15,7 +15,7 @@ export default class DistrictRepository {
         roundedData = Math.round(Data * 1000) / 1000;
       }
 
-      if (!organizedData[school.Location]) {
+      if (!organizedData[sanitizedLocation]) {
         organizedData[sanitizedLocation] = {
           location: sanitizedLocation,
           stats: {[TimeFrame]:roundedData}
