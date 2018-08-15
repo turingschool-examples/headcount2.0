@@ -1,0 +1,16 @@
+.year-red {
+  color: red;
+}
+
+.year-black {
+  color: green;
+}
+
+.district-card {
+  text-align: center;
+  box-shadow: 2px 2px 2px 2px #ccc;
+}
+
+.district-location {
+  font-size: 1.5rem;
+}
