@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import App from "./App";
 import { shallow, mount } from "enzyme";
 
@@ -16,5 +15,7 @@ describe("App", () => {
     expect(shallowWrapper.state().schoolData).not.toEqual({});
   });
 
-  it("should render a DistrictContainer component", () => {});
+  it("should render a DistrictsContainer component", () => {
+    expect(shallowWrapper.find("DistrictsContainer").length).toEqual(1);
+  });
 });
