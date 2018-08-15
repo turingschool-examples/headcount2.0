@@ -16,7 +16,7 @@ describe('LocationList', () => {
     })
 
     it('should call selectLocation when location button is clicked', () => {
-        wrapper.find('.location-btn').simulate('click')
+        wrapper.find('.LocationList__btn').simulate('click')
 
         expect(selectLocationMock).toHaveBeenCalled()
     })

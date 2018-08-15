@@ -7,8 +7,9 @@ const CardContainer = ({ cards }) => {
     ));
 
     return (
-        <div>
-            <section>
+        <div className='CardContainer'>
+            <h1 className='CardContainer__header'>KINDERGARTNERS IN FULL DAY PROGRAM</h1>
+            <section className='CardContainer__section'>
                 {displayCards}
             </section>
         </div>

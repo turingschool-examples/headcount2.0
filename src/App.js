@@ -33,8 +33,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <h1>KINDERGARTNERS IN FULL DAY PROGRAM</h1>
+      <div className='App'>
         <LocationList locations={Object.keys(this.state.locations)} selectLocation={this.selectLocation} />
         <CardContainer cards={this.state.cards} />
       </div>
