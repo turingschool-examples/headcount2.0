@@ -35,7 +35,12 @@ export default class DistrictRepository {
     let resultObj = {};
     resultObj[d1.toUpperCase()] = this.findAverage(d1);
     resultObj[d2.toUpperCase()] = this.findAverage(d2);
-    const rawComparisonData = this.findAverage(d1)/this.findAverage(d2);
+    let rawComparisonData;
+    if (this.findAverage(d1) < this.findAverage(d2)) {
+      rawComparisonData = this.findAverage(d1)/this.findAverage(d2);
+    } else {
+      rawComparisonData = this.findAverage(d2)/this.findAverage(d1);
+    }
     resultObj.compared = Math.round(rawComparisonData * 1000) / 1000;
     return resultObj;
   }
