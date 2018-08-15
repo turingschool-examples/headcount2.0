@@ -8,7 +8,6 @@ const DistrictList = ({ districts, searchedDistrict }) => {
   })
   console.log(searchedDistrict)
 
-  const districtCard = <DistrictCard location={searchedDistrict[0]} stats={searchedDistrict[1]} />
   const searchedCards = searchedDistrict.map(district => <DistrictCard location={districts[district].location} stats={districts[district].stats} />)
 
   if (searchedDistrict.length) {

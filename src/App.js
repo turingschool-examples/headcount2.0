@@ -19,8 +19,8 @@ class App extends Component {
     console.log(districts)
   }
 
-  searchDistricts = (event, value) => {
-    event.preventDefault();
+  searchDistricts = (value) => {
+    // event.preventDefault();
     const searchedDistrict = districts.findAllMatches(value);
     this.setState({
       searchedDistrict : districts.findAllMatches(value)
