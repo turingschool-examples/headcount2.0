@@ -11,7 +11,7 @@ export default class DistrictContainer extends Component {
     });
     return (
 
-      <div class="district-card-container">
+      <div className="district-card-container">
         {districtArray.map((district, index) => <Card district ={district} key={index} />)}
       </div>
     );
