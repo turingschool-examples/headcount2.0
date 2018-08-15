@@ -11,12 +11,12 @@ class App extends Component {
     super();
     this.state = {
       schoolData: {},
-      cards: {}
+      cards: schoolData.stats
     };
   }
 
   componentDidMount() {
-    const schoolData = new DistrictRepository(kinderData);
+    // const schoolData = new DistrictRepository(kinderData);
     this.setState({
       schoolData
     });
