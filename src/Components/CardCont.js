@@ -1,20 +1,20 @@
 import React from 'react';
 import Card from './Card';
 import PropTypes from 'prop-types';
+import './CardCont.css';
 
 const CardCont = ({ data }) => {
-  console.log(data)
-  const districtCards = Object.values(data).map((district, i) => {
+  const displayDistrictCards = Object.values(data).map((district, i) => {
     return <Card  location={ district.location }
                   stats={ district.stats }
-                  key={ i }
+                  key={ `card-${i}` }
     />
   })
 
   return (
-    <section className="card-cont">
-      { districtCards }
-    </section>
+    <article className="card-cont">
+      { displayDistrictCards }
+    </article>
   )
 }
 

@@ -1,16 +1,17 @@
 import React from 'react';
+import './Card.css';
 import PropTypes from 'prop-types';
 
 const Card = ({ location, stats}) => {
   const displayStats = Object.entries(stats).map((stat, i) => {
-    return <div key={ i }>{stat[0]} : {stat[1]}</div>
+    return <div className="stat" key={`stat-${i}`}>{stat[0]} : {stat[1]}</div>
   })
   
   return (
-    <article className="card">
-      <h1>{location}</h1>
-      <ul>{displayStats}</ul>
-    </article>
+    <ul className="card">
+      <h2>{location}</h2>
+      <li>{displayStats}</li>
+    </ul>
   )
 }
 
