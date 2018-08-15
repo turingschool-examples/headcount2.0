@@ -11,6 +11,8 @@
   border-radius: 8px;
   margin: 0.75rem;
   padding-bottom: 1rem;
+  -webkit-box-shadow: 1px 1px 7px 1px black;
+  box-shadow: 1px 1px 7px 1px black;
 }
 
 h1 {

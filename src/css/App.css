@@ -5,6 +5,7 @@
 
 .header {
   color: whitesmoke;
+  text-shadow: 1px 1px black;
   text-align: center;
-  margin-top: 0.5rem;
+  font-size: 2rem;
 }

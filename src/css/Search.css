@@ -4,4 +4,8 @@ form {
 
 .search-input {
   text-align: center;
+  width: 15.5rem;
+  border: 2px solid blanchedalmond;
+  border-radius: 8px;
+  height: 1rem;
 }

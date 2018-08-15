@@ -23,7 +23,7 @@ class SearchForm extends Component {
         <input
           className="search-input"
           type="text"
-          placeholder="Enter a search here"
+          placeholder="Search Districts Here"
           value={this.state.district}
           onChange={this.handleChange}
         />
