@@ -1,12 +1,22 @@
 import React from "react";
 import DistrictCard from "./DistrictCard";
 import "./DistrictsContainer.css";
+import PropTypes from "prop-types";
 
-const DistrictsContainer = ({ districts }) => {
-  const districtCard = Object.keys(districts.stats).map((district, index) => {
-    return <DistrictCard districts={districts.stats[district]} key={index} />;
-  });
+const DistrictsContainer = ({ schoolData }) => {
+  let districtCard;
+  if (schoolData.stats) {
+    districtCard = Object.keys(schoolData.stats).map((district, index) => {
+      return (
+        <DistrictCard schoolData={schoolData.stats[district]} key={index} />
+      );
+    });
+  }
   return <div className="district-container">{districtCard}</div>;
+};
+
+DistrictCard.propTypes = {
+  schoolData: PropTypes.object.isRequired
 };
 
 export default DistrictsContainer;
