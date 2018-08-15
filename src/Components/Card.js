@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Card = ({ location, stats}) => {
   const displayStats = Object.entries(stats).map((stat, i) => {
@@ -11,6 +12,11 @@ const Card = ({ location, stats}) => {
       <ul>{displayStats}</ul>
     </article>
   )
+}
+
+Card.propTypes = {
+  location: PropTypes.string,
+  stats: PropTypes.objectOf(PropTypes.number)
 }
 
 export default Card;
