@@ -13,4 +13,6 @@ class Search extends Component {
   }
 }
 
+Search.propTypes = { updateCards: PropTypes.func }
+
 export default Search;
