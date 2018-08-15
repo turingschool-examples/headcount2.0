@@ -3,9 +3,9 @@ import { Card } from '../Card/Card';
 import './CardContainer.css';
 
 export const CardContainer = ({schoolData}) => {
-  const displayCards = schoolData.map((schoolData, i) => (
+  const displayCards = schoolData.map((schoolData) => (
     <Card
-      key={i}
+      key={schoolData.location}
       location={schoolData.location}
       stats={schoolData.stats}
     />
