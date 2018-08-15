@@ -24,15 +24,15 @@ describe('App component', () => {
     expect(Object.keys(wrapper.state().category.stats).length).toEqual(181);
   });
 
-  it('should set loading state to false when component mounts', () => {
-    expect(wrapper.state().loading).toEqual(false);
-  });
-
   it('should render the DistrictContainer component', () => {
     expect(wrapper.find('DistrictContainer').length).toEqual(1);
   });
 
   it('should match the snapshot', () => {
     expect(wrapper.html()).toMatchSnapshot();
+  });
+
+  it('should render a Search component', () => {
+    expect(wrapper.find('DistrictContainer').length).toEqual(1);
   });
 });

@@ -3,23 +3,18 @@ import PropTypes from 'prop-types';
 import DistrictCard from './DistrictCard';
 import '../css/DistrictContainer.css';
 
-const DistrictContainer = ({ category }) => {
-  let districts;
+const DistrictContainer = ({ districts }) => {
+  let districtCards;
 
-  if (category.stats) {
-    districts = Object.keys(category.stats).map(districtKey => (
-      <DistrictCard
-        key={category.stats[districtKey].location}
-        {...category.stats[districtKey]}
-      />
-    ));
-  }
+  districtCards = districts.map((district, i) => (
+    <DistrictCard key={`${i}-${district.location}`} {...district} />
+  ));
 
-  return <div className="district-container">{districts}</div>;
+  return <div className="district-container">{districtCards}</div>;
 };
 
 DistrictContainer.propTypes = {
-  category: PropTypes.object.isRequired
+  districts: PropTypes.array.isRequired
 };
 
 export default DistrictContainer;
