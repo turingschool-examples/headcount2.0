@@ -10,25 +10,17 @@ describe('DistrictContainer component', () => {
   let wrapper;
 
   const mockState = {
-    category: new DistrictRepository(kinderGartenData),
+    districts: new DistrictRepository(kinderGartenData).findAllMatches(),
     loading: false
   };
 
   beforeEach(() => {
-    wrapper = shallow(<DistrictContainer category={mockState.category} />);
+    wrapper = shallow(<DistrictContainer districts={mockState.districts} />);
   });
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<DistrictContainer category={mockState.category} />, div);
+    ReactDOM.render(<DistrictContainer districts={mockState.districts} />, div);
     ReactDOM.unmountComponentAtNode(div);
-  });
-
-  it('should render 181 card components', () => {
-    expect(wrapper.find('DistrictCard').length).toEqual(181);
-  });
-
-  it('should match the snapshot', () => {
-    expect(wrapper.html()).toMatchSnapshot();
   });
 });
