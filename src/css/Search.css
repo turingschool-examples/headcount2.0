@@ -1,3 +1,7 @@
 form {
   justify-self: center;
 }
+
+.search-input {
+  text-align: center;
+}
