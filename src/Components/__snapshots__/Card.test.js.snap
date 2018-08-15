@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CARD Should match snapshot 1`] = `"<ul class=\\"card\\"><h2>COLORADO</h2><li><div class=\\"stat\\">key : 1</div></li></ul>"`;

@@ -23,4 +23,11 @@ describe('APP', () => {
       selectedCards: []
     });
   })
+
+  it('Should match the snapshot', () => {
+    const wrapper = shallow(
+      <App 
+        
+      />)
+  })
 })
