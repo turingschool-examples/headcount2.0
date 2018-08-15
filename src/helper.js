@@ -10,7 +10,6 @@ export default class DistrictRepository {
                 {location: upperCasedData,
                  stats: {}
                 };
-       
             }
             newObject[upperCasedData].stats[pieceOfData.TimeFrame] = Math.round(pieceOfData.Data * 1000)/1000 || 0
             return newObject
@@ -24,15 +23,9 @@ export default class DistrictRepository {
 
     findAllMatches = (name) => {
         if (!name) {
-            const allDistricts  = Object.keys(this.stats);
-            return allDistricts
-        // } else if (!Object.keys(this.stats).includes(name.toUpperCase())) {
-        //     return []
-        } else {
-            name = name.toUpperCase();
-            const allMatches = Object.keys(this.stats).filter(stat => this.stats[stat].location.includes(name));
-            console.log(allMatches);
-            return [...allMatches];
-        }
+            return Object.keys(this.stats);
+        } 
+        return [... Object.keys(this.stats).filter(stat => this.stats[stat].location.includes(name.toUpperCase()))];
     }
 }
+

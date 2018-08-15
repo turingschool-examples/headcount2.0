@@ -3,10 +3,10 @@ import DistrictCard from './DistrictCard';
 import './DistrictList.css';
 
 const DistrictList = ({ districts, searchedDistrict }) => {
+  
   const districtCards = Object.keys(districts).map(district => {
     return <DistrictCard location={districts[district].location} stats={districts[district].stats} /> 
   })
-  console.log(searchedDistrict)
 
   const searchedCards = searchedDistrict.map(district => <DistrictCard location={districts[district].location} stats={districts[district].stats} />)
 
