@@ -26,4 +26,10 @@ describe("App", () => {
   it("should render a DistrictsContainer component", () => {
     expect(shallowWrapper.find("DistrictsContainer").length).toEqual(1);
   });
+
+  // it("should update state when a district is searched", () => {});
+
+  // it("should add object to clickedCard array when clicked", () => {});
+
+  // it("should add 2nd object to clickedCard array when clicked", () => {});
 });
