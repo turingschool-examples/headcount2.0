@@ -2,8 +2,8 @@
 	margin: 0 auto;
 	width: 100%;
 	background-color: #B3ABAB ;
-	text-align: center;
 	font-family: lora;
+	text-align: center;
 }
 
 .cards {
@@ -12,6 +12,7 @@
 	margin: 1rem;
 	border: 0.4rem solid #523F38;
 	border-radius: 1.5rem;
+	text-align: center;
 }
 
 .location {
@@ -24,6 +25,7 @@
 }
 
 h4 {
+	display: inline-block;
 	padding-top: 0.4rem;
 	background-color: #ddd9d9;
 }
@@ -34,6 +36,7 @@ h4 {
 	height: 17.5rem;
 	border-radius: 0 0 1.4rem 1.4rem;
 	font-size: 1rem;
+	text-align: center;
 }
 
 .lessThan {

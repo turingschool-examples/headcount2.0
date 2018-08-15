@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Search.css';
 import kinderData from './data/kindergartners_in_full_day_program.js';
 
 class Search extends Component {
@@ -9,28 +10,21 @@ class Search extends Component {
 		}
 	}
 
-	handleChange = () => {
-		
-	}
-
-	handleSubmit = (e) => {
-		e.preventDefault();
+	handleChange = (e) => {
 		this.setState({location: e.target.value})
 	}
 
-
 	render() {
 		return (
-			<form onSubmit={this.handleSubmit>
+			<div>
 				<input 
 					className="search-input"
 					name="search"
 					onChange={this.handleChange}
 					value={this.state.location}
 				/>
-				<button>Search</button>
-			</form>
-
+				<button className="clear-button">Clear</button>
+			</div>
 		)
 	}
 
