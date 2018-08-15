@@ -3,25 +3,17 @@ import './Search.css';
 import kinderData from './data/kindergartners_in_full_day_program.js';
 
 class Search extends Component {
-	constructor() {
-		super()
-		this.state = {
-			location: ''
-		}
-	}
-
-	handleChange = (e) => {
-		this.setState({location: e.target.value})
-	}
+	
+	
 
 	render() {
 		return (
 			<div>
 				<input 
+					type="text"
 					className="search-input"
 					name="search"
-					onChange={this.handleChange}
-					value={this.state.location}
+					onChange={ (e) => this.props.filterLocations(e.target.value) }
 				/>
 				<button className="clear-button">Clear</button>
 			</div>

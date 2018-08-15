@@ -11,25 +11,26 @@ class App extends Component {
 		super()
 		this.kinderDistrictData = new DistrictRepository(kinderData);
 		this.state = {
-			districtData: this.kinderDistrictData.stats
+			districtData: []
 		}
 	console.log(this.state.districtData.stats)
 	}
 
-	componentDidMount() {
+	componentDidMount = () => {
 		this.filterLocations();
 	}
 
-	filterLocations = (location) => {
-		let filteredDistricts = this.kinderDistrictData.findAllMatches(location);
+	filterLocations = (input) => {
+		let filteredDistricts = this.kinderDistrictData.findAllMatches(input);
 		this.setState({districtData: filteredDistricts})
+		console.log(filteredDistricts)
 	}
   
   render() {
     return (
       <div>
       	<h1 className="title">Headcount 2.0</h1>
-      	<Search />
+      	<Search filterLocations = {this.filterLocations} />
       	<CardContainer districtData={this.state.districtData} />
       </div>
     );
