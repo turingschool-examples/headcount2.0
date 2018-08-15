@@ -27,15 +27,23 @@ class App extends Component {
     if (this.state.cards.includes(locationData)) {
       const selectedCards = this.state.cards.filter(card => card.location !== locationData.location)
       this.setState({ cards: selectedCards })
-    } else if (this.state.cards.length < 2) {
+    }
+
+    if (!this.state.cards.includes(locationData) && this.state.cards.length === 2) {
+      this.setState({ cards: this.state.cards.shift() })
+    }
+
+    if (!this.state.cards.includes(locationData) && this.state.cards.length < 2) {
       this.setState({ cards: [...this.state.cards, locationData] })
     }
+
   }
 
   searchLocations = (e) => {
     const district = new DistrictRepository(kinderData);
     const matchingDistricts = district.findAllMatches(e.target.value)
     let matchingDistrictData = {};
+
     matchingDistricts.forEach(district => {
       matchingDistrictData[district] = this.state.locations[district]
     })
