@@ -5,12 +5,7 @@ const LocationList = ({ locations, selectLocation }) => {
         <button key={i}
             name={location}
             className='LocationList__btn'
-            onClick={(e) => {
-                if (e.target.style.background === 'red') {
-                    e.target.style.background = '#727272'
-                } else {
-                    e.target.style.background = 'red'
-                }
+            onClick={() => {
                 selectLocation(location)
             }} >
             {location}
