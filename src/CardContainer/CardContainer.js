@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card } from '../Card/Card';
+import './CardContainer.css';
 
 export const CardContainer = ({schoolData}) => {
-  const schoolValues = Object.values(schoolData.stats);
-  const displayCards = schoolValues.map((schoolData, i) => (
+  const displayCards = schoolData.map((schoolData, i) => (
     <Card
       key={i}
       location={schoolData.location}
@@ -12,7 +12,7 @@ export const CardContainer = ({schoolData}) => {
   ));
 
   return (
-    <div>
+    <div className='card-container'>
       {displayCards}
     </div>
   );
