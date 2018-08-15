@@ -25,4 +25,12 @@ export default class DistrictRepository {
     const matches = Object.keys(this.stats).filter(key => !name ? true : key.includes(name.toUpperCase()));
     return matches.map(key => this.stats[key]);
   };
+
+  findAverage = name => {
+    const district = this.stats[name.toUpperCase()].stats;
+    const average = Object.keys(district).reduce((average, year) => {
+      return average += district[year];
+    }, 0) / Object.keys(district).length;
+    return Math.round(average * 1000) / 1000;
+  }
 }
