@@ -15,7 +15,7 @@ const DistrictsContainer = ({ schoolData }) => {
   return <div className="district-container">{districtCard}</div>;
 };
 
-DistrictCard.propTypes = {
+DistrictsContainer.propTypes = {
   schoolData: PropTypes.object.isRequired
 };
 

@@ -1,9 +1,23 @@
 .below-five {
-  color: red;
+  color: whitesmoke;
 }
 
 .above-five {
-  color: blue;
+  color: orange;
+}
+
+.each-card {
+  border-style: double;
+  margin: 0.75rem;
+  padding-bottom: 1rem;
+}
+
+h1 {
+  font-size: 1rem;
+}
+
+section {
+  font-size: 0.8rem;
 }
 
 section,
