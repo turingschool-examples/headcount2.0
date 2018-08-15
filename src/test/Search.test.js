@@ -5,9 +5,10 @@ import Search from '../components/Search';
 
 describe('Search component', () => {
   let wrapper;
-  let filterCards = jest.fn();
+  let filterCards;
 
   beforeEach(() => {
+    filterCards = jest.fn();
     wrapper = shallow(<Search filterCards={filterCards} />);
   });
 
@@ -29,11 +30,11 @@ describe('Search component', () => {
     expect(wrapper.state().searchValue).toEqual('Denver');
   });
 
-  it.skip('should call the filterCards function', () => {
+  it('should call the filterCards function', () => {
     wrapper
       .find('.search-input')
       .simulate('change', { target: { name: 'searchValue', value: 'Denver' } });
 
-    expect(wrapper.props().searchValue).toHaveBeenCalled();
+    expect(filterCards).toHaveBeenCalled();
   });
 });
