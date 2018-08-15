@@ -10,16 +10,18 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: new DistrictRepository(kinderData).findAllMatches(`${this.state.userInput}`),
-      userInput: ''
+      data: this.handleSearch()
     };
   }
 
   handleSearch = (e) => {
-    const {value, name} = e.target;
-    this.setState({
-      [name]:value
-    });
+    if (e) {
+      this.setState({
+        data: new DistrictRepository(kinderData).findAllMatches(`${e? e.target.value : ''}`)
+      });
+    } else {
+      return new DistrictRepository(kinderData).findAllMatches();
+    }
   }
 
   render() {
@@ -29,8 +31,6 @@ class App extends Component {
         <input 
           onChange={this.handleSearch}
           className='search-bar' 
-          value={this.state.search}
-          name='userInput'
           placeholder='Search'
         />
         <CardContainer schoolData={this.state.data} />
