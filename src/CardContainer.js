@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from './Card'
 import './CardContainer.css'
+import PropType from 'prop-types'
 
 const CardContainer = ({ data }) => { 
   let districtKeys = Object.values(data)
@@ -18,6 +19,11 @@ const CardContainer = ({ data }) => {
       {displayCards}
     </div>
   )
+}
+
+CardContainer.propTypes = {
+  data: PropType.array.isRequired,  
+  displayCards: PropType.func
 }
 
 export default CardContainer

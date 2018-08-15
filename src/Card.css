@@ -1,3 +1,10 @@
+.cardHeader {
+  font-size: 1em;
+  padding: 5%;
+}
+
+
+
 .card { 
   display: flex;
   align-items: center;

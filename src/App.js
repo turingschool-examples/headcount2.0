@@ -2,18 +2,17 @@ import React, { Component } from 'react';
 import DistrictRepository from './helper'
 import './App.css';
 import kinderData from './data/kindergartners_in_full_day_program.js';
-import CardContainer from './CardContainer'
-import Search from './Search'
+import CardContainer from './CardContainer';
+import Search from './Search';
 
-const allDistricts = new DistrictRepository(kinderData)
+const allDistricts = new DistrictRepository(kinderData);
 
 class App extends Component {
   constructor(props) {
-    super(props)
-    // this.allDistricts = new DistrictRepository(kinderData)
+    super(props);
     this.state = {
-          data: []
-    }
+      data: []
+    };
   }
 
   componentDidMount() {
@@ -21,10 +20,9 @@ class App extends Component {
   }
 
   updateCards = (string) => {
-    let cardData = allDistricts.findAllMatches(string)
-
+    let data = allDistricts.findAllMatches(string);
     this.setState({
-      data: cardData
+      data
     }) 
   }
 
@@ -33,7 +31,7 @@ class App extends Component {
       <div className="headerContainer">
         <h1>HeadCount 2.0</h1>
         <Search updateCards={this.updateCards}/>
-        <CardContainer data={ this.state.data }/>
+        <CardContainer data={this.state.data}/>
       </div>
     );
   }
