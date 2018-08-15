@@ -3,4 +3,5 @@ div {
   flex-wrap: wrap;
   width: 100vw;
   justify-content: space-around;
+  background: burlywood;
 }
