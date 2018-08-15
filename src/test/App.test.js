@@ -31,4 +31,8 @@ describe('App component', () => {
   it('should render the DistrictContainer component', () => {
     expect(wrapper.find('DistrictContainer').length).toEqual(1);
   });
+
+  it('should match the snapshot', () => {
+    expect(wrapper.html()).toMatchSnapshot();
+  });
 });
