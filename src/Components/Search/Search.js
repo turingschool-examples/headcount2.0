@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import './Search.css';
-import kinderData from './data/kindergartners_in_full_day_program.js';
+import kinderData from '../../data/kindergartners_in_full_day_program.js';
 
 class Search extends Component {
-	
-	
-
 	render() {
 		return (
 			<div>
 				<input 
+					placeholder="Find district."
 					type="text"
 					className="search-input"
 					name="search"
