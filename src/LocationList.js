@@ -1,7 +1,8 @@
 import React from 'react';
+import Search from './Search';
 
-const LocationList = ({ locations, selectLocation }) => {
-    const locationButtons = locations.map((location, i) => (
+const LocationList = ({ displayedLocations, selectLocation, searchLocations }) => {
+    const locationButtons = displayedLocations.map((location, i) => (
         <button key={i}
             name={location}
             className='LocationList__btn'
@@ -14,6 +15,7 @@ const LocationList = ({ locations, selectLocation }) => {
 
     return (
         <aside className='LocationList'>
+            <Search searchLocations={searchLocations} />
             {locationButtons}
         </aside>
     )

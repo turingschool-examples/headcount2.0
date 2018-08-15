@@ -37,4 +37,20 @@ export default class DistrictRepository {
 
         return matchingLocations;
     }
+
+    findAverage = (location) => {
+        const locationStats = this.stats[location].stats;
+        const sumTotal = Object.keys(locationStats).reduce((sum, year) => {
+            sum += locationStats[year];
+            return sum;
+        }, 0)
+        const average = sumTotal / Object.keys(locationStats).length;
+        const roundedAverage = Math.round(average * 1000) / 1000
+
+        return roundedAverage;
+    }
+
+    compareDistrictAverages = (locationA, locationB) => {
+
+    }
 }
