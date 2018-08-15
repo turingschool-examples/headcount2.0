@@ -1,7 +1,6 @@
 div {
   display: flex;
-  /* flex-flow: row-wrap; */
-  /* flex-direction: column; */
   flex-wrap: wrap;
   width: 100vw;
+  justify-content: space-around;
 }
