@@ -34,4 +34,8 @@ class Search extends Component {
   }
 }
 
+Search.propTypes = {
+  filterCards: PropTypes.func.isRequired
+};
+
 export default Search;
