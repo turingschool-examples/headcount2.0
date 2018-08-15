@@ -4,17 +4,18 @@ const LocationList = ({ locations, selectLocation }) => {
     const locationButtons = locations.map((location, i) => (
         <button key={i}
             name={location}
-            onClick={() => selectLocation(location)} >
+            className='LocationList__btn'
+            onClick={() => {
+                selectLocation(location)
+            }} >
             {location}
         </button>
     ))
 
     return (
-        <div>
-            <aside>
-                {locationButtons}
-            </aside>
-        </div>
+        <aside className='LocationList'>
+            {locationButtons}
+        </aside>
     )
 }
 

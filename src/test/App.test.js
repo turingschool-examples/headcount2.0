@@ -44,16 +44,14 @@ describe('App', () => {
     expect(wrapper.state('cards')).toEqual(expected)
   });
 
-  it('should not update state with a card if the card already exists in the cards array', () => {
+  it('should remove card from cards array if selectedLocation is called and it is already in the array', () => {
     wrapper.instance().selectLocation('COLORADO')
 
     expect(wrapper.state('cards').length).toEqual(1)
 
     wrapper.instance().selectLocation('COLORADO')
-    wrapper.instance().selectLocation('COLORADO')
-    wrapper.instance().selectLocation('COLORADO')
 
-    expect(wrapper.state('cards').length).toEqual(1)
+    expect(wrapper.state('cards').length).toEqual(0)
   })
 
   it('should not update state with a card if the cards array already contains two cards', () => {
