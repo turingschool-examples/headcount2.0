@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Card.css';
 
 const Card = ({location, stats}) => {
@@ -9,10 +10,13 @@ const Card = ({location, stats}) => {
 			<p className="stats">{displayStats}</p>
 
 		</div>
-
 	) 
-
-
 }
+
+Card.propTypes = {
+	location: PropTypes.string.isRequired, 
+	stats: PropTypes.object.isRequired
+}
+
 
 export default Card;

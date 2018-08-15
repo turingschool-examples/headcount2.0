@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Search.css';
+import PropTypes from 'prop-types';
 import kinderData from '../../data/kindergartners_in_full_day_program.js';
 
 class Search extends Component {
@@ -17,8 +18,10 @@ class Search extends Component {
 			</div>
 		)
 	}
+}
 
-
+Search.propTypes = {
+	filterLocations: PropTypes.func.isRequired
 }
 
 
