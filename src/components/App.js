@@ -25,8 +25,7 @@ class App extends Component {
     const districts = category.findAllMatches();
     this.setState({
       category,
-      districts,
-      loading: false
+      districts
     });
   };
 
@@ -44,10 +43,7 @@ class App extends Component {
         <div className="container">
           <h1>Welcome To Headcount 2.0</h1>
           <Search filterCards={this.filterCards} />
-          <DistrictContainer
-            districts={this.state.districts}
-            loading={this.state.loading}
-          />
+          <DistrictContainer districts={this.state.districts} />
         </div>
       </div>
     );
