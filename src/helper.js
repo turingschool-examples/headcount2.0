@@ -17,23 +17,22 @@ export default class DistrictRepository {
         }, {})
     }
 
-    findByName = (name) => {
-      if(!name) {
-       return
-      }
+    findByName = (name = '') => {
       name = name.toUpperCase();
       return this.stats[name];
     }
 
     findAllMatches = (name) => {
         if (!name) {
-            const objectLength  = Object.keys(this.stats);
-            return objectLength
+            const allDistricts  = Object.keys(this.stats);
+            return allDistricts
         } else if (!Object.keys(this.stats).includes(name.toUpperCase())) {
             return []
         } else {
             name = name.toUpperCase();
-            return Object.keys(this.stats[name]);
+            const allMatches = Object.keys(this.stats).filter(stat => this.stats[stat].location.includes(name));
+            console.log(allMatches);
+            return [...allMatches];
         }
     }
 }

@@ -1,0 +1,17 @@
+article {
+  border: 1px solid black;
+  width: 20rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  height: 28rem;
+  box-shadow: 10px 5px 5px #8394AD;
+}
+
+.red-text {
+  color: red;
+}
+
+.green-text {
+  color: green;
+}
+
