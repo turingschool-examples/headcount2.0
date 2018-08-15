@@ -1,0 +1,6 @@
+div {
+  display: flex;
+  flex-flow: row-wrap;
+  flex-direction: column;
+  width: 100vw;
+}

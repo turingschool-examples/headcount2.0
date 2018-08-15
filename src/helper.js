@@ -30,7 +30,7 @@ export default class DistrictRepository {
             return []
         } else {
             name = name.toUpperCase();
-            return Object.keys(this.stats[name]);
+            return [this.stats[name].location, this.stats[name].stats];
         }
     }
 }

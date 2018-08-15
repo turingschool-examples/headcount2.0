@@ -1,5 +1,7 @@
 div {
   border: 1px solid black;
+  width: 20rem;
+  text-align: center;
 }
 
 .red-text {
