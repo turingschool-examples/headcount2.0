@@ -1,9 +1,9 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import Search from "../Components/Search";
 
 describe("Search", () => {
   let shallowWrap;
-  let mountWrap;
 
   beforeEach(() => {
     shallowWrap = shallow(<Search handleSubmit={jest.fn} />);
@@ -25,7 +25,7 @@ describe("Search", () => {
 
     // const spy = jest.spyOn(Search.prototype, "suggestDistricts");
     // const mockfn = jest.fn();
-    // const wrapper = shallow(<Search handleChange={mockfn} />);
+    // const wrapper = mount(<Search handleChange={mockfn} />);
     // wrapper.instance().suggesDistricts();
     // expect(spy).toHaveBeenCalled();
   });
@@ -83,6 +83,17 @@ describe("Search", () => {
   it("should render form container with input", () => {
     expect(shallowWrap.find("form").length).toEqual(1);
     expect(shallowWrap.find("input").length).toEqual(1);
+  });
+
+  it("should change state onChange of input field", () => {
+    let eventOne = { target: { value: "Academy" } };
+    let eventTwo = { target: { value: "Akron" } };
+
+    let userInput = shallowWrap.find("input");
+    userInput.simulate("change", eventOne);
+    expect(shallowWrap.state().userInput).toEqual("Academy");
+    userInput.simulate("change", eventTwo);
+    expect(shallowWrap.state().userInput).toEqual("Akron");
   });
 
   it("should suggest districts based on user input", () => {

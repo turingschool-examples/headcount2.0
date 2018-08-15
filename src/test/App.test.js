@@ -3,7 +3,6 @@ import App from "../Components/App";
 
 describe("App", () => {
   let shallowWrap;
-  let mountWrap;
   beforeEach(() => {
     shallowWrap = shallow(<App />);
   });
