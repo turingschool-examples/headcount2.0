@@ -2,27 +2,26 @@ import React from "react";
 import "../css/DistrictCard.css";
 import PropTypes from "prop-types";
 
-const DistrictCard = ({ schoolData }) => {
+const DistrictCard = ({ location, stats }) => {
+  const districtYears = Object.keys(stats).map((year, index) => (
+    <article
+      className={stats[year] < 0.5 ? "below-five" : "above-five"}
+      key={index}
+    >
+      {[year]}: {stats[year]}
+    </article>
+  ));
   return (
     <div className="each-card">
-      <h1>{schoolData.location}</h1>
-      {Object.keys(schoolData.stats).map((year, index) => {
-        const average = schoolData.stats[year];
-        return (
-          <section
-            className={average < 0.5 ? "below-five" : "above-five"}
-            key={index}
-          >
-            {year}: {average}
-          </section>
-        );
-      })}
+      <h1>{location}</h1>
+      <section>{districtYears}</section>
     </div>
   );
 };
 
 DistrictCard.propTypes = {
-  schoolData: PropTypes.object.isRequired
+  location: PropTypes.string,
+  stats: PropTypes.object
 };
 
 export default DistrictCard;

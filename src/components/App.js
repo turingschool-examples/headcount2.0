@@ -10,23 +10,19 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      schoolData: {},
-      cards: schoolData.stats
+      schoolData: []
     };
   }
 
   componentDidMount() {
-    // const schoolData = new DistrictRepository(kinderData);
-    this.setState({
-      schoolData
-    });
+    this.findDistricts();
   }
 
   findDistricts = district => {
-    const foundDistricts = schoolData.findByName(district);
+    const foundDistricts = schoolData.findAllMatches(district);
     if (foundDistricts) {
       this.setState({
-        cards: { ...foundDistricts }
+        schoolData: foundDistricts
       });
     }
   };

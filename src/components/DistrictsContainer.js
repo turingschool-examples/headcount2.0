@@ -4,19 +4,14 @@ import "../css/DistrictsContainer.css";
 import PropTypes from "prop-types";
 
 const DistrictsContainer = ({ schoolData }) => {
-  let districtCard;
-  if (schoolData.stats) {
-    districtCard = Object.keys(schoolData.stats).map((district, index) => {
-      return (
-        <DistrictCard schoolData={schoolData.stats[district]} key={index} />
-      );
-    });
-  }
+  const districtCard = schoolData.map((district, index) => (
+    <DistrictCard {...district} key={index} />
+  ));
   return <div className="district-container">{districtCard}</div>;
 };
 
 DistrictsContainer.propTypes = {
-  schoolData: PropTypes.object.isRequired
+  schoolData: PropTypes.array.isRequired
 };
 
 export default DistrictsContainer;

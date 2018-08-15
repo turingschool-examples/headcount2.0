@@ -19,7 +19,7 @@ class SearchForm extends Component {
 
   render() {
     return (
-      <form>
+      <form onSubmit={event => event.preventDefault()}>
         <input
           className="search-input"
           type="text"
