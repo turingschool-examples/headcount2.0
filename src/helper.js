@@ -9,10 +9,7 @@ export default class DistrictRepository {
       const location = Location.toUpperCase();
       let yearData = Math.round(Data * 1000) / 1000;
       if (!cleanData[location]) {
-        cleanData[location] = {
-          location,
-          stats: {}
-        };
+        cleanData[location] = { location, stats: {} };
       }
       cleanData[location].stats[TimeFrame] = isNaN(yearData) ? 0 : yearData;
       return cleanData;
