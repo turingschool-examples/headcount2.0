@@ -15,7 +15,7 @@ const CardContainer = ({ data }) => {
 
   return(
     <div className="cardContainer">
-      <h1>{displayCards}</h1>
+      {displayCards}
     </div>
   )
 }
