@@ -1,4 +1,4 @@
-div {
+article {
   border: 1px solid black;
   width: 20rem;
   text-align: center;
@@ -11,3 +11,4 @@ div {
 .green-text {
   color: green;
 }
+
