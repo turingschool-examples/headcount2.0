@@ -33,4 +33,13 @@ export default class DistrictRepository {
     }, 0) / Object.keys(district).length;
     return Math.round(average * 1000) / 1000;
   }
+
+  compareDistrictAverages = (d1, d2) => {
+    let resultObj = {};
+    resultObj[d1.toUpperCase()] = this.findAverage(d1);
+    resultObj[d2.toUpperCase()] = this.findAverage(d2);
+    const rawComparisonData = this.findAverage(d1)/this.findAverage(d2);
+    resultObj.compared = Math.round(rawComparisonData * 1000) / 1000;
+    return resultObj;
+  }
 }
