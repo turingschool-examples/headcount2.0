@@ -5,7 +5,7 @@ export default class DistrictRepository {
   
   removeDuplicates = (districtData) => {
     return districtData.reduce((cleanData, districtData) => {
-      if (!cleanData[districtData.Location]) {
+      if (!cleanData[districtData.Location.toUpperCase()]) {
         cleanData[districtData.Location.toUpperCase()] = {
           location: districtData.Location.toUpperCase(),
           stats: {},

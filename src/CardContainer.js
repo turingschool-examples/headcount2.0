@@ -8,11 +8,12 @@ export const CardContainer = (districts, id) => {
       location={district.location}
       stats={district.stats}
       key={id}
-  />))
+    />
+  ))
   
   return (
     <div>
-      {displayCards}
+      { displayCards }
     </div>
   )
 }

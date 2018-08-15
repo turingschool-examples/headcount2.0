@@ -5,8 +5,6 @@ import DistrictRepository from './helper'
 import kinderData from './data/kindergartners_in_full_day_program.js';
 
 const district = new DistrictRepository(kinderData)
-// console.log(district.data)
-
 
 class App extends Component {
   constructor() {
