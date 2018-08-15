@@ -1,0 +1,30 @@
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.card {
+  padding: 1em;
+  margin: 1em;
+  border: black solid 2px;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-header {
+  width: 10em;
+  height: 2.5em;
+  text-align: center;
+  margin: 0;
+}
+
+.stats-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
