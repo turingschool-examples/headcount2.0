@@ -1,4 +1,10 @@
 .cardContainer {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 0 auto;
   width: 100%;
+
 }
+
