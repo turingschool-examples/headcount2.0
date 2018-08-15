@@ -3,7 +3,7 @@ import './Card.css';
 
 export const Card = ({location, stats}) => {
   const displayStats = Object.entries(stats).map(data => (
-    <li className={`${data[1] < .5 ? 'red' : 'green' }`}>{data[0]}: {data[1]}</li>
+    <li key={Date.now() * Math.random()} className={`${data[1] < .5 ? 'red' : 'green' }`}>{data[0]}: {data[1]}</li>
   ));
 
   return (
