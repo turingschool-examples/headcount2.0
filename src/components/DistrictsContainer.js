@@ -1,6 +1,6 @@
 import React from "react";
 import DistrictCard from "./DistrictCard";
-import "./DistrictsContainer.css";
+import "../css/DistrictsContainer.css";
 import PropTypes from "prop-types";
 
 const DistrictsContainer = ({ schoolData }) => {

@@ -1,5 +1,6 @@
 import React from "react";
-import "./DistrictCard.css";
+import "../css/DistrictCard.css";
+import PropTypes from "prop-types";
 
 const DistrictCard = ({ schoolData }) => {
   return (
@@ -18,6 +19,10 @@ const DistrictCard = ({ schoolData }) => {
       })}
     </div>
   );
+};
+
+DistrictCard.propTypes = {
+  schoolData: PropTypes.object.isRequired
 };
 
 export default DistrictCard;
