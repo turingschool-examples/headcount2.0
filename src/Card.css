@@ -1,4 +1,7 @@
 .card { 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   width: 15%;
   border: 1px solid grey;
   margin: 0 auto;
@@ -8,8 +11,11 @@
 li {
   list-style-type: none;
   font-size: 1em;
+}
+
+ul {
   text-align: left;
-  padding-left: 35%;
+  padding: 0;
 }
 
 .lessThan {
