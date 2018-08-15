@@ -2,13 +2,13 @@ import React from 'react';
 import Card from './Card';
 
 const CardContainer = ({districtData}) => {
-	const districtKeys = Object.keys(districtData.stats)
+	const districtKeys = Object.values(districtData)
 	
 	const displayCards = districtKeys.map(district => (
 		// let location = districtData.stats[district].location
 		<Card
-			location = {districtData.stats[district].location}
-			stats = {(districtData.stats[district].stats)}
+			location = {district.location}
+			stats = {district.stats}
 		/>
 	))
 
