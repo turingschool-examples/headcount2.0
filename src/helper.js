@@ -29,13 +29,15 @@ export default class DistrictRepository {
   };
 
   findAllMatches = name => {
-    const nameKeys = Object.keys(this.stats);
+    const nameKeys = Object.keys(this.stats).map(stat => {
+      return this.stats[stat];
+    });
 
     if (!name) {
       return nameKeys;
     }
     return nameKeys.filter(district => {
-      return district.includes(name.toUpperCase());
+      return district.location.includes(name.toUpperCase());
     });
   };
 }
