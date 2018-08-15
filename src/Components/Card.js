@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 
 const Card = ({ location, stats}) => {
   const displayStats = Object.entries(stats).map((stat, i) => {
-    return <div className="stat" key={`stat-${i}`}>{stat[0]} : {stat[1]}</div>
+    const lessThan = stat[1] < .5 ? 'stat less-than' : 'stat';
+
+    return <div className={lessThan} key={`stat-${i}`}>{stat[0]} : {stat[1]}</div>
   })
   
   return (

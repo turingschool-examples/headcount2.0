@@ -7,8 +7,8 @@ import kinderData from '../data/kindergartners_in_full_day_program';
 const districtRepo = new DistrictRepository(kinderData);
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       data: districtRepo.stats,
       selectedCards: []
