@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import DistrictRepository from './helper.js';
 import './App.css';
-import CardContainer from './CardContainer';
-import Search from './Search';
-import kinderData from './data/kindergartners_in_full_day_program.js';
+import CardContainer from '../CardContainer/CardContainer';
+import Search from '../Search/Search';
+import kinderData from '../../data/kindergartners_in_full_day_program.js';
 
 
 class App extends Component {
