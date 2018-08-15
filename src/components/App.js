@@ -33,7 +33,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="wrapper">
         <h1 className="header">Welcome To Headcount 2.0</h1>
         <SearchForm findDistricts={this.findDistricts} />
         <DistrictsContainer schoolData={this.state.schoolData} />

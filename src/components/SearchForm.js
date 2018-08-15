@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import "../css/Search.css";
 
 class SearchForm extends Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class SearchForm extends Component {
     return (
       <form>
         <input
+          className="search-input"
           type="text"
           placeholder="Enter a search here"
           value={this.state.district}
