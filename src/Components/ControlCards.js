@@ -3,7 +3,6 @@ import { DistrictCard } from "./DistrictCard";
 import { ComparisonCard } from "./ComparisonCard";
 
 export const ControlCards = ({ comparisonData, cardClick }) => {
-  console.log(cardClick);
   const controlCards = Object.keys(comparisonData).map((district, i) => {
     if (comparisonData[district].hasOwnProperty("location")) {
       return (
@@ -15,7 +14,12 @@ export const ControlCards = ({ comparisonData, cardClick }) => {
         />
       );
     }
-    return <ComparisonCard comparisonData={comparisonData[district]} />;
+    return (
+      <ComparisonCard
+        key={Date.now()}
+        comparisonData={comparisonData[district]}
+      />
+    );
   });
   return <div className="control-cards">{controlCards} </div>;
 };

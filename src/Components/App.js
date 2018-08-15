@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import DistrictRepository from "./helper";
-import kindergarners from "./data/kindergartners_in_full_day_program";
-import PropTypes from "prop-types";
+import DistrictRepository from "../helper";
+import kindergarners from "../data/kindergartners_in_full_day_program";
+// import PropTypes from "prop-types";
 import Search from "./Search";
 import { DistrictCardContainer } from "./DistrictCardContainer";
 import { ControlCards } from "./ControlCards";
@@ -52,7 +52,6 @@ class App extends Component {
       const selectedDistricts = [...this.state.selectedDistricts, location];
       this.setState({ selectedDistricts });
     }
-    console.log(this.state.selectedDistricts);
   };
 
   compareDistricts = (districtOne, districtTwo) => {

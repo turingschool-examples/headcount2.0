@@ -1,5 +1,5 @@
 import React from "react";
-import App from "../App";
+import App from "../Components/App";
 
 describe("App", () => {
   let shallowWrap;
@@ -111,19 +111,19 @@ describe("App", () => {
     expect(shallowWrap.state().comparisonData).toEqual(result);
   });
 
+  it.skip("should render a search Component, ControlCards, and districtCardContainer", () => {
+    shallowWrap.setState({
+      comparisonData: { yes: "no" },
+      districts: [1, 2, 3]
+    });
+    shallowWrap.update();
+    console.log(shallowWrap.props().children.map(child => console.log(child)));
+
+    expect(shallowWrap.find("Search").length).toEqual(1);
+    expect(shallowWrap.find("ControlCards").length).toEqual(1);
+    expect(shallowWrap.find("DistrictCardContainer").length).toEqual(1);
+  });
   it("should match snap shot", () => {
     expect(shallowWrap).toMatchSnapshot();
-  });
-
-  it("should match snap shot", () => {
-    expect(shallowWrap.state().selectedDistricts.length).toEqual(0);
-
-    shallowWrap.instance().selectCard("Colorado");
-    expect(shallowWrap.state().selectedDistricts.length).toEqual(1);
-
-    shallowWrap.instance().selectCard("ACADEMY 20");
-    expect(shallowWrap.state().selectedDistricts.length).toEqual(2);
-
-    expect(shallowWrap.compareDistricts()).toHaveBeenCalled();
   });
 });

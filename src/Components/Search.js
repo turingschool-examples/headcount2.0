@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import DistrictRepository from "./helper";
-import kindergarners from "./data/kindergartners_in_full_day_program";
+import DistrictRepository from "../helper";
+import kindergarners from "../data/kindergartners_in_full_day_program";
 
 export default class Search extends Component {
   constructor(props) {
@@ -12,8 +12,8 @@ export default class Search extends Component {
     this.districtRepository = new DistrictRepository(kindergarners);
   }
 
-  handleChange = ({ name, value }) => {
-    this.setState({ [name]: value });
+  handleChange = ({ value }, name) => {
+    this.setState({ userInput: value });
     this.suggestDistricts(this.state.userInput);
   };
 
@@ -38,8 +38,7 @@ export default class Search extends Component {
         <form>
           <input
             placeholder="Search District"
-            name="userInput"
-            onChange={e => this.handleChange(e.target)}
+            onChange={e => this.handleChange(e.target, "userInput")}
             value={this.state.userInput}
           />
           {/* <button onClick={e => this.searchDistrict(e)}>Search</button> */}

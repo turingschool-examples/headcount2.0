@@ -1,7 +1,7 @@
 import React from "react";
-import "./CSS/DistrictCard.css";
+import "../CSS/DistrictCard.css";
 
-export const DistrictCard = ({ location, stats, selectCard, cardClick }) => {
+export const DistrictCard = ({ location, stats, selectCard }) => {
   return (
     <div className="district-card">
       <h1 className="district-location">{location}</h1>

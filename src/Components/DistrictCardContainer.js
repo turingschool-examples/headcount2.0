@@ -1,7 +1,7 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 import { DistrictCard } from "./DistrictCard";
-import "./CSS/DistrictCardContainer.css";
+import "../CSS/DistrictCardContainer.css";
 
 export const DistrictCardContainer = ({ districts, selectCard }) => {
   const districtCard = districts.map((district, i) => {
@@ -10,8 +10,9 @@ export const DistrictCardContainer = ({ districts, selectCard }) => {
   return <div className="district-card-container"> {districtCard} </div>;
 };
 
-// const { shape, string, objectOf, number, func, object } = PropTypes;
+const { shape, string, objectOf, number, func, object, array } = PropTypes;
 
 // DistrictCardContainer.propTypes = {
-//   location: PropTypes.array.isRequired
+//   districts: array.isRequired,
+//   selectCard: PropTypes.func
 // };

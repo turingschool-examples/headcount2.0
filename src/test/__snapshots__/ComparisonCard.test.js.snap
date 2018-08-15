@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComparisonCard should match snapshot 1`] = `
+<div>
+  <p>
+    ACADEMY 20
+     :
+    <span>
+       
+      0.407
+    </span>
+  </p>
+  <container>
+    ----
+    0.768
+    ----
+  </container>
+  <p>
+    COLORADO
+     :
+    <span>
+       
+      0.53
+    </span>
+  </p>
+</div>
+`;
