@@ -7,7 +7,7 @@ const Card = ({ location, stats }) => {
   return(
   <div className="card">  
     <h4>{location}</h4>
-    <p>{displayStats}</p>
+    <ul>{displayStats}</ul>
   </div>
   )
 }
