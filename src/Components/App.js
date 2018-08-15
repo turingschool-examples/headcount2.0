@@ -21,7 +21,11 @@ class App extends Component {
     this.updateCards()
   }
 
- 
+  updateCards = (input) => {
+    const data = districtRepo.findAllMatches(input);
+
+    this.setState({ data })
+  }
 
   render() {
     return (
@@ -33,7 +37,7 @@ class App extends Component {
           data={ this.state.data }
           selectedCards={ this.state.selectedCards} 
         /> */}
-        <Search data={ this.state.data } />
+        <Search updateCards={ this.updateCards } />
         <CardCont data={ this.state.data } />
       </div>
     );
