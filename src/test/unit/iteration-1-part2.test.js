@@ -17,5 +17,4 @@ describe('DistrictRepository iteration 1 - part 2', () =>  {
     expect(district.findAllMatches('packers').length).toBe(0);
     expect(district.findAllMatches('df').length).toBe(0);
   });
-
 });

@@ -1,8 +1,8 @@
 export default class DistrictRepository {
   constructor(data) {
-    this.stats = this.removeDuplicates(data) || []
-    console.log(typeof this.stats)
+    this.data = this.removeDuplicates(data) || []
   }
+  
   removeDuplicates = (districtData) => {
     return districtData.reduce((cleanData, districtData) => {
       if (!cleanData[districtData.Location]) {
@@ -19,7 +19,7 @@ export default class DistrictRepository {
   findByName = (name) => {
     if (name) {
       const newName = name.toUpperCase()
-      return this.stats[newName]
+      return this.data[newName]
     }
   }
 
