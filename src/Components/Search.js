@@ -12,6 +12,7 @@ class Search extends Component {
     this.setState({ input: e.target.value })
   }
 
+  
   render() {
     return (
       <form onSubmit={(e) => this.handleSubmit(e)}>
