@@ -14,12 +14,12 @@ class App extends Component {
     this.state = {
       locations: {},
       displayedLocations: [],
-      cards: []
+      cards: [],
+      averages: {}
     }
   }
 
   componentDidMount() {
-    ;
     this.setState({ locations: district.stats, displayedLocations: district.findAllMatches() })
   }
 
@@ -38,7 +38,7 @@ class App extends Component {
     if (!this.state.cards.includes(locationData) && this.state.cards.length < 2) {
       this.setState({ cards: [...this.state.cards, locationData] })
     }
-
+    this.compareAverages(location);
   }
 
   searchLocations = (e) => {
@@ -47,13 +47,25 @@ class App extends Component {
     this.setState({ displayedLocations: matchingDistricts })
   }
 
+  compareAverages = (location) => {
+    if (this.state.cards.length > 0) {
+      const averages = district.compareDistrictAverages(this.state.cards[0].location, location)
+      this.setState({ averages })
+      console.log(averages)
+    } else {
+      this.setState({ averages: {} })
+    }
+
+  }
+
   render() {
     return (
       <div className='App'>
         <LocationList displayedLocations={this.state.displayedLocations}
           selectLocation={this.selectLocation}
           searchLocations={this.searchLocations} />
-        <CardContainer cards={this.state.cards} />
+        <CardContainer cards={this.state.cards}
+          averages={this.state.averages} />
       </div>
     );
   }

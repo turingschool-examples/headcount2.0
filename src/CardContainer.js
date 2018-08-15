@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card';
 
-const CardContainer = ({ cards }) => {
+const CardContainer = ({ cards, averages }) => {
     const displayCards = cards.map((card, i) => (
         <Card {...card} key={i} />
     ));
@@ -12,6 +12,7 @@ const CardContainer = ({ cards }) => {
             <section className='CardContainer__section'>
                 {displayCards}
             </section>
+            <p>{averages.compared}</p>
         </div>
     )
 }
