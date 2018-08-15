@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   componentDidUpdate() {
-    if (this.state.selectedDistricts.length === 1) {
+    if (this.state.selectedDistricts.length === 2) {
       this.compareDistricts(
         this.state.selectedDistricts[0],
         this.state.selectedDistricts[1]
@@ -41,20 +41,18 @@ class App extends Component {
 
   selectCard = location => {
     if (!this.state.cardClick[location]) {
-      this.setState({
-        cardClick: { ...this.state.cardClick, [location]: true }
-      });
-      console.log(location);
+      const cardClick = { ...this.state.cardClick };
+      cardClick[location] = true;
+      this.setState({ cardClick });
     } else {
       delete this.state.cardClick[location];
+      console.log(this.state.cardClick);
     }
-    if (
-      this.state.selectedDistricts.length <= 1 &&
-      this.state.cardClick[location] === true
-    ) {
+    if (this.state.selectedDistricts.length <= 1) {
       const selectedDistricts = [...this.state.selectedDistricts, location];
       this.setState({ selectedDistricts });
     }
+    console.log(this.state.selectedDistricts);
   };
 
   compareDistricts = (districtOne, districtTwo) => {
