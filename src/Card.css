@@ -1,8 +1,8 @@
-.card {
-  display: block;
+.card { 
   width: 20%;
   border: 1px solid grey;
   text-align: center;
+  margin: 0 auto;
 }
 
 li {
