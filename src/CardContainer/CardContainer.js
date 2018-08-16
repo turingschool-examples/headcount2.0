@@ -7,7 +7,7 @@ import './CardContainer.css';
 export const CardContainer = ({schoolData}) => {
   const displayCards = schoolData.map((schoolData) => (
     <Card
-      key={schoolData.location}
+      key={Date.now() * Math.random()}
       location={schoolData.location}
       stats={schoolData.stats}
     />
