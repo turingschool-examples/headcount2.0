@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
+
 import Card from './Card.js';
 import './DistrictContainer.css';
 
 export default class DistrictContainer extends Component {
 
   render() {
-  
-    // const districtArray = Object.keys(this.props.data).map(district => {
-    //   return this.props.data[district];
-    // });
     return (
       <div className="district-card-container">
-        {this.props.districts.map((district, index) => <Card district={district} key={index} />)}
+        {this.props.districts.map((district, index) => <Card 
+          district={district} 
+          key={index}
+          selectDistrict={this.props.selectDistrict}/>)}
       </div>
     );
   }
-
 }
