@@ -1,8 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './App';
+import { shallow, mount } from 'enzyme';
+import CardContainer from './CardContainer'
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  // ReactDOM.render(<App />, div);
-});
+describe('App', () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<App />)
+  })
+
+  it('matches the snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  })
+
+it('renders CardContainer with the correct props', () => {
+
+  expect(wrapper.find(CardContainer).prop('data')).toEqual([])
+})
+
+}) 
