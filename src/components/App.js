@@ -12,7 +12,8 @@ class App extends Component {
     this.state = {
       category: {},
       districts: [],
-      loading: true
+      loading: true,
+      selectedDistricts: []
     };
   }
 
@@ -37,13 +38,26 @@ class App extends Component {
     });
   };
 
+  addSelected = location => {
+    const district = this.state.districts.find(
+      district => district.location === location
+    );
+    const selectedDistricts = [...this.state.selectedDistricts, district];
+    this.setState({
+      selectedDistricts
+    });
+  };
+
   render() {
     return (
       <div className="app">
         <div className="container">
           <h1>Welcome To Headcount 2.0</h1>
           <Search filterCards={this.filterCards} />
-          <DistrictContainer districts={this.state.districts} />
+          <DistrictContainer
+            districts={this.state.districts}
+            addSelected={this.addSelected}
+          />
         </div>
       </div>
     );
