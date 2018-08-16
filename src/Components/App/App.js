@@ -23,7 +23,7 @@ class App extends Component {
 	filterLocations = (input) => {
 		let filteredDistricts = this.kinderDistrictData.findAllMatches(input);
 		this.setState({districtData: filteredDistricts})
-		console.log(filteredDistricts)
+		// console.log(filteredDistricts)
 	}
   
   render() {
