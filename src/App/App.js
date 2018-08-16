@@ -10,17 +10,23 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: this.handleSearch()
+      data: []
     };
   }
 
-  handleSearch = (e) => {
-    if (e) {
+  componentDidMount() {
+    this.handleUpdate();
+  }
+
+  handleUpdate = (string) => {
+    if (string) {
       this.setState({
-        data: new DistrictRepository(kinderData).findAllMatches(`${e? e.target.value : ''}`)
+        data: new DistrictRepository(kinderData).findAllMatches(string)
       });
     } else {
-      return new DistrictRepository(kinderData).findAllMatches();
+      this.setState({
+        data: new DistrictRepository(kinderData).findAllMatches()
+      });
     }
   }
 
@@ -29,7 +35,7 @@ class App extends Component {
       <div>
         <h1 className='main-heading'>HeadCount 2.0</h1>
         <input 
-          onChange={this.handleSearch}
+          onChange={(event) => this.handleUpdate(event.target.value)}
           className='search-bar' 
           placeholder='Search'
         />
