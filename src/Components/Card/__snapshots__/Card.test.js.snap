@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CARD should match the snapshot with all data passed in correctly 1`] = `"<div class=\\"cards\\"><h2 class=\\"location\\">COLORADO</h2><p class=\\"stats\\"><h4 class=\\"lessThan lessThan\\">key: value</h4></p></div>"`;
