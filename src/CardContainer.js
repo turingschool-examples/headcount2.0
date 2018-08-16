@@ -3,13 +3,13 @@ import Card from './Card';
 
 const CardContainer = ({ cards, averages }) => {
     const displayCards = cards.map((card, i) => (
-        <Card {...card} key={i} />
+        < Card {...card} key={i} />
     ));
 
     let displayCompared = <p></p>
 
     if (averages.compared) {
-        displayCompared = <p>COMPARED AVERAGES: {averages.compared}</p>
+        displayCompared = <p className='compared-average'>COMPARED AVERAGES: {averages.compared}</p>
     }
 
     return (
