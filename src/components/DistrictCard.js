@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../css/DistrictCard.css';
 
-const DistrictCard = ({ location, stats, toggleSelected }) => {
+const DistrictCard = ({ location, stats, selected, toggleSelected }) => {
   const yearStats = Object.keys(stats).map((yearKey, index) => (
     <p key={`${index}-${yearKey}`}>
       {yearKey} :{' '}

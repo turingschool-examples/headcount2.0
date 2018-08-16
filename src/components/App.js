@@ -66,6 +66,7 @@ class App extends Component {
           <Search filterCards={this.filterCards} />
           <ComparisonContainer
             selectedDistricts={this.state.selectedDistricts}
+            toggleSelected={this.toggleSelected}
           />
           <DistrictContainer
             districts={this.state.districts}
