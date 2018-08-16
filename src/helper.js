@@ -43,4 +43,8 @@ export default class DistrictRepository {
       return acc
     },[])
   }
+
+  compareDistrictAverages = (location1, location2) => {
+    
+  }
 }
