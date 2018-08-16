@@ -20,6 +20,10 @@ describe('App component', () => {
     expect(wrapper.state().category).not.toEqual({});
   });
 
+  it('should populate the districts array in state when the component mounts', () => {
+    expect(wrapper.state().districts).not.toEqual([]);
+  });
+
   it('should have 181 stats in category.stats state', () => {
     expect(Object.keys(wrapper.state().category.stats).length).toEqual(181);
   });
