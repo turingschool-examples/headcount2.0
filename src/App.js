@@ -34,7 +34,7 @@ class App extends Component {
     }
 
     if (!this.state.cards.includes(locationData) && this.state.cards.length === 2) {
-      this.setState({ cards: this.state.cards.shift() })
+      this.setState({ cards: [locationData] }, () => this.compareAverages(location))
     }
 
     if (!this.state.cards.includes(locationData) && this.state.cards.length < 2) {
