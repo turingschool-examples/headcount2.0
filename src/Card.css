@@ -1,0 +1,30 @@
+.cardHeader {
+  font-size: 1em;
+  padding: 5%;
+}
+
+
+
+.card { 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 15%;
+  border: 1px solid grey;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+li {
+  list-style-type: none;
+  font-size: 1em;
+}
+
+ul {
+  text-align: left;
+  padding: 0;
+}
+
+.lessThan {
+  color: red;
+}
