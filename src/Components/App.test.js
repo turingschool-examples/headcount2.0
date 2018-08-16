@@ -25,6 +25,11 @@ describe('APP', () => {
     expect(wrapper.state().data.length).toEqual(181);
   })
 
+  it('Should have a default state of data and selectedCards of empty arrays', () => {
+    expect(wrapper.state().data.length).toEqual(0);
+    expect(wrapper.state().selectedCards.length).toEqual(0);
+  })
+
   it('Should update state data when updateCards is called', () => {
     const mockData = 'COLORADO';
     const expected = [{
