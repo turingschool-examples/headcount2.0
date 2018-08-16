@@ -19,18 +19,18 @@ describe('APP', () => {
     expect(wrapper.html()).toMatchSnapshot();
   })
 
-  it('Should setState with all data when updateCards is invoked', () => {
-    wrapper.instance().updateCards();
-
-    expect(wrapper.state().data.length).toEqual(181);
-  })
-
   it('Should have a default state of data and selectedCards of empty arrays', () => {
     expect(wrapper.state().data.length).toEqual(0);
     expect(wrapper.state().selectedCards.length).toEqual(0);
   })
 
-  it('Should update state data when updateCards is called', () => {
+  it('Should setState with all data when updateCards is invoked without a parameter', () => {
+    wrapper.instance().updateCards();
+
+    expect(wrapper.state().data.length).toEqual(181);
+  })
+
+  it('Should update state with correct data data when updateCards is invoked with a parameter', () => {
     const mockData = 'COLORADO';
     const expected = [{
       "location": "COLORADO",
@@ -65,7 +65,8 @@ describe('APP', () => {
     }];
 
     wrapper.instance().updateCards(mockData);
-    expect(wrapper.state().data).toEqual(expected)
+    expect(wrapper.state().data).toEqual(expected);
+    expect(wrapper.state().data.length).toEqual(2);
   })
 
 })
