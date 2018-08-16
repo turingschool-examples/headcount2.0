@@ -3,14 +3,14 @@ import "../css/DistrictCard.css";
 import PropTypes from "prop-types";
 
 const DistrictCard = ({ location, stats }) => {
-  const districtYears = Object.keys(stats).map((year, index) => (
-    <article
-      className={stats[year] < 0.5 ? "below-five" : "above-five"}
-      key={index}
-    >
-      {[year]}: {stats[year]}
-    </article>
-  ));
+  const districtYears = Object.keys(stats).map((year, index) => {
+    const avg = stats[year];
+    return (
+      <article className={avg < 0.5 ? "below-five" : "above-five"} key={index}>
+        {[year]}: {avg}
+      </article>
+    );
+  });
   return (
     <div className="each-card">
       <h1>{location}</h1>

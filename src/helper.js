@@ -32,12 +32,24 @@ export default class DistrictRepository {
     const nameKeys = Object.keys(this.stats).map(stat => {
       return this.stats[stat];
     });
-
     if (!name) {
       return nameKeys;
     }
     return nameKeys.filter(district => {
       return district.location.includes(name.toUpperCase());
     });
+  };
+
+  findAverage = schoolDistrict => {
+    const yearArray = Object.keys(this.stats[schoolDistrict].stats);
+
+    const statsTotal = yearArray.reduce((sum, year) => {
+      const { stats } = this.stats[schoolDistrict];
+      return sum + stats[year];
+    }, 0);
+
+    const unrounded = statsTotal / yearArray.length;
+    const rounded = Math.round(unrounded * 1000) / 1000;
+    return rounded;
   };
 }
