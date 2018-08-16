@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Search.css'
+import PropType from 'prop-types'
 
 class Search extends Component {
   render() {
@@ -14,6 +15,10 @@ class Search extends Component {
       </div>
     ) 
   }
+}
+
+Search.propTypes = {
+  updateCards: PropType.func,
 }
 
 export default Search;
