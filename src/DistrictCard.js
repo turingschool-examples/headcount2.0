@@ -1,16 +1,14 @@
 import React from 'react'
+import './DistrictCard.css'
 
 export const DistrictCard = ({location, stats}) => {
   const displayStats = Object.entries(stats).map((stat) => {
-    return  <li className="statList">
-              {stat[0]}: {stat[1]}
-            </li>
-  })
+    return  <li className={stat[1] > .5 ? "statGreater" : "statLesser"}>{stat[0]}: {stat[1]}</li>})
 
   return (
-    <div className="DistrictCard">
-      <h1 className="location">{location}</h1>
-      <ul className="stats">{displayStats}</ul>
+    <div className="districtCard">
+      <h1 className="districtLocation">{location}</h1>
+      <ul className="districtStats">{displayStats}</ul>
     </div>
   )
 }

@@ -26,6 +26,7 @@ class App extends Component {
     return (
       <div className='app'> 
         <div className='title'>Welcome To Headcount 2.0</div>
+        <input type="text" placeholder="search" className="searchBar"/>
         <CardContainer 
           districts={ district.data }
           />

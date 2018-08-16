@@ -1,5 +1,13 @@
 /*APP COMPONENT RELATED CSS GOES HERE*/
+
 .title {
   text-align: center;
+  font-size: 3rem
 }
 
+.searchBar {
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+  margin: 0 25%;
+}
