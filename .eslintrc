@@ -85,14 +85,13 @@
     ],
     "max-len": [
       "warn",
-      80
+      100
     ],
     "no-duplicate-imports": "error",
     "id-length": "error",
     "id-blacklist": [
       "error",
       "err",
-      "e",
       "cb",
       "callback",
       "payload",
