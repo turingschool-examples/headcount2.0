@@ -30,7 +30,7 @@ class App extends Component {
 
     if (this.state.cards.includes(locationData)) {
       const selectedCards = this.state.cards.filter(card => card.location !== locationData.location)
-      this.setState({ cards: selectedCards })
+      this.setState({ cards: selectedCards }, () => this.compareAverages(location))
     }
 
     if (!this.state.cards.includes(locationData) && this.state.cards.length === 2) {
@@ -38,9 +38,8 @@ class App extends Component {
     }
 
     if (!this.state.cards.includes(locationData) && this.state.cards.length < 2) {
-      this.setState({ cards: [...this.state.cards, locationData] })
+      this.setState({ cards: [...this.state.cards, locationData] }, () => this.compareAverages(location))
     }
-    this.compareAverages(location);
   }
 
   searchLocations = (e) => {
@@ -50,14 +49,12 @@ class App extends Component {
   }
 
   compareAverages = (location) => {
-    if (this.state.cards.length > 0) {
+    if (this.state.cards.length === 2) {
       const averages = district.compareDistrictAverages(this.state.cards[0].location, location)
       this.setState({ averages })
-      console.log(averages)
     } else {
       this.setState({ averages: {} })
     }
-
   }
 
   render() {
