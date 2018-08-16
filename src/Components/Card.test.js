@@ -15,5 +15,18 @@ describe('CARD', () => {
     expect(wrapper.html()).toMatchSnapshot();
   })
 
+  it('Should have class of less-than if data is < .5', () => {
+    const wrapper = shallow(
+      <Card
+        location='COLORADO'
+        stats={{ 2004: .499 }}
+        key={1}
+      />
+    );
+
+    expect(wrapper.find('div').is('.less-than')).toEqual(true)
+    expect(wrapper.find('div').is('.stat')).toEqual(true)
+  })
+
   
 })
