@@ -37,4 +37,8 @@ describe('Search component', () => {
 
     expect(filterCards).toHaveBeenCalled();
   });
+
+  it('should match the snapshot', () => {
+    expect(wrapper.html()).toMatchSnapshot;
+  });
 });

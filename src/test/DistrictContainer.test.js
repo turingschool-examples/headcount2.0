@@ -23,4 +23,8 @@ describe('DistrictContainer component', () => {
     ReactDOM.render(<DistrictContainer districts={mockState.districts} />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
+
+  it('should match the snapshot', () => {
+    expect(wrapper.html()).toMatchSnapshot;
+  });
 });
