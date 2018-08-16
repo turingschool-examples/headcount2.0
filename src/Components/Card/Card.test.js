@@ -10,7 +10,7 @@ describe('CARD', () => {
 															location='COLORADO'
 															stats = {{key: 'value'}}
 															/>)
-		expect(wrapper.html()).toMatchSnapshot()
+		expect(wrapper.html()).toMatchSnapshot();
 	})
 
 	it('should have a className of "lessThan" if the number is less than 0.5', () => {
