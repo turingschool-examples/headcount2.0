@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import './Card.css';
 
 export const Card = ({location, stats}) => {
-  const displayStats = Object.entries(stats).map((data, i) => (
+  const displayStats = Object.entries(stats).map((data) => (
     <li 
-      key={i} 
+      key={Date.now() * Math.random()} 
       className={`${data[1] < .5 ? 'red' : 'green'}`}
     >{data[0]}: {data[1]}</li>
   ));
