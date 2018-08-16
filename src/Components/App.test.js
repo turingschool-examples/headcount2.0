@@ -15,13 +15,14 @@ describe('APP', () => {
     expect(wrapper).toBeDefined();
   })
 
-  it('Should have a default state of data with districtRepo.stats and selectedCards with an empty array', () => {
-    const districtRepo = new DistrictRepository(kinderData);
+  it('Should match the snapshot', () => {
+    expect(wrapper.html()).toMatchSnapshot();
+  })
 
-    expect(wrapper.state()).toMatchObject({
-      data: districtRepo.stats,
-      selectedCards: []
-    });
+  it('Should setState with all data when updateCards is invoked', () => {
+    wrapper.instance().updateCards();
+
+    expect(wrapper.state().data.length).toEqual(181);
   })
 
   it('Should match the snapshot', () => {
