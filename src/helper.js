@@ -39,11 +39,27 @@ class DistrictRepository {
   }
 
   findAverage = (name) => {
+    const cleanedData = Object.values(this.stats[name].stats);
 
+    const sum = cleanedData.reduce((sum, location) => {
+
+      return sum + location
+    }, 0)
+    const roundedSum = Math.round((sum / cleanedData.length) * 1000) / 1000;
+
+    return roundedSum;
   }
 
   compareDistrictAverages = (name1, name2) => {
-    // cosnt newName1 = 
+    const newName1 = this.findAverage(name1.toUpperCase());
+    const newName2 = this.findAverage(name2.toUpperCase());
+    const compared = Math.round((newName1 / newName2)* 1000) / 1000;
+
+    return {
+      [name1.toUpperCase()]: newName1,
+      [name2.toUpperCase()]: newName2, 
+      compared: compared
+    }
   }
 }
 
