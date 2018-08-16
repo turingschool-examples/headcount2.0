@@ -1,4 +1,5 @@
 .cards {
+  background-color: #bdc3c7;
   display: flex;
   flex-direction: column;
   border: solid 2px black;
@@ -8,6 +9,7 @@
 }
 
 h2 {
+  color: #f3f7f8;
   font-size: 1.3rem;
   text-align: center;
 }
@@ -17,4 +19,22 @@ ul {
   margin: .1rem .3rem .4rem .3rem;
   text-align: center;
   padding: 0;
+}
+
+.highNum {
+  color: red;
+}
+
+.lowNum {
+  color: green;
+}
+
+.selectedCard {
+  background-color: #bdc3c7;
+  display: flex;
+  flex-direction: column;
+  border: solid 4px #cbbc97;
+  border-radius: 15px;
+  margin: .2rem;
+  width: 15.5%;
 }
