@@ -3,7 +3,7 @@ import './Card.css'
 import PropType from 'prop-types'
 
 const Card = ({ location, stats }) => {
-  const displayStats = Object.entries(stats).map(stat => <li className={`greaterThan ${ stat[1] < .5 ? 'lessThan' : ''}`}>{stat[0]}: {stat[1]}</li>)
+  const displayStats = Object.entries(stats).map((stat,index) => <li key={index} className={`greaterThan ${ stat[1] < .5 ? 'lessThan' : ''}`}>{stat[0]}: {stat[1]}</li>)
 
   return(
   <div className="card">  

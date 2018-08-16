@@ -6,9 +6,10 @@ import PropType from 'prop-types'
 const CardContainer = ({ data }) => { 
   let districtKeys = Object.values(data)
   
-  let displayCards = districtKeys.map(district => {
+  let displayCards = districtKeys.map((district, index) => {
 
    return <Card
+      key={index}
       location={district.location}
       stats={district.stats}
     />
