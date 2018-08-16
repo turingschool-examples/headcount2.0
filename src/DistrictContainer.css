@@ -1,6 +1,6 @@
 .district-card-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   padding: 5%;
 }
