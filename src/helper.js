@@ -38,8 +38,12 @@ class DistrictRepository {
       }
   }
 
-  compareDistrictAverages = (name1, name2) => {
+  findAverage = (name) => {
 
+  }
+
+  compareDistrictAverages = (name1, name2) => {
+    // cosnt newName1 = 
   }
 }
 
