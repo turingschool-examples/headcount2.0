@@ -5,34 +5,31 @@ import './App.css';
 import DistrictContainer from './DistrictContainer.js';
 import Search from './Search';
 
+const district = new DistrictRepository(kinderData);
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      district: {},
-      data: {},
-      searchResults: []
-    }
+      districts: []
+    };
   }
 
   componentDidMount = () => {
-    const district = new DistrictRepository(kinderData);
-    this.setState({ data: district.stats, district});
+    this.searchDistricts(undefined);
+    console.log(this.state.districts);
   }
 
   searchDistricts = (input) => {
-    const searchResults = this.state.district.findAllMatches(input);
-    this.setState({ searchResults });
+    let districts = district.findAllMatches(input);
+    districts.forEach(district => district.key = district.location);
+    this.setState({ districts });
   }
 
-  componentDidUpdate() {
-
-  }
   render() {
     return (
       <main>
-        <Search searchDistricts={this.searchDistricts}/>
-        <DistrictContainer data={this.state.data}/>
+        {/* <Search searchDistricts={this.searchDistricts}/>
+        <DistrictContainer {this.state.searched ? data={this.state.data}/> */}
       </main>
     );
   }
