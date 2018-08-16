@@ -15,6 +15,10 @@ describe('LocationList', () => {
         expect(wrapper.html()).toMatchSnapshot()
     })
 
+    it('should create locationButtons', () => {
+
+    })
+
     it('should call selectLocation when location button is clicked', () => {
         wrapper.find('.LocationList__btn').simulate('click')
 

@@ -17,6 +17,10 @@ describe('App', () => {
     ReactDOM.unmountComponentAtNode(div);
   });
 
+  it('should add average to location when componentDidMount', () => {
+
+  })
+
   it('should populate state when componentDidMount', () => {
     expect(wrapper.state('locations')).not.toEqual({})
     expect(wrapper.state('cards')).toEqual([])

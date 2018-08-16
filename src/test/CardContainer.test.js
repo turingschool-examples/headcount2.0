@@ -26,4 +26,12 @@ describe('CardContainer', () => {
     it('should match the snapshot', () => {
         expect(wrapper.html()).toMatchSnapshot()
     })
+
+    it('should create displayCards', () => {
+
+    })
+
+    it('should only display compared averages if they exist', () => {
+
+    })
 })

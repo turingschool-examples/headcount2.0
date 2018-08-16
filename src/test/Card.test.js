@@ -27,4 +27,12 @@ describe('Card', () => {
     it('should match the snapshot', () => {
         expect(wrapper.html()).toMatchSnapshot()
     })
+
+    it('should create a statsList', () => {
+
+    })
+
+    it('should make a state red or green based on it\'s value', () => {
+
+    })
 })
