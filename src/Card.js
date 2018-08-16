@@ -6,7 +6,12 @@ export default class Card extends Component {
 
   render() {
     return (
-      <aside key={this.props.key}> 
+      <aside key={this.props.key} 
+        onClick={() => {
+          console.log('hi')
+          this.props.selectDistrict(this.props.district.key);
+        }}
+      > 
         <h3>{this.props.district.location}</h3>
         <table>
           {Object.keys(this.props.district.stats).map((stat, index) => {
@@ -20,6 +25,5 @@ export default class Card extends Component {
         </table>
       </aside>
     );
-    
   }
 }
