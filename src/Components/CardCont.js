@@ -19,10 +19,7 @@ const CardCont = ({ data }) => {
 }
 
 CardCont.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.shape({
-    location: PropTypes.string,
-    stats: PropTypes.object
-  }))
+  data: PropTypes.array
 }
 
 export default CardCont;
