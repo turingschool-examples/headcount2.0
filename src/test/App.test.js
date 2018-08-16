@@ -13,10 +13,8 @@ describe("App", () => {
     expect(shallowWrapper).toMatchSnapshot();
   });
 
-  it("should have 181 districts in schoolData.stats object", () => {
-    expect(Object.keys(shallowWrapper.state().schoolData.stats).length).toEqual(
-      181
-    );
+  it("should have 181 districts in schoolData array", () => {
+    expect(shallowWrapper.state().schoolData.length).toEqual(181);
   });
 
   it("should populate the schoolData state when component mounts", () => {
@@ -27,9 +25,9 @@ describe("App", () => {
     expect(shallowWrapper.find("DistrictsContainer").length).toEqual(1);
   });
 
-  // it("should update state when a district is searched", () => {});
+  it("should update state when a district is searched", () => {});
 
-  // it("should add object to clickedCard array when clicked", () => {});
+  it("should add object to clickedCard array when clicked", () => {});
 
-  // it("should add 2nd object to clickedCard array when clicked", () => {});
+  it("should add 2nd object to clickedCard array when clicked", () => {});
 });
