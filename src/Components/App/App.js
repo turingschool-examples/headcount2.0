@@ -13,7 +13,7 @@ class App extends Component {
 		this.state = {
 			districtData: []
 		}
-	console.log(this.state.districtData.stats)
+	// console.log(this.state.districtData.stats)
 	}
 
 	componentDidMount = () => {
