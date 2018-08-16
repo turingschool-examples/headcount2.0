@@ -2,7 +2,6 @@ import React from 'react'
 import './DistrictCard.css'
 
 export const DistrictCard = ({location, stats, id}) => {
-  console.log(location)
   const displayStats = Object.entries(stats).map((stat) => {
     return  <li key={id} className={stat[1] > .5 ? "statGreater" : "statLesser"}>{stat[0]}: {stat[1]}</li>})
 
