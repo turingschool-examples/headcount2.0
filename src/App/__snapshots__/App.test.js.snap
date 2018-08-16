@@ -1,20 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CardContainer Tests should match the snapshot when a CardContainer is rendered 1`] = `
+exports[`App test should match the snapshot when a App is rendered 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Unknown
-    schoolData={
-        Array [
-            Object {
-              "key": "value",
-            },
-            Object {
-              "key": "value2",
-            },
-          ]
-    }
-/>,
+  Symbol(enzyme.__unrendered__): <App />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -28,38 +17,54 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Unknown
-          location={undefined}
-          stats={undefined}
+        <h1
+          className="main-heading"
+>
+          HeadCount 2.0
+</h1>,
+        <input
+          className="search-bar"
+          onChange={[Function]}
+          placeholder="Search"
 />,
         <Unknown
-          location={undefined}
-          stats={undefined}
+          schoolData={Array []}
 />,
       ],
-      "className": "card-container",
     },
     "ref": null,
     "rendered": Array [
       Object {
         "instance": null,
-        "key": "830413848798.3344",
-        "nodeType": "function",
+        "key": undefined,
+        "nodeType": "host",
         "props": Object {
-          "location": undefined,
-          "stats": undefined,
+          "children": "HeadCount 2.0",
+          "className": "main-heading",
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": "HeadCount 2.0",
+        "type": "h1",
       },
       Object {
         "instance": null,
-        "key": "924240546547.5475",
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "search-bar",
+          "onChange": [Function],
+          "placeholder": "Search",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "location": undefined,
-          "stats": undefined,
+          "schoolData": Array [],
         },
         "ref": null,
         "rendered": null,
@@ -75,38 +80,54 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Unknown
-            location={undefined}
-            stats={undefined}
+          <h1
+            className="main-heading"
+>
+            HeadCount 2.0
+</h1>,
+          <input
+            className="search-bar"
+            onChange={[Function]}
+            placeholder="Search"
 />,
           <Unknown
-            location={undefined}
-            stats={undefined}
+            schoolData={Array []}
 />,
         ],
-        "className": "card-container",
       },
       "ref": null,
       "rendered": Array [
         Object {
           "instance": null,
-          "key": "830413848798.3344",
-          "nodeType": "function",
+          "key": undefined,
+          "nodeType": "host",
           "props": Object {
-            "location": undefined,
-            "stats": undefined,
+            "children": "HeadCount 2.0",
+            "className": "main-heading",
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": "HeadCount 2.0",
+          "type": "h1",
         },
         Object {
           "instance": null,
-          "key": "924240546547.5475",
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "search-bar",
+            "onChange": [Function],
+            "placeholder": "Search",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "location": undefined,
-            "stats": undefined,
+            "schoolData": Array [],
           },
           "ref": null,
           "rendered": null,
