@@ -2,10 +2,11 @@ import React from 'react'
 import { DistrictCard } from './DistrictCard'
 import './CardContainer.css'
 
-export const CardContainer = (districts) => {
-  const districtValues = Object.values(districts.districts.stats)
+export const CardContainer = ({ districts }) => {
+  console.log(districts)
+  const districtValues = Object.values(districts)
   const displayCards = districtValues.map(district => (
-    <DistrictCard 
+    <DistrictCard
       location={district.location}
       stats={district.stats}
     />

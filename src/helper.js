@@ -1,6 +1,9 @@
+import React from 'react';
+import kinderData from './data/kindergartners_in_full_day_program.js';
+
 export default class DistrictRepository {
-  constructor(data) {
-    this.stats = this.removeDuplicates(data) || []
+  constructor() {
+    this.stats = this.removeDuplicates(kinderData) || []
   }
   
   removeDuplicates = (districtData) => {
@@ -23,12 +26,20 @@ export default class DistrictRepository {
     }
   }
 
-  findAllMatches = (name) => {
-    const statsKeys = Object.keys(this.stats)
-    const newName = name.toUpperCase()
-    return statsKeys.filter((district) => {
-      return district.includes(newName)
+  findAllMatches = (data) => {
+    const statsVals = Object.values(this.stats)
+    if (!data) {
+      return statsVals
+    }
+
+    const newData = data.toUpperCase()
+    return statsVals.filter((district) => {
+      return district.location.includes(newData)
     })
   }
+
+  // compareDistrictAverages = () => {
+
+  // }
 }
 

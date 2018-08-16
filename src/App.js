@@ -5,28 +5,23 @@ import DistrictRepository from './helper'
 import kinderData from './data/kindergartners_in_full_day_program.js';
 import Search from './Search.js'
 
-// const district = new DistrictRepository(kinderData)
+const district = new DistrictRepository()
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      district: new DistrictRepository(kinderData),
       districtCards: []
     }
   }
 
   componentDidMount = () => {
-    const newDistrict = {...this.state.districtCards, id: Date.now()}
-    const districtCards = [...this.state.districtCards, newDistrict]
-    this.setState({ districtCards })
+    this.updateCards()
   }
 
-  updateCards = (name) => {
-    const filteredCards = this.state.district.findAllMatches(name)
-    const filteredDistricts = {...filteredCards, id: Date.now()}
-    const districtCards = [filteredDistricts]
-    this.setState({ districtCards})
+  updateCards = (data) => {
+    const districtCards = district.findAllMatches(data)
+    this.setState({ districtCards })
   } 
 
   render() {
@@ -35,7 +30,7 @@ class App extends Component {
         <div className='title'>Welcome To Headcount 2.0</div>
         <Search updateCards={this.updateCards}/>
         <CardContainer 
-          districts={ this.state.district }
+          districts={ this.state.districtCards }
         />
       </div> 
     );
