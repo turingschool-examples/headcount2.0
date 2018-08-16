@@ -1,0 +1,10 @@
+.form {
+  margin: 5% auto;
+  text-align: center;
+}
+
+.search-input {
+  line-height: 1.5rem;
+  font-size: 1.3rem;
+  padding: 0 10px;
+}
