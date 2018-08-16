@@ -28,8 +28,8 @@ class App extends Component {
   render() {
     return (
       <main>
-        {/* <Search searchDistricts={this.searchDistricts}/>
-        <DistrictContainer {this.state.searched ? data={this.state.data}/> */}
+        <Search searchDistricts={this.searchDistricts}/>
+        <DistrictContainer districts={this.state.districts}/>
       </main>
     );
   }

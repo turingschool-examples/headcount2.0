@@ -5,14 +5,13 @@ import './DistrictContainer.css';
 export default class DistrictContainer extends Component {
 
   render() {
-
-    const districtArray = Object.keys(this.props.data).map(district => {
-      return this.props.data[district];
-    });
+  
+    // const districtArray = Object.keys(this.props.data).map(district => {
+    //   return this.props.data[district];
+    // });
     return (
-
       <div className="district-card-container">
-        {districtArray.map((district, index) => <Card district ={district} key={index} />)}
+        {this.props.districts.map((district, index) => <Card district={district} key={index} />)}
       </div>
     );
   }
