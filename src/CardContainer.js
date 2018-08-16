@@ -3,8 +3,14 @@ import Card from './Card';
 
 const CardContainer = ({ cards, averages }) => {
     const displayCards = cards.map((card, i) => (
-        <Card {...card} key={i} />
+        <Card {...card} key={i} averages={averages} />
     ));
+
+    let displayCompared = <p></p>
+
+    if (averages.compared) {
+        displayCompared = <p>COMPARED AVERAGES: {averages.compared}</p>
+    }
 
     return (
         <div className='CardContainer'>
@@ -12,7 +18,7 @@ const CardContainer = ({ cards, averages }) => {
             <section className='CardContainer__section'>
                 {displayCards}
             </section>
-            <p>{averages.compared}</p>
+            {displayCompared}
         </div>
     )
 }

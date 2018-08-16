@@ -20,6 +20,8 @@ class App extends Component {
   }
 
   componentDidMount() {
+    Object.keys(district.stats).forEach(location => district.stats[location] = { ...district.stats[location], average: district.findAverage(location) })
+
     this.setState({ locations: district.stats, displayedLocations: district.findAllMatches() })
   }
 

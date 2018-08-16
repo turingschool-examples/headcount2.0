@@ -17,7 +17,7 @@ export default class DistrictRepository {
             if (!dataLocationObj[location]) {
                 dataLocationObj[location] = {
                     location: location,
-                    stats: {}
+                    stats: {},
                 };
             }
 
