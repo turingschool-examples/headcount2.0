@@ -3,7 +3,7 @@ import Card from './Card';
 
 const CardContainer = ({ cards, averages }) => {
     const displayCards = cards.map((card, i) => (
-        <Card {...card} key={i} averages={averages} />
+        <Card {...card} key={i} />
     ));
 
     let displayCompared = <p></p>
