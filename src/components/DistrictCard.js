@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../css/DistrictCard.css';
 
-const DistrictCard = ({ location, stats, addSelected }) => {
+const DistrictCard = ({ location, stats, toggleSelected }) => {
   const yearStats = Object.keys(stats).map((yearKey, index) => (
     <p key={`${index}-${yearKey}`}>
       {yearKey} :{' '}
@@ -12,7 +12,7 @@ const DistrictCard = ({ location, stats, addSelected }) => {
     </p>
   ));
   return (
-    <div onClick={() => addSelected(location)} className="district-card">
+    <div onClick={() => toggleSelected(location)} className="district-card">
       <h3 className="district-card-title">{location}</h3>
       <div className="district-stats">{yearStats}</div>
     </div>

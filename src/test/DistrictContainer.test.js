@@ -15,22 +15,22 @@ describe('DistrictContainer component', () => {
   };
 
   beforeEach(() => {
-    const addSelected = jest.fn();
+    const toggleSelected = jest.fn();
     wrapper = shallow(
       <DistrictContainer
         districts={mockState.districts}
-        addSelected={addSelected}
+        toggleSelected={toggleSelected}
       />
     );
   });
 
   it('renders without crashing', () => {
-    const addSelected = jest.fn();
+    const toggleSelected = jest.fn();
     const div = document.createElement('div');
     ReactDOM.render(
       <DistrictContainer
         districts={mockState.districts}
-        addSelected={addSelected}
+        toggleSelected={toggleSelected}
       />,
       div
     );

@@ -17,14 +17,19 @@ describe('DistrictCard', () => {
   const card = mockState.category.stats['YUMA SCHOOL DISTRICT 1'];
 
   beforeEach(() => {
-    const addSelected = jest.fn();
-    wrapper = shallow(<DistrictCard {...card} addSelected={addSelected} />);
+    const toggleSelected = jest.fn();
+    wrapper = shallow(
+      <DistrictCard {...card} toggleSelected={toggleSelected} />
+    );
   });
 
   it('renders without crashing', () => {
-    const addSelected = jest.fn();
+    const toggleSelected = jest.fn();
     const div = document.createElement('div');
-    ReactDOM.render(<DistrictCard {...card} addSelected={addSelected} />, div);
+    ReactDOM.render(
+      <DistrictCard {...card} toggleSelected={toggleSelected} />,
+      div
+    );
     ReactDOM.unmountComponentAtNode(div);
   });
 

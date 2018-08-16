@@ -5,6 +5,7 @@ import kinderGartenData from '../data/kindergartners_in_full_day_program';
 import DistrictRepository from '../helper';
 import DistrictContainer from './DistrictContainer';
 import Search from './Search';
+import ComparisonContainer from './ComparisonContainer';
 
 class App extends Component {
   constructor() {
@@ -38,11 +39,20 @@ class App extends Component {
     });
   };
 
-  addSelected = location => {
-    const district = this.state.districts.find(
+  toggleSelected = location => {
+    const currDistrict = this.state.districts.find(
       district => district.location === location
     );
-    const selectedDistricts = [...this.state.selectedDistricts, district];
+    let selectedDistricts;
+    if (!currDistrict.selected && this.state.selectedDistricts.length < 2) {
+      currDistrict.selected = true;
+      selectedDistricts = [...this.state.selectedDistricts, currDistrict];
+    } else {
+      currDistrict.selected = false;
+      selectedDistricts = this.state.selectedDistricts.filter(
+        district => district.location !== currDistrict.location
+      );
+    }
     this.setState({
       selectedDistricts
     });
@@ -54,9 +64,12 @@ class App extends Component {
         <div className="container">
           <h1>Welcome To Headcount 2.0</h1>
           <Search filterCards={this.filterCards} />
+          <ComparisonContainer
+            selectedDistricts={this.state.selectedDistricts}
+          />
           <DistrictContainer
             districts={this.state.districts}
-            addSelected={this.addSelected}
+            toggleSelected={this.toggleSelected}
           />
         </div>
       </div>

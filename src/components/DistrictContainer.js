@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import DistrictCard from './DistrictCard';
 import '../css/DistrictContainer.css';
 
-const DistrictContainer = ({ districts, addSelected }) => {
+const DistrictContainer = ({ districts, toggleSelected }) => {
   let districtCards;
 
   districtCards = districts.map((district, i) => (
     <DistrictCard
       key={`${i}-${district.location}`}
       {...district}
-      addSelected={addSelected}
+      toggleSelected={toggleSelected}
     />
   ));
 
@@ -19,7 +19,7 @@ const DistrictContainer = ({ districts, addSelected }) => {
 
 DistrictContainer.propTypes = {
   districts: PropTypes.array.isRequired,
-  addSelected: PropTypes.func.isRequired
+  toggleSelected: PropTypes.func.isRequired
 };
 
 export default DistrictContainer;
