@@ -37,6 +37,10 @@ class DistrictRepository {
         return statValues
       }
   }
+
+  compareDistrictAverages = (name1, name2) => {
+
+  }
 }
 
 export default DistrictRepository;
