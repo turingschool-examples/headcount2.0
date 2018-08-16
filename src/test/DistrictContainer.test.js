@@ -15,12 +15,25 @@ describe('DistrictContainer component', () => {
   };
 
   beforeEach(() => {
-    wrapper = shallow(<DistrictContainer districts={mockState.districts} />);
+    const addSelected = jest.fn();
+    wrapper = shallow(
+      <DistrictContainer
+        districts={mockState.districts}
+        addSelected={addSelected}
+      />
+    );
   });
 
   it('renders without crashing', () => {
+    const addSelected = jest.fn();
     const div = document.createElement('div');
-    ReactDOM.render(<DistrictContainer districts={mockState.districts} />, div);
+    ReactDOM.render(
+      <DistrictContainer
+        districts={mockState.districts}
+        addSelected={addSelected}
+      />,
+      div
+    );
     ReactDOM.unmountComponentAtNode(div);
   });
 
