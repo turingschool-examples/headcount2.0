@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './Search.css';
+
 export default class Search extends Component {
   constructor(props) {
     super(props);
@@ -10,8 +12,8 @@ export default class Search extends Component {
 
   render() {
     return (
-      <form>
-        <input onKeyUp={(event) => {
+      <form className="form">
+        <input className="search-input" onKeyUp={(event) => {
           this.setState({ searchValue: event.target.value });
           this.props.searchDistricts(this.state.searchValue);
         }} placeholder='Search' />
