@@ -44,10 +44,17 @@ export default class DistrictRepository {
     return Math.round(longAvg * 1000) / 1000;
   };
 
-  // compareDistrictAverages = (district1, district2) => {
-  //   console.log(this.stats[district1].stats);
-  //   // const lower = Math.min(dOneData, dTwoData);
-  //   // const higher = Math.max(dOneData, dTwoData);
-  //   // return Math.round((lower / higher) * 1000) / 1000;
-  // };
+  compareDistrictAverages = (district1, district2) => {
+    const dOneAvg = this.findAverage(district1.toUpperCase());
+    const dTwoAvg = this.findAverage(district2.toUpperCase());
+    const lower = Math.min(dOneAvg, dTwoAvg);
+    const higher = Math.max(dOneAvg, dTwoAvg);
+    const comparedVal = Math.round((lower / higher) * 1000) / 1000;
+
+    return {
+      [district1.toUpperCase()]: dOneAvg,
+      [district2.toUpperCase()]: dTwoAvg,
+      compared: comparedVal
+    };
+  };
 }
