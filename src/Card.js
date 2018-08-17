@@ -8,7 +8,6 @@ export default class Card extends Component {
     return (
       <aside key={this.props.key} 
         onClick={() => {
-          console.log('hi')
           this.props.selectDistrict(this.props.district.key);
         }}
       > 
