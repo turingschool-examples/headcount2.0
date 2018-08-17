@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Search = ({ searchLocations }) => {
   return (
@@ -11,3 +12,7 @@ const Search = ({ searchLocations }) => {
 };
 
 export default Search;
+
+Search.propTypes = {
+  searchLocations: PropTypes.func
+}
