@@ -13,8 +13,9 @@ class App extends Component {
     this.state = {
       districts: [],
       selectedDistricts: [],
-      comparisonData: {},
-      showComparison: false
+      comparisonData: undefined,
+      showComparison: false,
+      key: ''
     };
   }
 
@@ -37,15 +38,14 @@ class App extends Component {
   selectDistrict = key => {
     let selectedDistricts = district.findByName(key);
     if (this.state.selectedDistricts.length > 1) {
-      this.setState({showComparison: true})
       this.setState({selectedDistricts : this.state.selectedDistricts.shift()});
-      const d1 = this.state.selectedDistricts[0].location;
-      const d2 = key;
-      let comparisonData = district.compareDistrictAverages(d1, d2);
-      this.setState({ comparisonData});
-
     }
-    this.setState({ selectedDistricts : [...this.state.selectedDistricts, selectedDistricts] });    
+    if (this.state.key) {
+      let comparisonData = district.compareDistrictAverages(this.state.key, key);
+      this.setState({ comparisonData});
+    }
+    this.setState({ selectedDistricts : [...this.state.selectedDistricts, selectedDistricts] });
+    this.setState({key});  
   }
 
   //add pointer cursor to cards and hover effect
@@ -63,7 +63,7 @@ class App extends Component {
         <DistrictContainer 
           districts={this.state.selectedDistricts} 
         />
-    {this.state.showComparison && <ComparisonCard comparisonData={this.state.comparisonData}/>}
+    {this.state.comparisonData && <ComparisonCard comparisonData={this.state.comparisonData}/>}
         <DistrictContainer 
           districts={this.state.districts}
           selectDistrict={this.selectDistrict}
