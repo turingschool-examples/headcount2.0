@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-
 import { DistrictCard } from './DistrictCard.js'
 
 describe('DistrictCard', () => {
