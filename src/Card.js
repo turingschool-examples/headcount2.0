@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Card = ({ location, stats, average }) => {
   const statsList = Object.keys(stats).map((year, index) => {
@@ -19,3 +20,9 @@ const Card = ({ location, stats, average }) => {
 };
 
 export default Card;
+
+Card.propTypes = {
+    location: PropTypes.string,
+    stats: PropTypes.object,
+    average: PropTypes.number
+  }
