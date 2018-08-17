@@ -17,7 +17,7 @@ export default class DistrictRepository {
             if (!dataLocationObj[location]) {
                 dataLocationObj[location] = {
                     location: location,
-                    stats: {}
+                    stats: {},
                 };
             }
 
@@ -51,6 +51,27 @@ export default class DistrictRepository {
     }
 
     compareDistrictAverages = (locationA, locationB) => {
+        const getAverage = (location) => {
+            const capitalizedLocation = location.toUpperCase();
+            return this.findAverage(capitalizedLocation);
+        }
 
+        const locationAAverage = getAverage(locationA);
+        const locationBAverage = getAverage(locationB);
+
+        const getComparedAverage = () => {
+            if (locationAAverage < locationBAverage) {
+                return Math.round((locationAAverage / locationBAverage) * 1000) / 1000;
+            }
+
+            return Math.round((locationBAverage / locationAAverage) * 1000) / 1000;
+        }
+
+        return {
+            [locationA.toUpperCase()]: locationAAverage,
+            [locationB.toUpperCase()]: locationBAverage,
+            'compared': getComparedAverage()
+        };
     }
+
 }

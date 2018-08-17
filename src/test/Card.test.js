@@ -3,28 +3,77 @@ import Card from '../Card';
 import { shallow } from 'enzyme';
 
 describe('Card', () => {
-    let wrapper;
 
-    beforeEach(() => {
+    it('should match the snapshot', () => {
         const card = {
-            location: 'COLORADO', stats: {
+            average: 0.53,
+            location: 'COLORADO',
+            stats: {}
+        }
+        const wrapper = shallow(<Card {...card} />)
+
+        expect(wrapper.html()).toMatchSnapshot()
+    })
+
+    it('should match the snapshot with stats', () => {
+        const card = {
+            average: 0.53,
+            location: 'COLORADO',
+            stats: {
+                "2004": 0.24,
+            }
+        }
+        const wrapper = shallow(<Card {...card} />)
+
+        expect(wrapper.html()).toMatchSnapshot()
+    })
+
+    it('should match the snapshot with multiple stats', () => {
+        const card = {
+            average: 0.53,
+            location: 'COLORADO',
+            stats: {
                 "2004": 0.24,
                 "2005": 0.278,
                 "2006": 0.337,
                 "2007": 0.395,
-                "2008": 0.536,
-                "2009": 0.598,
-                "2010": 0.64,
-                "2011": 0.672,
-                "2012": 0.695,
-                "2013": 0.703,
-                "2014": 0.741,
             }
         }
-        wrapper = shallow(<Card {...card} />)
-    })
+        const wrapper = shallow(<Card {...card} />)
 
-    it('should match the snapshot', () => {
         expect(wrapper.html()).toMatchSnapshot()
     })
+
+    it('should make a stat list item have a className of red if the stat value is 0.5 or less', () => {
+        const card = {
+            average: 0.53,
+            location: 'COLORADO',
+            stats: {
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.68,
+                "2007": 0.5,
+            }
+        }
+        const wrapper = shallow(<Card {...card} />)
+
+        expect(wrapper.find('.red')).toHaveLength(3)
+    })
+
+    it('should make a stat list item have a className of green if the stat value is greater than 0.5', () => {
+        const card = {
+            average: 0.53,
+            location: 'COLORADO',
+            stats: {
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.5,
+                "2007": 0.68,
+            }
+        }
+        const wrapper = shallow(<Card {...card} />)
+
+        expect(wrapper.find('.green')).toHaveLength(1)
+    })
+
 })

@@ -1,10 +1,16 @@
 import React from 'react';
 import Card from './Card';
 
-const CardContainer = ({ cards }) => {
+const CardContainer = ({ cards, averages }) => {
     const displayCards = cards.map((card, i) => (
-        <Card {...card} key={i} />
+        < Card {...card} key={i} />
     ));
+
+    let displayCompared = <p></p>
+
+    if (averages.compared) {
+        displayCompared = <p className='compared-average'>COMPARED AVERAGES: {averages.compared}</p>
+    }
 
     return (
         <div className='CardContainer'>
@@ -12,6 +18,7 @@ const CardContainer = ({ cards }) => {
             <section className='CardContainer__section'>
                 {displayCards}
             </section>
+            {displayCompared}
         </div>
     )
 }
