@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import Card from './Card';
 
 const CardContainer = ({ cards, averages }) => {
@@ -28,3 +30,8 @@ const CardContainer = ({ cards, averages }) => {
 };
 
 export default CardContainer;
+
+CardContainer.propTypes = {
+    cards: PropTypes.arrayOf(),
+    averages: PropTypes.object
+  }
