@@ -45,8 +45,10 @@ class App extends Component {
   render() {
     return (
       <main>
-        <img src={logo} />
-        <h1>headcount 2.0</h1>
+        <header>
+          <img src={logo} />
+          <h1>headcount 2.0</h1>
+        </header>
         <Search searchDistricts={this.searchDistricts}/>
         <DistrictContainer 
           districts={this.state.selectedDistricts} 
