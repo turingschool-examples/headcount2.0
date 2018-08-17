@@ -59,13 +59,13 @@ export default class DistrictRepository {
   }
 
   compareDistrictAverages = (district1, district2) => {
-    let district1Upper = district1.toUpperCase()
-    let district2Upper = district2.toUpperCase()
-    let districtData1 = this.findAverage(district1Upper)
-    let districtData2 = this.findAverage(district2Upper)
+    const toUpper = (data) => data.toUpperCase()
+    let districtData1 = this.findAverage(district1)
+    let districtData2 = this.findAverage(district2)
 
-    const districtsCompared = {[district1Upper]: districtData1, [district2Upper]: districtData2, compared: Math.round(1000 * (districtData1 / districtData2)) / 1000}
-    console.log(districtsCompared)
+    const districtsCompared = {
+      [toUpper(district1)]: districtData1, 
+      [toUpper(district2)]: districtData2, compared: Math.round(1000 * (districtData1 / districtData2)) / 1000}
     return districtsCompared
   }
 }
