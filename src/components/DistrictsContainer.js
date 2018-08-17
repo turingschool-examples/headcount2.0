@@ -11,7 +11,7 @@ const DistrictsContainer = ({ schoolData }) => {
 };
 
 DistrictsContainer.propTypes = {
-  schoolData: PropTypes.array.isRequired
+  schoolData: PropTypes.array
 };
 
 export default DistrictsContainer;
