@@ -17,7 +17,7 @@ describe('SEARCH', () => {
 
   it('Should invoke updateCards onChange', () => {
     const updateCardsMock = jest.fn();
-    const event = {target: {name: "input", value: "colorado"}};
+    const event = {target: {value: "colorado"}};
     const wrapper = shallow(<Search updateCards={updateCardsMock}/>);
 
     wrapper.find('input').simulate('change', event)

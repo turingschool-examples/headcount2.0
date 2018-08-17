@@ -2,7 +2,7 @@ import React from 'react';
 import './Card.css';
 import PropTypes from 'prop-types';
 
-const Card = ({ location, stats}) => {
+const Card = ({ location, stats, selectCard }) => {
   const displayStats = Object.entries(stats).map((stat, i) => {
     const lessThan = stat[1] < .5 ? 'stat less-than' : 'stat';
 

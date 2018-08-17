@@ -27,18 +27,26 @@ class App extends Component {
     this.setState({ data })
   }
 
+  selectCard = (input) => {
+    const foundCard = this.state.data.findByName(input);
+    const newSelectedCards = [...this.state.selectedCards, foundCard];
+
+
+  }
+
   render() {
     return (
       <div>
         <header>
           <h1>Welcome To Headcount 2.0</h1>
         </header>
-        {/* <SelectedCont 
+        <SelectedCont 
           data={ this.state.data }
-          selectedCards={ this.state.selectedCards} 
-        /> */}
+
+        />
         <Search updateCards={ this.updateCards } />
-        <CardCont data={ this.state.data } />
+        <CardCont data={this.state.data}
+        selectCard={this.selectCard}/>
       </div>
     );
   }
