@@ -6,7 +6,11 @@ const DistrictCard = ({ location, stats }) => {
   const districtYears = Object.keys(stats).map((year, index) => {
     const avg = stats[year];
     return (
-      <article className={avg < 0.5 ? "below-five" : "above-five"} key={index}>
+      <article
+        className={avg < 0.5 ? "below-five" : "above-five"}
+        key={index}
+        onClick={e => selectedCard(location)}
+      >
         {[year]}: {avg}
       </article>
     );
