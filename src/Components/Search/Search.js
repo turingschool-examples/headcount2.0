@@ -21,7 +21,7 @@ class Search extends Component {
 }
 
 Search.propTypes = {
-	filterLocations: PropTypes.func.isRequired
+	filterLocations: PropTypes.func
 }
 
 
