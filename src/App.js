@@ -13,7 +13,8 @@ class App extends Component {
     this.state = {
       districts,
       filteredDistricts: [],
-      selectedCards: []
+      selectedCards: [],
+      comparedCard: {}
     }
   }
 
@@ -30,6 +31,12 @@ class App extends Component {
     this.setState({ selectedCards })
   }
 
+  displayCompared = (location) => {
+    if(this.state.selectedCards.length === 1) {
+    this.setState({ comparedCard: this.state.districts.compareDistrictAverages(this.state.selectedCards[0].location, location)})
+    }
+  }
+
   // componentDidMount = () => {
   //   const districts = new DistrictRepository(kinderData)
   //   console.log(districts)
@@ -39,7 +46,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <CardContainer districts={this.state.districts} filteredDistricts={this.state.filteredDistricts} selectedCards={this.state.selectedCards} displaySelected={this.displaySelected} />
+        <CardContainer districts={this.state.districts}
+          filteredDistricts={this.state.filteredDistricts}
+          selectedCards={this.state.selectedCards}
+          displaySelected={this.displaySelected}
+          displayCompared={this.displayCompared} 
+          comparedCard={this.state.comparedCard}
+        />
         <Search filterDistricts={this.filterDistricts} />
       </div>
     );

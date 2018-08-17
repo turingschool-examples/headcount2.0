@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Card.css'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 class Card extends Component {
   constructor(props) {
@@ -10,15 +10,16 @@ class Card extends Component {
     }
   }
 
-  handleClick = async () => {
+  handleClick = () => {
     let currentState = this.state.clicked
-    await this.setState({ clicked: !currentState })
+    this.setState({ clicked: !currentState })
     this.props.displaySelected(this.props.location)
+    this.props.displayCompared(this.props.location)
   }
 
   render() {
     return(
-      <div className={this.state.clicked ? 'selectedCard': 'cards'} onClick={this.handleClick}>
+      <div className={this.state.clicked || this.props.selected ? 'selectedCard': 'cards'} onClick={this.handleClick}>
        <h2>{this.props.location}</h2>
          {
            Object.keys(this.props.stats).map(stat => {
@@ -33,30 +34,15 @@ class Card extends Component {
          }
       </div>
     )
-  
   }
-      
 }
 
-// return (
-//  <div className="cards">
-//   <h2>{location}</h2>
-//     {
-//       Object.keys(stats).map(stat => {
-//         return (
-//           <article>
-//             <ul className={stats[stat] < 0.5 ? 'highNum' : 'lowNum'}>
-//               {stat}: {stats[stat]}
-//             </ul>
-//           </article>
-//         )
-//       })
-//     }
-//  </div>
+Card.propTypes = {
+  location: PropTypes.string,
+  stats: PropTypes.object, 
+  displaySelected: PropTypes.func,
+  displayCompared: PropTypes.func
+}
 
-
-// const Card = ({ location, stats }) => {
-
-// }
 
 export default Card
