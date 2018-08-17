@@ -11,7 +11,7 @@ describe('App', () => {
     const wrapper = shallow(<App />)
     expect(wrapper).toMatchSnapshot()
   })
-  it('filtered districts')
+  it('filtered districtss')
   // it('Renders a Search component with the right props', () => {
   //   const wrapper = shallow(<App />)
   //   expect(wrapper.find('Search').prop('filterDistricts')).toEqual(wrapper.instance().filterDistricts)
