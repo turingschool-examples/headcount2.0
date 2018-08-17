@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import Search from './Search';
 
 const LocationList = (
@@ -23,3 +25,9 @@ const LocationList = (
 };
 
 export default LocationList;
+
+LocationList.propTypes = {
+  displayedLocations: PropTypes.arrayOf(),
+  selectLocation: PropTypes.func,
+  searchLocationsLocations: PropTypes.func
+}
