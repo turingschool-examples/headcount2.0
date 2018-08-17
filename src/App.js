@@ -20,29 +20,34 @@ class App extends Component {
   }
 
   componentDidMount() {
-    Object.keys(district.stats).forEach(location => (
+    Object.keys(district.stats).forEach( location => (
       district.stats[location] = {
         ...district.stats[location],
         average: district.findAverage(location)
-      }));
+      }
+    ));
 
-    this.setState({ locations: district.stats, 
-                    displayedLocations: district.findAllMatches() });
+    this.setState({ 
+      locations: district.stats, 
+      displayedLocations: district.findAllMatches() 
+    });
   }
 
   selectLocation = (location) => {
     const locationData = this.state.locations[location];
 
     if (this.state.cards.includes(locationData)) {
-      const selectedCards = this.state.cards.filter(card => (
+      const selectedCards = this.state.cards.filter( card => (
         card.location !== locationData.location
       ));
       this.setState({ cards: selectedCards }, () => this.compareAverages());
     } else if (this.state.cards.length === 2) {
       this.setState({ cards: [locationData] }, () => this.compareAverages());
     } else {
-      this.setState({ cards: [...this.state.cards, locationData] }, 
-                      () => this.compareAverages());
+      this.setState(
+        { cards: [...this.state.cards, locationData] }, 
+        () => this.compareAverages()
+      );
     }
 
   }

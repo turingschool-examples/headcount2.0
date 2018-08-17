@@ -2,14 +2,14 @@ import React from 'react';
 import Card from './Card';
 
 const CardContainer = ({ cards, averages }) => {
-  const displayCards = cards.map((card, index) => (
+  const displayCards = cards.map( (card, index) => (
     <Card {...card} key={index} />
   ));
 
   let displayCompared = <p></p>;
 
   if (averages.compared >= 0) {
-    displayCompared = <p className='compared-average'>
+    displayCompared = <p className='compared-average'> 
                         COMPARED AVERAGES: {averages.compared}
                       </p>;
   }
