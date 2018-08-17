@@ -5,6 +5,13 @@ import Search from './Search';
 describe('SEARCH', () => {
   it('Should exist', () => {
     const wrapper = shallow(<Search />)
+
     expect(wrapper).toBeDefined();
+  })
+
+  it('Should match the snapshot', () => {
+    const wrapper = shallow(<Search />);
+
+    expect(wrapper.html()).toMatchSnapshot()
   })
 })
