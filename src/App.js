@@ -11,7 +11,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      data: [],
+      selectedCars: []
     };
   }
 
@@ -24,6 +25,14 @@ class App extends Component {
     this.setState({
       data
     }) 
+  }
+
+  selectCards = (location) => {
+    
+  }
+
+  compareCards = () => {
+
   }
 
   render() {
