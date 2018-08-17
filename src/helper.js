@@ -46,11 +46,8 @@ export default class DistrictRepository {
       const { stats } = this.stats[schoolDistrict];
       return sum + stats[year];
     }, 0);
-
     const unrounded = statsTotal / yearArray.length;
-
     const rounded = Math.round(unrounded * 1000) / 1000;
-
     return rounded;
   };
 

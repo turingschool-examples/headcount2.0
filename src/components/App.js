@@ -10,7 +10,9 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      schoolData: []
+      schoolData: [],
+      selectedCards: [],
+      comparedCards: []
     };
   }
 
@@ -26,6 +28,8 @@ class App extends Component {
       });
     }
   };
+
+  selectedCards = district => {};
 
   render() {
     return (

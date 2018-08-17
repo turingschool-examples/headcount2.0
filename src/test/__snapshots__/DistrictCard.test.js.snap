@@ -1,0 +1,440 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DistrictCard should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <DistrictCard
+    location="COLORADO"
+    stats={
+        Object {
+            "2004": 0,
+            "2005": 0,
+            "2006": 0,
+            "2007": 1,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          COLORADO
+</h1>,
+        <section>
+          <article
+                    className="below-five"
+                    onClick={[Function]}
+          >
+                    2004
+                    : 
+                    0
+          </article>
+          <article
+                    className="below-five"
+                    onClick={[Function]}
+          >
+                    2005
+                    : 
+                    0
+          </article>
+          <article
+                    className="below-five"
+                    onClick={[Function]}
+          >
+                    2006
+                    : 
+                    0
+          </article>
+          <article
+                    className="above-five"
+                    onClick={[Function]}
+          >
+                    2007
+                    : 
+                    1
+          </article>
+</section>,
+      ],
+      "className": "each-card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "COLORADO",
+        },
+        "ref": null,
+        "rendered": "COLORADO",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <article
+              className="below-five"
+              onClick={[Function]}
+>
+              2004
+              : 
+              0
+</article>,
+            <article
+              className="below-five"
+              onClick={[Function]}
+>
+              2005
+              : 
+              0
+</article>,
+            <article
+              className="below-five"
+              onClick={[Function]}
+>
+              2006
+              : 
+              0
+</article>,
+            <article
+              className="above-five"
+              onClick={[Function]}
+>
+              2007
+              : 
+              1
+</article>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                Array [
+                  "2004",
+                ],
+                ": ",
+                0,
+              ],
+              "className": "below-five",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2004",
+              ": ",
+              0,
+            ],
+            "type": "article",
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                Array [
+                  "2005",
+                ],
+                ": ",
+                0,
+              ],
+              "className": "below-five",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2005",
+              ": ",
+              0,
+            ],
+            "type": "article",
+          },
+          Object {
+            "instance": null,
+            "key": "2",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                Array [
+                  "2006",
+                ],
+                ": ",
+                0,
+              ],
+              "className": "below-five",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2006",
+              ": ",
+              0,
+            ],
+            "type": "article",
+          },
+          Object {
+            "instance": null,
+            "key": "3",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                Array [
+                  "2007",
+                ],
+                ": ",
+                1,
+              ],
+              "className": "above-five",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2007",
+              ": ",
+              1,
+            ],
+            "type": "article",
+          },
+        ],
+        "type": "section",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            COLORADO
+</h1>,
+          <section>
+            <article
+                        className="below-five"
+                        onClick={[Function]}
+            >
+                        2004
+                        : 
+                        0
+            </article>
+            <article
+                        className="below-five"
+                        onClick={[Function]}
+            >
+                        2005
+                        : 
+                        0
+            </article>
+            <article
+                        className="below-five"
+                        onClick={[Function]}
+            >
+                        2006
+                        : 
+                        0
+            </article>
+            <article
+                        className="above-five"
+                        onClick={[Function]}
+            >
+                        2007
+                        : 
+                        1
+            </article>
+</section>,
+        ],
+        "className": "each-card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "COLORADO",
+          },
+          "ref": null,
+          "rendered": "COLORADO",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <article
+                className="below-five"
+                onClick={[Function]}
+>
+                2004
+                : 
+                0
+</article>,
+              <article
+                className="below-five"
+                onClick={[Function]}
+>
+                2005
+                : 
+                0
+</article>,
+              <article
+                className="below-five"
+                onClick={[Function]}
+>
+                2006
+                : 
+                0
+</article>,
+              <article
+                className="above-five"
+                onClick={[Function]}
+>
+                2007
+                : 
+                1
+</article>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    "2004",
+                  ],
+                  ": ",
+                  0,
+                ],
+                "className": "below-five",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2004",
+                ": ",
+                0,
+              ],
+              "type": "article",
+            },
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    "2005",
+                  ],
+                  ": ",
+                  0,
+                ],
+                "className": "below-five",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2005",
+                ": ",
+                0,
+              ],
+              "type": "article",
+            },
+            Object {
+              "instance": null,
+              "key": "2",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    "2006",
+                  ],
+                  ": ",
+                  0,
+                ],
+                "className": "below-five",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2006",
+                ": ",
+                0,
+              ],
+              "type": "article",
+            },
+            Object {
+              "instance": null,
+              "key": "3",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    "2007",
+                  ],
+                  ": ",
+                  1,
+                ],
+                "className": "above-five",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2007",
+                ": ",
+                1,
+              ],
+              "type": "article",
+            },
+          ],
+          "type": "section",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
