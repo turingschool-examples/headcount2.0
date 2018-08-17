@@ -9,9 +9,10 @@ describe('SEARCH', () => {
 		expect(wrapper).toMatchSnapshot();
 	})
 
-	it('should call filterLocations prop function with proper arguments', () => {
-		const mockChange = jest.fn();
-		const wrapper = mount(<Search filterLocations={mockChange} />)
-		wrapper.instance().onChange
+	it('should call filterLocations prop function when input is changed', () => {
+		const mockFilterLocations = jest.fn();
+		const wrapper = mount(<Search filterLocations={mockFilterLocations} />)
+		wrapper.find('input').simulate('change')
+		expect(mockFilterLocations).toHaveBeenCalled()
 	})
 })
