@@ -23,5 +23,4 @@ describe('CardContainer', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-
 })

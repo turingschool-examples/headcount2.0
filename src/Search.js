@@ -13,3 +13,4 @@ const Search = ({updateCards}) => {
 }
 
 export default Search
+
