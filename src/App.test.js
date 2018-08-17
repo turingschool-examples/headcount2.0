@@ -1,8 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { shallow, mount } from 'enzyme';
+import App from './App.js';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  // ReactDOM.render(<App />, div);
+it ('matches the snapshot', () => {
+  const wrapper = shallow(<App />)
+  expect(wrapper).toMatchSnapshot()
 });
+
+// it ('initial state is an empty array', () => {
+//   const wrapper = shallow(<App />)
+//   expect(wrapper.state().districtCards.length).toEqual(0)
+// })
