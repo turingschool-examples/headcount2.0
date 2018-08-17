@@ -5,6 +5,7 @@ import './App.css';
 import DistrictContainer from './DistrictContainer.js';
 import Search from './Search';
 import { ComparisonCard } from './ComparisonCard';
+import logo from './headcount.png'
 
 const district = new DistrictRepository(kinderData);
 class App extends Component {
@@ -14,7 +15,6 @@ class App extends Component {
       districts: [],
       selectedDistricts: [],
       comparisonData: undefined,
-      showComparison: false,
       key: ''
     };
   }
@@ -27,12 +27,6 @@ class App extends Component {
     let districts = district.findAllMatches(input);
     districts.forEach(district => district.key = district.location);
     this.setState({ districts });
-  }
-
-  componentDidUpdate = () => {
-    // console.log(this.state.selectedDistricts);
-    // console.log(this.state.selectedDistricts.length);
-    // console.log(this.comparisonData);
   }
 
   selectDistrict = key => {
@@ -48,22 +42,16 @@ class App extends Component {
     this.setState({key});  
   }
 
-  //add pointer cursor to cards and hover effect
-  //add header to app component render
-  //add comparative data card for top cards component
-  //refactor
-  //prop-types for all components
-  //test all components
-
-
   render() {
     return (
       <main>
+        <img src={logo} />
+        <h1>headcount 2.0</h1>
         <Search searchDistricts={this.searchDistricts}/>
         <DistrictContainer 
           districts={this.state.selectedDistricts} 
         />
-    {this.state.comparisonData && <ComparisonCard comparisonData={this.state.comparisonData}/>}
+    {this.state.comparisonData && <ComparisonCard comparisonData={this.state.comparisonData} card1key={this.state.key}/>}
         <DistrictContainer 
           districts={this.state.districts}
           selectDistrict={this.selectDistrict}
