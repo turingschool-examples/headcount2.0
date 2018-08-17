@@ -1,0 +1,28 @@
+.district-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 2em;
+
+  background-color: rgba(250, 250, 250, 0.8);
+
+  border: 2px solid #4b86e5;
+  -webkit-box-shadow: 10px 10px 57px -23px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 57px -23px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 57px -23px rgba(0, 0, 0, 0.75);
+
+  border-radius: 10px;
+}
+
+.district-card:hover {
+  background-color: rgba(250, 250, 250, 0.9);
+}
+
+.district-stats p {
+  margin: 0;
+}
+
+.subPointFive {
+  color: crimson;
+}
