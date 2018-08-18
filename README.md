@@ -19,45 +19,6 @@ This application was built using the `create-react-app` boilerplate. This boiler
 
 This project is broken out into multiple iterations. You are expected to complete all required iterations for a passing score, additional extensions are provided to push your comfort level.  
 
-### Data Access Layer
-
-#### Iteration 0 - Initial Data
-  Create a constructor/class that takes in data and formats it appropriately. Tests have been written to help guide you in this process. You should pass each iterations' relative tests before moving forward. For `Iteration 0`, tests can be found in `test/unit/iteration-0.test.js`.  
-
-**Things to keep in mind:**  
-* Treat the data coming in as if it is from a third party. The existing tests are written in a particular format - you are encouraged to continue the camelCase pattern that is provided within the tests, although you can also choose to write your code differently as long as you stay consistent within your app.
-
-* How you choose to manipulate the data will determine how you can interact with it as the app expands. Use JavaScript to it's advantage and spend time thinking about what types of operations you will need to call on the data provided.
-
-
-## Visual layer
-
-**Overview:**
-The visual layer will be a single page application using React. Each component should be thoroughly tested with defined `PropTypes` validating what props are being passed in.
-
-### Iteration 5 - Displaying Compared Data
-
-Now that we can compare data between two districts in code, we need to display that to our users. This iteration should meet the following criteria:  
-
-1. Users should be able to click on an individual district.
-2. Once clicked, there should be a visual indication in the UI that the district has been clicked.
-3. If clicked a second time, the district should revert back to its previous state. *Hint:* Use CSS classes to help toggle between the UI changes.  
-4. Once a district is selected, it must be displayed at the top of the page. It should also remain in the collection of districts displayed in the main body of the app.  
-
-Example:  
-
-![](http://i.imgur.com/pqP1E3N.png)  
-
-5. Once two districts have been clicked, there should be a comparative analysis between the two.  
-
-Example:  
-
-![](http://i.imgur.com/KpSdTaW.png)  
-
-**A maximum of two districts should be able to be selected.**  
-
-### Extensions
-
 #### More Data Files  
 * Right now we are only loading the `kindergartners_in_full_day_program.js` file. Create a header with buttons that dynamically load each of the different files provided in this repo.  
 * The UI should change to reflect the data provided by the file selected.  
