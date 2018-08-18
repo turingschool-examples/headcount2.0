@@ -6,9 +6,11 @@ export default class Card extends Component {
 
   render() {
     return (
-      <aside key={this.props.key} 
+      <aside 
+        className={`${this.props.district.selected ? 'card-selected' : ''}`}
+        key={this.props.key} 
         onClick={() => {
-          this.props.selectDistrict(this.props.district.key);
+          this.props.checkForMaxCards(this.props.district.key);
         }}
       > 
         <h3>{this.props.district.location}</h3>
