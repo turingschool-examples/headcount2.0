@@ -30,19 +30,19 @@ class App extends Component {
     this.setState({ districts });
   }
 
-  handleClick = location => {
-    this.checkForMaxCards(location);
-  }
+  handleClick = location => this.checkForMaxCards(location) ? this.selectDistrict(location) : undefined;
 
   checkForMaxCards = location => {
-    if (this.state.selectedDistricts.some(district => district.location === location) || this.state.selectedDistricts.length !== 2)
-      this.selectDistrict(location);
+    const { selectedDistricts } = this.state;
+    if (selectedDistricts.some(district => district.location === location) || selectedDistricts.length !== 2)
+      return true;
   }
 
   selectDistrict = location => {
-    let selectedCard = this.state.districts.find(district => district.location === location);
-    if (!this.state.selectedDistricts.find(district => district.location === location)) {
-      this.setState({ selectedDistricts : [...this.state.selectedDistricts, selectedCard]});
+    const { selectedDistricts, districts } = this.state;
+    let selectedCard = districts.find(district => district.location === location);
+    if (!selectedDistricts.find(district => district.location === location)) {
+      this.setState({ selectedDistricts : [...selectedDistricts, selectedCard]});
     } else {
       const selectedDistricts = this.state.selectedDistricts.filter(district => district.location !== location);
       this.setState({ selectedDistricts });
@@ -53,8 +53,9 @@ class App extends Component {
   }
 
   compareDistricts = (location) => {
-    if (this.state.selectedDistricts.length === 1) {
-      const comparisonData = district.compareDistrictAverages(this.state.selectedDistricts[0].location, location);
+    const { selectedDistricts } = this.state;
+    if (selectedDistricts.length === 1) {
+      const comparisonData = district.compareDistrictAverages(selectedDistricts[0].location, location);
       this.setState({ comparisonData });
     }
   }
@@ -70,6 +71,7 @@ class App extends Component {
   }
 
   render() {
+    const { selectedDistricts, comparisonData, districts } = this.state;
     return (
       <main>
         <header>
@@ -77,13 +79,13 @@ class App extends Component {
           <h1>headcount 2.0</h1>
         </header>
         <Search searchDistricts={this.searchDistricts}/>
-        {this.state.selectedDistricts && <DistrictContainer 
-          districts={this.state.selectedDistricts} 
+        {selectedDistricts && <DistrictContainer 
+          districts={selectedDistricts} 
           handleClick={this.handleClick}
         />}
-        {this.state.selectedDistricts[1] && <ComparisonCard comparisonData={this.state.comparisonData} card1key={this.state.key}/>}
+        {selectedDistricts[1] && <ComparisonCard comparisonData={comparisonData}/>}
         <DistrictContainer 
-          districts={this.state.districts}
+          districts={districts}
           handleClick={this.handleClick}
         />
       </main>
