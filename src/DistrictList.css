@@ -1,6 +1,19 @@
 div {
   display: flex;
   flex-wrap: wrap;
+}
+
+.averages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 33vw
+}
+
+section {
+  display: flex;
+  flex-direction: row;
   width: 100vw;
   justify-content: space-around;
+  align-items: center;
 }

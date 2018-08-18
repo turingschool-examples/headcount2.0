@@ -2,26 +2,55 @@ import React from 'react';
 import DistrictCard from './DistrictCard';
 import './DistrictList.css';
 
-const DistrictList = ({ districts, searchedDistrict }) => {
+const DistrictList = ({ districts, searchedDistrict, addToCompare, cardsToCompare, comparedObject }) => {
+  
   const districtCards = Object.keys(districts).map(district => {
-    return <DistrictCard location={districts[district].location} stats={districts[district].stats} /> 
+    return <DistrictCard location={districts[district].location} stats={districts[district].stats} addToCompare={addToCompare}/> 
   })
-  console.log(searchedDistrict)
 
-  const districtCard = <DistrictCard location={searchedDistrict[0]} stats={searchedDistrict[1]} />
-  const searchedCards = searchedDistrict.map(district => <DistrictCard location={districts[district].location} stats={districts[district].stats} />)
+  const searchedCards = searchedDistrict.map(district => <DistrictCard location={districts[district].location} stats={districts[district].stats} addToCompare={addToCompare}/>)
+
+  const comparedCards = cardsToCompare.map(district => {
+    return <DistrictCard location={district.location} stats={district.stats} addToCompare={addToCompare}/>
+  })
+
+  const comparedData = Object.keys(comparedObject).map(key => {
+    return <p>{comparedObject[key]}</p>
+  })
+
+  
+
+  if (Object.keys(comparedObject).length) {
+    return(
+      <div>
+        <section>
+        <div>{comparedCards[0]}</div>
+        <div className="averages">{comparedData}</div>
+        <div>{comparedCards[1]}</div>
+        </section>
+
+        <div>{districtCards}</div>
+      </div>
+    )
+  }
 
   if (searchedDistrict.length) {
     return(
       <div>
-        {searchedCards}
+        {comparedCards}
+        <div>
+          {searchedCards}
+        </div>
       </div>
     )
   }
 
   return(
     <div>
-     {districtCards}
+      {comparedCards}
+        <div>
+          {districtCards}
+        </div>
     </div>
   )
 }

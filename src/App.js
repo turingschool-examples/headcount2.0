@@ -4,7 +4,6 @@ import DistrictList from './DistrictList'
 import DistrictRepository from './helper'
 import kinderData from './data/kindergartners_in_full_day_program.js';
 import Search from './Search'
-const districts = new DistrictRepository(kinderData)
 
 
 
@@ -13,25 +12,47 @@ class App extends Component {
     super();
 
     this.state = {
-      districts,
-      searchedDistrict: []
+      districts: new DistrictRepository(kinderData),
+      searchedDistrict: [],
+      cardsToCompare: [],
+      comparedObject: {}
     }
-    console.log(districts)
   }
 
-  searchDistricts = (event, value) => {
-    event.preventDefault();
-    const searchedDistrict = districts.findAllMatches(value);
+  searchDistricts = (value) => {
     this.setState({
-      searchedDistrict : districts.findAllMatches(value)
+      searchedDistrict: this.state.districts.findAllMatches(value)
     })
   }
 
+  addToCompare = (eventLocation) => {
+    const foundCard = this.state.districts.findByName(eventLocation);
+    if (this.state.cardsToCompare.length > 1) {
+      this.compareAddedDistricts();
+      return
+    }
+    if(this.state.cardsToCompare.includes(foundCard) && this.state.cardsToCompare.length >= 1) {
+      return
+    }
+    this.setState({
+      cardsToCompare: [...this.state.cardsToCompare, foundCard]
+    })
+  }
+  
+  compareAddedDistricts = () => {
+    if (this.state.cardsToCompare.length >= 1) {
+      const comparedObject = this.state.districts.compareDistrictAverages(this.state.cardsToCompare[0].location, this.state.cardsToCompare[1].location)
+      this.setState({
+        comparedObject: comparedObject
+      })
+    }
+  }
+  
   render() {
     return (
       <React.Fragment> 
         <Search searchDistricts={ this.searchDistricts } /> 
-        <DistrictList districts={this.state.districts.stats} searchedDistrict={this.state.searchedDistrict} />
+        <DistrictList addToCompare={this.addToCompare} cardsToCompare={this.state.cardsToCompare} districts={this.state.districts.stats} searchedDistrict={this.state.searchedDistrict} comparedObject={this.state.comparedObject}/>
       </React.Fragment>
     );
   }
