@@ -25,7 +25,7 @@ class App extends Component {
   }
 
   searchDistricts = input => {
-    let districts = district.findAllMatches(input);
+    const districts = district.findAllMatches(input);
     districts.forEach(district => district.key = district.location);
     this.setState({ districts });
   }
@@ -34,13 +34,18 @@ class App extends Component {
 
   checkForMaxCards = location => {
     const { selectedDistricts } = this.state;
-    if (selectedDistricts.some(district => district.location === location) || selectedDistricts.length !== 2)
-      return true;
+    return selectedDistricts.some(district => district.location === location) || selectedDistricts.length !== 2 ? true : undefined;
   }
 
   selectDistrict = location => {
+    this.checkCurrentlySelectedDistricts(location);
+    this.compareDistricts(location);
+    this.changeSelectedCardClassName(location);
+  }
+
+  checkCurrentlySelectedDistricts = location => {
     const { selectedDistricts, districts } = this.state;
-    let selectedCard = districts.find(district => district.location === location);
+    const selectedCard = districts.find(district => district.location === location);
     if (!selectedDistricts.find(district => district.location === location)) {
       this.setState({ selectedDistricts : [...selectedDistricts, selectedCard]});
     } else {
@@ -48,8 +53,6 @@ class App extends Component {
       this.setState({ selectedDistricts });
       this.setState({ comparisonData : undefined });
     }
-    this.compareDistricts(location);
-    this.changeSelectedCardClassName(location);
   }
 
   compareDistricts = (location) => {
@@ -61,10 +64,8 @@ class App extends Component {
   }
 
   changeSelectedCardClassName = (location) => {
-    let districts = this.state.districts.map(district => {
-      if (district.location === location) {
-        district.selected = !district.selected;
-      }
+    const districts = this.state.districts.map(district => {
+      district.location === location ? district.selected = !district.selected : undefined;
       return district;
     });
     this.setState({ districts });
