@@ -1,30 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './style/Card.css';
 
-
-export default class Card extends Component {
-
-  render() {
-    return (
-      <aside 
-        className={`${this.props.district.selected ? 'card-selected' : ''}`}
-        key={this.props.key} 
-        onClick={() => {
-          this.props.checkForMaxCards(this.props.district.key);
-        }}
-      > 
-        <h3>{this.props.district.location}</h3>
-        <table>
-          {Object.keys(this.props.district.stats).map((stat, index) => {
-            return (
-              <tr className={`${this.props.district.stats[stat] > .5 ? 'aboveHalf' : ''}`} key={index}>
-                <td>{stat}</td>
-                <td  >{this.props.district.stats[stat]}</td>
-              </tr>
-            );
-          })}
-        </table>
-      </aside>
-    );
-  }
-}
+const Card = ({ district, checkForMaxCards, key}) => {
+  return (
+    <aside 
+      className={`${district.selected ? 'card-selected' : ''}`} 
+      onClick={() => { checkForMaxCards(district.location); }}
+    > 
+      <h3>{district.location}</h3>
+      <table>
+        {Object.keys(district.stats).map((stat, index) => {
+          return (
+            <tr className={`${district.stats[stat] > .5 ? 'above-half' : ''}`} key={index}>
+              <td>{stat}</td>
+              <td>{district.stats[stat]}</td>
+            </tr>
+          );
+        })}
+      </table>
+    </aside>
+  );
+};
+export default Card;
