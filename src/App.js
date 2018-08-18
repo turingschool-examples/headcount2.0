@@ -73,6 +73,7 @@ class App extends Component {
     return (
       <div className='App'>
         <Search 
+          cards={this.state.cards}
           searchLocations={this.searchLocations} 
           displayedLocations={this.state.displayedLocations}
           selectLocation={this.selectLocation}/>

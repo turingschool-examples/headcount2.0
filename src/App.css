@@ -76,3 +76,7 @@
 .red {
     color: red;
 }
+
+.selected {
+    background-color: red;
+}

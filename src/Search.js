@@ -31,6 +31,7 @@ class Search extends Component {
           onChange={this.handleInput} >
         </input>
         <LocationList 
+          cards={this.props.cards}
           displayedLocations={this.props.displayedLocations}
           selectLocation={this.props.selectLocation} 
           clearSearch={this.clearSearch} />
