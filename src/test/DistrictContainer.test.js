@@ -3,14 +3,16 @@ import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
 import DistrictContainer from '../components/DistrictContainer';
 
-import kinderGartenData from '../data/kindergartners_in_full_day_program';
+import kinderData from '../data/kindergartners_in_full_day_program';
 import DistrictRepository from '../helper';
 
 describe('DistrictContainer component', () => {
   let wrapper;
+  let category;
 
   const mockState = {
-    districts: new DistrictRepository(kinderGartenData).findAllMatches(),
+    category: new DistrictRepository(kinderData),
+    districts: new DistrictRepository(kinderData).findAllMatches(),
     loading: false
   };
 
@@ -20,6 +22,7 @@ describe('DistrictContainer component', () => {
       <DistrictContainer
         districts={mockState.districts}
         toggleSelected={toggleSelected}
+        category={mockState.category}
       />
     );
   });
@@ -31,6 +34,7 @@ describe('DistrictContainer component', () => {
       <DistrictContainer
         districts={mockState.districts}
         toggleSelected={toggleSelected}
+        category={mockState.category}
       />,
       div
     );

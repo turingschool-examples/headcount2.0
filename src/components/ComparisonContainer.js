@@ -16,12 +16,20 @@ const ComparisonContainer = ({
 
   if (selectedDistricts[0]) {
     cardOne = (
-      <DistrictCard {...selectedDistricts[0]} toggleSelected={toggleSelected} />
+      <DistrictCard
+        {...selectedDistricts[0]}
+        toggleSelected={toggleSelected}
+        category={category}
+      />
     );
   }
   if (selectedDistricts[1]) {
     cardTwo = (
-      <DistrictCard {...selectedDistricts[1]} toggleSelected={toggleSelected} />
+      <DistrictCard
+        {...selectedDistricts[1]}
+        toggleSelected={toggleSelected}
+        category={category}
+      />
     );
   }
   if (selectedDistricts.length > 1) {

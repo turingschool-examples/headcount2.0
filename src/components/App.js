@@ -72,6 +72,7 @@ class App extends Component {
           <DistrictContainer
             districts={this.state.districts}
             toggleSelected={this.toggleSelected}
+            category={this.state.category}
           />
         </div>
       </div>

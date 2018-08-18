@@ -20,14 +20,24 @@ describe('DistrictCard', () => {
   beforeEach(() => {
     toggleSelected = jest.fn();
     wrapper = shallow(
-      <DistrictCard {...card} toggleSelected={toggleSelected} />
+      <DistrictCard
+        {...card}
+        toggleSelected={toggleSelected}
+        selected={false}
+        category={mockState.category}
+      />
     );
   });
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(
-      <DistrictCard {...card} toggleSelected={toggleSelected} />,
+      <DistrictCard
+        {...card}
+        toggleSelected={toggleSelected}
+        selected={false}
+        category={mockState.category}
+      />,
       div
     );
     ReactDOM.unmountComponentAtNode(div);
