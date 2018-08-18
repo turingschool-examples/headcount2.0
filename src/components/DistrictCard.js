@@ -7,7 +7,8 @@ const DistrictCard = ({
   stats,
   selected,
   toggleSelected,
-  category
+  category,
+  selectedCards
 }) => {
   let average;
 
@@ -34,7 +35,11 @@ const DistrictCard = ({
   ));
 
   return (
-    <div onClick={() => toggleSelected(location)} className="district-card">
+    <div
+      onClick={() => toggleSelected(location)}
+      className="district-card"
+      style={selectedCards ? { width: '9rem' } : { width: '12rem' }}
+    >
       <h3 className="district-card-title">{location}</h3>
       <div className="district-stats">{yearStats}</div>
       {average}
@@ -47,7 +52,8 @@ DistrictCard.propTypes = {
   stats: PropTypes.object.isRequired,
   selected: PropTypes.bool.isRequired,
   toggleSelected: PropTypes.func.isRequired,
-  category: PropTypes.object.isRequired
+  category: PropTypes.object.isRequired,
+  selectedCards: PropTypes.bool.isRequired
 };
 
 export default DistrictCard;

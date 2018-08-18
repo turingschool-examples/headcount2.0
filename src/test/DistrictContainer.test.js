@@ -8,7 +8,8 @@ import DistrictRepository from '../helper';
 
 describe('DistrictContainer component', () => {
   let wrapper;
-  let category;
+  let toggleSelected;
+  let selectedDistricts;
 
   const mockState = {
     category: new DistrictRepository(kinderData),
@@ -17,12 +18,31 @@ describe('DistrictContainer component', () => {
   };
 
   beforeEach(() => {
-    const toggleSelected = jest.fn();
+    toggleSelected = jest.fn();
+    selectedDistricts = [
+      {
+        location: 'COLORADO',
+        stats: {
+          2004: 0.24,
+          2005: 0.278
+        },
+        selected: true
+      },
+      {
+        location: 'ACADEMY 20',
+        stats: {
+          2010: 0.64,
+          2011: 0.672
+        },
+        selected: true
+      }
+    ];
     wrapper = shallow(
       <DistrictContainer
         districts={mockState.districts}
         toggleSelected={toggleSelected}
         category={mockState.category}
+        selectedDistricts={selectedDistricts}
       />
     );
   });
@@ -35,6 +55,7 @@ describe('DistrictContainer component', () => {
         districts={mockState.districts}
         toggleSelected={toggleSelected}
         category={mockState.category}
+        selectedDistricts={selectedDistricts}
       />,
       div
     );

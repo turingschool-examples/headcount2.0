@@ -25,6 +25,7 @@ describe('DistrictCard', () => {
         toggleSelected={toggleSelected}
         selected={false}
         category={mockState.category}
+        selectedCards={true}
       />
     );
   });
@@ -37,6 +38,7 @@ describe('DistrictCard', () => {
         toggleSelected={toggleSelected}
         selected={false}
         category={mockState.category}
+        selectedCards={true}
       />,
       div
     );

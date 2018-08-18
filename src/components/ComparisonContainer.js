@@ -13,13 +13,27 @@ const ComparisonContainer = ({
   let cardOne;
   let cardTwo;
   let comparisonCard;
+  let hiddenCard;
+
+  const selectedCards = selectedDistricts.length > 0;
 
   if (selectedDistricts[0]) {
+    hiddenCard = (
+      <div style={{ opacity: 0 }}>
+        <DistrictCard
+          {...selectedDistricts[0]}
+          toggleSelected={toggleSelected}
+          category={category}
+          selectedCards={selectedCards}
+        />
+      </div>
+    );
     cardOne = (
       <DistrictCard
         {...selectedDistricts[0]}
         toggleSelected={toggleSelected}
         category={category}
+        selectedCards={selectedCards}
       />
     );
   }
@@ -29,18 +43,21 @@ const ComparisonContainer = ({
         {...selectedDistricts[1]}
         toggleSelected={toggleSelected}
         category={category}
+        selectedCards={selectedCards}
       />
     );
     comparisonCard = (
       <ComparisonCard
         selectedDistricts={selectedDistricts}
         category={category}
+        selectedCards={selectedCards}
       />
     );
   }
 
   return (
     <div className="comparison-container">
+      {hiddenCard}
       {cardOne}
       {comparisonCard}
       {cardTwo}

@@ -66,7 +66,7 @@ describe('ComparisonContainer component', () => {
     expect(wrapper.find(DistrictCard).length).toEqual(0);
   });
 
-  it('should render one DistrictCard component if the legnth of selectedDistricts is 1', () => {
+  it('should render two (one hidden) DistrictCard component if the legnth of selectedDistricts is 1', () => {
     const selectedDistricts = [
       {
         location: 'COLORADO',
@@ -86,10 +86,10 @@ describe('ComparisonContainer component', () => {
       />
     );
 
-    expect(wrapper.find(DistrictCard).length).toEqual(1);
+    expect(wrapper.find(DistrictCard).length).toEqual(2);
   });
 
-  it('should render two DistrictCards if the length of selectedDistricts is 2', () => {
+  it('should render three (one hidden) DistrictCards if the length of selectedDistricts is 2', () => {
     wrapper = shallow(
       <ComparisonContainer
         selectedDistricts={selectedDistricts}
@@ -98,7 +98,7 @@ describe('ComparisonContainer component', () => {
       />
     );
 
-    expect(wrapper.find(DistrictCard).length).toEqual(2);
+    expect(wrapper.find(DistrictCard).length).toEqual(3);
   });
 
   it('should render a ComparisonCard if the length of selectedDistricts is 2', () => {
