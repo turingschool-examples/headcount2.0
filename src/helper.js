@@ -26,7 +26,6 @@ export default class DistrictRepository {
 
   findByName = (data) => {
     if(!data) return undefined;
-
     return this.stats[data.toUpperCase()]
   }
 
@@ -59,6 +58,7 @@ export default class DistrictRepository {
   }
 
   compareDistrictAverages = (district1, district2) => {
+    
     const toUpper = (data) => data.toUpperCase()
     let districtData1 = this.findAverage(district1)
     let districtData2 = this.findAverage(district2)

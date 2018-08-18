@@ -3,7 +3,7 @@ import Card from './Card'
 import './CardContainer.css'
 import PropType from 'prop-types'
 
-const CardContainer = ({ data }) => { 
+const CardContainer = ({ data, selectCards }) => { 
   let districtKeys = Object.values(data)
   
   let displayCards = districtKeys.map((district, index) => {
@@ -12,6 +12,7 @@ const CardContainer = ({ data }) => {
       key={index}
       location={district.location}
       stats={district.stats}
+      selectCards={selectCards}
     />
   })
 
