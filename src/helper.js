@@ -8,10 +8,6 @@ export default class DistrictRepository {
       let location = dataObj.Location.toUpperCase();
       let yearData = Math.round(dataObj.Data * 1000) / 1000;
 
-      if (isNaN(dataObj.Data)) {
-        yearData = 0;
-      }
-
       if (!dataLocationObj[location]) {
         dataLocationObj[location] = {
           location: location,
@@ -19,7 +15,7 @@ export default class DistrictRepository {
         };
       }
 
-      dataLocationObj[location].stats[dataObj.TimeFrame] = yearData;
+      dataLocationObj[location].stats[dataObj.TimeFrame] = yearData || 0;
 
       return dataLocationObj;
     }, {});
