@@ -37,11 +37,11 @@ class App extends Component {
       selectedCard => selectedCard.location === location
     );
 
-    if (!currentDistrict["selected"] && this.state.selectedCards.length < 2) {
-      currentDistrict["selected"] = true;
+    if (!currentDistrict.selected && this.state.selectedCards.length < 2) {
+      currentDistrict.selected = true;
       selectedCards = [...this.state.selectedCards, currentDistrict];
     } else {
-      currentDistrict["selected"] = false;
+      currentDistrict.selected = false;
       selectedCards = this.state.selectedCards.filter(
         selectedCard => selectedCard.location !== currentDistrict.location
       );
