@@ -1,6 +1,7 @@
 import React from "react";
 import DistrictCard from "./DistrictCard";
 import ComparisonCard from "./ComparisonCard";
+import "../css/ComparisonContainer.css";
 
 const ComparisonContainer = ({
   selectedCards,
@@ -40,7 +41,7 @@ const ComparisonContainer = ({
     }
   }
   return (
-    <div>
+    <div className="comparison-container">
       {firstCardSelected}
       {comparisonCard}
       {secondCardSelected}
