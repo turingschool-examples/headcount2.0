@@ -40,6 +40,7 @@ ShallowWrapper {
 </ul>,
       ],
       "className": "card",
+      "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -121,6 +122,7 @@ ShallowWrapper {
 </ul>,
         ],
         "className": "card",
+        "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -193,6 +195,7 @@ ShallowWrapper {
       },
     },
     "attachTo": undefined,
+    "disableLifecycleMethods": true,
     "hydrateIn": undefined,
   },
 }

@@ -9,10 +9,12 @@ describe('Search', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  // it('should render with all of the correct components', () => { 
-  //   const mockFunction = jest.fn()
-  //   const wrapper = shallow(<Search updateCards={mockFunction}/>)
+  it('should invoke updateCards on change', () => { 
+    const mockFunction = jest.fn()
+    const event = {target:{name: "input", value: "colorado"}}
+    const wrapper = shallow(<Search updateCards={mockFunction}/>)
 
-  //   expect(wrapper.find(Search).prop('updateCards')).toEqual(wrapper.instance().updateIdeas)
-  // })
+    wrapper.find('input').simulate('change', event)
+    expect(mockFunction).toHaveBeenCalled();
+  })
 })
