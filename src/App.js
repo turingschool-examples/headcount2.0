@@ -71,7 +71,7 @@ class App extends Component {
           <h1>headcount 2.0</h1>
         </header>
         <Search searchDistricts={this.searchDistricts}/>
-        <DistrictContainer 
+        {this.state.selectedDistricts && <DistrictContainer 
           districts={this.state.selectedDistricts} 
         />
     {this.state.comparisonData && <ComparisonCard comparisonData={this.state.comparisonData} card1key={this.state.key}/>}
