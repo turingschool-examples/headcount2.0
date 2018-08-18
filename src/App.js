@@ -42,9 +42,14 @@ class App extends Component {
       this.setState({ selectedDistricts });
       this.setState({ comparisonData : undefined });
     }
-    if (this.state.key) {
-      let comparisonData = district.compareDistrictAverages(this.state.key, key);
-      this.setState({ comparisonData});
+    this.compareDistricts(location);
+    this.changeSelectedCardClassName(location);
+  }
+
+  compareDistricts = (location) => {
+    if (this.state.selectedDistricts.length === 1) {
+      const comparisonData = district.compareDistrictAverages(this.state.selectedDistricts[0].location, location);
+      this.setState({ comparisonData });
     }
     this.setState({ selectedDistricts : [...this.state.selectedDistricts, selectedDistricts] });
     this.setState({key});  
