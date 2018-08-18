@@ -12,10 +12,13 @@ const DistrictCard = ({
   let average;
 
   if (selected) {
+    console.log(category.findAverage(location));
     average = (
       <p>
         AVG :{' '}
-        <span className={average < 0.5 ? 'subPointFive' : ''}>
+        <span
+          className={category.findAverage(location) < 0.5 ? 'subPointFive' : ''}
+        >
           {category.findAverage(location)}
         </span>
       </p>
