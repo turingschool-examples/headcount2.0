@@ -1,0 +1,54 @@
+@font-face {
+  font-family: anon;
+  src: url(../Fonts/AnonymousPro-Regular.ttf);
+}
+
+.compared-district-card0 {
+  animation: shazam 1s linear, bazinga 1s ease-in;
+  animation: shazam 1s linear, bazinga 1s ease-out;
+  grid-column: 1 / 2;
+  justify-self: center;
+  align-self: center;
+}
+
+.compared-district-card1 {
+  animation: shazam 1s linear, bazinga 1s ease-in;
+  animation: shazam 1s linear, bazinga 1s ease-out;
+  grid-column: 3 / 4;
+  justify-self: center;
+  align-self: center;
+}
+
+.compared-location {
+  font-size: 1.5rem;
+}
+
+.year-red {
+  font-family: anon;
+  text-align: center;
+  color: rgb(169, 77, 77);
+}
+
+.year-black {
+  font-family: anon;
+  text-align: center;
+  color: green;
+}
+
+@keyframes shazam {
+  0% {
+    right: 250px;
+  }
+  100% {
+    right: 10px;
+  }
+}
+
+@keyframes bazinga {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

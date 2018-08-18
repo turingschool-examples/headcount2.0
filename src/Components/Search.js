@@ -1,30 +1,43 @@
 import React, { Component } from "react";
 import DistrictRepository from "../helper";
 import kindergarners from "../data/kindergartners_in_full_day_program";
+import PropTypes from "prop-types";
+import "../CSS/Search.css";
 
 export default class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userInput: "",
+      districtInputOne: "",
       searchSuggestions: []
     };
     this.districtRepository = new DistrictRepository(kindergarners);
   }
 
-  handleChange = ({ value }, name) => {
-    this.setState({ userInput: value });
-    this.suggestDistricts(this.state.userInput);
+  handleChange = ({ value }) => {
+    this.setState({ districtInputOne: value });
+    this.suggestDistricts();
   };
 
   suggestDistricts = e => {
-    let suggestions = this.districtRepository.findAllMatches(
-      this.state.userInput
+    const { districtInputOne } = this.state;
+    const searchSuggestions = this.districtRepository.findAllMatches(
+      districtInputOne
     );
-    this.setState({ searchSuggestions: suggestions });
-    if (e.length > 2) {
-      this.props.handleSubmit(this.state.searchSuggestions);
+
+    this.setState({ searchSuggestions });
+    if (districtInputOne.length > 1) {
+      this.props.handleSubmit(searchSuggestions);
+    } else {
+      const newDistricts = this.districtRepository.districtsArray();
+      this.props.handleSubmit(newDistricts);
     }
+  };
+
+  clearInput = () => {
+    this.setState({ districtInputOne: "" });
+    const newDistricts = this.districtRepository.districtsArray();
+    this.props.handleSubmit(newDistricts);
   };
 
   searchDistrict = district => {
@@ -34,26 +47,47 @@ export default class Search extends Component {
 
   render() {
     return (
-      <div>
+      <div className="search-bar">
         <form>
           <input
+            className="search-input"
             placeholder="Search District"
-            onChange={e => this.handleChange(e.target, "userInput")}
-            value={this.state.userInput}
+            onChange={e => this.handleChange(e.target)}
+            value={this.state.districtInputOne}
           />
-          {/* <button onClick={e => this.searchDistrict(e)}>Search</button> */}
+          <button onClick={() => this.props.clearComparisons()}>
+            Clear Fields
+          </button>
         </form>
-        <div>
+        <div
+          className={
+            this.state.districtInputOne.length > 1
+              ? "show-suggestions"
+              : "hide-suggestions"
+          }
+        >
+          <span
+            className={
+              this.state.searchSuggestions.length
+                ? "show-none"
+                : "display-error"
+            }
+          >
+            None Found! Search Again
+          </span>
           {this.state.searchSuggestions.map((district, i) => {
             if (
               this.state.searchSuggestions &&
-              this.state.userInput.length > 3
+              this.state.districtInputOne.length > 1
             ) {
               return (
                 <p
                   className="suggestions"
                   key={i}
-                  onClick={e => this.searchDistrict(e.target.textContent)}
+                  onClick={e => {
+                    this.props.selectCard(e.target.textContent);
+                    this.clearInput();
+                  }}
                 >
                   {district.location}
                 </p>
@@ -65,3 +99,9 @@ export default class Search extends Component {
     );
   }
 }
+
+const { func } = PropTypes;
+
+Search.propTypes = {
+  handleSubmit: func.isRequired
+};

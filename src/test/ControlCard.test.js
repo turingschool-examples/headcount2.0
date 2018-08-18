@@ -31,12 +31,57 @@ describe("ControlCards", () => {
     }
   };
 
+  const mockdDistricts = [
+    {
+      clicked: true,
+      location: "COLORADO",
+      stats: {
+        2004: 0.24,
+        2005: 0.278,
+        2006: 0.337,
+        2007: 0.395,
+        2008: 0.536,
+        2009: 0.598,
+        2010: 0.64,
+        2011: 0.672,
+        2012: 0.695,
+        2013: 0.703,
+        2014: 0.741
+      }
+    },
+    {
+      clicked: true,
+      location: "ACADEMY 20",
+      stats: {
+        2004: 0.24,
+        2005: 0.278,
+        2006: 0.337,
+        2007: 0.395,
+        2008: 0.536,
+        2009: 0.598,
+        2010: 0.64,
+        2011: 0.672,
+        2012: 0.695,
+        2013: 0.703,
+        2014: 0.741
+      }
+    }
+  ];
+
   beforeEach(() => {
     shallowWrap = shallow(
-      <ControlCards comparisonData={mockData} cardClick={mockClick} />
+      <ControlCards
+        comparisonData={mockData}
+        cardClick={mockClick}
+        selectedDistricts={mockdDistricts}
+      />
     );
     mountWrap = mount(
-      <ControlCards comparisonData={mockData} cardClick={mockClick} />
+      <ControlCards
+        comparisonData={mockData}
+        cardClick={mockClick}
+        selectedDistricts={mockdDistricts}
+      />
     );
   });
 
@@ -45,35 +90,12 @@ describe("ControlCards", () => {
     expect(mountWrap).toBeDefined();
   });
 
-  it("should instantiate DistrictCard and ComparisonCard Component", () => {
-    expect(shallowWrap.find(DistrictCard).length).toEqual(2);
-    expect(shallowWrap.find(ComparisonCard).length).toEqual(1);
-  });
+  it("should match snapshot with no control card", () => {
+    shallowWrap = shallow(
+      <ControlCards comparisonData={{}} cardClick={mockClick} />
+    );
 
-  it("should pass down data to child components", () => {
-    expect(
-      mountWrap
-        .find(DistrictCard)
-        .first()
-        .props()
-    ).toEqual({
-      cardClick: { "BAYFIELD 10 JT-R": true, "BENNETT 29J": true },
-      location: "AGUILAR REORGANIZED 6",
-      stats: { "2004": 1, "2005": 1 }
-    });
-
-    expect(
-      mountWrap
-        .find(ComparisonCard)
-        .first()
-        .props()
-    ).toEqual({
-      comparisonData: {
-        "AGUILAR REORGANIZED 6": 1,
-        "AKRON R-1": 0.619,
-        compared: 0.619
-      }
-    });
+    expect(shallowWrap).toMatchSnapshot();
   });
 
   it("should match snapshot", () => {

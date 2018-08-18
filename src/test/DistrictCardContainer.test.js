@@ -1,10 +1,8 @@
 import React from "react";
 import { DistrictCardContainer } from "../Components/DistrictCardContainer";
-import { DistrictCard } from "../Components/DistrictCard";
 
 describe("DistrictCardContainer", () => {
   let shallowWrap;
-  let mountWrap;
   let mockDistricts = [
     {
       location: "COLORADO",
@@ -44,24 +42,17 @@ describe("DistrictCardContainer", () => {
     shallowWrap = shallow(
       <DistrictCardContainer districts={mockDistricts} selectCard={jest.fn()} />
     );
-    mountWrap = mount(
-      <DistrictCardContainer districts={mockDistricts} selectCard={jest.fn()} />
-    );
   });
 
   it("should exist", () => {
     expect(shallowWrap).toBeDefined();
   });
 
-  it("should instantiate DistrictCard components", () => {
-    expect(shallowWrap.find(DistrictCard).length).toEqual(2);
-  });
-
-  it("should pass down props to DistrictCard Components", () => {
-    const propKeys = Object.keys(mountWrap.props());
-
-    expect(propKeys).toEqual(["districts", "selectCard"]);
-    expect(mountWrap.props()[propKeys[0]]).toEqual(mockDistricts);
+  it("should match snap shot with an empty District Card container", () => {
+    shallowWrap = shallow(
+      <DistrictCardContainer districts={[]} selectCard={jest.fn()} />
+    );
+    expect(shallowWrap).toMatchSnapshot();
   });
 
   it("should match snapshot", () => {

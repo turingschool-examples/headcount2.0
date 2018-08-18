@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search should match snapshot 1`] = `
+<div
+  className="search-bar"
+>
+  <form>
+    <input
+      className="search-input"
+      onChange={[Function]}
+      placeholder="Search District"
+      value=""
+    />
+    <button
+      onClick={[Function]}
+    >
+      Clear Fields
+    </button>
+  </form>
+  <div
+    className="hide-suggestions"
+  >
+    <span
+      className="display-error"
+    >
+      None Found! Search Again
+    </span>
+  </div>
+</div>
+`;

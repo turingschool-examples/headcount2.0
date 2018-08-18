@@ -3,154 +3,407 @@
 exports[`DistrictCard should match snapshot 1`] = `
 <div
   className="district-card"
+  onClick={[Function]}
 >
   <h1
     className="district-location"
   >
     Colorado
   </h1>
+  <header
+    className="year-header-hide"
+  >
+    Year
+  </header>
+  <header
+    className="avg-header-hide"
+  >
+    Avg
+  </header>
   <section
-    className="year-red"
+    className="stats-hide"
     key="0"
-    onClick={[Function]}
   >
-    2004
-     :
-    <span
-      className="year-red"
+    <p
+      className="year"
     >
-      0.24
-    </span>
+      2004
+      ......
+      <span
+        className="avg-low"
+      >
+        0.24
+      </span>
+    </p>
   </section>
   <section
-    className="year-red"
+    className="stats-hide"
     key="1"
-    onClick={[Function]}
   >
-    2005
-     :
-    <span
-      className="year-red"
+    <p
+      className="year"
     >
-      0.278
-    </span>
+      2005
+      ......
+      <span
+        className="avg-low"
+      >
+        0.278
+      </span>
+    </p>
   </section>
   <section
-    className="year-red"
+    className="stats-hide"
     key="2"
-    onClick={[Function]}
   >
-    2006
-     :
-    <span
-      className="year-red"
+    <p
+      className="year"
     >
-      0.337
-    </span>
+      2006
+      ......
+      <span
+        className="avg-low"
+      >
+        0.337
+      </span>
+    </p>
   </section>
   <section
-    className="year-red"
+    className="stats-hide"
     key="3"
-    onClick={[Function]}
   >
-    2007
-     :
-    <span
-      className="year-red"
+    <p
+      className="year"
     >
-      0.395
-    </span>
+      2007
+      ......
+      <span
+        className="avg-low"
+      >
+        0.395
+      </span>
+    </p>
   </section>
   <section
-    className="year-black"
+    className="stats-hide"
     key="4"
-    onClick={[Function]}
   >
-    2008
-     :
-    <span
-      className="year-black"
+    <p
+      className="year"
     >
-      0.536
-    </span>
+      2008
+      ......
+      <span
+        className="avg-high"
+      >
+        0.536
+      </span>
+    </p>
   </section>
   <section
-    className="year-black"
+    className="stats-hide"
     key="5"
-    onClick={[Function]}
   >
-    2009
-     :
-    <span
-      className="year-black"
+    <p
+      className="year"
     >
-      0.598
-    </span>
+      2009
+      ......
+      <span
+        className="avg-high"
+      >
+        0.598
+      </span>
+    </p>
   </section>
   <section
-    className="year-black"
+    className="stats-hide"
     key="6"
-    onClick={[Function]}
   >
-    2010
-     :
-    <span
-      className="year-black"
+    <p
+      className="year"
     >
-      0.64
-    </span>
+      2010
+      ......
+      <span
+        className="avg-high"
+      >
+        0.64
+      </span>
+    </p>
   </section>
   <section
-    className="year-black"
+    className="stats-hide"
     key="7"
-    onClick={[Function]}
   >
-    2011
-     :
-    <span
-      className="year-black"
+    <p
+      className="year"
     >
-      0.672
-    </span>
+      2011
+      ......
+      <span
+        className="avg-high"
+      >
+        0.672
+      </span>
+    </p>
   </section>
   <section
-    className="year-black"
+    className="stats-hide"
     key="8"
-    onClick={[Function]}
   >
-    2012
-     :
-    <span
-      className="year-black"
+    <p
+      className="year"
     >
-      0.695
-    </span>
+      2012
+      ......
+      <span
+        className="avg-high"
+      >
+        0.695
+      </span>
+    </p>
   </section>
   <section
-    className="year-black"
+    className="stats-hide"
     key="9"
-    onClick={[Function]}
   >
-    2013
-     :
-    <span
-      className="year-black"
+    <p
+      className="year"
     >
-      0.703
-    </span>
+      2013
+      ......
+      <span
+        className="avg-high"
+      >
+        0.703
+      </span>
+    </p>
   </section>
   <section
-    className="year-black"
+    className="stats-hide"
     key="10"
-    onClick={[Function]}
   >
-    2014
-     :
-    <span
-      className="year-black"
+    <p
+      className="year"
     >
-      0.741
-    </span>
+      2014
+      ......
+      <span
+        className="avg-high"
+      >
+        0.741
+      </span>
+    </p>
   </section>
+  <p
+    className="hide-msg"
+  >
+    Click to Remove
+  </p>
+</div>
+`;
+
+exports[`DistrictCard should match snapshot 2`] = `
+<div
+  className="district-card"
+  onClick={[Function]}
+>
+  <h1
+    className="district-location"
+  >
+    Colorado
+  </h1>
+  <header
+    className="year-header-hide"
+  >
+    Year
+  </header>
+  <header
+    className="avg-header-hide"
+  >
+    Avg
+  </header>
+  <section
+    className="stats-hide"
+    key="0"
+  >
+    <p
+      className="year"
+    >
+      2004
+      ......
+      <span
+        className="avg-low"
+      >
+        0.24
+      </span>
+    </p>
+  </section>
+  <section
+    className="stats-hide"
+    key="1"
+  >
+    <p
+      className="year"
+    >
+      2005
+      ......
+      <span
+        className="avg-low"
+      >
+        0.278
+      </span>
+    </p>
+  </section>
+  <section
+    className="stats-hide"
+    key="2"
+  >
+    <p
+      className="year"
+    >
+      2006
+      ......
+      <span
+        className="avg-low"
+      >
+        0.337
+      </span>
+    </p>
+  </section>
+  <section
+    className="stats-hide"
+    key="3"
+  >
+    <p
+      className="year"
+    >
+      2007
+      ......
+      <span
+        className="avg-low"
+      >
+        0.395
+      </span>
+    </p>
+  </section>
+  <section
+    className="stats-hide"
+    key="4"
+  >
+    <p
+      className="year"
+    >
+      2008
+      ......
+      <span
+        className="avg-high"
+      >
+        0.536
+      </span>
+    </p>
+  </section>
+  <section
+    className="stats-hide"
+    key="5"
+  >
+    <p
+      className="year"
+    >
+      2009
+      ......
+      <span
+        className="avg-high"
+      >
+        0.598
+      </span>
+    </p>
+  </section>
+  <section
+    className="stats-hide"
+    key="6"
+  >
+    <p
+      className="year"
+    >
+      2010
+      ......
+      <span
+        className="avg-high"
+      >
+        0.64
+      </span>
+    </p>
+  </section>
+  <section
+    className="stats-hide"
+    key="7"
+  >
+    <p
+      className="year"
+    >
+      2011
+      ......
+      <span
+        className="avg-high"
+      >
+        0.672
+      </span>
+    </p>
+  </section>
+  <section
+    className="stats-hide"
+    key="8"
+  >
+    <p
+      className="year"
+    >
+      2012
+      ......
+      <span
+        className="avg-high"
+      >
+        0.695
+      </span>
+    </p>
+  </section>
+  <section
+    className="stats-hide"
+    key="9"
+  >
+    <p
+      className="year"
+    >
+      2013
+      ......
+      <span
+        className="avg-high"
+      >
+        0.703
+      </span>
+    </p>
+  </section>
+  <section
+    className="stats-hide"
+    key="10"
+  >
+    <p
+      className="year"
+    >
+      2014
+      ......
+      <span
+        className="avg-high"
+      >
+        0.741
+      </span>
+    </p>
+  </section>
+  <p
+    className="hide-msg"
+  >
+    Click to Remove
+  </p>
 </div>
 `;

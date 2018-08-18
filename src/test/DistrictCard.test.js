@@ -3,7 +3,6 @@ import { DistrictCard } from "../Components/DistrictCard";
 
 describe("DistrictCard", () => {
   let shallowWrap;
-  let mountWrap;
   let mockLocation = {
     location: "Colorado",
     stats: {
@@ -35,50 +34,25 @@ describe("DistrictCard", () => {
     expect(shallowWrap).toBeDefined();
   });
 
-  it("should render one h1 element and eleven sections", () => {
-    expect(shallowWrap.children().length).toEqual(12);
-    expect(shallowWrap.find("section").length).toEqual(11);
-    expect(shallowWrap.find("h1").length).toEqual(1);
-  });
-
-  it("should render unique keys for each section", () => {
-    const result = [
-      { key: "0" },
-      { key: "1" },
-      { key: "2" },
-      { key: "3" },
-      { key: "4" },
-      { key: "5" },
-      { key: "6" },
-      { key: "7" },
-      { key: "8" },
-      { key: "9" },
-      { key: "10" }
-    ];
-
-    expect(
-      shallowWrap
-        .props()
-        .children.map(child => child)[1]
-        .map(child => {
-          return { key: child.key };
-        })
-    ).toEqual(result);
-  });
-
   it("should handle click of individual card", () => {
     let mockfn = jest.fn();
     let mockWrap = shallow(
       <DistrictCard
         location={mockLocation.location}
         stats={mockLocation.stats}
-        selectCard={() => mockfn()}
+        selectCard={mockfn}
       />
     );
-    let sectionOne = mockWrap.find("section").first();
+    let sectionOne = mockWrap.find("div").first();
+
     sectionOne.simulate("click");
 
     expect(mockfn).toHaveBeenCalled();
+  });
+
+  it("should match snapshot", () => {
+    <DistrictCard location={""} stats={{}} selectCard={jest.fn()} />;
+    expect(shallowWrap).toMatchSnapshot();
   });
 
   it("should match snapshot", () => {

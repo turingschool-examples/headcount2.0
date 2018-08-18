@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import DistrictRepository from "../helper";
 import kindergarners from "../data/kindergartners_in_full_day_program";
-// import PropTypes from "prop-types";
 import Search from "./Search";
 import { DistrictCardContainer } from "./DistrictCardContainer";
 import { ControlCards } from "./ControlCards";
+import "../CSS/App.css";
 
 class App extends Component {
   constructor() {
@@ -12,20 +12,9 @@ class App extends Component {
     this.state = {
       districts: [],
       selectedDistricts: [],
-      comparisonData: {},
-      cardClick: {}
+      comparisonData: {}
     };
     this.districtRepository = new DistrictRepository(kindergarners);
-  }
-
-  componentDidUpdate() {
-    if (this.state.selectedDistricts.length === 2) {
-      this.compareDistricts(
-        this.state.selectedDistricts[0],
-        this.state.selectedDistricts[1]
-      );
-      this.setState({ selectedDistricts: [] });
-    }
   }
 
   componentDidMount = () => {
@@ -40,18 +29,33 @@ class App extends Component {
   };
 
   selectCard = location => {
-    if (!this.state.cardClick[location]) {
-      const cardClick = { ...this.state.cardClick };
-      cardClick[location] = true;
-      this.setState({ cardClick });
+    const { districts } = this.state;
+    let targetDistrict = districts.find(
+      district => district.location === location
+    );
+    let targetIndex = districts.indexOf(targetDistrict);
+    let selectedDistricts;
+    if (!targetDistrict["clicked"] && this.state.selectedDistricts.length < 2) {
+      targetDistrict["clicked"] = true;
+      selectedDistricts = [...this.state.selectedDistricts, targetDistrict];
+      districts[targetIndex] = targetDistrict;
     } else {
-      delete this.state.cardClick[location];
-      console.log(this.state.cardClick);
+      targetDistrict["clicked"] = false;
+      selectedDistricts = this.state.selectedDistricts.filter(
+        district => district.clicked === true
+      );
     }
-    if (this.state.selectedDistricts.length <= 1) {
-      const selectedDistricts = [...this.state.selectedDistricts, location];
-      this.setState({ selectedDistricts });
+    this.setState({ selectedDistricts, districts });
+    if (selectedDistricts.length === 2) {
+      this.compareDistricts(
+        selectedDistricts[0].location,
+        selectedDistricts[1].location
+      );
     }
+  };
+
+  clearComparisons = () => {
+    this.setState({ comparisonData: {} });
   };
 
   compareDistricts = (districtOne, districtTwo) => {
@@ -69,22 +73,36 @@ class App extends Component {
     };
     delete comparisonData.compared;
     comparisonData[districtOne] = districtOneInfo;
-    comparisonData[districtOne].cardClick = null;
     comparisonData[districtTwo] = districtTwoInfo;
-    comparisonData[districtTwo].cardClick = null;
-
     this.setState({ comparisonData });
   };
 
   render() {
     return (
-      <div>
-        Welcome To Headcount 2.0
-        <Search handleSubmit={this.handleSubmit} />
+      <div className="head-wrapper">
+        <Search
+          selectCard={this.selectCard}
+          handleSubmit={this.handleSubmit}
+          clearComparisons={this.clearComparisons}
+        />
+        <div
+          className={
+            this.state.selectedDistricts.length > 1
+              ? "title-hide"
+              : "title-show"
+          }
+        >
+          HEAD COUNT 2.0
+          <p className="instructions">
+            Click Districts below for Annual Score Avg.
+          </p>
+        </div>
+
         {this.state.comparisonData !== {} && (
           <ControlCards
+            selectedDistricts={this.state.selectedDistricts}
             comparisonData={this.state.comparisonData}
-            cardClick={this.state.cardClick}
+            selectCard={this.selectCard}
           />
         )}
         {this.state.districts && (

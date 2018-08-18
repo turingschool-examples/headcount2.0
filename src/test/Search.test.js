@@ -4,9 +4,18 @@ import Search from "../Components/Search";
 
 describe("Search", () => {
   let shallowWrap;
+  let mockSubmit = jest.fn();
+  let mockSelect = jest.fn();
+  let mockClear = jest.fn();
 
   beforeEach(() => {
-    shallowWrap = shallow(<Search handleSubmit={jest.fn} />);
+    shallowWrap = shallow(
+      <Search
+        handleSubmit={() => mockSubmit()}
+        selectCard={() => mockSelect()}
+        clearComparisons={() => mockClear()}
+      />
+    );
   });
 
   it("should exist", () => {
@@ -14,27 +23,22 @@ describe("Search", () => {
   });
 
   it("should have default state properties", () => {
-    expect(shallowWrap.state().userInput).toEqual("");
+    expect(shallowWrap.state().districtInputOne).toEqual("");
     expect(shallowWrap.state().searchSuggestions).toEqual([]);
   });
 
   it("should handleChange; set State and call suggest method", () => {
-    shallowWrap.instance().handleChange({ value: "COLORADO" }, "userInput");
+    shallowWrap.instance().handleChange({ value: "COLORADO" });
 
-    expect(shallowWrap.state().userInput).toEqual("COLORADO");
-
-    // const spy = jest.spyOn(Search.prototype, "suggestDistricts");
-    // const mockfn = jest.fn();
-    // const wrapper = mount(<Search handleChange={mockfn} />);
-    // wrapper.instance().suggesDistricts();
-    // expect(spy).toHaveBeenCalled();
+    expect(shallowWrap.state().districtInputOne).toEqual("COLORADO");
   });
 
   it("should set state of Search suggestions based on userInput", () => {
-    shallowWrap.instance().handleChange({ value: "Colorado" }, "userInput");
+    shallowWrap.instance().handleChange({ value: "Colorado" });
 
     const result = [
       {
+        clicked: false,
         location: "COLORADO",
         stats: {
           "2004": 0.24,
@@ -51,6 +55,7 @@ describe("Search", () => {
         }
       },
       {
+        clicked: false,
         location: "COLORADO SPRINGS 11",
         stats: {
           "2004": 0.069,
@@ -73,11 +78,8 @@ describe("Search", () => {
   });
 
   it("should send call handleSubmit in App", () => {
-    let mockfn = jest.fn();
-    shallowWrap = shallow(<Search handleSubmit={() => mockfn()} />);
-    shallowWrap.instance().searchDistrict("Colorado");
-
-    expect(mockfn).toHaveBeenCalled();
+    shallowWrap.instance().searchDistrict("COLORADO");
+    expect(mockSubmit).toHaveBeenCalled();
   });
 
   it("should render form container with input", () => {
@@ -91,9 +93,10 @@ describe("Search", () => {
 
     let userInput = shallowWrap.find("input");
     userInput.simulate("change", eventOne);
-    expect(shallowWrap.state().userInput).toEqual("Academy");
+    expect(shallowWrap.state().districtInputOne).toEqual("Academy");
+
     userInput.simulate("change", eventTwo);
-    expect(shallowWrap.state().userInput).toEqual("Akron");
+    expect(shallowWrap.state().districtInputOne).toEqual("Akron");
   });
 
   it("should suggest districts based on user input", () => {
@@ -107,6 +110,8 @@ describe("Search", () => {
     let suggestionsOne = suggestionOne.props().children;
 
     expect(suggestionsOne).toEqual("ACADEMY 20");
+    suggestionOne.simulate("click");
+    expect(mockSelect).toHaveBeenCalled();
 
     userInput.simulate("change", eventTwo);
 
@@ -114,5 +119,22 @@ describe("Search", () => {
     let suggestionsTwo = suggestionTwo.map(suggest => suggest.props().children);
 
     expect(suggestionsTwo).toEqual(["COLORADO", "COLORADO SPRINGS 11"]);
+  });
+
+  it("should clear input, invoke the handleSubmit method from state", () => {
+    shallowWrap.setState({ districtInputOne: "Denver" });
+    shallowWrap.instance().clearInput();
+    expect(shallowWrap.state().districtInputOne).toEqual("");
+    expect(mockClear).toHaveBeenCalled();
+  });
+
+  it("should search for specific district and invoke the handleSubmit Method from state", () => {
+    shallowWrap.instance().searchDistrict("ACADEMY 20");
+    expect(mockSubmit).toHaveBeenCalled();
+  });
+
+  it("should match snapshot", () => {
+    shallowWrap.instance().searchDistrict;
+    expect(shallowWrap).toMatchSnapshot();
   });
 });

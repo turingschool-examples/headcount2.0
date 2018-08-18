@@ -5,13 +5,8 @@ exports[`ControlCards should match snapshot 1`] = `
   className="control-cards"
 >
   <Component
-    cardClick={
-      Object {
-        "BAYFIELD 10 JT-R": true,
-        "BENNETT 29J": true,
-      }
-    }
-    key="0"
+    index={0}
+    key="compared 0"
     location="AGUILAR REORGANIZED 6"
     stats={
       Object {
@@ -21,13 +16,8 @@ exports[`ControlCards should match snapshot 1`] = `
     }
   />
   <Component
-    cardClick={
-      Object {
-        "BAYFIELD 10 JT-R": true,
-        "BENNETT 29J": true,
-      }
-    }
-    key="1"
+    index={1}
+    key="compared 1"
     location="AKRON R-1"
     stats={
       Object {
@@ -44,8 +34,16 @@ exports[`ControlCards should match snapshot 1`] = `
         "compared": 0.619,
       }
     }
-    key="1534340715401"
+    key="2"
   />
+   
+</div>
+`;
+
+exports[`ControlCards should match snapshot with no control card 1`] = `
+<div
+  className="control-cards"
+>
    
 </div>
 `;

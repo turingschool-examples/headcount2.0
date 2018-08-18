@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComparedDistrictCard should match snapshot 1`] = `
+<div
+  className="compared-district-cardnull"
+>
+  <h1
+    className="compared-location"
+  />
+  <p />
+</div>
+`;
+
+exports[`ComparedDistrictCard should match snapshot 2`] = `
+<div
+  className="compared-district-card1"
+>
+  <h1
+    className="compared-location"
+  >
+    ACADEMY 20
+  </h1>
+  <section
+    className="year-red"
+    key="0"
+  >
+    2004
+    <span
+      className="year-red"
+    >
+      ....
+      0.228
+    </span>
+  </section>
+  <section
+    className="year-red"
+    key="1"
+  >
+    2005
+    <span
+      className="year-red"
+    >
+      ....
+      0.3
+    </span>
+  </section>
+  <section
+    className="year-red"
+    key="2"
+  >
+    2006
+    <span
+      className="year-red"
+    >
+      ....
+      0.293
+    </span>
+  </section>
+  <section
+    className="year-red"
+    key="3"
+  >
+    2007
+    <span
+      className="year-red"
+    >
+      ....
+      0.306
+    </span>
+  </section>
+  <section
+    className="year-black"
+    key="4"
+  >
+    2008
+    <span
+      className="year-black"
+    >
+      ....
+      0.673
+    </span>
+  </section>
+  <section
+    className="year-black"
+    key="5"
+  >
+    2009
+    <span
+      className="year-black"
+    >
+      ....
+      1
+    </span>
+  </section>
+  <section
+    className="year-black"
+    key="6"
+  >
+    2010
+    <span
+      className="year-black"
+    >
+      ....
+      1
+    </span>
+  </section>
+  <section
+    className="year-black"
+    key="7"
+  >
+    2011
+    <span
+      className="year-black"
+    >
+      ....
+      1
+    </span>
+  </section>
+  <section
+    className="year-black"
+    key="8"
+  >
+    2012
+    <span
+      className="year-black"
+    >
+      ....
+      1
+    </span>
+  </section>
+  <section
+    className="year-black"
+    key="9"
+  >
+    2013
+    <span
+      className="year-black"
+    >
+      ....
+      0.998
+    </span>
+  </section>
+  <section
+    className="year-black"
+    key="10"
+  >
+    2014
+    <span
+      className="year-black"
+    >
+      ....
+      1
+    </span>
+  </section>
+  <p />
+</div>
+`;

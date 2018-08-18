@@ -1,19 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App should match snap shot 1`] = `
-<div>
-  Welcome To Headcount 2.0
+<div
+  className="head-wrapper"
+>
   <Search
+    clearComparisons={[Function]}
     handleSubmit={[Function]}
+    selectCard={[Function]}
   />
+  <div
+    className="title-show"
+  >
+    HEAD COUNT 2.0
+    <p
+      className="instructions"
+    >
+      Click Districts below for Annual Score Avg.
+    </p>
+  </div>
   <Component
-    cardClick={Object {}}
     comparisonData={Object {}}
+    selectCard={[Function]}
+    selectedDistricts={Array []}
   />
   <Component
     districts={
       Array [
         Object {
+          "clicked": false,
           "location": "COLORADO",
           "stats": Object {
             "2004": 0.24,
@@ -30,6 +45,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "ACADEMY 20",
           "stats": Object {
             "2004": 0.302,
@@ -46,6 +62,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "ADAMS COUNTY 14",
           "stats": Object {
             "2004": 0.228,
@@ -62,6 +79,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "ADAMS-ARAPAHOE 28J",
           "stats": Object {
             "2004": 0.174,
@@ -78,6 +96,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "AGATE 300",
           "stats": Object {
             "2004": 1,
@@ -94,6 +113,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "AGUILAR REORGANIZED 6",
           "stats": Object {
             "2004": 1,
@@ -110,6 +130,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "AKRON R-1",
           "stats": Object {
             "2004": 0,
@@ -126,6 +147,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "ALAMOSA RE-11J",
           "stats": Object {
             "2004": 0,
@@ -142,6 +164,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "ARCHULETA COUNTY 50 JT",
           "stats": Object {
             "2004": 0,
@@ -158,6 +181,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "ARICKAREE R-2",
           "stats": Object {
             "2004": 1,
@@ -174,6 +198,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "ARRIBA-FLAGLER C-20",
           "stats": Object {
             "2004": 0.455,
@@ -190,6 +215,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "ASPEN 1",
           "stats": Object {
             "2004": 1,
@@ -206,6 +232,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "AULT-HIGHLAND RE-9",
           "stats": Object {
             "2004": 1,
@@ -222,6 +249,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "BAYFIELD 10 JT-R",
           "stats": Object {
             "2004": 0.318,
@@ -238,6 +266,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "BENNETT 29J",
           "stats": Object {
             "2004": 0,
@@ -254,6 +283,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "BETHUNE R-5",
           "stats": Object {
             "2004": 1,
@@ -270,6 +300,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "BIG SANDY 100J",
           "stats": Object {
             "2004": 0,
@@ -286,6 +317,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "BOULDER VALLEY RE 2",
           "stats": Object {
             "2004": 0.016,
@@ -302,6 +334,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "BRANSON REORGANIZED 82",
           "stats": Object {
             "2004": 1,
@@ -318,6 +351,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "BRIGGSDALE RE-10",
           "stats": Object {
             "2004": 0,
@@ -334,6 +368,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "BRIGHTON 27J",
           "stats": Object {
             "2004": 0.036,
@@ -350,6 +385,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "BRUSH RE-2(J)",
           "stats": Object {
             "2004": 0,
@@ -366,6 +402,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "BUENA VISTA R-31",
           "stats": Object {
             "2004": 0,
@@ -382,6 +419,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "BUFFALO RE-4",
           "stats": Object {
             "2004": 1,
@@ -398,6 +436,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "BURLINGTON RE-6J",
           "stats": Object {
             "2004": 0,
@@ -414,6 +453,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "BYERS 32J",
           "stats": Object {
             "2004": 1,
@@ -430,6 +470,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "CALHAN RJ-1",
           "stats": Object {
             "2004": 0.353,
@@ -446,6 +487,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "CAMPO RE-6",
           "stats": Object {
             "2004": 0,
@@ -462,6 +504,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "CANON CITY RE-1",
           "stats": Object {
             "2004": 0.302,
@@ -478,6 +521,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "CENTENNIAL R-1",
           "stats": Object {
             "2004": 0,
@@ -494,6 +538,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "CENTER 26 JT",
           "stats": Object {
             "2004": 1,
@@ -510,6 +555,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "CHERAW 31",
           "stats": Object {
             "2004": 1,
@@ -526,6 +572,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "CHERRY CREEK 5",
           "stats": Object {
             "2004": 0.392,
@@ -542,6 +589,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "CHEYENNE COUNTY RE-5",
           "stats": Object {
             "2004": 1,
@@ -558,6 +606,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "CHEYENNE MOUNTAIN 12",
           "stats": Object {
             "2004": 0,
@@ -574,6 +623,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "CLEAR CREEK RE-1",
           "stats": Object {
             "2004": 0.147,
@@ -590,6 +640,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "COLORADO SPRINGS 11",
           "stats": Object {
             "2004": 0.069,
@@ -606,6 +657,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "COTOPAXI RE-3",
           "stats": Object {
             "2004": 0,
@@ -622,6 +674,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "CREEDE CONSOLIDATED 1",
           "stats": Object {
             "2004": 0,
@@ -638,6 +691,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "CRIPPLE CREEK-VICTOR RE-1",
           "stats": Object {
             "2004": 1,
@@ -654,6 +708,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "CROWLEY COUNTY RE-1-J",
           "stats": Object {
             "2004": 0,
@@ -670,6 +725,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "CUSTER COUNTY SCHOOL DISTRICT C-1",
           "stats": Object {
             "2004": 0,
@@ -686,6 +742,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "DE BEQUE 49JT",
           "stats": Object {
             "2004": 0,
@@ -702,6 +759,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "DEER TRAIL 26J",
           "stats": Object {
             "2004": 0,
@@ -718,6 +776,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "DEL NORTE C-7",
           "stats": Object {
             "2004": 0,
@@ -734,6 +793,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "DELTA COUNTY 50(J)",
           "stats": Object {
             "2004": 1,
@@ -750,6 +810,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "DENVER COUNTY 1",
           "stats": Object {
             "2004": 0.518,
@@ -766,6 +827,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "DOLORES COUNTY RE NO.2",
           "stats": Object {
             "2004": 0.929,
@@ -782,6 +844,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "DOLORES RE-4A",
           "stats": Object {
             "2004": 0,
@@ -798,6 +861,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "DOUGLAS COUNTY RE 1",
           "stats": Object {
             "2004": 0,
@@ -814,6 +878,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "DURANGO 9-R",
           "stats": Object {
             "2004": 0,
@@ -830,6 +895,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "EADS RE-1",
           "stats": Object {
             "2004": 1,
@@ -846,6 +912,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "EAGLE COUNTY RE 50",
           "stats": Object {
             "2004": 0.555,
@@ -862,6 +929,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "EAST GRAND 2",
           "stats": Object {
             "2004": 1,
@@ -878,6 +946,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "EAST OTERO R-1",
           "stats": Object {
             "2004": 0,
@@ -894,6 +963,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "EAST YUMA COUNTY RJ-2",
           "stats": Object {
             "2004": 0,
@@ -910,6 +980,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "EATON RE-2",
           "stats": Object {
             "2004": 0,
@@ -926,6 +997,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "EDISON 54 JT",
           "stats": Object {
             "2004": 0.4,
@@ -942,6 +1014,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "ELBERT 200",
           "stats": Object {
             "2004": 0,
@@ -958,6 +1031,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "ELIZABETH C-1",
           "stats": Object {
             "2004": 0,
@@ -974,6 +1048,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "ELLICOTT 22",
           "stats": Object {
             "2004": 1,
@@ -990,6 +1065,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "ENGLEWOOD 1",
           "stats": Object {
             "2004": 0.598,
@@ -1006,6 +1082,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "FALCON 49",
           "stats": Object {
             "2004": 0,
@@ -1022,6 +1099,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "FLORENCE RE-2",
           "stats": Object {
             "2004": 0,
@@ -1038,6 +1116,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "FORT MORGAN RE-3",
           "stats": Object {
             "2004": 0,
@@ -1054,6 +1133,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "FOUNTAIN 8",
           "stats": Object {
             "2004": 0,
@@ -1070,6 +1150,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "FOWLER R-4J",
           "stats": Object {
             "2004": 1,
@@ -1086,6 +1167,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "FRENCHMAN RE-3",
           "stats": Object {
             "2004": 1,
@@ -1102,6 +1184,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "GARFIELD 16",
           "stats": Object {
             "2004": 0,
@@ -1118,6 +1201,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "GARFIELD RE-2",
           "stats": Object {
             "2004": 0,
@@ -1134,6 +1218,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "GENOA-HUGO C113",
           "stats": Object {
             "2004": 0,
@@ -1150,6 +1235,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "GILPIN COUNTY RE-1",
           "stats": Object {
             "2004": 0.2,
@@ -1166,6 +1252,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "GRANADA RE-1",
           "stats": Object {
             "2004": 1,
@@ -1182,6 +1269,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "GREELEY 6",
           "stats": Object {
             "2004": 0,
@@ -1198,6 +1286,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "GUNNISON WATERSHED RE1J",
           "stats": Object {
             "2004": 0.144,
@@ -1214,6 +1303,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "HANOVER 28",
           "stats": Object {
             "2004": 0,
@@ -1230,6 +1320,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "HARRISON 2",
           "stats": Object {
             "2004": 0.065,
@@ -1246,6 +1337,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "HAXTUN RE-2J",
           "stats": Object {
             "2004": 0,
@@ -1262,6 +1354,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "HAYDEN RE-1",
           "stats": Object {
             "2004": 0,
@@ -1278,6 +1371,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "HINSDALE COUNTY RE 1",
           "stats": Object {
             "2004": 0,
@@ -1294,6 +1388,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "HI-PLAINS R-23",
           "stats": Object {
             "2004": 0,
@@ -1310,6 +1405,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "HOEHNE REORGANIZED 3",
           "stats": Object {
             "2004": 0,
@@ -1326,6 +1422,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "HOLLY RE-3",
           "stats": Object {
             "2004": 1,
@@ -1342,6 +1439,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "HOLYOKE RE-1J",
           "stats": Object {
             "2004": 0,
@@ -1358,6 +1456,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "HUERFANO RE-1",
           "stats": Object {
             "2004": 0,
@@ -1374,6 +1473,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "IDALIA SCHOOL DISTRICT RJ-3",
           "stats": Object {
             "2004": 0,
@@ -1390,6 +1490,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "IGNACIO 11 JT",
           "stats": Object {
             "2004": 1,
@@ -1406,6 +1507,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "JEFFERSON COUNTY R-1",
           "stats": Object {
             "2004": 0.29,
@@ -1422,6 +1524,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "JOHNSTOWN-MILLIKEN RE-5J",
           "stats": Object {
             "2004": 0,
@@ -1438,6 +1541,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "JULESBURG RE-1",
           "stats": Object {
             "2004": 0,
@@ -1454,6 +1558,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "KARVAL RE-23",
           "stats": Object {
             "2004": 1,
@@ -1470,6 +1575,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "KEENESBURG RE-3(J)",
           "stats": Object {
             "2004": 0.296,
@@ -1486,6 +1592,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "KIM REORGANIZED 88",
           "stats": Object {
             "2004": 1,
@@ -1502,6 +1609,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "KIOWA C-2",
           "stats": Object {
             "2004": 0,
@@ -1518,6 +1626,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "KIT CARSON R-1",
           "stats": Object {
             "2004": 0,
@@ -1534,6 +1643,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "LA VETA RE-2",
           "stats": Object {
             "2004": 0,
@@ -1550,6 +1660,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "LAKE COUNTY R-1",
           "stats": Object {
             "2004": 0.3,
@@ -1566,6 +1677,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "LAMAR RE-2",
           "stats": Object {
             "2004": 0.87,
@@ -1582,6 +1694,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "LAS ANIMAS RE-1",
           "stats": Object {
             "2004": 1,
@@ -1598,6 +1711,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "LEWIS-PALMER 38",
           "stats": Object {
             "2004": 0,
@@ -1614,6 +1728,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "LIBERTY SCHOOL DISTRICT J-4",
           "stats": Object {
             "2004": 1,
@@ -1630,6 +1745,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "LIMON RE-4J",
           "stats": Object {
             "2004": 0,
@@ -1646,6 +1762,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "LITTLETON 6",
           "stats": Object {
             "2004": 0,
@@ -1662,6 +1779,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "LONE STAR 101",
           "stats": Object {
             "2004": 1,
@@ -1678,6 +1796,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "MANCOS RE-6",
           "stats": Object {
             "2004": 0,
@@ -1694,6 +1813,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "MANITOU SPRINGS 14",
           "stats": Object {
             "2004": 0.014,
@@ -1710,6 +1830,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "MANZANOLA 3J",
           "stats": Object {
             "2004": 0.952,
@@ -1726,6 +1847,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "MAPLETON 1",
           "stats": Object {
             "2004": 0.067,
@@ -1742,6 +1864,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "MC CLAVE RE-2",
           "stats": Object {
             "2004": 0,
@@ -1758,6 +1881,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "MEEKER RE1",
           "stats": Object {
             "2004": 0,
@@ -1774,6 +1898,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "MESA COUNTY VALLEY 51",
           "stats": Object {
             "2004": 0.307,
@@ -1790,6 +1915,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "MIAMI/YODER 60 JT",
           "stats": Object {
             "2004": 1,
@@ -1806,6 +1932,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "MOFFAT 2",
           "stats": Object {
             "2004": 0.014,
@@ -1822,6 +1949,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "MOFFAT COUNTY RE:NO 1",
           "stats": Object {
             "2004": 0,
@@ -1838,6 +1966,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "MONTE VISTA C-8",
           "stats": Object {
             "2004": 1,
@@ -1854,6 +1983,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "MONTEZUMA-CORTEZ RE-1",
           "stats": Object {
             "2004": 0,
@@ -1870,6 +2000,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "MONTROSE COUNTY RE-1J",
           "stats": Object {
             "2004": 0,
@@ -1886,6 +2017,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "MOUNTAIN VALLEY RE 1",
           "stats": Object {
             "2004": 1,
@@ -1902,6 +2034,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "NORTH CONEJOS RE-1J",
           "stats": Object {
             "2004": 1,
@@ -1918,6 +2051,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "NORTH PARK R-1",
           "stats": Object {
             "2004": 1,
@@ -1934,6 +2068,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "NORTHGLENN-THORNTON 12",
           "stats": Object {
             "2004": 0.329,
@@ -1950,6 +2085,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "NORWOOD R-2J",
           "stats": Object {
             "2004": 0,
@@ -1966,6 +2102,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "OTIS R-3",
           "stats": Object {
             "2004": 1,
@@ -1982,6 +2119,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "OURAY R-1",
           "stats": Object {
             "2004": 0,
@@ -1998,6 +2136,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "PARK (ESTES PARK) R-3",
           "stats": Object {
             "2004": 0.462,
@@ -2014,6 +2153,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "PARK COUNTY RE-2",
           "stats": Object {
             "2004": 0.339,
@@ -2030,6 +2170,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "PAWNEE RE-12",
           "stats": Object {
             "2004": 0,
@@ -2046,6 +2187,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "PEYTON 23 JT",
           "stats": Object {
             "2004": 0,
@@ -2062,6 +2204,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "PLAINVIEW RE-2",
           "stats": Object {
             "2004": 0,
@@ -2078,6 +2221,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "PLATEAU RE-5",
           "stats": Object {
             "2004": 1,
@@ -2094,6 +2238,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "PLATEAU VALLEY 50",
           "stats": Object {
             "2004": 0,
@@ -2110,6 +2255,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "PLATTE CANYON 1",
           "stats": Object {
             "2004": 0.229,
@@ -2126,6 +2272,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "PLATTE VALLEY RE-3",
           "stats": Object {
             "2004": 0,
@@ -2142,6 +2289,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "PLATTE VALLEY RE-7",
           "stats": Object {
             "2004": 0,
@@ -2158,6 +2306,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "POUDRE R-1",
           "stats": Object {
             "2004": 0,
@@ -2174,6 +2323,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "PRAIRIE RE-11",
           "stats": Object {
             "2004": 1,
@@ -2190,6 +2340,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "PRIMERO REORGANIZED 2",
           "stats": Object {
             "2004": 0,
@@ -2206,6 +2357,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "PRITCHETT RE-3",
           "stats": Object {
             "2004": 1,
@@ -2222,6 +2374,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "PUEBLO CITY 60",
           "stats": Object {
             "2004": 0.275,
@@ -2238,6 +2391,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "PUEBLO COUNTY RURAL 70",
           "stats": Object {
             "2004": 0,
@@ -2254,6 +2408,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "RANGELY RE-4",
           "stats": Object {
             "2004": 0,
@@ -2270,6 +2425,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "RIDGWAY R-2",
           "stats": Object {
             "2004": 0,
@@ -2286,6 +2442,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "ROARING FORK RE-1",
           "stats": Object {
             "2004": 0.672,
@@ -2302,6 +2459,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "ROCKY FORD R-2",
           "stats": Object {
             "2004": 0.172,
@@ -2318,6 +2476,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "SALIDA R-32",
           "stats": Object {
             "2004": 0.222,
@@ -2334,6 +2493,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "SANFORD 6J",
           "stats": Object {
             "2004": 1,
@@ -2350,6 +2510,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "SANGRE DE CRISTO RE-22J",
           "stats": Object {
             "2004": 1,
@@ -2366,6 +2527,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "SARGENT RE-33J",
           "stats": Object {
             "2004": 1,
@@ -2382,6 +2544,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "SHERIDAN 2",
           "stats": Object {
             "2004": 1,
@@ -2398,6 +2561,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "SIERRA GRANDE R-30",
           "stats": Object {
             "2004": 1,
@@ -2414,6 +2578,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "SILVERTON 1",
           "stats": Object {
             "2004": 0,
@@ -2430,6 +2595,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "SOUTH CONEJOS RE-10",
           "stats": Object {
             "2004": 1,
@@ -2446,6 +2612,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "SOUTH ROUTT RE 3",
           "stats": Object {
             "2004": 1,
@@ -2462,6 +2629,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "SPRINGFIELD RE-4",
           "stats": Object {
             "2004": 1,
@@ -2478,6 +2646,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "ST VRAIN VALLEY RE 1J",
           "stats": Object {
             "2004": 0.182,
@@ -2494,6 +2663,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "STEAMBOAT SPRINGS RE-2",
           "stats": Object {
             "2004": 0,
@@ -2510,6 +2680,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "STRASBURG 31J",
           "stats": Object {
             "2004": 0.016,
@@ -2526,6 +2697,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "STRATTON R-4",
           "stats": Object {
             "2004": 0.353,
@@ -2542,6 +2714,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "SUMMIT RE-1",
           "stats": Object {
             "2004": 0.619,
@@ -2558,6 +2731,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "SWINK 33",
           "stats": Object {
             "2004": 0,
@@ -2574,6 +2748,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "TELLURIDE R-1",
           "stats": Object {
             "2004": 0,
@@ -2590,6 +2765,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "THOMPSON R-2J",
           "stats": Object {
             "2004": 0.197,
@@ -2606,6 +2782,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "TRINIDAD 1",
           "stats": Object {
             "2004": 1,
@@ -2622,6 +2799,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "VALLEY RE-1",
           "stats": Object {
             "2004": 0,
@@ -2638,6 +2816,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "VILAS RE-5",
           "stats": Object {
             "2004": 1,
@@ -2654,6 +2833,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "WALSH RE-1",
           "stats": Object {
             "2004": 1,
@@ -2670,6 +2850,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "WELD COUNTY RE-1",
           "stats": Object {
             "2004": 1,
@@ -2686,6 +2867,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "WELD COUNTY S/D RE-8",
           "stats": Object {
             "2004": 0,
@@ -2702,6 +2884,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "WELDON VALLEY RE-20(J)",
           "stats": Object {
             "2004": 1,
@@ -2718,6 +2901,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "WEST END RE-2",
           "stats": Object {
             "2004": 0.118,
@@ -2734,6 +2918,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "WEST GRAND 1-JT",
           "stats": Object {
             "2004": 1,
@@ -2750,6 +2935,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "WEST YUMA COUNTY RJ-1",
           "stats": Object {
             "2004": 0,
@@ -2766,6 +2952,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "WESTMINSTER 50",
           "stats": Object {
             "2004": 0,
@@ -2782,6 +2969,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "WIDEFIELD 3",
           "stats": Object {
             "2004": 0.487,
@@ -2798,6 +2986,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "WIGGINS RE-50(J)",
           "stats": Object {
             "2004": 1,
@@ -2814,6 +3003,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "WILEY RE-13 JT",
           "stats": Object {
             "2004": 0.375,
@@ -2830,6 +3020,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "WINDSOR RE-4",
           "stats": Object {
             "2004": 0,
@@ -2846,6 +3037,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "WOODLAND PARK RE-2",
           "stats": Object {
             "2004": 0,
@@ -2862,6 +3054,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "WOODLIN R-104",
           "stats": Object {
             "2004": 1,
@@ -2878,6 +3071,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "WRAY SCHOOL DISTRICT RD-2",
           "stats": Object {
             "2004": 1,
@@ -2894,6 +3088,7 @@ exports[`App should match snap shot 1`] = `
           },
         },
         Object {
+          "clicked": false,
           "location": "YUMA SCHOOL DISTRICT 1",
           "stats": Object {
             "2004": 0,

@@ -1,11 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`DistrictCardContainer should match snap shot with an empty District Card container 1`] = `
+<div
+  className="district-card-container"
+>
+   
+   
+</div>
+`;
+
 exports[`DistrictCardContainer should match snapshot 1`] = `
 <div
   className="district-card-container"
 >
    
   <Component
+    counter={0}
     key="0"
     location="COLORADO"
     selectCard={[Function]}
@@ -26,6 +36,7 @@ exports[`DistrictCardContainer should match snapshot 1`] = `
     }
   />
   <Component
+    counter={0}
     key="1"
     location="ACADEMY 20"
     selectCard={[Function]}

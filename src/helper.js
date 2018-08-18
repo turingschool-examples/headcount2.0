@@ -17,7 +17,8 @@ class DistrictRepository {
       if (!uniqueDistricts[location]) {
         uniqueDistricts[location] = {
           location: location,
-          stats: {}
+          stats: {},
+          clicked: false
         };
       }
       uniqueDistricts[location].stats[TimeFrame] =
@@ -63,8 +64,14 @@ class DistrictRepository {
   compareDistrictAverages = (districtOne, districtTwo) => {
     let districtOneAvg = this.findAverage(districtOne.toUpperCase());
     let districtTwoAvg = this.findAverage(districtTwo.toUpperCase());
-    let avgComparison =
-      Math.round((districtOneAvg / districtTwoAvg) * 1000) / 1000;
+    let avgComparison;
+    if (districtOneAvg - districtTwoAvg < 0) {
+      avgComparison =
+        Math.round((districtOneAvg / districtTwoAvg) * 1000) / 1000;
+    } else {
+      avgComparison =
+        Math.round((districtTwoAvg / districtOneAvg) * 1000) / 1000;
+    }
     return {
       [districtOne.toUpperCase()]: districtOneAvg,
       [districtTwo.toUpperCase()]: districtTwoAvg,
