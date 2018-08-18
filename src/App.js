@@ -15,7 +15,6 @@ class App extends Component {
       districts: [],
       selectedDistricts: [],
       comparisonData: undefined,
-      key: ''
     };
   }
 
