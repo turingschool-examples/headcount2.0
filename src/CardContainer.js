@@ -32,6 +32,12 @@ const CardContainer = ({ cards, averages }) => {
 export default CardContainer;
 
 CardContainer.propTypes = {
-    cards: PropTypes.arrayOf(),
-    averages: PropTypes.object
-  }
+  cards: PropTypes.arrayOf(
+    PropTypes.shape({ 
+      average: PropTypes.number, 
+      location: PropTypes.string, 
+      stats: PropTypes.objectOf(PropTypes.number) 
+    })
+  ),
+  averages: PropTypes.objectOf(PropTypes.number)
+};

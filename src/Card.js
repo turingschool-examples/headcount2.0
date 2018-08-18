@@ -22,7 +22,7 @@ const Card = ({ location, stats, average }) => {
 export default Card;
 
 Card.propTypes = {
-    location: PropTypes.string,
-    stats: PropTypes.object,
-    average: PropTypes.number
-  }
+  location: PropTypes.string,
+  stats: PropTypes.objectOf(PropTypes.number),
+  average: PropTypes.number
+};

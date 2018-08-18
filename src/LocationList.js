@@ -27,7 +27,7 @@ const LocationList = (
 export default LocationList;
 
 LocationList.propTypes = {
-  displayedLocations: PropTypes.arrayOf(),
+  displayedLocations: PropTypes.arrayOf(PropTypes.string),
   selectLocation: PropTypes.func,
-  searchLocationsLocations: PropTypes.func
-}
+  searchLocations: PropTypes.func
+};
