@@ -1,11 +1,13 @@
-import DistrictRepository from './helper.js';
-import kinderData from './data/kindergartners_in_full_day_program.js';
 import React, { Component } from 'react';
-import './style/App.css';
-import DistrictContainer from './DistrictContainer.js';
+import kinderData from './data/kindergartners_in_full_day_program.js';
+
 import Search from './Search';
+import DistrictRepository from './helper.js';
+import { DistrictContainer } from './DistrictContainer.js';
 import { ComparisonCard } from './ComparisonCard';
-import logo from './images/headcount.png'
+
+import logo from './images/headcount.png';
+import './style/App.css';
 
 const district = new DistrictRepository(kinderData);
 class App extends Component {
@@ -14,7 +16,7 @@ class App extends Component {
     this.state = {
       districts: [],
       selectedDistricts: [],
-      comparisonData: undefined,
+      comparisonData: undefined
     };
   }
 
@@ -30,7 +32,7 @@ class App extends Component {
 
   checkForMaxCards = location => {
     if (this.state.selectedDistricts.some(district => district.location === location) || this.state.selectedDistricts.length !== 2)
-    this.selectDistrict(location);
+      this.selectDistrict(location);
   }
 
   selectDistrict = location => {
@@ -75,7 +77,7 @@ class App extends Component {
           districts={this.state.selectedDistricts} 
           checkForMaxCards={this.checkForMaxCards}
         />}
-    {this.state.selectedDistricts[1] && <ComparisonCard comparisonData={this.state.comparisonData} card1key={this.state.key}/>}
+        {this.state.selectedDistricts[1] && <ComparisonCard comparisonData={this.state.comparisonData} card1key={this.state.key}/>}
         <DistrictContainer 
           districts={this.state.districts}
           checkForMaxCards={this.checkForMaxCards}
