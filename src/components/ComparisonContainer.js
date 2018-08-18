@@ -31,8 +31,6 @@ const ComparisonContainer = ({
         category={category}
       />
     );
-  }
-  if (selectedDistricts.length > 1) {
     comparisonCard = (
       <ComparisonCard
         selectedDistricts={selectedDistricts}

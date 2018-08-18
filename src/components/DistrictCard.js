@@ -12,7 +12,6 @@ const DistrictCard = ({
   let average;
 
   if (selected) {
-    console.log(category.findAverage(location));
     average = (
       <p>
         AVG :{' '}
