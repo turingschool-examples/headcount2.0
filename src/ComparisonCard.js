@@ -1,8 +1,9 @@
- import React from 'react';
+import React from 'react';
+
 import './style/ComparisonCard.css';
 
 export const ComparisonCard = ({ comparisonData }) => {
-  const keys = Object.keys(comparisonData)
+  const keys = Object.keys(comparisonData);
   return (
     <div className="comparison-card">
       <div className="district-info">
