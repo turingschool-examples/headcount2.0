@@ -24,5 +24,6 @@ export default Card;
 Card.propTypes = {
   location: PropTypes.string,
   stats: PropTypes.objectOf(PropTypes.number),
-  average: PropTypes.number
+  average: PropTypes.number,
+  selectLocation: PropTypes.func
 };

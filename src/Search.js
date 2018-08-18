@@ -37,10 +37,12 @@ class Search extends Component {
       </aside>
     );
   }
-};
+}
 
 export default Search;
 
 Search.propTypes = {
-  searchLocations: PropTypes.func
+  searchLocations: PropTypes.func,
+  displayedLocations: PropTypes.arrayOf(PropTypes.string),
+  selectLocation: PropTypes.func
 };
