@@ -69,7 +69,7 @@ class App extends Component {
     }
   }
 
-  revealHelperInfo = () => {
+  toggleHelperInfo = () => {
     const info = document.querySelector('.CardContainer__info');
     const button = document.querySelector('.CardContainer__btn');
 
@@ -91,7 +91,7 @@ class App extends Component {
           displayedLocations={this.state.displayedLocations}
           selectLocation={this.selectLocation}/>
         <CardContainer 
-          revealHelperInfo={this.revealHelperInfo}
+          toggleHelperInfo={this.toggleHelperInfo}
           cards={this.state.cards}
           averages={this.state.averages}
           selectLocation={this.selectLocation} />
