@@ -4,11 +4,9 @@ aside {
   width: 280px;
   margin: 10px;
   padding-bottom: 20px;
-  /* border-radius: 5px; */
   background-color: #A5B6CA;
   box-shadow: 10px 10px 20px -12px rgba(0,0,0,0.75);
   color: #122F52;
-
 }
 
 aside h3 {
