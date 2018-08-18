@@ -8,15 +8,15 @@ const ComparisonCard = ({ selectedDistricts, category }) => {
   const distTwo = selectedDistricts[1].location;
 
   return (
-    <div className="district-card">
-      <h3 className="district-card-title">{distOne}:</h3>
+    <div className="comparison-card">
+      <h3 className="comparison-card-title">{distOne}:</h3>
       <p>{category.findAverage(distOne)}</p>
 
       <h3>{`<--- ${
         category.compareDistrictAverages(distOne, distTwo).compared
       } --->`}</h3>
 
-      <h3 className="district-card-title">{distTwo}:</h3>
+      <h3 className="comparison-card-title">{distTwo}:</h3>
       <p>{category.findAverage(distTwo)}</p>
     </div>
   );

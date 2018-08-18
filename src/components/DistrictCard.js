@@ -37,8 +37,8 @@ const DistrictCard = ({
   return (
     <div
       onClick={() => toggleSelected(location)}
-      className="district-card"
-      style={selectedCards ? { width: '9rem' } : { width: '12rem' }}
+      className={`district-card ${selected ? 'selected' : ''}`}
+      style={selectedCards ? { width: '13rem' } : { width: '16rem' }}
     >
       <h3 className="district-card-title">{location}</h3>
       <div className="district-stats">{yearStats}</div>

@@ -29,8 +29,8 @@ const DistrictContainer = ({
       style={
         selectedCards
           ? {
-            gridTemplateColumns: 'repeat(5, 1fr)'
-          }
+              gridTemplateColumns: 'repeat(5, 1fr)'
+            }
           : null
       }
     >

@@ -1,15 +1,17 @@
-.district-card {
+.comparison-card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 
-  padding: 2em;
-  width: 9em;
-  margin-bottom: 1em;
+  box-sizing: border-box;
+  width: 13rem;
+  padding: 2em 1em 2em 2em;
+
+  margin-bottom: 1.2em;
 
   background-color: rgba(250, 250, 250, 0.8);
 
-  border: 2px solid #4b86e5;
+  border: 5px solid #4b86e5;
   -webkit-box-shadow: 10px 10px 57px -23px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 57px -23px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 57px -23px rgba(0, 0, 0, 0.75);
@@ -17,8 +19,8 @@
   border-radius: 10px;
 }
 
-.district-card:hover {
-  background-color: rgba(250, 250, 250, 0.9);
+.comparison-card:hover {
+  background-color: rgba(250, 250, 250, 1);
 }
 
 .district-stats p {
