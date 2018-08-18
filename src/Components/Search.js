@@ -50,6 +50,7 @@ export default class Search extends Component {
       <div className="search-bar">
         <form>
           <input
+            type="text"
             className="search-input"
             placeholder="Search District"
             onChange={e => this.handleChange(e.target)}
@@ -75,12 +76,20 @@ export default class Search extends Component {
           >
             None Found! Search Again
           </span>
+
+          <span
+            className={
+              this.state.searchSuggestions.length ? "show" : "show-none"
+            }
+          >
+            Did you Mean?
+          </span>
           {this.state.searchSuggestions.map((district, i) => {
             if (
               this.state.searchSuggestions &&
               this.state.districtInputOne.length > 1
             ) {
-              return (
+              var suggestions = (
                 <p
                   className="suggestions"
                   key={i}
@@ -93,6 +102,7 @@ export default class Search extends Component {
                 </p>
               );
             }
+            return suggestions;
           })}
         </div>
       </div>
@@ -103,5 +113,7 @@ export default class Search extends Component {
 const { func } = PropTypes;
 
 Search.propTypes = {
-  handleSubmit: func.isRequired
+  handleSubmit: func.isRequired,
+  selectCard: func.isRequired,
+  clearComparisons: func.isRequired
 };

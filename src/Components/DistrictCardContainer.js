@@ -7,7 +7,9 @@ export const DistrictCardContainer = ({ districts, selectCard }) => {
   let counter = 0;
 
   const districtCard = districts.map((district, i) => {
-    district.clicked ? counter++ : false;
+    if (district.clicked) {
+      counter++;
+    }
     return (
       <DistrictCard
         key={i}
@@ -20,14 +22,14 @@ export const DistrictCardContainer = ({ districts, selectCard }) => {
   return <div className="district-card-container"> {districtCard} </div>;
 };
 
-const { shape, string, objectOf, number, func, arrayOf, bool } = PropTypes;
+const { shape, string, number, func, arrayOf, bool } = PropTypes;
 
 DistrictCardContainer.propTypes = {
   districts: arrayOf(
     shape({
       clicked: bool.isRequired,
       location: string,
-      stats: objectOf(number)
+      stats: shape({ year: number })
     })
   ),
   selectCard: func.isRequired

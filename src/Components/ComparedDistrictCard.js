@@ -12,7 +12,6 @@ export const ComparedDistrictCard = ({ location, stats, index }) => {
           <section
             key={`avgStats ${i}`}
             className={avg < 0.5 ? "year-red" : "year-black"}
-            key={i}
           >
             {year}
             <span className={avg < 0.5 ? "year-red" : "year-black"}>
@@ -27,10 +26,11 @@ export const ComparedDistrictCard = ({ location, stats, index }) => {
   );
 };
 
-const { string, objectOf, func, number } = PropTypes;
+const { string, func, number, shape } = PropTypes;
 
 ComparedDistrictCard.propTypes = {
   location: string,
-  stats: objectOf(number),
-  selectCard: func.isRequired
+  stats: shape({ year: number }),
+  selectCard: func.isRequired,
+  index: number
 };

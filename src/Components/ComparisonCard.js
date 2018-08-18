@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "../CSS/ComparisonCard.css";
 
 export const ComparisonCard = ({ comparisonData }) => {
@@ -19,7 +20,6 @@ export const ComparisonCard = ({ comparisonData }) => {
           {comparisonData[districtKeyOne]}
         </p>
       </div>
-
       <p className="comparison-value">{comparisonData[comparisonKeys[2]]}</p>
       <div className="district-title">
         Aggregate Avg.
@@ -35,4 +35,10 @@ export const ComparisonCard = ({ comparisonData }) => {
       </div>
     </div>
   );
+};
+
+const { shape, number } = PropTypes;
+
+ComparisonCard.propTypes = {
+  comparisonData: shape({ year: number })
 };

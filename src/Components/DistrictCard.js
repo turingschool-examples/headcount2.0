@@ -38,11 +38,11 @@ export const DistrictCard = ({
   );
 };
 
-const { string, objectOf, number, bool, func } = PropTypes;
+const { string, shape, number, bool, func } = PropTypes;
 
 DistrictCard.propTypes = {
   location: string,
-  stats: objectOf(number),
+  stats: shape({ year: number }),
   clicked: bool,
   selectCard: func
 };

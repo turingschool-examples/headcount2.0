@@ -97,7 +97,6 @@ class App extends Component {
             Click Districts below for Annual Score Avg.
           </p>
         </div>
-
         {this.state.comparisonData !== {} && (
           <ControlCards
             selectedDistricts={this.state.selectedDistricts}

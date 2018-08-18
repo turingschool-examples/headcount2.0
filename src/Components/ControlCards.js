@@ -11,18 +11,15 @@ export const ControlCards = ({
 }) => {
   const controlCards = Object.keys(comparisonData).map((district, index) => {
     if (selectedDistricts.length === 2) {
-      if (comparisonData[district].hasOwnProperty("location")) {
-        return (
-          <ComparedDistrictCard
-            key={`compared ${index}`}
-            selectCard={selectCard}
-            location={district}
-            stats={comparisonData[district].stats}
-            index={index}
-          />
-        );
-      }
-      return (
+      return comparisonData[district].hasOwnProperty("location") ? (
+        <ComparedDistrictCard
+          key={`compared ${index}`}
+          selectCard={selectCard}
+          location={district}
+          stats={comparisonData[district].stats}
+          index={index}
+        />
+      ) : (
         <ComparisonCard key={index} comparisonData={comparisonData[district]} />
       );
     }
@@ -30,18 +27,22 @@ export const ControlCards = ({
   return <div className="control-cards">{controlCards} </div>;
 };
 
-const { string, number, bool, shape, objectOf, func } = PropTypes;
+const { string, number, bool, shape, objectOf, func, arrayOf } = PropTypes;
 
 ControlCards.propTypes = {
   comparisonData: objectOf(
     shape({
       location: string,
-      stats: objectOf(number),
+      stats: shape({ year: number }),
       clicked: bool
     })
-    // comparisonData: objectOf(shape({
-    //   compared: number
-    // }))
+  ),
+  selectedDistricts: arrayOf(
+    shape({
+      clicked: bool,
+      location: string,
+      stats: shape({ year: number })
+    })
   ),
   selectCard: func.isRequired
 };
