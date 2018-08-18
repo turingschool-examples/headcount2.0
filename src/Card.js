@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './style/Card.css';
 
@@ -21,4 +22,16 @@ export const Card = ({ district, handleClick }) => {
       </table>
     </aside>
   );
+};
+
+const { arrayOf, objectOf, shape, string, func, number } = PropTypes;
+Card.propTypes = {
+  district: arrayOf(
+    objectOf(
+      shape({
+        location: string,
+        stats: objectOf(number)
+      })
+    )),
+  handleClick: func
 };
