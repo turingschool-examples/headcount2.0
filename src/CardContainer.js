@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import Card from './Card';
 
-const CardContainer = ({ cards, averages }) => {
+const CardContainer = ({ cards, averages, selectLocation }) => {
   const displayCards = cards.map( (card, index) => (
-    <Card {...card} key={index} />
+    <Card {...card} selectLocation={selectLocation} key={index} />
   ));
 
   let displayCompared = <p></p>;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({ location, stats, average }) => {
+const Card = ({ location, stats, average, selectLocation }) => {
   const statsList = Object.keys(stats).map((year, index) => {
     let statsColor;
     stats[year] > 0.5 ? statsColor = 'green' : statsColor = 'red';
@@ -9,7 +9,7 @@ const Card = ({ location, stats, average }) => {
   });
 
   return (
-    <article className='Card'>
+    <article className='Card' onClick={() => selectLocation(location)}>
       <h2 className='Card__header'> {location}</h2>
       <ul className='Card__stats'>
         {statsList}

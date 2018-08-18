@@ -78,7 +78,8 @@ class App extends Component {
           selectLocation={this.selectLocation}/>
         <CardContainer 
           cards={this.state.cards}
-          averages={this.state.averages} />
+          averages={this.state.averages}
+          selectLocation={this.selectLocation} />
       </div>
     );
   }
