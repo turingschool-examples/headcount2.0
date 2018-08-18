@@ -53,9 +53,65 @@
     color: #f2f2f2;
 }
 
-.LocationList__btn:focus {
+.LocationList__btn:active {
     background-color: #B54D2B;
     color: #f2f2f2;
+}
+
+.CardContainer__btn {
+    margin-left: calc(100% - 4rem);
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    border-radius: 50%;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 2rem;
+    color: #6D6080;
+    -webkit-box-shadow: 0 0 8px 0 #E0DDE4;
+    -moz-box-shadow: 0 0 8px 0 #E0DDE4;
+    box-shadow: 0 0 8px 0 #E0DDE4;
+    outline: none;
+}
+
+.CardContainer__btn:hover {
+    background-color: #6D6080;
+    color: #f2f2f2;
+}
+
+.CardContainer__btn--Focus {
+    background-color: #6D6080;
+    color: #f2f2f2;
+    -webkit-box-shadow: 0 0 15px 0 #B54D2B;
+    -moz-box-shadow: 0 0 15px 0 #B54D2B;
+    box-shadow: 0 0 15px 0 #B54D2B;
+}
+
+.CardContainer__info {
+    visibility: hidden;
+    position: fixed;
+    width: 65%;
+    padding: 1rem;
+    background-color: #FCFCFC;
+    border-radius: 15px;
+}
+
+.CardContainer__info p {
+    margin: 0;
+}
+
+.CardContainer__info button {
+    margin-left: calc(100% - 2.5rem);
+    width: 3rem;
+    border: none;
+    font-size: 1rem;
+    background-color: #FCFCFC;
+    color: #6D6080;
+    cursor: pointer;
+    outline: none;
+}
+
+.CardContainer__info button:hover {
+    color: #B54D2B;
 }
 
 .CardContainer__header {

@@ -69,6 +69,19 @@ class App extends Component {
     }
   }
 
+  revealHelperInfo = () => {
+    const info = document.querySelector('.CardContainer__info');
+    const button = document.querySelector('.CardContainer__btn');
+
+    if (info.style.visibility === 'hidden') {
+      info.style.visibility = 'visible';
+      button.className = 'CardContainer__btn CardContainer__btn--Focus';
+    } else {
+      info.style.visibility = 'hidden';
+      button.className = 'CardContainer__btn';
+    }
+  }
+
   render() {
     return (
       <div className='App'>
@@ -78,6 +91,7 @@ class App extends Component {
           displayedLocations={this.state.displayedLocations}
           selectLocation={this.selectLocation}/>
         <CardContainer 
+          revealHelperInfo={this.revealHelperInfo}
           cards={this.state.cards}
           averages={this.state.averages}
           selectLocation={this.selectLocation} />
