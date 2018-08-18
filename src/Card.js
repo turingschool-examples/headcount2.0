@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 const Card = ({ location, stats, average }) => {
   const statsList = Object.keys(stats).map((year, index) => {
-    let statsColor = 'green';
-    stats[year] > 0.5 ? statsColor : statsColor = 'red';
+    let statsColor;
+    stats[year] > 0.5 ? statsColor = 'green' : statsColor = 'red';
     return <li className={statsColor} key={index}>{year}: {stats[year]}</li>;
   });
 
