@@ -9,6 +9,7 @@ import DistrictRepository from '../helper';
 
 describe('DistrictCard', () => {
   let wrapper;
+  let toggleSelected;
 
   const mockState = {
     category: new DistrictRepository(kinderGartenData),
@@ -17,13 +18,34 @@ describe('DistrictCard', () => {
   const card = mockState.category.stats['YUMA SCHOOL DISTRICT 1'];
 
   beforeEach(() => {
-    wrapper = shallow(<DistrictCard {...card} />);
+    toggleSelected = jest.fn();
+    wrapper = shallow(
+      <DistrictCard
+        {...card}
+        toggleSelected={toggleSelected}
+        selected={false}
+        category={mockState.category}
+      />
+    );
   });
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<DistrictCard {...card} />, div);
+    ReactDOM.render(
+      <DistrictCard
+        {...card}
+        toggleSelected={toggleSelected}
+        selected={false}
+        category={mockState.category}
+      />,
+      div
+    );
     ReactDOM.unmountComponentAtNode(div);
+  });
+
+  it('should call the toggleSelected function when clicked', () => {
+    wrapper.find('.district-card').simulate('click');
+    expect(toggleSelected).toHaveBeenCalled();
   });
 
   it('should match the snapshot', () => {

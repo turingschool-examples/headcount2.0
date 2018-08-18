@@ -34,7 +34,7 @@ export default class DistrictRepository {
       return statKey.includes(name.toUpperCase());
     });
 
-    return matchKeys.map(key => this.stats[key]);
+    return matchKeys.map(key => ({ ...this.stats[key], selected: false }));
   };
 
   findAverage = name => {

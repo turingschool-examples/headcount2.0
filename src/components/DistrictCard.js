@@ -2,7 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../css/DistrictCard.css';
 
-const DistrictCard = ({ location, stats }) => {
+const DistrictCard = ({
+  location,
+  stats,
+  selected,
+  toggleSelected,
+  category
+}) => {
+  let average;
+
+  if (selected) {
+    console.log(category.findAverage(location));
+    average = (
+      <p>
+        AVG :{' '}
+        <span
+          className={category.findAverage(location) < 0.5 ? 'subPointFive' : ''}
+        >
+          {category.findAverage(location)}
+        </span>
+      </p>
+    );
+  }
+
   const yearStats = Object.keys(stats).map((yearKey, index) => (
     <p key={`${index}-${yearKey}`}>
       {yearKey} :{' '}
@@ -11,17 +33,22 @@ const DistrictCard = ({ location, stats }) => {
       </span>
     </p>
   ));
+
   return (
-    <div className="district-card">
+    <div onClick={() => toggleSelected(location)} className="district-card">
       <h3 className="district-card-title">{location}</h3>
       <div className="district-stats">{yearStats}</div>
+      {average}
     </div>
   );
 };
 
 DistrictCard.propTypes = {
   location: PropTypes.string.isRequired,
-  stats: PropTypes.object.isRequired
+  stats: PropTypes.object.isRequired,
+  selected: PropTypes.bool.isRequired,
+  toggleSelected: PropTypes.func.isRequired,
+  category: PropTypes.object.isRequired
 };
 
 export default DistrictCard;
