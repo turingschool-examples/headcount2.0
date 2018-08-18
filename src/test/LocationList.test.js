@@ -25,14 +25,21 @@ describe('LocationList', () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  it('should call selectLocation when a location button is clicked', () => {
+  it('should call selectLocation and clearSearch when a location button is clicked', () => {
     const selectLocationMock = jest.fn();
+    const clearSearchMock = jest.fn();
     const locations = ['COLORADO'];
-    const wrapper = shallow(<LocationList displayedLocations={locations} selectLocation={selectLocationMock} />);
+    const wrapper = shallow(
+      <LocationList 
+        displayedLocations={locations} 
+        selectLocation={selectLocationMock} 
+        clearSearch={clearSearchMock}/>
+    );
 
     wrapper.find('.LocationList__btn').simulate('click');
 
     expect(selectLocationMock).toHaveBeenCalled();
+    expect(clearSearchMock).toHaveBeenCalled();
   });
 
 });
