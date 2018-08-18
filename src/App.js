@@ -52,8 +52,8 @@ class App extends Component {
 
   }
 
-  searchLocations = (event) => {
-    const matchingDistricts = district.findAllMatches(event.target.value);
+  searchLocations = (value) => {
+    const matchingDistricts = district.findAllMatches(value);
 
     this.setState({ displayedLocations: matchingDistricts });
   }
