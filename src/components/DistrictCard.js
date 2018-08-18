@@ -2,14 +2,14 @@ import React from "react";
 import "../css/DistrictCard.css";
 import PropTypes from "prop-types";
 
-const DistrictCard = ({ location, stats }) => {
+const DistrictCard = ({ location, stats, selectCards }) => {
   const districtYears = Object.keys(stats).map((year, index) => {
     const avg = stats[year];
     return (
       <article
         className={avg < 0.5 ? "below-five" : "above-five"}
         key={index}
-        onClick={e => selectedCard(location)}
+        onClick={() => selectCards(location)}
       >
         {[year]}: {avg}
       </article>
@@ -25,7 +25,8 @@ const DistrictCard = ({ location, stats }) => {
 
 DistrictCard.propTypes = {
   location: PropTypes.string,
-  stats: PropTypes.object
+  stats: PropTypes.object,
+  selectedCards: PropTypes.func
 };
 
 export default DistrictCard;

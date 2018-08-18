@@ -3,9 +3,9 @@ import DistrictCard from "./DistrictCard";
 import "../css/DistrictsContainer.css";
 import PropTypes from "prop-types";
 
-const DistrictsContainer = ({ schoolData }) => {
+const DistrictsContainer = ({ schoolData, selectCards }) => {
   const districtCard = schoolData.map((district, index) => (
-    <DistrictCard {...district} key={index} />
+    <DistrictCard {...district} key={index} selectCards={selectCards} />
   ));
   return <div className="district-container">{districtCard}</div>;
 };
