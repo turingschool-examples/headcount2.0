@@ -77,4 +77,23 @@ describe('Card', () => {
     expect(wrapper.find('.green')).toHaveLength(1);
   });
 
+  it('should call selectLocation when a card is clicked', () => {
+    const selectLocationMock = jest.fn();
+    const card = {
+      average: 0.53,
+      location: 'COLORADO',
+      stats: {
+        "2004": 0.24,
+        "2005": 0.278,
+        "2006": 0.5,
+        "2007": 0.68,
+      }
+    };
+    const wrapper = shallow(<Card {...card} selectLocation={selectLocationMock} />);
+
+    wrapper.find('.Card').simulate('click');
+
+    expect(selectLocationMock).toHaveBeenCalled();
+  });
+
 });

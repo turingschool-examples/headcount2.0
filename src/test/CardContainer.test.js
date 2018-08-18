@@ -58,7 +58,7 @@ describe('CardContainer', () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  it('should only display compared average if it exists', () => {
+  it('should only display compared average if it is greater than or equal to zero', () => {
     let averagesObj = {};
     const cards = [];
     let wrapper = shallow(<CardContainer cards={cards} averages={averagesObj} />);

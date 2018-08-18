@@ -40,5 +40,6 @@ CardContainer.propTypes = {
       stats: PropTypes.objectOf(PropTypes.number) 
     })
   ),
-  averages: PropTypes.objectOf(PropTypes.number)
+  averages: PropTypes.objectOf(PropTypes.number),
+  selectLocation: PropTypes.func
 };

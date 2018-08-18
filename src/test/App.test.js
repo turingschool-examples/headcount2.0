@@ -17,10 +17,6 @@ describe('App', () => {
     ReactDOM.unmountComponentAtNode(div);
   });
 
-  it('should add average to location when componentDidMount', () => {
-
-  });
-
   it('should populate state when componentDidMount', () => {
     expect(wrapper.state('locations')).not.toEqual({});
     expect(wrapper.state('displayedLocations')).not.toEqual([]);
@@ -50,32 +46,43 @@ describe('App', () => {
     expect(wrapper.state('cards')).toEqual(expected);
   });
 
+  it('should reset displayedLocations when selectLocation is called', () => {
+    expect(wrapper.state('displayedLocations').length).toEqual(181);
+    
+    wrapper.instance().searchLocations('COLORADO');
+    expect(wrapper.state('displayedLocations').length).toEqual(2);
+
+    wrapper.instance().selectLocation('ACADEMY 20');
+    expect(wrapper.state('displayedLocations').length).toEqual(181);
+  });
+
   it('should remove card from cards array if selectedLocation is called and it is already in the array', () => {
     wrapper.instance().selectLocation('COLORADO');
-
     expect(wrapper.state('cards').length).toEqual(1);
 
     wrapper.instance().selectLocation('COLORADO');
-
     expect(wrapper.state('cards').length).toEqual(0);
   });
 
   it('if two cards are displayed and a third card is selected, it should remove previous cards and update state with most recent card that is selected', () => {
     wrapper.instance().selectLocation('COLORADO');
-
     expect(wrapper.state('cards').length).toEqual(1);
 
     wrapper.instance().selectLocation('ACADEMY 20');
-
     expect(wrapper.state('cards').length).toEqual(2);
 
     wrapper.instance().selectLocation('ADAMS COUNTY 14');
-
     expect(wrapper.state('cards').length).toEqual(1);
   });
 
-  it('when searchLocations is called it should update state with the displayedLocations', () => {
+  it('when searchLocations is called it should update displayedLocations in state', () => {
+    const value = 'COLORADO';
 
+    expect(wrapper.state('displayedLocations').length).toEqual(181);
+    
+    wrapper.instance().searchLocations(value);
+
+    expect(wrapper.state('displayedLocations')).toEqual(['COLORADO', 'COLORADO SPRINGS 11']);
   });
 
   it('should update state with averages when compareAverages is called', () => {
@@ -115,11 +122,9 @@ describe('App', () => {
     }];
 
     wrapper.instance().setState({ cards });
-
     expect(wrapper.state('averages')).toEqual({});
 
     wrapper.instance().compareAverages();
-
     expect(wrapper.state('averages')).toEqual({
       "ACADEMY 20": 0.407,
       "COLORADO": 0.53,
@@ -131,11 +136,9 @@ describe('App', () => {
     expect(wrapper.state('averages')).toEqual({});
 
     wrapper.instance().selectLocation('ACADEMY 20');
-
     expect(wrapper.state('averages')).toEqual({});
 
     wrapper.instance().selectLocation('ADAMS COUNTY 14');
-
     expect(wrapper.state('averages')).toEqual({
       "ACADEMY 20": 0.407,
       "ADAMS COUNTY 14": 0.709,
@@ -143,8 +146,8 @@ describe('App', () => {
     });
   });
 
-  it('should render a LocationList component', () => {
-    expect(wrapper.find('LocationList').length).toEqual(1);
+  it('should render a Search component', () => {
+    expect(wrapper.find('Search').length).toEqual(1);
   });
 
   it('should render a CardContainer component', () => {

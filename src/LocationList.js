@@ -11,7 +11,7 @@ const LocationList = (
       className='LocationList__btn'
       onClick={ () => {
         clearSearch();
-        selectLocation(location) 
+        selectLocation(location); 
       }} >
       {location}
     </button>
@@ -29,5 +29,5 @@ export default LocationList;
 LocationList.propTypes = {
   displayedLocations: PropTypes.arrayOf(PropTypes.string),
   selectLocation: PropTypes.func,
-  searchLocations: PropTypes.func
+  clearSearch: PropTypes.func
 };

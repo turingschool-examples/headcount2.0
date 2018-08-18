@@ -10,7 +10,7 @@ const Card = ({ location, stats, average, selectLocation }) => {
 
   return (
     <article className='Card' onClick={() => selectLocation(location)}>
-      <h2 className='Card__header'> {location}</h2>
+      <h2 className='Card__header'>{location}</h2>
       <ul className='Card__stats'>
         {statsList}
         <li>AVERAGE: {average}</li>
@@ -24,5 +24,6 @@ export default Card;
 Card.propTypes = {
   location: PropTypes.string,
   stats: PropTypes.objectOf(PropTypes.number),
-  average: PropTypes.number
+  average: PropTypes.number,
+  selectLocation: PropTypes.func
 };
