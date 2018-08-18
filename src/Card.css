@@ -30,3 +30,10 @@ td {
   color: #F3F5F8;
 
 }
+
+.card-selected {
+  border: 2px solid green;
+  background-color: rgb(142, 154, 169);
+  box-shadow: 10px 10px 40px -12px rgba(0,0,0,0.75);
+
+}
