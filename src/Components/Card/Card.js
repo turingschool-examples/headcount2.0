@@ -7,11 +7,17 @@ const Card = ({location, stats}) => {
 		<h4 key={index} className={`lessThan ${stat[1] > 0.5 ? 'greaterThan' : 'lessThan'}`}>
 			{stat[0]}: {stat[1]}
 		</h4>)
+	
+	handleClick = (districtName) => {
+		this.selectLocation()
+	}
+
 	return(
-		<div className="cards">
+		<div 
+			className="cards"
+			onClick={()=> {handleClick(districtName)}}>
 			<h2 className="location">{location}</h2>
 			<p className="stats">{displayStats}</p>
-
 		</div>
 	) 
 }

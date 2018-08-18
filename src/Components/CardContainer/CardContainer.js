@@ -6,15 +6,12 @@ const CardContainer = ({districtData}) => {
 	const districtValues = Object.values(districtData)
 	
 	const displayCards = districtValues.map((district, index) => (
-		// let location = districtData.stats[district].location
 		<Card
 			location = {district.location}
 			stats = {district.stats}
 			key = {index}
 		/>
 	))
-
-	
 
 	return(
 		<div>

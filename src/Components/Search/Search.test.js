@@ -4,6 +4,7 @@ import { shallow, mount } from 'enzyme';
 import Search from './Search';
 
 describe('SEARCH', () => {
+	
 	it('should match the snapshot', () => {
 		const wrapper = shallow(<Search />)
 		expect(wrapper).toMatchSnapshot();

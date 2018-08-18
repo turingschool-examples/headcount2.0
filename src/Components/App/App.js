@@ -11,9 +11,9 @@ class App extends Component {
 		super()
 		this.kinderDistrictData = new DistrictRepository(kinderData);
 		this.state = {
-			districtData: []
+			districtData: [],
+			selectedCards: []
 		}
-	// console.log(this.state.districtData.stats)
 	}
 
 	componentDidMount = () => {
@@ -23,7 +23,15 @@ class App extends Component {
 	filterLocations = (input) => {
 		let filteredDistricts = this.kinderDistrictData.findAllMatches(input);
 		this.setState({districtData: filteredDistricts})
-		// console.log(filteredDistricts())
+	}
+
+	selectLocation = () => {
+
+		this.setState({selectedCards: })
+	}
+
+	compareLocations = (findAverage, compareDistrictAverages) => {
+
 	}
   
   render() {

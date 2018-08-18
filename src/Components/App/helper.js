@@ -9,7 +9,6 @@ export default class DistrictRepository {
 	removeDuplicates = (kinderData) => {
 
 		return kinderData.reduce((acc, school) => {
-			// console.log(this.stats)
 			let location = school.Location.toUpperCase();
 			let schoolYear = school.TimeFrame
 			let roundedData= Math.round(school.Data * 1000) / 1000
@@ -20,7 +19,6 @@ export default class DistrictRepository {
 			return acc;
 
 		}, {});
-
 	}
 
 	findByName = (districtName = '') => {
@@ -50,9 +48,27 @@ export default class DistrictRepository {
 		
 	}
 
-	findAverage = () => {
+	findAverage = (districtName) => {
+		const matchedDistrict = this.findByName(districtName).stats
+		const yearlyPercentages = Object.values(matchedDistrict)
+		const averageDistrict = yearlyPercentages.reduce((acc, year) => {
+			acc += year
+			return acc
+		}, 0) / yearlyPercentages.length
 		
+		return Math.round(averageDistrict * 1000) / 1000
 	}
 
+	compareDistrictAverages = (district1, district2) => {
+		const district1Average = this.findAverage(district1)
+		const district2Average = this.findAverage(district2)
+
+		const comparedAverage = Math.round(district1Average/district2Average * 1000) / 1000
+		return {
+						[district1.toUpperCase()]: district1Average,
+						[district2.toUpperCase()]: district2Average,
+						compared: comparedAverage
+					}
+	}
 
 }
