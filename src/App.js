@@ -73,8 +73,9 @@ class App extends Component {
         <Search searchDistricts={this.searchDistricts}/>
         {this.state.selectedDistricts && <DistrictContainer 
           districts={this.state.selectedDistricts} 
-        />
-    {this.state.comparisonData && <ComparisonCard comparisonData={this.state.comparisonData} card1key={this.state.key}/>}
+          checkForMaxCards={this.checkForMaxCards}
+        />}
+    {this.state.selectedDistricts[1] && <ComparisonCard comparisonData={this.state.comparisonData} card1key={this.state.key}/>}
         <DistrictContainer 
           districts={this.state.districts}
           selectDistrict={this.selectDistrict}
