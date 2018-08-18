@@ -2,11 +2,11 @@ import React from 'react';
 
 import './style/Card.css';
 
-export const Card = ({ district, checkForMaxCards, key}) => {
+export const Card = ({ district, handleClick }) => {
   return (
     <aside 
       className={`${district.selected ? 'card-selected' : ''}`} 
-      onClick={() => { checkForMaxCards(district.location); }}
+      onClick={() => { handleClick(district.location); }}
     > 
       <h3>{district.location}</h3>
       <table>
