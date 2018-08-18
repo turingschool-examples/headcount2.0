@@ -26,7 +26,7 @@ ShallowWrapper {
           findDistricts={[Function]}
 />,
         <DistrictsContainer
-          schoolData={
+          districts={
                     Array [
                               Object {
                                 "location": "COLORADO",
@@ -2960,7 +2960,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "schoolData": Array [
+          "districts": Array [
             Object {
               "location": "COLORADO",
               "stats": Object {
@@ -5882,7 +5882,7 @@ ShallowWrapper {
             findDistricts={[Function]}
 />,
           <DistrictsContainer
-            schoolData={
+            districts={
                         Array [
                                     Object {
                                       "location": "COLORADO",
@@ -8816,7 +8816,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "schoolData": Array [
+            "districts": Array [
               Object {
                 "location": "COLORADO",
                 "stats": Object {

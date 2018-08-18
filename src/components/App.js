@@ -5,14 +5,14 @@ import SearchForm from "./SearchForm";
 import kinderData from "../data/kindergartners_in_full_day_program";
 import "../css/App.css";
 import ComparisonContainer from "./ComparisonContainer";
-const schoolData = new DistrictRepository(kinderData);
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      schoolData: [],
-      selectedCards: []
+      districts: [],
+      selectedCards: [],
+      schoolData: {}
     };
   }
 
@@ -20,22 +20,20 @@ class App extends Component {
     this.findDistricts();
   }
 
-  componentDidUpdate() {
-    console.log(this.state.selectedCards[0]);
-  }
-
   findDistricts = district => {
-    const foundDistricts = schoolData.findAllMatches(district);
-    if (foundDistricts) {
+    const schoolData = new DistrictRepository(kinderData);
+    const districts = schoolData.findAllMatches(district);
+    if (districts) {
       this.setState({
-        schoolData: foundDistricts
+        districts,
+        schoolData
       });
     }
   };
 
   selectCards = location => {
     let selectedCards;
-    const currentDistrict = this.state.schoolData.find(
+    const currentDistrict = this.state.districts.find(
       selectedCard => selectedCard.location === location
     );
 
@@ -59,15 +57,14 @@ class App extends Component {
         <h1 className="header">Welcome To Headcount 2.0</h1>
         <SearchForm findDistricts={this.findDistricts} />
         <ComparisonContainer
-          selectedDistrict={this.state.selectedCards}
+          selectedCards={this.state.selectedCards}
           selectCards={this.selectCards}
+          districts={this.state.districts}
           schoolData={this.state.schoolData}
-          comparedData={this.state.comparedData}
         />
         <DistrictsContainer
-          schoolData={this.state.schoolData}
+          districts={this.state.districts}
           selectCards={this.selectCards}
-          comparedData={this.state.comparedData}
         />
       </div>
     );

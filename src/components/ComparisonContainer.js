@@ -2,25 +2,26 @@ import React from "react";
 import DistrictCard from "./DistrictCard";
 import ComparisonCard from "./ComparisonCard";
 
-const ComparisonContainer = ({ selectedDistrict, schoolData }) => {
+const ComparisonContainer = ({ selectedCards, districts, schoolData }) => {
   let firstCardSelected;
   let secondCardSelected;
   let comparisonCard;
 
-  if (selectedDistrict[0]) {
+  if (selectedCards[0]) {
     firstCardSelected = (
-      <DistrictCard {...selectedDistrict[0]} schoolData={schoolData} />
+      <DistrictCard {...selectedCards[0]} districts={districts} />
     );
   }
-  if (selectedDistrict[1]) {
+  if (selectedCards[1]) {
     secondCardSelected = (
-      <DistrictCard {...selectedDistrict[1]} schoolData={schoolData} />
+      <DistrictCard {...selectedCards[1]} districts={districts} />
     );
   }
-  if (selectedDistrict.length > 1) {
+  if (selectedCards.length > 1) {
     comparisonCard = (
       <ComparisonCard
-        selectedDistrict={selectedDistrict}
+        selectedCards={selectedCards}
+        districts={districts}
         schoolData={schoolData}
       />
     );
