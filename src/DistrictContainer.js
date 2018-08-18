@@ -1,18 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import { Card } from './Card.js';
 import './style/DistrictContainer.css';
 
-export default class DistrictContainer extends Component {
-
-  render() {
-    return (
-      <div className="district-card-container">
-        {this.props.districts.map((district, index) => <Card 
-          district={district} 
-          key={index}
-          checkForMaxCards={this.props.checkForMaxCards}/>)}
-      </div>
-    );
-  }
-}
+export const DistrictContainer = ({ districts, checkForMaxCards }) => {
+  return (
+    <div className="district-card-container">
+      {districts.map((district, index) => <Card 
+        district={district} 
+        key={index}
+        checkForMaxCards={checkForMaxCards}/>)}
+    </div>
+  );
+};
