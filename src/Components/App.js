@@ -46,6 +46,8 @@ class App extends Component {
     foundCard.isSelected = !foundCard.isSelected
   }
 
+  deselectDuplicates = (duplicate) => {
+    const selectedCards = this.state.selectedCards.filter(selectedCard => selectedCard.location !== duplicate);
 
     this.setState({ selectedCards })
   }
