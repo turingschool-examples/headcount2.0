@@ -1,8 +1,8 @@
-import React from 'react';
+ import React from 'react';
 import './ComparisonCard.css';
 
-export const ComparisonCard = (props) => {
-  const keys = Object.keys(props.comparisonData)
+export const ComparisonCard = ({ comparisonData }) => {
+  const keys = Object.keys(comparisonData)
   return (
     <div className="comparison-card">
       <div className="district-info">
