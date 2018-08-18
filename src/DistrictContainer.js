@@ -11,7 +11,7 @@ export default class DistrictContainer extends Component {
         {this.props.districts.map((district, index) => <Card 
           district={district} 
           key={index}
-          selectDistrict={this.props.selectDistrict}/>)}
+          checkForMaxCards={this.props.checkForMaxCards}/>)}
       </div>
     );
   }
