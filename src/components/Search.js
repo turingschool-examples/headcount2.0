@@ -27,6 +27,7 @@ class Search extends Component {
             onChange={this.handleChange}
             value={this.state.searchValue}
             className="search-input"
+            placeholder="Search for a district..."
           />
         </form>
       </div>
