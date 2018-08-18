@@ -28,10 +28,19 @@ class App extends Component {
     this.setState({ districts });
   }
 
-  selectDistrict = key => {
-    let selectedDistricts = district.findByName(key);
-    if (this.state.selectedDistricts.length > 1) {
-      this.setState({selectedDistricts : this.state.selectedDistricts.shift()});
+  checkForMaxCards = location => {
+    if (this.state.selectedDistricts.some(district => district.location === location) || this.state.selectedDistricts.length !== 2)
+    this.selectDistrict(location);
+  }
+
+  selectDistrict = location => {
+    let selectedCard = this.state.districts.find(district => district.location === location);
+    if (!this.state.selectedDistricts.find(district => district.location === location)) {
+      this.setState({ selectedDistricts : [...this.state.selectedDistricts, selectedCard]});
+    } else {
+      const selectedDistricts = this.state.selectedDistricts.filter(district => district.location !== location);
+      this.setState({ selectedDistricts });
+      this.setState({ comparisonData : undefined });
     }
     if (this.state.key) {
       let comparisonData = district.compareDistrictAverages(this.state.key, key);
