@@ -11,11 +11,12 @@ import kinderData from '../data/kindergartners_in_full_day_program';
 
 describe('ComparisonContainer component', () => {
   let wrapper;
+  let selectedDistricts;
+  let toggleSelected;
+  let category;
 
-  beforeEach(() => {});
-
-  it('renders without crashing', () => {
-    const selectedDistricts = [
+  beforeEach(() => {
+    selectedDistricts = [
       {
         location: 'COLORADO',
         stats: {
@@ -34,9 +35,11 @@ describe('ComparisonContainer component', () => {
       }
     ];
 
-    const toggleSelected = jest.fn();
-    const category = new DistrictRepository(kinderData);
+    toggleSelected = jest.fn();
+    category = new DistrictRepository(kinderData);
+  });
 
+  it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(
       <ComparisonContainer
@@ -51,9 +54,6 @@ describe('ComparisonContainer component', () => {
 
   it('should not render any DistrictCard components if selectedDistricts is empty', () => {
     const selectedDistricts = [];
-
-    const toggleSelected = jest.fn();
-    const category = new DistrictRepository(kinderData);
 
     wrapper = shallow(
       <ComparisonContainer
@@ -78,9 +78,6 @@ describe('ComparisonContainer component', () => {
       }
     ];
 
-    const toggleSelected = jest.fn();
-    const category = new DistrictRepository(kinderData);
-
     wrapper = shallow(
       <ComparisonContainer
         selectedDistricts={selectedDistricts}
@@ -93,28 +90,6 @@ describe('ComparisonContainer component', () => {
   });
 
   it('should render two DistrictCards if the length of selectedDistricts is 2', () => {
-    const selectedDistricts = [
-      {
-        location: 'COLORADO',
-        stats: {
-          2004: 0.24,
-          2005: 0.278
-        },
-        selected: true
-      },
-      {
-        location: 'ACADEMY 20',
-        stats: {
-          2010: 0.64,
-          2011: 0.672
-        },
-        selected: true
-      }
-    ];
-
-    const toggleSelected = jest.fn();
-    const category = new DistrictRepository(kinderData);
-
     wrapper = shallow(
       <ComparisonContainer
         selectedDistricts={selectedDistricts}
@@ -127,28 +102,6 @@ describe('ComparisonContainer component', () => {
   });
 
   it('should render a ComparisonCard if the length of selectedDistricts is 2', () => {
-    const selectedDistricts = [
-      {
-        location: 'COLORADO',
-        stats: {
-          2004: 0.24,
-          2005: 0.278
-        },
-        selected: true
-      },
-      {
-        location: 'ACADEMY 20',
-        stats: {
-          2010: 0.64,
-          2011: 0.672
-        },
-        selected: true
-      }
-    ];
-
-    const toggleSelected = jest.fn();
-    const category = new DistrictRepository(kinderData);
-
     wrapper = shallow(
       <ComparisonContainer
         selectedDistricts={selectedDistricts}
@@ -161,6 +114,13 @@ describe('ComparisonContainer component', () => {
   });
 
   it('should match the snapshot', () => {
+    wrapper = shallow(
+      <ComparisonContainer
+        selectedDistricts={selectedDistricts}
+        toggleSelected={toggleSelected}
+        category={category}
+      />
+    );
     expect(wrapper.html()).toMatchSnapshot();
   });
 });
