@@ -30,6 +30,10 @@ class App extends Component {
     this.setState({ districts });
   }
 
+  handleClick = location => {
+    this.checkForMaxCards(location);
+  }
+
   checkForMaxCards = location => {
     if (this.state.selectedDistricts.some(district => district.location === location) || this.state.selectedDistricts.length !== 2)
       this.selectDistrict(location);
@@ -75,12 +79,12 @@ class App extends Component {
         <Search searchDistricts={this.searchDistricts}/>
         {this.state.selectedDistricts && <DistrictContainer 
           districts={this.state.selectedDistricts} 
-          checkForMaxCards={this.checkForMaxCards}
+          handleClick={this.handleClick}
         />}
         {this.state.selectedDistricts[1] && <ComparisonCard comparisonData={this.state.comparisonData} card1key={this.state.key}/>}
         <DistrictContainer 
           districts={this.state.districts}
-          checkForMaxCards={this.checkForMaxCards}
+          handleClick={this.handleClick}
         />
       </main>
     );
