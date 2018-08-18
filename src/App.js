@@ -55,7 +55,7 @@ class App extends Component {
     }
   }
 
-  compareDistricts = (location) => {
+  compareDistricts = location => {
     const { selectedDistricts } = this.state;
     if (selectedDistricts.length === 1) {
       const comparisonData = district.compareDistrictAverages(selectedDistricts[0].location, location);
@@ -63,7 +63,7 @@ class App extends Component {
     }
   }
 
-  changeSelectedCardClassName = (location) => {
+  changeSelectedCardClassName = location => {
     const districts = this.state.districts.map(district => {
       district.location === location ? district.selected = !district.selected : undefined;
       return district;
