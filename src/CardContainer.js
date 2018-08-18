@@ -12,9 +12,13 @@ const CardContainer = ({ cards, averages, selectLocation }) => {
 
   if (averages.compared >= 0) {
     displayCompared = 
-      <p className='compared-average'> 
-        COMPARED AVERAGES: {averages.compared}
-      </p>;
+      <div className='compared-average'>
+        <p> 
+          COMPARED AVERAGES: <span className='compared-average__num'>
+            {averages.compared}
+          </span>
+        </p>
+      </div>;
   }
 
   return (

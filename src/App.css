@@ -1,29 +1,61 @@
-/*APP COMPONENT RELATED CSS GOES HERE*/
 .App {
     display: flex;
     flex-direction: row;
-}
-
-.Search {
-    
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: #6D6080;
+    background-color: #f2f2f2;
 }
 
 .LocationList {
     height: 100vh;
     width: 20%;
     overflow-y: scroll;
+    background-color: #FCFCFC;
+}
+
+.Search {
+    display: block;
+    height: 2rem;
+    width: 95%; 
+    margin: .5rem auto;
+    padding-left: 2.8rem;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    caret-color: #6D6080;
+    color: #6D6080;
+    background: url(./icons/search.svg) no-repeat .5rem center;
+    background-size: 1.8rem;
+    outline: none;
+}
+
+.Search::placeholder {
+    color: #E0DDE4; 
 }
 
 .LocationList__btn {
     display: block;
     margin: .5rem auto;
-    height: 2rem;
+    height: 2.6rem;
     width: 95%; 
     border: none;
     border-radius: 10px;
-    background-color: #727272;
-    color: #f2f2f2;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: .8rem;
+    background-color: #E0DDE4;
+    color: #6D6080;
     outline: none;
+}
+
+.LocationList__btn:hover {
+    background-color: #C26D51;
+    color: #f2f2f2;
+}
+
+.LocationList__btn:focus {
+    background-color: #B54D2B;
+    color: #f2f2f2;
 }
 
 .CardContainer__header {
@@ -36,7 +68,6 @@
 .CardContainer {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     width: 75%;
     margin: 2rem;
 }
@@ -49,18 +80,40 @@
 
 .Card {
     position: relative;
-    height: 300px;
+    height: 370px;
     min-width: 275px;
     width: 25%;
     margin: 2rem; 
     border-radius: 15px;
-    -webkit-box-shadow: 0 0 8px 0 rgba(0,0,0,0.5);
-    -moz-box-shadow: 0 0 8px 0 rgba(0,0,0,0.5);
-    box-shadow: 0 0 8px 0 rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 8px 0 #E0DDE4;
+    -moz-box-shadow: 0 0 8px 0 #E0DDE4;
+    box-shadow: 0 0 8px 0 #E0DDE4;
+    font-family: 'Roboto', sans-serif;
+    background-color: #FCFCFC;
+}
+
+.Card:hover {
+    -webkit-box-shadow: 0 0 15px 0 #B54D2B;
+    -moz-box-shadow: 0 0 15px 0 #B54D2B;
+    box-shadow: 0 0 15px 0 #B54D2B;
+    cursor: pointer;
 }
 
 .Card__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.5rem;
+    border-radius: 15px 15px 0 0;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: .8rem;
     text-align: center;
+    background-color: #6D6080;
+    color: #f2f2f2;
+}
+
+.Card__header h2 {
+    margin: 0 10px;
 }
 
 .Card__stats {
@@ -69,14 +122,41 @@
     list-style-type: none;
 }
 
+.Card__stats li { 
+    margin-top: 3px;
+}
+
+.Card__average {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.compared-average {
+    width: 100%;
+}
+
+.compared-average p {
+    width: 16rem;
+    margin: 0 auto;
+    padding: .5rem;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #B54D2B;
+    color: #f2f2f2;
+}
+
+.compared-average__num {
+    font-family: 'Roboto', sans-serif;
+}
+
 .green {
-    color: green;
+    color: #499F68;
 }
 
 .red {
-    color: red;
+    color: #B54D2B;
 }
 
 .selected {
-    background-color: red;
+    background-color: #B54D2B;
+    color: #f2f2f2;
 }
