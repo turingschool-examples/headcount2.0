@@ -10,7 +10,7 @@ const Card = ({ location, stats, selectCard }) => {
   })
   
   return (
-    <ul className="card">
+    <ul className="card" onClick={() => selectCard(location)}>
       <h2>{location}</h2>
       <li>{displayStats}</li>
     </ul>

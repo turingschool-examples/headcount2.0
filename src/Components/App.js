@@ -28,10 +28,26 @@ class App extends Component {
   }
 
   selectCard = (input) => {
-    const foundCard = this.state.data.findByName(input);
-    const newSelectedCards = [...this.state.selectedCards, foundCard];
+    const foundCard = districtRepo.findByName(input);
+    let selectedCards = [...this.state.selectedCards]
+   
+    if (selectedCards.includes(foundCard.location)) {
+      this.deselectDuplicates(foundCard.location)
+      return
+    }
+    
+    if (selectedCards.length === 2) {
+      selectedCards.splice(0, 1, foundCard)
+    } else {
+      selectedCards.push(foundCard)
+    }
+    
+    this.setState({ selectedCards })
+    foundCard.isSelected = !foundCard.isSelected
+  }
 
 
+    this.setState({ selectedCards })
   }
 
   render() {
@@ -40,13 +56,12 @@ class App extends Component {
         <header>
           <h1>Welcome To Headcount 2.0</h1>
         </header>
-        <SelectedCont 
-          data={ this.state.data }
-
-        />
+        {/* <SelectedCont /> */}
         <Search updateCards={ this.updateCards } />
-        <CardCont data={this.state.data}
-        selectCard={this.selectCard}/>
+        <CardCont 
+          data={this.state.data}
+          selectCard={this.selectCard} 
+        />
       </div>
     );
   }

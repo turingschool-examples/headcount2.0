@@ -5,11 +5,12 @@ import './CardCont.css';
 
 const CardCont = ({ data, selectCard }) => {
   const displayDistrictCards = Object.values(data).map((district, i) => {
-    return <Card  location={ district.location }
+    return  <Card location={ district.location }
                   stats={ district.stats }
                   isSelected={ false }
                   key={ `card-${i}` }
-    />
+                  selectCard={selectCard}
+            />
   })
 
   return (
