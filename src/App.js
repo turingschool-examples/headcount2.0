@@ -14,7 +14,8 @@ class App extends Component {
     this.state = {
       districts: new DistrictRepository(kinderData),
       searchedDistrict: [],
-      cardsToCompare: []
+      cardsToCompare: [],
+      comparedObject: {}
     }
   }
 
@@ -26,7 +27,11 @@ class App extends Component {
 
   addToCompare = (eventLocation) => {
     const foundCard = this.state.districts.findByName(eventLocation);
-    if (this.state.cardsToCompare.length > 1 || this.state.cardsToCompare.includes(foundCard)) {
+    if (this.state.cardsToCompare.length > 1) {
+      this.compareAddedDistricts();
+      return
+    }
+    if(this.state.cardsToCompare.includes(foundCard) && this.state.cardsToCompare.length >= 1) {
       return
     }
     this.setState({
@@ -34,11 +39,20 @@ class App extends Component {
     })
   }
   
+  compareAddedDistricts = () => {
+    if (this.state.cardsToCompare.length >= 1) {
+      const comparedObject = this.state.districts.compareDistrictAverages(this.state.cardsToCompare[0].location, this.state.cardsToCompare[1].location)
+      this.setState({
+        comparedObject: comparedObject
+      })
+    }
+  }
+  
   render() {
     return (
       <React.Fragment> 
         <Search searchDistricts={ this.searchDistricts } /> 
-        <DistrictList addToCompare={this.addToCompare} cardsToCompare={this.state.cardsToCompare} districts={this.state.districts.stats} searchedDistrict={this.state.searchedDistrict} />
+        <DistrictList addToCompare={this.addToCompare} cardsToCompare={this.state.cardsToCompare} districts={this.state.districts.stats} searchedDistrict={this.state.searchedDistrict} comparedObject={this.state.comparedObject}/>
       </React.Fragment>
     );
   }
