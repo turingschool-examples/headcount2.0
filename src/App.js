@@ -4,7 +4,7 @@ import './App.css';
 import DistrictRepository from './helper';
 import kinderData from './data/kindergartners_in_full_day_program';
 import CardContainer from './CardContainer';
-import LocationList from './LocationList';
+import Search from './Search';
 
 const district = new DistrictRepository(kinderData);
 
@@ -49,7 +49,7 @@ class App extends Component {
         () => this.compareAverages()
       );
     }
-
+    this.setState({ displayedLocations: district.findAllMatches() }); 
   }
 
   searchLocations = (value) => {
@@ -72,10 +72,12 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <LocationList displayedLocations={this.state.displayedLocations}
-          selectLocation={this.selectLocation}
-          searchLocations={this.searchLocations} />
-        <CardContainer cards={this.state.cards}
+        <Search 
+          searchLocations={this.searchLocations} 
+          displayedLocations={this.state.displayedLocations}
+          selectLocation={this.selectLocation}/>
+        <CardContainer 
+          cards={this.state.cards}
           averages={this.state.averages} />
       </div>
     );

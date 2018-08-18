@@ -1,26 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Search from './Search';
-
 const LocationList = (
-  { displayedLocations, selectLocation, searchLocations }
+  { displayedLocations, selectLocation, clearSearch }
 ) => {
   const locationButtons = displayedLocations.map( (location, index) => (
     <button 
       key={index}
       name={location}
       className='LocationList__btn'
-      onClick={ () => selectLocation(location) } >
+      onClick={ () => {
+        clearSearch();
+        selectLocation(location) 
+      }} >
       {location}
     </button>
   ));
 
   return (
-    <aside className='LocationList'>
-      <Search searchLocations={searchLocations} />
+    <div>
       {locationButtons}
-    </aside>
+    </div>
   );
 };
 

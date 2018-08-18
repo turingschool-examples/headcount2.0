@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import LocationList from './LocationList';
+
 class Search extends Component {
   constructor() {
     super();
@@ -15,19 +17,24 @@ class Search extends Component {
     this.props.searchLocations(value);
   }
 
-  handleClearForm = (event) => {
-    event.preventDefault();
+  clearSearch = () => {
     this.setState({ value: '' });
   }
 
   render() {
     return (
-      <input 
-        value={this.state.value}
-        className='Search'
-        placeholder='SEARCH'
-        onChange={this.handleInput}>
-      </input>
+      <aside className='LocationList'>
+        <input 
+          value={this.state.value}
+          className='Search'
+          placeholder='SEARCH'
+          onChange={this.handleInput} >
+        </input>
+        <LocationList 
+          displayedLocations={this.props.displayedLocations}
+          selectLocation={this.props.selectLocation} 
+          clearSearch={this.clearSearch} />
+      </aside>
     );
   }
 };
