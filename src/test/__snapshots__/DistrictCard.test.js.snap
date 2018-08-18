@@ -65,7 +65,7 @@ ShallowWrapper {
           </article>
 </section>,
       ],
-      "className": "each-card",
+      "className": "each-card each-card",
     },
     "ref": null,
     "rendered": Array [
@@ -265,7 +265,7 @@ ShallowWrapper {
             </article>
 </section>,
         ],
-        "className": "each-card",
+        "className": "each-card each-card",
       },
       "ref": null,
       "rendered": Array [
