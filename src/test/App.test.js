@@ -17,10 +17,6 @@ describe('App', () => {
     ReactDOM.unmountComponentAtNode(div);
   });
 
-  it('should add average to location when componentDidMount', () => {
-
-  });
-
   it('should populate state when componentDidMount', () => {
     expect(wrapper.state('locations')).not.toEqual({});
     expect(wrapper.state('displayedLocations')).not.toEqual([]);
@@ -74,8 +70,14 @@ describe('App', () => {
     expect(wrapper.state('cards').length).toEqual(1);
   });
 
-  it('when searchLocations is called it should update state with the displayedLocations', () => {
+  it('when searchLocations is called it should update displayedLocations in state', () => {
+    const value = 'COLORADO';
 
+    expect(wrapper.state('displayedLocations').length).toEqual(181);
+    
+    wrapper.instance().searchLocations(value);
+
+    expect(wrapper.state('displayedLocations')).toEqual(['COLORADO', 'COLORADO SPRINGS 11']);
   });
 
   it('should update state with averages when compareAverages is called', () => {
