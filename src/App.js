@@ -67,7 +67,7 @@ class App extends Component {
     return (
       <main>
         <header>
-          <img src={logo} />
+          <img src={logo} alt="headcount 2.0 logo"/>
           <h1>headcount 2.0</h1>
         </header>
         <Search searchDistricts={this.searchDistricts}/>
