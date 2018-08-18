@@ -143,8 +143,8 @@ describe('App', () => {
     });
   });
 
-  it('should render a LocationList component', () => {
-    expect(wrapper.find('LocationList').length).toEqual(1);
+  it('should render a Search component', () => {
+    expect(wrapper.find('Search').length).toEqual(1);
   });
 
   it('should render a CardContainer component', () => {
