@@ -15,7 +15,8 @@ export const DistrictContainer = ({ districts, handleClick }) => {
   );
 };
 
+const { array, func } = PropTypes;
 DistrictContainer.propTypes = {
-  districts: PropTypes.array,
-  handleClick: PropTypes.func
+  districts: array,
+  handleClick: func
 };
