@@ -12,12 +12,12 @@ describe("DistrictsContainer", () => {
   let anticipated;
 
   it("should match the snapshot", () => {
-    wrapper = shallow(<DistrictsContainer schoolData={mockCard} />);
+    wrapper = shallow(<DistrictsContainer districts={mockCard} />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it("should render all found districts", () => {
-    wrapper = shallow(<DistrictsContainer schoolData={mockCard} />);
+    wrapper = shallow(<DistrictsContainer districts={mockCard} />);
     anticipated = wrapper.find(DistrictCard).length;
     expect(anticipated).toEqual(2);
   });

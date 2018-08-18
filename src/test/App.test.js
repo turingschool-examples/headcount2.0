@@ -13,12 +13,12 @@ describe("App", () => {
     expect(shallowWrapper).toMatchSnapshot();
   });
 
-  it("should have 181 districts in schoolData array", () => {
-    expect(shallowWrapper.state().schoolData.length).toEqual(181);
+  it("should have 181 districts in districts array", () => {
+    expect(shallowWrapper.state().districts.length).toEqual(181);
   });
 
-  it("should populate the schoolData state when component mounts", () => {
-    expect(shallowWrapper.state().schoolData).not.toEqual({});
+  it("should populate the districts state when component mounts", () => {
+    expect(shallowWrapper.state().districts).not.toEqual({});
   });
 
   it("should render a DistrictsContainer component", () => {

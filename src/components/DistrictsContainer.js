@@ -3,15 +3,15 @@ import DistrictCard from "./DistrictCard";
 import "../css/DistrictsContainer.css";
 import PropTypes from "prop-types";
 
-const DistrictsContainer = ({ schoolData }) => {
-  const districtCard = schoolData.map((district, index) => (
-    <DistrictCard {...district} key={index} />
+const DistrictsContainer = ({ districts, selectCards }) => {
+  const districtCard = districts.map((district, index) => (
+    <DistrictCard {...district} key={index} selectCards={selectCards} />
   ));
   return <div className="district-container">{districtCard}</div>;
 };
 
 DistrictsContainer.propTypes = {
-  schoolData: PropTypes.array
+  districts: PropTypes.array
 };
 
 export default DistrictsContainer;

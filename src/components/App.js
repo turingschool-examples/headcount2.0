@@ -4,15 +4,15 @@ import DistrictRepository from "../helper";
 import SearchForm from "./SearchForm";
 import kinderData from "../data/kindergartners_in_full_day_program";
 import "../css/App.css";
-const schoolData = new DistrictRepository(kinderData);
+import ComparisonContainer from "./ComparisonContainer";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      schoolData: [],
+      districts: [],
       selectedCards: [],
-      comparedCards: []
+      schoolData: {}
     };
   }
 
@@ -21,22 +21,51 @@ class App extends Component {
   }
 
   findDistricts = district => {
-    const foundDistricts = schoolData.findAllMatches(district);
-    if (foundDistricts) {
+    const schoolData = new DistrictRepository(kinderData);
+    const districts = schoolData.findAllMatches(district);
+    if (districts) {
       this.setState({
-        schoolData: foundDistricts
+        districts,
+        schoolData
       });
     }
   };
 
-  selectedCards = district => {};
+  selectCards = location => {
+    let selectedCards;
+    const currentDistrict = this.state.districts.find(
+      selectedCard => selectedCard.location === location
+    );
+
+    if (!currentDistrict.selected && this.state.selectedCards.length < 2) {
+      currentDistrict.selected = true;
+      selectedCards = [...this.state.selectedCards, currentDistrict];
+    } else {
+      currentDistrict.selected = false;
+      selectedCards = this.state.selectedCards.filter(
+        selectedCard => selectedCard.location !== currentDistrict.location
+      );
+    }
+    this.setState({
+      selectedCards
+    });
+  };
 
   render() {
     return (
       <div className="wrapper">
         <h1 className="header">Welcome To Headcount 2.0</h1>
         <SearchForm findDistricts={this.findDistricts} />
-        <DistrictsContainer schoolData={this.state.schoolData} />
+        <ComparisonContainer
+          selectedCards={this.state.selectedCards}
+          selectCards={this.selectCards}
+          districts={this.state.districts}
+          schoolData={this.state.schoolData}
+        />
+        <DistrictsContainer
+          districts={this.state.districts}
+          selectCards={this.selectCards}
+        />
       </div>
     );
   }
