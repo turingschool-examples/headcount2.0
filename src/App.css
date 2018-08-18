@@ -1,1 +1,6 @@
 /*APP COMPONENT RELATED CSS GOES HERE*/
+
+.title {
+  text-align: center;
+  font-size: 3rem
+}
