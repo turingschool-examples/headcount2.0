@@ -33,6 +33,13 @@ const LocationList = (
 export default LocationList;
 
 LocationList.propTypes = {
+  cards: PropTypes.arrayOf(
+    PropTypes.shape({ 
+      average: PropTypes.number, 
+      location: PropTypes.string, 
+      stats: PropTypes.objectOf(PropTypes.number) 
+    })
+  ),
   displayedLocations: PropTypes.arrayOf(PropTypes.string),
   selectLocation: PropTypes.func,
   clearSearch: PropTypes.func
