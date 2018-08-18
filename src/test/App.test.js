@@ -151,4 +151,4 @@ describe('App', () => {
     expect(wrapper.find('CardContainer').length).toEqual(1);
   });
 
-})
+});
