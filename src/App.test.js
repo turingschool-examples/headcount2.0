@@ -2,12 +2,16 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import App from './App.js';
 
-it ('matches the snapshot', () => {
-  const wrapper = shallow(<App />)
-  expect(wrapper).toMatchSnapshot()
-});
 
-// it ('initial state is an empty array', () => {
-//   const wrapper = shallow(<App />)
-//   expect(wrapper.state().districtCards.length).toEqual(0)
-// })
+describe('Search', () => {
+
+  it('renders a cardContainer with the correct props', () => {
+    const wrapper = shallow(<App />)
+    
+  });
+
+  it ('initial state is an empty array', () => {
+    const wrapper = mount(<App />)
+    expect(wrapper.state().districtCards.length).toEqual(0)
+  })
+})

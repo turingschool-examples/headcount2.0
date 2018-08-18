@@ -12,13 +12,12 @@ describe('Search', () => {
 
   it('should invoke updateCard onChange', () => {
     const event = {target: {value: "COLORADO"}};
-    const mockFn = jest.fn(event.target.value)
+    const mockFn = jest.fn()
     const wrapper = shallow(<Search updateCards={mockFn}/>)
     const input = wrapper.find('input');
-    // const mockEvent = { target: { value: 'abc', name: 'body' } }
     input.simulate('change', event);
 
-    expect(wrapper.props().updateCards).toHaveBeenCalled();
+    expect(mockFn).toHaveBeenCalled();
 
   })
 

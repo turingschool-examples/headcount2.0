@@ -3,9 +3,9 @@ import './Search.css'
 
 const Search = ({updateCards}) => {
   return(
-    <input 
-      type="text" 
-      placeholder="search" 
+    <input
+      type="text"
+      placeholder="search"
       className="searchBar"
       onChange={(e) => updateCards(e.target.value)}
     />
@@ -13,4 +13,3 @@ const Search = ({updateCards}) => {
 }
 
 export default Search
-

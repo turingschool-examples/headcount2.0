@@ -1,4 +1,3 @@
-import React from 'react';
 import kinderData from './data/kindergartners_in_full_day_program.js';
 
 export default class DistrictRepository {
@@ -21,8 +20,7 @@ export default class DistrictRepository {
 
   findByName = (name) => {
     if (name) {
-      const newName = name.toUpperCase()
-      return this.stats[newName]
+      return this.stats[name.toUpperCase()]
     }
   }
 

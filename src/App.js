@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import { CardContainer } from './CardContainer'
 import DistrictRepository from './helper'
-import kinderData from './data/kindergartners_in_full_day_program.js';
 import Search from './Search.js'
 
 const district = new DistrictRepository()
@@ -11,7 +10,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      districtCards: []
+      districtCards: [],
+      selectedCards: []
     }
   }
 
@@ -22,7 +22,28 @@ class App extends Component {
   updateCards = (data) => {
     const districtCards = district.findAllMatches(data)
     this.setState({ districtCards })
-  } 
+  }
+
+  selectCard = (data) => {
+    const findCard = district.findByName(data)
+    const selectState = this.state.selectedCards
+    if (!selectState.includes(findCard) && selectState.length < 2) {
+      const selectedCards = [...this.state.selectedCards, findCard]
+      this.setState({ selectedCards })
+    }
+    this.compareCards( this.state.selectedCards )
+  }
+
+  deleteCard = (data) => {
+    const findCard = district.findByName(data)
+  }
+
+  compareCards = (cards) => {
+    if (this.state.selectedCards.length > 1) {
+      var comparedObject = district.compareDistrictAverages(cards[0].location, cards[1].location)
+    }
+    console.log(comparedObject)
+  }
 
   render() {
     return (
@@ -30,7 +51,11 @@ class App extends Component {
         <div className='title'>Welcome To Headcount 2.0</div>
         <Search updateCards={this.updateCards}/>
         <CardContainer 
+                      districts={this.state.selectedCards}
+                      deleteCard={ this.deleteCard }/>
+        <CardContainer 
           districts={ this.state.districtCards }
+          selectCard={ this.selectCard }
         />
       </div> 
     );
