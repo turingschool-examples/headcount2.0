@@ -48,4 +48,24 @@ export default class DistrictRepository {
       return schoolValues;
     }
   }
+
+  findAverage(userInput) {
+    const sanitizedInput = userInput.toUpperCase();
+    const statsData = this.findByName(sanitizedInput).stats;
+    const arrayOfData = Object.values(statsData);
+    const sum = arrayOfData.reduce((sum, number) => sum + number, 0);
+    return Math.round(1000 * (sum / arrayOfData.length)) / 1000;
+  }
+
+  compareDistrictAverages(district1, district2) {
+    const sanitizedInput = (district) => district.toUpperCase();
+    const districtAverage = (district) => this.findAverage(sanitizedInput(district));
+    const comparedRatio = districtAverage(district1) / districtAverage(district2);
+    const comparedDataObj = {
+      [sanitizedInput(district1)]: districtAverage(district1),
+      [sanitizedInput(district2)]: districtAverage(district2),
+      compared: Math.round(1000 * comparedRatio)/1000
+    };
+    return comparedDataObj;
+  }
 }
