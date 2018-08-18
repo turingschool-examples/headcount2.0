@@ -1,30 +1,38 @@
 import React from 'react';
-import LocationList from '../LocationList';
 import { shallow } from 'enzyme';
+
+import LocationList from '../LocationList';
 
 describe('LocationList', () => {
 
-    it('should match the snapshot', () => {
-        const wrapper = shallow(<LocationList displayedLocations={[]} />)
-        expect(wrapper.html()).toMatchSnapshot()
-    })
+  it('should match the snapshot', () => {
+    const wrapper = shallow(<LocationList displayedLocations={[]} />);
+    
+    expect(wrapper.html()).toMatchSnapshot();
+  });
 
-    it('should match the snapshot with one location', () => {
-        const wrapper = shallow(<LocationList displayedLocations={['COLORADO']} />)
-        expect(wrapper.html()).toMatchSnapshot()
-    })
+  it('should match the snapshot with one location', () => {
+    const locations = ['COLORADO'];
+    const wrapper = shallow(<LocationList displayedLocations={locations} />);
+    
+    expect(wrapper.html()).toMatchSnapshot();
+  });
 
-    it('should match the snapshot with multiple locations', () => {
-        const wrapper = shallow(<LocationList displayedLocations={['COLORADO', 'ACADEMY 20', 'AGATE 300']} />)
-        expect(wrapper.html()).toMatchSnapshot()
-    })
+  it('should match the snapshot with multiple locations', () => {
+    const locations = ['COLORADO', 'ACADEMY 20', 'AGATE 300']; 
+    const wrapper = shallow(<LocationList displayedLocations={locations} />);
+    
+    expect(wrapper.html()).toMatchSnapshot();
+  });
 
-    it('should call selectLocation when a location button is clicked', () => {
-        const selectLocationMock = jest.fn()
-        const wrapper = shallow(<LocationList displayedLocations={['COLORADO']} selectLocation={selectLocationMock} />)
+  it('should call selectLocation when a location button is clicked', () => {
+    const selectLocationMock = jest.fn();
+    const locations = ['COLORADO'];
+    const wrapper = shallow(<LocationList displayedLocations={locations} selectLocation={selectLocationMock} />);
 
-        wrapper.find('.LocationList__btn').simulate('click')
+    wrapper.find('.LocationList__btn').simulate('click');
 
-        expect(selectLocationMock).toHaveBeenCalled()
-    })
-})
+    expect(selectLocationMock).toHaveBeenCalled();
+  });
+
+});

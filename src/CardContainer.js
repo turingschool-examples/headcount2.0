@@ -1,17 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import Card from './Card';
 
-const CardContainer = ({ cards, averages }) => {
-  const displayCards = cards.map((card, index) => (
-    <Card {...card} key={index} />
+const CardContainer = ({ cards, averages, selectLocation }) => {
+  const displayCards = cards.map( (card, index) => (
+    <Card {...card} selectLocation={selectLocation} key={index} />
   ));
 
   let displayCompared = <p></p>;
 
-  if (averages.compared) {
-    displayCompared = <p className='compared-average'>
-                        COMPARED AVERAGES: {averages.compared}
-                      </p>;
+  if (averages.compared >= 0) {
+    displayCompared = 
+      <p className='compared-average'> 
+        COMPARED AVERAGES: {averages.compared}
+      </p>;
   }
 
   return (
@@ -28,3 +31,14 @@ const CardContainer = ({ cards, averages }) => {
 };
 
 export default CardContainer;
+
+CardContainer.propTypes = {
+  cards: PropTypes.arrayOf(
+    PropTypes.shape({ 
+      average: PropTypes.number, 
+      location: PropTypes.string, 
+      stats: PropTypes.objectOf(PropTypes.number) 
+    })
+  ),
+  averages: PropTypes.objectOf(PropTypes.number)
+};
