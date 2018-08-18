@@ -1,11 +1,11 @@
 import DistrictRepository from './helper.js';
 import kinderData from './data/kindergartners_in_full_day_program.js';
 import React, { Component } from 'react';
-import './App.css';
+import './style/App.css';
 import DistrictContainer from './DistrictContainer.js';
 import Search from './Search';
 import { ComparisonCard } from './ComparisonCard';
-import logo from './headcount.png'
+import logo from './images/headcount.png'
 
 const district = new DistrictRepository(kinderData);
 class App extends Component {

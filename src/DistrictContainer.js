@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Card from './Card.js';
-import './DistrictContainer.css';
+import './style/DistrictContainer.css';
 
 export default class DistrictContainer extends Component {
 

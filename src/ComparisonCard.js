@@ -1,5 +1,5 @@
  import React from 'react';
-import './ComparisonCard.css';
+import './style/ComparisonCard.css';
 
 export const ComparisonCard = ({ comparisonData }) => {
   const keys = Object.keys(comparisonData)
