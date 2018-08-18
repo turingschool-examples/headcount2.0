@@ -1,7 +1,8 @@
 import React from 'react';
+
 import './style/Card.css';
 
-const Card = ({ district, checkForMaxCards, key}) => {
+export const Card = ({ district, checkForMaxCards, key}) => {
   return (
     <aside 
       className={`${district.selected ? 'card-selected' : ''}`} 
@@ -21,4 +22,3 @@ const Card = ({ district, checkForMaxCards, key}) => {
     </aside>
   );
 };
-export default Card;

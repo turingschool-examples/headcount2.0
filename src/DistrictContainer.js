@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Card from './Card.js';
+import { Card } from './Card.js';
 import './style/DistrictContainer.css';
 
 export default class DistrictContainer extends Component {
