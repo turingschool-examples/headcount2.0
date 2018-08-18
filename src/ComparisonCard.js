@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './style/ComparisonCard.css';
 
@@ -17,4 +18,15 @@ export const ComparisonCard = ({ comparisonData }) => {
       <h3 className="comparison-ratio">{comparisonData.compared}</h3>
     </div>
   );
+};
+
+const { objectOf, string, shape, bool, number } = PropTypes;
+ComparisonCard.propTypes = {
+  comparisonData: objectOf(
+    shape({
+      location: string,
+      stats: objectOf(number),
+      selected: bool
+    })
+  )
 };
