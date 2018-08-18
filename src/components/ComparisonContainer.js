@@ -44,7 +44,8 @@ const ComparisonContainer = ({
 
 ComparisonContainer.propTypes = {
   selectedDistricts: PropTypes.array.isRequired,
-  toggleSelected: PropTypes.func.isRequired
+  toggleSelected: PropTypes.func.isRequired,
+  category: PropTypes.object.isRequired
 };
 
 export default ComparisonContainer;
