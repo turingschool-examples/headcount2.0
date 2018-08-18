@@ -2,7 +2,7 @@ import React from "react";
 import "../css/DistrictCard.css";
 import PropTypes from "prop-types";
 
-const DistrictCard = ({ location, stats, selectCards }) => {
+const DistrictCard = ({ location, stats, selectCards, selected }) => {
   const districtYears = Object.keys(stats).map((year, index) => {
     const avg = stats[year];
     return (
@@ -16,7 +16,7 @@ const DistrictCard = ({ location, stats, selectCards }) => {
     );
   });
   return (
-    <div className="each-card">
+    <div className={`each-card ${selected ? "outline" : "each-card"}`}>
       <h1>{location}</h1>
       <section>{districtYears}</section>
     </div>
