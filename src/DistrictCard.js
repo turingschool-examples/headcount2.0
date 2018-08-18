@@ -2,11 +2,13 @@ import React from 'react';
 import './DistrictCard.css';
 
 
-const DistrictCard = (props) => {
-  const allStats = Object.keys(props.stats).map(stat => <p className={`${props.stats[stat] < .5 ? 'red-text': 'green-text'}`}>{stat}: {props.stats[stat]}</p>)
-  return(
-    <article onClick={ () => props.addToCompare(props.location) }>
-      <h3>{props.location}</h3>
+const DistrictCard = ({stats, location, addToCompare}) => {
+  const allStats = Object.keys(stats).map(stat => (
+    <p className={`${stats[stat] < .5 ? 'red-text': 'green-text'}`}>{stat}: {stats[stat]}</p>
+  ))
+  return (
+    <article onClick={ () => addToCompare(location) }>
+      <h3>{location}</h3>
       <ul>{allStats}</ul>
     </article>
   )

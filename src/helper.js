@@ -8,8 +8,7 @@ export default class DistrictRepository {
             if (!newObject[upperCasedData]) {
                 newObject[upperCasedData] = 
                 {location: upperCasedData,
-                 stats: {},
-                 id: Date.now()
+                 stats: {}
                 };
             }
             newObject[upperCasedData].stats[pieceOfData.TimeFrame] = Math.round(pieceOfData.Data * 1000)/1000 || 0

@@ -23,15 +23,21 @@ class App extends Component {
     this.setState({
       searchedDistrict: this.state.districts.findAllMatches(value)
     })
+    console.log(this.state.searchedDistrict)
   }
 
   addToCompare = (eventLocation) => {
     const foundCard = this.state.districts.findByName(eventLocation);
-    if (this.state.cardsToCompare.length > 1) {
-      this.compareAddedDistricts();
-      return
-    }
-    if(this.state.cardsToCompare.includes(foundCard) && this.state.cardsToCompare.length >= 1) {
+    if (this.state.cardsToCompare.length <= 1) {
+      this.compareAddedDistricts(eventLocation);
+    } 
+    if(this.state.cardsToCompare.includes(foundCard)) {
+      let filterdCards = this.state.cardsToCompare.filter(card => card.location !== foundCard.location)
+      this.setState({
+        cardsToCompare: filterdCards,
+        comparedObject: {}
+
+      })
       return
     }
     this.setState({
@@ -39,9 +45,9 @@ class App extends Component {
     })
   }
   
-  compareAddedDistricts = () => {
+  compareAddedDistricts = (eventLocation) => {
     if (this.state.cardsToCompare.length >= 1) {
-      const comparedObject = this.state.districts.compareDistrictAverages(this.state.cardsToCompare[0].location, this.state.cardsToCompare[1].location)
+      const comparedObject = this.state.districts.compareDistrictAverages(this.state.cardsToCompare[0].location, eventLocation)
       this.setState({
         comparedObject: comparedObject
       })
