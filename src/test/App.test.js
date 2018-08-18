@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
 import App from '../components/App';
+import DistrictContainer from '../components/DistrictContainer';
 
 describe('App component', () => {
   let wrapper;
@@ -37,6 +38,6 @@ describe('App component', () => {
   });
 
   it('should render a Search component', () => {
-    expect(wrapper.find('DistrictContainer').length).toEqual(1);
+    expect(wrapper.find(DistrictContainer).length).toEqual(1);
   });
 });
