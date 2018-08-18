@@ -78,7 +78,7 @@ class App extends Component {
     {this.state.selectedDistricts[1] && <ComparisonCard comparisonData={this.state.comparisonData} card1key={this.state.key}/>}
         <DistrictContainer 
           districts={this.state.districts}
-          selectDistrict={this.selectDistrict}
+          checkForMaxCards={this.checkForMaxCards}
         />
       </main>
     );
