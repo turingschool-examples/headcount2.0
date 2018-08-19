@@ -1,5 +1,4 @@
-module.exports = {
-[
+module.exports = [
   {
     "Location": "Colorado",
     "Score": "Math",
@@ -26607,5 +26606,4 @@ module.exports = {
     "DataFormat": "Percent",
     "Data": 0.30189
   }
-]
-}
+];
