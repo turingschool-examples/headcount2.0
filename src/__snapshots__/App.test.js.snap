@@ -17,9 +17,12 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": Array [
-        <Search
-          searchDistricts={[Function]}
-/>,
+        <header>
+          HEADCOUNT 2.0
+          <Search
+                    searchDistricts={[Function]}
+          />
+</header>,
         <DistrictList
           addToCompare={[Function]}
           cardsToCompare={Array []}
@@ -2933,13 +2936,31 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "host",
         "props": Object {
-          "searchDistricts": [Function],
+          "children": Array [
+            "HEADCOUNT 2.0",
+            <Search
+              searchDistricts={[Function]}
+/>,
+          ],
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": Array [
+          "HEADCOUNT 2.0",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "searchDistricts": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "header",
       },
       Object {
         "instance": null,
@@ -5863,9 +5884,12 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": Array [
-          <Search
-            searchDistricts={[Function]}
-/>,
+          <header>
+            HEADCOUNT 2.0
+            <Search
+                        searchDistricts={[Function]}
+            />
+</header>,
           <DistrictList
             addToCompare={[Function]}
             cardsToCompare={Array []}
@@ -8779,13 +8803,31 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "host",
           "props": Object {
-            "searchDistricts": [Function],
+            "children": Array [
+              "HEADCOUNT 2.0",
+              <Search
+                searchDistricts={[Function]}
+/>,
+            ],
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Array [
+            "HEADCOUNT 2.0",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "searchDistricts": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "header",
         },
         Object {
           "instance": null,

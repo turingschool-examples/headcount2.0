@@ -118,6 +118,7 @@ ShallowWrapper {
           </p>
 </ul>,
       ],
+      "className": "not-clicked",
       "onClick": [Function],
     },
     "ref": null,
@@ -536,6 +537,7 @@ ShallowWrapper {
             </p>
 </ul>,
         ],
+        "className": "not-clicked",
         "onClick": [Function],
       },
       "ref": null,

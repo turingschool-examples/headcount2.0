@@ -3,7 +3,7 @@ import './App.css';
 import DistrictList from './DistrictList'
 import DistrictRepository from './helper'
 import kinderData from './data/kindergartners_in_full_day_program.js';
-import Search from './Search'
+import Search from './Search';
 
 
 
@@ -23,7 +23,6 @@ class App extends Component {
     this.setState({
       searchedDistrict: this.state.districts.findAllMatches(value)
     })
-    console.log(this.state.searchedDistrict)
   }
 
   addToCompare = (eventLocation) => {
@@ -57,7 +56,10 @@ class App extends Component {
   render() {
     return (
       <React.Fragment> 
-        <Search searchDistricts={ this.searchDistricts } /> 
+        <header>
+          HEADCOUNT 2.0
+          <Search searchDistricts={ this.searchDistricts } /> 
+        </header>
         <DistrictList addToCompare={this.addToCompare} cardsToCompare={this.state.cardsToCompare} districts={this.state.districts.stats} searchedDistrict={this.state.searchedDistrict} comparedObject={this.state.comparedObject}/>
       </React.Fragment>
     );
