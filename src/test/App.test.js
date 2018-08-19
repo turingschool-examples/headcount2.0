@@ -179,13 +179,13 @@ describe('App', () => {
       DataFormat: "Percent", 
       Data: 0.469
     }];
-    
+
     expect(global.district).toEqual([]);
 
     wrapper.instance().changeDistrictData(newData);
 
     expect(global.district).toEqual([]);
-  })
+  });
 
   it('should render a Search component', () => {
     expect(wrapper.find('Search').length).toEqual(1);
