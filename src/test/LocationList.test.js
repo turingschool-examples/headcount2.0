@@ -52,7 +52,7 @@ describe('LocationList', () => {
         cards={cards}
         displayedLocations={locations} />
     );
-    expect(wrapper.find('.LocationList__btn').hasClass('selected')).toEqual(false);
+    expect(wrapper.find('.LocationList__btn').hasClass('btn-selected')).toEqual(false);
     
     cards = [{ location: "COLORADO", stats: {}, average: 0 }];
     wrapper = shallow(
@@ -61,7 +61,7 @@ describe('LocationList', () => {
         displayedLocations={locations} />
     );
     
-    expect(wrapper.find('.LocationList__btn').hasClass('selected')).toEqual(true);
+    expect(wrapper.find('.LocationList__btn').hasClass('btn-selected')).toEqual(true);
   });
 
 });

@@ -146,30 +146,46 @@ describe('App', () => {
     });
   });
 
-  it.skip('should add/remove class on the "?" button and toggle visibility of helper info when toggleHelperInfo is called', () => {
+  it.skip('should toggle class on the "?" button and visibility of helper info when toggleHelperInfo is called', () => {
     wrapper = mount(<App />, { attachTo: document.body });
 
-    expect(wrapper.find('.CardContainer__info').props('style')).toHaveProperty('visibility', 'hidden');
-    expect(wrapper.find('.CardContainer__btn').hasClass('CardContainer__btn--Focus')).toEqual(false);
+    expect(wrapper.find('.CardContainer__btn').hasClass('CardContainer__btn--unfocus')).toEqual(false);
+    expect(wrapper.find('.CardContainer__info').hasClass('CardContainer__info--show')).toEqual(true);
     
     wrapper.instance().toggleHelperInfo();
 
-    expect(wrapper.find('.CardContainer__info').props('style')).toHaveProperty('visibility', 'visibile');
-    expect(wrapper.find('.CardContainer__btn').hasClass('CardContainer__btn--Focus')).toEqual(true);
+    expect(wrapper.find('.CardContainer__btn').hasClass('CardContainer__btn--unfocus')).toEqual(true);
+    expect(wrapper.find('.CardContainer__info').hasClass('CardContainer__info--show')).toEqual(false);
 
   });
 
-  it.skip('should toggle classes when toggleDropDown is called', () => {
+  it.skip('should toggle classes on header and dropdown when toggleDropDown is called', () => {
     wrapper = mount(<App />, { attachTo: document.body });
 
-    expect(wrapper.find('.dropdown-content').hasClass('show')).toEqual(false);
+    expect(wrapper.find('.dropdown-content').hasClass('dropdown-content--show')).toEqual(false);
     expect(wrapper.find('.CardContainer__header').hasClass('CardContainer__header--selected')).toEqual(false);
     
     wrapper.instance().toggleDropDown();
 
-    expect(wrapper.find('.dropdown-content').hasClass('show')).toEqual(true);
+    expect(wrapper.find('.dropdown-content').hasClass('dropdown-content--show')).toEqual(true);
     expect(wrapper.find('.CardContainer__header').hasClass('CardContainer__header--selected')).toEqual(true);
   });
+
+  it.skip('should reassign district and load data when changeDistrictData is called', () => {
+    const newData = [{
+      Location: "Colorado", 
+      Score: "Math", 
+      TimeFrame: 2008, 
+      DataFormat: "Percent", 
+      Data: 0.469
+    }];
+    
+    expect(global.district).toEqual([]);
+
+    wrapper.instance().changeDistrictData(newData);
+
+    expect(global.district).toEqual([]);
+  })
 
   it('should render a Search component', () => {
     expect(wrapper.find('Search').length).toEqual(1);
