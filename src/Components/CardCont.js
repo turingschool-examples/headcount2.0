@@ -7,7 +7,7 @@ const CardCont = ({ data, selectCard }) => {
   const displayDistrictCards = Object.values(data).map((district, i) => {
     return  <Card location={ district.location }
                   stats={ district.stats }
-                  isSelected={ false }
+                  isSelected={ district.isSelected }
                   key={ `card-${i}` }
                   selectCard={selectCard}
             />

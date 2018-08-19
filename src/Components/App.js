@@ -40,7 +40,8 @@ class App extends Component {
     }
     
     if (this.state.selectedCards.length === 2) {
-      selectedCards.shift();
+      const deselectedCard = selectedCards.shift();
+      deselectedCard.isSelected = false
     } 
     this.setState({ selectedCards })
     foundCard.isSelected = !foundCard.isSelected
