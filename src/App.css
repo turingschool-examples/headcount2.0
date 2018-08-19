@@ -1,1 +1,13 @@
 /*APP COMPONENT RELATED CSS GOES HERE*/
+/*
+body {
+  margin: 0 auto;
+}*/
+
+.headerContainer {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+}
