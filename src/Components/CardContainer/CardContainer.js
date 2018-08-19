@@ -2,7 +2,7 @@ import React from 'react';
 import Card from '../Card/Card';
 import PropTypes from 'prop-types';
 
-const CardContainer = ({districtData}) => {
+const CardContainer = ({districtData, selectLocation}) => {
 	const districtValues = Object.values(districtData)
 	
 	const displayCards = districtValues.map((district, index) => (
@@ -10,6 +10,7 @@ const CardContainer = ({districtData}) => {
 			location = {district.location}
 			stats = {district.stats}
 			key = {index}
+			selectLocation = {selectLocation}
 		/>
 	))
 
