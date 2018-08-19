@@ -1,13 +1,8 @@
 .search-input {
+	margin: 2rem 0;
 	height: 2rem;
-	width: 16rem;
+	width: 24rem;
 	text-align: left;
-	font: 1.5rem;
-}
-
-.clear-button {
-	height: 2rem;
-	width: 4rem;
-	color: #4C5454;
-	margin-left: 1rem;
+	font-size: 1.2rem;
+	font-weight: 100;
 }

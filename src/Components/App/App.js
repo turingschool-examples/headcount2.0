@@ -11,7 +11,6 @@ const kinderDistrictData = new DistrictRepository(kinderData);
 class App extends Component {
 	constructor() {
 		super()
-		// this.kinderDistrictData = new DistrictRepository(kinderData);
 		this.state = {
 			districtData: [],
 			selectedCards: []
@@ -25,7 +24,6 @@ class App extends Component {
 	filterLocations = (input) => {
 		let filteredDistricts = kinderDistrictData.findAllMatches(input);
 		this.setState({districtData: filteredDistricts})
-		console.log(this.state.districtData)
 	}
 
 	selectLocation = (district) => {
@@ -37,19 +35,15 @@ class App extends Component {
 			const selectedCards = [...this.state.selectedCards, selectedLocation]
 			this.setState({selectedCards})
 		}
-
-		if(this.state.selectedCards.length === 2) {
-
-		}
-		console.log(selectedLocation)
-		
 	}
 
 	compareLocations = (findAverage, compareDistrictAverages) => {
-		// const cardsToComapre = (this.state.selectedCards).
+		console.log(this.state.selectedCards)
+		if(this.state.selectedCards.length === 2) {
+			kinderDistrictData.findAverage()
+		}
 	}
 
-  
   render() {
     return (
       <div>
@@ -57,12 +51,14 @@ class App extends Component {
       	<Search filterLocations = {this.filterLocations} />
       	<CardContainer
       		districtData = {this.state.selectedCards}
+      		selectLocation = {this.selectedLocation}
       	/>
       	<CompareContainer 
 					compareDistrictAverages = {kinderDistrictData.compareDistrictAverages}
       		findAverage = {kinderDistrictData.findAverage}
+      		compareLocations = {this.compareLocations}
       		selectedCards = {this.state.selectedCards}
-      	/>	 
+				/>	 
       	<CardContainer 
       		districtData = {this.state.districtData} 
       		selectLocation = {this.selectLocation}

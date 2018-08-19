@@ -11,7 +11,6 @@ const CardContainer = ({districtData, selectLocation, selected}) => {
 			stats = {district.stats}
 			key = {index}
 			selectLocation = {selectLocation}
-			selected = {false}
 		/>
 	))
 

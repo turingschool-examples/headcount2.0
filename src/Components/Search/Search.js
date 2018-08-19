@@ -7,13 +7,12 @@ class Search extends Component {
 		return (
 			<div>
 				<input 
-					placeholder="Find district."
+					placeholder="District Name"
 					type="text"
 					className="search-input"
 					name="search"
 					onChange={ (e) => this.props.filterLocations(e.target.value) }
 				/>
-				<button className="clear-button">Clear</button>
 			</div>
 		)
 	}
