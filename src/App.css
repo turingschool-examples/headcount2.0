@@ -36,9 +36,9 @@
 
 .LocationList__btn {
     display: block;
-    margin: .5rem auto;
     height: 2.6rem;
     width: 95%; 
+    margin: .5rem auto;
     border: none;
     border-radius: 10px;
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -59,9 +59,10 @@
 }
 
 .CardContainer__btn {
-    margin-left: calc(100% - 4rem);
     height: 3rem;
     width: 3rem;
+    margin-left: calc(100% - 4rem);
+    padding: 0;
     border: none;
     border-radius: 50%;
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -87,12 +88,12 @@
 }
 
 .CardContainer__info {
-    visibility: hidden;
     position: fixed;
     width: 65%;
     padding: 1rem;
     background-color: #FCFCFC;
     border-radius: 15px;
+    z-index: 10;
 }
 
 .CardContainer__info p {
@@ -100,8 +101,8 @@
 }
 
 .CardContainer__info button {
-    margin-left: calc(100% - 2.5rem);
     width: 3rem;
+    margin-left: calc(100% - 2.5rem);
     border: none;
     font-size: 1rem;
     background-color: #FCFCFC;
@@ -114,11 +115,63 @@
     color: #B54D2B;
 }
 
-.CardContainer__header {
+.dropdown {
+    display: inline-block;
+    position: relative;
     width: 75%;
     margin: 0 auto;
+}
+
+.CardContainer__header {
+    width: 100%;
+    margin: 0 auto 1rem auto;
+    -webkit-box-shadow: 0 0 8px 0 #E0DDE4;
+    -moz-box-shadow: 0 0 8px 0 #E0DDE4;
+    box-shadow: 0 0 8px 0 #E0DDE4;
+    border-radius: 15px;
+    background-color: #FCFCFC;
     font-size: 2rem;
     text-align: center;
+}
+
+.CardContainer__header:hover {
+    background-color: #6D6080;
+    color: #FCFCFC;
+    cursor: pointer;
+}
+
+.CardContainer__header--selected {
+    -webkit-box-shadow: 0 0 15px 0 #B54D2B;
+    -moz-box-shadow: 0 0 15px 0 #B54D2B;
+    box-shadow: 0 0 15px 0 #B54D2B;
+    background-color: #6D6080;
+    color: #FCFCFC;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: #F2F2F2;
+    list-style-type: none;
+    z-index: 3;
+}
+
+.show {
+    display:block;
+}
+
+.dropdown-content li {
+    border-radius: 8px;
+}
+
+.dropdown-content li:hover {
+    background-color: #E0DDE4;
+    cursor: pointer;
 }
 
 .CardContainer {

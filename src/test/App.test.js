@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 import App from '../App';
 
@@ -145,6 +145,19 @@ describe('App', () => {
       "compared": 0.574,
     });
   });
+
+  it.skip('should add/remove class on the "?" button and toggle visibility of helper info when toggleHelperInfo is called', () => {
+    wrapper = mount(<App />, { attachTo: document.body });
+
+    expect(wrapper.find('.CardContainer__info').props('style')).toHaveProperty('visibility', 'hidden');
+    expect(wrapper.find('.CardContainer__btn').hasClass('CardContainer__btn--Focus')).toEqual(false);
+    
+    wrapper.instance().toggleHelperInfo();
+
+    expect(wrapper.find('.CardContainer__info').props('style')).toHaveProperty('visibility', 'visibile');
+    expect(wrapper.find('.CardContainer__btn').hasClass(' CardContainer__btn--Focus')).toEqual(true);
+
+  })
 
   it('should render a Search component', () => {
     expect(wrapper.find('Search').length).toEqual(1);

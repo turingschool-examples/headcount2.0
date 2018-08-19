@@ -82,6 +82,11 @@ class App extends Component {
     }
   }
 
+  toggleDropDown = () => {
+    document.querySelector(".dropdown-content").classList.toggle("show");
+    document.querySelector(".CardContainer__header").classList.toggle("CardContainer__header--selected");
+  }
+
   render() {
     return (
       <div className='App'>
@@ -91,6 +96,7 @@ class App extends Component {
           displayedLocations={this.state.displayedLocations}
           selectLocation={this.selectLocation}/>
         <CardContainer 
+          toggleDropDown={this.toggleDropDown}
           toggleHelperInfo={this.toggleHelperInfo}
           cards={this.state.cards}
           averages={this.state.averages}

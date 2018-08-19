@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card should match the snapshot 1`] = `"<article class=\\"Card\\"><h2 class=\\"Card__header\\">COLORADO</h2><ul class=\\"Card__stats\\"><li>AVERAGE: 0.53</li></ul></article>"`;
+exports[`Card should match the snapshot 1`] = `"<article class=\\"Card\\"><div class=\\"Card__header\\"><h2>COLORADO</h2></div><ul class=\\"Card__stats\\"><li><span class=\\"Card__average\\">AVERAGE:</span> 0.53</li></ul></article>"`;
 
-exports[`Card should match the snapshot with multiple stats 1`] = `"<article class=\\"Card\\"><h2 class=\\"Card__header\\"></h2><ul class=\\"Card__stats\\"><li class=\\"red\\">2004: 0.24</li><li class=\\"red\\">2005: 0.278</li><li class=\\"red\\">2006: 0.337</li><li class=\\"red\\">2007: 0.395</li><li>AVERAGE: 0.53</li></ul></article>"`;
+exports[`Card should match the snapshot with multiple stats 1`] = `"<article class=\\"Card\\"><div class=\\"Card__header\\"><h2></h2></div><ul class=\\"Card__stats\\"><li class=\\"red\\">2004: 0.24</li><li class=\\"red\\">2005: 0.278</li><li class=\\"red\\">2006: 0.337</li><li class=\\"red\\">2007: 0.395</li><li><span class=\\"Card__average\\">AVERAGE:</span> 0.53</li></ul></article>"`;
 
-exports[`Card should match the snapshot with stats 1`] = `"<article class=\\"Card\\"><h2 class=\\"Card__header\\">COLORADO</h2><ul class=\\"Card__stats\\"><li class=\\"red\\">2004: 0.24</li><li>AVERAGE: 0.53</li></ul></article>"`;
+exports[`Card should match the snapshot with stats 1`] = `"<article class=\\"Card\\"><div class=\\"Card__header\\"><h2>COLORADO</h2></div><ul class=\\"Card__stats\\"><li class=\\"red\\">2004: 0.24</li><li><span class=\\"Card__average\\">AVERAGE:</span> 0.53</li></ul></article>"`;

@@ -71,4 +71,19 @@ describe('CardContainer', () => {
     expect(wrapper.find('.compared-average')).toHaveLength(1);
   });
 
+  it('should call toggleHelperInfo when "?" button is clicked', () => {
+    const toggleHelperInfoMock = jest.fn();
+    const averagesObj = {};
+    const cards = [];
+    
+    const wrapper = shallow(
+      <CardContainer 
+        toggleHelperInfo={toggleHelperInfoMock} 
+        cards={cards} averages={averagesObj}  />);
+
+    wrapper.find('.CardContainer__btn').simulate('click');
+
+    expect(toggleHelperInfoMock ).toHaveBeenCalled();
+  });
+
 });

@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 
 import Card from './Card';
 import HelperInfo from './HelperInfo';
+import DistrictDropDown from './DistrictDropDown';
 
-const CardContainer = ({ cards, averages, selectLocation, toggleHelperInfo }) => {
+const CardContainer = ({ cards, averages, selectLocation, toggleHelperInfo, toggleDropDown }) => {
   const displayCards = cards.map( (card, index) => (
     <Card {...card} selectLocation={selectLocation} key={index} />
   ));
@@ -28,9 +29,7 @@ const CardContainer = ({ cards, averages, selectLocation, toggleHelperInfo }) =>
         className='CardContainer__btn'
         onClick={ () => toggleHelperInfo() } > ? </button>
       <HelperInfo toggleHelperInfo={toggleHelperInfo} />
-      <h1 className='CardContainer__header'>
-            KINDERGARTNERS IN FULL DAY PROGRAM
-      </h1>
+      <DistrictDropDown toggleDropDown={toggleDropDown} />
       <section className='CardContainer__section'>
         {displayCards}
       </section>
