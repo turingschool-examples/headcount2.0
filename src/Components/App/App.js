@@ -55,9 +55,11 @@ class App extends Component {
       <div>
       	<h1 className="title">Headcount 2.0</h1>
       	<Search filterLocations = {this.filterLocations} />
+      	<CardContainer
+      		districtData = {this.state.selectedCards}
+      	/>
       	<CompareContainer 
-      	
-      		compareDistrictAverages = {kinderDistrictData.compareDistrictAverages}
+					compareDistrictAverages = {kinderDistrictData.compareDistrictAverages}
       		findAverage = {kinderDistrictData.findAverage}
       		selectedCards = {this.state.selectedCards}
       	/>	 
