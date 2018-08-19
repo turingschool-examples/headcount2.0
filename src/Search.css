@@ -1,5 +1,10 @@
 .search {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   margin: 0 0 10px 15px;
+  background-color: #FCFFFD;
+  border: none;
+  padding: 15px;
+  width: 30%;
 }
+

@@ -31,11 +31,13 @@ ShallowWrapper {
         <Card
           location={undefined}
           selectCards={undefined}
+          selected={false}
           stats={undefined}
 />,
         <Card
           location={undefined}
           selectCards={undefined}
+          selected={false}
           stats={undefined}
 />,
       ],
@@ -50,6 +52,7 @@ ShallowWrapper {
         "props": Object {
           "location": undefined,
           "selectCards": undefined,
+          "selected": false,
           "stats": undefined,
         },
         "ref": null,
@@ -63,6 +66,7 @@ ShallowWrapper {
         "props": Object {
           "location": undefined,
           "selectCards": undefined,
+          "selected": false,
           "stats": undefined,
         },
         "ref": null,
@@ -82,11 +86,13 @@ ShallowWrapper {
           <Card
             location={undefined}
             selectCards={undefined}
+            selected={false}
             stats={undefined}
 />,
           <Card
             location={undefined}
             selectCards={undefined}
+            selected={false}
             stats={undefined}
 />,
         ],
@@ -101,6 +107,7 @@ ShallowWrapper {
           "props": Object {
             "location": undefined,
             "selectCards": undefined,
+            "selected": false,
             "stats": undefined,
           },
           "ref": null,
@@ -114,6 +121,7 @@ ShallowWrapper {
           "props": Object {
             "location": undefined,
             "selectCards": undefined,
+            "selected": false,
             "stats": undefined,
           },
           "ref": null,
