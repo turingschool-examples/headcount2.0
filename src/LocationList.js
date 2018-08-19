@@ -8,7 +8,7 @@ const LocationList = (
     let buttonState = 'LocationList__btn';
     cards.forEach( card => {
       if (card.location === location) {
-        buttonState = 'LocationList__btn selected';
+        buttonState = 'LocationList__btn btn-selected';
       }
     });
     return <button 

@@ -76,21 +76,13 @@ class App extends Component {
   }
 
   toggleHelperInfo = () => {
-    const info = document.querySelector('.CardContainer__info');
-    const button = document.querySelector('.CardContainer__btn');
-
-    if (info.style.visibility === 'hidden') {
-      info.style.visibility = 'visible';
-      button.className = 'CardContainer__btn CardContainer__btn--Focus';
-    } else {
-      info.style.visibility = 'hidden';
-      button.className = 'CardContainer__btn';
-    }
+    document.querySelector('.CardContainer__btn').classList.toggle('CardContainer__btn--unfocus');
+    document.querySelector('.CardContainer__info').classList.toggle('CardContainer__info--show');
   }
 
   toggleDropDown = () => {
     const selected = 'CardContainer__header--selected';
-    document.querySelector('.dropdown-content').classList.toggle('show');
+    document.querySelector('.dropdown-content').classList.toggle('dropdown-content--show');
     document.querySelector('.CardContainer__header').classList.toggle(selected);
   }
 

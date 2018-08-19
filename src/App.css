@@ -67,10 +67,11 @@
     border-radius: 50%;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 2rem;
-    color: #6D6080;
-    -webkit-box-shadow: 0 0 8px 0 #E0DDE4;
-    -moz-box-shadow: 0 0 8px 0 #E0DDE4;
-    box-shadow: 0 0 8px 0 #E0DDE4;
+    background-color: #6D6080;
+    color: #f2f2f2;
+    -webkit-box-shadow: 0 0 15px 0 #B54D2B;
+    -moz-box-shadow: 0 0 15px 0 #B54D2B;
+    box-shadow: 0 0 15px 0 #B54D2B;
     outline: none;
 }
 
@@ -79,12 +80,15 @@
     color: #f2f2f2;
 }
 
-.CardContainer__btn--Focus {
-    background-color: #6D6080;
-    color: #f2f2f2;
+.CardContainer__btn--unfocus {
+    background-color: #FCFCFC;
+    color: #6D6080;
     -webkit-box-shadow: 0 0 15px 0 #B54D2B;
     -moz-box-shadow: 0 0 15px 0 #B54D2B;
     box-shadow: 0 0 15px 0 #B54D2B;
+    -webkit-box-shadow: 0 0 8px 0 #E0DDE4;
+    -moz-box-shadow: 0 0 8px 0 #E0DDE4;
+    box-shadow: 0 0 8px 0 #E0DDE4;
 }
 
 .CardContainer__info {
@@ -94,6 +98,10 @@
     background-color: #FCFCFC;
     border-radius: 15px;
     z-index: 10;
+}
+
+.CardContainer__info--show{
+    visibility: hidden;
 }
 
 .CardContainer__info p {
@@ -168,7 +176,7 @@
     z-index: 3;
 }
 
-.show {
+.dropdown-content--show {
     display:block;
 }
 
@@ -271,7 +279,7 @@
     color: #B54D2B;
 }
 
-.selected {
+.btn-selected {
     background-color: #B54D2B;
     color: #f2f2f2;
 }

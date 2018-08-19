@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const HelperInfo = ({ toggleHelperInfo }) => {
   return (
-    <div className='CardContainer__info' style={{visibility: 'hidden'}}>
+    <div className='CardContainer__info'>
       <p>
         Compare district stats by clicking on two districts from the list 
         on the left. To change districts click on the districts in the list 
