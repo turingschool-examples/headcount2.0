@@ -73,6 +73,7 @@ class App extends Component {
             districts={this.state.districts}
             toggleSelected={this.toggleSelected}
             category={this.state.category}
+            selectedDistricts={this.state.selectedDistricts}
           />
         </div>
       </div>

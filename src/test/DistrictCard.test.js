@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import DistrictCard from '../components/DistrictCard';
 
@@ -25,6 +25,7 @@ describe('DistrictCard', () => {
         toggleSelected={toggleSelected}
         selected={false}
         category={mockState.category}
+        selectedCards={true}
       />
     );
   });
@@ -37,6 +38,7 @@ describe('DistrictCard', () => {
         toggleSelected={toggleSelected}
         selected={false}
         category={mockState.category}
+        selectedCards={true}
       />,
       div
     );
