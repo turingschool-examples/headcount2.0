@@ -4,6 +4,7 @@ import './App.css';
 import kinderData from './data/kindergartners_in_full_day_program.js';
 import CardContainer from './CardContainer';
 import Search from './Search';
+import ComparedContainer from './ComparedContainer'
 
 const allDistricts = new DistrictRepository(kinderData);
 
@@ -57,13 +58,14 @@ class App extends Component {
   }
 
   compareCards = (cards) => {
-      if(this.state.selectedCards.length === 2) {
+      if(this.state.selectedCards.length > 1) {
         const district1 = this.state.selectedCards[0].location
         const district2 = this.state.selectedCards[1].location
-        
+    
         var compareObject = allDistricts.compareDistrictAverages(district1, district2)
      
         this.setState({ compareObject })
+        // console.log(compareObject)
     }
   }
 
@@ -76,12 +78,16 @@ class App extends Component {
           updateCards={this.updateCards}
         />
         </div>
+        <div className="topContainer">
+        <ComparedContainer
+          compareObject={this.state.compareObject}
+        />
         <CardContainer
           className="bottomContainer"
           data={this.state.selectedCards}
           selectCards={this.selectCards}
-          
         />
+        </div>
         <CardContainer 
           data={this.state.data} 
           selectCards={this.selectCards}
