@@ -33,18 +33,7 @@ class App extends Component {
     let targetDistrict = districts.find(
       district => district.location === location
     );
-    let targetIndex = districts.indexOf(targetDistrict);
-    let selectedDistricts;
-    if (!targetDistrict["clicked"] && this.state.selectedDistricts.length < 2) {
-      targetDistrict["clicked"] = true;
-      selectedDistricts = [...this.state.selectedDistricts, targetDistrict];
-      districts[targetIndex] = targetDistrict;
-    } else {
-      targetDistrict["clicked"] = false;
-      selectedDistricts = this.state.selectedDistricts.filter(
-        district => district.clicked === true
-      );
-    }
+    const selectedDistricts = this.checkFoundDistrict(targetDistrict);
     this.setState({ selectedDistricts, districts });
     if (selectedDistricts.length === 2) {
       this.compareDistricts(
@@ -52,6 +41,22 @@ class App extends Component {
         selectedDistricts[1].location
       );
     }
+  };
+
+  checkFoundDistrict = district => {
+    let targetIndex = this.state.districts.indexOf(district);
+    let selectedDistricts;
+    if (!district["clicked"] && this.state.selectedDistricts.length < 2) {
+      district["clicked"] = true;
+      selectedDistricts = [...this.state.selectedDistricts, district];
+      this.setState({ districts: [this.state.districts[targetIndex]] });
+    } else {
+      district["clicked"] = false;
+      selectedDistricts = this.state.selectedDistricts.filter(
+        district => district.clicked === true
+      );
+    }
+    return selectedDistricts;
   };
 
   clearComparisons = () => {
@@ -81,6 +86,7 @@ class App extends Component {
     return (
       <div className="head-wrapper">
         <Search
+          selectedDistricts={this.state.selectedDistricts}
           selectCard={this.selectCard}
           handleSubmit={this.handleSubmit}
           clearComparisons={this.clearComparisons}
@@ -92,7 +98,7 @@ class App extends Component {
               : "title-show"
           }
         >
-          HEAD COUNT 2.0
+          HeadCount 2.0
           <p className="instructions">
             Click Districts below for Annual Score Avg.
           </p>

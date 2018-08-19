@@ -43,36 +43,36 @@
 
 .district-card {
   cursor: pointer;
-  background-color: rgb(244, 243, 243);
+  background-color: rgb(228, 221, 221);
   border: 2px solid rgb(155, 153, 153);
   text-align: center;
   box-shadow: 1.5px 1.5px 1.5px 1.5px #ccc;
   border-radius: 4px;
-  animation: shazam 1s linear, bazinga 1s ease-in;
+  animation: bazinga 1s ease-in;
 }
 
 .district-card-clicked1 {
   position: absolute;
   cursor: pointer;
   border-radius: 4px;
-  border: 2px solid rgb(182, 98, 98);
+  border: 2px solid rgb(135, 111, 111);
   text-align: center;
   box-shadow: 1.5px 1.5px 1.5px 1.5px #ccc;
   top: 10rem;
   left: 3rem;
-  animation: shazam 1s linear, bazinga 1s ease-in;
+  animation: bazinga 1s ease-in;
 }
 
 .district-card-clicked2 {
   position: absolute;
   cursor: pointer;
   border-radius: 4px;
-  border: 2px solid rgb(182, 98, 98);
+  border: 2px solid rgb(135, 111, 111);
   text-align: center;
   box-shadow: 1.5px 1.5px 1.5px 1.5px #ccc;
   top: 35rem;
   left: 3rem;
-  animation: shazam 1s linear, bazinga 1s ease-in;
+  animation: bazinga 1s ease-in;
 }
 
 .district-card:hover {
@@ -81,12 +81,12 @@
 }
 
 .district-card-clicked1:hover {
-  background-color: rgb(244, 243, 243);
-  box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(148, 140, 140);
+  background-color: rgb(228, 221, 221);
+  box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(140, 135, 135);
 }
 
 .district-card-clicked2:hover {
-  background-color: rgb(244, 243, 243);
+  background-color: rgb(228, 221, 221);
   box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(148, 140, 140);
 }
 
@@ -100,15 +100,6 @@
 
 .hide-msg {
   display: none;
-}
-
-@keyframes shazam {
-  0% {
-    right: 250px;
-  }
-  100% {
-    right: 10px;
-  }
 }
 
 @keyframes bazinga {

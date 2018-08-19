@@ -8,11 +8,12 @@ exports[`App should match snap shot 1`] = `
     clearComparisons={[Function]}
     handleSubmit={[Function]}
     selectCard={[Function]}
+    selectedDistricts={Array []}
   />
   <div
     className="title-show"
   >
-    HEAD COUNT 2.0
+    HeadCount 2.0
     <p
       className="instructions"
     >

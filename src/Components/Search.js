@@ -19,12 +19,11 @@ export default class Search extends Component {
     this.suggestDistricts();
   };
 
-  suggestDistricts = e => {
+  suggestDistricts = () => {
     const { districtInputOne } = this.state;
     const searchSuggestions = this.districtRepository.findAllMatches(
       districtInputOne
     );
-
     this.setState({ searchSuggestions });
     if (districtInputOne.length > 1) {
       this.props.handleSubmit(searchSuggestions);
@@ -52,9 +51,14 @@ export default class Search extends Component {
           <input
             type="text"
             className="search-input"
-            placeholder="Search District"
-            onChange={e => this.handleChange(e.target)}
+            placeholder={
+              this.props.selectedDistricts.length > 0
+                ? "Remove Card to Search"
+                : "Search District"
+            }
+            onChange={event => this.handleChange(event.target)}
             value={this.state.districtInputOne}
+            disabled={this.props.selectedDistricts.length > 1}
           />
           <button onClick={() => this.props.clearComparisons()}>
             Clear Fields
@@ -84,7 +88,7 @@ export default class Search extends Component {
           >
             Did you Mean?
           </span>
-          {this.state.searchSuggestions.map((district, i) => {
+          {this.state.searchSuggestions.map((district, index) => {
             if (
               this.state.searchSuggestions &&
               this.state.districtInputOne.length > 1
@@ -92,9 +96,9 @@ export default class Search extends Component {
               var suggestions = (
                 <p
                   className="suggestions"
-                  key={i}
-                  onClick={e => {
-                    this.props.selectCard(e.target.textContent);
+                  key={index}
+                  onClick={event => {
+                    this.props.selectCard(event.target.textContent);
                     this.clearInput();
                   }}
                 >
@@ -110,9 +114,16 @@ export default class Search extends Component {
   }
 }
 
-const { func } = PropTypes;
+const { func, arrayOf, shape, bool, string, number } = PropTypes;
 
 Search.propTypes = {
+  selectedDistricts: arrayOf(
+    shape({
+      clicked: bool,
+      location: string,
+      stats: shape({ year: number })
+    })
+  ),
   handleSubmit: func.isRequired,
   selectCard: func.isRequired,
   clearComparisons: func.isRequired

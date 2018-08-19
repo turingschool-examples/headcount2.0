@@ -6,13 +6,13 @@ import "../CSS/DistrictCardContainer.css";
 export const DistrictCardContainer = ({ districts, selectCard }) => {
   let counter = 0;
 
-  const districtCard = districts.map((district, i) => {
+  const districtCard = districts.map((district, index) => {
     if (district.clicked) {
       counter++;
     }
     return (
       <DistrictCard
-        key={i}
+        key={index}
         {...district}
         selectCard={selectCard}
         counter={counter}
@@ -27,10 +27,10 @@ const { shape, string, number, func, arrayOf, bool } = PropTypes;
 DistrictCardContainer.propTypes = {
   districts: arrayOf(
     shape({
-      clicked: bool.isRequired,
+      clicked: bool,
       location: string,
       stats: shape({ year: number })
     })
   ),
-  selectCard: func.isRequired
+  selectCard: func
 };

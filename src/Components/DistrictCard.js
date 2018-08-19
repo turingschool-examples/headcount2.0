@@ -21,10 +21,13 @@ export const DistrictCard = ({
       <header className={clicked ? "avg-header-show" : "avg-header-hide"}>
         Avg
       </header>
-      {Object.keys(stats).map((year, i) => {
+      {Object.keys(stats).map((year, index) => {
         const avg = stats[year];
         return (
-          <section className={clicked ? "stats-show" : "stats-hide"} key={i}>
+          <section
+            className={clicked ? "stats-show" : "stats-hide"}
+            key={index}
+          >
             <p className="year">
               {year}
               ......
@@ -44,5 +47,6 @@ DistrictCard.propTypes = {
   location: string,
   stats: shape({ year: number }),
   clicked: bool,
-  selectCard: func
+  selectCard: func,
+  counter: number
 };

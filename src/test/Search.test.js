@@ -7,12 +7,25 @@ describe("Search", () => {
   let mockSubmit = jest.fn();
   let mockSelect = jest.fn();
   let mockClear = jest.fn();
+  let mockData = [
+    {
+      clicked: true,
+      location: "ADAMS COUNTY 14",
+      stats: { 2004: 0.24, 2005: 0.278, 2006: 0.337, 2007: 0.395 }
+    },
+    {
+      clicked: true,
+      location: "COLORADO",
+      stats: { 2004: 0.24, 2005: 0.278, 2006: 0.337, 2007: 0.395 }
+    }
+  ];
 
   beforeEach(() => {
     shallowWrap = shallow(
       <Search
+        selectedDistricts={mockData}
         handleSubmit={() => mockSubmit()}
-        selectCard={() => mockSelect()}
+        selectCard={e => mockSelect(e)}
         clearComparisons={() => mockClear()}
       />
     );
@@ -100,37 +113,72 @@ describe("Search", () => {
   });
 
   it("should suggest districts based on user input", () => {
-    let userInput = shallowWrap.find("input");
     let eventOne = { target: { value: "Acade" } };
-    let eventTwo = { target: { value: "color" } };
+    let event = { target: { textContent: "ACADEMY 20" } };
+    let mockSelect = jest.fn();
+    let mockSubmit = jest.fn();
+    let mockClear = jest.fn();
+
+    let shallowWrap = shallow(
+      <Search
+        selectedDistricts={mockData}
+        handleSubmit={mockSubmit}
+        selectCard={mockSelect}
+        clearComparisons={mockClear}
+      />
+    );
+
+    let mountWrap = mount(
+      <Search
+        selectedDistricts={mockData}
+        handleSubmit={mockSubmit}
+        selectCard={mockSelect}
+        clearComparisons={mockClear}
+      />
+    );
+
+    let userInput = shallowWrap.find("input");
 
     userInput.simulate("change", eventOne);
-
     let suggestionOne = shallowWrap.find("p");
-    let suggestionsOne = suggestionOne.props().children;
 
-    expect(suggestionsOne).toEqual("ACADEMY 20");
-    suggestionOne.simulate("click");
+    let suggestedOneContent = suggestionOne.props().children;
+    expect(suggestedOneContent).toEqual("ACADEMY 20");
+
+    let userInputTwo = mountWrap.find("input");
+    userInputTwo.simulate("change", eventOne);
+
+    let suggestionTwo = mountWrap.find("p").at(0);
+    suggestionTwo.simulate("click");
     expect(mockSelect).toHaveBeenCalled();
-
-    userInput.simulate("change", eventTwo);
-
-    let suggestionTwo = shallowWrap.find("p");
-    let suggestionsTwo = suggestionTwo.map(suggest => suggest.props().children);
-
-    expect(suggestionsTwo).toEqual(["COLORADO", "COLORADO SPRINGS 11"]);
   });
 
   it("should clear input, invoke the handleSubmit method from state", () => {
+    let mockSelect = jest.fn();
+    let mockSubmit = jest.fn();
+    let mockClear = jest.fn();
+
+    let shallowWrap = shallow(
+      <Search
+        selectedDistricts={mockData}
+        handleSubmit={mockSubmit}
+        selectCard={mockSelect}
+        clearComparisons={mockClear}
+      />
+    );
+
     shallowWrap.setState({ districtInputOne: "Denver" });
     shallowWrap.instance().clearInput();
     expect(shallowWrap.state().districtInputOne).toEqual("");
-    expect(mockClear).toHaveBeenCalled();
   });
 
   it("should search for specific district and invoke the handleSubmit Method from state", () => {
     shallowWrap.instance().searchDistrict("ACADEMY 20");
     expect(mockSubmit).toHaveBeenCalled();
+  });
+
+  it("should match snapshot", () => {
+    expect(shallowWrap).toMatchSnapshot();
   });
 
   it("should match snapshot", () => {

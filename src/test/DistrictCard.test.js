@@ -4,6 +4,7 @@ import { DistrictCard } from "../Components/DistrictCard";
 describe("DistrictCard", () => {
   let shallowWrap;
   let mockLocation = {
+    clicked: true,
     location: "Colorado",
     stats: {
       "2004": 0.24,
@@ -41,6 +42,7 @@ describe("DistrictCard", () => {
         location={mockLocation.location}
         stats={mockLocation.stats}
         selectCard={mockfn}
+        index={1}
       />
     );
     let sectionOne = mockWrap.find("div").first();
@@ -51,7 +53,9 @@ describe("DistrictCard", () => {
   });
 
   it("should match snapshot", () => {
-    <DistrictCard location={""} stats={{}} selectCard={jest.fn()} />;
+    shallowWrap = shallow(
+      <DistrictCard location={""} stats={{}} selectCard={jest.fn()} />
+    );
     expect(shallowWrap).toMatchSnapshot();
   });
 

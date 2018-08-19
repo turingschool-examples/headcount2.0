@@ -32,9 +32,9 @@ const { string, number, bool, shape, objectOf, func, arrayOf } = PropTypes;
 ControlCards.propTypes = {
   comparisonData: objectOf(
     shape({
+      clicked: bool,
       location: string,
-      stats: shape({ year: number }),
-      clicked: bool
+      stats: shape({ year: number })
     })
   ),
   selectedDistricts: arrayOf(
@@ -44,5 +44,5 @@ ControlCards.propTypes = {
       stats: shape({ year: number })
     })
   ),
-  selectCard: func.isRequired
+  selectCard: func
 };

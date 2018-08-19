@@ -6,11 +6,11 @@ export const ComparedDistrictCard = ({ location, stats, index }) => {
   return (
     <div className={"compared-district-card" + index}>
       <h1 className="compared-location">{location}</h1>
-      {Object.keys(stats).map((year, i) => {
+      {Object.keys(stats).map((year, index) => {
         const avg = stats[year];
         return (
           <section
-            key={`avgStats ${i}`}
+            key={`avgStats ${index}`}
             className={avg < 0.5 ? "year-red" : "year-black"}
           >
             {year}
@@ -31,6 +31,6 @@ const { string, func, number, shape } = PropTypes;
 ComparedDistrictCard.propTypes = {
   location: string,
   stats: shape({ year: number }),
-  selectCard: func.isRequired,
+  selectCard: func,
   index: number
 };

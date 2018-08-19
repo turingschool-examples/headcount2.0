@@ -22,7 +22,7 @@ exports[`ComparedDistrictCard should match snapshot 2`] = `
   </h1>
   <section
     className="year-red"
-    key="0"
+    key="avgStats 0"
   >
     2004
     <span
@@ -34,7 +34,7 @@ exports[`ComparedDistrictCard should match snapshot 2`] = `
   </section>
   <section
     className="year-red"
-    key="1"
+    key="avgStats 1"
   >
     2005
     <span
@@ -46,7 +46,7 @@ exports[`ComparedDistrictCard should match snapshot 2`] = `
   </section>
   <section
     className="year-red"
-    key="2"
+    key="avgStats 2"
   >
     2006
     <span
@@ -58,7 +58,7 @@ exports[`ComparedDistrictCard should match snapshot 2`] = `
   </section>
   <section
     className="year-red"
-    key="3"
+    key="avgStats 3"
   >
     2007
     <span
@@ -70,7 +70,7 @@ exports[`ComparedDistrictCard should match snapshot 2`] = `
   </section>
   <section
     className="year-black"
-    key="4"
+    key="avgStats 4"
   >
     2008
     <span
@@ -82,7 +82,7 @@ exports[`ComparedDistrictCard should match snapshot 2`] = `
   </section>
   <section
     className="year-black"
-    key="5"
+    key="avgStats 5"
   >
     2009
     <span
@@ -94,7 +94,7 @@ exports[`ComparedDistrictCard should match snapshot 2`] = `
   </section>
   <section
     className="year-black"
-    key="6"
+    key="avgStats 6"
   >
     2010
     <span
@@ -106,7 +106,7 @@ exports[`ComparedDistrictCard should match snapshot 2`] = `
   </section>
   <section
     className="year-black"
-    key="7"
+    key="avgStats 7"
   >
     2011
     <span
@@ -118,7 +118,7 @@ exports[`ComparedDistrictCard should match snapshot 2`] = `
   </section>
   <section
     className="year-black"
-    key="8"
+    key="avgStats 8"
   >
     2012
     <span
@@ -130,7 +130,7 @@ exports[`ComparedDistrictCard should match snapshot 2`] = `
   </section>
   <section
     className="year-black"
-    key="9"
+    key="avgStats 9"
   >
     2013
     <span
@@ -142,7 +142,7 @@ exports[`ComparedDistrictCard should match snapshot 2`] = `
   </section>
   <section
     className="year-black"
-    key="10"
+    key="avgStats 10"
   >
     2014
     <span

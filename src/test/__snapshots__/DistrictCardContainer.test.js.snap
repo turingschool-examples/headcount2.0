@@ -15,7 +15,8 @@ exports[`DistrictCardContainer should match snapshot 1`] = `
 >
    
   <Component
-    counter={0}
+    clicked={true}
+    counter={1}
     key="0"
     location="COLORADO"
     selectCard={[Function]}
@@ -36,7 +37,8 @@ exports[`DistrictCardContainer should match snapshot 1`] = `
     }
   />
   <Component
-    counter={0}
+    clicked={true}
+    counter={2}
     key="1"
     location="ACADEMY 20"
     selectCard={[Function]}
