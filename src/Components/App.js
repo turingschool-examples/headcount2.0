@@ -29,28 +29,16 @@ class App extends Component {
 
   selectCard = (input) => {
     const foundCard = districtRepo.findByName(input);
-    let selectedCards = [...this.state.selectedCards]
+    let selectedState = this.state.selectedCards
+
+    if (!selectedState.includes(foundCard) && selectedState.length < 2) {
+      const selectedCards = [...this.state.selectedCards, foundCard];
+
+      this.setState({ selectedCards})
+    }
+  }
    
-    if (selectedCards.includes(foundCard.location)) {
-      this.deselectDuplicates(foundCard.location)
-      return
-    }
-    
-    if (selectedCards.length === 2) {
-      selectedCards.splice(0, 1, foundCard)
-    } else {
-      selectedCards.push(foundCard)
-    }
-    
-    this.setState({ selectedCards })
-    foundCard.isSelected = !foundCard.isSelected
-  }
-
-  deselectDuplicates = (duplicate) => {
-    const selectedCards = this.state.selectedCards.filter(selectedCard => selectedCard.location !== duplicate);
-
-    this.setState({ selectedCards })
-  }
+  
 
   render() {
     return (
