@@ -3,7 +3,7 @@ import Card from './Card';
 import PropTypes from 'prop-types';
 import './CardCont.css';
 
-const CardCont = ({ data, selectCard }) => {
+const CardCont = ({ data, selectCard, comparedData, compareSelectedCards }) => {
   const displayDistrictCards = Object.values(data).map((district, i) => {
     return  <Card location={ district.location }
                   stats={ district.stats }

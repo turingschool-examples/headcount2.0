@@ -6,15 +6,13 @@ import Search from './Search';
 import DistrictRepository from '../helper';
 import kinderData from '../data/kindergartners_in_full_day_program';
 
-const districtRepo = new DistrictRepository(kinderData);
-
 class App extends Component {
   constructor() {
     super();
+    this.districtRepo = new DistrictRepository(kinderData);
     this.state = {
       data: [],
-      selectedCards: [], 
-      comparedData: {}
+      selectedCards: [] 
     }
   }
 
@@ -23,13 +21,13 @@ class App extends Component {
   }
 
   updateCards = (input) => {
-    const data = districtRepo.findAllMatches(input);
+    const data = this.districtRepo.findAllMatches(input);
 
     this.setState({ data })
   }
 
   selectCard = (input) => {
-    const foundCard = districtRepo.findByName(input);
+    const foundCard = this.districtRepo.findByName(input);
     const selectedCards = [...this.state.selectedCards, foundCard];
     
     if (this.state.selectedCards.includes(foundCard)) {
@@ -55,31 +53,23 @@ class App extends Component {
     this.setState({ selectedCards })
   }
    
-  compareSelectedCards = (cards) => {
-    if (this.state.selectedCards.length === 2) {
-      const location1 = this.state.selectedCards[0].location;
-      const location2 = this.state.selectedCards[0].location;
-      const comparedData = districtRepo.compareDistrictAverages(location1, location2);
-
-      this.setState({ comparedData })
-    }
-  }
-
   render() {
     return (
       <div>
         <header>
           <h1>Welcome To Headcount 2.0</h1>
         </header>
-        {/* <SelectedCont /> */}
         <Search updateCards={ this.updateCards } />
-        <CardCont 
-          data={this.state.selectedCards} 
+        <SelectedCont 
+          selectedCards={this.state.selectedCards} 
           selectCard={this.selectCard}
+          comparedData={this.state.comparedData}
+          compareDistrictAverages={this.districtRepo.compareDistrictAverages}
         />
         <CardCont 
           data={this.state.data}
           selectCard={this.selectCard} 
+          comparedData={this.state.comparedData}
         />
       </div>
     );
