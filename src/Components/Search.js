@@ -24,6 +24,10 @@ export default class Search extends Component {
     const searchSuggestions = this.districtRepository.findAllMatches(
       districtInputOne
     );
+    this.props.selectedDistricts.forEach(district => {
+      searchSuggestions.push(district);
+    });
+
     this.setState({ searchSuggestions });
     if (districtInputOne.length > 1) {
       this.props.handleSubmit(searchSuggestions);

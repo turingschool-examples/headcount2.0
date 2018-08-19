@@ -60,7 +60,7 @@
   box-shadow: 1.5px 1.5px 1.5px 1.5px #ccc;
   top: 10rem;
   left: 3rem;
-  animation: bazinga 1s ease-in;
+  animation: move 0.5s linear forwards, bazinga 1s ease-in;
 }
 
 .district-card-clicked2 {
@@ -72,7 +72,7 @@
   box-shadow: 1.5px 1.5px 1.5px 1.5px #ccc;
   top: 35rem;
   left: 3rem;
-  animation: bazinga 1s ease-in;
+  animation: move 0.5s linear forwards, bazinga 1s ease-in;
 }
 
 .district-card:hover {
@@ -108,5 +108,12 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes move {
+  0% {
+    left: 0%;
+    transform: rotate3d(0, 0, 0, 0);
   }
 }
