@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot 1`] = `"<div class=\\"dropdown\\"><h1 class=\\"CardContainer__header\\">KINDERGARTNERS IN FULL DAY PROGRAM</h1><ul class=\\"dropdown-content\\"><li>3RD GRADE TESTS</li><li>8TH GRADE TEST SCORES</li><li>AVERAGE RACE ETHINICITY MATH SCORES</li><li>AVERAGE RACE ETHINICITY READING SCORES</li><li>AVERAGE RACE ETHINICITY WRITING SCORES</li><li>DROPOUT RATES BY RACE AND ETHINICITY</li><li>HIGH SCHOOL GRADUATION RATES</li></ul></div>"`;

@@ -51,4 +51,5 @@ CardContainer.propTypes = {
   averages: PropTypes.objectOf(PropTypes.number),
   selectLocation: PropTypes.func,
   toggleHelperInfo: PropTypes.func,
+  toggleDropDown: PropTypes.func
 };

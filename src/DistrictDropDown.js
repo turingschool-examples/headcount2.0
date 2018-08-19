@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const DistrictDropDown = ({toggleDropDown}) => {
   return (
@@ -18,4 +19,8 @@ const DistrictDropDown = ({toggleDropDown}) => {
 };
 
 export default DistrictDropDown;
+
+DistrictDropDown.protoTypes = {
+  toggleDropDown: PropTypes.func
+};
 

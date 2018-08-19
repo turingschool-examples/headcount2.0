@@ -155,9 +155,21 @@ describe('App', () => {
     wrapper.instance().toggleHelperInfo();
 
     expect(wrapper.find('.CardContainer__info').props('style')).toHaveProperty('visibility', 'visibile');
-    expect(wrapper.find('.CardContainer__btn').hasClass(' CardContainer__btn--Focus')).toEqual(true);
+    expect(wrapper.find('.CardContainer__btn').hasClass('CardContainer__btn--Focus')).toEqual(true);
 
-  })
+  });
+
+  it.skip('should toggle classes when toggleDropDown is called', () => {
+    wrapper = mount(<App />, { attachTo: document.body });
+
+    expect(wrapper.find('.dropdown-content').hasClass('show')).toEqual(false);
+    expect(wrapper.find('.CardContainer__header').hasClass('CardContainer__header--selected')).toEqual(false);
+    
+    wrapper.instance().toggleDropDown();
+
+    expect(wrapper.find('.dropdown-content').hasClass('show')).toEqual(true);
+    expect(wrapper.find('.CardContainer__header').hasClass('CardContainer__header--selected')).toEqual(true);
+  });
 
   it('should render a Search component', () => {
     expect(wrapper.find('Search').length).toEqual(1);
