@@ -21,7 +21,7 @@ class App extends Component {
   }
 
   updateCards = (string) => {
-    let data = allDistricts.findAllMatches(string);
+    const data = allDistricts.findAllMatches(string);
     this.setState({
       data
     }) 
@@ -30,30 +30,25 @@ class App extends Component {
   selectCards = (location) => {
     const selectedCard = allDistricts.findByName(location)
     const selectedCards = [...this.state.selectedCards, selectedCard]
+
+    const toggleClass = this.state.data.forEach(card => {
+      if(card.location === selectedCard.location) {
+        card.selected = true;
+        console.log(selectedCard)
+      } 
+    })
     this.setState({ selectedCards })
-    // console.log(this.state.selectedCards)
-      this.compareCards()
+
+      this.compareCards(this.state.selectedCards)
   }
 
-  //Data type appears to be an object yet I cannot access keys using dot notation or object.keys. WTF
-
-  compareCards = () => {
-    let district1 = this.state.selectedCards[0]
-    let district2 = this.state.selectedCards[1]
-    console.log(district2.location)
-    const comparedCards = this.state.selectedCards.forEach(card => { 
+  compareCards = (cards) => {
       if(this.state.selectedCards.length === 2) {
-
-        // let sumDistrict1 = allDistricts.compareDistrictAverages(district1, district2)
-        // let summedDistrict1 = allDistricts.findAverage(district1)
-        // let summedDistrict2 = allDistricts.findAverage(district2)
-  
-
-        // let splitCard = Object.values(card.stats)
-        // let district1 = Object.keys(card)
-        // console.log(splitCard)
-      }
-    })
+        const district1 = this.state.selectedCards[0].location
+        const district2 = this.state.selectedCards[1].location
+        
+        var compareObject = allDistricts.compareDistrictAverages(district1, district2)
+    }
 
 
   }
@@ -64,6 +59,11 @@ class App extends Component {
         <h1>HeadCount 2.0</h1>
         <Search 
           updateCards={this.updateCards}
+        />
+        <CardContainer
+          data={this.state.selectedCards}
+          selectCards={this.selectCards}
+          selected={ false }
         />
         <CardContainer 
           data={this.state.data} 
