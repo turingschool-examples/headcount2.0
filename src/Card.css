@@ -3,16 +3,21 @@
   padding: 5%;
 }
 
-
-
 .card { 
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 15%;
-  border: 1px solid grey;
+  border: 1px solid #1D1E2C;
   margin: 0 auto;
   border-radius: 10px;
+  margin-bottom: 1.5%;
+  box-shadow: 3px 5px;  
+  background-color: #bbbbbf;
+}
+
+.selected {
+
 }
 
 li {
@@ -26,5 +31,6 @@ ul {
 }
 
 .lessThan {
-  color: red;
+  color: #5D737E;
+  font-weight: bold;
 }
