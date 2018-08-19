@@ -28,8 +28,11 @@ describe('Search', () => {
 
     wrapper = shallow(<Search searchLocations={searchLocationMock} />);
     
+    expect(wrapper.instance().state.value).toEqual('');
+
     wrapper.instance().handleInput(mockEvent);
 
+    expect(wrapper.instance().state.value).toEqual('col');
     expect(searchLocationMock).toHaveBeenCalled();
   });
 

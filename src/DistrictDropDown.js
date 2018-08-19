@@ -1,30 +1,57 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-const DistrictDropDown = ({ toggleDropDown }) => {
-  return (
-    <div className="dropdown">
-      <h1 
-        onClick={ () => toggleDropDown() } 
-        className='CardContainer__header'>
-          KINDERGARTNERS IN FULL DAY PROGRAM
-      </h1>
-      <ul onClick={ () => toggleDropDown() } className="dropdown-content">
-        <li>3RD GRADE TESTS</li>
-        <li>8TH GRADE TEST SCORES</li>
-        <li>AVERAGE RACE ETHINICITY MATH SCORES</li>
-        <li>AVERAGE RACE ETHINICITY READING SCORES</li>
-        <li>AVERAGE RACE ETHINICITY WRITING SCORES</li>
-        <li>DROPOUT RATES BY RACE AND ETHINICITY</li>
-        <li>HIGH SCHOOL GRADUATION RATES</li>
-      </ul>
-    </div>
-  );
-};
+import districtData from './dataHelper';
+
+class DistrictDropDown extends Component {
+  constructor() {
+    super();
+    this.state = {
+      location: 'KINDERGARTNERS IN FULL DAY PROGRAM'
+    };
+  }
+
+  handleSelection = (event) => {
+    const location = event.target.id;
+    const matchingDataSet = districtData.find( dataSet => (
+      dataSet.title === location
+    ));
+
+    this.setState({ location });
+    this.props.changeDistrictData(matchingDataSet.data);
+  }
+
+  render() {
+    const totalDataTypes = districtData.map( (dataSet, index) => (
+      <li 
+        id={dataSet.title}
+        key={index}
+        onClick={this.handleSelection}>
+        {dataSet.title}
+      </li>
+    ));
+
+    return (
+      <div className="dropdown">
+        <h1 
+          onClick={ () => this.props.toggleDropDown() } 
+          className='CardContainer__header' >
+          {this.state.location}
+        </h1>
+        <ul 
+          onClick={ () => this.props.toggleDropDown() } 
+          className="dropdown-content" >
+          {totalDataTypes}
+        </ul>
+      </div>
+    );
+  }
+}
 
 export default DistrictDropDown;
 
 DistrictDropDown.propTypes = {
-  toggleDropDown: PropTypes.func
+  toggleDropDown: PropTypes.func,
+  changeDistrictData: PropTypes.func
 };
 

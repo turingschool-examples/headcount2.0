@@ -6,7 +6,7 @@ import kinderData from './data/kindergartners_in_full_day_program';
 import CardContainer from './CardContainer';
 import Search from './Search';
 
-const district = new DistrictRepository(kinderData);
+let district = new DistrictRepository(kinderData);
 
 class App extends Component {
   constructor() {
@@ -20,6 +20,10 @@ class App extends Component {
   }
 
   componentDidMount() {
+    this.loadData();
+  }
+
+  loadData() {
     Object.keys(district.stats).forEach( location => (
       district.stats[location] = {
         ...district.stats[location],
@@ -29,7 +33,9 @@ class App extends Component {
 
     this.setState({ 
       locations: district.stats, 
-      displayedLocations: district.findAllMatches() 
+      displayedLocations: district.findAllMatches(),
+      cards: [],
+      averages: {}
     });
   }
 
@@ -70,22 +76,24 @@ class App extends Component {
   }
 
   toggleHelperInfo = () => {
-    const info = document.querySelector('.CardContainer__info');
-    const button = document.querySelector('.CardContainer__btn');
+    const unfocus = 'CardContainer__btn--unfocus';
+    const show = 'CardContainer__info--show';
 
-    if (info.style.visibility === 'hidden') {
-      info.style.visibility = 'visible';
-      button.className = 'CardContainer__btn CardContainer__btn--Focus';
-    } else {
-      info.style.visibility = 'hidden';
-      button.className = 'CardContainer__btn';
-    }
+    document.querySelector('.CardContainer__btn').classList.toggle(unfocus);
+    document.querySelector('.CardContainer__info').classList.toggle(show);
   }
 
   toggleDropDown = () => {
+    const show = 'dropdown-content--show';
     const selected = 'CardContainer__header--selected';
-    document.querySelector('.dropdown-content').classList.toggle('show');
+
+    document.querySelector('.dropdown-content').classList.toggle(show);
     document.querySelector('.CardContainer__header').classList.toggle(selected);
+  }
+
+  changeDistrictData = (data) => {
+    district  = new DistrictRepository(data);
+    this.loadData();
   }
 
   render() {
@@ -101,7 +109,8 @@ class App extends Component {
           toggleHelperInfo={this.toggleHelperInfo}
           cards={this.state.cards}
           averages={this.state.averages}
-          selectLocation={this.selectLocation} />
+          selectLocation={this.selectLocation} 
+          changeDistrictData={this.changeDistrictData} />
       </div>
     );
   }
