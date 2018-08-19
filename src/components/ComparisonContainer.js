@@ -14,11 +14,22 @@ const ComparisonContainer = ({
   let cardTwo;
   let comparisonCard;
 
-  const selectedCards = selectedDistricts.length > 0;
+  const selectedCards = selectedDistricts.length > 1;
 
   if (selectedDistricts[0]) {
     cardOne = (
-      <div className="card-one">
+      <div
+        className="card-one"
+        style={
+          selectedDistricts.length < 2
+            ? {
+                gridColumnStart: 3,
+                justifyContent: 'center',
+                transform: 'translate(-1rem)'
+              }
+            : null
+        }
+      >
         <DistrictCard
           {...selectedDistricts[0]}
           toggleSelected={toggleSelected}

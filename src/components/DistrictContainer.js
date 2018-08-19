@@ -11,7 +11,7 @@ const DistrictContainer = ({
 }) => {
   let districtCards;
 
-  const selectedCards = selectedDistricts.length > 0;
+  const selectedCards = selectedDistricts.length > 1;
 
   districtCards = districts.map((district, i) => (
     <DistrictCard
@@ -29,8 +29,8 @@ const DistrictContainer = ({
       style={
         selectedCards
           ? {
-            gridTemplateColumns: 'repeat(5, 1fr)'
-          }
+              gridTemplateColumns: 'repeat(5, 1fr)'
+            }
           : null
       }
     >
