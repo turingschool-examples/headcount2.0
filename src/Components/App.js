@@ -30,16 +30,39 @@ class App extends Component {
 
   selectCard = (input) => {
     const foundCard = districtRepo.findByName(input);
-    let selectedState = this.state.selectedCards
+    const selectedCards = [...this.state.selectedCards, foundCard];
+    
+    if (this.state.selectedCards.includes(foundCard)) {
+      this.deselectCard(foundCard.location)
 
-    if (!selectedState.includes(foundCard) && selectedState.length < 2) {
-      const selectedCards = [...this.state.selectedCards, foundCard];
-
-      this.setState({ selectedCards})
+      foundCard.isSelected = !foundCard.isSelected
+      return
     }
+    
+    if (this.state.selectedCards.length === 2) {
+      selectedCards.shift();
+    } 
+    this.setState({ selectedCards })
+    foundCard.isSelected = !foundCard.isSelected
+  }
+
+  deselectCard = (location) => {
+    const selectedCards = this.state.selectedCards.filter(card => 
+      card.location !== location
+    );
+
+    this.setState({ selectedCards })
   }
    
-  
+  compareSelectedCards = (cards) => {
+    if (this.state.selectedCards.length === 2) {
+      const location1 = this.state.selectedCards[0].location;
+      const location2 = this.state.selectedCards[0].location;
+      const comparedData = districtRepo.compareDistrictAverages(location1, location2);
+
+      this.setState({ comparedData })
+    }
+  }
 
   render() {
     return (
