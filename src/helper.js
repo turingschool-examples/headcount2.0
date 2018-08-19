@@ -8,9 +8,9 @@ export default class DistrictRepository {
 
   removeDuplicates = (data) => {
     return data.reduce((acc, location) => {
-      let upperCaseName = location.Location.toUpperCase();
+      const upperCaseName = location.Location.toUpperCase();
 
-      let newData = Math.round(location.Data * 1000) / 1000
+      const newData = Math.round(location.Data * 1000) / 1000
     
         if(!acc[upperCaseName]) {
           acc[upperCaseName] = {
@@ -25,12 +25,13 @@ export default class DistrictRepository {
   }
 
   findByName = (data) => {
-    if(!data) return undefined;
+    if(data) {
     return this.stats[data.toUpperCase()]
+    }
   }
 
   findAllMatches = (districtName) => {
-    let statsVals = Object.values(this.stats)
+    const statsVals = Object.values(this.stats)
  
     if (!districtName) {
       return statsVals
@@ -44,24 +45,24 @@ export default class DistrictRepository {
   }
 
   findAverage = (district) => {
-    let districtData = this.findByName(district)
-    let districtKeys = Object.keys(districtData.stats)
-    let districtAverage = districtKeys.reduce((acc, data) => {
+    const districtData = this.findByName(district)
+    const districtKeys = Object.keys(districtData.stats)
+    const districtAverage = districtKeys.reduce((acc, data) => {
       acc += districtData.stats[data]
 
       return acc 
     },0) / districtKeys.length
 
-   let finalAverage = Math.round(1000 * districtAverage) / 1000
+   const finalAverage = Math.round(1000 * districtAverage) / 1000
  
     return finalAverage
   }
 
   compareDistrictAverages = (district1, district2) => {
-    
+    // debugger
     const toUpper = (data) => data.toUpperCase()
-    let districtData1 = this.findAverage(district1)
-    let districtData2 = this.findAverage(district2)
+    const districtData1 = this.findAverage(district1)
+    const districtData2 = this.findAverage(district2)
 
     const districtsCompared = {
       [toUpper(district1)]: districtData1, 
