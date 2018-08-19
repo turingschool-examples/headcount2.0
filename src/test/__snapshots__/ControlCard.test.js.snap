@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ControlCards should match snapshot 1`] = `
+<div
+  className="control-cards"
+>
+  <Component
+    index={0}
+    key="compared 0"
+    location="AGUILAR REORGANIZED 6"
+    stats={
+      Object {
+        "2004": 1,
+        "2005": 1,
+      }
+    }
+  />
+  <Component
+    index={1}
+    key="compared 1"
+    location="AKRON R-1"
+    stats={
+      Object {
+        "2008": 0.844,
+        "2009": 0.96,
+      }
+    }
+  />
+  <Component
+    comparisonData={
+      Object {
+        "AGUILAR REORGANIZED 6": 1,
+        "AKRON R-1": 0.619,
+        "compared": 0.619,
+      }
+    }
+    key="2"
+  />
+   
+</div>
+`;
+
+exports[`ControlCards should match snapshot with no control card 1`] = `
+<div
+  className="control-cards"
+>
+   
+</div>
+`;

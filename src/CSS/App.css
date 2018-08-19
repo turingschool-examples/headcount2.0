@@ -1,0 +1,54 @@
+* {
+  font-weight: 800;
+  font-family: alcub;
+  letter-spacing: 4px;
+}
+
+.head-wrapper {
+  display: grid;
+  grid-template-columns: 3fr 12fr;
+  grid-template-rows: 20rem 1fr;
+}
+
+@font-face {
+  font-family: alcub;
+  src: url(../Fonts/Alcubierre.otf);
+}
+
+.title-show {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  margin: auto;
+  font-size: 5rem;
+  animation: shazam 1s linear, bazinga 1s ease-in;
+  animation: shazam 1s linear, bazinga 1s ease-out;
+  z-index: 1;
+}
+
+.title-hide {
+  display: none;
+}
+
+.instructions {
+  font-size: 1.5rem;
+  text-align: center;
+  color: rgb(133, 133, 118);
+}
+
+@keyframes shazam {
+  0% {
+    right: 250px;
+  }
+  100% {
+    right: 10px;
+  }
+}
+
+@keyframes bazinga {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

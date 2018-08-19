@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search should match snapshot 1`] = `
+<div
+  className="search-bar"
+>
+  <form>
+    <input
+      className="search-input"
+      disabled={true}
+      onChange={[Function]}
+      placeholder="Remove Card to Search"
+      type="text"
+      value=""
+    />
+    <button
+      onClick={[Function]}
+    >
+      Clear Fields
+    </button>
+  </form>
+  <div
+    className="hide-suggestions"
+  >
+    <span
+      className="display-error"
+    >
+      None Found! Search Again
+    </span>
+    <span
+      className="show-none"
+    >
+      Did you Mean?
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Search should match snapshot 2`] = `
+<div
+  className="search-bar"
+>
+  <form>
+    <input
+      className="search-input"
+      disabled={true}
+      onChange={[Function]}
+      placeholder="Remove Card to Search"
+      type="text"
+      value=""
+    />
+    <button
+      onClick={[Function]}
+    >
+      Clear Fields
+    </button>
+  </form>
+  <div
+    className="hide-suggestions"
+  >
+    <span
+      className="display-error"
+    >
+      None Found! Search Again
+    </span>
+    <span
+      className="show-none"
+    >
+      Did you Mean?
+    </span>
+  </div>
+</div>
+`;

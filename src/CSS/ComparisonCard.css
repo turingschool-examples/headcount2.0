@@ -1,0 +1,63 @@
+.compare-data-card {
+  animation: shazam 1s linear, bazinga 1s ease-in;
+  animation: shazam 1s linear, bazinga 1s ease-out;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 38rem;
+  text-align: center;
+}
+
+.district-avg {
+  margin: 3rem 0;
+}
+
+.district-low {
+  color: rgb(169, 77, 77);
+  font-size: 2rem;
+}
+
+.district-high {
+  color: green;
+  font-size: 2rem;
+}
+
+.comparison-value {
+  animation: morphingLogo 4s linear infinite;
+  color: rgb(74, 96, 125);
+  font-size: 4.5rem;
+  margin: 4rem auto 0 auto;
+}
+
+@keyframes morphingLogo {
+  0% {
+    filter: hue-rotate(-90deg);
+  }
+  50% {
+    filter: hue-rotate(90deg);
+  }
+  100% {
+    filter: hue-rotate(-90deg);
+  }
+}
+
+@keyframes shazam {
+  0% {
+    right: 250px;
+  }
+  100% {
+    right: 10px;
+  }
+}
+
+@keyframes bazinga {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
