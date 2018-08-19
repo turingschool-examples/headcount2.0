@@ -5,7 +5,13 @@ import Card from './Card';
 import HelperInfo from './HelperInfo';
 import DistrictDropDown from './DistrictDropDown';
 
-const CardContainer = ({ cards, averages, selectLocation, toggleHelperInfo, toggleDropDown }) => {
+const CardContainer = ({ 
+  cards, 
+  averages, 
+  selectLocation, 
+  toggleHelperInfo, 
+  toggleDropDown 
+}) => {
   const displayCards = cards.map( (card, index) => (
     <Card {...card} selectLocation={selectLocation} key={index} />
   ));

@@ -11,7 +11,7 @@ const Card = ({ location, stats, average, selectLocation }) => {
   return (
     <article className='Card' onClick={() => selectLocation(location)}>
       <div className='Card__header'>
-      <h2>{location}</h2>
+        <h2>{location}</h2>
       </div>
       <ul className='Card__stats'>
         {statsList}

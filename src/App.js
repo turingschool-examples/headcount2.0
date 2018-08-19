@@ -83,8 +83,9 @@ class App extends Component {
   }
 
   toggleDropDown = () => {
-    document.querySelector(".dropdown-content").classList.toggle("show");
-    document.querySelector(".CardContainer__header").classList.toggle("CardContainer__header--selected");
+    const selected = 'CardContainer__header--selected';
+    document.querySelector('.dropdown-content').classList.toggle('show');
+    document.querySelector('.CardContainer__header').classList.toggle(selected);
   }
 
   render() {

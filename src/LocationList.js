@@ -10,7 +10,7 @@ const LocationList = (
       if (card.location === location) {
         buttonState = 'LocationList__btn selected';
       }
-    })
+    });
     return <button 
       key={index}
       name={location}
@@ -20,7 +20,7 @@ const LocationList = (
         selectLocation(location); 
       }} >
       {location}
-    </button>
+    </button>;
   });
 
   return (
