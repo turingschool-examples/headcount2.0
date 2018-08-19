@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import App from '../components/App';
 import DistrictContainer from '../components/DistrictContainer';
-
-import kinderData from '../data/kindergartners_in_full_day_program';
-import DistrictRepository from '../helper';
 
 describe('App component', () => {
   let wrapper;
