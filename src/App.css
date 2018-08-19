@@ -16,7 +16,7 @@
 .Search {
     display: block;
     height: 2rem;
-    width: 95%; 
+    width: calc(95% - 2.8rem); 
     margin: .5rem auto;
     padding-left: 2.8rem;
     border: none;
@@ -123,8 +123,9 @@
 }
 
 .CardContainer__header {
-    width: 100%;
+    width: calc(100% - 2.5rem);
     margin: 0 auto 1rem auto;
+    padding: 0 2rem 0 .5rem;
     -webkit-box-shadow: 0 0 8px 0 #E0DDE4;
     -moz-box-shadow: 0 0 8px 0 #E0DDE4;
     box-shadow: 0 0 8px 0 #E0DDE4;
@@ -135,7 +136,9 @@
 }
 
 .CardContainer__header:hover {
+    background: url(./icons/arrow-down-sign-to-navigate.svg) no-repeat 98.5% center;
     background-color: #6D6080;
+    background-size: 1.5rem;
     color: #FCFCFC;
     cursor: pointer;
 }
@@ -144,7 +147,9 @@
     -webkit-box-shadow: 0 0 15px 0 #B54D2B;
     -moz-box-shadow: 0 0 15px 0 #B54D2B;
     box-shadow: 0 0 15px 0 #B54D2B;
+    background: url(./icons/arrow-down-sign-to-navigate.svg) no-repeat 98.5% center;
     background-color: #6D6080;
+    background-size: 1.5rem;
     color: #FCFCFC;
 }
 
@@ -190,8 +195,8 @@
 }
 
 .Card {
-    position: relative;
-    height: 370px;
+    display: flex;
+    flex-direction: column;
     min-width: 275px;
     width: 25%;
     margin: 2rem; 
@@ -228,7 +233,6 @@
 }
 
 .Card__stats {
-    position: absolute;
     bottom: 0px;
     list-style-type: none;
 }
