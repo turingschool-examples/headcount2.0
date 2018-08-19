@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Card.css';
 
-const Card = ({location, stats, selectLocation}) => {
+const Card = ({location, stats, selectLocation, selected}) => {
 	const displayStats = Object.entries(stats).map((stat, index) => 
 		<h4 key={index} className={`lessThan ${stat[1] > 0.5 ? 'greaterThan' : 'lessThan'}`}>
 			{stat[0]}: {stat[1]}
@@ -12,6 +12,8 @@ const Card = ({location, stats, selectLocation}) => {
 
 	return(
 		<div 
+			className=
+			{`Card ${selected} ? 'selected' ? ''}`}
 			className="cards"
 			onClick={()=> {selectLocation(location)}}
 			>
