@@ -7,7 +7,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 15%;
+  flex: 1 11em;
+  max-width: 11em;
   border: 1px solid #1D1E2C;
   margin: 0 auto;
   border-radius: 10px;

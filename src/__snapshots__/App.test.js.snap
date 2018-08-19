@@ -29,11 +29,18 @@ ShallowWrapper {
                     updateCards={[Function]}
           />
 </div>,
-        <CardContainer
-          className="bottomContainer"
-          data={Array []}
-          selectCards={[Function]}
-/>,
+        <div
+          className="topContainer"
+>
+          <ComparedContainer
+                    compareObject={Object {}}
+          />
+          <CardContainer
+                    className="bottomContainer"
+                    data={Array []}
+                    selectCards={[Function]}
+          />
+</div>,
         <CardContainer
           data={Array []}
           selectCards={[Function]}
@@ -83,15 +90,48 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "host",
         "props": Object {
-          "className": "bottomContainer",
-          "data": Array [],
-          "selectCards": [Function],
+          "children": Array [
+            <ComparedContainer
+              compareObject={Object {}}
+/>,
+            <CardContainer
+              className="bottomContainer"
+              data={Array []}
+              selectCards={[Function]}
+/>,
+          ],
+          "className": "topContainer",
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "compareObject": Object {},
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "className": "bottomContainer",
+              "data": Array [],
+              "selectCards": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
       },
       Object {
         "instance": null,
@@ -128,11 +168,18 @@ ShallowWrapper {
                         updateCards={[Function]}
             />
 </div>,
-          <CardContainer
-            className="bottomContainer"
-            data={Array []}
-            selectCards={[Function]}
-/>,
+          <div
+            className="topContainer"
+>
+            <ComparedContainer
+                        compareObject={Object {}}
+            />
+            <CardContainer
+                        className="bottomContainer"
+                        data={Array []}
+                        selectCards={[Function]}
+            />
+</div>,
           <CardContainer
             data={Array []}
             selectCards={[Function]}
@@ -182,15 +229,48 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "host",
           "props": Object {
-            "className": "bottomContainer",
-            "data": Array [],
-            "selectCards": [Function],
+            "children": Array [
+              <ComparedContainer
+                compareObject={Object {}}
+/>,
+              <CardContainer
+                className="bottomContainer"
+                data={Array []}
+                selectCards={[Function]}
+/>,
+            ],
+            "className": "topContainer",
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "compareObject": Object {},
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "className": "bottomContainer",
+                "data": Array [],
+                "selectCards": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
         },
         Object {
           "instance": null,

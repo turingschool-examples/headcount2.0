@@ -6,7 +6,7 @@ const Card = ({ location, stats, selectCards, selected }) => {
   const displayStats = Object.entries(stats).map((stat,index) => <li key={index} className={`greaterThan ${ stat[1] < .5 ? 'lessThan' : ''}`}>{stat[0]}: {stat[1]}</li>)
 
   return(
-  <div className={`Card ${selected ? 'selected' :  'card'}`} onClick={() => selectCards(location)}>  
+  <div className={`${selected ? 'selected' :  'card'}`} onClick={() => selectCards(location)}>  
     <h1 className="cardHeader">{location}</h1>
     <ul>{displayStats}</ul>
   </div>
