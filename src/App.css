@@ -151,6 +151,7 @@
 .dropdown-content {
     display: none;
     position: absolute;
+    height: 275px;
     width: 100%;
     margin: 0 auto;
     padding: 0;
@@ -158,6 +159,7 @@
     text-align: center;
     background-color: #F2F2F2;
     list-style-type: none;
+    overflow-y: scroll;
     z-index: 3;
 }
 

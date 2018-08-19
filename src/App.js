@@ -6,7 +6,7 @@ import kinderData from './data/kindergartners_in_full_day_program';
 import CardContainer from './CardContainer';
 import Search from './Search';
 
-const district = new DistrictRepository(kinderData);
+let district = new DistrictRepository(kinderData);
 
 class App extends Component {
   constructor() {
@@ -20,6 +20,10 @@ class App extends Component {
   }
 
   componentDidMount() {
+    this.loadData();
+  }
+
+  loadData() {
     Object.keys(district.stats).forEach( location => (
       district.stats[location] = {
         ...district.stats[location],
@@ -29,7 +33,9 @@ class App extends Component {
 
     this.setState({ 
       locations: district.stats, 
-      displayedLocations: district.findAllMatches() 
+      displayedLocations: district.findAllMatches(),
+      cards: [],
+      averages: {}
     });
   }
 
@@ -88,6 +94,11 @@ class App extends Component {
     document.querySelector('.CardContainer__header').classList.toggle(selected);
   }
 
+  changeDistrictData = (data) => {
+    district  = new DistrictRepository(data);
+    this.loadData();
+  }
+
   render() {
     return (
       <div className='App'>
@@ -101,7 +112,8 @@ class App extends Component {
           toggleHelperInfo={this.toggleHelperInfo}
           cards={this.state.cards}
           averages={this.state.averages}
-          selectLocation={this.selectLocation} />
+          selectLocation={this.selectLocation} 
+          changeDistrictData={this.changeDistrictData} />
       </div>
     );
   }
