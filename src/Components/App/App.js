@@ -25,17 +25,28 @@ class App extends Component {
 	filterLocations = (input) => {
 		let filteredDistricts = kinderDistrictData.findAllMatches(input);
 		this.setState({districtData: filteredDistricts})
-		// console.log(kinderDistrictData.findAverage)
+		console.log(this.state.districtData)
 	}
 
 	selectLocation = (district) => {
 		const selectedLocation = kinderDistrictData.findByName(district)
-		this.setState({selectedCards: selectedLocation})
-		console.log(this.state.selectedCards)
+			selectedLocation.selected = !selectedLocation.selected
+		
+			
+		if(!this.state.selectedCards.includes(selectedLocation) && this.state.selectedCards.length < 2) {
+			const selectedCards = [...this.state.selectedCards, selectedLocation]
+			this.setState({selectedCards})
+		}
+
+		if(this.state.selectedCards.length === 2) {
+
+		}
+		console.log(selectedLocation)
+		
 	}
 
 	compareLocations = (findAverage, compareDistrictAverages) => {
-
+		// const cardsToComapre = (this.state.selectedCards).
 	}
 
   
