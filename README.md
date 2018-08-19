@@ -21,4 +21,5 @@ You can run tests with `npm test`
 
 ## Final Result
 ![](images/card_display.gif)  
+
 ![](images/change_data.gif)  
