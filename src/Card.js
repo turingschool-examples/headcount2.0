@@ -10,10 +10,12 @@ const Card = ({ location, stats, average, selectLocation }) => {
 
   return (
     <article className='Card' onClick={() => selectLocation(location)}>
-      <h2 className='Card__header'>{location}</h2>
+      <div className='Card__header'>
+        <h2>{location}</h2>
+      </div>
       <ul className='Card__stats'>
         {statsList}
-        <li>AVERAGE: {average}</li>
+        <li><span className='Card__average'>AVERAGE:</span> {average}</li>
       </ul>
     </article>
   );

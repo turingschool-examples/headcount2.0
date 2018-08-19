@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 import App from '../App';
 
@@ -144,6 +144,31 @@ describe('App', () => {
       "ADAMS COUNTY 14": 0.709,
       "compared": 0.574,
     });
+  });
+
+  it.skip('should add/remove class on the "?" button and toggle visibility of helper info when toggleHelperInfo is called', () => {
+    wrapper = mount(<App />, { attachTo: document.body });
+
+    expect(wrapper.find('.CardContainer__info').props('style')).toHaveProperty('visibility', 'hidden');
+    expect(wrapper.find('.CardContainer__btn').hasClass('CardContainer__btn--Focus')).toEqual(false);
+    
+    wrapper.instance().toggleHelperInfo();
+
+    expect(wrapper.find('.CardContainer__info').props('style')).toHaveProperty('visibility', 'visibile');
+    expect(wrapper.find('.CardContainer__btn').hasClass('CardContainer__btn--Focus')).toEqual(true);
+
+  });
+
+  it.skip('should toggle classes when toggleDropDown is called', () => {
+    wrapper = mount(<App />, { attachTo: document.body });
+
+    expect(wrapper.find('.dropdown-content').hasClass('show')).toEqual(false);
+    expect(wrapper.find('.CardContainer__header').hasClass('CardContainer__header--selected')).toEqual(false);
+    
+    wrapper.instance().toggleDropDown();
+
+    expect(wrapper.find('.dropdown-content').hasClass('show')).toEqual(true);
+    expect(wrapper.find('.CardContainer__header').hasClass('CardContainer__header--selected')).toEqual(true);
   });
 
   it('should render a Search component', () => {

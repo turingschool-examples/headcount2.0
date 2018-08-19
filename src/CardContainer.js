@@ -2,8 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Card from './Card';
+import HelperInfo from './HelperInfo';
+import DistrictDropDown from './DistrictDropDown';
 
-const CardContainer = ({ cards, averages, selectLocation }) => {
+const CardContainer = ({ 
+  cards, 
+  averages, 
+  selectLocation, 
+  toggleHelperInfo, 
+  toggleDropDown 
+}) => {
   const displayCards = cards.map( (card, index) => (
     <Card {...card} selectLocation={selectLocation} key={index} />
   ));
@@ -12,16 +20,22 @@ const CardContainer = ({ cards, averages, selectLocation }) => {
 
   if (averages.compared >= 0) {
     displayCompared = 
-      <p className='compared-average'> 
-        COMPARED AVERAGES: {averages.compared}
-      </p>;
+      <div className='compared-average'>
+        <p> 
+          COMPARED AVERAGES: <span className='compared-average__num'>
+            {averages.compared}
+          </span>
+        </p>
+      </div>;
   }
 
   return (
     <div className='CardContainer'>
-      <h1 className='CardContainer__header'>
-            KINDERGARTNERS IN FULL DAY PROGRAM
-      </h1>
+      <button 
+        className='CardContainer__btn'
+        onClick={ () => toggleHelperInfo() } > ? </button>
+      <HelperInfo toggleHelperInfo={toggleHelperInfo} />
+      <DistrictDropDown toggleDropDown={toggleDropDown} />
       <section className='CardContainer__section'>
         {displayCards}
       </section>
@@ -41,5 +55,7 @@ CardContainer.propTypes = {
     })
   ),
   averages: PropTypes.objectOf(PropTypes.number),
-  selectLocation: PropTypes.func
+  selectLocation: PropTypes.func,
+  toggleHelperInfo: PropTypes.func,
+  toggleDropDown: PropTypes.func
 };

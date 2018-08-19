@@ -31,6 +31,7 @@ class Search extends Component {
           onChange={this.handleInput} >
         </input>
         <LocationList 
+          cards={this.props.cards}
           displayedLocations={this.props.displayedLocations}
           selectLocation={this.props.selectLocation} 
           clearSearch={this.clearSearch} />
@@ -42,6 +43,13 @@ class Search extends Component {
 export default Search;
 
 Search.propTypes = {
+  cards: PropTypes.arrayOf(
+    PropTypes.shape({ 
+      average: PropTypes.number, 
+      location: PropTypes.string, 
+      stats: PropTypes.objectOf(PropTypes.number) 
+    })
+  ),
   searchLocations: PropTypes.func,
   displayedLocations: PropTypes.arrayOf(PropTypes.string),
   selectLocation: PropTypes.func

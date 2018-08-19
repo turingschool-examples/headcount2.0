@@ -2,20 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const LocationList = (
-  { displayedLocations, selectLocation, clearSearch }
+  { cards, displayedLocations, selectLocation, clearSearch }
 ) => {
-  const locationButtons = displayedLocations.map( (location, index) => (
-    <button 
+  const locationButtons = displayedLocations.map( (location, index) => {
+    let buttonState = 'LocationList__btn';
+    cards.forEach( card => {
+      if (card.location === location) {
+        buttonState = 'LocationList__btn selected';
+      }
+    });
+    return <button 
       key={index}
       name={location}
-      className='LocationList__btn'
+      className={buttonState}
       onClick={ () => {
         clearSearch();
         selectLocation(location); 
       }} >
       {location}
-    </button>
-  ));
+    </button>;
+  });
 
   return (
     <div>
@@ -27,6 +33,13 @@ const LocationList = (
 export default LocationList;
 
 LocationList.propTypes = {
+  cards: PropTypes.arrayOf(
+    PropTypes.shape({ 
+      average: PropTypes.number, 
+      location: PropTypes.string, 
+      stats: PropTypes.objectOf(PropTypes.number) 
+    })
+  ),
   displayedLocations: PropTypes.arrayOf(PropTypes.string),
   selectLocation: PropTypes.func,
   clearSearch: PropTypes.func
