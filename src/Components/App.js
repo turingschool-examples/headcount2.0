@@ -13,7 +13,8 @@ class App extends Component {
     super();
     this.state = {
       data: [],
-      selectedCards: []
+      selectedCards: [], 
+      comparedData: {}
     }
   }
 
@@ -48,6 +49,10 @@ class App extends Component {
         </header>
         {/* <SelectedCont /> */}
         <Search updateCards={ this.updateCards } />
+        <CardCont 
+          data={this.state.selectedCards} 
+          selectCard={this.selectCard}
+        />
         <CardCont 
           data={this.state.data}
           selectCard={this.selectCard} 
