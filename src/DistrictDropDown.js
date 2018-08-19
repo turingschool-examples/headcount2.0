@@ -35,10 +35,12 @@ class DistrictDropDown extends Component {
       <div className="dropdown">
         <h1 
           onClick={ () => this.props.toggleDropDown() } 
-          className='CardContainer__header'>
-            {this.state.location}
+          className='CardContainer__header' >
+          {this.state.location}
         </h1>
-        <ul onClick={ () => this.props.toggleDropDown() } className="dropdown-content">
+        <ul 
+          onClick={ () => this.props.toggleDropDown() } 
+          className="dropdown-content" >
           {totalDataTypes}
         </ul>
       </div>

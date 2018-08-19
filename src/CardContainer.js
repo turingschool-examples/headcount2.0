@@ -36,7 +36,9 @@ const CardContainer = ({
         className='CardContainer__btn'
         onClick={ () => toggleHelperInfo() } > ? </button>
       <HelperInfo toggleHelperInfo={toggleHelperInfo} />
-      <DistrictDropDown toggleDropDown={toggleDropDown} changeDistrictData={changeDistrictData} />
+      <DistrictDropDown 
+        toggleDropDown={toggleDropDown} 
+        changeDistrictData={changeDistrictData} />
       <section className='CardContainer__section'>
         {displayCards}
       </section>
