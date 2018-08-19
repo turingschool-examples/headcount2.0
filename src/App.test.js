@@ -16,7 +16,7 @@ describe('App', () => {
 
 it('renders with the correct props', () => {
 
-  expect(wrapper.find(CardContainer).prop('data')).toEqual([])
+  expect(wrapper.find('[className="bottomContainer"]').prop('data')).toEqual([])
   })
 
  it('should populate school data in state when updateCards is called', () => {
