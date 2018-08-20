@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DistrictsContainer should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <DistrictsContainer
+    districts={
+        Array [
+            Object {
+              "FEE Room E": Object {
+                "2018": 19,
+              },
+              "FEE Room G": Object {
+                "2018": 19,
+              },
+            },
+            Object {
+              "BEE Room E": Object {
+                "2018": 12,
+              },
+              "BEE Room G": Object {
+                "2018": 14,
+              },
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <DistrictCard
+          FEE Room E={
+                    Object {
+                              "2018": 19,
+                            }
+          }
+          FEE Room G={
+                    Object {
+                              "2018": 19,
+                            }
+          }
+          selectCards={undefined}
+/>,
+        <DistrictCard
+          BEE Room E={
+                    Object {
+                              "2018": 12,
+                            }
+          }
+          BEE Room G={
+                    Object {
+                              "2018": 14,
+                            }
+          }
+          selectCards={undefined}
+/>,
+      ],
+      "className": "district-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "FEE Room E": Object {
+            "2018": 19,
+          },
+          "FEE Room G": Object {
+            "2018": 19,
+          },
+          "selectCards": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "function",
+        "props": Object {
+          "BEE Room E": Object {
+            "2018": 12,
+          },
+          "BEE Room G": Object {
+            "2018": 14,
+          },
+          "selectCards": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <DistrictCard
+            FEE Room E={
+                        Object {
+                                    "2018": 19,
+                                  }
+            }
+            FEE Room G={
+                        Object {
+                                    "2018": 19,
+                                  }
+            }
+            selectCards={undefined}
+/>,
+          <DistrictCard
+            BEE Room E={
+                        Object {
+                                    "2018": 12,
+                                  }
+            }
+            BEE Room G={
+                        Object {
+                                    "2018": 14,
+                                  }
+            }
+            selectCards={undefined}
+/>,
+        ],
+        "className": "district-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "FEE Room E": Object {
+              "2018": 19,
+            },
+            "FEE Room G": Object {
+              "2018": 19,
+            },
+            "selectCards": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "function",
+          "props": Object {
+            "BEE Room E": Object {
+              "2018": 12,
+            },
+            "BEE Room G": Object {
+              "2018": 14,
+            },
+            "selectCards": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
