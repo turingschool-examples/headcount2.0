@@ -7,7 +7,7 @@ const DistrictList = ({
 }) => {
   const districtCards = Object.keys(districts).map(district => <DistrictCard location={districts[district].location} stats={districts[district].stats} addToCompare={addToCompare} />);
 
-  const searchedCards = searchedDistrict.map(district => <DistrictCard location={districts[district].location} stats={districts[district].stats} addToCompare={addToCompare} key={searchedCards.length} />);
+  const searchedCards = searchedDistrict.map(district => <DistrictCard location={districts[district].location} stats={districts[district].stats} addToCompare={addToCompare} />);
 
   const comparedCards = cardsToCompare.map(district => <DistrictCard location={district.location} stats={district.stats} addToCompare={addToCompare} />);
 
@@ -22,7 +22,9 @@ const DistrictList = ({
           <div>{comparedCards[0]}</div>
           <span>
             <div className="compare-icons">
+              <i className="fas fa-arrow-right" />
               <h3>RATIO</h3>
+              <i className="fas fa-arrow-left" />
             </div>
             <div className="averages">{comparedData}</div>
           </span>
