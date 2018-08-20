@@ -16,5 +16,4 @@ Search.propTypes = {
   searchDistricts: PropTypes.func
 }
 
-
 export default Search;
