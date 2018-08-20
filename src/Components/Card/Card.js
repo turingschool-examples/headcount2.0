@@ -12,10 +12,10 @@ const Card = ({location, stats, selectLocation, selected}) => {
 
 	return(
 		<div 
-			className=
+			className= 
 			{`Card ${selected} ? 'selected' ? ''}`}
-			className="cards"
 			onClick={()=> {selectLocation(location)}}
+			className='cards'
 			>
 			<h2 className="location">{location}</h2>
 			<p className="stats">{displayStats}</p>

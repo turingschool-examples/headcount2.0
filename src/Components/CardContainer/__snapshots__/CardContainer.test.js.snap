@@ -36,18 +36,22 @@ ShallowWrapper {
       "children": Array [
         <Card
           location={undefined}
+          selectLocation={undefined}
           stats={undefined}
 />,
         <Card
           location={undefined}
+          selectLocation={undefined}
           stats={undefined}
 />,
         <Card
           location={undefined}
+          selectLocation={undefined}
           stats={undefined}
 />,
         <Card
           location={undefined}
+          selectLocation={undefined}
           stats={undefined}
 />,
       ],
@@ -60,6 +64,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "location": undefined,
+          "selectLocation": undefined,
           "stats": undefined,
         },
         "ref": null,
@@ -72,6 +77,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "location": undefined,
+          "selectLocation": undefined,
           "stats": undefined,
         },
         "ref": null,
@@ -84,6 +90,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "location": undefined,
+          "selectLocation": undefined,
           "stats": undefined,
         },
         "ref": null,
@@ -96,6 +103,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "location": undefined,
+          "selectLocation": undefined,
           "stats": undefined,
         },
         "ref": null,
@@ -114,18 +122,22 @@ ShallowWrapper {
         "children": Array [
           <Card
             location={undefined}
+            selectLocation={undefined}
             stats={undefined}
 />,
           <Card
             location={undefined}
+            selectLocation={undefined}
             stats={undefined}
 />,
           <Card
             location={undefined}
+            selectLocation={undefined}
             stats={undefined}
 />,
           <Card
             location={undefined}
+            selectLocation={undefined}
             stats={undefined}
 />,
         ],
@@ -138,6 +150,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "location": undefined,
+            "selectLocation": undefined,
             "stats": undefined,
           },
           "ref": null,
@@ -150,6 +163,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "location": undefined,
+            "selectLocation": undefined,
             "stats": undefined,
           },
           "ref": null,
@@ -162,6 +176,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "location": undefined,
+            "selectLocation": undefined,
             "stats": undefined,
           },
           "ref": null,
@@ -174,6 +189,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "location": undefined,
+            "selectLocation": undefined,
             "stats": undefined,
           },
           "ref": null,

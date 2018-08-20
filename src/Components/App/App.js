@@ -13,7 +13,8 @@ class App extends Component {
 		super()
 		this.state = {
 			districtData: [],
-			selectedCards: []
+			selectedCards: [],
+			matchedCards: {}
 		}
 	}
 
@@ -28,20 +29,26 @@ class App extends Component {
 
 	selectLocation = (district) => {
 		const selectedLocation = kinderDistrictData.findByName(district)
-			selectedLocation.selected = !selectedLocation.selected
+			// selectedLocation.selected = !selectedLocation.selected
 		
-			
 		if(!this.state.selectedCards.includes(selectedLocation) && this.state.selectedCards.length < 2) {
 			const selectedCards = [...this.state.selectedCards, selectedLocation]
-			this.setState({selectedCards})
+			this.setState({selectedCards}, () => this.compareLocations(this.state.selectedCards))
+			// this.compareLocations();
 		}
 	}
 
-	compareLocations = (findAverage, compareDistrictAverages) => {
-		console.log(this.state.selectedCards)
-		if(this.state.selectedCards.length === 2) {
-			kinderDistrictData.findAverage()
-		}
+	compareLocations = (cards) => {
+		if(this.state.selectedCards.length > 1) {
+
+			const district1 = cards[0].location
+			const district2 = cards[1].location
+			const matchedCards = kinderDistrictData.compareDistrictAverages(district1, district2)
+			this.setState({matchedCards})
+			console.log(Object.keys(matchedCards))
+		}	
+			
+		
 	}
 
   render() {
@@ -49,16 +56,13 @@ class App extends Component {
       <div>
       	<h1 className="title">Headcount 2.0</h1>
       	<Search filterLocations = {this.filterLocations} />
+      	<CompareContainer 
+					matchedCards = {this.state.matchedCards}
+				/>	 
       	<CardContainer
       		districtData = {this.state.selectedCards}
-      		selectLocation = {this.selectedLocation}
+      		selectLocation = {this.selectLocation}
       	/>
-      	<CompareContainer 
-					compareDistrictAverages = {kinderDistrictData.compareDistrictAverages}
-      		findAverage = {kinderDistrictData.findAverage}
-      		compareLocations = {this.compareLocations}
-      		selectedCards = {this.state.selectedCards}
-				/>	 
       	<CardContainer 
       		districtData = {this.state.districtData} 
       		selectLocation = {this.selectLocation}

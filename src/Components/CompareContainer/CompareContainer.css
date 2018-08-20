@@ -1,0 +1,15 @@
+.card {
+	display: inline-block;
+	width: 16rem;
+	margin: 1rem;
+	/*border: 0.4rem solid #523F38;*/
+	border-radius: 1.5rem;
+	text-align: center;
+	color: #523F38;
+	font-weight: 700;
+}
+
+/*h4 {
+	display: inline-block;
+	padding-top: 0.4rem;
+	/*background-color: #ddd9d9;*/

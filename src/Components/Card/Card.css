@@ -8,20 +8,22 @@
 
 .cards {
 	display: inline-block;
-	width: 16rem;
-	margin: 1rem;
+	width: 15rem;
+	margin: 0.7rem;
 	border: 0.4rem solid #523F38;
 	border-radius: 1.5rem;
 	text-align: center;
 }
 
 .location {
-	padding-top: 1rem;
+	padding-top: 0.7rem;
 	background-color: #1EA896;
-	height: 4.9rem;
+	height: 5.1rem;
 	border-radius: 1.1rem 1.1rem 0 0;
 	color: #523F38;
+	font-size: 1.6rem;
 	font-weight: 1000;
+	text-shadow: 1px 1px #523F38;
 }
 
 h4 {
