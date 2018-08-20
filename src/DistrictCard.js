@@ -18,7 +18,6 @@ class DistrictCard extends Component {
       clicked: !this.state.clicked
     })
     this.props.addToCompare(this.props.location)
-    console.log(this.state.clicked)
   }
 
 
@@ -37,9 +36,9 @@ class DistrictCard extends Component {
 }
 
 DistrictCard.propTypes = {
-  stats: PropTypes.object.isRequired,
-  location: PropTypes.string.isRequired,
-  addToCompare: PropTypes.func.isRequired
+  stats: PropTypes.object,
+  location: PropTypes.string,
+  addToCompare: PropTypes.func
 }
 
 export default DistrictCard;
