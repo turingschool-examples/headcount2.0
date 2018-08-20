@@ -11,7 +11,8 @@ const DistrictsContainer = ({ districts, selectCards }) => {
 };
 
 DistrictsContainer.propTypes = {
-  districts: PropTypes.array
+  districts: PropTypes.array,
+  selectCards: PropTypes.func
 };
 
 export default DistrictsContainer;

@@ -25,4 +25,16 @@ describe("SearchForm", () => {
 
     expect(shallowWrapper.state("districtSearch")).toEqual(anticipatedState);
   });
+
+  it("should sumit on click", () => {
+    const mockFn = jest.fn();
+    const event = { preventDefault: jest.fn(), target: { value: "" } };
+
+    shallowWrapper = shallow(<SearchForm findDistricts={mockFn} />);
+    shallowWrapper
+      .find("form")
+      .first()
+      .simulate("submit", event);
+    expect(event.preventDefault).toHaveBeenCalled();
+  });
 });

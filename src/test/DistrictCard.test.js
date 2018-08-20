@@ -17,4 +17,17 @@ describe("DistrictCard", () => {
 
     expect(wrapper.find("article").length).toEqual(4);
   });
+
+  it("should call selectCards on click", () => {
+    const mockFn = jest.fn();
+
+    wrapper = shallow(
+      <DistrictCard selectCards={mockFn} location="COLORADO" stats={mockData} />
+    );
+    wrapper
+      .find("article")
+      .first()
+      .simulate("click");
+    expect(mockFn).toHaveBeenCalled();
+  });
 });

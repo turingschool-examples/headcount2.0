@@ -26,7 +26,8 @@ const DistrictCard = ({ location, stats, selectCards, selected }) => {
 DistrictCard.propTypes = {
   location: PropTypes.string,
   stats: PropTypes.object,
-  selectedCards: PropTypes.func
+  selectCards: PropTypes.func,
+  selected: PropTypes.bool
 };
 
 export default DistrictCard;

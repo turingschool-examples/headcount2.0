@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const ComparisonCard = ({ selectedCards, schoolData }) => {
   const firstDistrict = selectedCards[0].location;
@@ -17,6 +18,11 @@ const ComparisonCard = ({ selectedCards, schoolData }) => {
       <p>{schoolData.findAverage(secondDistrict)}</p>
     </div>
   );
+};
+
+ComparisonCard.propTypes = {
+  selectedCards: PropTypes.array,
+  schoolData: PropTypes.object
 };
 
 export default ComparisonCard;

@@ -2,6 +2,7 @@ import React from "react";
 import DistrictCard from "./DistrictCard";
 import ComparisonCard from "./ComparisonCard";
 import "../css/ComparisonContainer.css";
+import PropTypes from "prop-types";
 
 const ComparisonContainer = ({
   selectedCards,
@@ -47,6 +48,14 @@ const ComparisonContainer = ({
       {secondCardSelected}
     </div>
   );
+};
+
+ComparisonContainer.propTypes = {
+  selectedCards: PropTypes.array,
+  districts: PropTypes.array,
+  schoolData: PropTypes.object,
+  selectCards: PropTypes.func,
+  selected: PropTypes.bool
 };
 
 export default ComparisonContainer;
