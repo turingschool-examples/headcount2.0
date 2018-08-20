@@ -27,9 +27,6 @@ class App extends Component {
 
   addToCompare = (eventLocation) => {
     const foundCard = this.state.districts.findByName(eventLocation);
-    if (this.state.cardsToCompare.length <= 1) {
-      this.compareAddedDistricts(eventLocation);
-    } 
     if(this.state.cardsToCompare.includes(foundCard)) {
       let filterdCards = this.state.cardsToCompare.filter(card => card.location !== foundCard.location)
       this.setState({
@@ -39,6 +36,12 @@ class App extends Component {
       })
       return
     }
+    if(this.state.cardsToCompare.length >= 2 || this.state.cardsToCompare.includes(eventLocation)) {
+      return;
+    }
+    if (this.state.cardsToCompare.length <= 1) {
+      this.compareAddedDistricts(eventLocation);
+    } 
     this.setState({
       cardsToCompare: [...this.state.cardsToCompare, foundCard]
     })

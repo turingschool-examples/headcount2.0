@@ -2930,7 +2930,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          class="compare-section"
+          className="compare-section"
 >
           
 </div>,
@@ -2976,7 +2976,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [],
-          "class": "compare-section",
+          "className": "compare-section",
         },
         "ref": null,
         "rendered": Array [],
@@ -3114,7 +3114,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            class="compare-section"
+            className="compare-section"
 >
             
 </div>,
@@ -3160,7 +3160,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [],
-            "class": "compare-section",
+            "className": "compare-section",
           },
           "ref": null,
           "rendered": Array [],

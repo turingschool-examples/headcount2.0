@@ -1,6 +1,8 @@
 import React from 'react';
 import DistrictCard from './DistrictCard';
 import './DistrictList.css';
+import PropTypes from 'prop-types';
+
 
 const DistrictList = ({
   districts, searchedDistrict, addToCompare, cardsToCompare, comparedObject,
@@ -12,7 +14,6 @@ const DistrictList = ({
   const comparedCards = cardsToCompare.map(district => <DistrictCard location={district.location} stats={district.stats} addToCompare={addToCompare} />);
 
   const comparedData = Object.keys(comparedObject).map(key => <p>{comparedObject[key]}</p>);
-  console.log(comparedObject);
 
 
   if (Object.keys(comparedObject).length) {
@@ -62,6 +63,14 @@ const DistrictList = ({
     </React.Fragment>
   );
 };
+
+DistrictList.propTypes = {
+  districts: PropTypes.object.isRequired,
+  searchedDistrict: PropTypes.array,
+  addToCompare: PropTypes.func.isRequired,
+  cardsToCompare: PropTypes.array,
+  comparedObject: PropTypes.object
+}
 
 
 export default DistrictList;
