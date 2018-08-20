@@ -13,4 +13,4 @@ This application was built using the `create-react-app` boilerplate.
 * Write meaningful, comprehensive unit and integration tests.
 
 ![](http://i.imgur.com/KpSdTaW.png)
-<img src = 'public/headcount.png'
+<img src = 'public/headcount.png'>
