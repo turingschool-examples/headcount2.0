@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './Search.css'
-import PropType from 'prop-types'
+import './Search.css';
+import PropType from 'prop-types';
 
 class Search extends Component {
   render() {
@@ -10,15 +10,15 @@ class Search extends Component {
           className="search"
           type="text"
           placeholder="Search for district"
-          onChange={(e) => this.props.updateCards(e.target.value)}
+          onChange={(event) => this.props.updateCards(event.target.value)}
         />
       </div>
-    ) 
+    ); 
   }
 }
 
 Search.propTypes = {
-  updateCards: PropType.func,
-}
+  updateCards: PropType.func
+};
 
 export default Search;

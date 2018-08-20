@@ -1,6 +1,6 @@
-import React from 'react'
-import { shallow, mount } from 'enzyme'
-import CardContainer from './CardContainer'
+import React from 'react';
+import { shallow } from 'enzyme';
+import CardContainer from './CardContainer';
 
 describe('CardContainer', () => {
   it('should render with all of the appropriate elements', () => {
@@ -11,8 +11,8 @@ describe('CardContainer', () => {
           {2004: 0.24},
           {2004: 0.24}
         ]}
-    />)
+      />);
 
-    expect(wrapper).toMatchSnapshot()
-  })
-})
+    expect(wrapper).toMatchSnapshot();
+  });
+});
