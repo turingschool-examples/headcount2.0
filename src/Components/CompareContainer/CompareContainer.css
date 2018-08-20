@@ -1,15 +1,43 @@
 .card {
 	display: inline-block;
-	width: 16rem;
+	width: 15rem;
 	margin: 1rem;
-	/*border: 0.4rem solid #523F38;*/
-	border-radius: 1.5rem;
+	border: 0.4rem solid #523F38;
+	border-radius: 1.2rem;
 	text-align: center;
-	color: #523F38;
+	font-family: avenir, sans-serif;
 	font-weight: 700;
 }
 
-/*h4 {
-	display: inline-block;
-	padding-top: 0.4rem;
-	/*background-color: #ddd9d9;*/
+.location1 {
+	padding-top: 0.9rem;
+	background-color: #ddd9d9;
+	height: 4.1rem;
+	border-radius: 1.1rem 1.1rem 0 0;
+	color: #523F38;
+	font-size: 1.1rem;
+	font-weight: 1000;
+}
+
+.compared-value {
+	background-color: #1EA896;
+	padding-top: 1.7rem;
+	height: 3.8rem;
+	color: #523F38;
+}
+
+.location2 {
+	padding-top: 0.9rem;
+	background-color: #ddd9d9;
+	height: 4.1rem;
+	border-radius: 0rem 0rem 1rem 1rem;
+	color: #523F38;
+	font-size: 1rem;
+	font-weight: 1000;
+}
+
+.lessThan1, .greaterThan1, .compared-title {
+	background-color: #ddd9d9;
+	/*color: #FF715B;*/
+}
+

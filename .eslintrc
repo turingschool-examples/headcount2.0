@@ -4,13 +4,6 @@
     "eslint:recommended",
     "plugin:react/recommended"
   ],
-
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
-
   "plugins": [
     "react"
   ],
@@ -23,20 +16,32 @@
   // Having a problem with one of these rules? Learn more about it here: https://eslint.org/docs/rules/
   "rules": {
     "eqeqeq": ["error", "always"],
-    "getter-return": ["error", { "allowImplicit": true }],
+    "getter-return": ["error", {
+      "allowImplicit": true
+    }],
     "no-template-curly-in-string": "error",
     "semi": ["error", "always"],
     "array-bracket-spacing": ["error", "never"],
     "block-spacing": ["error", "always"],
-    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "brace-style": ["error", "1tbs", {
+      "allowSingleLine": true
+    }],
     "camelcase": "warn",
     "comma-dangle": ["error", "never"],
-    "comma-spacing": ["error", { "before": false, "after": true }],
+    "comma-spacing": ["error", {
+      "before": false,
+      "after": true
+    }],
     "comma-style": ["error", "last"],
     "computed-property-spacing": ["error", "never"],
     "func-call-spacing": ["error", "never"],
-    "indent": ["warn", 2, {"SwitchCase": 1}],
-    "keyword-spacing": ["error", { "before": true, "after": true }],
+    "indent": ["warn", 2, {
+      "SwitchCase": 1
+    }],
+    "keyword-spacing": ["error", {
+      "before": true,
+      "after": true
+    }],
     "max-len": ["warn", 80],
     "no-duplicate-imports": "error",
     "id-length": "error",

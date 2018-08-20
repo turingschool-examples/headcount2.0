@@ -16,51 +16,30 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        <input
-          className="search-input"
-          name="search"
-          onChange={[Function]}
-          placeholder="Find district."
-          type="text"
+      "children": <input
+        className="search-input"
+        name="search"
+        onChange={[Function]}
+        placeholder="Enter district name."
+        type="text"
 />,
-        <button
-          className="clear-button"
->
-          Clear
-</button>,
-      ],
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "search-input",
-          "name": "search",
-          "onChange": [Function],
-          "placeholder": "Find district.",
-          "type": "text",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "className": "search-input",
+        "name": "search",
+        "onChange": [Function],
+        "placeholder": "Enter district name.",
+        "type": "text",
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Clear",
-          "className": "clear-button",
-        },
-        "ref": null,
-        "rendered": "Clear",
-        "type": "button",
-      },
-    ],
+      "ref": null,
+      "rendered": null,
+      "type": "input",
+    },
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -69,51 +48,30 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [
-          <input
-            className="search-input"
-            name="search"
-            onChange={[Function]}
-            placeholder="Find district."
-            type="text"
+        "children": <input
+          className="search-input"
+          name="search"
+          onChange={[Function]}
+          placeholder="Enter district name."
+          type="text"
 />,
-          <button
-            className="clear-button"
->
-            Clear
-</button>,
-        ],
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "search-input",
-            "name": "search",
-            "onChange": [Function],
-            "placeholder": "Find district.",
-            "type": "text",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "search-input",
+          "name": "search",
+          "onChange": [Function],
+          "placeholder": "Enter district name.",
+          "type": "text",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Clear",
-            "className": "clear-button",
-          },
-          "ref": null,
-          "rendered": "Clear",
-          "type": "button",
-        },
-      ],
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
       "type": "div",
     },
   ],

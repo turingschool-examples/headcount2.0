@@ -25,15 +25,12 @@ ShallowWrapper {
         <Search
           filterLocations={[Function]}
 />,
+        <CompareContainer
+          matchedCards={Object {}}
+/>,
         <CardContainer
           districtData={Array []}
           selectLocation={[Function]}
-/>,
-        <CompareContainer
-          compareDistrictAverages={[Function]}
-          compareLocations={[Function]}
-          findAverage={[Function]}
-          matchedCards={Array []}
 />,
         <CardContainer
           districtData={Array []}
@@ -71,8 +68,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "districtData": Array [],
-          "selectLocation": [Function],
+          "matchedCards": Object {},
         },
         "ref": null,
         "rendered": null,
@@ -83,10 +79,8 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "compareDistrictAverages": [Function],
-          "compareLocations": [Function],
-          "findAverage": [Function],
-          "matchedCards": Array [],
+          "districtData": Array [],
+          "selectLocation": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -122,15 +116,12 @@ ShallowWrapper {
           <Search
             filterLocations={[Function]}
 />,
+          <CompareContainer
+            matchedCards={Object {}}
+/>,
           <CardContainer
             districtData={Array []}
             selectLocation={[Function]}
-/>,
-          <CompareContainer
-            compareDistrictAverages={[Function]}
-            compareLocations={[Function]}
-            findAverage={[Function]}
-            matchedCards={Array []}
 />,
           <CardContainer
             districtData={Array []}
@@ -168,8 +159,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "districtData": Array [],
-            "selectLocation": [Function],
+            "matchedCards": Object {},
           },
           "ref": null,
           "rendered": null,
@@ -180,10 +170,8 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "compareDistrictAverages": [Function],
-            "compareLocations": [Function],
-            "findAverage": [Function],
-            "matchedCards": Array [],
+            "districtData": Array [],
+            "selectLocation": [Function],
           },
           "ref": null,
           "rendered": null,

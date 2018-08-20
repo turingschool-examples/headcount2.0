@@ -9,56 +9,50 @@ import kinderData from '../../data/kindergartners_in_full_day_program.js';
 const kinderDistrictData = new DistrictRepository(kinderData);
  
 class App extends Component {
-	constructor() {
-		super()
-		this.state = {
-			districtData: [],
-			selectedCards: [],
-			matchedCards: {}
-		}
-	}
+  constructor() {
+    super();
+    this.state = {
+      districtData: [],
+      selectedCards: [],
+      matchedCards: {}
+    };
+  }
 
 	componentDidMount = () => {
 		this.filterLocations();
 	}
 
 	filterLocations = (input) => {
-		let filteredDistricts = kinderDistrictData.findAllMatches(input);
-		this.setState({districtData: filteredDistricts})
+	  let filteredDistricts = kinderDistrictData.findAllMatches(input);
+	  this.setState({districtData: filteredDistricts});
 	}
 
 	selectLocation = (district) => {
-		const selectedLocation = kinderDistrictData.findByName(district)
-			// selectedLocation.selected = !selectedLocation.selected
+	  const selectedLocation = kinderDistrictData.findByName(district);
 		
-		if(!this.state.selectedCards.includes(selectedLocation) && this.state.selectedCards.length < 2) {
-			const selectedCards = [...this.state.selectedCards, selectedLocation]
-			this.setState({selectedCards}, () => this.compareLocations(this.state.selectedCards))
-			// this.compareLocations();
-		}
+	  if (!this.state.selectedCards.includes(selectedLocation) && this.state.selectedCards.length < 2) {
+	  	const selectedCards = [...this.state.selectedCards, selectedLocation];
+	  	this.setState({selectedCards}, () => this.compareLocations(this.state.selectedCards));
+	  }
 	}
 
 	compareLocations = (cards) => {
-		if(this.state.selectedCards.length > 1) {
-
-			const district1 = cards[0].location
-			const district2 = cards[1].location
-			const matchedCards = kinderDistrictData.compareDistrictAverages(district1, district2)
-			this.setState({matchedCards})
-			console.log(Object.keys(matchedCards))
-		}	
-			
-		
+	  if (this.state.selectedCards.length > 1) {
+	    const district1 = cards[0].location;
+	    const district2 = cards[1].location;
+	    const matchedCards = kinderDistrictData.compareDistrictAverages(district1, district2);
+	    this.setState({matchedCards});
+	  }	
 	}
 
-  render() {
-    return (
-      <div>
+	render() {
+	  return (
+	    <div>
       	<h1 className="title">Headcount 2.0</h1>
       	<Search filterLocations = {this.filterLocations} />
       	<CompareContainer 
-					matchedCards = {this.state.matchedCards}
-				/>	 
+	        matchedCards = {this.state.matchedCards}
+	      />	 
       	<CardContainer
       		districtData = {this.state.selectedCards}
       		selectLocation = {this.selectLocation}
@@ -67,9 +61,9 @@ class App extends Component {
       		districtData = {this.state.districtData} 
       		selectLocation = {this.selectLocation}
       	/>
-      </div>
-    );
-  }
+	    </div>
+	  );
+	}
 }
 
 export default App;
