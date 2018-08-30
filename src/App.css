@@ -1,1 +1,11 @@
-/*APP COMPONENT RELATED CSS GOES HERE*/
+header {
+  height: 15rem;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  background: #6f6866;
+}
+

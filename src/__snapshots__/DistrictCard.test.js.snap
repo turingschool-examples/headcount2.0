@@ -1,0 +1,886 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DistrictCard matches the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <DistrictCard
+    addToCompare={[Function]}
+    location="COLORADO"
+    stats={
+        Object {
+            "2004": 1,
+            "2005": 1,
+            "2006": 1,
+            "2007": 1,
+            "2008": 1,
+            "2009": 1,
+            "2010": 1,
+            "2011": 1,
+            "2012": 1,
+            "2013": 1,
+            "2014": 1,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3>
+          COLORADO
+</h3>,
+        <ul>
+          <p
+                    className="green-text"
+          >
+                    2004
+                    : 
+                    1
+          </p>
+          <p
+                    className="green-text"
+          >
+                    2005
+                    : 
+                    1
+          </p>
+          <p
+                    className="green-text"
+          >
+                    2006
+                    : 
+                    1
+          </p>
+          <p
+                    className="green-text"
+          >
+                    2007
+                    : 
+                    1
+          </p>
+          <p
+                    className="green-text"
+          >
+                    2008
+                    : 
+                    1
+          </p>
+          <p
+                    className="green-text"
+          >
+                    2009
+                    : 
+                    1
+          </p>
+          <p
+                    className="green-text"
+          >
+                    2010
+                    : 
+                    1
+          </p>
+          <p
+                    className="green-text"
+          >
+                    2011
+                    : 
+                    1
+          </p>
+          <p
+                    className="green-text"
+          >
+                    2012
+                    : 
+                    1
+          </p>
+          <p
+                    className="green-text"
+          >
+                    2013
+                    : 
+                    1
+          </p>
+          <p
+                    className="green-text"
+          >
+                    2014
+                    : 
+                    1
+          </p>
+</ul>,
+      ],
+      "className": "not-clicked",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "COLORADO",
+        },
+        "ref": null,
+        "rendered": "COLORADO",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p
+              className="green-text"
+>
+              2004
+              : 
+              1
+</p>,
+            <p
+              className="green-text"
+>
+              2005
+              : 
+              1
+</p>,
+            <p
+              className="green-text"
+>
+              2006
+              : 
+              1
+</p>,
+            <p
+              className="green-text"
+>
+              2007
+              : 
+              1
+</p>,
+            <p
+              className="green-text"
+>
+              2008
+              : 
+              1
+</p>,
+            <p
+              className="green-text"
+>
+              2009
+              : 
+              1
+</p>,
+            <p
+              className="green-text"
+>
+              2010
+              : 
+              1
+</p>,
+            <p
+              className="green-text"
+>
+              2011
+              : 
+              1
+</p>,
+            <p
+              className="green-text"
+>
+              2012
+              : 
+              1
+</p>,
+            <p
+              className="green-text"
+>
+              2013
+              : 
+              1
+</p>,
+            <p
+              className="green-text"
+>
+              2014
+              : 
+              1
+</p>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2004",
+                ": ",
+                1,
+              ],
+              "className": "green-text",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2004",
+              ": ",
+              1,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2005",
+                ": ",
+                1,
+              ],
+              "className": "green-text",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2005",
+              ": ",
+              1,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2006",
+                ": ",
+                1,
+              ],
+              "className": "green-text",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2006",
+              ": ",
+              1,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2007",
+                ": ",
+                1,
+              ],
+              "className": "green-text",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2007",
+              ": ",
+              1,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2008",
+                ": ",
+                1,
+              ],
+              "className": "green-text",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2008",
+              ": ",
+              1,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2009",
+                ": ",
+                1,
+              ],
+              "className": "green-text",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2009",
+              ": ",
+              1,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2010",
+                ": ",
+                1,
+              ],
+              "className": "green-text",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2010",
+              ": ",
+              1,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2011",
+                ": ",
+                1,
+              ],
+              "className": "green-text",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2011",
+              ": ",
+              1,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2012",
+                ": ",
+                1,
+              ],
+              "className": "green-text",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2012",
+              ": ",
+              1,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2013",
+                ": ",
+                1,
+              ],
+              "className": "green-text",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2013",
+              ": ",
+              1,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2014",
+                ": ",
+                1,
+              ],
+              "className": "green-text",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2014",
+              ": ",
+              1,
+            ],
+            "type": "p",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3>
+            COLORADO
+</h3>,
+          <ul>
+            <p
+                        className="green-text"
+            >
+                        2004
+                        : 
+                        1
+            </p>
+            <p
+                        className="green-text"
+            >
+                        2005
+                        : 
+                        1
+            </p>
+            <p
+                        className="green-text"
+            >
+                        2006
+                        : 
+                        1
+            </p>
+            <p
+                        className="green-text"
+            >
+                        2007
+                        : 
+                        1
+            </p>
+            <p
+                        className="green-text"
+            >
+                        2008
+                        : 
+                        1
+            </p>
+            <p
+                        className="green-text"
+            >
+                        2009
+                        : 
+                        1
+            </p>
+            <p
+                        className="green-text"
+            >
+                        2010
+                        : 
+                        1
+            </p>
+            <p
+                        className="green-text"
+            >
+                        2011
+                        : 
+                        1
+            </p>
+            <p
+                        className="green-text"
+            >
+                        2012
+                        : 
+                        1
+            </p>
+            <p
+                        className="green-text"
+            >
+                        2013
+                        : 
+                        1
+            </p>
+            <p
+                        className="green-text"
+            >
+                        2014
+                        : 
+                        1
+            </p>
+</ul>,
+        ],
+        "className": "not-clicked",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "COLORADO",
+          },
+          "ref": null,
+          "rendered": "COLORADO",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="green-text"
+>
+                2004
+                : 
+                1
+</p>,
+              <p
+                className="green-text"
+>
+                2005
+                : 
+                1
+</p>,
+              <p
+                className="green-text"
+>
+                2006
+                : 
+                1
+</p>,
+              <p
+                className="green-text"
+>
+                2007
+                : 
+                1
+</p>,
+              <p
+                className="green-text"
+>
+                2008
+                : 
+                1
+</p>,
+              <p
+                className="green-text"
+>
+                2009
+                : 
+                1
+</p>,
+              <p
+                className="green-text"
+>
+                2010
+                : 
+                1
+</p>,
+              <p
+                className="green-text"
+>
+                2011
+                : 
+                1
+</p>,
+              <p
+                className="green-text"
+>
+                2012
+                : 
+                1
+</p>,
+              <p
+                className="green-text"
+>
+                2013
+                : 
+                1
+</p>,
+              <p
+                className="green-text"
+>
+                2014
+                : 
+                1
+</p>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2004",
+                  ": ",
+                  1,
+                ],
+                "className": "green-text",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2004",
+                ": ",
+                1,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2005",
+                  ": ",
+                  1,
+                ],
+                "className": "green-text",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2005",
+                ": ",
+                1,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2006",
+                  ": ",
+                  1,
+                ],
+                "className": "green-text",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2006",
+                ": ",
+                1,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2007",
+                  ": ",
+                  1,
+                ],
+                "className": "green-text",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2007",
+                ": ",
+                1,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2008",
+                  ": ",
+                  1,
+                ],
+                "className": "green-text",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2008",
+                ": ",
+                1,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2009",
+                  ": ",
+                  1,
+                ],
+                "className": "green-text",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2009",
+                ": ",
+                1,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2010",
+                  ": ",
+                  1,
+                ],
+                "className": "green-text",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2010",
+                ": ",
+                1,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2011",
+                  ": ",
+                  1,
+                ],
+                "className": "green-text",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2011",
+                ": ",
+                1,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2012",
+                  ": ",
+                  1,
+                ],
+                "className": "green-text",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2012",
+                ": ",
+                1,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2013",
+                  ": ",
+                  1,
+                ],
+                "className": "green-text",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2013",
+                ": ",
+                1,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2014",
+                  ": ",
+                  1,
+                ],
+                "className": "green-text",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2014",
+                ": ",
+                1,
+              ],
+              "type": "p",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
