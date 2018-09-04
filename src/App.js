@@ -8,6 +8,9 @@ import Search from './Search';
 
 let district = new DistrictRepository(kinderData);
 
+//make district part of state
+//file structure App/ index.js styles.css test/ index.test.js mockdata.js (automatically looks for index when calling folder)
+
 class App extends Component {
   constructor() {
     super();
@@ -75,6 +78,8 @@ class App extends Component {
     }
   }
 
+  //Add element in state to toggle classes in render
+
   toggleHelperInfo = () => {
     const unfocus = 'CardContainer__btn--unfocus';
     const show = 'CardContainer__info--show';
@@ -97,18 +102,23 @@ class App extends Component {
   }
 
   render() {
+    const { 
+      cards,  
+      displayedLocations, 
+      averages } = this.state;
+
     return (
       <div className='App'>
         <Search 
-          cards={this.state.cards}
+          cards={cards}
           searchLocations={this.searchLocations} 
-          displayedLocations={this.state.displayedLocations}
+          displayedLocations={displayedLocations}
           selectLocation={this.selectLocation}/>
         <CardContainer 
           toggleDropDown={this.toggleDropDown}
           toggleHelperInfo={this.toggleHelperInfo}
-          cards={this.state.cards}
-          averages={this.state.averages}
+          cards={cards}
+          averages={averages}
           selectLocation={this.selectLocation} 
           changeDistrictData={this.changeDistrictData} />
       </div>
