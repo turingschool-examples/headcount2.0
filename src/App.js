@@ -6,15 +6,13 @@ import kinderData from './data/kindergartners_in_full_day_program';
 import CardContainer from './CardContainer';
 import Search from './Search';
 
-let district = new DistrictRepository(kinderData);
-
-//make district part of state
 //file structure App/ index.js styles.css test/ index.test.js mockdata.js (automatically looks for index when calling folder)
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
+      district: new DistrictRepository(kinderData),
       locations: {},
       displayedLocations: [],
       cards: [],
@@ -27,16 +25,16 @@ class App extends Component {
   }
 
   loadData() {
-    Object.keys(district.stats).forEach( location => (
-      district.stats[location] = {
-        ...district.stats[location],
-        average: district.findAverage(location)
+    Object.keys(this.state.district.stats).forEach( location => (
+      this.state.district.stats[location] = {
+        ...this.state.district.stats[location],
+        average: this.state.district.findAverage(location)
       }
     ));
 
     this.setState({ 
-      locations: district.stats, 
-      displayedLocations: district.findAllMatches(),
+      locations: this.state.district.stats, 
+      displayedLocations: this.state.district.findAllMatches(),
       cards: [],
       averages: {}
     });
@@ -58,11 +56,11 @@ class App extends Component {
         () => this.compareAverages()
       );
     }
-    this.setState({ displayedLocations: district.findAllMatches() }); 
+    this.setState({ displayedLocations: this.state.district.findAllMatches() }); 
   }
 
   searchLocations = (value) => {
-    const matchingDistricts = district.findAllMatches(value);
+    const matchingDistricts = this.state.district.findAllMatches(value);
 
     this.setState({ displayedLocations: matchingDistricts });
   }
@@ -71,7 +69,7 @@ class App extends Component {
     if (this.state.cards.length === 2) {
       const locationA = this.state.cards[0].location;
       const locationB = this.state.cards[1].location;
-      const averages = district.compareDistrictAverages(locationA, locationB);
+      const averages = this.state.district.compareDistrictAverages(locationA, locationB);
       this.setState({ averages });
     } else {
       this.setState({ averages: {} });
@@ -97,7 +95,7 @@ class App extends Component {
   }
 
   changeDistrictData = (data) => {
-    district  = new DistrictRepository(data);
+    this.setState({ district: new DistrictRepository(data) });
     this.loadData();
   }
 
