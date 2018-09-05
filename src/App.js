@@ -16,7 +16,8 @@ class App extends Component {
       locations: {},
       displayedLocations: [],
       cards: [],
-      averages: {}
+      averages: {},
+      displayHelperInfo: false
     };
   }
 
@@ -79,12 +80,12 @@ class App extends Component {
   //Add element in state to toggle classes in render
 
   toggleHelperInfo = () => {
-
+    this.setState({ displayHelperInfo: !this.state.displayHelperInfo })
       const unfocus = 'CardContainer__btn--unfocus';
       const show = 'CardContainer__info--show';
 
-    document.querySelector('.CardContainer__btn').classList.toggle(unfocus);
-    document.querySelector('.CardContainer__info').classList.toggle(show);
+    // document.querySelector('.CardContainer__btn').classList.toggle(unfocus);
+    // document.querySelector('.CardContainer__info').classList.toggle(show);
   }
 
   changeDistrictData = (data) => {
@@ -96,7 +97,8 @@ class App extends Component {
     const { 
       cards,  
       displayedLocations, 
-      averages } = this.state;
+      averages,
+      displayHelperInfo } = this.state;
 
     return (
       <div className='App'>
@@ -106,7 +108,7 @@ class App extends Component {
           displayedLocations={displayedLocations}
           selectLocation={this.selectLocation}/>
         <CardContainer 
-
+          displayHelperInfo={displayHelperInfo}
           toggleHelperInfo={this.toggleHelperInfo}
           cards={cards}
           averages={averages}

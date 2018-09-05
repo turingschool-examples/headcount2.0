@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const HelperInfo = ({ toggleHelperInfo }) => {
+const HelperInfo = ({ toggleHelperInfo, displayHelperInfo }) => {
+  const cardInfo = displayHelperInfo ? 'CardContainer__info--show' : '';
+
   return (
-    <div className='CardContainer__info'>
+    <div className={'CardContainer__info' + cardInfo}>
       <p>
         Compare district stats by clicking on two districts from the list 
         on the left. To change districts click on the districts in the list 
@@ -19,5 +21,6 @@ const HelperInfo = ({ toggleHelperInfo }) => {
 export default HelperInfo;
 
 HelperInfo.propTypes = {
-  toggleHelperInfo: PropTypes.func
+  toggleHelperInfo: PropTypes.func,
+  displayHelperInfo: bool
 };
