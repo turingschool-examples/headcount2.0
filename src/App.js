@@ -17,7 +17,7 @@ class App extends Component {
       displayedLocations: [],
       cards: [],
       averages: {},
-      displayHelperInfo: false
+      displayHelperInfo: true
     };
   }
 
@@ -77,15 +77,8 @@ class App extends Component {
     }
   }
 
-  //Add element in state to toggle classes in render
-
   toggleHelperInfo = () => {
     this.setState({ displayHelperInfo: !this.state.displayHelperInfo })
-      const unfocus = 'CardContainer__btn--unfocus';
-      const show = 'CardContainer__info--show';
-
-    // document.querySelector('.CardContainer__btn').classList.toggle(unfocus);
-    // document.querySelector('.CardContainer__info').classList.toggle(show);
   }
 
   changeDistrictData = (data) => {
