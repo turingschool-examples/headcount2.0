@@ -26,15 +26,17 @@ class App extends Component {
   }
 
   loadData() {
-    Object.keys(this.state.district.stats).forEach( location => (
-      this.state.district.stats[location] = {
-        ...this.state.district.stats[location],
+    const districtStats = this.state.district.stats;
+    
+    Object.keys(districtStats).forEach( location => (
+      districtStats[location] = {
+        ...districtStats[location],
         average: this.state.district.findAverage(location)
       }
     ));
 
     this.setState({ 
-      locations: this.state.district.stats, 
+      locations: districtStats, 
       displayedLocations: this.state.district.findAllMatches(),
       cards: [],
       averages: {}
