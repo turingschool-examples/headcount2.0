@@ -10,7 +10,6 @@ const CardContainer = ({
   averages, 
   selectLocation, 
   toggleHelperInfo, 
-  toggleDropDown,
   changeDistrictData
 }) => {
   const displayCards = cards.map( (card, index) => (
@@ -36,9 +35,7 @@ const CardContainer = ({
         className='CardContainer__btn'
         onClick={ () => toggleHelperInfo() } > ? </button>
       <HelperInfo toggleHelperInfo={toggleHelperInfo} />
-      <DistrictDropDown 
-        toggleDropDown={toggleDropDown} 
-        changeDistrictData={changeDistrictData} />
+      <DistrictDropDown changeDistrictData={changeDistrictData} />
       <section className='CardContainer__section'>
         {displayCards}
       </section>
@@ -60,6 +57,5 @@ CardContainer.propTypes = {
   averages: PropTypes.objectOf(PropTypes.number),
   selectLocation: PropTypes.func,
   toggleHelperInfo: PropTypes.func,
-  toggleDropDown: PropTypes.func,
   changeDistrictData: PropTypes.func
 };

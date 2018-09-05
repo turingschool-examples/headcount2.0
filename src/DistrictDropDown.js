@@ -7,7 +7,8 @@ class DistrictDropDown extends Component {
   constructor() {
     super();
     this.state = {
-      location: 'KINDERGARTNERS IN FULL DAY PROGRAM'
+      location: 'KINDERGARTNERS IN FULL DAY PROGRAM',
+      dropDownDisplay: false
     };
   }
 
@@ -21,6 +22,10 @@ class DistrictDropDown extends Component {
     this.props.changeDistrictData(matchingDataSet.data);
   }
 
+  toggleDropDown = () => {
+    this.setState({ dropDownDisplay: !this.state.dropDownDisplay })
+  }
+
   render() {
     const totalDataTypes = districtData.map( (dataSet, index) => (
       <li 
@@ -30,17 +35,19 @@ class DistrictDropDown extends Component {
         {dataSet.title}
       </li>
     ));
+    const headerSelected = this.state.dropDownDisplay ? 'CardContainer__header--selected' : '';
+    const dropDownDiplayed = this.state.dropDownDisplay ? 'dropdown-content--show' : '';
 
     return (
       <div className="dropdown">
         <h1 
-          onClick={ () => this.props.toggleDropDown() } 
-          className='CardContainer__header' >
+          onClick={this.toggleDropDown} 
+          className={'CardContainer__header ' + headerSelected} >
           {this.state.location}
         </h1>
         <ul 
-          onClick={ () => this.props.toggleDropDown() } 
-          className="dropdown-content" >
+          onClick={this.toggleDropDown} 
+          className={'dropdown-content ' + dropDownDiplayed} >
           {totalDataTypes}
         </ul>
       </div>
@@ -51,7 +58,6 @@ class DistrictDropDown extends Component {
 export default DistrictDropDown;
 
 DistrictDropDown.propTypes = {
-  toggleDropDown: PropTypes.func,
   changeDistrictData: PropTypes.func
 };
 
