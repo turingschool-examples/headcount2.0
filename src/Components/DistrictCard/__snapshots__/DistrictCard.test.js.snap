@@ -1,0 +1,940 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DistrictCard unit test should match the snapshot with all data passed in correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <DistrictCard
+    district={
+        Object {
+            "location": "COLORADO",
+            "selected": true,
+            "stats": Object {
+              "2004": 0.24,
+              "2005": 0.278,
+              "2006": 0.337,
+              "2007": 0.395,
+              "2008": 0.536,
+              "2009": 0.598,
+              "2010": 0.64,
+              "2011": 0.672,
+              "2012": 0.695,
+              "2013": 0.703,
+              "2014": 0.741,
+            },
+          }
+    }
+    selectDistrict={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": "COLORADO",
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2
+          className="district"
+>
+          COLORADO
+</h2>,
+        <ul
+          className="stats"
+>
+          <li
+                    className="lowStats"
+          >
+                    2004
+                    : 
+                    0.24
+          </li>
+          <li
+                    className="lowStats"
+          >
+                    2005
+                    : 
+                    0.278
+          </li>
+          <li
+                    className="lowStats"
+          >
+                    2006
+                    : 
+                    0.337
+          </li>
+          <li
+                    className="lowStats"
+          >
+                    2007
+                    : 
+                    0.395
+          </li>
+          <li
+                    className="highStats"
+          >
+                    2008
+                    : 
+                    0.536
+          </li>
+          <li
+                    className="highStats"
+          >
+                    2009
+                    : 
+                    0.598
+          </li>
+          <li
+                    className="highStats"
+          >
+                    2010
+                    : 
+                    0.64
+          </li>
+          <li
+                    className="highStats"
+          >
+                    2011
+                    : 
+                    0.672
+          </li>
+          <li
+                    className="highStats"
+          >
+                    2012
+                    : 
+                    0.695
+          </li>
+          <li
+                    className="highStats"
+          >
+                    2013
+                    : 
+                    0.703
+          </li>
+          <li
+                    className="highStats"
+          >
+                    2014
+                    : 
+                    0.741
+          </li>
+</ul>,
+      ],
+      "className": "card selected",
+      "id": undefined,
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "COLORADO",
+          "className": "district",
+        },
+        "ref": null,
+        "rendered": "COLORADO",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li
+              className="lowStats"
+>
+              2004
+              : 
+              0.24
+</li>,
+            <li
+              className="lowStats"
+>
+              2005
+              : 
+              0.278
+</li>,
+            <li
+              className="lowStats"
+>
+              2006
+              : 
+              0.337
+</li>,
+            <li
+              className="lowStats"
+>
+              2007
+              : 
+              0.395
+</li>,
+            <li
+              className="highStats"
+>
+              2008
+              : 
+              0.536
+</li>,
+            <li
+              className="highStats"
+>
+              2009
+              : 
+              0.598
+</li>,
+            <li
+              className="highStats"
+>
+              2010
+              : 
+              0.64
+</li>,
+            <li
+              className="highStats"
+>
+              2011
+              : 
+              0.672
+</li>,
+            <li
+              className="highStats"
+>
+              2012
+              : 
+              0.695
+</li>,
+            <li
+              className="highStats"
+>
+              2013
+              : 
+              0.703
+</li>,
+            <li
+              className="highStats"
+>
+              2014
+              : 
+              0.741
+</li>,
+          ],
+          "className": "stats",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                Array [
+                  "2004",
+                ],
+                ": ",
+                0.24,
+              ],
+              "className": "lowStats",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2004",
+              ": ",
+              0.24,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                Array [
+                  "2005",
+                ],
+                ": ",
+                0.278,
+              ],
+              "className": "lowStats",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2005",
+              ": ",
+              0.278,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "2",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                Array [
+                  "2006",
+                ],
+                ": ",
+                0.337,
+              ],
+              "className": "lowStats",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2006",
+              ": ",
+              0.337,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "3",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                Array [
+                  "2007",
+                ],
+                ": ",
+                0.395,
+              ],
+              "className": "lowStats",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2007",
+              ": ",
+              0.395,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "4",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                Array [
+                  "2008",
+                ],
+                ": ",
+                0.536,
+              ],
+              "className": "highStats",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2008",
+              ": ",
+              0.536,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "5",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                Array [
+                  "2009",
+                ],
+                ": ",
+                0.598,
+              ],
+              "className": "highStats",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2009",
+              ": ",
+              0.598,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "6",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                Array [
+                  "2010",
+                ],
+                ": ",
+                0.64,
+              ],
+              "className": "highStats",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2010",
+              ": ",
+              0.64,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "7",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                Array [
+                  "2011",
+                ],
+                ": ",
+                0.672,
+              ],
+              "className": "highStats",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2011",
+              ": ",
+              0.672,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "8",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                Array [
+                  "2012",
+                ],
+                ": ",
+                0.695,
+              ],
+              "className": "highStats",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2012",
+              ": ",
+              0.695,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "9",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                Array [
+                  "2013",
+                ],
+                ": ",
+                0.703,
+              ],
+              "className": "highStats",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2013",
+              ": ",
+              0.703,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "10",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                Array [
+                  "2014",
+                ],
+                ": ",
+                0.741,
+              ],
+              "className": "highStats",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2014",
+              ": ",
+              0.741,
+            ],
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": "COLORADO",
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2
+            className="district"
+>
+            COLORADO
+</h2>,
+          <ul
+            className="stats"
+>
+            <li
+                        className="lowStats"
+            >
+                        2004
+                        : 
+                        0.24
+            </li>
+            <li
+                        className="lowStats"
+            >
+                        2005
+                        : 
+                        0.278
+            </li>
+            <li
+                        className="lowStats"
+            >
+                        2006
+                        : 
+                        0.337
+            </li>
+            <li
+                        className="lowStats"
+            >
+                        2007
+                        : 
+                        0.395
+            </li>
+            <li
+                        className="highStats"
+            >
+                        2008
+                        : 
+                        0.536
+            </li>
+            <li
+                        className="highStats"
+            >
+                        2009
+                        : 
+                        0.598
+            </li>
+            <li
+                        className="highStats"
+            >
+                        2010
+                        : 
+                        0.64
+            </li>
+            <li
+                        className="highStats"
+            >
+                        2011
+                        : 
+                        0.672
+            </li>
+            <li
+                        className="highStats"
+            >
+                        2012
+                        : 
+                        0.695
+            </li>
+            <li
+                        className="highStats"
+            >
+                        2013
+                        : 
+                        0.703
+            </li>
+            <li
+                        className="highStats"
+            >
+                        2014
+                        : 
+                        0.741
+            </li>
+</ul>,
+        ],
+        "className": "card selected",
+        "id": undefined,
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "COLORADO",
+            "className": "district",
+          },
+          "ref": null,
+          "rendered": "COLORADO",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li
+                className="lowStats"
+>
+                2004
+                : 
+                0.24
+</li>,
+              <li
+                className="lowStats"
+>
+                2005
+                : 
+                0.278
+</li>,
+              <li
+                className="lowStats"
+>
+                2006
+                : 
+                0.337
+</li>,
+              <li
+                className="lowStats"
+>
+                2007
+                : 
+                0.395
+</li>,
+              <li
+                className="highStats"
+>
+                2008
+                : 
+                0.536
+</li>,
+              <li
+                className="highStats"
+>
+                2009
+                : 
+                0.598
+</li>,
+              <li
+                className="highStats"
+>
+                2010
+                : 
+                0.64
+</li>,
+              <li
+                className="highStats"
+>
+                2011
+                : 
+                0.672
+</li>,
+              <li
+                className="highStats"
+>
+                2012
+                : 
+                0.695
+</li>,
+              <li
+                className="highStats"
+>
+                2013
+                : 
+                0.703
+</li>,
+              <li
+                className="highStats"
+>
+                2014
+                : 
+                0.741
+</li>,
+            ],
+            "className": "stats",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    "2004",
+                  ],
+                  ": ",
+                  0.24,
+                ],
+                "className": "lowStats",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2004",
+                ": ",
+                0.24,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    "2005",
+                  ],
+                  ": ",
+                  0.278,
+                ],
+                "className": "lowStats",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2005",
+                ": ",
+                0.278,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "2",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    "2006",
+                  ],
+                  ": ",
+                  0.337,
+                ],
+                "className": "lowStats",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2006",
+                ": ",
+                0.337,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "3",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    "2007",
+                  ],
+                  ": ",
+                  0.395,
+                ],
+                "className": "lowStats",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2007",
+                ": ",
+                0.395,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "4",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    "2008",
+                  ],
+                  ": ",
+                  0.536,
+                ],
+                "className": "highStats",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2008",
+                ": ",
+                0.536,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "5",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    "2009",
+                  ],
+                  ": ",
+                  0.598,
+                ],
+                "className": "highStats",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2009",
+                ": ",
+                0.598,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "6",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    "2010",
+                  ],
+                  ": ",
+                  0.64,
+                ],
+                "className": "highStats",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2010",
+                ": ",
+                0.64,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "7",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    "2011",
+                  ],
+                  ": ",
+                  0.672,
+                ],
+                "className": "highStats",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2011",
+                ": ",
+                0.672,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "8",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    "2012",
+                  ],
+                  ": ",
+                  0.695,
+                ],
+                "className": "highStats",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2012",
+                ": ",
+                0.695,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "9",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    "2013",
+                  ],
+                  ": ",
+                  0.703,
+                ],
+                "className": "highStats",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2013",
+                ": ",
+                0.703,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "10",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    "2014",
+                  ],
+                  ": ",
+                  0.741,
+                ],
+                "className": "highStats",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2014",
+                ": ",
+                0.741,
+              ],
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
