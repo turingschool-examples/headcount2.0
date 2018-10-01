@@ -6,7 +6,7 @@ export default class DistrictRepository {
         obj[Location.toUpperCase()] = {location: Location.toUpperCase()}
         obj[Location.toUpperCase()].stats = {}
       }
-      obj[Location.toUpperCase()].stats[point.TimeFrame] = (Math.round(Data * 1000) / 1000)
+      obj[Location.toUpperCase()].stats[point.TimeFrame] = (Math.round(Data * 1000) / 1000 || 0)
 
       return obj
     }, {})
