@@ -18,15 +18,16 @@ export default class DistrictRepository {
     // })
     // console.log(this.stats)
   }
+   findByName = (name) => {
+    // if (!name === null) { 
+      // const schoolName = name.toUpperCase()
+      return this.stats[name]
+    // }
+  }
 }
 
 
 
 
- // findByName = (name) => {
- //    // if (!name === null) { 
- //      // const schoolName = name.toUpperCase()
- //      return this.stats[name]
- //    // }
- //  }
+
 
