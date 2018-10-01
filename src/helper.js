@@ -5,10 +5,11 @@ export default class DistrictRepository {
 
   formatStats = stats => {
     return stats.reduce((acc, stat) => {
-      if(acc[stat.Location]) {
-        acc[stat.Location][stat.TimeFrame] = stat.Data
+      const {Location, TimeFrame, Data} = stat;
+      if(acc[Location]) {
+        acc[Location][TimeFrame] = Data
       } else {
-        acc[stat.Location] = {[stat.TimeFrame] : stat.Data}
+        acc[Location] = {[TimeFrame] : Data}
       }
       return acc;
     },{})
