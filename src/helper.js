@@ -5,7 +5,8 @@ export default class DistrictRepository {
 
   formatStats = stats => {
     return stats.reduce((acc, stat) => {
-      const {Location, TimeFrame, Data} = stat;
+      let {TimeFrame, Data} = stat;
+      let Location = stat.Location.toUpperCase();
       if(acc[Location]) {
         acc[Location][TimeFrame] = Data
       } else {
@@ -14,4 +15,28 @@ export default class DistrictRepository {
       return acc;
     },{})
   }
+
+  findByName = name => {
+    if (!name) return undefined;
+    
+    const result = Object.keys(this.stats).find(place => {
+      return place.toLowerCase().includes(name.toLowerCase());    
+    });
+
+    if (!result) return undefined;
+    return {location: result};
+  }
+
+  findAverage = () => {
+
+  }
+
+  findAllMatches = () => {
+
+  }
+
+  compareDistrictAverage = () => {
+
+  }
+
 }
