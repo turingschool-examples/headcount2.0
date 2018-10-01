@@ -1,11 +1,17 @@
 export default class DistrictRepository {
   constructor(data) {
-    this.stats = {}
-    data.forEach((point) => {
-      if (!this.stats[point.Location]) {
-        this.stats[point.Location] = {}
+    this.stats = data.reduce((obj, point) => {
+      if (!obj[point.Location]) {
+        obj[point.Location] = {}
       }
-      this.stats[point.Location][point.TimeFrame] = point.Data
-    })
+      obj[point.Location][point.TimeFrame] = point.Data
+      return obj
+    }, {})
+  }
+}
+
+const findByName = (district) => {
+  if (!district) {
+    return undefined;
   }
 }
