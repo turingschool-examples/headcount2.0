@@ -14,17 +14,18 @@ export default class DistrictRepository {
       return acc 
     }, {})
   }
-  findByName = (name) => {
-    // console.log(this.stats)
-    if(name === undefined) {
+  findByName = (str) => {
+    let correctLocation = Object.keys(this.stats).find(stat => { 
+      if(stat === str){
+        return this.stats[str]
+      } 
+    })
+
+    if(str === undefined || str !== correctLocation) {
       return undefined
     } else {
-    const correctLocation = Object.keys(this.stats).find(stat => { 
-      if(stat === name){
-        console.log(this.stats[name])
-        return this.stats[name]
-      } return correctLocation
-    }) 
+      console.log({[correctLocation]: this.stats[str]})
+     return {[correctLocation]: this.stats[str]}
   } 
 }
 }
