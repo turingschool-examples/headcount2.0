@@ -16,9 +16,6 @@ export default class DistrictRepository {
   }
   findByName = (name) => {
     // console.log(this.stats)
-    if(name === undefined) {
-      return undefined
-    } else {
     const correctLocation = Object.keys(this.stats).find(stat => { 
       if(stat === name){
         console.log(this.stats[name])
@@ -26,5 +23,4 @@ export default class DistrictRepository {
       } return correctLocation
     }) 
   } 
-}
 }
