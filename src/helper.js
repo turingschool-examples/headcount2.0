@@ -19,7 +19,20 @@ export default class DistrictRepository {
     };
   }
 
-  findAllMatching(search) {
+  findAllMatches(search) {
+    if(!search) search = ''
+    const searchResults = Object.keys(this.stats).filter(keyName => {
+      return keyName.toLowerCase().includes(search.toLowerCase());
+    });
+
+    const resultData = searchResults.map(result => {
+      return {
+        location: result,
+        stats: this.stats[result]
+      }
+    });
+
+    return resultData;
   }
 
   cleanData(stats) {
