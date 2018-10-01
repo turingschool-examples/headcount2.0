@@ -8,9 +8,9 @@ export default class DistrictRepository {
       let {TimeFrame, Data} = stat;
       let Location = stat.Location.toUpperCase();
       if(acc[Location]) {
-        acc[Location][TimeFrame] = Data
+        acc[Location][TimeFrame] = Math.round(Data * 1000) / 1000
       } else {
-        acc[Location] = {[TimeFrame] : Data}
+        acc[Location] = {[TimeFrame] : Math.round(Data * 1000) / 1000}
       }
       return acc;
     },{})
