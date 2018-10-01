@@ -24,7 +24,7 @@ export default class DistrictRepository {
     });
 
     if (!result) return undefined;
-    return {location: result};
+    return {location: result, stats: this.stats[result]};
   }
 
   findAverage = () => {
