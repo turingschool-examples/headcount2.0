@@ -3,17 +3,24 @@ import Kinderdata from './data/kindergartners_in_full_day_program.js'
 
 export default class DistrictRepository {
   constructor(kinderData) {
-    this.stats = {};
+    this.kinderData = kinderData;
+    this.stats = this.makeStats();
   }
 
 
   makeStats = () => {
-    this.kinderData.reduce((unit, thingy) => {
-      if (!acc[thingy.Location]) {
-        acc[thingy.Location]
+    let obj = this.kinderData.reduce((unit, thingy) => {
+      if (!unit[thingy.Location]) {
+    unit[thingy.Location] = {
+      [ thingy.TimeFrame]: thingy.Data
       }
+    } else {
+      unit[thingy.Location][thingy.TimeFrame] = thingy.Data
+    } 
 
-      return acc[thingy.location[thingy.TimeFrame]] = [thingy.TimeFrame] 
-    }, this.stats)
+    return unit
+    }, {})
+    
+    return obj
   }
 }
