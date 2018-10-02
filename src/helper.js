@@ -5,18 +5,31 @@ export default class DistrictRepository {
 
   cleanData = (newData) => {
     return newData.reduce((cleanData, entry) => {
+      const upperLocale = (entry.Location).toUpperCase()
+
       if (!Object.keys(cleanData).includes(entry.Location)) {
-        cleanData[entry.Location] = {data: {[entry.TimeFrame]: (entry.Data)}}
+        cleanData[upperLocale] = { data: {[entry.TimeFrame]: (entry.Data)}}
       } else {
-        cleanData[entry.Location].data[entry.TimeFrame] = entry.Data
+        cleanData[upperLocale].data[entry.TimeFrame] = entry.Data
       }
 
       return cleanData
     }, {})
   }
 
-  findByName(schoolName) {
+  findByName = (query) => {
+    if (query) {
+      const upperQuery = query.toUpperCase();
 
+      if (this.stats[upperQuery]) {
+        const foundSchool = this.stats[upperQuery]
+        const result = {location: query.toUpperCase(), data: foundSchool.data}
+
+        return result;
+      } else {
+        return undefined;
+      }
+    }
   }
 
 }
