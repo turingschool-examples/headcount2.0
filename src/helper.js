@@ -4,27 +4,31 @@ export default class DistrictRepository {
   }
   cleanData = (stats) => {
     return stats.reduce((acc, district) => {
-      if(!acc[district.Location]){
-        acc[district.Location] = {
+      if(!acc[district.Location.toUpperCase()]){
+        acc[district.Location.toUpperCase()] = {
           [district.TimeFrame]: district.Data
         } 
     } else { 
-       Object.assign( acc[district.Location], {[district.TimeFrame]: district.Data})  
+       Object.assign( acc[district.Location.toUpperCase()], {[district.TimeFrame]: district.Data})  
     }
       return acc 
     }, {})
   }
   findByName = (str) => {
+    if(str){
+      str = str.toUpperCase()
+    }
     let correctLocation = Object.keys(this.stats).find(stat => { 
-      if(stat === str){
+      if(stat.toUpperCase() === str){
         return this.stats[str]
       } 
     })
 
-    if(str === undefined || str !== correctLocation) {
-      return undefined
+
+    if(correctLocation) { 
+     return {location: correctLocation, stats: this.stats[str]}
     } else {
-     return {[correctLocation]: this.stats[str]}
+      return undefined
   } 
 }
 }
