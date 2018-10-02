@@ -25,16 +25,36 @@ export default class DistrictRepository {
     const result = Object.keys(this.stats).find(place => {
       return place.toLowerCase().includes(name.toLowerCase());    
     });
+    
     if (!result) return undefined;
+
     return {location: result, stats: this.stats[result]};
   }
+
+
 
   findAverage = () => {
 
   }
 
-  findAllMatches = () => {
+  findAllMatches = (name = '') => {
 
+    const places = Object.keys(this.stats)
+    const defaultResults = places.map(place => this.stats[place]);
+    const filteredList = Object.keys(this.stats).filter(place => {
+      return place.toLowerCase().includes(name.toLowerCase());
+    });
+    
+    const expectedResults = filteredList.map(place => {
+      return {location: place, stats: this.stats[place]}
+    });
+
+
+
+
+    
+
+     return expectedResults;
   }
 
   compareDistrictAverage = () => {
