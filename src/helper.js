@@ -6,23 +6,28 @@ export default class DistrictRepository {
       }
 
       const { TimeFrame, Data } = schoolData;
-      district[schoolData.Location][TimeFrame] = Data;
+      district[schoolData.Location][TimeFrame] = Math.round(Data * 100) / 100 || 0;
 
       return district; 
     }, {})
-
-    // data.forEach( schoolDist => {
-    //   if (!this.stats[schoolDist.Location]) {
-    //     this.stats[schoolDist.Location] = {}
-    //   }
-    // })
-    // console.log(this.stats)
   }
-   findByName = (name) => {
-    // if (!name === null) { 
-      // const schoolName = name.toUpperCase()
-      return this.stats[name]
-    // }
+
+  findByName(name) {
+    if (name) {
+      const schoolNames = Object.keys(this.stats)
+
+      const foundSchool = schoolNames.reduce( (schoolObj, school) => {
+        if (school.match(name)) {
+          schoolObj.location = name.toUpperCase()
+          schoolObj.stats = this.stats[name]
+        }
+        return schoolObj;
+      }, {})
+      
+      if (schoolNames.includes(name)) {
+        return foundSchool;
+      }
+    }
   }
 }
 
