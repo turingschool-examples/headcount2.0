@@ -12,3 +12,5 @@ class DataHeader extends Component {
     )
   }
 }
+
+export default DataHeader;

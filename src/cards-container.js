@@ -14,3 +14,5 @@ class CardsContainer extends Component {
     )
   }
 }
+
+export default CardsContainer;

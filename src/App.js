@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+
 import './App.css';
 import DataHeader from './data-header';
+import CardsContainer from './cards-container';
 
 
 class App extends Component {
