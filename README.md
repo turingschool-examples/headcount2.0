@@ -108,7 +108,7 @@ The search should be *case insensitive* and should fire on each key press.
 
 ### Iteration 4 - Comparative Data Analysis  
 
-Now that we can average and search for individual districts, we should be able to compare two districts to each other. For iteration 4, create a new method on DistrictRepository called `compareDistrictAverages`. This will take in two arguments and return an answer rounded to the nearest hundredth. There are existing tests to help you with this step.  
+Now that we can average and search for individual districts, we should be able to compare two districts to each other. For iteration 4, create a new method on DistrictRepository called `compareDistrictAverages`. This will take in two arguments and return an answer rounded to the nearest thousandth. There are existing tests to help you with this step.  
 
 Example:  
 
