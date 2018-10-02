@@ -23,7 +23,7 @@ export default class DistrictRepository {
 
       if (this.stats[upperQuery]) {
         const foundSchool = this.stats[upperQuery]
-        const result = {location: query.toUpperCase(), data: foundSchool.data}
+        const result = {location: query.toUpperCase(), stats: foundSchool.data}
 
         return result;
       } else {
