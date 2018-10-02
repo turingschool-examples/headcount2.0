@@ -12,7 +12,7 @@ export default class DistrictRepository {
       }
       
       if(acc[district]) {
-        acc[district].push(item)
+        acc[district].push({[item.TimeFrame]: item.Data})
       }
 
       return acc
@@ -31,12 +31,10 @@ export default class DistrictRepository {
     if (!name || !statKeys.includes(capName)){
       return undefined
     } else if (statKeys.includes(capName)) {
-      let districtObj = statKeys.find((school) => {
-        if (this.stats[school] === this.stats[capName]) {
-          return this.stats[school]
+        return {
+          location: capName,
+          data: this.stats[capName]
         }
-      })
-      // console.log(districtObj)
     }
   }
 }
