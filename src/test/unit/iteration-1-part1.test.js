@@ -17,13 +17,13 @@ describe('DistrictRepository iteration 1 - part 1', () =>  {
     expect(district.findByName('Colorado').location).toEqual('COLORADO');
   });
 
-  test('findByName search is not case sensitive', () => {
+  test('findByName search is not case sensitive', () => {   
     expect(district.findByName('ColoRAdo').location).toEqual('COLORADO');
     expect(district.findByName('ACADEmY 20').location).toEqual('ACADEMY 20');
   });
 
   test('each district has a data object containing each year and its data as key value pairs.', () => {
-    console.log(district)
+ 
     const academy = district.findByName('ACADEmY 20');
 
     expect(academy.location).toEqual('ACADEMY 20');

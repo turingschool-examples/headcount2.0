@@ -6,25 +6,25 @@ export default class DistrictRepository {
 
   cleanData(stats) {
     return stats.reduce((acc, district) => {
-      if (!acc[district.Location]) {
-        acc[district.Location] = {
-          location: district.Location.toUpperCase(),
-          [district.TimeFrame]: district.Data
+      if (!acc[district.Location.toUpperCase()]) {
+        acc[district.Location.toUpperCase()] = {
+          [district.TimeFrame]: Math.round(district.Data * 1000) / 1000
         }
       } else {
-        acc[district.Location][district.TimeFrame] = district.Data
+        acc[district.Location.toUpperCase()][district.TimeFrame] = Math.round(district.Data * 1000) / 1000
       }
       return acc;
     }, {})
   }
 
   findByName(string) {
-    if (string === undefined) {
-      return undefined;
+    if (string) {
+      string = string.toUpperCase()
+      return Object.keys(this.stats).includes(string) 
+        ? { location: string, stats: this.stats[string]}
+        : undefined 
     } else {
-      string = string.toUpperCase();
-      
-     
+      return undefined;
     }
   }
 
