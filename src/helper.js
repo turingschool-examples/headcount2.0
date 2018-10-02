@@ -1,7 +1,6 @@
 export default class DistrictRepository {
   constructor(stats) {
     this.stats = this.formatStats(stats);
-    console.log(this.stats)
   }
 
   formatStats = stats => {
@@ -14,7 +13,7 @@ export default class DistrictRepository {
       if(acc[Location]) {
         acc[Location][TimeFrame] = Math.round(Data * 1000) / 1000
       } else {
-        acc[Location] = {[TimeFrame] : Math.round(Data * 1000) / 1000}
+        acc[Location] = {[TimeFrame] : Math.round(Data  * 1000) / 1000}
       }
       return acc;
     },{});
