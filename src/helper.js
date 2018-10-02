@@ -10,15 +10,15 @@ export default class DistrictRepository {
 
       if (!schools[year.Location]) {
         schools[year.Location] = {
-          stats: {[year.TimeFrame]: roundedYear},
-          location: year.Location.toUpperCase()
+          [year.TimeFrame]: roundedYear
         }
       } else {
-        Object.assign(schools[year.Location].stats, {[year.TimeFrame]: roundedYear});
+        Object.assign(schools[year.Location], {[year.TimeFrame]: roundedYear});
       }
       return schools;
     }, {});
     return cleanData;
+
   }
 
   findByName = (enteredName) => {
