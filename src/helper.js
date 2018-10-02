@@ -2,6 +2,7 @@ export default class DistrictRepository {
   constructor(data) {
     this.stats = this.condenseData(data);
   }
+
   condenseData = data => {
     return data.reduce((acc, school) => {
       let district = school.Location.toUpperCase();
