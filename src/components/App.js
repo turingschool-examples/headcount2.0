@@ -10,7 +10,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      cards: null
+      cards: []
     }
   }
 
@@ -29,7 +29,7 @@ class App extends Component {
       <div>
         {/* <Search/>
         <Compare/> */}
-        <CardContainer/>
+        <CardContainer cards={this.state.cards}/>
       </div>
     );
   }

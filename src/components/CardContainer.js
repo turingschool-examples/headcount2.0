@@ -1,9 +1,12 @@
 import React from 'react';
+import Card from './Card';
 
-const CardContainer = (props) => {
+const CardContainer = ({cards}) => {
+  
+  const allCards = cards.map(card => <Card location={card.location} stats={card.stats}/>)
   return(
-    <div>
-      hey
+    <div className='card-container'>
+     { allCards }
     </div>
   )
 }
