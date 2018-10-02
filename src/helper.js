@@ -6,19 +6,29 @@ export default class DistrictRepository {
   eliminateDupes(array) {
     let stats = array.reduce((acc, item) => {
       const district = item.Location.toUpperCase()
+      const districtData = this.defaultData(item.Data)
 
       if (!acc[district]) {
-      acc[district] = []
+      acc[district] = {[item.TimeFrame]: districtData}
       }
       
       if(acc[district]) {
-        acc[district].push({[item.TimeFrame]: item.Data})
+        acc[district] = {...acc[district],
+          [item.TimeFrame]: districtData}
       }
 
       return acc
     },{})
 
     return stats
+  }
+
+  defaultData(itemData) {
+    if (typeof itemData !== 'number') {
+      return 0
+    } else {
+      return Math.round(itemData*1000)/1000
+    } 
   }
 
   findByName(name) {
@@ -33,7 +43,7 @@ export default class DistrictRepository {
     } else if (statKeys.includes(capName)) {
         return {
           location: capName,
-          data: this.stats[capName]
+          stats: this.stats[capName]
         }
     }
   }
