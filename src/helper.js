@@ -8,19 +8,30 @@ export default class DistrictRepository {
       if (!acc[district]) {
         acc[district] = {
           location: district,
-          years: {}
+          stats: {}
         };
       }
-      acc[district].years[school.TimeFrame] =
+      acc[district].stats[school.TimeFrame] =
         Math.round(1000 * school.Data) / 1000 || 0;
       return acc;
     }, {});
   };
+
   findByName = name => {
-    //console.log(name)
-    if (!name) {
-      return undefined
-    }
+    if (!name) return undefined;
     return this.stats[name.toUpperCase()];
-  }
+  };
+
+  findAllMatches = name => {
+    if (!name) return this.stats;
+    const schools = Object.keys(this.stats);
+    const results = schools.reduce((acc, school) => {
+      if (school.includes(name.toUpperCase())) {
+        acc.push(school);
+      }
+      return acc;
+    }, []);
+
+    return results;
+  };
 }
