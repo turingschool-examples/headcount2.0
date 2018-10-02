@@ -1,6 +1,7 @@
 export default class DistrictRepository {
   constructor(stats) {
     this.stats = this.formatStats(stats);
+    console.log(this.stats)
   }
 
   formatStats = stats => {
@@ -16,7 +17,7 @@ export default class DistrictRepository {
         acc[Location] = {[TimeFrame] : Math.round(Data * 1000) / 1000}
       }
       return acc;
-    },{})
+    },{});
   }
 
   findByName = name => {
@@ -25,7 +26,6 @@ export default class DistrictRepository {
     const result = Object.keys(this.stats).find(place => {
       return place.toLowerCase().includes(name.toLowerCase());    
     });
-
     if (!result) return undefined;
     return {location: result, stats: this.stats[result]};
   }
