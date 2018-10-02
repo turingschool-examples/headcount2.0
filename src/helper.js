@@ -3,15 +3,17 @@ export default class DistrictRepository {
     this.stats = this.cleanData(stats)
   }
 
-
   cleanData(stats) {
     return stats.reduce((acc, district) => {
-      if (!acc[district.Location.toUpperCase()]) {
-        acc[district.Location.toUpperCase()] = {
-          [district.TimeFrame]: Math.round(district.Data * 1000) / 1000
+      const TimeFrame = district.TimeFrame;
+      const Data = Math.round(district.Data * 1000) / 1000 || 0
+      const location = district.Location.toUpperCase();
+      if (!acc[location]) {
+        acc[location] = {
+          [TimeFrame]: Data
         }
       } else {
-        acc[district.Location.toUpperCase()][district.TimeFrame] = Math.round(district.Data * 1000) / 1000
+        acc[location][TimeFrame] = Data
       }
       return acc;
     }, {})
