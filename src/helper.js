@@ -5,13 +5,14 @@ export default class DistrictRepository {
   
   eliminateDupes(array) {
     let stats = array.reduce((acc, item) => {
-      
-      if (!acc[item.Location]) {
-      acc[item.Location] = []
+      const district = item.Location.toUpperCase()
+
+      if (!acc[district]) {
+      acc[district] = []
       }
       
-      if(acc[item.Location]) {
-        acc[item.Location].push({[item.TimeFrame]: item.Data})
+      if(acc[district]) {
+        acc[district].push(item)
       }
 
       return acc
@@ -22,14 +23,20 @@ export default class DistrictRepository {
 
   findByName(name) {
     let statKeys = Object.keys(this.stats)
-    statKeys = statKeys.map((key) => {
-      return key.toUpperCase()
-    })
-
-    if (!name || !statKeys.includes(name.toUpperCase())){
+// console.log(this.stats)
+    if (name) {
+      var capName = name.toUpperCase()
+    }   
+    
+    if (!name || !statKeys.includes(capName)){
       return undefined
-    } else if (statKeys.includes(name.toUpperCase())) {
-      return 22
+    } else if (statKeys.includes(capName)) {
+      let districtObj = statKeys.find((school) => {
+        if (this.stats[school] === this.stats[capName]) {
+          return this.stats[school]
+        }
+      })
+      // console.log(districtObj)
     }
   }
 }
