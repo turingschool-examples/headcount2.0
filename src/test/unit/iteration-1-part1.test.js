@@ -14,6 +14,9 @@ describe('DistrictRepository iteration 1 - part 1', () =>  {
 
   test('findByName returns an object with its individual district information', () => {
 
+        console.log(district.findByName('Colorado'))
+
+
     expect(typeof district.findByName('Colorado')).toEqual('object');
     expect(district.findByName('Colorado').location).toEqual('COLORADO');
   });
