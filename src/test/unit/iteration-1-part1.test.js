@@ -13,7 +13,6 @@ describe('DistrictRepository iteration 1 - part 1', () =>  {
   });
 
   test('findByName returns an object with its individual district information', () => {
-
     expect(typeof district.findByName('Colorado')).toEqual('object');
     expect(district.findByName('Colorado').location).toEqual('COLORADO');
   });
@@ -25,7 +24,6 @@ describe('DistrictRepository iteration 1 - part 1', () =>  {
 
   test('each district has a data object containing each year and its data as key value pairs.', () => {
     const academy = district.findByName('ACADEmY 20');
-
     expect(academy.location).toEqual('ACADEMY 20');
     expect(typeof academy.stats).toBe('object');
   });
@@ -39,6 +37,7 @@ describe('DistrictRepository iteration 1 - part 1', () =>  {
 
   test('district data is sanitized and defaults to 0', () => {
     const academy = district.findByName('ARICKAREE R-2');
+    console.log(academy)
     const result = {"2004": 1, "2005": 0, "2006": 0.125, "2007": 0, "2008": 1, "2009": 1, "2010": 1, "2011": 1, "2012": 1, "2013": 1, "2014": 1}
 
     expect(academy.stats).toEqual(result)
