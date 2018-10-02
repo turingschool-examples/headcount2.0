@@ -19,5 +19,21 @@ export default class DistrictRepository {
       return this.stats[query.toUpperCase()]
     }
   }
+
+  findAllMatches = (query) => {
+    if (query === undefined) {
+      return Object.keys(this.stats).reduce((accumulator, district) => {
+        accumulator.push(this.stats[district]);
+        return accumulator;
+      }, [])
+    } else {
+      return Object.keys(this.stats).reduce((accumulator, district) => {
+        if (this.stats[district].location.includes(query.toUpperCase())) {
+          accumulator.push(this.stats[district])
+        }
+        return accumulator;
+      }, [])
+    }
+  }
 }
 
