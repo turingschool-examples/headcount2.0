@@ -4,6 +4,7 @@ import kinderData from '../data/kindergartners_in_full_day_program.js';
 import DistrictRepository from '../helper.js'
 
 import CardContainer from './CardContainer'
+import InputField from './InputField'
 
 import '../css/App.css';
 
@@ -20,6 +21,7 @@ class App extends Component {
     return (
       <main className="app">
         <h1>Welcome To Headcount 2.0</h1>
+        <InputField />
         <CardContainer data={this.state.data} />
       </main>
     );
