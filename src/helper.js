@@ -24,7 +24,6 @@ export default class DistrictRepository {
     if(str === undefined || str !== correctLocation) {
       return undefined
     } else {
-      console.log({[correctLocation]: this.stats[str]})
      return {[correctLocation]: this.stats[str]}
   } 
 }
