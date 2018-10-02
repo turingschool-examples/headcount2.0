@@ -3,15 +3,20 @@ export default class DistrictRepository {
     this.stats = this.cleanData(newData)
   }
 
-    cleanData = (newData) => {
-      return newData.reduce((cleanData, entry) => {
-        if (!Object.keys(cleanData).includes(entry.Location)) {
-          cleanData[entry.Location] = {data: {[entry.TimeFrame]: (entry.Data)}}
-        } else {
-          cleanData[entry.Location].data[entry.TimeFrame] = entry.Data
-        }
+  cleanData = (newData) => {
+    return newData.reduce((cleanData, entry) => {
+      if (!Object.keys(cleanData).includes(entry.Location)) {
+        cleanData[entry.Location] = {data: {[entry.TimeFrame]: (entry.Data)}}
+      } else {
+        cleanData[entry.Location].data[entry.TimeFrame] = entry.Data
+      }
 
-        return cleanData
-      }, {})
-    }
+      return cleanData
+    }, {})
+  }
+
+  findByName(schoolName) {
+
+  }
+
 }
