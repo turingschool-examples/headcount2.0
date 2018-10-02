@@ -31,7 +31,14 @@ export default class DistrictRepository {
           return location;
         }
       })
-      return this.stats[correctDistrict]
+
+      if (correctDistrict) {
+        correctDistrict = correctDistrict.toUpperCase()
+        return {
+          location: correctDistrict,
+          stats: this.stats[correctDistrict]
+        }
+      }
     } else {
       return undefined
     }
@@ -39,8 +46,20 @@ export default class DistrictRepository {
 
   findAllMatches = (entry) => {
     const locations = Object.keys(this.stats)
+    const returnData = [];
 
-
+    if (entry) {
+      locations.forEach( location => {
+        if (location.toLowerCase().includes(entry.toLowerCase())) {
+          returnData.push(this.stats[location])
+        }
+      })
+    } else {
+      locations.forEach( location => {
+        returnData.push(this.stats[location])
+      })
+    }
+    return returnData;
   }
 
 }
