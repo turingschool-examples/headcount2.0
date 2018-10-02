@@ -33,4 +33,10 @@ export default class DistrictRepository {
     }
   }
 
+  findAllMatches = (query) => {
+    const result = []
+
+    return result
+  }
+
 }
