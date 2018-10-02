@@ -5,12 +5,13 @@ export default class DistrictRepository {
 
   cleanData = (newData) => {
     return newData.reduce((cleanData, entry) => {
-      const upperLocale = (entry.Location).toUpperCase()
+      const upperLocale = entry.Location.toUpperCase()
+      const roundedData = Number.parseFloat(Number.parseFloat(entry.Data).toFixed(3))
 
       if (!Object.keys(cleanData).includes(entry.Location)) {
-        cleanData[upperLocale] = { data: {[entry.TimeFrame]: (entry.Data)}}
+        cleanData[upperLocale] = { data: {[entry.TimeFrame]: roundedData || 0} }
       } else {
-        cleanData[upperLocale].data[entry.TimeFrame] = entry.Data
+        cleanData[upperLocale].data[entry.TimeFrame] = roundedData || 0
       }
 
       return cleanData
@@ -23,7 +24,7 @@ export default class DistrictRepository {
 
       if (this.stats[upperQuery]) {
         const foundSchool = this.stats[upperQuery]
-        const result = {location: query.toUpperCase(), stats: foundSchool.data}
+        const result = {location: upperQuery, stats: foundSchool.data}
 
         return result;
       } else {
