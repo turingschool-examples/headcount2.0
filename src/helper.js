@@ -9,18 +9,33 @@ export default class DistrictRepository {
 
 
   makeStats = () => {
-    let obj = this.kinderData.reduce((unit, thingy) => {
-      if (!unit[thingy.Location]) {
-    unit[thingy.Location] = {
-      [ thingy.TimeFrame]: thingy.Data
+    let district = this.kinderData.reduce((Unit, School) => {
+      if ( School.Data === 'N/A') {
+        School.Data = 0;
       }
-    } else {
-      unit[thingy.Location][thingy.TimeFrame] = thingy.Data
+      if (!Unit[School.Location]) {
+        Unit[School.Location.toUpperCase()] = {
+          stats: {[School.TimeFrame]: Math.round(School.Data * 1000) / 1000},
+          location: School.Location.toUpperCase()
+        }
+      } else {
+      Unit[School.Location].stats={
+        ...Unit[School.Location].stats,
+        [School.TimeFrame] : Math.round(School.Data * 1000) / 1000}
     } 
 
-    return unit
+      return Unit
     }, {})
-    
-    return obj
+    console.log(district.stats)
+    return district
   }
+
+  findByName = (name) => {
+    if (!name) {
+    console.log(typeof(this.makeStats()))
+      return undefined
+    }
+    return this.stats[name.toUpperCase()]
+  }
+
 }
