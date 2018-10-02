@@ -40,7 +40,6 @@ export default class DistrictRepository {
         return acc;
       }, [])
     } else { 
-      // console.log(Object.keys(this.stats).map(district => `${district}: ${this.stats[district]}`))
       return Object.keys(this.stats).map(district => `${district}: ${this.stats[district]}`)
     }
   }
