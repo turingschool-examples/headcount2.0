@@ -35,12 +35,14 @@ export default class DistrictRepository {
       string = string.toUpperCase();
       return Object.keys(this.stats).reduce((acc, district) => {
         if (district.includes(string)) {
-          acc.push(this.stats[district])
+          acc.push({ location: string, stats: this.stats[string]})
         }
         return acc;
       }, [])
     } else { 
-      return Object.keys(this.stats).map(district => `${district}: ${this.stats[district]}`)
+      return Object.keys(this.stats).map(district => {
+        return { stats: this.stats[district], location: district}
+      })
     }
   }
 
