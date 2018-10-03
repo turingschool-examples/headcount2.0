@@ -27,7 +27,9 @@ describe('App', ()=>{
       selection: []
     }
 
-    expect(wrapper.state()).toEqual(mockState)
+    expect(wrapper.state().filter).toEqual(mockState.filter);
+    expect(wrapper.state().selection).toEqual(mockState.selection);
+    // expect(wrapper.state().data).toEqual(new DistrictRepository(kinderData))
   });
 
   // it('should call setState on filter when processFilter() is called', () => {
@@ -60,5 +62,70 @@ describe('App', ()=>{
   //   expect(wrapper.state()).toEqual(mockState)
   // })
 
+  it('should add an district to this.state.selection when called', () => {
+    const argument = {
+      location: 'ADAMS COUNTY 14',
+      stats: {
+        2004: 0.228, 
+        2005: 0.3, 
+        2006: 0.293, 
+        2007: 0.306, 
+        2008: 0.673,
+        2009: 1,
+        2010: 1,
+        2011: 1,
+        2012: 1,
+        2013: 0.998,
+        2014: 1
+      }
+    }
+    wrapper.instance().processSelection(argument)
+    expect(wrapper.state().selection).toEqual([argument])
+  })
+
+  it('should remove a district from this.state.selection if called twice', () => {
+    const argument = {
+      location: 'ADAMS COUNTY 14',
+      stats: {
+        2004: 0.228, 
+        2005: 0.3, 
+        2006: 0.293, 
+        2007: 0.306, 
+        2008: 0.673,
+        2009: 1,
+        2010: 1,
+        2011: 1,
+        2012: 1,
+        2013: 0.998,
+        2014: 1
+      }
+    }
+    wrapper.instance().processSelection(argument)
+    wrapper.instance().processSelection(argument)
+    expect(wrapper.state().selection).toEqual([])
+  })
+
+  it('should set this.state.selection to an empty array when clearSelections is called', () => {
+    const argument = {
+      location: 'ADAMS COUNTY 14',
+      stats: {
+        2004: 0.228, 
+        2005: 0.3, 
+        2006: 0.293, 
+        2007: 0.306, 
+        2008: 0.673,
+        2009: 1,
+        2010: 1,
+        2011: 1,
+        2012: 1,
+        2013: 0.998,
+        2014: 1
+      }
+    }
+
+    wrapper.instance().processSelection(argument)
+    wrapper.instance().clearSelections()
+    expect(wrapper.state().selection).toEqual([])
+  })
 
 });
