@@ -5,8 +5,8 @@ const Card = ({location, stats}) => {
   const statsKeys = Object.keys(stats);
   const resultsLi = statsKeys.map((years, i) => 
     <li 
-    key={Date.now() + i}
-    className={stats[years] < 0.5 ? "red" : "green"}
+      key={Date.now() + i}
+      className={stats[years] < 0.5 ? "red" : "green"}
     >
     { years } : { stats[years] }
     </li>)
