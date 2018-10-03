@@ -1,5 +1,20 @@
+form {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.submit-button {
+}
+
 .search-field {
   height: 30px;
-  margin: 20px 40%;
-  width: 30%;
+  width: 300px;
+  font-size: 22px;
+}
+
+.search-field,
+.submit-button,
+::placeholder {
+  font-size: 22px;
 }

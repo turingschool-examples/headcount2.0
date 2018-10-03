@@ -11,15 +11,20 @@ class App extends Component {
   state = {};
 
   componentDidMount = () => {
+    console.log(allSchools.findAllMatches("ColoRado"));
     const schoolData = allSchools.findAllMatches();
-    this.setState( schoolData );
+    this.setState(schoolData);
   };
 
+  handleSearch = str => {
+
+  };
+  
   render() {
     return (
       <div>
-        <Search />
-        <CardContainer cards={this.state}/>
+        <Search handleSearch={this.handleSearch} />
+        <CardContainer cards={this.state} />
       </div>
     );
   }
