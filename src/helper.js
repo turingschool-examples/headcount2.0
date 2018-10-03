@@ -29,6 +29,8 @@ export default class DistrictRepository {
       let correctDistrict = locations.find( location => {
         if (enteredName === location.toLowerCase()) {
           return location;
+        } else {
+          return false;
         }
       })
 
