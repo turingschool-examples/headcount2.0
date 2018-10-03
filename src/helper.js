@@ -5,11 +5,11 @@ export default class DistrictRepository {
 
   cleanData = (newData) => {
     return newData.reduce((cleanData, entry) => {
-      const upperLocale = entry.Location.toUpperCase()
+      const upperLocale = this.checkQuery(entry.Location)
       const roundedData = Math.round(entry.Data * 1000) / 1000
 
-      if (!Object.keys(cleanData).includes(entry.Location)) {
-        cleanData[upperLocale] = { data: {[entry.TimeFrame]: roundedData || 0} }
+      if (!Object.keys(cleanData).includes(upperLocale)) {
+        cleanData[upperLocale] = { data: { [entry.TimeFrame]: roundedData || 0 } }
       } else {
         cleanData[upperLocale].data[entry.TimeFrame] = roundedData || 0
       }
@@ -27,9 +27,8 @@ export default class DistrictRepository {
 
     if (this.stats[upperQuery]) {
       const foundSchool = this.stats[upperQuery]
-      const result = {location: upperQuery, stats: foundSchool.data}
 
-      return result;
+      return {location: upperQuery, stats: foundSchool.data}
 
     } else {
       return undefined;
@@ -38,11 +37,11 @@ export default class DistrictRepository {
 
   findAllMatches = (query) => {
     const upperQuery = this.checkQuery(query)
-    const schoolNames = Object.keys(this.stats)
-    const matchingSchools = schoolNames.filter(name => name.includes(upperQuery))
+    const districtNames = Object.keys(this.stats)
+    const matchingDistricts = districtNames.filter(name => name.includes(upperQuery))
 
-    const result = schoolNames.reduce((matches, entry) => {
-      if (matchingSchools.includes(entry) || upperQuery === undefined) {
+    return districtNames.reduce((matches, entry) => {
+      if (matchingDistricts.includes(entry) || upperQuery === undefined) {
         matches.push(entry)
         return matches
 
@@ -50,8 +49,6 @@ export default class DistrictRepository {
         return matches
       }
     }, [])
-
-    return result
   }
 
   findAverage = (district) => {
@@ -69,7 +66,6 @@ export default class DistrictRepository {
     const district1Avg = this.findAverage(district1)
     const district2Avg = this.findAverage(district2)
     const comparedAvg = Math.round((district1Avg / district2Avg) * 1000) / 1000
-
 
     return {
       [this.checkQuery(district1)]: district1Avg,
