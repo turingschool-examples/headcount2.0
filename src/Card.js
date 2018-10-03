@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Card.css";
 
 const Card = ({ location, stats }) => {
@@ -6,7 +6,9 @@ const Card = ({ location, stats }) => {
   return (
     <div>
       <h1>{location}</h1>
-      <p>{years.map(year => <p key={year}>{stats[year]}</p>)}</p>
+      {years.map(year => (
+        <p key={year}>{stats[year]}</p>
+      ))}
     </div>
   );
 };
