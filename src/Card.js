@@ -2,17 +2,10 @@ import React, { Component } from 'react'
 
 
 
-class Card extends Component {
-  constructor({Data}) {
-    super({Data})
-  }
-
-  render() {
+const Card = ({location, stats}) => {
     return (
-      <div>
-      </div>
+      <h3>{location}</h3>
     )
   }
-}
 
 export default Card
