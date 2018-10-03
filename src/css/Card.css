@@ -22,14 +22,10 @@
   color: #fff;
 }
 
-.red {
-  color: red;
-}
-
-.green {
-  color: green;
-}
-
 .selected {
   border: 2px solid blue;
+}
+
+.score-wrapper p img {
+  width: 10px;
 }
