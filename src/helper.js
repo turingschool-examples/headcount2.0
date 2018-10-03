@@ -70,6 +70,8 @@ export default class DistrictRepository {
       })
       matchOutput = [...matchData]
       return matchOutput
+    } else if(!statKeys.includes(capName)) {
+      return []
     }
   }
 }
