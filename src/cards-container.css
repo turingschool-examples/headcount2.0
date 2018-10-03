@@ -1,4 +1,4 @@
-.info-cards {
+.cards-container {
   display: grid;
   font-size: .7em;
   grid-gap: 10px;
