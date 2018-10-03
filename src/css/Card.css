@@ -2,7 +2,7 @@
   width: 230px;
   margin: 1rem;
   text-align: center;
-  border: 1px solid #000;
+  border: 2px solid #000;
   border-radius: 10px;
   padding-bottom: .5rem;
 }
@@ -18,7 +18,7 @@
 
 .card:hover {
   cursor: pointer;
-  background: #000;
+  background: rgba(0, 0, 0, .8);
   color: #fff;
 }
 
@@ -30,3 +30,6 @@
   color: green;
 }
 
+.selected {
+  border: 2px solid blue;
+}

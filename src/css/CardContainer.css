@@ -3,3 +3,9 @@
   flex-flow: wrap;
   justify-content: center;
 }
+
+.comparison-container button {
+  margin: auto;
+  display: block;
+  cursor: pointer;
+}
