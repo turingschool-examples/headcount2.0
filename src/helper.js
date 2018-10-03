@@ -2,7 +2,7 @@ class DistrictRepository {
   constructor(data) {
     this.stats = data.reduce((obj, point) => {
       const { Location, TimeFrame, Data } = point;
-      if (!obj[Location]) {
+      if (!obj[Location] && !obj[Location.toUpperCase()]) {
         obj[Location.toUpperCase()] = {location: Location.toUpperCase()}
         obj[Location.toUpperCase()].stats = {}
       }
