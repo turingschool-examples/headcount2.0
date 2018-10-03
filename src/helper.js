@@ -5,11 +5,11 @@ export default class DistrictRepository {
 
   cleanData = (newData) => {
     return newData.reduce((cleanData, entry) => {
-      const upperLocale = entry.Location.toUpperCase()
-      const roundedData = Number.parseFloat(Number.parseFloat(entry.Data).toFixed(3))
+      const upperLocale = this.checkQuery(entry.Location)
+      const roundedData = Math.round(entry.Data * 1000) / 1000
 
-      if (!Object.keys(cleanData).includes(entry.Location)) {
-        cleanData[upperLocale] = { data: {[entry.TimeFrame]: roundedData || 0} }
+      if (!Object.keys(cleanData).includes(upperLocale)) {
+        cleanData[upperLocale] = { data: { [entry.TimeFrame]: roundedData || 0 } }
       } else {
         cleanData[upperLocale].data[entry.TimeFrame] = roundedData || 0
       }
@@ -27,9 +27,9 @@ export default class DistrictRepository {
 
     if (this.stats[upperQuery]) {
       const foundSchool = this.stats[upperQuery]
-      const result = {location: upperQuery, stats: foundSchool.data}
 
-      return result;
+      return {location: upperQuery, stats: foundSchool.data}
+
     } else {
       return undefined;
     }
@@ -37,19 +37,40 @@ export default class DistrictRepository {
 
   findAllMatches = (query) => {
     const upperQuery = this.checkQuery(query)
-    const schoolNames = Object.keys(this.stats)
-    const matchingSchools = schoolNames.filter(name => name.includes(upperQuery))
+    const districtNames = Object.keys(this.stats)
+    const matchingDistricts = districtNames.filter(name => name.includes(upperQuery))
 
-    const result = schoolNames.reduce((matches, entry) => {
-      if (matchingSchools.includes(entry) || upperQuery === undefined) {
+    return districtNames.reduce((matches, entry) => {
+      if (matchingDistricts.includes(entry) || upperQuery === undefined) {
         matches.push(entry)
         return matches
+
       } else {
         return matches
       }
     }, [])
+  }
 
-    return result
+  findAverage = (district) => {
+    const districtData = this.findByName(district).stats
+    const numYears = Object.keys(districtData).length
+    const sumAvg = Object.keys(districtData).reduce((sum, year) => {
+      sum += districtData[year]
+      return sum
+    }, 0)
+
+    return Math.round((sumAvg / numYears) * 1000) / 1000
+  }
+
+  compareDistrictAverages = (district1, district2) => {
+    const district1Avg = this.findAverage(district1)
+    const district2Avg = this.findAverage(district2)
+    const comparedAvg = Math.round((district1Avg / district2Avg) * 1000) / 1000
+
+    return {
+      [this.checkQuery(district1)]: district1Avg,
+      [this.checkQuery(district2)]: district2Avg,
+      "compared": comparedAvg
+    }
   }
 }
-//can combine functionality of the two by using findAllMatches as autocomplete, then returning findByName() forEach matching school.
