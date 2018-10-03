@@ -74,7 +74,8 @@ class App extends Component {
       return (
         <main className="app">
           <h1>Welcome To Headcount 2.0</h1>
-          <Comparison 
+          <Comparison
+            compareDistrictAverages={this.state.data.compareDistrictAverages}
             selection={this.state.selection} 
             clearSelections={this.clearSelections}
           />
