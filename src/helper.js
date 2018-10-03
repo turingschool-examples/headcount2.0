@@ -9,7 +9,7 @@ export default class DistrictRepository {
 		const schoolDistrict = this.data.reduce((district, location) => {
 			const school = location.Location.toLowerCase()
 			const schoolYear = location.TimeFrame
-			const schoolData = Math.round(location.Data * 1000)/1000;
+			const schoolData = Math.round(location.Data * 1000)/1000 || 0;
 
 			if (!district[school]) {
 			district[school] = 
