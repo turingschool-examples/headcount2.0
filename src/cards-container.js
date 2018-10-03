@@ -2,13 +2,21 @@ import React, { Component } from 'react';
 
 import InfoCards from './info-cards';
 
+
 class CardsContainer extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      compareCard1: {},
+      compareCard2: {}
+    }
+  }
 
   render() {
     return(
       <div className='cards-container'>
-      
-        <InfoCards />
+        <InfoCards data={this.props.data}/>
       </div>
 
     )
@@ -16,3 +24,4 @@ class CardsContainer extends Component {
 }
 
 export default CardsContainer;
+        // <Compairison compareCards={this.state}/>

@@ -6,7 +6,6 @@ describe('DistrictRepository iteration 0', () =>  {
 
   test('district has data in an object', () => {
     // remember that an array is also just an object.
-
     expect(typeof district.stats).toBe('object');
   });
 
@@ -14,7 +13,6 @@ describe('DistrictRepository iteration 0', () =>  {
     // uncomment out the tests that best fits your model
     // expect(district.stats.length).toBe(181);
     expect(Object.keys(district.stats).length).toBe(181);
-
   });
 
 });

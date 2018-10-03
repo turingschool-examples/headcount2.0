@@ -1,20 +1,30 @@
 import React, { Component } from 'react';
 
-class DataHeader extends Component {
+import './info-cards.css';
+
+// import OneCard from './one-card';
 
 
-  render() {
+
+const InfoCards = ({ data }) => {
+
+  const infoCards = Object.keys(data).map( (place, i) => {
     return (
-      <div className='data-header'>
-        <p>INFO CARD</p>
-        <p>INFO CARD</p>
-        <p>INFO CARD</p>
-        <p>INFO CARD</p>
-        <p>INFO CARD</p>
-        <p>INFO CARD</p>
+      <div className='info-card' key={Date.now() + (i * 5)}>
+        <h4>{place}</h4>
+        { Object.keys(data[place]).map( (year, i) => {
+          return <p key={Date.now() + (i * 10)}>{year}: {data[place][year]}</p>
+        })}
       </div>
     )
-  }
+  })  
+
+
+  return (
+    <div className='info-cards'>
+      {infoCards}
+    </div>
+  )
 }
 
-export default DataHeader;
+export default InfoCards;

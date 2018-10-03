@@ -8,6 +8,13 @@ describe('App', () => {
 
   it('should pass a test', () => {
     console.log("pass!")
-  })
+  }),
+
+  it('should have hold the right elements', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper).toMatchSnapshot()
+  }),
+
+  it()
 
 })
