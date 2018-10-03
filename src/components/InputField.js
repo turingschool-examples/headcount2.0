@@ -10,12 +10,11 @@ class InputField extends Component {
     }
   }
 
-
   processInput = (e) => {
     this.setState({
     input: e.target.value
     })
-    console.log(this.state)
+    
   }
 
   render() {
@@ -25,6 +24,7 @@ class InputField extends Component {
         <input 
           className="text-input"
           value={this.state.input}
+          placeholder='Enter your school district'
           onChange={(e) => {
             this.processInput(e)
           }}

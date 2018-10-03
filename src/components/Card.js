@@ -13,7 +13,7 @@ const Card = ({ data }) => {
         return (
           <Score 
             data={data.stats[year]}
-            year={year} 
+            year={year}
           />
         )
       })}

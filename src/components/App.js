@@ -12,19 +12,33 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      data: new DistrictRepository(kinderData)
+      data: undefined,
+      filter: ''
     }
   }
 
-  render() {
+  componentDidMount() {
+    this.setState({
+      data: new DistrictRepository(kinderData)
+    })
+  }
 
-    return (
-      <main className="app">
-        <h1>Welcome To Headcount 2.0</h1>
-        <InputField />
-        <CardContainer data={this.state.data} />
-      </main>
-    );
+  render() {
+    if (this.state.data) {
+      return (
+        <main className="app">
+          <h1>Welcome To Headcount 2.0</h1>
+          <InputField />
+          <CardContainer data={this.state.data} />
+        </main>
+      );
+    } else {
+      return (
+        <main className="app">
+        
+        </main>
+      )
+    }
   }
 }
 
