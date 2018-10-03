@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import kinderData from './helper/kindergartners_in_full_day_program.js';
+import kinderData from './data/kindergartners_in_full_day_program.js';
 import DistrictRepository from './helper';
+import CardContainer from './CardContainer'
 import './App.css';
 
 class App extends Component {
@@ -12,14 +13,16 @@ class App extends Component {
   }
 
   componentDidMount() {
-    let cards = new DistrictRepository
-    let data = this.findAllMatches
-    this.setState({ data })
+    let card = new DistrictRepository(kinderData) 
+    let data = card.findAllMatches()
+    this.setState({ cards: data })
   }
 
   render() {
     return (
-      <div>Welcome To Headcount 2.0</div>
+      <div>
+        <CardContainer cards={this.state.cards}/>
+      </div>
     );
   }
 }
