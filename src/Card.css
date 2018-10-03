@@ -1,0 +1,14 @@
+.card {
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 300px;
+}
+
+.school-name {
+  font-size: 22px;
+  text-align: center;
+}
+
+.school-stats {
+
+}

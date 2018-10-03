@@ -9,7 +9,7 @@ const CardContainer = ({ cards }) => {
     <Card key={school} {...cards[school]} />
   ));
 
-  return <div>{allCards}</div>;
+  return <div className="card-container">{allCards}</div>;
 };
 
 CardContainer.propTypes = {
