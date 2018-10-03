@@ -2,6 +2,7 @@ export default class DistrictRepository {
   constructor(data) {
     this.stats = this.condenseData(data);
   }
+
   condenseData = data => {
     return data.reduce((acc, school) => {
       let district = school.Location.toUpperCase();
@@ -33,5 +34,26 @@ export default class DistrictRepository {
     }, []);
 
     return results;
+  };
+
+  findAverage = name => {
+    const years = Object.keys(this.stats[name].stats);
+    const total = years.reduce((total, data) => {
+      total += this.stats[name].stats[data];
+      return total;
+    }, 0);
+    return +(total / years.length).toFixed(3);
+  };
+
+  compareDistrictAverages = (schoolOne, schoolTwo) => {
+    const schoolOneAvg = this.findAverage(schoolOne);
+    const schoolTwoAvg = this.findAverage(schoolTwo);
+    const schoolComparison = (schoolOneAvg + schoolTwoAvg) / 2;
+
+    return {
+      [schoolOne]: schoolOneAvg,
+      [schoolTwo]: schoolTwoAvg,
+      compared: schoolComparison
+    };
   };
 }
