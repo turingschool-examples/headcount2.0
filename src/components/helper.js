@@ -24,7 +24,7 @@ export default class DistrictRepository {
       string = string.toUpperCase()
       return Object.keys(this.stats).includes(string) 
         ? { location: string, stats: this.stats[string]}
-        : undefined 
+        : [] 
     } else {
       return undefined;
     }
@@ -35,7 +35,7 @@ export default class DistrictRepository {
       string = string.toUpperCase();
       return Object.keys(this.stats).reduce((acc, district) => {
         if (district.includes(string)) {
-          acc.push({ location: string, stats: this.stats[string]})
+          acc.push({ location: district, stats: this.stats[district]})
         }
         return acc;
       }, [])

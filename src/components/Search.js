@@ -17,6 +17,7 @@ class Search extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
+    this.props.filterDistricts(this.state.query)
     this.setState({ query: '' })
   }
 

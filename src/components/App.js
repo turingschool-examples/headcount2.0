@@ -13,18 +13,20 @@ class App extends Component {
     super()
     this.state = {
       cards: [],
-      compare: []
+      compare: [],
+      query: '',
+      data: new DistrictRepository(kinderData)
     }
   }
 
   componentDidMount() {
-    this.displayAllCards();
+    // this.displayAllCards();
   }
 
-  displayAllCards = () => {
-    const helper = new DistrictRepository(kinderData);
-    const cards = helper.findAllMatches();
-    this.setState({ cards })
+  
+
+  filterDistricts = (query) => {
+    this.setState({ query })
   }
 
   render() {
@@ -32,9 +34,12 @@ class App extends Component {
       <div>
         <Search
           displayAllCards={this.displayAllCards}
+          filterDistricts={this.filterDistricts}
         />
         <Compare/>
-        <CardContainer cards={this.state.cards}/>
+        <CardContainer 
+        cards={this.state.data.findAllMatches(this.state.query)}
+        />
       </div>
     );
   }
