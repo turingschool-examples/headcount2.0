@@ -12,6 +12,7 @@ const CardContainer = (props) => {
           <Card 
             data={props.data[district]}
             key={props.data[district].location}
+            processSelection={props.processSelection}
           />
         )
       })}
