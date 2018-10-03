@@ -11,7 +11,7 @@ const CardContainer = (props) => {
         return (
           <Card 
             data={props.data[district]}
-            // key={props.data[district]}
+            key={props.data[district].location}
           />
         )
       })}
