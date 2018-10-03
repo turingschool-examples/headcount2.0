@@ -8,23 +8,34 @@ import "./App.css";
 const allSchools = new DistrictRepository(kinderData);
 
 class App extends Component {
-  state = {};
+  state = { schoolData: {} };
 
   componentDidMount = () => {
-    console.log(allSchools.findAllMatches("ColoRado"));
     const schoolData = allSchools.findAllMatches();
-    this.setState(schoolData);
+    this.setState({ schoolData });
   };
 
   handleSearch = str => {
-    console.log(str)
+    if (!str.length) {
+      console.log(this.state);
+      return;
+      //this.setState(allSchools.findAllMatches());
+    } else {
+      const matches = allSchools.findAllMatches(str);
+      const schoolData = matches.reduce((acc, match) => {
+        acc[match] = allSchools.stats[match];
+        return acc;
+      }, {});
+      this.setState({ schoolData });
+      console.log(this.state);
+    }
   };
 
   render() {
     return (
       <div>
         <Search handleSearch={this.handleSearch} />
-        <CardContainer cards={this.state} />
+        <CardContainer cards={this.state.schoolData} />
       </div>
     );
   }

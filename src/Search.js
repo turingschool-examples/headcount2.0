@@ -6,8 +6,9 @@ class Search extends Component {
   state = { input: "" };
 
   handleChange = e => {
-    this.setState({ input: e.target.value});
-    this.props.handleSearch(this.state);
+    const input = e.target.value;
+    this.props.handleSearch(input);
+    this.setState({ input });
   };
 
   render() {
@@ -15,8 +16,8 @@ class Search extends Component {
       <input
         className="search-field"
         placeholder="search"
-        value={this.state.input}
         onChange={this.handleChange}
+        value={this.state.input}
       />
     );
   }
