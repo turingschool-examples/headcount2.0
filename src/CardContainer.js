@@ -2,8 +2,8 @@ import React from 'react'
 
 const CardContainer = () => {
   return(
-    <div className="CardContainer">
-    </div>
+    <main className="CardContainer">
+    </main>
   )
 }
 
