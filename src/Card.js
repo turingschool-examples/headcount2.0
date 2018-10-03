@@ -15,7 +15,7 @@ class Card extends Component {
 
     return(
       <div className="card">
-        <h2>{this.props.schoolName}</h2>
+        <h3 className="card-title">{this.props.schoolName}</h3>
         <ul className="data-list">
           { schoolData }
         </ul>
