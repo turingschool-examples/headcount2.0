@@ -31,12 +31,12 @@ export default class DistrictRepository {
     const schoolNames = Object.keys(this.stats)
     if (name === undefined) {
       return schoolNames.map( school => {
-        return {school: this.stats[school] }
+        return {school: school, data: this.stats[school] }
       })
     } else {
       return schoolNames.filter( school => {
         if (school.includes(name.toUpperCase())) {
-          return {school: this.stats[name.toUpperCase()] }
+          return {school: school, data: this.stats[name.toUpperCase()] }
         }
       })
     }

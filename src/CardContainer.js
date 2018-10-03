@@ -4,7 +4,8 @@ import Card from './Card.js'
 import PropTypes from 'prop-types'
 
 const CardContainer = ({districts}) => {  
-  const districtCards = districts.map( district => <Card districts={district} />)
+  console.log(districts)
+  const districtCards = districts.map( district => <Card district={district} />)
   return (
     <div className="cardContainer">
       { districtCards }
