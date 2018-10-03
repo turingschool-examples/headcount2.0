@@ -8,7 +8,7 @@ class Card extends Component {
   constructor() {
     super()
     this.state = {
-
+      clicked: false
     }
   }
 
