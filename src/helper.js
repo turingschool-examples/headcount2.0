@@ -28,6 +28,27 @@ export default class DistrictRepository {
       } else {
         return undefined
       }
+    }
+  }
+
+  findAllMatches(string) {
+    const findMatchesData = Object.values(this.stats)
+    if (string == undefined) {
+      return findMatchesData
+    } else if (!(string.toUpperCase() in this.stats)) {
+      return []
+    } else if (string.toUpperCase() in this.stats){
+      let findMatchesResult = []
+
+      string = string.toUpperCase()
+
+      findMatchesData.filter(school => {
+      if (school.location.match(string)){
+        findMatchesResult.push(school)
+      }
+    })
+    return findMatchesResult
+    }
   }
 }
-}
+
