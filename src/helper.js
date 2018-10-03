@@ -33,9 +33,10 @@ export default class DistrictRepository {
 
   findByName(name) {
     let statKeys = Object.keys(this.stats)
+    let capName;
 
     if (name) {
-      var capName = name.toUpperCase()
+      capName = name.toUpperCase()
     }   
     
     if (!name || !statKeys.includes(capName)){
@@ -51,9 +52,10 @@ export default class DistrictRepository {
   findAllMatches(name) {
     let statKeys = Object.keys(this.stats)
     let matchOutput = []
+    let capName;
 
     if (name) {
-      var capName = name.toUpperCase()
+      capName = name.toUpperCase()
     }
 
     if(!name) {
