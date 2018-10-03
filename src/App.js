@@ -17,9 +17,9 @@ class App extends Component {
   };
 
   handleSearch = str => {
-
+    console.log(str)
   };
-  
+
   render() {
     return (
       <div>

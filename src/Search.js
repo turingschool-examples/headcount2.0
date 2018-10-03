@@ -3,15 +3,21 @@ import PropTypes from "prop-types";
 import "./Search.css";
 
 class Search extends Component {
-  state = {};
+  state = { input: "" };
+
+  handleChange = e => {
+    this.setState({ input: e.target.value});
+    this.props.handleSearch(this.state);
+  };
+
   render() {
     return (
-      <div>
-        <form>
-        <input className="search-field" placeholder="search" />
-        <button className="submit-button">submit</button>
-        </form>
-      </div>
+      <input
+        className="search-field"
+        placeholder="search"
+        value={this.state.input}
+        onChange={this.handleChange}
+      />
     );
   }
 }
