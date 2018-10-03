@@ -5,17 +5,24 @@ export default class DistrictRepository {
 	}
 
 	compileDistricts() { 
-		const schoolDistrict = this.data.reduce((district, school) => {
-			if (!district[school.Location.toLowerCase()]) {
-			district[school.Location.toLowerCase()] = 
-			{location: school.Location.toUpperCase(), 
-			stats: {[school.TimeFrame]: school.Data}
+
+		const schoolDistrict = this.data.reduce((district, location) => {
+			const school = location.Location.toLowerCase()
+			const schoolYear = location.TimeFrame
+			const schoolData = Math.round(location.Data * 1000)/1000 || 0;
+
+			if (!district[school]) {
+			district[school] = 
+				{location: location.Location.toUpperCase(), 
+					stats: {[schoolYear]: schoolData}
 		}
 	}
-			if (district[school.Location.toLowerCase()]) {
-				district[school.Location.toLowerCase()] = 
-				Object.assign({}, district[school.Location.toLowerCase()], 
-					{stats: Object.assign({}, district[school.Location.toLowerCase()].stats, {[school.TimeFrame]: school.Data})})
+			if (district[school]) {
+				district[school] = 
+				Object.assign({}, district[school], 
+					{stats: Object.assign({}, 
+						district[school].stats, 
+							{[schoolYear]: schoolData})})
 			}
 
 			return district
@@ -31,8 +38,8 @@ export default class DistrictRepository {
 		} 
 
 		const districtLowerCase = district.toLowerCase()
-		// console.log(districtLowerCase)
 		if (this.stats[districtLowerCase]) {
+		// console.log(this.stats[districtLowerCase].stats)
 			return this.stats[districtLowerCase]
 		}
 
