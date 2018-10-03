@@ -6,7 +6,7 @@ export default class DistrictRepository {
   cleanData = (newData) => {
     return newData.reduce((cleanData, entry) => {
       const upperLocale = entry.Location.toUpperCase()
-      const roundedData = Number.parseFloat(Number.parseFloat(entry.Data).toFixed(3))
+      const roundedData = Math.round(entry.Data * 1000) / 1000
 
       if (!Object.keys(cleanData).includes(entry.Location)) {
         cleanData[upperLocale] = { data: {[entry.TimeFrame]: roundedData || 0} }
@@ -51,5 +51,15 @@ export default class DistrictRepository {
 
     return result
   }
+
+  findAverage = (school) => {
+    const schoolData = this.findByName(school).stats
+    const numYears = Object.keys(schoolData).length
+    const sumAvg = Object.keys(schoolData).reduce((sum, year) => {
+      sum += schoolData[year]
+      return sum
+    }, 0)
+
+    return Math.round((sumAvg / numYears) * 1000) / 1000
+  }
 }
-//can combine functionality of the two by using findAllMatches as autocomplete, then returning findByName() forEach matching school.
