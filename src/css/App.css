@@ -1,8 +1,17 @@
 .card-container {
-  
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
+.card {
+  border: 1px solid black;
+  text-align: center;
+  width: 300px;
+  margin: 20px;
+}
 
 ul {
+  padding: 0;
   list-style: none;
 }
