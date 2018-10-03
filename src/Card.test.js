@@ -21,6 +21,7 @@ describe('Card', () => {
     const wrapper = shallow(<Card district={district} />)
     // console.log(wrapper.debug());
 
+    //Add tests
   })
 })
 
