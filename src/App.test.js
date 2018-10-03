@@ -12,5 +12,5 @@ describe('App', () => {
     // Expectation
     expect(wrapper).toMatchSnapshot()
   })
-
+  //teardown
 })
