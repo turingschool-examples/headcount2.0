@@ -33,9 +33,10 @@ export default class DistrictRepository {
 
   findByName(name) {
     let statKeys = Object.keys(this.stats)
-// console.log(this.stats)
+    let capName;
+
     if (name) {
-      var capName = name.toUpperCase()
+      capName = name.toUpperCase()
     }   
     
     if (!name || !statKeys.includes(capName)){
@@ -45,6 +46,34 @@ export default class DistrictRepository {
           location: capName,
           stats: this.stats[capName]
         }
+    }
+  }
+
+  findAllMatches(name) {
+    let statKeys = Object.keys(this.stats)
+    let matchOutput = []
+    let capName;
+
+    if (name) {
+      capName = name.toUpperCase()
+    }
+
+    if(!name) {
+      let matchData = statKeys.map((key) => {
+        return this.stats[key]
+      })
+      matchOutput = [...matchData]
+      return matchOutput
+    } else if(statKeys.includes(capName)) {
+      let matchData = statKeys.filter((key) => {
+        if (key === capName || key.startsWith(capName)) {
+          return this.stats[key]
+        }
+      })
+      matchOutput = [...matchData]
+      return matchOutput
+    } else if(!statKeys.includes(capName)) {
+      return []
     }
   }
 }
