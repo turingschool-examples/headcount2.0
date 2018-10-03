@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactChartkick, { AreaChart, LineChart, ColumnChart } from 'react-chartkick'
+import ReactChartkick, { LineChart } from 'react-chartkick'
 import Chart from 'chart.js'
 
 ReactChartkick.addAdapter(Chart)
@@ -22,12 +22,9 @@ class Card extends Component {
             data={stats} 
             min={0} max={1} 
             colors={["gray",]}
-     
-            width="100%"
-            
+            width="100%"   
           />
         </div>
-
       </div>
     )
   }
