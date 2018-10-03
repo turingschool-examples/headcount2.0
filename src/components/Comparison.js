@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import DumbCard from './DumbCard'
 import ComparisonCard from './ComparisonCard'
@@ -30,5 +31,10 @@ const Comparison = (props) => {
   )
 }
 
+Comparison.propTypes = {
+  selection: PropTypes.array.isRequired,
+  compareDistrictAverages: PropTypes.func.isRequired,
+  clearSelections: PropTypes.func.isRequired
+}
 
 export default Comparison;

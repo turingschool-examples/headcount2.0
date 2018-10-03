@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import Score from './Score'
 
@@ -47,6 +48,11 @@ class Card extends Component {
       </article>
     ) 
   }
+}
+
+Card.propTypes = {
+  data: PropTypes.object.isRequired,
+  processSelection: PropTypes.func.isRequired
 }
 
 export default Card;

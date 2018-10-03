@@ -52,7 +52,8 @@ class App extends Component {
 
   clearSelections = () => {
     this.setState({
-      selection: []
+      selection: [],
+      filter: undefined
     })
   }
 
