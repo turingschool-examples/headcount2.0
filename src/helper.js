@@ -6,7 +6,7 @@ export default class DistrictRepository {
     this.stats = this.makeStats()
   }
 
-  makeStats() {
+  makeStats = () => {
     let district = this.dataSet.reduce((statSet, statistic) => {
       if(statistic.Data === "N/A"){
         statistic.Data = 0
