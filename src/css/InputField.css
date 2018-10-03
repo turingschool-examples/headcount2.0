@@ -1,0 +1,10 @@
+.input-form input{
+  margin: 1rem auto;
+  display: block;
+  width: 250px;
+  height: 35px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  padding-left: .5rem;
+}
