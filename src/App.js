@@ -16,19 +16,14 @@ class App extends Component {
   };
 
   handleSearch = str => {
-    if (!str.length) {
-      console.log(this.state);
-      return;
-      //this.setState(allSchools.findAllMatches());
-    } else {
-      const matches = allSchools.findAllMatches(str);
-      const schoolData = matches.reduce((acc, match) => {
+    let schoolData = allSchools.findAllMatches(str);
+    if (str) {
+      schoolData = schoolData.reduce((acc, match) => {
         acc[match] = allSchools.stats[match];
         return acc;
       }, {});
-      this.setState({ schoolData });
-      console.log(this.state);
     }
+    this.setState({ schoolData });
   };
 
   render() {
