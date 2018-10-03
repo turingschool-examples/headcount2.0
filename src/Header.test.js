@@ -9,7 +9,7 @@ describe('Header', () => {
     wrapper = shallow(<Header />)
   })
 
-  it('should have a Search component', () => {
-    expect(wrapper)
+  it('should have a heading and a Search component', () => {
+    expect(wrapper).toMatchSnapshot();
   })
 })
