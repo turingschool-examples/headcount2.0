@@ -21,10 +21,15 @@ class App extends Component {
   }
 
   render() {
+    const cardInfo = Object.keys(this.state.DistrictRepository)
+    const cards = cardInfo.map((schoolDistrict) => {
+      return <Card key={schoolDistrict} schoolName={schoolDistrict} schoolInfo={this.state.DistrictRepository[schoolDistrict]}/>
+    }) 
+
     return (
       <div>
         <h1>Welcome To Headcount 2.0</h1>
-        <Card />
+        { cards }
       </div>
     );
   }
