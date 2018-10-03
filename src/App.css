@@ -1,1 +1,26 @@
-/*APP COMPONENT RELATED CSS GOES HERE*/
+* {
+  margin: 0
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+.school-card {
+  border: 1px solid black;
+  width: 300px;
+  margin: 5px;
+  text-align: center;
+}
+
+.isLess {
+  color: red;
+}
+
+.isMore {
+  color: blue;
+}
