@@ -11,15 +11,15 @@ export default class DistrictRepository {
       if(statistic.Data === "N/A"){
         statistic.Data = 0
       }
-      if (!statSet[statistic.Location]) {
+      if (!statSet[statistic.Location.toUpperCase()]) {
         statSet[statistic.Location.toUpperCase()] = {
         stats: {
           [statistic.TimeFrame] : Math.round(statistic.Data * 1000)/1000},
           location : statistic.Location.toUpperCase()
         }
       } else {
-        statSet[statistic.Location].stats = {
-          ...statSet[statistic.Location].stats,
+        statSet[statistic.Location.toUpperCase()].stats = {
+          ...statSet[statistic.Location.toUpperCase()].stats,
           [statistic.TimeFrame] : Math.round(statistic.Data * 1000)/1000
         }
       }
@@ -28,10 +28,25 @@ export default class DistrictRepository {
   return district
   }
 
-  findByName(schoolName) {
-    if(!schoolName){
+  findByName = (schoolName) => {
+    if(!schoolName || !this.stats[schoolName.toUpperCase()]){
       return undefined
     }
     return this.stats[schoolName.toUpperCase()]
+  }
+
+  findAllMatches = (string) => {
+    let locationsList = Object.keys(this.stats);
+    if (string === undefined){
+      return locationsList.map(location => 
+        this.stats[location]
+      )
+    } else {
+        let filteredLocations = locationsList.filter(location => 
+          location.includes(string.toUpperCase())
+        )
+        return filteredLocations.map(location => 
+          this.stats[location]
+        )}
   }
 }
