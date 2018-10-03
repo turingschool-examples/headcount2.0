@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import PropTypes from "prop-types";
 import "./CardContainer.css";
 
 const CardContainer = ({ cards }) => {
@@ -9,6 +10,10 @@ const CardContainer = ({ cards }) => {
   ));
 
   return <div>{allCards}</div>;
+};
+
+CardContainer.propTypes = {
+  cards: PropTypes.object.isRequired
 };
 
 export default CardContainer;
