@@ -1,4 +1,4 @@
-export default class DistrictRepository {
+class DistrictRepository {
   constructor(data) {
     this.stats = data.reduce((obj, point) => {
       const { Location, TimeFrame, Data } = point;
@@ -37,3 +37,4 @@ export default class DistrictRepository {
   }
 }
 
+export default DistrictRepository;
