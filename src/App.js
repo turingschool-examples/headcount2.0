@@ -26,11 +26,17 @@ class App extends Component {
 
   render() {
     const { districts } = this.state
-    return (
-      <div>
-        <CardContainer districts={districts} />
-      </div>
-    );
+    if (districts.length > 0) { 
+      return (
+        <div>
+          <CardContainer districts={districts} />
+        </div>
+      )
+    } else {
+      return (
+        <div></div>
+      )
+    }
   }
 }
 
