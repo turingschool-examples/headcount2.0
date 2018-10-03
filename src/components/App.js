@@ -10,7 +10,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      cards: []
+      cards: [],
+      compare: []
     }
   }
 
@@ -34,7 +35,5 @@ class App extends Component {
     );
   }
 }
-
-// test this now
 
 export default App;

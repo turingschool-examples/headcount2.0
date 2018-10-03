@@ -12,7 +12,7 @@ class Card extends Component {
     const stats =  this.props.stats;
     return (
       <div className='card'>
-        <h4>{this.props.location}</h4>
+        <h4 className='card-title'>{this.props.location}</h4>
         <ul>
           {Object.keys(stats).map(stat => <li>{stat}: {stats[stat]}</li>)}
         </ul>

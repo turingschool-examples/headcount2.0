@@ -6,12 +6,16 @@
 
 .card {
   border: 1px solid black;
-  text-align: center;
-  width: 300px;
+  width: 320px;
   margin: 20px;
 }
 
+.card-title {
+  text-align: center;
+}
+
 ul {
+  margin-left:35%;
   padding: 0;
   list-style: none;
 }
