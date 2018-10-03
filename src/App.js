@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import Header from './Header'
+import CardContainer from './CardContainer'
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div>Welcome To Headcount 2.0</div>
+      <div className="App">
+        <Header />
+        <CardContainer />
+      </div>
     );
   }
 }
