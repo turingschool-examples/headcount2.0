@@ -45,4 +45,32 @@ export default class DistrictRepository {
 
 		return undefined
 	}
+
+	findAllMatches(district) {
+		const allDistricts = this.stats
+		const districtKeys = Object.keys(this.stats)
+		const districtObjects = districtKeys.map((schoolDistrict) => {
+				return allDistricts[schoolDistrict]
+			})
+
+		if (!district) {
+			return districtObjects
+		}
+
+		const districtLowerCase = district.toLowerCase()
+
+		if (districtKeys.includes(districtLowerCase)) {
+			const filteredDistricts = districtObjects.filter((place) => {
+				const placeLowerCase = place.location.toLowerCase()
+				// console.log(placeLowerCase)
+				if (placeLowerCase.includes(districtLowerCase)) {
+				return place
+				}
+			})
+			return filteredDistricts
+		}
+
+	}
+
+
 }
