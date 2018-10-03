@@ -4,10 +4,12 @@ import Card from './Card'
 const CardsContainer = ({schoolData}) => {
 
   const listLocations = Object.keys(schoolData);
-  const locationCards = listLocations.map(location => 
-    <Card {...schoolData[location] }/>)
+  const locationCards = listLocations.map((location, i) =>
+    <Card 
+      {...schoolData[location] } key={Date.now() + i}
+    />)
   return (
-    <div>
+    <div className = "cards-container">
       { locationCards }
     </div>
   )

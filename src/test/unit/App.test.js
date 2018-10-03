@@ -17,7 +17,6 @@ describe('App', () => {
 
     expect(wrapper.state('schoolData')).toEqual([]);
 
-
   })
 
 })
