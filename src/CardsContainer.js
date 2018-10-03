@@ -1,8 +1,15 @@
 import React from 'react';
+import Card from './Card'
 
-const CardsContainer = () => {
+const CardsContainer = ({schoolData}) => {
+
+  const listLocations = Object.keys(schoolData);
+  const locationCards = listLocations.map(location => 
+    <Card {...schoolData[location] }/>)
   return (
-    <h1>Cards Container</h1>
+    <div>
+      { locationCards }
+    </div>
   )
 }
 

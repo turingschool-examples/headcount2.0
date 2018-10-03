@@ -18,11 +18,13 @@ class App extends Component {
     this.setState({ schoolData });
   }
 
+
+
   render() {
     return (
       <div>
         <h1>HeadCount 2.0</h1>
-        <CardsContainer schoolData = {this.state.schoolData} />
+        <CardsContainer schoolData={this.state.schoolData} />
       </div>
     );
   }
