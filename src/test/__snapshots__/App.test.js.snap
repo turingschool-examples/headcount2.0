@@ -2911,6 +2911,7 @@ exports[`App should render content to the DOM 1`] = `
         },
       }
     }
+    processSelection={[Function]}
   />
 </main>
 `;

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Card from './Card'
+import DumbCard from './DumbCard'
 
 import '../css/CardContainer.css'
 
@@ -13,10 +13,9 @@ const Comparison = (props) => {
       <div className="card-container">
         {props.selection.map((district) => {
           return (
-            <Card 
+            <DumbCard 
               data={district}
               key={district.location}
-              processSelection={props.processSelection}
             />
           )
         })}
