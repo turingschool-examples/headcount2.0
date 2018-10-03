@@ -10,6 +10,6 @@ describe('CardContainer', () => {
   })
 
   it('should have cards', () => {
-    expect(wrapper)
+    expect(wrapper).toMatchSnapshot()
   })
 })

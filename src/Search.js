@@ -4,7 +4,6 @@ class Search extends Component {
   render() {
     return(
       <form className="Search">
-        <input className=""
       </form>
     )
   }
