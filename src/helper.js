@@ -30,6 +30,7 @@ export default class DistrictRepository {
       const result = {location: upperQuery, stats: foundSchool.data}
 
       return result;
+
     } else {
       return undefined;
     }
@@ -44,6 +45,7 @@ export default class DistrictRepository {
       if (matchingSchools.includes(entry) || upperQuery === undefined) {
         matches.push(entry)
         return matches
+
       } else {
         return matches
       }
@@ -52,14 +54,27 @@ export default class DistrictRepository {
     return result
   }
 
-  findAverage = (school) => {
-    const schoolData = this.findByName(school).stats
-    const numYears = Object.keys(schoolData).length
-    const sumAvg = Object.keys(schoolData).reduce((sum, year) => {
-      sum += schoolData[year]
+  findAverage = (district) => {
+    const districtData = this.findByName(district).stats
+    const numYears = Object.keys(districtData).length
+    const sumAvg = Object.keys(districtData).reduce((sum, year) => {
+      sum += districtData[year]
       return sum
     }, 0)
 
     return Math.round((sumAvg / numYears) * 1000) / 1000
+  }
+
+  compareDistrictAverages = (district1, district2) => {
+    const district1Avg = this.findAverage(district1)
+    const district2Avg = this.findAverage(district2)
+    const comparedAvg = Math.round((district1Avg / district2Avg) * 1000) / 1000
+
+
+    return {
+      [this.checkQuery(district1)]: district1Avg,
+      [this.checkQuery(district2)]: district2Avg,
+      "compared": comparedAvg
+    }
   }
 }
