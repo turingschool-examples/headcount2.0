@@ -18,19 +18,38 @@ export default class DistrictRepository {
     }, {})
   }
 
+  checkQuery = (query) => {
+    if (query) return query.toUpperCase()
+  }
+
   findByName = (query) => {
-    if (query) {
-      const upperQuery = query.toUpperCase();
+    const upperQuery = this.checkQuery(query);
 
-      if (this.stats[upperQuery]) {
-        const foundSchool = this.stats[upperQuery]
-        const result = {location: upperQuery, stats: foundSchool.data}
+    if (this.stats[upperQuery]) {
+      const foundSchool = this.stats[upperQuery]
+      const result = {location: upperQuery, stats: foundSchool.data}
 
-        return result;
-      } else {
-        return undefined;
-      }
+      return result;
+    } else {
+      return undefined;
     }
   }
 
+  findAllMatches = (query) => {
+    const upperQuery = this.checkQuery(query)
+    const schoolNames = Object.keys(this.stats)
+    const matchingSchools = schoolNames.filter(name => name.includes(upperQuery))
+
+    const result = schoolNames.reduce((matches, entry) => {
+      if (matchingSchools.includes(entry) || upperQuery === undefined) {
+        matches.push(entry)
+        return matches
+      } else {
+        return matches
+      }
+    }, [])
+
+    return result
+  }
 }
+//can combine functionality of the two by using findAllMatches as autocomplete, then returning findByName() forEach matching school.
