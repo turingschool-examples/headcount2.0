@@ -2,11 +2,15 @@ import React from 'react'
 import Card from './Card'
 
 
-const CardContainer = ({Data}) => {
-  
+const CardContainer = ( {data} ) => {
+  const dataKeys = Object.keys(data)
+  const exp = dataKeys.map( point =>
+    <Card {...data[point]} />
+  )
   return (
-    <div>
-    </div>
+        <div>
+         { exp }
+        </div>
   )
 }
 
