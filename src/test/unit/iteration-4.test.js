@@ -21,6 +21,7 @@ describe('DistrictRepository iteration 0', () =>  {
   test('compareDistrictAverages ACADEMY 20 against Colorado', () => {
     const result = { "ACADEMY 20": 0.407, "COLORADO": 0.53, "compared": 0.768}
     expect(district.compareDistrictAverages('ACADEMY 20', 'Colorado')).toEqual(result);
+    // avg1 / avg2
   });
 
 });
