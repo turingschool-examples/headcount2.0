@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Card from './Card'
 
@@ -18,7 +19,11 @@ const CardContainer = (props) => {
       })}
     </section>
   )
+}
 
+CardContainer.propTypes = {
+  data: PropTypes.object.isRequired,
+  processSelection: PropTypes.func.isRequired
 }
 
 export default CardContainer;

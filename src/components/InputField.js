@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 
 import '../css/InputField.css'
 
@@ -34,5 +35,8 @@ class InputField extends Component {
   }
 }
 
+InputField.propTypes = {
+  processFilter: PropTypes.func.isRequired
+}
 
 export default InputField;

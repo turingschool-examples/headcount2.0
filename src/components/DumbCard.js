@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Score from './Score'
+import Score from './Score';
 
-import '../css/Card.css'
+import '../css/Card.css';
 
 const DumbCard = (props) => {
   return (
@@ -19,6 +20,10 @@ const DumbCard = (props) => {
       })}
     </article>
   ) 
+}
+
+DumbCard.propTypes = {
+  data: PropTypes.object.isRequired
 }
 
 export default DumbCard;
