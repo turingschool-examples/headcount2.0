@@ -6,6 +6,7 @@ describe('DistrictRepository iteration 0', () =>  {
 
   test('district has data in an object', () => {
     // remember that an array is also just an object.
+    // console.log(district.stats)
     expect(typeof district.stats).toBe('object');
   });
 
@@ -16,3 +17,27 @@ describe('DistrictRepository iteration 0', () =>  {
   });
 
 });
+
+
+
+
+
+// Colorado: {
+//   data: {
+//   TimeFrame: Data
+//   TimeFrame: Data
+//   TimeFrame: Data
+//   TimeFrame: Data
+// }
+// }
+
+
+
+
+// Obj[Schoolname] = {
+//   TimeFrame: Data
+//   TimeFrame: Data
+//   TimeFrame: Data
+//   TimeFrame: Data
+// }
+
