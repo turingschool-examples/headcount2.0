@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 import App from './App';
 
 describe('App', () => {
-  it.skip('should display school districts', () => {
+  it('should display school districts', () => {
     // Setup && Execution
     const wrapper = shallow(<App />)
 
