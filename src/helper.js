@@ -53,12 +53,18 @@ export default class DistrictRepository {
     if (entry) {
       locations.forEach( location => {
         if (location.toLowerCase().includes(entry.toLowerCase())) {
-          returnData.push(this.stats[location])
+          returnData.push({
+            stats: this.stats[location],
+            location: location
+          })
         }
       })
     } else {
       locations.forEach( location => {
-        returnData.push(this.stats[location])
+        returnData.push({
+            stats: this.stats[location],
+            location: location
+          })
       })
     }
     return returnData;

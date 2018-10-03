@@ -10,7 +10,15 @@ class DataHeader extends Component {
     return (
       <div className='data-header'>
         <select className='district-dropdown'>
-          
+          {
+            this.props.data.map(place => {
+              return (
+                <option value={place.location}>               >
+                  {place.location.toUpperCase()}
+                </option>
+              )
+            })
+          }
         </select>
         <h3>INFO</h3>
       </div>
