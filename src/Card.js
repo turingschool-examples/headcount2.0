@@ -8,9 +8,11 @@ const Card = ({ location, stats }) => {
     <div className="card">
       <h3 className="school-name">{location}</h3>
       <ul>
-      {years.map(year => (
-        <li className="school-stats" key={year}>{stats[year]}</li>
-      ))}
+        {years.map(year => (
+          <p className={stats[year] > 0.5 ? "green" : "red"} key={year}>
+            {`${year} : ${stats[year]}`}
+          </p>
+        ))}
       </ul>
     </div>
   );
