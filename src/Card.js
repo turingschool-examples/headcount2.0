@@ -3,14 +3,20 @@ import './Card.css';
 import PropTypes from 'prop-types';
 
 class Card extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
 
   render() {
     const dataKeys = Object.keys(this.props.schoolInfo)
     const schoolData = dataKeys.map((year) => {
-      return <li>{year}: {this.props.schoolInfo[year]}</li>
+      if (this.props.schoolInfo[year] > 0.5) {
+        return <li className="greater">{year}: {this.props.schoolInfo[year]}</li>
+      } else if (this.props.schoolInfo[year] < 0.5) {
+        return <li className="lesser">{year}: {this.props.schoolInfo[year]}</li>
+      } else if (this.props.schoolInfo[year] === 0.5) {
+        return <li className="equal">{year}: {this.props.schoolInfo[year]}</li>
+      }
     })
 
     return(
