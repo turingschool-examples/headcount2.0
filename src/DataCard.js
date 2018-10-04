@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import StatCard from './StatCard';
+import PropTypes from 'prop-types';
 
 const DataCard = (props) => {
-  console.log(props.school.stats)
  return (
-    <div className='data-card'>
+     <div className='data-card'>
       <h1>{props.school.location}</h1>
       <ul>
       <li className={Object.values(props.school.stats)[0] < 0.5 ? 'less-than' : 'more-than'}> 2004: {Object.values(props.school.stats)[0]}</li>
@@ -22,6 +22,10 @@ const DataCard = (props) => {
 
     </div>
   )
+}
+
+DataCard.propTypes = {
+  props: PropTypes.object
 }
 
 export default DataCard

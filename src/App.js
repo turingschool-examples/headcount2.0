@@ -3,7 +3,7 @@ import './App.css';
 import DistrictRepository from './helper';
 import './DataCard';
 import kinderData from './testData.js';
-import CardContainer from './CardContainer';
+import CardContainer from './CardContainer'
 
 class App extends Component {
   constructor(props){
@@ -25,5 +25,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;
