@@ -4,7 +4,6 @@ import CardContainer from './CardContainer';
 import DistrictRepository from './helper';
 import KinderData from './data/kindergartners_in_full_day_program.js';
 
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -27,8 +26,8 @@ class App extends Component {
   render() {
     const { data } = this.state
     return (
-      <div>
-        <CardContainer data={ data }/>
+      <div className="app">
+        <CardContainer data={ data } />
       </div>
     );
   }

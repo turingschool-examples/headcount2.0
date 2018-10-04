@@ -1,0 +1,25 @@
+.card-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  margin: 8px;
+  height: 270px;
+  box-shadow: 0 0 5px 1px #0000006e;
+  border-radius: 5px;
+}
+
+.location {
+  font-weight: 600;
+  margin-bottom: 18px;
+  font-size: 17px;
+}
+
+.year-and-data-red {
+  color: red;
+}
+
+.year-and-data-green {
+  color: green;
+}

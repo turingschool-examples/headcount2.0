@@ -12,12 +12,12 @@ const CardContainer = ({ data }) => {
 
   let cards = (
         schools.map(point => 
-      <Card {...data[point]}/>
+      <Card {...data[point]} className='card'/>
       ))
 
 
   return (
-    <div>
+    <div className='card-container'>
       { cards }
     </div>
   )
