@@ -41,10 +41,9 @@ class App extends Component {
   const name = card.children[0].innerText
 
   const schoolObj = {...this.state.data.findAllMatches(name)} 
-
-  this.setState({
-    compareSelections: [{...schoolObj[0]}, ...this.state.compareSelections] 
-  })
+    this.setState({
+      compareSelections: [{...schoolObj[0]}, ...this.state.compareSelections] 
+    })
  }
 
  render() {
@@ -53,10 +52,12 @@ class App extends Component {
       return (
         <div>
           <h1>Headcount 2.0</h1>
-          <CompareCard compareSelections={compareSelections} />
           <SearchForm filterCards={this.filterCards} />
+          <CompareCard compareSelections={compareSelections} 
+                       compareDistrictAverages={data.compareDistrictAverages}
+          />
           <CardContainer districts={data.findAllMatches(schoolName)} 
-                        addCompareSelections={this.addCompareSelections}
+                        addCompareSelections={this.addCompareSelections}                   
           />
         </div>
       )

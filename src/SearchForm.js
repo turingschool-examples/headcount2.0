@@ -29,4 +29,9 @@ render() {
  }
 }
 
+SearchForm.propTypes = {
+ 
+}
+
+
 export default SearchForm; 
