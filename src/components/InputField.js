@@ -13,7 +13,7 @@ class InputField extends Component {
 
   processInput = (value) => {
     this.setState({
-    input: value
+      input: value
     })
     this.props.processFilter(value)
   }

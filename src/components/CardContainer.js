@@ -6,9 +6,7 @@ import Card from './Card'
 import '../css/CardContainer.css'
 
 const CardContainer = (props) => {
-  return (
-    <section className="card-container">
-      {Object.keys(props.data).map((district) => {
+  const cards = Object.keys(props.data).map((district) => {
         return (
           <Card 
             data={props.data[district]}
@@ -16,7 +14,10 @@ const CardContainer = (props) => {
             processSelection={props.processSelection}
           />
         )
-      })}
+      })
+  return (
+    <section className="card-container">
+      {cards}
     </section>
   )
 }

@@ -9,7 +9,12 @@
 
 .card h1 {
   font-size: 1rem;
-  margin: 1rem .5rem;
+  padding: 1rem .5rem;
+  margin: 0;
+  background: #0CA7D3;
+  color: #fff;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
 }
 
 .card p {
