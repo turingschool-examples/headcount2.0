@@ -27,7 +27,7 @@ export default class DistrictRepository {
 
 			return district
 		}, {})	
-console.log(schoolDistrict)
+// console.log(schoolDistrict)
 		return schoolDistrict
 	}
 
