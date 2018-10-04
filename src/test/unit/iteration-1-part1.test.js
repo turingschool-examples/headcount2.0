@@ -43,5 +43,4 @@ describe('DistrictRepository iteration 1 - part 1', () =>  {
 
     expect(academy.stats).toEqual(result)
   });
-
 });
