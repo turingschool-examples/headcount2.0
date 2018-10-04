@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import './CardsContainer.css';
 
 
