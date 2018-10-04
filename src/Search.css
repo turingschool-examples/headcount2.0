@@ -1,5 +1,11 @@
 .search-field {
+  font-size: 22px;
   height: 30px;
-  margin: 20px 40%;
+  margin: 30px 40%;
   width: 30%;
+}
+
+.search-field,
+::placeholder {
+  font-size: 22px;
 }
