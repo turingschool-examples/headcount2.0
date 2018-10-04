@@ -46,7 +46,8 @@ class App extends Component {
         },
         average: 0.407
       }
-    ]
+    ],
+    comparedAvg: ""
   };
 
   componentDidMount = () => {
@@ -67,21 +68,25 @@ class App extends Component {
 
   handleCardClick = location => {
     const clickedDisctrict = allSchools.stats[location];
-    clickedDisctrict.average = allSchools.findAverage(location);
-    //console.log(clickedDisctrict);
     const comparedCards = [
       allSchools.stats[location],
       allSchools.stats[location]
     ];
-
-    this.setState({ comparedCards });
+    const comparedAvg = allSchools.compareDistrictAverages(
+      "coLorado",
+      location
+    );
+    this.setState({ comparedCards, comparedAvg });
   };
 
   render() {
     return (
       <div>
         <h1 className="main-logo">headcount</h1>
-        <CompareCardContainer comparedCards={this.state.comparedCards} />
+        <CompareCardContainer
+          comparedCards={this.state.comparedCards}
+          comparedAvg={this.state.comparedAvg}
+        />
         <Search handleSearch={this.handleSearch} />
         <CardContainer
           handleCardClick={this.handleCardClick}
