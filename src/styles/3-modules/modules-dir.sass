@@ -1,0 +1,26 @@
+.welcome-screen
+    position: relative
+    top: 40%
+    text-align: center
+    
+.typewriter h1 
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite
+    border-right: .15em solid white //* Typewriter cursor */
+    letter-spacing: .10em
+    margin: 0 auto //* Gives the scrolling effect when typing */
+    overflow: hidden //* Ensures the content is not revealed until animation */
+    text-align: center
+    white-space: nowrap //* Keeps content on 1 line */
+    width: 50%
+
+@keyframes typing
+    from 
+        width: 0
+    to
+        width: 50%
+
+@keyframes blink-caret
+    from, to 
+        border-color: rgb(255, 0, 0)
+    50%
+        border-color: rgb(0, 255, 0)

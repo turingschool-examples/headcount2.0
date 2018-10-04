@@ -18,10 +18,10 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <main className='l-main'>
         <Landing />        
         
-      </div>
+      </main>
     );
   }
 }
