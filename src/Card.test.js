@@ -5,10 +5,10 @@ import Card from './Card'
 
 describe('Card', () => {
 
-  it('should match the snapshot with all data passed in correctly', () => { //change to say what data
-    const wrapper = shallow(<Card 
-                              propName='propname'
-                            />)
+  it('should match the snapshot with all data passed in correctly', () => { 
+    let expectedId;
+    const mockData = {location: 'Colorado', stats: [{year: 'data'}]}
+    const wrapper = shallow(<Card key={expectedId} districtData={mockData} />)
     expect(wrapper).toMatchSnapshot()
   })
 })

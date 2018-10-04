@@ -1,44 +1,60 @@
 
 export default class DistrictRepository {
   constructor(stats){
-    this.stats = this.organizeData(stats)
+    this.stats = this.cleanData(stats)
     // this.districtStats = this.organizeDistrictData(stats) 
   }
 
-  organizeData(stats){
-    const filteredData = stats.reduce((districts, school) => {
-        let statsObj ={
-          location: school.Location.toUpperCase(),
-          year: school.TimeFrame,
-          data: school.Data
-        }   
+  // organizeData(stats){
+  //   const data = stats.reduce((districts, school) => {
+  //       let statsObj ={
+  //         location: school.Location.toUpperCase(),
+  //         year: school.TimeFrame,
+  //         data: school.Data
+  //       }   
      
-          let upperCaseLocation = school.Location.toUpperCase()
-          if(!districts[upperCaseLocation]){
-            districts[upperCaseLocation] = []
-          } 
-          districts[upperCaseLocation].push(statsObj)
-        return districts
+  //         let upperCaseLocation = school.Location.toUpperCase()
+  //         if(!districts[upperCaseLocation]){
+  //           districts[upperCaseLocation] = []
+  //         } 
+  //         districts[upperCaseLocation].push(statsObj)
+  //       return districts
+  //     }, {})
+  //   return data
+  // }
+
+  cleanData(data){
+    const filteredData = data.reduce((districts, school) => {
+      let statsObj ={ 
+        location: school.Location.toUpperCase(),
+        year: school.TimeFrame,
+        data: school.Data
+      }   
+      if(!districts[school.Location]){
+        districts[school.Location] = []
+      } 
+        districts[school.Location].push(statsObj)
+      return districts
+    }, {})
+
+    const mainData = Object.keys(filteredData).map( district => {
+      let years = []
+      let districtData = filteredData[district].reduce((schoolData, year) => {
+        let yearStats = {year: year.year, data: year.data}
+        years.push(yearStats)
+        let orderedYears = years.sort((a, b) => a.year - b.year)
+        schoolData = {
+          location: district,
+          stats: years
+        }
+        return schoolData
       }, {})
-    return filteredData
+      return districtData
+    })
+    return mainData
   }
 
-  // organizeDistrictData(this.stats){  //won't accept this.stats as a Parameter---> need to change all reference to stats to this.stats
-  //   const districtData = Object.keys(stats).map( district => {
-  //     let years = [];
-  //     const districtData = stats[district].reduce((data, year) => {
-      
-  //       if(typeof year.data !== 'number'){ year.data = 0} //ternerary?
-  //       const roundedData = Math.round(year.data * 1000)/1000
 
-  //       years.push({year: year.year, data: roundedData})
-  //       let orderedYears = years.sort((a, b) => a.year - b.year)
-
-  //       data = {location: district, stats: orderedYears}
-  //         return data
-  //     }, {})
-  //   return districtData
-  // }
 
   findByName(name){
     if (name === undefined) {
