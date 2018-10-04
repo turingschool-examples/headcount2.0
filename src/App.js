@@ -83,11 +83,11 @@ class App extends Component {
     return (
       <div>
         <h1 className="main-logo">headcount</h1>
+        <Search handleSearch={this.handleSearch} />
         <CompareCardContainer
           comparedCards={this.state.comparedCards}
           comparedAvg={this.state.comparedAvg}
         />
-        <Search handleSearch={this.handleSearch} />
         <CardContainer
           handleCardClick={this.handleCardClick}
           cards={this.state.schoolData}

@@ -1,9 +1,9 @@
 .compare-card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 20px 15px;
-  width: 80%;
-  margin: 0 10%;
+  width: 60%;
+  margin: 0 20%;
 }
 
 .card-comparison {
