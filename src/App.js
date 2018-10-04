@@ -4,22 +4,23 @@ import DistrictRepository from './helper';
 import './DataCard';
 import kinderData from './testData.js';
 import CardContainer from './CardContainer'
+import SearchForm from './SearchForm'
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
-
-    let test = new DistrictRepository(kinderData)
+    let schoolData = new DistrictRepository(kinderData)
 
     this.state = {
-      schoolCards: test.findAllMatches()
+      schoolCards: schoolData.findAllMatches()
     }
   }
 
 
   render() {
     return (
-      <div>Welcome To Headcount 2.0
+      <div>
+          <SearchForm />
           <CardContainer schoolCards={this.state.schoolCards} />
       </div>
     );
