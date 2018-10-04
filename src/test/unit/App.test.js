@@ -5,18 +5,16 @@ import { shallow } from 'enzyme';
 import App from '../../../src/App';
 
 describe('App', () => {
-  it('should render one cardsContainer', () => {
+  it('should render a CardsContainer and Search component', () => {
     const wrapper = shallow(<App />);    
 
     expect(wrapper).toMatchSnapshot();
   })
 
-  it.skip('should have default state', () => {
+  it('should have an array length of 181', () => {
     const wrapper = shallow(<App />);    
-    const expected = { schoolData: [] };
-
-    expect(wrapper.state('schoolData')).toEqual([]);
-
+    
+    expect(wrapper.state('schoolData').length).toEqual(181);
   })
 
 })

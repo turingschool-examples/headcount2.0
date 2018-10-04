@@ -1,6 +1,8 @@
 import React from 'react';
 import Card from './Card';
+import PropTypes from 'prop-types'
 import './CardsContainer.css';
+
 
 const CardsContainer = ({schoolData}) => {
 
@@ -14,6 +16,10 @@ const CardsContainer = ({schoolData}) => {
       { locationCards }
     </div>
   )
+}
+
+CardsContainer.propTypes = {
+  schoolData: PropTypes.array
 }
 
 
