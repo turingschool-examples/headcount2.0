@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputField should render content to the DOM 1`] = `
+<form
+  className="input-form"
+>
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Enter your school district"
+    value=""
+  />
+</form>
+`;

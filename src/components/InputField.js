@@ -11,11 +11,11 @@ class InputField extends Component {
     }
   }
 
-  processInput = (e) => {
+  processInput = (value) => {
     this.setState({
-    input: e.target.value
+    input: value
     })
-    this.props.processFilter(e.target.value)
+    this.props.processFilter(value)
   }
 
   render() {
@@ -27,7 +27,7 @@ class InputField extends Component {
           value={this.state.input}
           placeholder='Enter your school district'
           onChange={(e) => {
-            this.processInput(e)
+            this.processInput(e.target.value)
           }}
         />
       </form>
