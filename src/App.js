@@ -33,17 +33,28 @@ class App extends Component {
 
   handleCardClick = location => {
     const clickedDisctrict = allSchools.stats[location];
-    let comparedCards = this.state.comparedCards;
+    let { comparedCards } = this.state;
     if (!Object.keys(comparedCards[0]).length) {
-      comparedCards[0] = clickedDisctrict
+      comparedCards[0] = clickedDisctrict;
     } else if (!Object.keys(comparedCards[1]).length) {
-      comparedCards[1] = clickedDisctrict
+      comparedCards[1] = clickedDisctrict;
     }
-    const comparedAvg = allSchools.compareDistrictAverages(
-      "coLorado",
-      location
-    );
-    this.setState({ comparedCards, comparedAvg });
+    this.setState({ comparedCards });
+    this.prepareComparedStats();
+  };
+
+  prepareComparedStats = () => {
+    const { comparedCards } = this.state;
+    if (
+      Object.keys(comparedCards[0]).length &&
+      Object.keys(comparedCards[1]).length
+    ) {
+      const comparedAvg = allSchools.compareDistrictAverages(
+        comparedCards[0].location,
+        comparedCards[1].location
+      );
+      this.setState({ comparedAvg });
+    }
   };
 
   render() {
