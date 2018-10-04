@@ -30,13 +30,26 @@ export default class DistrictRepository {
     }
   }
 
+  searchWords(string){
+    console.log('helloooo')
+    let dataSet = Object.values(this.stats)
+    return dataSet.map(word => {
+      if (string.startsWith(string)){
+        return true
+      } else{
+        return false 
+      }
+    })
+  }
+
+
+
   findAllMatches(string) {
     const findMatchesData = Object.values(this.stats)
     if (string === undefined) {
+      console.log('1')
       return findMatchesData
-    } else if (!(string.toUpperCase() in this.stats)) {
-      return []
-    } else if (string.toUpperCase() in this.stats){
+    } else if (string.toUpperCase() in this.stats || this.searchWords(string)){
       let findMatchesResult = []
 
       string = string.toUpperCase()
@@ -45,9 +58,13 @@ export default class DistrictRepository {
       if (school.location.match(string)){
         findMatchesResult.push(school)
       }
-      return false;
+      return true;
     })
+      console.log(findMatchesResult, 'number3')
     return findMatchesResult
+    } else if (!(string.toUpperCase() in this.stats)) {
+      console.log(2)
+      return []
     }
   }
 }
