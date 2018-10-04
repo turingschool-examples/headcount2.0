@@ -29,6 +29,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <h1 className="main-logo">head count</h1>
         <Search handleSearch={this.handleSearch} />
         <CardContainer cards={this.state.schoolData} />
       </div>
