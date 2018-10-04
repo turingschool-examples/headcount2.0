@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should have a heading and a Search component 1`] = `
+<header
+  className="Header"
+>
+  <h1>
+    HeadCount 2.0
+  </h1>
+  <Search />
+</header>
+`;
