@@ -19,10 +19,10 @@ class App extends Component {
     this.setState({ cards: data })
   }
 
-  searchSchool = (str) => {
+  searchSchool = (string) => {
     let search = new DistrictRepository(kinderData)
-    let searches = search.findAllMatches(str)
-    this.setState({ searches })
+    let data = search.findAllMatches(string)
+    this.setState({ cards: data })
   }
 
   render() {

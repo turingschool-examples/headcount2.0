@@ -26,16 +26,16 @@ export default class DistrictRepository {
     })
     return allData;
   } else {
-    let allLocations = Object.keys(this.stats).reduce((acc, school) => { 
-      if(school.includes(string)){
-        acc.push(school)
-      } 
-      return acc
-    }, [])
-
-    return allLocations
+    let matchResult = []
+    let allLocations = Object.keys(this.stats).filter(stat => {
+      if(stat.includes(string)) {
+        matchResult.push({[stat]: this.stats[stat]})
+      }
+    })
+    return matchResult;
     }
   }
+
   findByName = (str) => {
     if(str){
       str = str.toUpperCase()

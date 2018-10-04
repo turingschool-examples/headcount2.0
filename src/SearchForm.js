@@ -3,11 +3,7 @@ import DistrictRepository from './helper';
 
 class SearchForm extends Component {
   constructor(props) {
-    super()
-    this.state = {
-      location: '',
-      data: ''
-    }
+    super(props)
   }
 
   handleSearch = (e) => {
