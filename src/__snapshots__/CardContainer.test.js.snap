@@ -1,0 +1,282 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IdeaContainer matches the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    cards={
+        Array [
+            Object {
+              "COLORADO": Object {
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.337,
+                "2007": 0.395,
+                "2008": 0.536,
+                "2009": 0.598,
+                "2010": 0.64,
+                "2011": 0.672,
+                "2012": 0.695,
+                "2013": 0.703,
+                "2014": 0.741,
+              },
+            },
+            Object {
+              "COLORADO SPRINGS 11": Object {
+                "2004": 0.069,
+                "2005": 0.509,
+                "2006": 0.638,
+                "2007": 0.994,
+                "2008": 0.992,
+                "2009": 1,
+                "2010": 0.993,
+                "2011": 0.994,
+                "2012": 0.993,
+                "2013": 0.989,
+                "2014": 0.994,
+              },
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <SchoolCard
+          data={
+                    Object {
+                              "COLORADO": Object {
+                                "2004": 0.24,
+                                "2005": 0.278,
+                                "2006": 0.337,
+                                "2007": 0.395,
+                                "2008": 0.536,
+                                "2009": 0.598,
+                                "2010": 0.64,
+                                "2011": 0.672,
+                                "2012": 0.695,
+                                "2013": 0.703,
+                                "2014": 0.741,
+                              },
+                            }
+          }
+          location="0"
+/>,
+        <SchoolCard
+          data={
+                    Object {
+                              "COLORADO SPRINGS 11": Object {
+                                "2004": 0.069,
+                                "2005": 0.509,
+                                "2006": 0.638,
+                                "2007": 0.994,
+                                "2008": 0.992,
+                                "2009": 1,
+                                "2010": 0.993,
+                                "2011": 0.994,
+                                "2012": 0.993,
+                                "2013": 0.989,
+                                "2014": 0.994,
+                              },
+                            }
+          }
+          location="1"
+/>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "COLORADO",
+        "nodeType": "function",
+        "props": Object {
+          "data": Object {
+            "COLORADO": Object {
+              "2004": 0.24,
+              "2005": 0.278,
+              "2006": 0.337,
+              "2007": 0.395,
+              "2008": 0.536,
+              "2009": 0.598,
+              "2010": 0.64,
+              "2011": 0.672,
+              "2012": 0.695,
+              "2013": 0.703,
+              "2014": 0.741,
+            },
+          },
+          "location": "0",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "COLORADO SPRINGS 11",
+        "nodeType": "function",
+        "props": Object {
+          "data": Object {
+            "COLORADO SPRINGS 11": Object {
+              "2004": 0.069,
+              "2005": 0.509,
+              "2006": 0.638,
+              "2007": 0.994,
+              "2008": 0.992,
+              "2009": 1,
+              "2010": 0.993,
+              "2011": 0.994,
+              "2012": 0.993,
+              "2013": 0.989,
+              "2014": 0.994,
+            },
+          },
+          "location": "1",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <SchoolCard
+            data={
+                        Object {
+                                    "COLORADO": Object {
+                                      "2004": 0.24,
+                                      "2005": 0.278,
+                                      "2006": 0.337,
+                                      "2007": 0.395,
+                                      "2008": 0.536,
+                                      "2009": 0.598,
+                                      "2010": 0.64,
+                                      "2011": 0.672,
+                                      "2012": 0.695,
+                                      "2013": 0.703,
+                                      "2014": 0.741,
+                                    },
+                                  }
+            }
+            location="0"
+/>,
+          <SchoolCard
+            data={
+                        Object {
+                                    "COLORADO SPRINGS 11": Object {
+                                      "2004": 0.069,
+                                      "2005": 0.509,
+                                      "2006": 0.638,
+                                      "2007": 0.994,
+                                      "2008": 0.992,
+                                      "2009": 1,
+                                      "2010": 0.993,
+                                      "2011": 0.994,
+                                      "2012": 0.993,
+                                      "2013": 0.989,
+                                      "2014": 0.994,
+                                    },
+                                  }
+            }
+            location="1"
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "COLORADO",
+          "nodeType": "function",
+          "props": Object {
+            "data": Object {
+              "COLORADO": Object {
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.337,
+                "2007": 0.395,
+                "2008": 0.536,
+                "2009": 0.598,
+                "2010": 0.64,
+                "2011": 0.672,
+                "2012": 0.695,
+                "2013": 0.703,
+                "2014": 0.741,
+              },
+            },
+            "location": "0",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "COLORADO SPRINGS 11",
+          "nodeType": "function",
+          "props": Object {
+            "data": Object {
+              "COLORADO SPRINGS 11": Object {
+                "2004": 0.069,
+                "2005": 0.509,
+                "2006": 0.638,
+                "2007": 0.994,
+                "2008": 0.992,
+                "2009": 1,
+                "2010": 0.993,
+                "2011": 0.994,
+                "2012": 0.993,
+                "2013": 0.989,
+                "2014": 0.994,
+              },
+            },
+            "location": "1",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
