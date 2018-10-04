@@ -7,10 +7,10 @@ export default class DistrictRepository {
 
   stats(){
     let districts = this.data.reduce((districts, district) => {
-
-
-      // !district.Data ? district.Data = 0
-      // !district.Data && district.Data = 0;
+      
+      if(isNaN(district.Data)){
+        district.Data = 0;
+      }
 
       let upperCaseDistrict = district.Location.toUpperCase();
 
