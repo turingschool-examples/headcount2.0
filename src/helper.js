@@ -1,18 +1,17 @@
 export default class DistrictRepository {
-  constructor(kinderData) {
-    this.stats = this.sanitizeData(kinderData);
+  constructor(data) {
+    this.stats = this.sanitizeData(data);
   }
   
-  sanitizeData = (kinderData) => {
-    return kinderData.reduce((schoolData, school) => {
+  sanitizeData = (data) => {
+    return data.reduce((schoolData, school) => {
       const upperLocation = school.Location.toUpperCase();
+      const data = (parseFloat(parseFloat(school.Data).toFixed(3)))
 
       if (!Object.keys(schoolData).includes(upperLocation)) {
-
-
-        schoolData[upperLocation] = { data: {[school.TimeFrame]: (parseFloat(parseFloat(school.Data).toFixed(3))) || 0}};
+        schoolData[upperLocation] = { data: {[school.TimeFrame]: data || 0}};
       } else {
-        schoolData[upperLocation].data[school.TimeFrame] = (parseFloat(parseFloat(school.Data).toFixed(3))) || 0;
+        schoolData[upperLocation].data[school.TimeFrame] = data || 0;
       }
       return schoolData;
     }, {})
@@ -29,6 +28,19 @@ export default class DistrictRepository {
       } else {
         return undefined;
       }
+    }
+  }
+
+  findAllMatches = (query) => {
+    if(!query) {
+      return Object.keys(this.stats).map(key => {
+        return key;
+      })
+    } else {
+      const upperQuery = query.toUpperCase();
+      
+      return Object.keys(this.stats).filter(key => 
+        key.includes(upperQuery));
     }
   }
 }
