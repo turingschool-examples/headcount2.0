@@ -10,10 +10,13 @@
 }
 
 .card-title {
+  font-family: 'Karla', sans-serif;;
+  font-weight: 700;
   margin-bottom: 0;
 }
 
 .data-list {
+  font-family: 'Karla', sans-serif;;
   list-style-type: none;
   padding: 0;
 }

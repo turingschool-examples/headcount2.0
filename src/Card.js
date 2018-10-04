@@ -9,13 +9,13 @@ class Card extends Component {
 
   render() {
     const dataKeys = Object.keys(this.props.schoolInfo)
-    const schoolData = dataKeys.map((year) => {
+    const schoolData = dataKeys.map((year, index) => {
       if (this.props.schoolInfo[year] > 0.5) {
-        return <li className="greater">{year}: {this.props.schoolInfo[year]}</li>
+        return <li key={Date.now() + index} className="greater">{year}: {this.props.schoolInfo[year]}</li>
       } else if (this.props.schoolInfo[year] < 0.5) {
-        return <li className="lesser">{year}: {this.props.schoolInfo[year]}</li>
+        return <li key={Date.now() + index} className="lesser">{year}: {this.props.schoolInfo[year]}</li>
       } else if (this.props.schoolInfo[year] === 0.5) {
-        return <li className="equal">{year}: {this.props.schoolInfo[year]}</li>
+        return <li key={Date.now() + index} className="equal">{year}: {this.props.schoolInfo[year]}</li>
       }
     })
 

@@ -8,3 +8,8 @@ body {
   grid-gap: 15px;
   grid-template-columns: repeat(4, 1fr);
 }
+
+.title {
+  font-family: 'Karla', sans-serif;;
+  font-weight: 700;
+}
