@@ -4,7 +4,7 @@ import kinderData from '../../data/kindergartners_in_full_day_program.js';
 describe('DistrictRepository iteration 1 - part 2', () =>  {
   const district = new DistrictRepository(kinderData);
 
-  test.skip('findAllMatches defaults to returning all data in an array', () => {
+  test('findAllMatches defaults to returning all data in an array', () => {
     expect(district.findAllMatches().length).toBe(181);
   });
 
