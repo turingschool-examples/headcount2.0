@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DistrictRepository from './helper';
 
 class SearchForm extends Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class SearchForm extends Component {
   render() {
     return(
       <div>
-        <input />
+        <input onKeyUp={this.handleSearch}/>
       </div>
     )
   }
