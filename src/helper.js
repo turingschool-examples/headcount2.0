@@ -34,10 +34,11 @@ export default class DistrictRepository {
         return {school: school, data: this.stats[school] }
       })
     } else {
-      return schoolNames.filter( school => {
-        if (school.includes(name.toUpperCase())) {
-          return {school: school, data: this.stats[name.toUpperCase()] }
-        }
+
+      let filteredLocations = schoolNames.filter( school => school.includes(name.toUpperCase()) )
+
+      return filteredLocations.map( location => {
+        return {school: location, data: this.stats[location]}
       })
     }
   }

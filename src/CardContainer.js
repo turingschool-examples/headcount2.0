@@ -5,6 +5,7 @@ import Card from './Card.js'
 import './CardContainer.css'
 
 const CardContainer = ({districts}) => {  
+  // console.log(districts)
   const districtCards = districts.map( district => <Card district={district} />)
   return (
     <div className="card-container">

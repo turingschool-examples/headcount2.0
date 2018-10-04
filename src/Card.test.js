@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 
-import CardContainer from './CardContainer.js'
+import Card from './Card.js'
 import DistrictRepository from './helper.js';
 import kinderData from './data/kindergartners_in_full_day_program.js';
 
@@ -21,7 +21,7 @@ describe('Card', () => {
     const wrapper = shallow(<Card district={district} />)
     // console.log(wrapper.debug());
 
-    //Add tests
+    //Read card data UIs and count how many LIs there are and assert that there is a correct amount
   })
 })
 
