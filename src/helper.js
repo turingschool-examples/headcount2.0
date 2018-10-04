@@ -35,7 +35,13 @@ export default class DistrictRepository {
 
     let upperCaseName = name.toUpperCase();
 
-    !name || !this.stats[upperCaseName] ? undefined : this.stats[upperCaseName];
+    if(!name || !this.stats[upperCaseName]){
+      return undefined;
+    }else{
+      return this.stats[upperCaseName];
+    }
+
+    // !name || !this.stats[upperCaseName] ? undefined : this.stats[upperCaseName];
 
   }
 
