@@ -2,16 +2,22 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 
-const Card = (props) => {
+const Card = ({districtData}) => {
+  
+  const dataPoints = districtData.stats.map( year => {
+    return <p> {year.year}: {year.data} </p>
 
+  })
 
-  // return(
-  //   <div>
+  return(
+    <div>
+      <h1 className='card-heading'>{districtData.location}</h1>
+      <div className='card-data'>
+        {dataPoints}
+      </div>
+    </div>
 
-  //     <h1>{school name}</h1>
-  //     <p> {list of stats created} </p>
-
-  //   </div>
-
-  // )
+  )
 }
+
+export default Card
