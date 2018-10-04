@@ -20,6 +20,13 @@ describe('App', ()=>{
     expect(wrapper).toMatchSnapshot();    
   });
 
+  it('should render the comparison page if selection.length is === 2', () => {
+    wrapper.setState({
+      selection: [{thing: 1}, {thing: 2}]
+    })
+    expect(wrapper).toMatchSnapshot();    
+  });
+
   it('should have default state', () => {
     const mockState = {
       data: new DistrictRepository(kinderData),
@@ -29,38 +36,38 @@ describe('App', ()=>{
 
     expect(wrapper.state().filter).toEqual(mockState.filter);
     expect(wrapper.state().selection).toEqual(mockState.selection);
-    // expect(wrapper.state().data).toEqual(new DistrictRepository(kinderData))
+    expect(JSON.stringify(wrapper.state().data)).toEqual(JSON.stringify(new DistrictRepository(kinderData)))
   });
 
-  // it('should call setState on filter when processFilter() is called', () => {
-  //   const data = new DistrictRepository(kinderData);
+  it('should call setState on filter when processFilter() is called', () => {
+    const data = new DistrictRepository(kinderData);
     
-  //   const mockState = {
-  //     data: data,
-  //     filter: {"COLORADO SPRINGS 11": {
-  //         "location": "COLORADO SPRINGS 11",
-  //         "stats": {
-  //           "2004": 0.069,
-  //           "2005": 0.509,
-  //           "2006": 0.638,
-  //           "2007": 0.994,
-  //           "2008": 0.992,
-  //           "2009": 1,
-  //           "2010": 0.993,
-  //           "2011": 0.994,
-  //           "2012": 0.993,
-  //           "2013": 0.989,
-  //           "2014": 0.994,
-  //         },
-  //       },
-  //     },
-  //     selection: []
-  //   }
+    const mockState = {
+      data: data,
+      filter: {"COLORADO SPRINGS 11": {
+          "location": "COLORADO SPRINGS 11",
+          "stats": {
+            "2004": 0.069,
+            "2005": 0.509,
+            "2006": 0.638,
+            "2007": 0.994,
+            "2008": 0.992,
+            "2009": 1,
+            "2010": 0.993,
+            "2011": 0.994,
+            "2012": 0.993,
+            "2013": 0.989,
+            "2014": 0.994,
+          },
+        },
+      },
+      selection: []
+    }
 
-  //   wrapper.instance().processFilter('colorado spri');
+    wrapper.instance().processFilter('colorado spri');
 
-  //   expect(wrapper.state()).toEqual(mockState)
-  // })
+    expect(JSON.stringify(wrapper.state())).toEqual(JSON.stringify(mockState))
+  })
 
   it('should add an district to this.state.selection when called', () => {
     const argument = {

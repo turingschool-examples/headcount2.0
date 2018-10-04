@@ -2915,3 +2915,27 @@ exports[`App should render content to the DOM 1`] = `
   />
 </main>
 `;
+
+exports[`App should render the comparison page if selection.length is === 2 1`] = `
+<main
+  className="app"
+>
+  <h1>
+    Welcome To Headcount 2.0
+  </h1>
+  <Comparison
+    clearSelections={[Function]}
+    compareDistrictAverages={[Function]}
+    selection={
+      Array [
+        Object {
+          "thing": 1,
+        },
+        Object {
+          "thing": 2,
+        },
+      ]
+    }
+  />
+</main>
+`;

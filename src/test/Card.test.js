@@ -54,4 +54,11 @@ describe('Card', ()=>{
     expect(wrapper.state()).toEqual({classLabel: 'card'});
   });
 
+  it('should call selectCard() on click', () => {
+    wrapper.find('.card').simulate('click')
+
+    expect(wrapper.state()).toEqual({classLabel: 'card selected'})
+
+  })
+
 });
