@@ -47,7 +47,7 @@ class App extends Component {
         average: 0.407
       }
     ],
-    comparedAvg: ""
+    comparedAvg: {}
   };
 
   componentDidMount = () => {
