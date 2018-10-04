@@ -1,6 +1,6 @@
 import React from 'react';
 import DistrictCard from './DistrictCard';
-// import './CardContainer.css'
+import './CardContainer.css'
 
 const CardContainer = (props) => {
   const cards = props.districts.map(district => {
@@ -10,7 +10,7 @@ const CardContainer = (props) => {
   })
   
   return(
-    <div>
+    <div className='card-container'>
       { cards }
     </div>
     )
