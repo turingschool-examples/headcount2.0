@@ -36,15 +36,17 @@ class Card extends Component {
         }}
       >
         <h1 className="location">{this.props.data.location}</h1>
-        {Object.keys(this.props.data.stats).map((year) => {
-          return (
-            <Score 
-              data={this.props.data.stats[year]}
-              year={year}
-              key={year}
-            />
-          )
-        })}
+        <section className="score-container">
+          {Object.keys(this.props.data.stats).map((year) => {
+            return (
+              <Score 
+                data={this.props.data.stats[year]}
+                year={year}
+                key={year}
+              />
+            )
+          })}
+        </section>
       </article>
     ) 
   }

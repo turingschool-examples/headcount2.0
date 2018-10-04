@@ -39,3 +39,7 @@
 .score-wrapper p img {
   width: 10px;
 }
+
+.score-container {
+  margin-top: 1rem;
+}
