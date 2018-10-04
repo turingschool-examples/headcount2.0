@@ -2906,6 +2906,7 @@ exports[`App should have hold the right elements 1`] = `
         },
       ]
     }
+    districtSearch={[Function]}
   />
   <hr />
   <CardsContainer
