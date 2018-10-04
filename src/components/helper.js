@@ -29,7 +29,7 @@ export default class DistrictRepository {
       return undefined;
     }
   }
-
+ 
   findAllMatches(string) {
     if (string) {
       string = string.toUpperCase();

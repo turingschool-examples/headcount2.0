@@ -8,16 +8,24 @@ class Card extends Component {
   constructor() {
     super()
     this.state = {
-      clicked: false
+      selected: false
     }
   }
 
+  compareSelectedCards = (location) => {
+    this.props.compareDistricts(location)
+    this.setState({ selected: !this.state.selected })
+  }
+
   render() {
-    const stats =  this.props.stats;
+    const { stats, location } =  this.props;
     return (
-      <div className='card'>
+      <div 
+        onClick={() => this.compareSelectedCards(location)}
+        className={`card ${this.state.selected ? 'selected' : ''}`}
+        >
         <div className='card-info'>
-          <h3 className='card-title'>{this.props.location}</h3>
+          <h3 className='card-title'>{location}</h3>
           <LineChart 
             data={stats} 
             min={0} max={1} 

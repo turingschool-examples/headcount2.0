@@ -18,7 +18,8 @@ class Search extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     this.props.filterDistricts(this.state.query)
-    this.setState({ query: '' })
+    this.setState({ query: '' });
+    // this.props.filterDistricts(this.state.query)
   }
 
   render() {
@@ -33,6 +34,7 @@ class Search extends Component {
           />
           <button>Search</button>
         </form>
+        <button>Clear</button>
       </div>
     )
   }

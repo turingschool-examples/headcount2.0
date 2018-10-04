@@ -1,12 +1,20 @@
 import React from 'react';
-import Card from './Card';
+import ReactChartkick, { LineChart } from 'react-chartkick'
+import Chart from 'chart.js'
 
-const Compare = ({cards}) => {
+ReactChartkick.addAdapter(Chart)
+
+const Compare = ({ compare }) => {
   
-  // const allCards = cards.map(card => <Card location={card.location} stats={card.stats}/>)
+  
   return(
     <div className='compare-container'>
-  
+    <LineChart 
+    data={compare}
+    width="100%"
+    min={0} max={1} 
+    legend="bottom"
+      />
     </div>
   )
 }

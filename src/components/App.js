@@ -12,33 +12,44 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      cards: [],
       compare: [],
       query: '',
       data: new DistrictRepository(kinderData)
     }
   }
 
-  componentDidMount() {
-    // this.displayAllCards();
+  compareDistricts = (districts) => {
+    let currentDistricts = this.state.compare.map(district => district.name)
+    if (this.state.compare.length <= 1 && !currentDistricts.includes(districts)) {
+      const district = this.state.data.findByName(districts);
+      const newDistrict = { name: district.location, data: district.stats }
+      console.log(newDistrict)
+      this.setState({ compare: [ newDistrict, ...this.state.compare ] })
+    } 
   }
-
-  
 
   filterDistricts = (query) => {
     this.setState({ query })
   }
 
   render() {
+    const { query, compare, data } = this.state;
     return (
       <div>
         <Search
           displayAllCards={this.displayAllCards}
           filterDistricts={this.filterDistricts}
         />
-        <Compare/>
+        {
+        this.state.compare.length > 0 &&
+        <Compare
+          compare={compare}
+        />
+        }
         <CardContainer 
-        cards={this.state.data.findAllMatches(this.state.query)}
+          cards={data.findAllMatches(query)}
+          compareDistricts={this.compareDistricts}
+          compare={compare}
         />
       </div>
     );
