@@ -20,12 +20,14 @@ class App extends Component {
 
   compareDistricts = (districts) => {
     let currentDistricts = this.state.compare.map(district => district.name)
-    if (this.state.compare.length <= 1 && !currentDistricts.includes(districts)) {
-      const district = this.state.data.findByName(districts);
-      const newDistrict = { name: district.location, data: district.stats }
-      console.log(newDistrict)
-      this.setState({ compare: [ newDistrict, ...this.state.compare ] })
-    } 
+    if (currentDistricts.includes(districts)) {
+      let newCompare = this.state.compare.filter(district => !district.name.includes(districts))
+      this.setState({ compare: newCompare })
+    } else if (this.state.compare.length <= 1 && !currentDistricts.includes(districts)) {
+        const district = this.state.data.findByName(districts);
+        const newDistrict = { name: district.location, data: district.stats }
+        this.setState({ compare: [ newDistrict, ...this.state.compare ] })
+      } 
   }
 
   filterDistricts = (query) => {
@@ -36,16 +38,16 @@ class App extends Component {
     const { query, compare, data } = this.state;
     return (
       <div>
+        {
+          this.state.compare.length > 0 &&
+          <Compare
+          compare={compare}
+          />
+        }
         <Search
           displayAllCards={this.displayAllCards}
           filterDistricts={this.filterDistricts}
         />
-        {
-        this.state.compare.length > 0 &&
-        <Compare
-          compare={compare}
-        />
-        }
         <CardContainer 
           cards={data.findAllMatches(query)}
           compareDistricts={this.compareDistricts}
