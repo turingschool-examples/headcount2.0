@@ -6,27 +6,28 @@
 }
 
 .school-name {
+  text-align: center;
   padding: 10px;
   font-size: 22px;
-  text-align: center;
 }
 
 .icon {
-  margin: 0 10px;
+  margin-right: 10px;
+  margin-left: 30px;
   height: 20px;
   position: relative;
-  top: 5px
+  top: 4px;
 }
 
-.red {
-  color: red;
+.bold {
+  font-weight: lighter;
 }
 
-.green {
-  color: green;
+.light {
+  font-weight: bold;
 }
 
-.green,
-.red {
+.bold,
+.light {
   line-height: 0.6;
 }

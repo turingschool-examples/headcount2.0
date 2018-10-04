@@ -8,10 +8,11 @@ const Card = ({ location, stats }) => {
   const years = Object.keys(stats);
   const cardData = years.map(year => {
     return (
-      <div>
-        <p className={stats[year] > 0.5 ? "green" : "red"} key={year}>
+      <div key={year}>
+        <p className={stats[year] > 0.5 ? "bold" : "light"}>
           <img
             className="icon"
+            alt="check icon"
             src={stats[year] > 0.5 ? checkIcon : cancelIcon}
           />
           {`${year} : ${stats[year]}`}
