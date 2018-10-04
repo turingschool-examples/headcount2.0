@@ -6,7 +6,7 @@ import CardContainer from './CardContainer';
 describe('CardContainer', () => {
 
 
-  it('should match the snapshot with no cards', () => {
+  it('should match a snapshot', () => {
     const mockData = {
       location: 'Turing',
       stats: {
