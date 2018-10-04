@@ -3,6 +3,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-gap: 20px 15px;
-  width: 96%;
-  margin: 0 2% 40px 2%;
+  width: 70%;
+  margin: 0 15% 40px 15%;
 }

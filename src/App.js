@@ -9,7 +9,45 @@ import "./App.css";
 const allSchools = new DistrictRepository(kinderData);
 
 class App extends Component {
-  state = { schoolData: {}, comparedCards: [] };
+  state = {
+    schoolData: {},
+    comparedCards: [
+      {
+        location: "ACADEMY 20",
+        stats: {
+          2004: 0.302,
+          2005: 0.267,
+          2006: 0.354,
+          2007: 0.392,
+          2008: 0.385,
+          2009: 0.39,
+          2010: 0.436,
+          2011: 0.489,
+          2012: 0.479,
+          2013: 0.488,
+          2014: 0.49
+        },
+        average: 0.407
+      },
+      {
+        location: "ACADEMY 20",
+        stats: {
+          2004: 0.302,
+          2005: 0.267,
+          2006: 0.354,
+          2007: 0.392,
+          2008: 0.385,
+          2009: 0.39,
+          2010: 0.436,
+          2011: 0.489,
+          2012: 0.479,
+          2013: 0.488,
+          2014: 0.49
+        },
+        average: 0.407
+      }
+    ]
+  };
 
   componentDidMount = () => {
     const schoolData = allSchools.findAllMatches();
@@ -28,9 +66,9 @@ class App extends Component {
   };
 
   handleCardClick = location => {
-    const clickedDisctrict = allSchools.stats[location]
+    const clickedDisctrict = allSchools.stats[location];
     clickedDisctrict.average = allSchools.findAverage(location);
-    console.log(clickedDisctrict)
+    //console.log(clickedDisctrict);
     const comparedCards = [
       allSchools.stats[location],
       allSchools.stats[location]
@@ -42,7 +80,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1 className="main-logo">head count</h1>
+        <h1 className="main-logo">headcount</h1>
         <CompareCardContainer comparedCards={this.state.comparedCards} />
         <Search handleSearch={this.handleSearch} />
         <CardContainer

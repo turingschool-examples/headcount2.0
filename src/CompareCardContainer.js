@@ -1,22 +1,14 @@
 import React from "react";
-import ComparedCard from "./ComparedCard";
+import Card from "./Card";
 
 const CompareCardContainer = ({comparedCards}) => {
+  console.log(comparedCards[0])
   return (
     <div className="compare-card-container">
-      <ComparedCard />
-      <ComparedCard />
+      <Card key={0} {...comparedCards[0]}/>
+      <Card key={1} {...comparedCards[1]}/>
     </div>
   );
 };
 
 export default CompareCardContainer;
-
-
-
-// const schoolList = Object.keys(cards);
-// const allCards = schoolList.map(school => (
-//   <Card key={school} {...cards[school]} handleCardClick={handleCardClick} />
-// ));
-
-//return <div className="card-container">{allCards}</div>;

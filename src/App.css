@@ -9,5 +9,6 @@ body {
 .main-logo {
   font-family: "Permanent Marker", cursive;
   text-align: center;
-  font-size: 75px;
+  font-size: 55px;
+  margin: 10px;
 }
