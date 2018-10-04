@@ -1,4 +1,4 @@
-export default class DistrictRepository {
+class DistrictRepository {
   constructor(data) {
     this.stats = this.sanitizeData(data);
   }
@@ -34,7 +34,7 @@ export default class DistrictRepository {
   findAllMatches = (query) => {
     if(!query) {
       return Object.keys(this.stats).map(key => {
-        return key;
+        return {location: key, stats: this.stats[key]};
       })
     } else {
       const upperQuery = query.toUpperCase();
@@ -44,3 +44,5 @@ export default class DistrictRepository {
     }
   }
 }
+
+export default DistrictRepository;
