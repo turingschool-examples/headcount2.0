@@ -22,6 +22,7 @@ export default class DistrictRepository {
   }
 
   findByName = (enteredName) => {
+    console.log(enteredName)
     const locations = Object.keys(this.stats)
 
     if (enteredName) {
@@ -35,9 +36,8 @@ export default class DistrictRepository {
       })
 
       if (correctDistrict) {
-        correctDistrict = correctDistrict.toUpperCase()
         return {
-          location: correctDistrict,
+          location: correctDistrict.toUpperCase(),
           stats: this.stats[correctDistrict]
         }
       }
@@ -47,14 +47,14 @@ export default class DistrictRepository {
   }
 
   findAllMatches = (entry) => {
-    const locations = Object.keys(this.stats)
+    const locations = Object.keys(this.stats);
     const returnData = [];
 
     if (entry) {
       locations.forEach( location => {
         if (location.toLowerCase().includes(entry.toLowerCase())) {
           returnData.push({
-            stats: this.stats[location],
+            stats: this.stats[location.toUpperCase()],
             location: location
           })
         }
