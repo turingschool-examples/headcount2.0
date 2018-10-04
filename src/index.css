@@ -23,3 +23,11 @@ h1 {
   height: 350px;
   border: 1px solid ;
 }
+
+.less-than {
+  color: red;
+}
+
+.more-than {
+  color: green;
+}
