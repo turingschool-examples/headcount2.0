@@ -10,14 +10,15 @@ class CompareCard extends Component {
 
   render() {
     return(
-        <div>
-           
+        <div className="compare-card">
+           <section className="school-one"></section>
+           <section className="comparison"></section>
+           <section className="school-two"></section>
         </div>
     )
   }
-//test
-}
 
+}
 
 export default CompareCard; 
 

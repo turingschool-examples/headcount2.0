@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 import Card from './Card.js'
 import './CardContainer.css'
 
-const CardContainer = ({districts}) => {  
+const CardContainer = ({districts, addCompareSelections}) => {  
   // console.log(districts)
-  const districtCards = districts.map( district => <Card district={district} />)
+  const districtCards = districts.map( district => <Card district={district} addCompareSelections={addCompareSelections}/>)
   return (
     <div className="card-container">
       { districtCards }
