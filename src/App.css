@@ -6,9 +6,14 @@ body {
   background-attachment: fixed;
 }
 
-.main-logo {
+.main-logo,
+.instructions {
   font-family: "Permanent Marker", cursive;
   text-align: center;
   font-size: 55px;
-  margin: 20px;
+  margin: 24px;
+}
+
+.instructions {
+  font-size: 40px;
 }

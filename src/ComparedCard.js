@@ -4,12 +4,12 @@ import "./ComparedCard.css";
 
 const ComparedCard = props => {
   const districtNames = Object.keys(props);
-  
+
   return (
     <div className="compared-card">
       <h3>average: {props[districtNames[0]]}</h3>
+      <h3>compared average: <br /> {props.compared}</h3>
       <h3>average: {props[districtNames[1]]}</h3>
-      <h3>compared average: {props.compared}</h3>
     </div>
   );
 };

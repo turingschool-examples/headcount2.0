@@ -11,41 +11,41 @@ const allSchools = new DistrictRepository(kinderData);
 class App extends Component {
   state = {
     schoolData: {},
-    comparedCards: [
-      {
-        location: "ACADEMY 20",
-        stats: {
-          2004: 0.302,
-          2005: 0.267,
-          2006: 0.354,
-          2007: 0.392,
-          2008: 0.385,
-          2009: 0.39,
-          2010: 0.436,
-          2011: 0.489,
-          2012: 0.479,
-          2013: 0.488,
-          2014: 0.49
-        },
-        average: 0.407
-      },
-      {
-        location: "ACADEMY 20",
-        stats: {
-          2004: 0.302,
-          2005: 0.267,
-          2006: 0.354,
-          2007: 0.392,
-          2008: 0.385,
-          2009: 0.39,
-          2010: 0.436,
-          2011: 0.489,
-          2012: 0.479,
-          2013: 0.488,
-          2014: 0.49
-        },
-        average: 0.407
-      }
+    comparedCards: [ {},{}
+      // {
+      //   location: "ACADEMY 20",
+      //   stats: {
+      //     2004: 0.302,
+      //     2005: 0.267,
+      //     2006: 0.354,
+      //     2007: 0.392,
+      //     2008: 0.385,
+      //     2009: 0.39,
+      //     2010: 0.436,
+      //     2011: 0.489,
+      //     2012: 0.479,
+      //     2013: 0.488,
+      //     2014: 0.49
+      //   },
+      //   average: 0.407
+      // },
+      // {
+      //   location: "ACADEMY 20",
+      //   stats: {
+      //     2004: 0.302,
+      //     2005: 0.267,
+      //     2006: 0.354,
+      //     2007: 0.392,
+      //     2008: 0.385,
+      //     2009: 0.39,
+      //     2010: 0.436,
+      //     2011: 0.489,
+      //     2012: 0.479,
+      //     2013: 0.488,
+      //     2014: 0.49
+      //   },
+      //   average: 0.407
+      // }
     ],
     comparedAvg: {}
   };
@@ -88,6 +88,7 @@ class App extends Component {
           comparedCards={this.state.comparedCards}
           comparedAvg={this.state.comparedAvg}
         />
+        <h4 className="instructions">click two districts to compare stats</h4>
         <CardContainer
           handleCardClick={this.handleCardClick}
           cards={this.state.schoolData}
