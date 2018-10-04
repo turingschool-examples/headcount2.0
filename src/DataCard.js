@@ -19,7 +19,6 @@ const DataCard = (props) => {
       <li className={Object.values(props.school.stats)[9] < 0.5 ? 'less-than' : 'more-than'}> 2013: {Object.values(props.school.stats)[9]}</li>
       <li className={Object.values(props.school.stats)[10] < 0.5 ? 'less-than' : 'more-than'}> 2014: {Object.values(props.school.stats)[10]}</li>
       </ul>
-
     </div>
   )
 }
