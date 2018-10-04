@@ -7,7 +7,7 @@ export default class DistrictRepository {
 
   stats(){
     let districts = this.data.reduce((districts, district) => {
-      
+
       if(isNaN(district.Data)){
         district.Data = 0;
       }
@@ -33,16 +33,10 @@ export default class DistrictRepository {
 
   findByName(name){
 
-    let upperCaseName = name.toUpperCase();
-
-    if(!name || !this.stats[upperCaseName]){
-      return undefined;
-    }else{
-      return this.stats[upperCaseName];
+    if(name && this.stats[name.toUpperCase()]){
+      return this.stats[name.toUpperCase()]
     }
-
-    // !name || !this.stats[upperCaseName] ? undefined : this.stats[upperCaseName];
-
+    
   }
 
   // findAllMatching(){
