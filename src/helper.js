@@ -50,7 +50,17 @@ export default class DistrictRepository {
      return {location: correctLocation, stats: this.stats[str]}
     } else {
       return undefined
-  } 
-}
+    } 
+  }
+
+  // findAverage = () => {
+  //   let name1 = Object.keys(this.stats).reduce((acc, stat) => {
+  //       if(acc[stat]){
+  //         acc[stat]++
+  //       }
+  //     return acc
+  //   }, 0)
+  //   console.log(name1)
+  // }
 
 }
