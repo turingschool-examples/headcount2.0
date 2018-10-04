@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Card from '../Card/Card'
+import Card from '../components/Card'
 
 describe('Card', () => {
   let wrapper;
