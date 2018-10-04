@@ -25,7 +25,7 @@ class InputField extends Component {
         <input 
           className="text-input"
           value={this.state.input}
-          placeholder='Enter your school district'
+          placeholder='Search for your school district...'
           onChange={(e) => {
             this.processInput(e.target.value)
           }}

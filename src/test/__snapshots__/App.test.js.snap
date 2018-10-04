@@ -4,12 +4,19 @@ exports[`App should render content to the DOM 1`] = `
 <main
   className="app"
 >
-  <h1>
-    Welcome To Headcount 2.0
-  </h1>
-  <InputField
-    processFilter={[Function]}
-  />
+  <header>
+    <img
+      alt="logo"
+      className="logo"
+      src="./brain-and-head.svg"
+    />
+    <h1>
+      Colorado Headcount
+    </h1>
+    <InputField
+      processFilter={[Function]}
+    />
+  </header>
   <CardContainer
     data={
       Object {

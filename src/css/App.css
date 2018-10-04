@@ -1,3 +1,18 @@
 .app h1 {
-  text-align: center;
+  margin: 0;
+  padding: 1rem;
+}
+
+header {
+  background: #044C62;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 70px 1fr 1fr;
+  height: 100px;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  margin: 1rem;
 }

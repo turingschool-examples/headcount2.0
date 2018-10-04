@@ -61,14 +61,17 @@ class App extends Component {
     if (this.state.data && this.state.selection.length < 2) {
       return (
         <main className="app">
-          <h1>Welcome To Headcount 2.0</h1>
-          <InputField 
-            processFilter={this.processFilter}
-          />
-          <CardContainer 
-            data={this.state.filter || this.state.data.stats} 
-            processSelection={this.processSelection}
-          />
+          <header>
+            <img className='logo' src="./brain-and-head.svg" alt="logo" />
+            <h1>Colorado Headcount</h1>
+            <InputField 
+              processFilter={this.processFilter}
+            />
+          </header>
+            <CardContainer 
+              data={this.state.filter || this.state.data.stats} 
+              processSelection={this.processSelection}
+            />
         </main>
       );
     } else if (this.state.selection.length === 2) {
