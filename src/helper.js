@@ -46,9 +46,12 @@ export default class DistrictRepository {
   };
 
   compareDistrictAverages = (schoolOne, schoolTwo) => {
+    schoolOne = schoolOne.toUpperCase()
+    schoolTwo = schoolTwo.toUpperCase()
     const schoolOneAvg = this.findAverage(schoolOne);
     const schoolTwoAvg = this.findAverage(schoolTwo);
-    const schoolComparison = (schoolOneAvg + schoolTwoAvg) / 2;
+    const schoolComparison =
+      Math.round(1000 * (schoolOneAvg / schoolTwoAvg)) / 1000;
 
     return {
       [schoolOne]: schoolOneAvg,
