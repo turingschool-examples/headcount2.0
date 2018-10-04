@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardsContainer should render one-eight-one cards 1`] = `
+<div
+  className="cards-container"
+/>
+`;
