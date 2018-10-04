@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 
 const CardContainer = ({stats}) => {
 
+  //move this map into helper so we bring in an array of the data exactly how we want it.
+
   const cards = Object.keys(stats).map( district => {
     let years = [];
     const districtData = stats[district].reduce((data, year) => {

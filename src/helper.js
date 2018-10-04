@@ -1,21 +1,44 @@
 
 export default class DistrictRepository {
   constructor(stats){
-    this.stats = stats.reduce((districts, school) => {
-      let statsObj ={
-        location: school.Location.toUpperCase(),
-        year: school.TimeFrame,
-        data: school.Data
-      }   
-   
-        let upperCaseLocation = school.Location.toUpperCase()
-        if(!districts[upperCaseLocation]){
-          districts[upperCaseLocation] = []
-        } 
-        districts[upperCaseLocation].push(statsObj)
-      return districts
-    }, {})
+    this.stats = this.organizeData(stats)
+    // this.districtStats = this.organizeDistrictData(stats) 
   }
+
+  organizeData(stats){
+    const filteredData = stats.reduce((districts, school) => {
+        let statsObj ={
+          location: school.Location.toUpperCase(),
+          year: school.TimeFrame,
+          data: school.Data
+        }   
+     
+          let upperCaseLocation = school.Location.toUpperCase()
+          if(!districts[upperCaseLocation]){
+            districts[upperCaseLocation] = []
+          } 
+          districts[upperCaseLocation].push(statsObj)
+        return districts
+      }, {})
+    return filteredData
+  }
+
+  // organizeDistrictData(this.stats){  //won't accept this.stats as a Parameter---> need to change all reference to stats to this.stats
+  //   const districtData = Object.keys(stats).map( district => {
+  //     let years = [];
+  //     const districtData = stats[district].reduce((data, year) => {
+      
+  //       if(typeof year.data !== 'number'){ year.data = 0} //ternerary?
+  //       const roundedData = Math.round(year.data * 1000)/1000
+
+  //       years.push({year: year.year, data: roundedData})
+  //       let orderedYears = years.sort((a, b) => a.year - b.year)
+
+  //       data = {location: district, stats: orderedYears}
+  //         return data
+  //     }, {})
+  //   return districtData
+  // }
 
   findByName(name){
     if (name === undefined) {
