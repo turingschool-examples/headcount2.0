@@ -6,7 +6,7 @@ export default class DistrictRepository {
   cleanData(stats){
      return stats.reduce((acc, district) => {
       let dataNum = Math.round(1000*district.Data)/1000 || 0
-      if (!acc[district.Location]) {
+      if (!acc[district.Location.toUpperCase()]) {
         acc[district.Location.toUpperCase()] = {
           'stats': {[district.TimeFrame] : dataNum}, 
           'location': district.Location.toUpperCase()
@@ -19,11 +19,10 @@ export default class DistrictRepository {
   }
 
   findByName(string) {
-    if (string == undefined){
+    if (string === undefined){
       return undefined 
     } else {
       if ( string.toUpperCase() in this.stats ) {
-        // console.log(this.stats)
         return this.stats[string.toUpperCase()]
       } else {
         return undefined
@@ -33,7 +32,7 @@ export default class DistrictRepository {
 
   findAllMatches(string) {
     const findMatchesData = Object.values(this.stats)
-    if (string == undefined) {
+    if (string === undefined) {
       return findMatchesData
     } else if (!(string.toUpperCase() in this.stats)) {
       return []
@@ -46,6 +45,7 @@ export default class DistrictRepository {
       if (school.location.match(string)){
         findMatchesResult.push(school)
       }
+      return false;
     })
     return findMatchesResult
     }
