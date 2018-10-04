@@ -9,7 +9,7 @@ import "./App.css";
 const allSchools = new DistrictRepository(kinderData);
 
 class App extends Component {
-  state = { schoolData: {} };
+  state = { schoolData: {}, comparedCards: [] };
 
   componentDidMount = () => {
     const schoolData = allSchools.findAllMatches();
@@ -26,15 +26,24 @@ class App extends Component {
     }
     this.setState({ schoolData });
   };
+
   handleCardClick = location => {
-    console.log(location);
+    const clickedDisctrict = allSchools.stats[location]
+    clickedDisctrict.average = allSchools.findAverage(location);
+    console.log(clickedDisctrict)
+    const comparedCards = [
+      allSchools.stats[location],
+      allSchools.stats[location]
+    ];
+
+    this.setState({ comparedCards });
   };
 
   render() {
     return (
       <div>
         <h1 className="main-logo">head count</h1>
-        <CompareCardContainer />
+        <CompareCardContainer comparedCards={this.state.comparedCards} />
         <Search handleSearch={this.handleSearch} />
         <CardContainer
           handleCardClick={this.handleCardClick}
