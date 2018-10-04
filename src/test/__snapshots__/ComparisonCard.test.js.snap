@@ -4,45 +4,51 @@ exports[`ComparisonCard should render content to the DOM 1`] = `
 <article
   className="comparison-card"
 >
-  <h1
-    className="comparison-school"
-  >
-    ADAMS COUNTY 14
-  </h1>
-  <h1
-    className="comparison-average"
-  >
-    average
-  </h1>
-  <p
-    className="district-average"
-  >
-    0.709
-  </p>
-  <h1
-    className="comparison-school"
-  >
-    COLORADO
-  </h1>
-  <h1
-    className="comparison-average"
-  >
-    average
-  </h1>
-  <p
-    className="district-average"
-  >
-    0.53
-  </p>
-  <h1
-    className="comparison-school"
-  >
-    Compared
-  </h1>
-  <p
-    className="comparison-data"
-  >
-    1.338
-  </p>
+  <section>
+    <h1
+      className="comparison-school top-school"
+    >
+      ADAMS COUNTY 14
+    </h1>
+    <h1
+      className="comparison-average"
+    >
+      average
+    </h1>
+    <p
+      className="district-average"
+    >
+      0.709
+    </p>
+  </section>
+  <section>
+    <h1
+      className="compared"
+    >
+      Compared
+    </h1>
+    <p
+      className="comparison-data"
+    >
+      1.338
+    </p>
+  </section>
+  <section>
+    <h1
+      className="comparison-school"
+    >
+      COLORADO
+    </h1>
+    <h1
+      className="comparison-average"
+    >
+      average
+    </h1>
+    <p
+      className="district-average"
+    >
+      0.53
+    </p>
+  </section>
 </article>
 `;

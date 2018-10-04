@@ -4,7 +4,13 @@
   text-align: center;
   border: 2px solid #000;
   border-radius: 10px;
-  padding-bottom: .5rem;
+  color: #fff;
+  background: #0CA7D3;
+}
+
+.comparison-card section:nth-child(2) {
+  background: #fff;
+  color: #000;
 }
 
 
@@ -14,8 +20,20 @@
   text-transform: uppercase;
 }
 
-.comparison-school {
+.comparison-school,
+.compared {
+  padding: 1rem 0;
   text-decoration: underline;
+}
+
+.comparison-data {
+  padding-bottom: 1rem;
+}
+
+
+.top-school {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
 }
 
 .comparison-card p {
@@ -23,5 +41,6 @@
 }
 
 .district-average {
-  padding-bottom: 1rem;
+  padding-bottom: .5rem;
 }
+

@@ -13,7 +13,7 @@ class InputField extends Component {
 
   processInput = (value) => {
     this.setState({
-    input: value
+      input: value
     })
     this.props.processFilter(value)
   }
@@ -25,7 +25,7 @@ class InputField extends Component {
         <input 
           className="text-input"
           value={this.state.input}
-          placeholder='Enter your school district'
+          placeholder='Search for your school district...'
           onChange={(e) => {
             this.processInput(e.target.value)
           }}

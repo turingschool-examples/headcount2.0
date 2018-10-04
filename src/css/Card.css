@@ -5,11 +5,18 @@
   border: 2px solid #000;
   border-radius: 10px;
   padding-bottom: .5rem;
+  transition: .2s;
 }
 
 .card h1 {
-  font-size: 1rem;
-  margin: 1rem .5rem;
+  display: grid;
+  align-items: center;
+  padding: 1rem .5rem;
+  background: #0CA7D3;
+  color: #fff;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  height: 50px;
 }
 
 .card p {
@@ -18,14 +25,21 @@
 
 .card:hover {
   cursor: pointer;
-  background: rgba(0, 0, 0, .8);
+  background: #0CA7D3;
   color: #fff;
 }
 
-.selected {
-  border: 2px solid blue;
+.selected,
+.selected:hover {
+  background: #044C62;
+  color: #fff;
+  transition: 0;
 }
 
 .score-wrapper p img {
   width: 10px;
+}
+
+.score-container {
+  margin-top: 1rem;
 }
