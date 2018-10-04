@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './styles/App.sass';
+import './styles/App.css';
 import kinderData from './data/kindergartners_in_full_day_program.js';
 import DistrictRepository from './helper.js'
 import Landing from './Landing'
@@ -20,6 +20,7 @@ class App extends Component {
     return (
       <div>
         <Landing />        
+        
       </div>
     );
   }
