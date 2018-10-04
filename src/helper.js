@@ -59,12 +59,16 @@ export default class DistrictRepository {
 
 		const districtLowerCase = district.toLowerCase()
 
+		if (!districtKeys.includes(districtLowerCase)) {
+			return []
+		}
+
 		if (districtKeys.includes(districtLowerCase)) {
-			const filteredDistricts = districtObjects.filter((place) => {
-				const placeLowerCase = place.location.toLowerCase()
-				// console.log(placeLowerCase)
-				if (placeLowerCase.includes(districtLowerCase)) {
-				return place
+			const filteredDistricts = districtObjects.filter((schoolDistrict) => {
+				const schoolDistrictLowerCase = schoolDistrict.location.toLowerCase()
+
+				if (schoolDistrictLowerCase.includes(districtLowerCase)) {
+				return schoolDistrict
 				}
 			})
 			return filteredDistricts
