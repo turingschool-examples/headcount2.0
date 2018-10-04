@@ -20,6 +20,6 @@
     "eject": "react-scripts eject"
   },
   "jest": {
-    "snapshotSerializer": ["enzyme-to-json/serializer"]
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
   }
 }

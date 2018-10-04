@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Header from './Header'
-import CardContainer from './CardContainer'
+import Header from './Header/Header'
+import CardContainer from './CardContainer/CardContainer'
 import './App.css';
 
 class App extends Component {
