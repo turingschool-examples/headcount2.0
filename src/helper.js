@@ -43,6 +43,23 @@ export default class DistrictRepository {
     }
   }
   
+  findAverage(name) {
+    const schoolStats = Object.values(this.stats[name.toUpperCase()])
+    const avg = schoolStats.reduce( (total, stat) => {
+      total += stat
+      return total
+    }, 0) / schoolStats.length
+    return Math.round(avg * 1000) / 1000
+  }
+
+  compareDistrictAverages(name1, name2) {
+    const name1Avg = this.findAverage(name1.toUpperCase())
+    const name2Avg = this.findAverage(name2.toUpperCase())
+    const compared = Math.round((name1Avg / name2Avg) * 1000) / 1000
+
+    return {[name1.toUpperCase()]: name1Avg, [name2.toUpperCase()]: name2Avg, compared: compared}
+  }
+
 }
 
 
