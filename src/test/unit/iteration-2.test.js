@@ -14,10 +14,10 @@ describe('CardContainer iteration 2', () => {
   //   expect(wrapper).toMatchSnapshot();
   // });
 
-  test('should have a default state', () => {
-    const wrapper = shallow(<CardContainer />)
-    const expected = { cards: [] }
+  // test('should have a default state', () => {
+  //   const wrapper = shallow(<CardContainer />)
+  //   const expected = { cards: [] }
 
-    expect(wrapper.state()).toEqual(expected);
-  })
+  //   expect(wrapper.state()).toEqual(expected);
+  // })
 })

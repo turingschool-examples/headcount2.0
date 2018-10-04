@@ -4,7 +4,7 @@ import DistrictCard from './DistrictCard';
 
 const CardContainer = (props) => {
   const cards = props.districts.map(district => {
-    return (<DistrictCard district={district.location}
+    return (<DistrictCard location={district.location}
                           stats={district.stats}
                           key={district.location}/>)
   })
