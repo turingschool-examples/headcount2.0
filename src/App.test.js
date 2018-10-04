@@ -19,9 +19,9 @@ describe('App', () => {
 
   it('should have a default state of 181 school districts', () => {
     const wrapper = shallow(<App />)
-    const expected = { districts: [...data] }
+    const expected = { districts: data, data: repository, schoolName: ''}
 
     expect(wrapper.state()).toEqual(expected)
   })
-
+  
 })

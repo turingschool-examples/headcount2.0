@@ -2,6 +2,9 @@
 
 exports[`App should display school districts 1`] = `
 <div>
+  <SearchForm
+    filterCards={[Function]}
+  />
   <CardContainer
     districts={
       Array [

@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
+import kinderData from './data/kindergartners_in_full_day_program.js';
+import DistrictRepository from './helper.js';
 
 import './App.css';
 import CardContainer from './CardContainer.js'
-import DistrictRepository from './helper.js';
-import kinderData from './data/kindergartners_in_full_day_program.js';
+import SearchForm from './SearchForm.js'
 
 class App extends Component {
   constructor() {
     super() 
       this.state = {
-        districts: []
+        districts: [],
+        schoolName: '',
+        data: new DistrictRepository(kinderData)
     }
   }
 
@@ -24,12 +27,19 @@ class App extends Component {
   })
  }
 
+ filterCards = (school) => {
+  this.setState({
+    schoolName: school
+  })
+ }
+
   render() {
-    const { districts } = this.state
+    const { districts, data, schoolName } = this.state
     if (districts.length > 0) { 
       return (
         <div>
-          <CardContainer districts={districts} />
+          <SearchForm filterCards={this.filterCards} />
+          <CardContainer districts={data.findAllMatches(schoolName)} />
         </div>
       )
     } else {
