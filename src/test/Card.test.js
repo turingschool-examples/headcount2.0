@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import App from '../components/Card';
+import Card from '../components/Card';
 
-describe('App', ()=>{
+describe('Card', ()=>{
   let wrapper; 
 
   const mockData = {
@@ -24,11 +24,11 @@ describe('App', ()=>{
   }
 
   const mockProcessSelection = () => {
-    
+
   } 
 
   beforeEach(()=>{
-    wrapper = shallow(<App data={mockData} processSelection={mockProcessSelection}/>);
+    wrapper = shallow(<Card data={mockData} processSelection={mockProcessSelection}/>);
   });
 
   it('should exist', () => {
@@ -37,6 +37,21 @@ describe('App', ()=>{
 
   it('should render content to the DOM', () => {
     expect(wrapper).toMatchSnapshot();    
+  });
+
+  it('should have default state', () => {
+    expect(wrapper.state()).toEqual({classLabel: 'card'})
+  });
+
+  it('should update state when selectCard is called', () => {
+    wrapper.instance().selectCard();
+    expect(wrapper.state()).toEqual({classLabel: 'card selected'});
+  });
+
+  it('should update state back when selectCard is called twice', () => {
+    wrapper.instance().selectCard();
+    wrapper.instance().selectCard();
+    expect(wrapper.state()).toEqual({classLabel: 'card'});
   });
 
 });

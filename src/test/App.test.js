@@ -57,7 +57,7 @@ describe('App', ()=>{
   //     selection: []
   //   }
 
-  //   wrapper.instance().processFilter('colorado spring');
+  //   wrapper.instance().processFilter('colorado spri');
 
   //   expect(wrapper.state()).toEqual(mockState)
   // })
