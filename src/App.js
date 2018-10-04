@@ -11,42 +11,7 @@ const allSchools = new DistrictRepository(kinderData);
 class App extends Component {
   state = {
     schoolData: {},
-    comparedCards: [ {},{}
-      // {
-      //   location: "ACADEMY 20",
-      //   stats: {
-      //     2004: 0.302,
-      //     2005: 0.267,
-      //     2006: 0.354,
-      //     2007: 0.392,
-      //     2008: 0.385,
-      //     2009: 0.39,
-      //     2010: 0.436,
-      //     2011: 0.489,
-      //     2012: 0.479,
-      //     2013: 0.488,
-      //     2014: 0.49
-      //   },
-      //   average: 0.407
-      // },
-      // {
-      //   location: "ACADEMY 20",
-      //   stats: {
-      //     2004: 0.302,
-      //     2005: 0.267,
-      //     2006: 0.354,
-      //     2007: 0.392,
-      //     2008: 0.385,
-      //     2009: 0.39,
-      //     2010: 0.436,
-      //     2011: 0.489,
-      //     2012: 0.479,
-      //     2013: 0.488,
-      //     2014: 0.49
-      //   },
-      //   average: 0.407
-      // }
-    ],
+    comparedCards: [{}, {}],
     comparedAvg: {}
   };
 
@@ -68,10 +33,12 @@ class App extends Component {
 
   handleCardClick = location => {
     const clickedDisctrict = allSchools.stats[location];
-    const comparedCards = [
-      allSchools.stats[location],
-      allSchools.stats[location]
-    ];
+    let comparedCards = this.state.comparedCards;
+    if (!Object.keys(comparedCards[0]).length) {
+      comparedCards[0] = clickedDisctrict
+    } else if (!Object.keys(comparedCards[1]).length) {
+      comparedCards[1] = clickedDisctrict
+    }
     const comparedAvg = allSchools.compareDistrictAverages(
       "coLorado",
       location
