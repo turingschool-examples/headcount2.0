@@ -1,1 +1,7 @@
 /*APP COMPONENT RELATED CSS GOES HERE*/
+.App {
+  margin: 0 auto;
+  padding: 0;
+  grid-template-rows: 30% 1fr;
+  grid-template-columns: 1fr;
+}

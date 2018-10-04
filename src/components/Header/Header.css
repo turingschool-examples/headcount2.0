@@ -1,1 +1,28 @@
 /*HEADER COMPONENT RELATED CSS GOES HERE*/
+.Header {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  background-color: #DCF1F4;
+  color: #006989;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px;
+  grid-row: 1 / 2;
+  font-size: 2.5rem;
+}
+
+.count {
+  color: #009FB7;
+}
+
+.version {
+  color: #9E9E9E;
+  font-family: 'Roboto Condensed', sans-serif;
+}
