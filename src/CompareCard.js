@@ -15,7 +15,7 @@ class CompareCard extends Component {
         </div>
     )
   }
-
+//test
 }
 
 
