@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import DistrictRepository from "./helper.js";
 import kinderData from "./data/kindergartners_in_full_day_program.js";
 import CardContainer from "./CardContainer";
+import CompareCardContainer from "./CompareCardContainer";
 import Search from "./Search";
 import "./App.css";
 
@@ -25,13 +26,20 @@ class App extends Component {
     }
     this.setState({ schoolData });
   };
+  handleCardClick = location => {
+    console.log(location);
+  };
 
   render() {
     return (
       <div>
         <h1 className="main-logo">head count</h1>
+        <CompareCardContainer />
         <Search handleSearch={this.handleSearch} />
-        <CardContainer cards={this.state.schoolData} />
+        <CardContainer
+          handleCardClick={this.handleCardClick}
+          cards={this.state.schoolData}
+        />
       </div>
     );
   }

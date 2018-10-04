@@ -4,7 +4,7 @@ import checkIcon from "./checked.svg";
 import cancelIcon from "./cancel.svg";
 import "./Card.css";
 
-const Card = ({ location, stats }) => {
+const Card = ({ location, stats, handleCardClick }) => {
   const years = Object.keys(stats);
   const cardData = years.map(year => {
     return (
@@ -22,7 +22,7 @@ const Card = ({ location, stats }) => {
   });
 
   return (
-    <div className="card">
+    <div className="card" onClick={() => handleCardClick(location)}>
       <h3 className="school-name">{location}</h3>
       {cardData}
     </div>
@@ -31,7 +31,8 @@ const Card = ({ location, stats }) => {
 
 Card.propTypes = {
   location: PropTypes.string.isRequired,
-  stats: PropTypes.object.isRequired
+  stats: PropTypes.object.isRequired,
+  handleCardClick: PropTypes.func.isRequired
 };
 
 export default Card;
