@@ -70,4 +70,8 @@ export default class DistrictRepository {
     return returnData;
   }
 
+  findAverage = (place) => {
+    
+  }
+
 }

@@ -26,6 +26,13 @@ class App extends Component {
     })
   }
 
+  districtSearch = (entry) => {
+    const cleanData = new DistrictRepository(kinderData)
+    this.setState({
+      data: cleanData.findAllMatches(entry)
+    })
+  }
+
   render() {
 
     const { data } = this.state
@@ -35,7 +42,7 @@ class App extends Component {
         <br />
         Welcome To Headcount 2.0
         <hr />
-        <DataHeader data={data}/>
+        <DataHeader data={data} districtSearch={this.districtSearch}/>
         <hr />
         <CardsContainer data={data}/>
       </div>

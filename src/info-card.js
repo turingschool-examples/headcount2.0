@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactChartkick, { AreaChart, LineChart, ColumnChart } from 'react-chartkick'
+import PropTypes from 'prop-types';
 import Chart from 'chart.js'
 
 import './info-card.css';
@@ -13,17 +14,17 @@ const Card = ({ data }) => {
 
       <div className='year-list'>
       {
-        Object.keys(data.stats).map( year => {
+        Object.keys(data.stats).map( (year, i) => {
           if (data.stats[year] > .5) {
             return (
-              <p className='hi'>
+              <p key={Date.now() + (i * 13)} className='hi'>
                 {year}: {data.stats[year]} 
                 <span className='emoji'>...😁</span>
               </p>
             )
           } else {
             return (
-              <p className='low'>
+              <p key={Date.now() + (i * 17)} className='low'>
                 {year}: {data.stats[year]} 
                 <span className='emoji'>...☹️</span>
               </p>
@@ -37,7 +38,8 @@ const Card = ({ data }) => {
   )
 }
 
+Card.propTypes = {
+  data: PropTypes.object
+}
+
 export default Card;
-      // <LineChart
-      //   data={data.stats}
-      // />
