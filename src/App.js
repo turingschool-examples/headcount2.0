@@ -16,11 +16,19 @@ class App extends Component {
     }
   }
 
+  searchSchool = (string) => {
+    let districtData = new DistrictRepository(kinderData);
+    districtData.findAllMatches(string)
+    this.setState({
+      schoolCards: districtData.findAllMatches(string)
+    })
+  }
+
 
   render() {
     return (
       <div>
-          <SearchForm />
+          <SearchForm searchSchool={this.searchSchool}/>
           <CardContainer schoolCards={this.state.schoolCards} />
       </div>
     );
