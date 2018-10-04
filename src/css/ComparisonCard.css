@@ -1,0 +1,27 @@
+.comparison-card {
+  width: 230px;
+  margin: 1rem;
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding-bottom: .5rem;
+}
+
+
+.comparison-card h1 {
+  font-size: 1rem;
+  margin: 1rem .5rem;
+  text-transform: uppercase;
+}
+
+.comparison-school {
+  text-decoration: underline;
+}
+
+.comparison-card p {
+  margin: .5rem;
+}
+
+.district-average {
+  padding-bottom: 1rem;
+}

@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DumbCard should render content to the DOM 1`] = `
+<article
+  className="card"
+>
+  <h1
+    className="location"
+  >
+    ADAMS COUNTY 14
+  </h1>
+  <Score
+    data={0.228}
+    key="2004"
+    year="2004"
+  />
+  <Score
+    data={0.3}
+    key="2005"
+    year="2005"
+  />
+  <Score
+    data={0.293}
+    key="2006"
+    year="2006"
+  />
+  <Score
+    data={0.306}
+    key="2007"
+    year="2007"
+  />
+  <Score
+    data={0.673}
+    key="2008"
+    year="2008"
+  />
+  <Score
+    data={1}
+    key="2009"
+    year="2009"
+  />
+  <Score
+    data={1}
+    key="2010"
+    year="2010"
+  />
+  <Score
+    data={1}
+    key="2011"
+    year="2011"
+  />
+  <Score
+    data={1}
+    key="2012"
+    year="2012"
+  />
+  <Score
+    data={0.998}
+    key="2013"
+    year="2013"
+  />
+  <Score
+    data={1}
+    key="2014"
+    year="2014"
+  />
+</article>
+`;
