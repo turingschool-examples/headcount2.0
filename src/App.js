@@ -13,7 +13,8 @@ class App extends Component {
       this.state = {
         districts: [],
         schoolName: '',
-        data: new DistrictRepository(kinderData)
+        data: new DistrictRepository(kinderData),
+        compareSelections: []
     }
   }
 
@@ -34,14 +35,29 @@ class App extends Component {
   })
  }
 
+ addCompareSelections = (e) => {
+
+  const card = e.target.closest('.card')
+  const name = card.children[0].innerText
+
+  const schoolObj = {...this.state.data.findAllMatches(name)} 
+
+  this.setState({
+    compareSelections: [{...schoolObj[0]}, ...this.state.compareSelections] 
+  })
+ }
+
  render() {
-    const { districts, data, schoolName } = this.state
+    const { districts, data, schoolName, compareSelections } = this.state
     if (districts.length > 0) { 
       return (
         <div>
           <h1>Headcount 2.0</h1>
+          <CompareCard compareSelections={compareSelections} />
           <SearchForm filterCards={this.filterCards} />
-          <CardContainer districts={data.findAllMatches(schoolName)} />
+          <CardContainer districts={data.findAllMatches(schoolName)} 
+                        addCompareSelections={this.addCompareSelections}
+          />
         </div>
       )
     } else {

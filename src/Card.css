@@ -7,6 +7,10 @@
   margin: 1rem .25em;
 }
 
+.card:hover {
+  cursor: pointer;
+}
+
 .red {
   color: red;
 }

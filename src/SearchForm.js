@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import DistrictRepository from './helper.js';
+// import PropTypes from 'prop-types';
 
 class SearchForm extends Component {
   constructor(props) {
@@ -22,9 +21,8 @@ render() {
     <div>
       <form className="search-field">
         <input type="text" 
-               onChange={(e) => {this.saveUserInput(e)}
-              }
-        />
+               onChange={(e) => {this.saveUserInput(e)}}
+               />
       </form>
     </div>
    )
