@@ -14,7 +14,6 @@ const DistrictsContainer = ({ districts }) => {
 							{...districts[district]}/>
 	})
 
-
 	return (
 		<div className='DistrictsContainer'>
 			{ districtCards }
