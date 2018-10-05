@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CardContainer should have cards 1`] = `
-<main
-  className="CardContainer"
+<CardContainer
+  districts={Object {}}
 >
-  CardContainer
-</main>
+  <main
+    className="CardContainer"
+  />
+</CardContainer>
 `;

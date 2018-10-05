@@ -1,12 +1,14 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import CardContainer from './index'
 
 describe('CardContainer', () => {
   let wrapper;
+  let districts;
 
   beforeEach(() => {
-    wrapper = shallow(<CardContainer />)
+    districts = {}
+    wrapper = mount(<CardContainer districts={districts} />)
   })
 
   it('should have cards', () => {
