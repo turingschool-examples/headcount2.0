@@ -353,7 +353,11 @@ h1 {
   grid-template-areas: "landing" "search" "results";
 }
 
-.landing {
+.l-results {
+  grid-area: results;
+}
+
+.l-landing {
   background-image: url(./assets/imgs/Plane.png);
   background-size: cover;
   grid-area: landing;
