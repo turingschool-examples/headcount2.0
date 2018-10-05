@@ -1,47 +1,45 @@
 export default class DistrictRepository {
-    constructor (data) {
-        this.data = data;
-        this.stats = this.filterData();
-            // console.log (this.stats)  
-    }
+  constructor(data) {
+    this.data = data
+    this.stats = this.filterData()
+    // console.log (this.stats)
+  }
 
-    filterData = () => {
-        return this.data.reduce ((locations, entry) => {
-            let district = entry.Location.toUpperCase()
-    
-            if (district in locations) {
-                locations[district].stats[entry.TimeFrame] = this.roundData(entry.Data)
-            }
-            else {
-                locations[district] = {
-                    location: district,
-                    stats: {
-                        [entry.TimeFrame]: this.roundData(entry.Data)
-                    }
-                }
-            }
+  filterData = () => {
+    return this.data.reduce((locations, entry) => {
+      let district = entry.Location.toUpperCase()
 
-            return locations
-        }, {})
-    }
+      if (district in locations) {
+        locations[district].stats[entry.TimeFrame] = this.roundData(entry.Data)
+      } else {
+        locations[district] = {
+          location: district,
+          stats: {
+            [entry.TimeFrame]: this.roundData(entry.Data)
+          }
+        }
+      }
 
-    roundData = (entry) => {
-       return Math.round(1000 * entry) / 1000 || 0
-    }
+      return locations
+    }, {})
+  };
 
-    findByName = (name) => {
-        if (!name) return undefined
-        return this.stats[name.toUpperCase()]
-    }
+  roundData = entry => {
+    return Math.round(1000 * entry) / 1000 || 0
+  };
 
-    findAllMatches = (input) => {
-        let dataset = Object.keys (this.stats).map(key => this.stats[key])
-        if (!input) return dataset
-        let filtered =  dataset.filter(entry => {
-            let capitalised = input.toUpperCase()
-            if (entry.location.includes(capitalised)) return entry
-        })
-        return filtered
-    }
+  findByName = name => {
+    if (!name) return undefined
+    return this.stats[name.toUpperCase()]
+  };
+
+  findAllMatches = input => {
+    let dataset = Object.keys(this.stats).map(key => this.stats[key])
+    if (!input) return dataset
+    let filtered = dataset.filter(entry => {
+      let capitalised = input.toUpperCase()
+      if (entry.location.includes(capitalised)) return entry
+    })
+    return filtered
+  };
 }
- 

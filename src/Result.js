@@ -1,20 +1,21 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
+import PropTypes from 'prop-types' 
 import {
   XYPlot,
   XAxis,
   YAxis,
   HorizontalGridLines,
   LineMarkSeries
-} from "react-vis";
+} from "react-vis"
 
 class Result extends Component {
   constructor(props) {
-    super(props);
-    this.sorted = this.sortResults(this.props.entry);
+    super(props)
+    this.sorted = this.sortResults(this.props.entry)
   }
 
   sortResults = entry => {
-    let stats = Object.entries(entry.stats);
+    let stats = Object.entries(entry.stats)
     const graphData = stats.reduce(
       (acc, stat) => [
         ...acc,
@@ -25,9 +26,9 @@ class Result extends Component {
         }
       ],
       [{ x: stats[0][0] - 1, y: 0 }]
-    );
+    )
 
-    return graphData;
+    return graphData
   };
   render() {
     return (
@@ -40,8 +41,13 @@ class Result extends Component {
           <LineMarkSeries data={this.sorted} />
         </XYPlot>
       </article>
-    );
+    )
   }
 }
 
-export default Result;
+export default Result
+
+
+Result.propTypes = {
+  entry: PropTypes.array
+}
