@@ -23,6 +23,6 @@ describe('DistrictsContainer', () => {
 	})
 
 	it.skip('renders each district', () => {
-		expect(wrapper.find(DistrictCard).length).toEqual(2)
+		expect(wrapper.find(DistrictCard).length).toEqual(3)
 	})
 })

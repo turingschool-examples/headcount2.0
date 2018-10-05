@@ -20,14 +20,14 @@ describe.skip('DistrictCard', () => {
 		expect(wrapper.find('.card-stats').length).toEqual(11)
 	})
 
-	it.skip('adds a class for data less than 0.5', () => {
+	it('adds a class for data less than 0.5', () => {
 		//show instance of data less than 5 with one class
-		expect(wrapper.find('.district-card-stat').hasClass('.less-than-point-5')).toEqual(true)
+		expect(wrapper.find('.district-card-stat').hasClass('less-than-point-5')).to.Equal(true)
 	})
 
 	it.skip('adds a class for data greater than 0.5', () => {
 		//show instance of data greater than 5 with one class
-		expect(wrapper.find('.district-card-stat').hasClass('.greater-than-point-5')).toEqual(true)
+		expect(wrapper.find('.district-card-stat').hasClass('greater-than-point-5')).to.Equal(true)
 	})	
 
 })

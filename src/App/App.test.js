@@ -15,7 +15,6 @@ describe('App', () => {
 
 	it('matches the snapshot', () => {
 		expect(wrapper).toMatchSnapshot()
-		// console.log(wrapper)
 	})
 
 	it('adds helper dataset to state', () => {
@@ -24,10 +23,6 @@ describe('App', () => {
 		wrapper.setState({ data: allDistricts })
 		expect(wrapper.state().data).toEqual(district.stats)
 	})
-
-
-
-
 
 })
 
