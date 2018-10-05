@@ -1,6 +1,6 @@
 export default class DistrictRepository {
 	constructor(data) {
-		this.data = data,
+		this.data = data
 		this.stats = this.compileDistricts();
 	}
 
