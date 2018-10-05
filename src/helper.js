@@ -8,19 +8,16 @@ export default class DistrictRepository {
 
   makeStats = () => {
     let district = this.dataSet.reduce((statSet, statistic) => {
-      if(statistic.Data === "N/A"){
-        statistic.Data = 0
-      }
       if (!statSet[statistic.Location.toUpperCase()]) {
         statSet[statistic.Location.toUpperCase()] = {
         stats: {
-          [statistic.TimeFrame] : Math.round(statistic.Data * 1000)/1000},
+          [statistic.TimeFrame] : Math.round(statistic.Data * 1000)/1000 || 0},
           location : statistic.Location.toUpperCase()
         }
       } else {
         statSet[statistic.Location.toUpperCase()].stats = {
           ...statSet[statistic.Location.toUpperCase()].stats,
-          [statistic.TimeFrame] : Math.round(statistic.Data * 1000)/1000
+          [statistic.TimeFrame] : Math.round(statistic.Data * 1000)/1000 || 0
         }
       }
     return statSet

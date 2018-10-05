@@ -13,21 +13,19 @@ class DistrictSearch extends Component {
   handleChange = (e) => {
     e.preventDefault();
     const {value} = e.target;
-    this.setState({searchString: value});
+    this.setState({searchString: value}, () => this.handleSearch());
+    // this.handleSearch();
+    // this.handleSearch(e);
   }
 
   handleSearch = (e) => {
-    e.preventDefault();
     this.props.handleSubmit(this.state.searchString);
-    this.setState({
-      searchString: '',
-    });
   }
 
 
   render() {
     return (
-        <form onSubmit={this.handleSearch}>
+        <form> 
           <input 
             placeholder='search'
             value={this.state.value} 
