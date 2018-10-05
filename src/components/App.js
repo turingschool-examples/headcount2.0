@@ -19,7 +19,8 @@ class App extends Component {
     this.state = {
       data: undefined,
       filter: undefined,
-      selection: []
+      selection: [],
+      modalClass: 'hidden-modal info-modal'
     }
   }
 
@@ -44,7 +45,8 @@ class App extends Component {
   processSelection = (district) => {
     if (!this.state.selection.includes(district)) {
       this.setState({
-        selection: [...this.state.selection, district]
+        selection: [...this.state.selection, district],
+        modalClass: 'hidden-modal info-modal'
       })
     } else {
       this.setState({
@@ -61,6 +63,24 @@ class App extends Component {
     })
   }
 
+  toggleModal = () => {
+    if (this.state.modalClass === 'hidden-modal info-modal') {
+      this.setState({
+        modalClass: 'info-modal'
+      })  
+    } else {
+      this.setState({
+        modalClass: 'hidden-modal info-modal'
+      })
+    }
+  }
+
+  untoggleModal = () => {
+    this.setState({
+      modalClass: 'hidden-modal info-modal'
+    })
+  }
+
   render() {
     if (this.state.data && this.state.selection.length < 2) {
       return (
@@ -68,11 +88,22 @@ class App extends Component {
           <header>
             <img className='logo' src="./brain-and-head.svg" alt="logo" />
             <h1 className='banner-title'>Colorado Headcount</h1>
+            <img 
+              className='info-btn'
+              src='./information.svg'
+              alt='info-button'
+              onClick={() => {
+                this.toggleModal()
+              }}
+            />
             <InputField 
               processFilter={this.processFilter}
             />
           </header>
-            <Info id={this.state.modalID} />
+          <Info 
+            modalClass={this.state.modalClass}
+            untoggleModal={this.untoggleModal} 
+          />
             <CardContainer 
               data={this.state.filter || this.state.data.stats} 
               processSelection={this.processSelection}
@@ -85,7 +116,19 @@ class App extends Component {
           <header>
             <img className='logo' src="./brain-and-head.svg" alt="logo" />
             <h1 className='banner-title'>Colorado Headcount</h1>
+            <img 
+              className='info-btn'
+              src='./information.svg'
+              alt='info-button'
+              onClick={() => {
+                this.toggleModal()
+              }}
+            />
           </header>
+          <Info 
+            modalClass={this.state.modalClass}
+            untoggleModal={this.untoggleModal} 
+          />
           <Comparison
             compareDistrictAverages={this.state.data.compareDistrictAverages}
             selection={this.state.selection} 
