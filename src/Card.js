@@ -32,7 +32,7 @@ const Card = ({ location, stats, handleCardClick }) => {
 Card.propTypes = {
   location: PropTypes.string.isRequired,
   stats: PropTypes.object.isRequired,
-  handleCardClick: PropTypes.func
+  handleCardClick: PropTypes.func,
 };
 
 export default Card;

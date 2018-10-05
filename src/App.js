@@ -34,13 +34,25 @@ class App extends Component {
   handleCardClick = location => {
     const clickedDisctrict = allSchools.stats[location];
     let { comparedCards } = this.state;
+
+    if (clickedDisctrict.hasOwnProperty('clicked')) {
+      this.handleComparedCardClick();
+      return;
+    }
+
     if (!Object.keys(comparedCards[0]).length) {
+      clickedDisctrict.clicked = 0;
       comparedCards[0] = clickedDisctrict;
     } else if (!Object.keys(comparedCards[1]).length) {
+      clickedDisctrict.clicked = 1;
       comparedCards[1] = clickedDisctrict;
     }
     this.setState({ comparedCards });
     this.prepareComparedStats();
+  };
+
+  handleComparedCardClick = () => {
+    console.log("sdf");
   };
 
   prepareComparedStats = () => {
@@ -65,6 +77,7 @@ class App extends Component {
         <CompareCardContainer
           comparedCards={this.state.comparedCards}
           comparedAvg={this.state.comparedAvg}
+          handleComparedCardClick={this.handleComparedCardClick}
         />
         <h4 className="instructions">click two districts to compare stats</h4>
         <CardContainer

@@ -7,15 +7,12 @@ const ComparedCard = props => {
 
   return (
     <div className="compared-card">
-      <h3>
-        average: <br /> {props[districtNames[0]]}
-      </h3>
-      <h3>
-        compared average: <br /> {props.compared}
-      </h3>
-      <h3>
-        average: <br /> {props[districtNames[1]]}
-      </h3>
+      <h3>AVERAGE: </h3>
+      <p> {props[districtNames[0]]}</p>
+      <h3>COMPARED AVERAGE:</h3> 
+      <p> {props.compared}</p>
+      <h3>AVERAGE:</h3>
+      <p> {props[districtNames[1]]}</p>
     </div>
   );
 };
