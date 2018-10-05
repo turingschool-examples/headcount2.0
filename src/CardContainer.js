@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 const CardContainer = ({data}) => {
 
   const cards = data.map(district => {
-    return <Card district={district} key={Math.random()} />
+    return <Card district={district} key={Date.now()} />
   })
   
   return(

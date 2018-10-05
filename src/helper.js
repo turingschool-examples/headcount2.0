@@ -56,44 +56,46 @@ export default class DistrictRepository {
     return mainData
   }
 
-  findByName(name){
-    if (name === undefined) {
-      return undefined
-    } else {
-      let upperName = name.toUpperCase()
-      const nameMatch = Object.keys(this.stats).find( district =>  district === upperName )
-
-      if(nameMatch === undefined){ return undefined }
-
-      const yearlyData = this.stats[nameMatch].reduce((obj, element) => {
-          if(typeof element.data !== 'number'){ element.data = 0}
-
-          if(!obj[element.year]){
-            obj[element.year] = Math.round(element.data * 1000)/1000 
-          }
-          return obj
-        }, {})
-
-      var matchObj = this.stats[nameMatch].reduce((obj, year) => {
-        obj = {
-          location: year.location,
-          stats: yearlyData
-        }
-        return obj
-      }, {})
-    }
-  return matchObj 
+findByName(name){
+  if (name === undefined) {
+    return undefined
   }
+  let upperName = name.toUpperCase()
+  const nameMatch = this.stats.filter( district =>  
+      district.location === upperName )
+  if (nameMatch.length === 0){
+    return undefined
+  } else { 
+    const yearlyData = nameMatch.reduce((obj, match) => {
+        const yearData = match.stats.reduce((yearData, district) => {
+          if(typeof district.data !== 'number'){ district.data = 0}
+          yearData[district.year]= Math.round(district.data * 1000)/1000
+          return yearData
+        }, {})
+      return yearData
+    }, {})  
+     
+    return nameMatch.reduce((district, year) => {
+      district = {
+        location: year.location,
+        stats: yearlyData
+      }
+      return district
+    }, {})
+  }  
+}
 
   findAllMatches(name){
+    let nameMatch;
     if(name === undefined){
-      return Object.entries(this.stats)
+      return this.stats
     } else {
       let upperName = name.toUpperCase()
-      var nameMatch = Object.keys(this.stats)
-        .filter( district =>  district.includes(upperName) )
+      nameMatch = this.stats.filter( district =>  {
+          return district.location.includes(upperName)
+        })
+      return nameMatch
     }
-    return nameMatch
   }
 }
 
