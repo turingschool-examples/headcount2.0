@@ -15,11 +15,20 @@ exports[`App should render content to the DOM 1`] = `
     >
       Colorado Headcount
     </h1>
+    <img
+      alt="info-button"
+      className="info-btn"
+      onClick={[Function]}
+      src="./information.svg"
+    />
     <InputField
       processFilter={[Function]}
     />
   </header>
-  <Info />
+  <Info
+    modalClass="hidden-modal info-modal"
+    untoggleModal={[Function]}
+  />
   <CardContainer
     data={
       Object {
@@ -2941,7 +2950,17 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
     >
       Colorado Headcount
     </h1>
+    <img
+      alt="info-button"
+      className="info-btn"
+      onClick={[Function]}
+      src="./information.svg"
+    />
   </header>
+  <Info
+    modalClass="hidden-modal info-modal"
+    untoggleModal={[Function]}
+  />
   <Comparison
     clearSelections={[Function]}
     compareDistrictAverages={[Function]}

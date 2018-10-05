@@ -41,10 +41,8 @@ describe('App', ()=>{
 
   it('should call setState on filter when processFilter() is called', () => {
     const data = new DistrictRepository(kinderData);
-    
-    const mockState = {
-      data: data,
-      filter: {"COLORADO SPRINGS 11": {
+
+    const testFilter = {"COLORADO SPRINGS 11": {
           "location": "COLORADO SPRINGS 11",
           "stats": {
             "2004": 0.069,
@@ -58,15 +56,14 @@ describe('App', ()=>{
             "2012": 0.993,
             "2013": 0.989,
             "2014": 0.994,
-          },
-        },
-      },
-      selection: []
-    }
+          }
+        }
+      }
+  
 
     wrapper.instance().processFilter('colorado spri');
 
-    expect(JSON.stringify(wrapper.state())).toEqual(JSON.stringify(mockState))
+    expect((wrapper.state().filter)).toEqual((testFilter))
   })
 
   it('should add an district to this.state.selection when called', () => {
@@ -133,6 +130,37 @@ describe('App', ()=>{
     wrapper.instance().processSelection(argument)
     wrapper.instance().clearSelections()
     expect(wrapper.state().selection).toEqual([])
+  });
+
+  it('should update state when toggleModal is called', () => {
+    expect(wrapper.state().modalClass).toEqual('hidden-modal info-modal')
+
+    wrapper.instance().toggleModal();
+
+    expect(wrapper.state().modalClass).toEqual('info-modal')
+  });
+
+  it('should update state back when toggleModal is called twice', () => {
+    expect(wrapper.state().modalClass).toEqual('hidden-modal info-modal')
+
+    wrapper.instance().toggleModal();
+    wrapper.instance().toggleModal();
+
+
+    expect(wrapper.state().modalClass).toEqual('hidden-modal info-modal')
+  });
+
+  it('should call toggleModal on button click', () => {
+    wrapper.find('.info-btn').simulate('click')
+
+    expect(wrapper.state().modalClass).toEqual('info-modal')
+  });
+
+  it('should update modalClass when unToggleModal is called', () => {
+    wrapper.instance().toggleModal();
+    wrapper.instance().untoggleModal();
+
+     expect(wrapper.state().modalClass).toEqual('hidden-modal info-modal')
   })
 
 });
