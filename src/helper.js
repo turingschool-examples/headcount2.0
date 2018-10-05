@@ -53,14 +53,24 @@ export default class DistrictRepository {
     } 
   }
 
-  // findAverage = () => {
-  //   let name1 = Object.keys(this.stats).reduce((acc, stat) => {
-  //       if(acc[stat]){
-  //         acc[stat]++
-  //       }
-  //     return acc
-  //   }, 0)
-  //   console.log(name1)
-  // }
+  findAverage = (str) => {
+    if(str){
+      str = str.toUpperCase()
+    }
+    let getKeys = Object.values(this.stats[str])
+    let getAvrg = getKeys.reduce((acc, num) => {
+      let numData = Object.values(num)
+      return acc += num
+    }, 0) / 11
+    return Math.round(getAvrg * 1000) / 1000
+  }
+
+  compareDistrictAverages = (str1, str2) => {
+    let avrg1 = this.findAverage(str1)
+    let avrg2 = this.findAverage(str2)
+    let location1 = Object.keys(this.stats).filter(stat => stat.toUpperCase() === str1.toUpperCase()) 
+    let location2 = Object.keys(this.stats).filter(stat => stat.toUpperCase() === str2.toUpperCase())
+    return { [location1]: avrg1, [location2]: avrg2, 'compared':(Math.round(avrg1/avrg2 * 1000) / 1000) }
+  }
 
 }
