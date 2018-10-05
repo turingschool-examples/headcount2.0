@@ -20,7 +20,7 @@ class Landing extends Component {
   };
   render() {
     return (
-      <header className="landing">
+      <header className="landing l-landing">
         <section className="welcome-screen">
           <div className="typewriter">
             <h1>Data:GO</h1>

@@ -3,7 +3,9 @@
     grid-template-areas: "landing""search""results"
 
 .l-results
+    display: grid
     grid-area: results
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
 
 .l-landing
     background-image: url(./assets/imgs/Plane.png)

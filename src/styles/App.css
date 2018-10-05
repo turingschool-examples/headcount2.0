@@ -1,3 +1,4 @@
+@import "~react-vis/dist/style.css";
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * * 1. Change the default font family in all browsers (opinionated).
@@ -334,6 +335,7 @@ textarea {
 
 body {
   font-family: "Montserrat", sans-serif;
+  color: black;
 }
 
 h1 {
@@ -354,7 +356,9 @@ h1 {
 }
 
 .l-results {
+  display: grid;
   grid-area: results;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .l-landing {
@@ -391,7 +395,7 @@ h1 {
 }
 
 .typewriter h1 {
-  animation: typing 2s steps(60, end), blink-caret 0.75s step-end infinite;
+  animation: typing 1.5s steps(60, end), blink-caret 0.75s step-end infinite;
   border-right: 0.15em solid white;
   letter-spacing: 0.2em;
   margin: 10px auto;
@@ -401,7 +405,7 @@ h1 {
   width: 75%;
 }
 .typewriter p {
-  animation: typing-delay 4s steps(48, end), blink-caret 0.75s step-end;
+  animation: typing-delay 3s steps(48, end), blink-caret 0.75s step-end;
   color: white;
   font-weight: 700;
   letter-spacing: 0.3em;
