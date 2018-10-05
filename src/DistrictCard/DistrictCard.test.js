@@ -12,7 +12,7 @@ describe.skip('DistrictCard', () => {
 		wrapper = shallow(<DistrictCard key='colorado' schoolName='colorado' />)
 	})
 
-	it.skip('matches the snapshot', () => {
+	it('matches the snapshot', () => {
 		expect(wrapper).toMatchSnapshot()
 	})
 
@@ -20,11 +20,15 @@ describe.skip('DistrictCard', () => {
 		expect(wrapper.find('.card-stats').length).toEqual(11)
 	})
 
-	it('shows visual indication of data less than or greater than 0.5', () => {
+	it.skip('adds a class for data less than 0.5', () => {
 		//show instance of data less than 5 with one class
-		//show instance of data greater than 5 with another class
-		expect(wrapper.find('.district-card-stat')hasClass('.card-stats-less-than-5')).toEqual(true)
+		expect(wrapper.find('.district-card-stat').hasClass('.less-than-point-5')).toEqual(true)
 	})
+
+	it.skip('adds a class for data greater than 0.5', () => {
+		//show instance of data greater than 5 with one class
+		expect(wrapper.find('.district-card-stat').hasClass('.greater-than-point-5')).toEqual(true)
+	})	
 
 })
 
