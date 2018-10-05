@@ -14,7 +14,7 @@ describe('DistrictsContainer', () => {
 	let mockDistricts;
 
 	beforeEach(() => {
-		mockDistricts = [{'colorado': {}, 'academy 20': {}}] 
+		mockDistricts = {'colorado': {}, 'academy 20': {}, 'agate 300': {}} 
 		wrapper = shallow(<DistrictsContainer districts={mockDistricts} />)
 	})
 
@@ -23,6 +23,6 @@ describe('DistrictsContainer', () => {
 	})
 
 	it('renders each district', () => {
-		expect(wrapper.find(DistrictCard).length).toEqual(2)
+		expect(wrapper.find(DistrictCard).length).toEqual(3)
 	})
 })

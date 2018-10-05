@@ -4,12 +4,12 @@ exports[`DistrictCard matches the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DistrictCard
-    id={5}
-    location="location"
+    schoolName="colorado"
     stats={
       Object {
-        "2004": 1,
-        "2005": 2,
+        "2004": 0.24,
+        "2005": 0.543,
+        "2006": 0.789,
       }
     }
   />,
@@ -27,8 +27,32 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h3 />,
-        <p />,
+        <h2
+          className="card-location"
+        />,
+        Array [
+          <p
+            className="less-than-point-5"
+          >
+            2004
+            : 
+            0.24
+          </p>,
+          <p
+            className="greater-than-point-5"
+          >
+            2005
+            : 
+            0.543
+          </p>,
+          <p
+            className="greater-than-point-5"
+          >
+            2006
+            : 
+            0.789
+          </p>,
+        ],
       ],
       "className": "DistrictCard",
     },
@@ -38,18 +62,72 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
-        "props": Object {},
+        "props": Object {
+          "children": undefined,
+          "className": "card-location",
+        },
         "ref": null,
         "rendered": null,
-        "type": "h3",
+        "type": "h2",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
-        "props": Object {},
+        "props": Object {
+          "children": Array [
+            "2004",
+            ": ",
+            0.24,
+          ],
+          "className": "less-than-point-5",
+        },
         "ref": null,
-        "rendered": null,
+        "rendered": Array [
+          "2004",
+          ": ",
+          0.24,
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "2005",
+            ": ",
+            0.543,
+          ],
+          "className": "greater-than-point-5",
+        },
+        "ref": null,
+        "rendered": Array [
+          "2005",
+          ": ",
+          0.543,
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "2006",
+            ": ",
+            0.789,
+          ],
+          "className": "greater-than-point-5",
+        },
+        "ref": null,
+        "rendered": Array [
+          "2006",
+          ": ",
+          0.789,
+        ],
         "type": "p",
       },
     ],
@@ -62,8 +140,32 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h3 />,
-          <p />,
+          <h2
+            className="card-location"
+          />,
+          Array [
+            <p
+              className="less-than-point-5"
+            >
+              2004
+              : 
+              0.24
+            </p>,
+            <p
+              className="greater-than-point-5"
+            >
+              2005
+              : 
+              0.543
+            </p>,
+            <p
+              className="greater-than-point-5"
+            >
+              2006
+              : 
+              0.789
+            </p>,
+          ],
         ],
         "className": "DistrictCard",
       },
@@ -73,18 +175,72 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
-          "props": Object {},
+          "props": Object {
+            "children": undefined,
+            "className": "card-location",
+          },
           "ref": null,
           "rendered": null,
-          "type": "h3",
+          "type": "h2",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
-          "props": Object {},
+          "props": Object {
+            "children": Array [
+              "2004",
+              ": ",
+              0.24,
+            ],
+            "className": "less-than-point-5",
+          },
           "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            "2004",
+            ": ",
+            0.24,
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "2005",
+              ": ",
+              0.543,
+            ],
+            "className": "greater-than-point-5",
+          },
+          "ref": null,
+          "rendered": Array [
+            "2005",
+            ": ",
+            0.543,
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "2006",
+              ": ",
+              0.789,
+            ],
+            "className": "greater-than-point-5",
+          },
+          "ref": null,
+          "rendered": Array [
+            "2006",
+            ": ",
+            0.789,
+          ],
           "type": "p",
         },
       ],

@@ -15,18 +15,14 @@ describe('App', () => {
 
 	it('matches the snapshot', () => {
 		expect(wrapper).toMatchSnapshot()
-		// console.log(wrapper)
 	})
 
-	// it('adds helper dataset to state', () => {
-	// 	const district = new DistrictRepository(kinderData)
-	// 	console.log(wrapper)
-	// 	expect(wrapper.state('data')).toEqual(district.stats)
-	// })
-
-
-
-
+	it('adds helper dataset to state', () => {
+		const district = new DistrictRepository(kinderData)
+		const allDistricts = district.stats
+		wrapper.setState({ data: allDistricts })
+		expect(wrapper.state().data).toEqual(district.stats)
+	})
 
 })
 
