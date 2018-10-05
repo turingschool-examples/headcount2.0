@@ -9,6 +9,7 @@ it('matches the snapshot', () => {
                             schoolName={'COLORADO'}
                             schoolInfo={{'COLORADO': {2004: 0.5}}}
                             />)
-  
+
   expect(wrapper).toMatchSnapshot()
 });
+
