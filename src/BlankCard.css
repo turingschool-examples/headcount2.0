@@ -1,0 +1,13 @@
+.blank-card {
+  background-color: lightgrey;
+  border: 4px solid black;
+  border-radius: 20px;
+  opacity: 0.9;
+  padding-bottom: 10px;
+}
+
+.apple-pic {
+  display: flex;
+  height: 200px;
+  margin: 30px auto;
+}
