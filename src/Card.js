@@ -1,23 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-
-const Card = ({districtData}) => {
+const Card = ({district}) => {
   
-  const dataPoints = districtData.stats.map( year => {
-    return <p> {year.year}: {year.data} </p>
+  const dataPoints = district.stats.map( year => {
+    return <p className='year-data' key={Math.random()}> {year.year}: {year.data} </p>
 
   })
 
   return(
-    <div>
-      <h1 className='card-heading'>{districtData.location}</h1>
+    <div className='card'>
+      <h1 className='card-heading'>{district.location}</h1>
       <div className='card-data'>
         {dataPoints}
       </div>
     </div>
 
   )
+}
+
+Card.propTypes = {
+  district: PropTypes.object.isRequired,
+  
 }
 
 export default Card

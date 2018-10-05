@@ -1,0 +1,17 @@
+.card {
+  border: thin solid black;
+  padding: 10px;
+  margin: 10px;
+  width: 20%;
+
+}
+
+.card-heading {
+  font-size: 1em;
+  text-align: center;
+}
+
+.card-data {
+  color: gray;
+  text-indent: 30%;
+}
