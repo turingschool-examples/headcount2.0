@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const Card = ({district}) => {
   
   const dataPoints = district.stats.map( year => {
-    return <p className='year-data' key={Date.now()}> {year.year}: {year.data} </p>
+    return <p className='year-data' key={Math.random()}> {year.year}: {year.data} </p>
 
   })
 
@@ -20,8 +20,8 @@ const Card = ({district}) => {
 }
 
 Card.propTypes = {
-  location: PropTypes.string.isRequired,
-  stats: PropTypes.array.isRequired
+  district: PropTypes.object.isRequired,
+  
 }
 
 export default Card
