@@ -13,12 +13,19 @@ const allSchools = new DistrictRepository(kinderData)
 class App extends Component {
   constructor(){
     super()
-    this.state = {
-      data: allSchools.stats
-      //change to what is needed
+    this.state = { data: allSchools.stats }
+
+    console.log(this.state)
     }
-console.log(this.state)
-  }
+  
+
+  // componentDidMount = () => {
+  //   const allSchools = new DistrictRepository(kinderData)
+  //   this.setState({
+  //     data: allSchools.stats
+  //   })
+
+  // }
 
   
   render() {

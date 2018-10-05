@@ -40,12 +40,14 @@ export default class DistrictRepository {
     const mainData = Object.keys(filteredData).map( district => {
       let years = []
       let districtData = filteredData[district].reduce((schoolData, year) => {
-        let yearStats = {year: year.year, data: year.data}
+        if(typeof year.data !== 'number'){ year.data = 0}
+        const roundedData = Math.round(year.data * 1000)/1000
+        let yearStats = {year: year.year, data: roundedData}
         years.push(yearStats)
         let orderedYears = years.sort((a, b) => a.year - b.year)
         schoolData = {
           location: district,
-          stats: years
+          stats: orderedYears
         }
         return schoolData
       }, {})
@@ -53,8 +55,6 @@ export default class DistrictRepository {
     })
     return mainData
   }
-
-
 
   findByName(name){
     if (name === undefined) {
