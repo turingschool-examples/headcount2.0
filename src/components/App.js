@@ -9,6 +9,7 @@ import DistrictRepository from '../helper.js'
 import CardContainer from './CardContainer'
 import InputField from './InputField'
 import Comparison from './Comparison'
+import Info from './Info'
 
 import '../css/App.css';
 
@@ -66,11 +67,12 @@ class App extends Component {
         <main className="app">
           <header>
             <img className='logo' src="./brain-and-head.svg" alt="logo" />
-            <h1>Colorado Headcount</h1>
+            <h1 className='banner-title'>Colorado Headcount</h1>
             <InputField 
               processFilter={this.processFilter}
             />
           </header>
+            <Info id={this.state.modalID} />
             <CardContainer 
               data={this.state.filter || this.state.data.stats} 
               processSelection={this.processSelection}
@@ -82,7 +84,7 @@ class App extends Component {
         <main className="app">
           <header>
             <img className='logo' src="./brain-and-head.svg" alt="logo" />
-            <h1>Colorado Headcount</h1>
+            <h1 className='banner-title'>Colorado Headcount</h1>
           </header>
           <Comparison
             compareDistrictAverages={this.state.data.compareDistrictAverages}
