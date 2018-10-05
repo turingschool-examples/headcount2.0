@@ -2927,9 +2927,16 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
 <main
   className="app"
 >
-  <h1>
-    Welcome To Headcount 2.0
-  </h1>
+  <header>
+    <img
+      alt="logo"
+      className="logo"
+      src="./brain-and-head.svg"
+    />
+    <h1>
+      Colorado Headcount
+    </h1>
+  </header>
   <Comparison
     clearSelections={[Function]}
     compareDistrictAverages={[Function]}
