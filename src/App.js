@@ -15,7 +15,7 @@ class App extends Component {
     super()
     this.state = { data: allSchools.stats }
 
-    console.log(this.state)
+    // console.log(this.state)
     }
   
 

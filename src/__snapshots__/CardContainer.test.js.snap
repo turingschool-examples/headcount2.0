@@ -3,5 +3,19 @@
 exports[`CardContainer should match the snapshot with all data passed in correctly 1`] = `
 <div
   className="card-container"
-/>
+>
+  <Card
+    district={
+      Object {
+        "location": "denver",
+        "stats": Array [
+          Object {
+            "year": 2007,
+          },
+        ],
+      }
+    }
+    key="0.31906854161399467"
+  />
+</div>
 `;

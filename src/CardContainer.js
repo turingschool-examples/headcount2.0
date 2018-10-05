@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 const CardContainer = ({data}) => {
 
   const cards = data.map(district => {
-    return <Card {...district} key={Math.random()} />
+    return <Card district={district} key={Math.random()} />
   })
   
   return(
@@ -18,7 +18,7 @@ const CardContainer = ({data}) => {
 }
 
 CardContainer.propTypes = {
-  stats: PropTypes.object.isRequired
+  data: PropTypes.array
 }
 
 export default CardContainer

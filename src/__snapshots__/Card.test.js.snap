@@ -14,7 +14,7 @@ exports[`Card should match the snapshot with all data passed in correctly 1`] = 
   >
     <p
       className="year-data"
-      key="0.5790430514635454"
+      key="0.7988639122788568"
     >
        
       data
