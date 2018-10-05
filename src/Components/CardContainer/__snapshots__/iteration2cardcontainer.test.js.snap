@@ -3,7 +3,7 @@
 exports[`App should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__unrendered__): <CardContainer />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,24 +17,10 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        "Welcome To Headcount 2.0!!!!!",
-        <CardContainer />,
-      ],
+      "children": "Add cards here",
     },
     "ref": null,
-    "rendered": Array [
-      "Welcome To Headcount 2.0!!!!!",
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
+    "rendered": "Add cards here",
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -43,24 +29,10 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [
-          "Welcome To Headcount 2.0!!!!!",
-          <CardContainer />,
-        ],
+        "children": "Add cards here",
       },
       "ref": null,
-      "rendered": Array [
-        "Welcome To Headcount 2.0!!!!!",
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
+      "rendered": "Add cards here",
       "type": "div",
     },
   ],

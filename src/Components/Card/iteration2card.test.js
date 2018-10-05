@@ -1,12 +1,14 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import ReactDOM from 'react-dom';
+import Card from './Card'
 
 describe('App', () =>  {
 
-  it('renders without crashing', () => {
-    // const div = document.createElement('div');
-    // ReactDOM.render(<App />, div);
+  const wrapper = shallow(<Card />);
+
+  it('should match the snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
   });
 
   // it('should render an h1, controls, and trivialist component', () => {
