@@ -8,18 +8,18 @@ class Search extends Component {
 
     this.state = {
       searchWord: ''
-    }
+    };
   }
 
   handleChange = (event) => {
     this.setState({
       searchWord: event.target.value
-    })
-    this.props.searchForDistrict(this.state.searchWord)
+    });
+    this.props.searchForDistrict(this.state.searchWord);
   }
 
   render() {
-    return(
+    return (
       <form>
         <input 
           className="search-bar"
@@ -27,14 +27,14 @@ class Search extends Component {
           value={this.state.searchWord} 
           placeholder="Search for School District"
           onChange={this.handleChange}
-          />
+        />
       </form>
-    )
+    );
   }
 }
 
 Search.propTypes = {
   searchForDistrict: PropTypes.func.isRequired
-}
+};
 
 export default Search;
