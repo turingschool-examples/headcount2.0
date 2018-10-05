@@ -37,7 +37,6 @@ class InputField extends Component {
 
 InputField.propTypes = {
   processFilter: PropTypes.func.isRequired,
-  inputClass: PropTypes.string.isRequired
 }
 
 export default InputField;

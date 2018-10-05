@@ -81,10 +81,6 @@ class App extends Component {
           <header>
             <img className='logo' src="./brain-and-head.svg" alt="logo" />
             <h1>Colorado Headcount</h1>
-            <InputField 
-              processFilter={this.processFilter}
-              inputClass='text-input hide'
-            />
           </header>
           <Comparison
             compareDistrictAverages={this.state.data.compareDistrictAverages}
