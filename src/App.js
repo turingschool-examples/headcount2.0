@@ -23,14 +23,14 @@ class App extends Component {
 
   render() {
     return (
-      <div>Welcome To Headcount 2.7
+      <div>Headcount 2.7
       	<DistrictsContainer districts={this.state.data}/>
       </div>
     );
   }
 }
 
-App.proptypes
+
 
 
 export default App;

@@ -1,0 +1,19 @@
+.DistrictCard {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	width: 10rem;
+	margin: 0 auto;
+}
+
+.card-location {
+	text-align: center;
+	overflow-wrap: break-word;
+}
+
+.card-stats {
+
+}
