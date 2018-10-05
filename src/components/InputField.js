@@ -23,7 +23,7 @@ class InputField extends Component {
     return (
       <form className="input-form">
         <input 
-          className="text-input"
+          className={this.props.inputClass}
           value={this.state.input}
           placeholder='Search for your school district...'
           onChange={(e) => {
@@ -36,7 +36,8 @@ class InputField extends Component {
 }
 
 InputField.propTypes = {
-  processFilter: PropTypes.func.isRequired
+  processFilter: PropTypes.func.isRequired,
+  inputClass: PropTypes.string.isRequired
 }
 
 export default InputField;
