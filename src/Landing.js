@@ -1,21 +1,22 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
+import PropTypes from 'prop-types' 
 
 class Landing extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       query: ''
-    };
+    }
   }
 
-  handleChange = (e) => {
+  handleChange = (event) => {
     this.setState({
-      query: e.target.value
+      query: event.target.value
     })
   }
 
-  handleSubmit = (e) => {
-    e.preventDefault()
+  handleSubmit = (event) => {
+    event.preventDefault()
     this.props.query(this.state.query)
   };
   render() {
@@ -57,8 +58,12 @@ class Landing extends Component {
           </form>
         </section>
       </header>
-    );
+    )
   }
 }
 
-export default Landing;
+export default Landing
+
+Landing.propTypes = {
+  query: PropTypes.array
+}
