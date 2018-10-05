@@ -3,11 +3,20 @@ import React, { Component } from "react";
 class Landing extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      query: ''
+    };
   }
 
-  handleSubmit = () => {
-    console.log("hello");
+  handleChange = (e) => {
+    this.setState({
+      query: e.target.value
+    })
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    this.props.query(this.state.query)
   };
   render() {
     return (
@@ -15,7 +24,7 @@ class Landing extends Component {
         <section className="welcome-screen">
           <div className="typewriter">
             <h1>Data:GO</h1>
-            <p><span>G</span>lobal <span>O</span>utreach</p>
+            <p>Global Outreach</p>
           </div>
           <form
             className="search-landing "
@@ -23,6 +32,8 @@ class Landing extends Component {
             href="#results-page"
           >
             <input
+              value={this.state.query}
+              onChange={this.handleChange}
               placeholder="Search for data"
               aria-label="Search field"
               type="text"
