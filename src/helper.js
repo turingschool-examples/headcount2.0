@@ -2,26 +2,7 @@
 export default class DistrictRepository {
   constructor(stats){
     this.stats = this.cleanData(stats)
-    // this.districtStats = this.organizeDistrictData(stats) 
   }
-
-  // organizeData(stats){
-  //   const data = stats.reduce((districts, school) => {
-  //       let statsObj ={
-  //         location: school.Location.toUpperCase(),
-  //         year: school.TimeFrame,
-  //         data: school.Data
-  //       }   
-     
-  //         let upperCaseLocation = school.Location.toUpperCase()
-  //         if(!districts[upperCaseLocation]){
-  //           districts[upperCaseLocation] = []
-  //         } 
-  //         districts[upperCaseLocation].push(statsObj)
-  //       return districts
-  //     }, {})
-  //   return data
-  // }
 
   cleanData(data){
     const filteredData = data.reduce((districts, school) => {
