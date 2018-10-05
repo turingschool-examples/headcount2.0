@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import CardContainer from './CardContainer'
 import DistrictRepository from './helper';
+import Header from './Header';
 import kinderData from './data/kindergartners_in_full_day_program.js';
 
 class App extends Component {
@@ -9,7 +10,7 @@ class App extends Component {
     super()
 
     this.state = {
-      districts: []
+      districts: [],
     }
   }
 
@@ -22,9 +23,19 @@ class App extends Component {
     })
   }
 
+  search = (query) => {
+    const districts = new DistrictRepository(kinderData)
+    const filteredData = districts.findAllMatches(query)
+
+    this.setState({
+      districts: filteredData
+    })
+  }
+
   render() {
     return (
       <div>
+        <Header search={this.search}/>
         <CardContainer districts={this.state.districts}/>
       </div>
     );

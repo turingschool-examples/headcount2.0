@@ -38,11 +38,23 @@ class DistrictRepository {
       })
     } else {
       const upperQuery = query.toUpperCase();
-      
-      return Object.keys(this.stats).filter(key => 
+      const allowedKeys = Object.keys(this.stats).filter(key => 
         key.includes(upperQuery));
+      const filteredData = Object.keys(this.stats)
+        .filter(key => allowedKeys.includes(key))
+        .reduce((obj, key) => {
+          return {
+            ...obj,
+            [key]: this.stats[key]
+          };
+        }, {});
+      const formattedData = Object.keys(filteredData).map(key => {
+        return {location: key, stats: filteredData[key]}
+      })
+
+      return formattedData;
+      }
     }
-  }
 }
 
 export default DistrictRepository;
