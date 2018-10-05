@@ -4,5 +4,8 @@
   height: 12em;
   margin: 0 auto;
   word-wrap: break-word;
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 2em;
 
 }

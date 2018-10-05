@@ -29,7 +29,7 @@ class App extends Component {
 
     return (
 
-      <div>Welcome To Headcount 2.0!!!!!
+      <div><span className="welcome">Welcome To Headcount 2.0!!!!!</span>
       <CardContainer stats={districtData} />
       </div>
 
