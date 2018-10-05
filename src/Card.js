@@ -4,7 +4,11 @@ import PropTypes from 'prop-types'
 const Card = ({district}) => {
   
   const dataPoints = district.stats.map( year => {
-    return <p className='year-data' key={Math.random()}> {year.year}: {year.data} </p>
+    
+    let classname;
+    year.data > 0.5 ? classname = 'year-data greater-than' : classname = 'year-data less-than'
+
+    return <p className={classname} key={Math.random()}> {year.year}: {year.data} </p>
 
   })
 
@@ -13,6 +17,7 @@ const Card = ({district}) => {
       <h1 className='card-heading'>{district.location}</h1>
       <div className='card-data'>
         {dataPoints}
+        <p>* less than 0.5</p>
       </div>
     </div>
 
