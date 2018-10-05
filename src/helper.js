@@ -1,6 +1,6 @@
 export default class DistrictRepository {
 	constructor(data) {
-		this.data = data,
+		this.data = data
 		this.stats = this.compileDistricts();
 	}
 
@@ -27,7 +27,7 @@ export default class DistrictRepository {
 
 			return district
 		}, {})	
-
+// console.log(schoolDistrict)
 		return schoolDistrict
 	}
 

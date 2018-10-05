@@ -1,0 +1,36 @@
+.DistrictCard {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	width: 15rem;
+	height: 26rem;
+	margin: 0 auto 1.5rem;
+	box-shadow: 0px 1px 1px 2px #8d8686;
+	border-radius: 10px;
+}
+
+.card-location {
+	text-align: center;
+	overflow-wrap: break-word;
+	margin: 1rem 0.5rem 0.75rem;
+}
+
+.card-stats {
+	margin: 0 auto 1.5rem;
+
+}
+
+.greater-than-point-5 {
+	color: green;
+	margin: 0.25rem auto;
+}
+
+.less-than-point-5 {
+	color: red;
+	margin: 0.25rem auto;
+
+}
+
