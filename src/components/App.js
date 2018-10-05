@@ -1,6 +1,9 @@
 import React, { Component } from 'react'; 
 
 import kinderData from '../data/kindergartners_in_full_day_program.js';
+import thirdGradeData from '../data/3rd_grade_tests.js'
+import higherEdData from '../data/remediation_in_higher_education.js'
+
 import DistrictRepository from '../helper.js'
 
 import CardContainer from './CardContainer'
@@ -66,7 +69,6 @@ class App extends Component {
             <h1>Colorado Headcount</h1>
             <InputField 
               processFilter={this.processFilter}
-              inputClass='text-input'
             />
           </header>
             <CardContainer 

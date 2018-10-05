@@ -13,7 +13,8 @@ describe('InputField', ()=>{
   const mockEvent = {target: {value: 'place'}}
 
   beforeEach(()=>{
-    wrapper = shallow(<InputField processFilter={mockProcessFilter}/>);
+    wrapper = shallow(<InputField 
+      processFilter={mockProcessFilter}/>);
   });
 
   it('should exist', () => {
@@ -42,6 +43,8 @@ describe('InputField', ()=>{
 
   it('should call processInput on text input', () => {
     wrapper.find('.text-input').simulate('change', mockEvent);
+
+    expect(wrapper.state()).toEqual({input: 'place'})
   })
 
 });

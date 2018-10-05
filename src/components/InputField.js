@@ -23,7 +23,7 @@ class InputField extends Component {
     return (
       <form className="input-form">
         <input 
-          className={this.props.inputClass}
+          className="text-input"
           value={this.state.input}
           placeholder='Search for your school district...'
           onChange={(e) => {
