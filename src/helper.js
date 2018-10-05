@@ -20,7 +20,7 @@ export default class DistrictRepository {
           stats: {[district.TimeFrame]: Math.round(district.Data * 1000) / 1000}
         }
       } else {
-      districts[upperCaseDistrict].stats={
+      districts[upperCaseDistrict].stats = {
         ...districts[upperCaseDistrict].stats,
         [district.TimeFrame] : Math.round(district.Data * 1000) / 1000}
     }

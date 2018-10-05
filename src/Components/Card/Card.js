@@ -1,9 +1,12 @@
 import React from 'react';
 import './card.css'
 
-const Card = ({location, stats}) =>{
-  const statsArray = Object.keys(stats);
-  const districtData = statsArray.map(data=>stats[data])
+const Card = ({location, stats}) => {
+
+  const yearsArray = Object.keys(stats);
+
+  const districtData = yearsArray.map(year => { return `${year}: ${stats[year] }`})
+
   return(
     <div className="card-div">
     <h4>{location}</h4>
