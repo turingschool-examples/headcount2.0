@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import DumbCard from './DumbCard'
 import ComparisonCard from './ComparisonCard'
 
-import '../css/CardContainer.css'
+import '../css/Comparison.css'
 
 
 const Comparison = (props) => {
