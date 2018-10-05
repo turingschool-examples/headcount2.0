@@ -1,27 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+
+import Result from './Result'
 
 class ResultsContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = {  }
   }
 
-  mapResults = () => {
-    
-  }
-
-  render() { 
-    return ( 
-      null
-     );
+  render() {
+    if (!this.props.results) return null
+    return (
+      <section className="results-section">
+        {this.props.results.map(entry => {
+          return <Result entry={entry} key={entry.location}/>;
+        })}
+      </section>
+    );
   }
 }
- 
+
 export default ResultsContainer;
-//Match algorithm to render 
-// {district.findAllMatches().map (entry => {
-//   let x = Object.keys(entry.stats)
-//   return x.map (stat => {
-//     return <p> {entry.stats[stat]}</p>
-//   })
-// })}
+

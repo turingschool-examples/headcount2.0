@@ -26,7 +26,7 @@ class App extends Component {
   query = (query) => {
     this.setState({
       query: query,
-      results: district.findAllMatches(query.query)
+      results: district.findAllMatches(query)
     })
   }
 
