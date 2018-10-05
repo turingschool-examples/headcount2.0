@@ -12,4 +12,11 @@
 .input-form {
   justify-self: end;
   margin-right: 1rem;
+  display: block;
+  opacity: 1;
+  transition: .5s;
+}
+
+.hide {
+  opacity: 0;
 }

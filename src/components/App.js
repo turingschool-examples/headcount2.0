@@ -66,6 +66,7 @@ class App extends Component {
             <h1>Colorado Headcount</h1>
             <InputField 
               processFilter={this.processFilter}
+              inputClass='text-input'
             />
           </header>
             <CardContainer 
@@ -77,7 +78,14 @@ class App extends Component {
     } else if (this.state.selection.length === 2) {
       return (
         <main className="app">
-          <h1>Welcome To Headcount 2.0</h1>
+          <header>
+            <img className='logo' src="./brain-and-head.svg" alt="logo" />
+            <h1>Colorado Headcount</h1>
+            <InputField 
+              processFilter={this.processFilter}
+              inputClass='text-input hide'
+            />
+          </header>
           <Comparison
             compareDistrictAverages={this.state.data.compareDistrictAverages}
             selection={this.state.selection} 
