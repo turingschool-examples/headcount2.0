@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
 import App from './App';
+import Card from './Card'
 import DistrictRepository from './helper.js';
 import kinderData from './data/kindergartners_in_full_day_program.js';
 
@@ -18,4 +19,8 @@ it('has state that matches the helper dataset', () => {
   expect(wrapper.state().DistrictRepository).toEqual(repo.stats)
 });
 
-
+it('renders correct number of cards', () => {
+  const wrapper = shallow(<App />)
+  
+  expect(wrapper.find(Card).length).toEqual(181)
+});
