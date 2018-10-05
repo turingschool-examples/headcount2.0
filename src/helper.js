@@ -40,6 +40,7 @@ export default class DistrictRepository {
         return dataset.filter(entry => {
             let capitalised = input.toUpperCase()
             if (entry.location.includes(capitalised)) return entry
+            return 'No matches found'
         })
     }
 }

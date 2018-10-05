@@ -9,6 +9,7 @@
     "react-test-renderer": "^16.5.2"
   },
   "dependencies": {
+    "node-sass": "^4.9.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
