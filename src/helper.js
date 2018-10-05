@@ -62,7 +62,7 @@ export default class DistrictRepository {
     const district1Avg = this.findAverage(district1);
     const district2Avg = this.findAverage(district2);
     const comparedDistricts = Math.round((district1Avg / district2Avg) * 1000) / 1000;
-    const results = Object.assign({}, {[district1]: district1Avg}, {[district2]: district2Avg}, {compared: comparedDistricts});
+    const results = Object.assign({}, {[district1.toUpperCase()]: district1Avg}, {[district2.toUpperCase()]: district2Avg}, {compared: comparedDistricts});
     return results;
   }
 
