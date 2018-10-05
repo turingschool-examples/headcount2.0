@@ -140,4 +140,47 @@ describe('App', ()=>{
      expect(wrapper.state().modalClass).toEqual('hidden-modal info-modal')
   })
 
+  it('should filter out unselected cards', () => {
+    const argument1 = {
+      location: 'ADAMS COUNTY 14',
+      stats: {
+        2004: 0.228, 
+        2005: 0.3, 
+        2006: 0.293, 
+        2007: 0.306, 
+        2008: 0.673,
+        2009: 1,
+        2010: 1,
+        2011: 1,
+        2012: 1,
+        2013: 0.998,
+        2014: 1
+      }
+    }
+
+    const argument2 = {
+      location: 'ANOTHER COUNTY',
+      stats: {
+        2004: 0.228, 
+        2005: 0.3, 
+        2006: 0.293, 
+        2007: 0.306, 
+        2008: 0.673,
+        2009: 1,
+        2010: 1,
+        2011: 1,
+        2012: 1,
+        2013: 0.998,
+        2014: 1
+      }
+    }
+
+    wrapper.setState({
+      selection: [argument1, argument2]
+    })
+
+    wrapper.instance().processSelection(argument1)
+    expect(wrapper.state().selection).toEqual([argument2])
+  });
+
 });

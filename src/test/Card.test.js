@@ -61,7 +61,16 @@ describe('Card', ()=>{
     wrapper.find('.card').simulate('click')
 
     expect(wrapper.state()).toEqual({classLabel: 'card selected'})
+  });
 
-  })
+  it('should set class back if selectCard is called on a card that has been selected', () => {
+    wrapper.setState({
+      classLabel: 'card selected'
+    });
+
+    wrapper.instance().selectCard()
+
+    expect(wrapper.state()).toEqual({classLabel: 'card'})
+  });
 
 });
