@@ -82,7 +82,7 @@ class App extends Component {
   }
 
   render() {
-    if (this.state.data && this.state.selection.length < 2) {
+    if (this.state.data) {
       return (
         <main className="app">
           <header>
@@ -100,6 +100,13 @@ class App extends Component {
               processFilter={this.processFilter}
             />
           </header>
+          {this.state.selection.length === 2 &&
+            <Comparison
+              compareDistrictAverages={this.state.data.compareDistrictAverages}
+              selection={this.state.selection} 
+              clearSelections={this.clearSelections}
+            />
+          }
           <Info 
             modalClass={this.state.modalClass}
             untoggleModal={this.untoggleModal} 
@@ -110,32 +117,6 @@ class App extends Component {
             />
         </main>
       );
-    } else if (this.state.selection.length === 2) {
-      return (
-        <main className="app">
-          <header>
-            <img className='logo' src="./brain-and-head.svg" alt="logo" />
-            <h1 className='banner-title'>Colorado Headcount</h1>
-            <img 
-              className='info-btn'
-              src='./information.svg'
-              alt='info-button'
-              onClick={() => {
-                this.toggleModal()
-              }}
-            />
-          </header>
-          <Info 
-            modalClass={this.state.modalClass}
-            untoggleModal={this.untoggleModal} 
-          />
-          <Comparison
-            compareDistrictAverages={this.state.data.compareDistrictAverages}
-            selection={this.state.selection} 
-            clearSelections={this.clearSelections}
-          />
-        </main>
-      )
     } else {
       return (
         <main className="app">
