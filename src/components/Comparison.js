@@ -26,7 +26,6 @@ const Comparison = (props) => {
         />
         
       </div>
-      <button onClick={props.clearSelections}>Return</button>
     </section>
   )
 }
@@ -34,7 +33,7 @@ const Comparison = (props) => {
 Comparison.propTypes = {
   selection: PropTypes.array.isRequired,
   compareDistrictAverages: PropTypes.func.isRequired,
-  clearSelections: PropTypes.func.isRequired
+  // clearSelections: PropTypes.func.isRequired
 }
 
 export default Comparison;

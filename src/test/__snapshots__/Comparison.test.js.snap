@@ -89,10 +89,5 @@ exports[`Comparison should render content to the DOM 1`] = `
       key="ADAMS COUNTY 14"
     />
   </div>
-  <button
-    onClick={[Function]}
-  >
-    Return
-  </button>
 </section>
 `;

@@ -2931,6 +2931,7 @@ exports[`App should render content to the DOM 1`] = `
       }
     }
     processSelection={[Function]}
+    selection={Array []}
   />
 </main>
 `;
@@ -2961,7 +2962,6 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
     />
   </header>
   <Comparison
-    clearSelections={[Function]}
     compareDistrictAverages={[Function]}
     selection={
       Array [
@@ -5880,6 +5880,16 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
       }
     }
     processSelection={[Function]}
+    selection={
+      Array [
+        Object {
+          "thing": 1,
+        },
+        Object {
+          "thing": 2,
+        },
+      ]
+    }
   />
 </main>
 `;

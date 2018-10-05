@@ -48,19 +48,18 @@ class App extends Component {
         selection: [...this.state.selection, district],
         modalClass: 'hidden-modal info-modal'
       })
+    } else if (this.state.selection.includes(district) && this.state.selection.length === 2) {
+      this.setState({
+        selection: this.state.selection.filter((dist) => {
+          return dist.location !== district.location
+        })
+      })
     } else {
       this.setState({
         selection: []
       })
     }
 
-  }
-
-  clearSelections = () => {
-    this.setState({
-      selection: [],
-      filter: undefined
-    })
   }
 
   toggleModal = () => {
@@ -114,6 +113,7 @@ class App extends Component {
             <CardContainer 
               data={this.state.filter || this.state.data.stats} 
               processSelection={this.processSelection}
+              selection={this.state.selection}
             />
         </main>
       );

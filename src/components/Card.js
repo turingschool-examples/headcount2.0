@@ -15,16 +15,17 @@ class Card extends Component {
   }
 
   selectCard = () => {
-    if (this.state.classLabel === 'card') {
+    if (this.state.classLabel === 'card' && this.props.selection.length < 2) {
       this.setState({
         classLabel: 'card selected'
       })
-    } else {
+      this.props.processSelection(this.props.data)
+    } else if (this.state.classLabel !== 'card') {
       this.setState({
         classLabel: 'card'
       })
+      this.props.processSelection(this.props.data)
     }
-    this.props.processSelection(this.props.data)
   }
 
   render() {

@@ -28,7 +28,7 @@ describe('Card', ()=>{
   } 
 
   beforeEach(()=>{
-    wrapper = shallow(<Card data={mockData} processSelection={mockProcessSelection}/>);
+    wrapper = shallow(<Card selection={['1']} data={mockData} processSelection={mockProcessSelection}/>);
   });
 
   it('should exist', () => {
@@ -44,6 +44,9 @@ describe('Card', ()=>{
   });
 
   it('should update state when selectCard is called', () => {
+    wrapper.setState({
+      classLabel: 'card'
+    })
     wrapper.instance().selectCard();
     expect(wrapper.state()).toEqual({classLabel: 'card selected'});
   });
