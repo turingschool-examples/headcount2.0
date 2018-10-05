@@ -20,6 +20,10 @@
   width: 70%;
 }
 
+.data-line {
+  font-size: 1.25em;
+}
+
 .data-list {
   font-family: 'Karla', sans-serif;;
   list-style-type: none;

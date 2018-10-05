@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Search.css';
 import PropTypes from 'prop-types';
 
 class Search extends Component {
@@ -21,6 +22,7 @@ class Search extends Component {
     return(
       <form>
         <input 
+          className="search-bar"
           name="Search" 
           value={this.state.searchWord} 
           placeholder="Search for School District"
