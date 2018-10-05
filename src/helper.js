@@ -32,9 +32,20 @@ export default class DistrictRepository {
   }
 
 
-  findAverage = () => {
+  findAverage = district => {
+    const resultPlace = Object.keys(this.stats).find(place => {
+      return place.toLowerCase().includes(district.toLowerCase());    
+    });
+    const expectedPlaceResults = this.stats[resultPlace]
+    const keys = Object.keys(expectedPlaceResults);
 
+    const expectedResults = keys.reduce((acc, place, index, array) => {
+       acc += expectedPlaceResults[place] / array.length;
+      return acc;
+    }, 0);
+    return  Math.round(expectedResults * 1000) / 1000;
   }
+  
 
   findAllMatches = (name = '') => {
     const filteredList = Object.keys(this.stats).filter(place => {
@@ -47,8 +58,12 @@ export default class DistrictRepository {
      return expectedResults;
   }
 
-  compareDistrictAverage = () => {
-
+  compareDistrictAverages = (district1, district2) => {
+    const district1Avg = this.findAverage(district1);
+    const district2Avg = this.findAverage(district2);
+    const comparedDistricts = Math.round((district1Avg / district2Avg) * 1000) / 1000;
+    const results = Object.assign({}, {[district1]: district1Avg}, {[district2]: district2Avg}, {compared: comparedDistricts});
+    return results;
   }
 
 }

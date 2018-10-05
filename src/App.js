@@ -20,7 +20,6 @@ class App extends Component {
   }
 
   searchSchoolData = phrase => {
-    console.log(phrase)
     const data = new DistrictRepository(kindergartners_in_full_day_program);
     const schoolData = data.findAllMatches(phrase);
     this.setState({ schoolData });
