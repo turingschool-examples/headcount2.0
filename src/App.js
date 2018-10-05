@@ -18,10 +18,12 @@ class App extends Component {
 
   render() {
     return (
-      <main className='l-main'>
+      <div className='body'>
         <Landing />        
-        
-      </main>
+        <main className='l-main'>
+          
+        </main>
+      </div>
     );
   }
 }
