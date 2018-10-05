@@ -49,6 +49,17 @@ export default class DistrictRepository {
     }
   }
 
+  // searchForPrefix(word) {
+  //   let statKeys = Object.keys(this.stats)
+  //   return statKeys.map((key) => {
+  //     if (key.startsWith(word)) {
+  //       return true
+  //     } else {
+  //       return false
+  //     }
+  //   })
+  // }
+
   findAllMatches(name) {
     let statKeys = Object.keys(this.stats)
     let matchOutput = []
@@ -65,6 +76,7 @@ export default class DistrictRepository {
       matchOutput = [...matchData]
       return matchOutput
     } else if(statKeys.includes(capName)) {
+    // } else if(statKeys.includes(capName) || this.searchForPrefix(capName)) {
       let matchData = statKeys.filter((key) => {
         if (key === capName || key.startsWith(capName)) {
           return this.stats[key]

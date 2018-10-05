@@ -23,6 +23,9 @@ ShallowWrapper {
 >
           Welcome To Headcount 2.0
 </h1>,
+        <Search
+          searchForDistrict={[Function]}
+/>,
         <div
           className="card-container"
 >
@@ -3300,6 +3303,17 @@ ShallowWrapper {
         "ref": null,
         "rendered": "Welcome To Headcount 2.0",
         "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "searchForDistrict": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
       },
       Object {
         "instance": null,
@@ -10932,6 +10946,9 @@ ShallowWrapper {
 >
             Welcome To Headcount 2.0
 </h1>,
+          <Search
+            searchForDistrict={[Function]}
+/>,
           <div
             className="card-container"
 >
@@ -14209,6 +14226,17 @@ ShallowWrapper {
           "ref": null,
           "rendered": "Welcome To Headcount 2.0",
           "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "searchForDistrict": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
         },
         Object {
           "instance": null,

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Card from './Card.js';
+import Search from './Search.js'
 import DistrictRepository from './helper.js';
 import kinderData from './data/kindergartners_in_full_day_program.js';
 
@@ -11,6 +12,14 @@ class App extends Component {
     this.state = {
       DistrictRepository: {}
     }
+  }
+
+  searchForDistrict = (word) => {
+    let repo = new DistrictRepository(kinderData)
+    console.log(repo.findAllMatches(word))
+    // this.setState({
+    //   DistrictRepository: repo.findAllMatches(word)
+    // })
   }
 
   componentDidMount() {
@@ -29,6 +38,7 @@ class App extends Component {
     return (
       <div>
         <h1 className="title">Welcome To Headcount 2.0</h1>
+        <Search searchForDistrict={this.searchForDistrict} />
         <div className="card-container">
           { cards }
         </div>
