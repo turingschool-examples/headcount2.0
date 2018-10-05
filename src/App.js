@@ -23,7 +23,8 @@ class App extends Component {
 
   render() {
     return (
-      <div>Headcount 2.7
+      <div className='App'>
+      	<h1 className='app-header'>Headcount 2.7</h1>
       	<DistrictsContainer districts={this.state.data}/>
       </div>
     );

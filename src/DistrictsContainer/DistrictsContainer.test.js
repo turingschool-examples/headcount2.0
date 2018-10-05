@@ -22,7 +22,7 @@ describe('DistrictsContainer', () => {
 		expect(wrapper).toMatchSnapshot()
 	})
 
-	it('renders all the ideas', () => {
+	it('renders each district', () => {
 		expect(wrapper.find(DistrictCard).length).toEqual(2)
 	})
 })

@@ -6,13 +6,15 @@ const DistrictCard = ({ location, stats }) => {
 	const statsKeys = Object.keys(stats)
 	const schoolData = statsKeys.map((stat) => {
 		
-		return <p>{stat}: {stats[stat]}</p>
+		return <p 
+			className={(stats[stat] > 0.5) ? 'greater-than-point-5' : 'less-than-point-5'}>
+			{stat}: {stats[stat]}</p>
 	})
 	console.log(schoolData)
 
 	return (
 		<div className='DistrictCard'>
-			<h3 className='card-location'>{location}</h3>
+			<h2 className='card-location'>{location}</h2>
 			<p className='card-stats'>{schoolData}</p>
 		</div>
 	)
@@ -24,3 +26,6 @@ DistrictCard.proptypes = {
 }
 
 export default DistrictCard;
+
+			// className={(stats[stat] > 0.5) ? '.greater-than-point-5' : '.less-than-point-5'}>
+			// {stat}: {stats[stat]}</p>
