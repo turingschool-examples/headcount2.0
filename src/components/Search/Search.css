@@ -1,7 +1,5 @@
 /*SEARCH COMPONENT RELATED CSS GOES HERE*/
 .Search {
-  grid-row: 2 / 3;
-  grid-column: 1 / 2;
   width: 50%;
   display: flex;
   justify-content: space-between
@@ -26,7 +24,7 @@ input {
 
 button {
   width: 40px;
-  color: #EFEFEF;
+  color: #EFFFFF;
   border: none;
   border-radius: 0 5px 5px 0;
   background-color: #009FB7;

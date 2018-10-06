@@ -4,6 +4,7 @@
   width: 200px;
   margin: 5px 0;
   padding: 0.5rem;
+  padding-bottom: 1.25rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 4rem 1fr;
