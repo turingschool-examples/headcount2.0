@@ -1,22 +1,51 @@
+@import url(https://fonts.googleapis.com/css?family=Lora|Roboto:400,500);
+
 .card {
-  border: 2px solid black;
+  border: 1px solid lightblue;
+  border-radius: 15px;
   color: black;
   font-size: 16px;
   flex: 1 0 200px;
-  box-sizing: border-box;
   margin: 1rem .25em;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  transition: border-width 0.1s linear;
+ /* transition: background 0.6s linear;*/
+/*  max-width: 200px;*/
+  padding: 10px;
+  opacity: 0.8;
+}
+
+.card h3 {
+  font-size: 16px;
+  padding: 10px;
+}
+
+.card li {
+  list-style-type: none;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  line-height: 1.5
+}
+
+.card ul {
+  padding: 0;
 }
 
 .card:hover {
   cursor: pointer;
-}
-
-.red {
-  color: red;
+  border-width: 5px;
+/*  background: lightgrey;*/
 }
 
 .green {
-  color: green;
+  color: #00BFFF;
+}
+
+.red {
+  color: black;
 }
 
 

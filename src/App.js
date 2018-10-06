@@ -58,8 +58,10 @@ class App extends Component {
     if (districts.length > 0) { 
       return (
         <div>
-          <h1>Headcount 2.0</h1>
-          <SearchForm filterCards={this.filterCards} />
+          <nav>
+            <h1>HeadCount 2.0</h1>
+            <SearchForm filterCards={this.filterCards} />
+          </nav> 
           <CompareCard compareSelections={compareSelections} 
                        compareDistrictAverages={data.compareDistrictAverages}
           />

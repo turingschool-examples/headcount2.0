@@ -7,10 +7,9 @@ const CompareCard = ({compareSelections, compareDistrictAverages}) => {
   if (compareSelections.length === 2) {
     const district1 = compareSelections[0]
     const district2 = compareSelections[1]
-    console.log(district1.school, district2.school)
+  
     const comparedObj = compareDistrictAverages(district1.school, district2.school)
-    console.log(district1)
-    console.log(comparedObj)
+
 
     return(
           <div className="compare-card">

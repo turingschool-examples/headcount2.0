@@ -11,7 +11,7 @@ const Card = ({district, addCompareSelections}) => {
       <ul className="school-data">
         {dataPoints.map( (year, i) => <li 
           key={i + Date.now()}
-          className={district.data[year] < 0.5  ? 'red' : 'green'}>{year} : {district.data[year]} </li>)}
+          className={district.data[year] < 0.5  ? 'red' : 'green'}>{year}: {district.data[year]} </li>)}
       </ul>
     </div>
   )
