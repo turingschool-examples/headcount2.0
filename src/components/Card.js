@@ -9,31 +9,16 @@ class Card extends Component {
   constructor() {
     super()
 
-    this.state = {
-      classLabel: 'card'
-    }
-  }
 
-  selectCard = () => {
-    if (this.state.classLabel === 'card' && this.props.selection.length < 2) {
-      this.setState({
-        classLabel: 'card selected'
-      })
-      this.props.processSelection(this.props.data)
-    } else if (this.state.classLabel !== 'card') {
-      this.setState({
-        classLabel: 'card'
-      })
-      this.props.processSelection(this.props.data)
-    }
-  }
+}
+
 
   render() {
     return (
       <article 
-        className={this.state.classLabel}
+        className={this.props.data.classLabel}
         onClick={() => {
-          this.selectCard()
+          this.props.processSelection(this.props.data)
         }}
       >
         <h1 className="location">{this.props.data.location}</h1>
@@ -54,6 +39,7 @@ class Card extends Component {
 }
 
 Card.propTypes = {
+  selection: PropTypes.array.isRequired,
   data: PropTypes.object.isRequired,
   processSelection: PropTypes.func.isRequired
 }

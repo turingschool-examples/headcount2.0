@@ -7,6 +7,7 @@ class DistrictRepository {
         obj[Location.toUpperCase()].stats = {}
       }
       obj[Location.toUpperCase()].stats[TimeFrame] = (Math.round(Data * 1000) / 1000 || 0)
+      obj[Location.toUpperCase()].classLabel = 'card'
 
       return obj
     }, {})

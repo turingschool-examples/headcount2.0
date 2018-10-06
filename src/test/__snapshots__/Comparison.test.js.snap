@@ -7,7 +7,7 @@ exports[`Comparison should render content to the DOM 1`] = `
   <div
     className="card-container"
   >
-    <DumbCard
+    <Card
       data={
         Object {
           "location": "ADAMS COUNTY 14",
@@ -27,6 +27,42 @@ exports[`Comparison should render content to the DOM 1`] = `
         }
       }
       key="ADAMS COUNTY 14"
+      selection={
+        Array [
+          Object {
+            "location": "ADAMS COUNTY 14",
+            "stats": Object {
+              "2004": 0.228,
+              "2005": 0.3,
+              "2006": 0.293,
+              "2007": 0.306,
+              "2008": 0.673,
+              "2009": 1,
+              "2010": 1,
+              "2011": 1,
+              "2012": 1,
+              "2013": 0.998,
+              "2014": 1,
+            },
+          },
+          Object {
+            "location": "ADAMS COUNTY 14",
+            "stats": Object {
+              "2004": 0.228,
+              "2005": 0.3,
+              "2006": 0.293,
+              "2007": 0.306,
+              "2008": 0.673,
+              "2009": 1,
+              "2010": 1,
+              "2011": 1,
+              "2012": 1,
+              "2013": 0.998,
+              "2014": 1,
+            },
+          },
+        ]
+      }
     />
     <ComparisonCard
       compareDistrictAverages={[Function]}
@@ -67,7 +103,7 @@ exports[`Comparison should render content to the DOM 1`] = `
         ]
       }
     />
-    <DumbCard
+    <Card
       data={
         Object {
           "location": "ADAMS COUNTY 14",
@@ -87,7 +123,48 @@ exports[`Comparison should render content to the DOM 1`] = `
         }
       }
       key="ADAMS COUNTY 14"
+      selection={
+        Array [
+          Object {
+            "location": "ADAMS COUNTY 14",
+            "stats": Object {
+              "2004": 0.228,
+              "2005": 0.3,
+              "2006": 0.293,
+              "2007": 0.306,
+              "2008": 0.673,
+              "2009": 1,
+              "2010": 1,
+              "2011": 1,
+              "2012": 1,
+              "2013": 0.998,
+              "2014": 1,
+            },
+          },
+          Object {
+            "location": "ADAMS COUNTY 14",
+            "stats": Object {
+              "2004": 0.228,
+              "2005": 0.3,
+              "2006": 0.293,
+              "2007": 0.306,
+              "2008": 0.673,
+              "2009": 1,
+              "2010": 1,
+              "2011": 1,
+              "2012": 1,
+              "2013": 0.998,
+              "2014": 1,
+            },
+          },
+        ]
+      }
     />
   </div>
+  <button
+    onClick={[Function]}
+  >
+    Close
+  </button>
 </section>
 `;

@@ -33,6 +33,7 @@ exports[`App should render content to the DOM 1`] = `
     data={
       Object {
         "ACADEMY 20": Object {
+          "classLabel": "card",
           "location": "ACADEMY 20",
           "stats": Object {
             "2004": 0.302,
@@ -49,6 +50,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "ADAMS COUNTY 14": Object {
+          "classLabel": "card",
           "location": "ADAMS COUNTY 14",
           "stats": Object {
             "2004": 0.228,
@@ -65,6 +67,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "ADAMS-ARAPAHOE 28J": Object {
+          "classLabel": "card",
           "location": "ADAMS-ARAPAHOE 28J",
           "stats": Object {
             "2004": 0.174,
@@ -81,6 +84,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "AGATE 300": Object {
+          "classLabel": "card",
           "location": "AGATE 300",
           "stats": Object {
             "2004": 1,
@@ -97,6 +101,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "AGUILAR REORGANIZED 6": Object {
+          "classLabel": "card",
           "location": "AGUILAR REORGANIZED 6",
           "stats": Object {
             "2004": 1,
@@ -113,6 +118,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "AKRON R-1": Object {
+          "classLabel": "card",
           "location": "AKRON R-1",
           "stats": Object {
             "2004": 0,
@@ -129,6 +135,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "ALAMOSA RE-11J": Object {
+          "classLabel": "card",
           "location": "ALAMOSA RE-11J",
           "stats": Object {
             "2004": 0,
@@ -145,6 +152,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "ARCHULETA COUNTY 50 JT": Object {
+          "classLabel": "card",
           "location": "ARCHULETA COUNTY 50 JT",
           "stats": Object {
             "2004": 0,
@@ -161,6 +169,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "ARICKAREE R-2": Object {
+          "classLabel": "card",
           "location": "ARICKAREE R-2",
           "stats": Object {
             "2004": 1,
@@ -177,6 +186,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "ARRIBA-FLAGLER C-20": Object {
+          "classLabel": "card",
           "location": "ARRIBA-FLAGLER C-20",
           "stats": Object {
             "2004": 0.455,
@@ -193,6 +203,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "ASPEN 1": Object {
+          "classLabel": "card",
           "location": "ASPEN 1",
           "stats": Object {
             "2004": 1,
@@ -209,6 +220,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "AULT-HIGHLAND RE-9": Object {
+          "classLabel": "card",
           "location": "AULT-HIGHLAND RE-9",
           "stats": Object {
             "2004": 1,
@@ -225,6 +237,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "BAYFIELD 10 JT-R": Object {
+          "classLabel": "card",
           "location": "BAYFIELD 10 JT-R",
           "stats": Object {
             "2004": 0.318,
@@ -241,6 +254,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "BENNETT 29J": Object {
+          "classLabel": "card",
           "location": "BENNETT 29J",
           "stats": Object {
             "2004": 0,
@@ -257,6 +271,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "BETHUNE R-5": Object {
+          "classLabel": "card",
           "location": "BETHUNE R-5",
           "stats": Object {
             "2004": 1,
@@ -273,6 +288,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "BIG SANDY 100J": Object {
+          "classLabel": "card",
           "location": "BIG SANDY 100J",
           "stats": Object {
             "2004": 0,
@@ -289,6 +305,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "BOULDER VALLEY RE 2": Object {
+          "classLabel": "card",
           "location": "BOULDER VALLEY RE 2",
           "stats": Object {
             "2004": 0.016,
@@ -305,6 +322,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "BRANSON REORGANIZED 82": Object {
+          "classLabel": "card",
           "location": "BRANSON REORGANIZED 82",
           "stats": Object {
             "2004": 1,
@@ -321,6 +339,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "BRIGGSDALE RE-10": Object {
+          "classLabel": "card",
           "location": "BRIGGSDALE RE-10",
           "stats": Object {
             "2004": 0,
@@ -337,6 +356,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "BRIGHTON 27J": Object {
+          "classLabel": "card",
           "location": "BRIGHTON 27J",
           "stats": Object {
             "2004": 0.036,
@@ -353,6 +373,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "BRUSH RE-2(J)": Object {
+          "classLabel": "card",
           "location": "BRUSH RE-2(J)",
           "stats": Object {
             "2004": 0,
@@ -369,6 +390,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "BUENA VISTA R-31": Object {
+          "classLabel": "card",
           "location": "BUENA VISTA R-31",
           "stats": Object {
             "2004": 0,
@@ -385,6 +407,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "BUFFALO RE-4": Object {
+          "classLabel": "card",
           "location": "BUFFALO RE-4",
           "stats": Object {
             "2004": 1,
@@ -401,6 +424,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "BURLINGTON RE-6J": Object {
+          "classLabel": "card",
           "location": "BURLINGTON RE-6J",
           "stats": Object {
             "2004": 0,
@@ -417,6 +441,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "BYERS 32J": Object {
+          "classLabel": "card",
           "location": "BYERS 32J",
           "stats": Object {
             "2004": 1,
@@ -433,6 +458,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "CALHAN RJ-1": Object {
+          "classLabel": "card",
           "location": "CALHAN RJ-1",
           "stats": Object {
             "2004": 0.353,
@@ -449,6 +475,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "CAMPO RE-6": Object {
+          "classLabel": "card",
           "location": "CAMPO RE-6",
           "stats": Object {
             "2004": 0,
@@ -465,6 +492,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "CANON CITY RE-1": Object {
+          "classLabel": "card",
           "location": "CANON CITY RE-1",
           "stats": Object {
             "2004": 0.302,
@@ -481,6 +509,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "CENTENNIAL R-1": Object {
+          "classLabel": "card",
           "location": "CENTENNIAL R-1",
           "stats": Object {
             "2004": 0,
@@ -497,6 +526,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "CENTER 26 JT": Object {
+          "classLabel": "card",
           "location": "CENTER 26 JT",
           "stats": Object {
             "2004": 1,
@@ -513,6 +543,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "CHERAW 31": Object {
+          "classLabel": "card",
           "location": "CHERAW 31",
           "stats": Object {
             "2004": 1,
@@ -529,6 +560,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "CHERRY CREEK 5": Object {
+          "classLabel": "card",
           "location": "CHERRY CREEK 5",
           "stats": Object {
             "2004": 0.392,
@@ -545,6 +577,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "CHEYENNE COUNTY RE-5": Object {
+          "classLabel": "card",
           "location": "CHEYENNE COUNTY RE-5",
           "stats": Object {
             "2004": 1,
@@ -561,6 +594,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "CHEYENNE MOUNTAIN 12": Object {
+          "classLabel": "card",
           "location": "CHEYENNE MOUNTAIN 12",
           "stats": Object {
             "2004": 0,
@@ -577,6 +611,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "CLEAR CREEK RE-1": Object {
+          "classLabel": "card",
           "location": "CLEAR CREEK RE-1",
           "stats": Object {
             "2004": 0.147,
@@ -593,6 +628,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "COLORADO": Object {
+          "classLabel": "card",
           "location": "COLORADO",
           "stats": Object {
             "2004": 0.24,
@@ -609,6 +645,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "COLORADO SPRINGS 11": Object {
+          "classLabel": "card",
           "location": "COLORADO SPRINGS 11",
           "stats": Object {
             "2004": 0.069,
@@ -625,6 +662,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "COTOPAXI RE-3": Object {
+          "classLabel": "card",
           "location": "COTOPAXI RE-3",
           "stats": Object {
             "2004": 0,
@@ -641,6 +679,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "CREEDE CONSOLIDATED 1": Object {
+          "classLabel": "card",
           "location": "CREEDE CONSOLIDATED 1",
           "stats": Object {
             "2004": 0,
@@ -657,6 +696,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "CRIPPLE CREEK-VICTOR RE-1": Object {
+          "classLabel": "card",
           "location": "CRIPPLE CREEK-VICTOR RE-1",
           "stats": Object {
             "2004": 1,
@@ -673,6 +713,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "CROWLEY COUNTY RE-1-J": Object {
+          "classLabel": "card",
           "location": "CROWLEY COUNTY RE-1-J",
           "stats": Object {
             "2004": 0,
@@ -689,6 +730,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "CUSTER COUNTY SCHOOL DISTRICT C-1": Object {
+          "classLabel": "card",
           "location": "CUSTER COUNTY SCHOOL DISTRICT C-1",
           "stats": Object {
             "2004": 0,
@@ -705,6 +747,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "DE BEQUE 49JT": Object {
+          "classLabel": "card",
           "location": "DE BEQUE 49JT",
           "stats": Object {
             "2004": 0,
@@ -721,6 +764,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "DEER TRAIL 26J": Object {
+          "classLabel": "card",
           "location": "DEER TRAIL 26J",
           "stats": Object {
             "2004": 0,
@@ -737,6 +781,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "DEL NORTE C-7": Object {
+          "classLabel": "card",
           "location": "DEL NORTE C-7",
           "stats": Object {
             "2004": 0,
@@ -753,6 +798,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "DELTA COUNTY 50(J)": Object {
+          "classLabel": "card",
           "location": "DELTA COUNTY 50(J)",
           "stats": Object {
             "2004": 1,
@@ -769,6 +815,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "DENVER COUNTY 1": Object {
+          "classLabel": "card",
           "location": "DENVER COUNTY 1",
           "stats": Object {
             "2004": 0.518,
@@ -785,6 +832,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "DOLORES COUNTY RE NO.2": Object {
+          "classLabel": "card",
           "location": "DOLORES COUNTY RE NO.2",
           "stats": Object {
             "2004": 0.929,
@@ -801,6 +849,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "DOLORES RE-4A": Object {
+          "classLabel": "card",
           "location": "DOLORES RE-4A",
           "stats": Object {
             "2004": 0,
@@ -817,6 +866,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "DOUGLAS COUNTY RE 1": Object {
+          "classLabel": "card",
           "location": "DOUGLAS COUNTY RE 1",
           "stats": Object {
             "2004": 0,
@@ -833,6 +883,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "DURANGO 9-R": Object {
+          "classLabel": "card",
           "location": "DURANGO 9-R",
           "stats": Object {
             "2004": 0,
@@ -849,6 +900,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "EADS RE-1": Object {
+          "classLabel": "card",
           "location": "EADS RE-1",
           "stats": Object {
             "2004": 1,
@@ -865,6 +917,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "EAGLE COUNTY RE 50": Object {
+          "classLabel": "card",
           "location": "EAGLE COUNTY RE 50",
           "stats": Object {
             "2004": 0.555,
@@ -881,6 +934,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "EAST GRAND 2": Object {
+          "classLabel": "card",
           "location": "EAST GRAND 2",
           "stats": Object {
             "2004": 1,
@@ -897,6 +951,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "EAST OTERO R-1": Object {
+          "classLabel": "card",
           "location": "EAST OTERO R-1",
           "stats": Object {
             "2004": 0,
@@ -913,6 +968,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "EAST YUMA COUNTY RJ-2": Object {
+          "classLabel": "card",
           "location": "EAST YUMA COUNTY RJ-2",
           "stats": Object {
             "2004": 0,
@@ -929,6 +985,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "EATON RE-2": Object {
+          "classLabel": "card",
           "location": "EATON RE-2",
           "stats": Object {
             "2004": 0,
@@ -945,6 +1002,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "EDISON 54 JT": Object {
+          "classLabel": "card",
           "location": "EDISON 54 JT",
           "stats": Object {
             "2004": 0.4,
@@ -961,6 +1019,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "ELBERT 200": Object {
+          "classLabel": "card",
           "location": "ELBERT 200",
           "stats": Object {
             "2004": 0,
@@ -977,6 +1036,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "ELIZABETH C-1": Object {
+          "classLabel": "card",
           "location": "ELIZABETH C-1",
           "stats": Object {
             "2004": 0,
@@ -993,6 +1053,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "ELLICOTT 22": Object {
+          "classLabel": "card",
           "location": "ELLICOTT 22",
           "stats": Object {
             "2004": 1,
@@ -1009,6 +1070,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "ENGLEWOOD 1": Object {
+          "classLabel": "card",
           "location": "ENGLEWOOD 1",
           "stats": Object {
             "2004": 0.598,
@@ -1025,6 +1087,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "FALCON 49": Object {
+          "classLabel": "card",
           "location": "FALCON 49",
           "stats": Object {
             "2004": 0,
@@ -1041,6 +1104,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "FLORENCE RE-2": Object {
+          "classLabel": "card",
           "location": "FLORENCE RE-2",
           "stats": Object {
             "2004": 0,
@@ -1057,6 +1121,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "FORT MORGAN RE-3": Object {
+          "classLabel": "card",
           "location": "FORT MORGAN RE-3",
           "stats": Object {
             "2004": 0,
@@ -1073,6 +1138,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "FOUNTAIN 8": Object {
+          "classLabel": "card",
           "location": "FOUNTAIN 8",
           "stats": Object {
             "2004": 0,
@@ -1089,6 +1155,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "FOWLER R-4J": Object {
+          "classLabel": "card",
           "location": "FOWLER R-4J",
           "stats": Object {
             "2004": 1,
@@ -1105,6 +1172,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "FRENCHMAN RE-3": Object {
+          "classLabel": "card",
           "location": "FRENCHMAN RE-3",
           "stats": Object {
             "2004": 1,
@@ -1121,6 +1189,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "GARFIELD 16": Object {
+          "classLabel": "card",
           "location": "GARFIELD 16",
           "stats": Object {
             "2004": 0,
@@ -1137,6 +1206,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "GARFIELD RE-2": Object {
+          "classLabel": "card",
           "location": "GARFIELD RE-2",
           "stats": Object {
             "2004": 0,
@@ -1153,6 +1223,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "GENOA-HUGO C113": Object {
+          "classLabel": "card",
           "location": "GENOA-HUGO C113",
           "stats": Object {
             "2004": 0,
@@ -1169,6 +1240,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "GILPIN COUNTY RE-1": Object {
+          "classLabel": "card",
           "location": "GILPIN COUNTY RE-1",
           "stats": Object {
             "2004": 0.2,
@@ -1185,6 +1257,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "GRANADA RE-1": Object {
+          "classLabel": "card",
           "location": "GRANADA RE-1",
           "stats": Object {
             "2004": 1,
@@ -1201,6 +1274,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "GREELEY 6": Object {
+          "classLabel": "card",
           "location": "GREELEY 6",
           "stats": Object {
             "2004": 0,
@@ -1217,6 +1291,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "GUNNISON WATERSHED RE1J": Object {
+          "classLabel": "card",
           "location": "GUNNISON WATERSHED RE1J",
           "stats": Object {
             "2004": 0.144,
@@ -1233,6 +1308,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "HANOVER 28": Object {
+          "classLabel": "card",
           "location": "HANOVER 28",
           "stats": Object {
             "2004": 0,
@@ -1249,6 +1325,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "HARRISON 2": Object {
+          "classLabel": "card",
           "location": "HARRISON 2",
           "stats": Object {
             "2004": 0.065,
@@ -1265,6 +1342,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "HAXTUN RE-2J": Object {
+          "classLabel": "card",
           "location": "HAXTUN RE-2J",
           "stats": Object {
             "2004": 0,
@@ -1281,6 +1359,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "HAYDEN RE-1": Object {
+          "classLabel": "card",
           "location": "HAYDEN RE-1",
           "stats": Object {
             "2004": 0,
@@ -1297,6 +1376,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "HI-PLAINS R-23": Object {
+          "classLabel": "card",
           "location": "HI-PLAINS R-23",
           "stats": Object {
             "2004": 0,
@@ -1313,6 +1393,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "HINSDALE COUNTY RE 1": Object {
+          "classLabel": "card",
           "location": "HINSDALE COUNTY RE 1",
           "stats": Object {
             "2004": 0,
@@ -1329,6 +1410,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "HOEHNE REORGANIZED 3": Object {
+          "classLabel": "card",
           "location": "HOEHNE REORGANIZED 3",
           "stats": Object {
             "2004": 0,
@@ -1345,6 +1427,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "HOLLY RE-3": Object {
+          "classLabel": "card",
           "location": "HOLLY RE-3",
           "stats": Object {
             "2004": 1,
@@ -1361,6 +1444,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "HOLYOKE RE-1J": Object {
+          "classLabel": "card",
           "location": "HOLYOKE RE-1J",
           "stats": Object {
             "2004": 0,
@@ -1377,6 +1461,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "HUERFANO RE-1": Object {
+          "classLabel": "card",
           "location": "HUERFANO RE-1",
           "stats": Object {
             "2004": 0,
@@ -1393,6 +1478,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "IDALIA SCHOOL DISTRICT RJ-3": Object {
+          "classLabel": "card",
           "location": "IDALIA SCHOOL DISTRICT RJ-3",
           "stats": Object {
             "2004": 0,
@@ -1409,6 +1495,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "IGNACIO 11 JT": Object {
+          "classLabel": "card",
           "location": "IGNACIO 11 JT",
           "stats": Object {
             "2004": 1,
@@ -1425,6 +1512,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "JEFFERSON COUNTY R-1": Object {
+          "classLabel": "card",
           "location": "JEFFERSON COUNTY R-1",
           "stats": Object {
             "2004": 0.29,
@@ -1441,6 +1529,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "JOHNSTOWN-MILLIKEN RE-5J": Object {
+          "classLabel": "card",
           "location": "JOHNSTOWN-MILLIKEN RE-5J",
           "stats": Object {
             "2004": 0,
@@ -1457,6 +1546,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "JULESBURG RE-1": Object {
+          "classLabel": "card",
           "location": "JULESBURG RE-1",
           "stats": Object {
             "2004": 0,
@@ -1473,6 +1563,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "KARVAL RE-23": Object {
+          "classLabel": "card",
           "location": "KARVAL RE-23",
           "stats": Object {
             "2004": 1,
@@ -1489,6 +1580,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "KEENESBURG RE-3(J)": Object {
+          "classLabel": "card",
           "location": "KEENESBURG RE-3(J)",
           "stats": Object {
             "2004": 0.296,
@@ -1505,6 +1597,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "KIM REORGANIZED 88": Object {
+          "classLabel": "card",
           "location": "KIM REORGANIZED 88",
           "stats": Object {
             "2004": 1,
@@ -1521,6 +1614,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "KIOWA C-2": Object {
+          "classLabel": "card",
           "location": "KIOWA C-2",
           "stats": Object {
             "2004": 0,
@@ -1537,6 +1631,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "KIT CARSON R-1": Object {
+          "classLabel": "card",
           "location": "KIT CARSON R-1",
           "stats": Object {
             "2004": 0,
@@ -1553,6 +1648,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "LA VETA RE-2": Object {
+          "classLabel": "card",
           "location": "LA VETA RE-2",
           "stats": Object {
             "2004": 0,
@@ -1569,6 +1665,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "LAKE COUNTY R-1": Object {
+          "classLabel": "card",
           "location": "LAKE COUNTY R-1",
           "stats": Object {
             "2004": 0.3,
@@ -1585,6 +1682,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "LAMAR RE-2": Object {
+          "classLabel": "card",
           "location": "LAMAR RE-2",
           "stats": Object {
             "2004": 0.87,
@@ -1601,6 +1699,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "LAS ANIMAS RE-1": Object {
+          "classLabel": "card",
           "location": "LAS ANIMAS RE-1",
           "stats": Object {
             "2004": 1,
@@ -1617,6 +1716,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "LEWIS-PALMER 38": Object {
+          "classLabel": "card",
           "location": "LEWIS-PALMER 38",
           "stats": Object {
             "2004": 0,
@@ -1633,6 +1733,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "LIBERTY SCHOOL DISTRICT J-4": Object {
+          "classLabel": "card",
           "location": "LIBERTY SCHOOL DISTRICT J-4",
           "stats": Object {
             "2004": 1,
@@ -1649,6 +1750,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "LIMON RE-4J": Object {
+          "classLabel": "card",
           "location": "LIMON RE-4J",
           "stats": Object {
             "2004": 0,
@@ -1665,6 +1767,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "LITTLETON 6": Object {
+          "classLabel": "card",
           "location": "LITTLETON 6",
           "stats": Object {
             "2004": 0,
@@ -1681,6 +1784,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "LONE STAR 101": Object {
+          "classLabel": "card",
           "location": "LONE STAR 101",
           "stats": Object {
             "2004": 1,
@@ -1697,6 +1801,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "MANCOS RE-6": Object {
+          "classLabel": "card",
           "location": "MANCOS RE-6",
           "stats": Object {
             "2004": 0,
@@ -1713,6 +1818,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "MANITOU SPRINGS 14": Object {
+          "classLabel": "card",
           "location": "MANITOU SPRINGS 14",
           "stats": Object {
             "2004": 0.014,
@@ -1729,6 +1835,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "MANZANOLA 3J": Object {
+          "classLabel": "card",
           "location": "MANZANOLA 3J",
           "stats": Object {
             "2004": 0.952,
@@ -1745,6 +1852,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "MAPLETON 1": Object {
+          "classLabel": "card",
           "location": "MAPLETON 1",
           "stats": Object {
             "2004": 0.067,
@@ -1761,6 +1869,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "MC CLAVE RE-2": Object {
+          "classLabel": "card",
           "location": "MC CLAVE RE-2",
           "stats": Object {
             "2004": 0,
@@ -1777,6 +1886,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "MEEKER RE1": Object {
+          "classLabel": "card",
           "location": "MEEKER RE1",
           "stats": Object {
             "2004": 0,
@@ -1793,6 +1903,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "MESA COUNTY VALLEY 51": Object {
+          "classLabel": "card",
           "location": "MESA COUNTY VALLEY 51",
           "stats": Object {
             "2004": 0.307,
@@ -1809,6 +1920,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "MIAMI/YODER 60 JT": Object {
+          "classLabel": "card",
           "location": "MIAMI/YODER 60 JT",
           "stats": Object {
             "2004": 1,
@@ -1825,6 +1937,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "MOFFAT 2": Object {
+          "classLabel": "card",
           "location": "MOFFAT 2",
           "stats": Object {
             "2004": 0.014,
@@ -1841,6 +1954,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "MOFFAT COUNTY RE:NO 1": Object {
+          "classLabel": "card",
           "location": "MOFFAT COUNTY RE:NO 1",
           "stats": Object {
             "2004": 0,
@@ -1857,6 +1971,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "MONTE VISTA C-8": Object {
+          "classLabel": "card",
           "location": "MONTE VISTA C-8",
           "stats": Object {
             "2004": 1,
@@ -1873,6 +1988,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "MONTEZUMA-CORTEZ RE-1": Object {
+          "classLabel": "card",
           "location": "MONTEZUMA-CORTEZ RE-1",
           "stats": Object {
             "2004": 0,
@@ -1889,6 +2005,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "MONTROSE COUNTY RE-1J": Object {
+          "classLabel": "card",
           "location": "MONTROSE COUNTY RE-1J",
           "stats": Object {
             "2004": 0,
@@ -1905,6 +2022,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "MOUNTAIN VALLEY RE 1": Object {
+          "classLabel": "card",
           "location": "MOUNTAIN VALLEY RE 1",
           "stats": Object {
             "2004": 1,
@@ -1921,6 +2039,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "NORTH CONEJOS RE-1J": Object {
+          "classLabel": "card",
           "location": "NORTH CONEJOS RE-1J",
           "stats": Object {
             "2004": 1,
@@ -1937,6 +2056,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "NORTH PARK R-1": Object {
+          "classLabel": "card",
           "location": "NORTH PARK R-1",
           "stats": Object {
             "2004": 1,
@@ -1953,6 +2073,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "NORTHGLENN-THORNTON 12": Object {
+          "classLabel": "card",
           "location": "NORTHGLENN-THORNTON 12",
           "stats": Object {
             "2004": 0.329,
@@ -1969,6 +2090,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "NORWOOD R-2J": Object {
+          "classLabel": "card",
           "location": "NORWOOD R-2J",
           "stats": Object {
             "2004": 0,
@@ -1985,6 +2107,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "OTIS R-3": Object {
+          "classLabel": "card",
           "location": "OTIS R-3",
           "stats": Object {
             "2004": 1,
@@ -2001,6 +2124,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "OURAY R-1": Object {
+          "classLabel": "card",
           "location": "OURAY R-1",
           "stats": Object {
             "2004": 0,
@@ -2017,6 +2141,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "PARK (ESTES PARK) R-3": Object {
+          "classLabel": "card",
           "location": "PARK (ESTES PARK) R-3",
           "stats": Object {
             "2004": 0.462,
@@ -2033,6 +2158,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "PARK COUNTY RE-2": Object {
+          "classLabel": "card",
           "location": "PARK COUNTY RE-2",
           "stats": Object {
             "2004": 0.339,
@@ -2049,6 +2175,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "PAWNEE RE-12": Object {
+          "classLabel": "card",
           "location": "PAWNEE RE-12",
           "stats": Object {
             "2004": 0,
@@ -2065,6 +2192,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "PEYTON 23 JT": Object {
+          "classLabel": "card",
           "location": "PEYTON 23 JT",
           "stats": Object {
             "2004": 0,
@@ -2081,6 +2209,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "PLAINVIEW RE-2": Object {
+          "classLabel": "card",
           "location": "PLAINVIEW RE-2",
           "stats": Object {
             "2004": 0,
@@ -2097,6 +2226,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "PLATEAU RE-5": Object {
+          "classLabel": "card",
           "location": "PLATEAU RE-5",
           "stats": Object {
             "2004": 1,
@@ -2113,6 +2243,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "PLATEAU VALLEY 50": Object {
+          "classLabel": "card",
           "location": "PLATEAU VALLEY 50",
           "stats": Object {
             "2004": 0,
@@ -2129,6 +2260,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "PLATTE CANYON 1": Object {
+          "classLabel": "card",
           "location": "PLATTE CANYON 1",
           "stats": Object {
             "2004": 0.229,
@@ -2145,6 +2277,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "PLATTE VALLEY RE-3": Object {
+          "classLabel": "card",
           "location": "PLATTE VALLEY RE-3",
           "stats": Object {
             "2004": 0,
@@ -2161,6 +2294,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "PLATTE VALLEY RE-7": Object {
+          "classLabel": "card",
           "location": "PLATTE VALLEY RE-7",
           "stats": Object {
             "2004": 0,
@@ -2177,6 +2311,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "POUDRE R-1": Object {
+          "classLabel": "card",
           "location": "POUDRE R-1",
           "stats": Object {
             "2004": 0,
@@ -2193,6 +2328,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "PRAIRIE RE-11": Object {
+          "classLabel": "card",
           "location": "PRAIRIE RE-11",
           "stats": Object {
             "2004": 1,
@@ -2209,6 +2345,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "PRIMERO REORGANIZED 2": Object {
+          "classLabel": "card",
           "location": "PRIMERO REORGANIZED 2",
           "stats": Object {
             "2004": 0,
@@ -2225,6 +2362,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "PRITCHETT RE-3": Object {
+          "classLabel": "card",
           "location": "PRITCHETT RE-3",
           "stats": Object {
             "2004": 1,
@@ -2241,6 +2379,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "PUEBLO CITY 60": Object {
+          "classLabel": "card",
           "location": "PUEBLO CITY 60",
           "stats": Object {
             "2004": 0.275,
@@ -2257,6 +2396,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "PUEBLO COUNTY RURAL 70": Object {
+          "classLabel": "card",
           "location": "PUEBLO COUNTY RURAL 70",
           "stats": Object {
             "2004": 0,
@@ -2273,6 +2413,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "RANGELY RE-4": Object {
+          "classLabel": "card",
           "location": "RANGELY RE-4",
           "stats": Object {
             "2004": 0,
@@ -2289,6 +2430,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "RIDGWAY R-2": Object {
+          "classLabel": "card",
           "location": "RIDGWAY R-2",
           "stats": Object {
             "2004": 0,
@@ -2305,6 +2447,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "ROARING FORK RE-1": Object {
+          "classLabel": "card",
           "location": "ROARING FORK RE-1",
           "stats": Object {
             "2004": 0.672,
@@ -2321,6 +2464,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "ROCKY FORD R-2": Object {
+          "classLabel": "card",
           "location": "ROCKY FORD R-2",
           "stats": Object {
             "2004": 0.172,
@@ -2337,6 +2481,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "SALIDA R-32": Object {
+          "classLabel": "card",
           "location": "SALIDA R-32",
           "stats": Object {
             "2004": 0.222,
@@ -2353,6 +2498,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "SANFORD 6J": Object {
+          "classLabel": "card",
           "location": "SANFORD 6J",
           "stats": Object {
             "2004": 1,
@@ -2369,6 +2515,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "SANGRE DE CRISTO RE-22J": Object {
+          "classLabel": "card",
           "location": "SANGRE DE CRISTO RE-22J",
           "stats": Object {
             "2004": 1,
@@ -2385,6 +2532,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "SARGENT RE-33J": Object {
+          "classLabel": "card",
           "location": "SARGENT RE-33J",
           "stats": Object {
             "2004": 1,
@@ -2401,6 +2549,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "SHERIDAN 2": Object {
+          "classLabel": "card",
           "location": "SHERIDAN 2",
           "stats": Object {
             "2004": 1,
@@ -2417,6 +2566,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "SIERRA GRANDE R-30": Object {
+          "classLabel": "card",
           "location": "SIERRA GRANDE R-30",
           "stats": Object {
             "2004": 1,
@@ -2433,6 +2583,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "SILVERTON 1": Object {
+          "classLabel": "card",
           "location": "SILVERTON 1",
           "stats": Object {
             "2004": 0,
@@ -2449,6 +2600,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "SOUTH CONEJOS RE-10": Object {
+          "classLabel": "card",
           "location": "SOUTH CONEJOS RE-10",
           "stats": Object {
             "2004": 1,
@@ -2465,6 +2617,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "SOUTH ROUTT RE 3": Object {
+          "classLabel": "card",
           "location": "SOUTH ROUTT RE 3",
           "stats": Object {
             "2004": 1,
@@ -2481,6 +2634,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "SPRINGFIELD RE-4": Object {
+          "classLabel": "card",
           "location": "SPRINGFIELD RE-4",
           "stats": Object {
             "2004": 1,
@@ -2497,6 +2651,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "ST VRAIN VALLEY RE 1J": Object {
+          "classLabel": "card",
           "location": "ST VRAIN VALLEY RE 1J",
           "stats": Object {
             "2004": 0.182,
@@ -2513,6 +2668,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "STEAMBOAT SPRINGS RE-2": Object {
+          "classLabel": "card",
           "location": "STEAMBOAT SPRINGS RE-2",
           "stats": Object {
             "2004": 0,
@@ -2529,6 +2685,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "STRASBURG 31J": Object {
+          "classLabel": "card",
           "location": "STRASBURG 31J",
           "stats": Object {
             "2004": 0.016,
@@ -2545,6 +2702,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "STRATTON R-4": Object {
+          "classLabel": "card",
           "location": "STRATTON R-4",
           "stats": Object {
             "2004": 0.353,
@@ -2561,6 +2719,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "SUMMIT RE-1": Object {
+          "classLabel": "card",
           "location": "SUMMIT RE-1",
           "stats": Object {
             "2004": 0.619,
@@ -2577,6 +2736,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "SWINK 33": Object {
+          "classLabel": "card",
           "location": "SWINK 33",
           "stats": Object {
             "2004": 0,
@@ -2593,6 +2753,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "TELLURIDE R-1": Object {
+          "classLabel": "card",
           "location": "TELLURIDE R-1",
           "stats": Object {
             "2004": 0,
@@ -2609,6 +2770,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "THOMPSON R-2J": Object {
+          "classLabel": "card",
           "location": "THOMPSON R-2J",
           "stats": Object {
             "2004": 0.197,
@@ -2625,6 +2787,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "TRINIDAD 1": Object {
+          "classLabel": "card",
           "location": "TRINIDAD 1",
           "stats": Object {
             "2004": 1,
@@ -2641,6 +2804,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "VALLEY RE-1": Object {
+          "classLabel": "card",
           "location": "VALLEY RE-1",
           "stats": Object {
             "2004": 0,
@@ -2657,6 +2821,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "VILAS RE-5": Object {
+          "classLabel": "card",
           "location": "VILAS RE-5",
           "stats": Object {
             "2004": 1,
@@ -2673,6 +2838,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "WALSH RE-1": Object {
+          "classLabel": "card",
           "location": "WALSH RE-1",
           "stats": Object {
             "2004": 1,
@@ -2689,6 +2855,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "WELD COUNTY RE-1": Object {
+          "classLabel": "card",
           "location": "WELD COUNTY RE-1",
           "stats": Object {
             "2004": 1,
@@ -2705,6 +2872,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "WELD COUNTY S/D RE-8": Object {
+          "classLabel": "card",
           "location": "WELD COUNTY S/D RE-8",
           "stats": Object {
             "2004": 0,
@@ -2721,6 +2889,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "WELDON VALLEY RE-20(J)": Object {
+          "classLabel": "card",
           "location": "WELDON VALLEY RE-20(J)",
           "stats": Object {
             "2004": 1,
@@ -2737,6 +2906,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "WEST END RE-2": Object {
+          "classLabel": "card",
           "location": "WEST END RE-2",
           "stats": Object {
             "2004": 0.118,
@@ -2753,6 +2923,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "WEST GRAND 1-JT": Object {
+          "classLabel": "card",
           "location": "WEST GRAND 1-JT",
           "stats": Object {
             "2004": 1,
@@ -2769,6 +2940,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "WEST YUMA COUNTY RJ-1": Object {
+          "classLabel": "card",
           "location": "WEST YUMA COUNTY RJ-1",
           "stats": Object {
             "2004": 0,
@@ -2785,6 +2957,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "WESTMINSTER 50": Object {
+          "classLabel": "card",
           "location": "WESTMINSTER 50",
           "stats": Object {
             "2004": 0,
@@ -2801,6 +2974,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "WIDEFIELD 3": Object {
+          "classLabel": "card",
           "location": "WIDEFIELD 3",
           "stats": Object {
             "2004": 0.487,
@@ -2817,6 +2991,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "WIGGINS RE-50(J)": Object {
+          "classLabel": "card",
           "location": "WIGGINS RE-50(J)",
           "stats": Object {
             "2004": 1,
@@ -2833,6 +3008,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "WILEY RE-13 JT": Object {
+          "classLabel": "card",
           "location": "WILEY RE-13 JT",
           "stats": Object {
             "2004": 0.375,
@@ -2849,6 +3025,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "WINDSOR RE-4": Object {
+          "classLabel": "card",
           "location": "WINDSOR RE-4",
           "stats": Object {
             "2004": 0,
@@ -2865,6 +3042,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "WOODLAND PARK RE-2": Object {
+          "classLabel": "card",
           "location": "WOODLAND PARK RE-2",
           "stats": Object {
             "2004": 0,
@@ -2881,6 +3059,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "WOODLIN R-104": Object {
+          "classLabel": "card",
           "location": "WOODLIN R-104",
           "stats": Object {
             "2004": 1,
@@ -2897,6 +3076,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "WRAY SCHOOL DISTRICT RD-2": Object {
+          "classLabel": "card",
           "location": "WRAY SCHOOL DISTRICT RD-2",
           "stats": Object {
             "2004": 1,
@@ -2913,6 +3093,7 @@ exports[`App should render content to the DOM 1`] = `
           },
         },
         "YUMA SCHOOL DISTRICT 1": Object {
+          "classLabel": "card",
           "location": "YUMA SCHOOL DISTRICT 1",
           "stats": Object {
             "2004": 0,
@@ -2963,6 +3144,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
   </header>
   <Comparison
     compareDistrictAverages={[Function]}
+    processSelection={[Function]}
     selection={
       Array [
         Object {
@@ -2982,6 +3164,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
     data={
       Object {
         "ACADEMY 20": Object {
+          "classLabel": "card",
           "location": "ACADEMY 20",
           "stats": Object {
             "2004": 0.302,
@@ -2998,6 +3181,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "ADAMS COUNTY 14": Object {
+          "classLabel": "card",
           "location": "ADAMS COUNTY 14",
           "stats": Object {
             "2004": 0.228,
@@ -3014,6 +3198,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "ADAMS-ARAPAHOE 28J": Object {
+          "classLabel": "card",
           "location": "ADAMS-ARAPAHOE 28J",
           "stats": Object {
             "2004": 0.174,
@@ -3030,6 +3215,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "AGATE 300": Object {
+          "classLabel": "card",
           "location": "AGATE 300",
           "stats": Object {
             "2004": 1,
@@ -3046,6 +3232,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "AGUILAR REORGANIZED 6": Object {
+          "classLabel": "card",
           "location": "AGUILAR REORGANIZED 6",
           "stats": Object {
             "2004": 1,
@@ -3062,6 +3249,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "AKRON R-1": Object {
+          "classLabel": "card",
           "location": "AKRON R-1",
           "stats": Object {
             "2004": 0,
@@ -3078,6 +3266,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "ALAMOSA RE-11J": Object {
+          "classLabel": "card",
           "location": "ALAMOSA RE-11J",
           "stats": Object {
             "2004": 0,
@@ -3094,6 +3283,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "ARCHULETA COUNTY 50 JT": Object {
+          "classLabel": "card",
           "location": "ARCHULETA COUNTY 50 JT",
           "stats": Object {
             "2004": 0,
@@ -3110,6 +3300,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "ARICKAREE R-2": Object {
+          "classLabel": "card",
           "location": "ARICKAREE R-2",
           "stats": Object {
             "2004": 1,
@@ -3126,6 +3317,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "ARRIBA-FLAGLER C-20": Object {
+          "classLabel": "card",
           "location": "ARRIBA-FLAGLER C-20",
           "stats": Object {
             "2004": 0.455,
@@ -3142,6 +3334,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "ASPEN 1": Object {
+          "classLabel": "card",
           "location": "ASPEN 1",
           "stats": Object {
             "2004": 1,
@@ -3158,6 +3351,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "AULT-HIGHLAND RE-9": Object {
+          "classLabel": "card",
           "location": "AULT-HIGHLAND RE-9",
           "stats": Object {
             "2004": 1,
@@ -3174,6 +3368,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "BAYFIELD 10 JT-R": Object {
+          "classLabel": "card",
           "location": "BAYFIELD 10 JT-R",
           "stats": Object {
             "2004": 0.318,
@@ -3190,6 +3385,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "BENNETT 29J": Object {
+          "classLabel": "card",
           "location": "BENNETT 29J",
           "stats": Object {
             "2004": 0,
@@ -3206,6 +3402,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "BETHUNE R-5": Object {
+          "classLabel": "card",
           "location": "BETHUNE R-5",
           "stats": Object {
             "2004": 1,
@@ -3222,6 +3419,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "BIG SANDY 100J": Object {
+          "classLabel": "card",
           "location": "BIG SANDY 100J",
           "stats": Object {
             "2004": 0,
@@ -3238,6 +3436,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "BOULDER VALLEY RE 2": Object {
+          "classLabel": "card",
           "location": "BOULDER VALLEY RE 2",
           "stats": Object {
             "2004": 0.016,
@@ -3254,6 +3453,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "BRANSON REORGANIZED 82": Object {
+          "classLabel": "card",
           "location": "BRANSON REORGANIZED 82",
           "stats": Object {
             "2004": 1,
@@ -3270,6 +3470,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "BRIGGSDALE RE-10": Object {
+          "classLabel": "card",
           "location": "BRIGGSDALE RE-10",
           "stats": Object {
             "2004": 0,
@@ -3286,6 +3487,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "BRIGHTON 27J": Object {
+          "classLabel": "card",
           "location": "BRIGHTON 27J",
           "stats": Object {
             "2004": 0.036,
@@ -3302,6 +3504,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "BRUSH RE-2(J)": Object {
+          "classLabel": "card",
           "location": "BRUSH RE-2(J)",
           "stats": Object {
             "2004": 0,
@@ -3318,6 +3521,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "BUENA VISTA R-31": Object {
+          "classLabel": "card",
           "location": "BUENA VISTA R-31",
           "stats": Object {
             "2004": 0,
@@ -3334,6 +3538,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "BUFFALO RE-4": Object {
+          "classLabel": "card",
           "location": "BUFFALO RE-4",
           "stats": Object {
             "2004": 1,
@@ -3350,6 +3555,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "BURLINGTON RE-6J": Object {
+          "classLabel": "card",
           "location": "BURLINGTON RE-6J",
           "stats": Object {
             "2004": 0,
@@ -3366,6 +3572,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "BYERS 32J": Object {
+          "classLabel": "card",
           "location": "BYERS 32J",
           "stats": Object {
             "2004": 1,
@@ -3382,6 +3589,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "CALHAN RJ-1": Object {
+          "classLabel": "card",
           "location": "CALHAN RJ-1",
           "stats": Object {
             "2004": 0.353,
@@ -3398,6 +3606,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "CAMPO RE-6": Object {
+          "classLabel": "card",
           "location": "CAMPO RE-6",
           "stats": Object {
             "2004": 0,
@@ -3414,6 +3623,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "CANON CITY RE-1": Object {
+          "classLabel": "card",
           "location": "CANON CITY RE-1",
           "stats": Object {
             "2004": 0.302,
@@ -3430,6 +3640,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "CENTENNIAL R-1": Object {
+          "classLabel": "card",
           "location": "CENTENNIAL R-1",
           "stats": Object {
             "2004": 0,
@@ -3446,6 +3657,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "CENTER 26 JT": Object {
+          "classLabel": "card",
           "location": "CENTER 26 JT",
           "stats": Object {
             "2004": 1,
@@ -3462,6 +3674,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "CHERAW 31": Object {
+          "classLabel": "card",
           "location": "CHERAW 31",
           "stats": Object {
             "2004": 1,
@@ -3478,6 +3691,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "CHERRY CREEK 5": Object {
+          "classLabel": "card",
           "location": "CHERRY CREEK 5",
           "stats": Object {
             "2004": 0.392,
@@ -3494,6 +3708,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "CHEYENNE COUNTY RE-5": Object {
+          "classLabel": "card",
           "location": "CHEYENNE COUNTY RE-5",
           "stats": Object {
             "2004": 1,
@@ -3510,6 +3725,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "CHEYENNE MOUNTAIN 12": Object {
+          "classLabel": "card",
           "location": "CHEYENNE MOUNTAIN 12",
           "stats": Object {
             "2004": 0,
@@ -3526,6 +3742,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "CLEAR CREEK RE-1": Object {
+          "classLabel": "card",
           "location": "CLEAR CREEK RE-1",
           "stats": Object {
             "2004": 0.147,
@@ -3542,6 +3759,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "COLORADO": Object {
+          "classLabel": "card",
           "location": "COLORADO",
           "stats": Object {
             "2004": 0.24,
@@ -3558,6 +3776,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "COLORADO SPRINGS 11": Object {
+          "classLabel": "card",
           "location": "COLORADO SPRINGS 11",
           "stats": Object {
             "2004": 0.069,
@@ -3574,6 +3793,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "COTOPAXI RE-3": Object {
+          "classLabel": "card",
           "location": "COTOPAXI RE-3",
           "stats": Object {
             "2004": 0,
@@ -3590,6 +3810,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "CREEDE CONSOLIDATED 1": Object {
+          "classLabel": "card",
           "location": "CREEDE CONSOLIDATED 1",
           "stats": Object {
             "2004": 0,
@@ -3606,6 +3827,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "CRIPPLE CREEK-VICTOR RE-1": Object {
+          "classLabel": "card",
           "location": "CRIPPLE CREEK-VICTOR RE-1",
           "stats": Object {
             "2004": 1,
@@ -3622,6 +3844,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "CROWLEY COUNTY RE-1-J": Object {
+          "classLabel": "card",
           "location": "CROWLEY COUNTY RE-1-J",
           "stats": Object {
             "2004": 0,
@@ -3638,6 +3861,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "CUSTER COUNTY SCHOOL DISTRICT C-1": Object {
+          "classLabel": "card",
           "location": "CUSTER COUNTY SCHOOL DISTRICT C-1",
           "stats": Object {
             "2004": 0,
@@ -3654,6 +3878,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "DE BEQUE 49JT": Object {
+          "classLabel": "card",
           "location": "DE BEQUE 49JT",
           "stats": Object {
             "2004": 0,
@@ -3670,6 +3895,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "DEER TRAIL 26J": Object {
+          "classLabel": "card",
           "location": "DEER TRAIL 26J",
           "stats": Object {
             "2004": 0,
@@ -3686,6 +3912,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "DEL NORTE C-7": Object {
+          "classLabel": "card",
           "location": "DEL NORTE C-7",
           "stats": Object {
             "2004": 0,
@@ -3702,6 +3929,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "DELTA COUNTY 50(J)": Object {
+          "classLabel": "card",
           "location": "DELTA COUNTY 50(J)",
           "stats": Object {
             "2004": 1,
@@ -3718,6 +3946,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "DENVER COUNTY 1": Object {
+          "classLabel": "card",
           "location": "DENVER COUNTY 1",
           "stats": Object {
             "2004": 0.518,
@@ -3734,6 +3963,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "DOLORES COUNTY RE NO.2": Object {
+          "classLabel": "card",
           "location": "DOLORES COUNTY RE NO.2",
           "stats": Object {
             "2004": 0.929,
@@ -3750,6 +3980,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "DOLORES RE-4A": Object {
+          "classLabel": "card",
           "location": "DOLORES RE-4A",
           "stats": Object {
             "2004": 0,
@@ -3766,6 +3997,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "DOUGLAS COUNTY RE 1": Object {
+          "classLabel": "card",
           "location": "DOUGLAS COUNTY RE 1",
           "stats": Object {
             "2004": 0,
@@ -3782,6 +4014,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "DURANGO 9-R": Object {
+          "classLabel": "card",
           "location": "DURANGO 9-R",
           "stats": Object {
             "2004": 0,
@@ -3798,6 +4031,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "EADS RE-1": Object {
+          "classLabel": "card",
           "location": "EADS RE-1",
           "stats": Object {
             "2004": 1,
@@ -3814,6 +4048,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "EAGLE COUNTY RE 50": Object {
+          "classLabel": "card",
           "location": "EAGLE COUNTY RE 50",
           "stats": Object {
             "2004": 0.555,
@@ -3830,6 +4065,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "EAST GRAND 2": Object {
+          "classLabel": "card",
           "location": "EAST GRAND 2",
           "stats": Object {
             "2004": 1,
@@ -3846,6 +4082,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "EAST OTERO R-1": Object {
+          "classLabel": "card",
           "location": "EAST OTERO R-1",
           "stats": Object {
             "2004": 0,
@@ -3862,6 +4099,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "EAST YUMA COUNTY RJ-2": Object {
+          "classLabel": "card",
           "location": "EAST YUMA COUNTY RJ-2",
           "stats": Object {
             "2004": 0,
@@ -3878,6 +4116,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "EATON RE-2": Object {
+          "classLabel": "card",
           "location": "EATON RE-2",
           "stats": Object {
             "2004": 0,
@@ -3894,6 +4133,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "EDISON 54 JT": Object {
+          "classLabel": "card",
           "location": "EDISON 54 JT",
           "stats": Object {
             "2004": 0.4,
@@ -3910,6 +4150,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "ELBERT 200": Object {
+          "classLabel": "card",
           "location": "ELBERT 200",
           "stats": Object {
             "2004": 0,
@@ -3926,6 +4167,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "ELIZABETH C-1": Object {
+          "classLabel": "card",
           "location": "ELIZABETH C-1",
           "stats": Object {
             "2004": 0,
@@ -3942,6 +4184,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "ELLICOTT 22": Object {
+          "classLabel": "card",
           "location": "ELLICOTT 22",
           "stats": Object {
             "2004": 1,
@@ -3958,6 +4201,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "ENGLEWOOD 1": Object {
+          "classLabel": "card",
           "location": "ENGLEWOOD 1",
           "stats": Object {
             "2004": 0.598,
@@ -3974,6 +4218,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "FALCON 49": Object {
+          "classLabel": "card",
           "location": "FALCON 49",
           "stats": Object {
             "2004": 0,
@@ -3990,6 +4235,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "FLORENCE RE-2": Object {
+          "classLabel": "card",
           "location": "FLORENCE RE-2",
           "stats": Object {
             "2004": 0,
@@ -4006,6 +4252,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "FORT MORGAN RE-3": Object {
+          "classLabel": "card",
           "location": "FORT MORGAN RE-3",
           "stats": Object {
             "2004": 0,
@@ -4022,6 +4269,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "FOUNTAIN 8": Object {
+          "classLabel": "card",
           "location": "FOUNTAIN 8",
           "stats": Object {
             "2004": 0,
@@ -4038,6 +4286,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "FOWLER R-4J": Object {
+          "classLabel": "card",
           "location": "FOWLER R-4J",
           "stats": Object {
             "2004": 1,
@@ -4054,6 +4303,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "FRENCHMAN RE-3": Object {
+          "classLabel": "card",
           "location": "FRENCHMAN RE-3",
           "stats": Object {
             "2004": 1,
@@ -4070,6 +4320,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "GARFIELD 16": Object {
+          "classLabel": "card",
           "location": "GARFIELD 16",
           "stats": Object {
             "2004": 0,
@@ -4086,6 +4337,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "GARFIELD RE-2": Object {
+          "classLabel": "card",
           "location": "GARFIELD RE-2",
           "stats": Object {
             "2004": 0,
@@ -4102,6 +4354,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "GENOA-HUGO C113": Object {
+          "classLabel": "card",
           "location": "GENOA-HUGO C113",
           "stats": Object {
             "2004": 0,
@@ -4118,6 +4371,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "GILPIN COUNTY RE-1": Object {
+          "classLabel": "card",
           "location": "GILPIN COUNTY RE-1",
           "stats": Object {
             "2004": 0.2,
@@ -4134,6 +4388,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "GRANADA RE-1": Object {
+          "classLabel": "card",
           "location": "GRANADA RE-1",
           "stats": Object {
             "2004": 1,
@@ -4150,6 +4405,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "GREELEY 6": Object {
+          "classLabel": "card",
           "location": "GREELEY 6",
           "stats": Object {
             "2004": 0,
@@ -4166,6 +4422,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "GUNNISON WATERSHED RE1J": Object {
+          "classLabel": "card",
           "location": "GUNNISON WATERSHED RE1J",
           "stats": Object {
             "2004": 0.144,
@@ -4182,6 +4439,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "HANOVER 28": Object {
+          "classLabel": "card",
           "location": "HANOVER 28",
           "stats": Object {
             "2004": 0,
@@ -4198,6 +4456,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "HARRISON 2": Object {
+          "classLabel": "card",
           "location": "HARRISON 2",
           "stats": Object {
             "2004": 0.065,
@@ -4214,6 +4473,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "HAXTUN RE-2J": Object {
+          "classLabel": "card",
           "location": "HAXTUN RE-2J",
           "stats": Object {
             "2004": 0,
@@ -4230,6 +4490,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "HAYDEN RE-1": Object {
+          "classLabel": "card",
           "location": "HAYDEN RE-1",
           "stats": Object {
             "2004": 0,
@@ -4246,6 +4507,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "HI-PLAINS R-23": Object {
+          "classLabel": "card",
           "location": "HI-PLAINS R-23",
           "stats": Object {
             "2004": 0,
@@ -4262,6 +4524,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "HINSDALE COUNTY RE 1": Object {
+          "classLabel": "card",
           "location": "HINSDALE COUNTY RE 1",
           "stats": Object {
             "2004": 0,
@@ -4278,6 +4541,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "HOEHNE REORGANIZED 3": Object {
+          "classLabel": "card",
           "location": "HOEHNE REORGANIZED 3",
           "stats": Object {
             "2004": 0,
@@ -4294,6 +4558,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "HOLLY RE-3": Object {
+          "classLabel": "card",
           "location": "HOLLY RE-3",
           "stats": Object {
             "2004": 1,
@@ -4310,6 +4575,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "HOLYOKE RE-1J": Object {
+          "classLabel": "card",
           "location": "HOLYOKE RE-1J",
           "stats": Object {
             "2004": 0,
@@ -4326,6 +4592,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "HUERFANO RE-1": Object {
+          "classLabel": "card",
           "location": "HUERFANO RE-1",
           "stats": Object {
             "2004": 0,
@@ -4342,6 +4609,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "IDALIA SCHOOL DISTRICT RJ-3": Object {
+          "classLabel": "card",
           "location": "IDALIA SCHOOL DISTRICT RJ-3",
           "stats": Object {
             "2004": 0,
@@ -4358,6 +4626,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "IGNACIO 11 JT": Object {
+          "classLabel": "card",
           "location": "IGNACIO 11 JT",
           "stats": Object {
             "2004": 1,
@@ -4374,6 +4643,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "JEFFERSON COUNTY R-1": Object {
+          "classLabel": "card",
           "location": "JEFFERSON COUNTY R-1",
           "stats": Object {
             "2004": 0.29,
@@ -4390,6 +4660,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "JOHNSTOWN-MILLIKEN RE-5J": Object {
+          "classLabel": "card",
           "location": "JOHNSTOWN-MILLIKEN RE-5J",
           "stats": Object {
             "2004": 0,
@@ -4406,6 +4677,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "JULESBURG RE-1": Object {
+          "classLabel": "card",
           "location": "JULESBURG RE-1",
           "stats": Object {
             "2004": 0,
@@ -4422,6 +4694,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "KARVAL RE-23": Object {
+          "classLabel": "card",
           "location": "KARVAL RE-23",
           "stats": Object {
             "2004": 1,
@@ -4438,6 +4711,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "KEENESBURG RE-3(J)": Object {
+          "classLabel": "card",
           "location": "KEENESBURG RE-3(J)",
           "stats": Object {
             "2004": 0.296,
@@ -4454,6 +4728,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "KIM REORGANIZED 88": Object {
+          "classLabel": "card",
           "location": "KIM REORGANIZED 88",
           "stats": Object {
             "2004": 1,
@@ -4470,6 +4745,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "KIOWA C-2": Object {
+          "classLabel": "card",
           "location": "KIOWA C-2",
           "stats": Object {
             "2004": 0,
@@ -4486,6 +4762,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "KIT CARSON R-1": Object {
+          "classLabel": "card",
           "location": "KIT CARSON R-1",
           "stats": Object {
             "2004": 0,
@@ -4502,6 +4779,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "LA VETA RE-2": Object {
+          "classLabel": "card",
           "location": "LA VETA RE-2",
           "stats": Object {
             "2004": 0,
@@ -4518,6 +4796,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "LAKE COUNTY R-1": Object {
+          "classLabel": "card",
           "location": "LAKE COUNTY R-1",
           "stats": Object {
             "2004": 0.3,
@@ -4534,6 +4813,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "LAMAR RE-2": Object {
+          "classLabel": "card",
           "location": "LAMAR RE-2",
           "stats": Object {
             "2004": 0.87,
@@ -4550,6 +4830,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "LAS ANIMAS RE-1": Object {
+          "classLabel": "card",
           "location": "LAS ANIMAS RE-1",
           "stats": Object {
             "2004": 1,
@@ -4566,6 +4847,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "LEWIS-PALMER 38": Object {
+          "classLabel": "card",
           "location": "LEWIS-PALMER 38",
           "stats": Object {
             "2004": 0,
@@ -4582,6 +4864,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "LIBERTY SCHOOL DISTRICT J-4": Object {
+          "classLabel": "card",
           "location": "LIBERTY SCHOOL DISTRICT J-4",
           "stats": Object {
             "2004": 1,
@@ -4598,6 +4881,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "LIMON RE-4J": Object {
+          "classLabel": "card",
           "location": "LIMON RE-4J",
           "stats": Object {
             "2004": 0,
@@ -4614,6 +4898,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "LITTLETON 6": Object {
+          "classLabel": "card",
           "location": "LITTLETON 6",
           "stats": Object {
             "2004": 0,
@@ -4630,6 +4915,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "LONE STAR 101": Object {
+          "classLabel": "card",
           "location": "LONE STAR 101",
           "stats": Object {
             "2004": 1,
@@ -4646,6 +4932,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "MANCOS RE-6": Object {
+          "classLabel": "card",
           "location": "MANCOS RE-6",
           "stats": Object {
             "2004": 0,
@@ -4662,6 +4949,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "MANITOU SPRINGS 14": Object {
+          "classLabel": "card",
           "location": "MANITOU SPRINGS 14",
           "stats": Object {
             "2004": 0.014,
@@ -4678,6 +4966,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "MANZANOLA 3J": Object {
+          "classLabel": "card",
           "location": "MANZANOLA 3J",
           "stats": Object {
             "2004": 0.952,
@@ -4694,6 +4983,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "MAPLETON 1": Object {
+          "classLabel": "card",
           "location": "MAPLETON 1",
           "stats": Object {
             "2004": 0.067,
@@ -4710,6 +5000,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "MC CLAVE RE-2": Object {
+          "classLabel": "card",
           "location": "MC CLAVE RE-2",
           "stats": Object {
             "2004": 0,
@@ -4726,6 +5017,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "MEEKER RE1": Object {
+          "classLabel": "card",
           "location": "MEEKER RE1",
           "stats": Object {
             "2004": 0,
@@ -4742,6 +5034,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "MESA COUNTY VALLEY 51": Object {
+          "classLabel": "card",
           "location": "MESA COUNTY VALLEY 51",
           "stats": Object {
             "2004": 0.307,
@@ -4758,6 +5051,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "MIAMI/YODER 60 JT": Object {
+          "classLabel": "card",
           "location": "MIAMI/YODER 60 JT",
           "stats": Object {
             "2004": 1,
@@ -4774,6 +5068,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "MOFFAT 2": Object {
+          "classLabel": "card",
           "location": "MOFFAT 2",
           "stats": Object {
             "2004": 0.014,
@@ -4790,6 +5085,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "MOFFAT COUNTY RE:NO 1": Object {
+          "classLabel": "card",
           "location": "MOFFAT COUNTY RE:NO 1",
           "stats": Object {
             "2004": 0,
@@ -4806,6 +5102,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "MONTE VISTA C-8": Object {
+          "classLabel": "card",
           "location": "MONTE VISTA C-8",
           "stats": Object {
             "2004": 1,
@@ -4822,6 +5119,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "MONTEZUMA-CORTEZ RE-1": Object {
+          "classLabel": "card",
           "location": "MONTEZUMA-CORTEZ RE-1",
           "stats": Object {
             "2004": 0,
@@ -4838,6 +5136,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "MONTROSE COUNTY RE-1J": Object {
+          "classLabel": "card",
           "location": "MONTROSE COUNTY RE-1J",
           "stats": Object {
             "2004": 0,
@@ -4854,6 +5153,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "MOUNTAIN VALLEY RE 1": Object {
+          "classLabel": "card",
           "location": "MOUNTAIN VALLEY RE 1",
           "stats": Object {
             "2004": 1,
@@ -4870,6 +5170,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "NORTH CONEJOS RE-1J": Object {
+          "classLabel": "card",
           "location": "NORTH CONEJOS RE-1J",
           "stats": Object {
             "2004": 1,
@@ -4886,6 +5187,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "NORTH PARK R-1": Object {
+          "classLabel": "card",
           "location": "NORTH PARK R-1",
           "stats": Object {
             "2004": 1,
@@ -4902,6 +5204,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "NORTHGLENN-THORNTON 12": Object {
+          "classLabel": "card",
           "location": "NORTHGLENN-THORNTON 12",
           "stats": Object {
             "2004": 0.329,
@@ -4918,6 +5221,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "NORWOOD R-2J": Object {
+          "classLabel": "card",
           "location": "NORWOOD R-2J",
           "stats": Object {
             "2004": 0,
@@ -4934,6 +5238,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "OTIS R-3": Object {
+          "classLabel": "card",
           "location": "OTIS R-3",
           "stats": Object {
             "2004": 1,
@@ -4950,6 +5255,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "OURAY R-1": Object {
+          "classLabel": "card",
           "location": "OURAY R-1",
           "stats": Object {
             "2004": 0,
@@ -4966,6 +5272,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "PARK (ESTES PARK) R-3": Object {
+          "classLabel": "card",
           "location": "PARK (ESTES PARK) R-3",
           "stats": Object {
             "2004": 0.462,
@@ -4982,6 +5289,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "PARK COUNTY RE-2": Object {
+          "classLabel": "card",
           "location": "PARK COUNTY RE-2",
           "stats": Object {
             "2004": 0.339,
@@ -4998,6 +5306,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "PAWNEE RE-12": Object {
+          "classLabel": "card",
           "location": "PAWNEE RE-12",
           "stats": Object {
             "2004": 0,
@@ -5014,6 +5323,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "PEYTON 23 JT": Object {
+          "classLabel": "card",
           "location": "PEYTON 23 JT",
           "stats": Object {
             "2004": 0,
@@ -5030,6 +5340,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "PLAINVIEW RE-2": Object {
+          "classLabel": "card",
           "location": "PLAINVIEW RE-2",
           "stats": Object {
             "2004": 0,
@@ -5046,6 +5357,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "PLATEAU RE-5": Object {
+          "classLabel": "card",
           "location": "PLATEAU RE-5",
           "stats": Object {
             "2004": 1,
@@ -5062,6 +5374,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "PLATEAU VALLEY 50": Object {
+          "classLabel": "card",
           "location": "PLATEAU VALLEY 50",
           "stats": Object {
             "2004": 0,
@@ -5078,6 +5391,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "PLATTE CANYON 1": Object {
+          "classLabel": "card",
           "location": "PLATTE CANYON 1",
           "stats": Object {
             "2004": 0.229,
@@ -5094,6 +5408,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "PLATTE VALLEY RE-3": Object {
+          "classLabel": "card",
           "location": "PLATTE VALLEY RE-3",
           "stats": Object {
             "2004": 0,
@@ -5110,6 +5425,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "PLATTE VALLEY RE-7": Object {
+          "classLabel": "card",
           "location": "PLATTE VALLEY RE-7",
           "stats": Object {
             "2004": 0,
@@ -5126,6 +5442,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "POUDRE R-1": Object {
+          "classLabel": "card",
           "location": "POUDRE R-1",
           "stats": Object {
             "2004": 0,
@@ -5142,6 +5459,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "PRAIRIE RE-11": Object {
+          "classLabel": "card",
           "location": "PRAIRIE RE-11",
           "stats": Object {
             "2004": 1,
@@ -5158,6 +5476,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "PRIMERO REORGANIZED 2": Object {
+          "classLabel": "card",
           "location": "PRIMERO REORGANIZED 2",
           "stats": Object {
             "2004": 0,
@@ -5174,6 +5493,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "PRITCHETT RE-3": Object {
+          "classLabel": "card",
           "location": "PRITCHETT RE-3",
           "stats": Object {
             "2004": 1,
@@ -5190,6 +5510,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "PUEBLO CITY 60": Object {
+          "classLabel": "card",
           "location": "PUEBLO CITY 60",
           "stats": Object {
             "2004": 0.275,
@@ -5206,6 +5527,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "PUEBLO COUNTY RURAL 70": Object {
+          "classLabel": "card",
           "location": "PUEBLO COUNTY RURAL 70",
           "stats": Object {
             "2004": 0,
@@ -5222,6 +5544,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "RANGELY RE-4": Object {
+          "classLabel": "card",
           "location": "RANGELY RE-4",
           "stats": Object {
             "2004": 0,
@@ -5238,6 +5561,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "RIDGWAY R-2": Object {
+          "classLabel": "card",
           "location": "RIDGWAY R-2",
           "stats": Object {
             "2004": 0,
@@ -5254,6 +5578,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "ROARING FORK RE-1": Object {
+          "classLabel": "card",
           "location": "ROARING FORK RE-1",
           "stats": Object {
             "2004": 0.672,
@@ -5270,6 +5595,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "ROCKY FORD R-2": Object {
+          "classLabel": "card",
           "location": "ROCKY FORD R-2",
           "stats": Object {
             "2004": 0.172,
@@ -5286,6 +5612,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "SALIDA R-32": Object {
+          "classLabel": "card",
           "location": "SALIDA R-32",
           "stats": Object {
             "2004": 0.222,
@@ -5302,6 +5629,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "SANFORD 6J": Object {
+          "classLabel": "card",
           "location": "SANFORD 6J",
           "stats": Object {
             "2004": 1,
@@ -5318,6 +5646,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "SANGRE DE CRISTO RE-22J": Object {
+          "classLabel": "card",
           "location": "SANGRE DE CRISTO RE-22J",
           "stats": Object {
             "2004": 1,
@@ -5334,6 +5663,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "SARGENT RE-33J": Object {
+          "classLabel": "card",
           "location": "SARGENT RE-33J",
           "stats": Object {
             "2004": 1,
@@ -5350,6 +5680,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "SHERIDAN 2": Object {
+          "classLabel": "card",
           "location": "SHERIDAN 2",
           "stats": Object {
             "2004": 1,
@@ -5366,6 +5697,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "SIERRA GRANDE R-30": Object {
+          "classLabel": "card",
           "location": "SIERRA GRANDE R-30",
           "stats": Object {
             "2004": 1,
@@ -5382,6 +5714,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "SILVERTON 1": Object {
+          "classLabel": "card",
           "location": "SILVERTON 1",
           "stats": Object {
             "2004": 0,
@@ -5398,6 +5731,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "SOUTH CONEJOS RE-10": Object {
+          "classLabel": "card",
           "location": "SOUTH CONEJOS RE-10",
           "stats": Object {
             "2004": 1,
@@ -5414,6 +5748,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "SOUTH ROUTT RE 3": Object {
+          "classLabel": "card",
           "location": "SOUTH ROUTT RE 3",
           "stats": Object {
             "2004": 1,
@@ -5430,6 +5765,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "SPRINGFIELD RE-4": Object {
+          "classLabel": "card",
           "location": "SPRINGFIELD RE-4",
           "stats": Object {
             "2004": 1,
@@ -5446,6 +5782,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "ST VRAIN VALLEY RE 1J": Object {
+          "classLabel": "card",
           "location": "ST VRAIN VALLEY RE 1J",
           "stats": Object {
             "2004": 0.182,
@@ -5462,6 +5799,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "STEAMBOAT SPRINGS RE-2": Object {
+          "classLabel": "card",
           "location": "STEAMBOAT SPRINGS RE-2",
           "stats": Object {
             "2004": 0,
@@ -5478,6 +5816,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "STRASBURG 31J": Object {
+          "classLabel": "card",
           "location": "STRASBURG 31J",
           "stats": Object {
             "2004": 0.016,
@@ -5494,6 +5833,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "STRATTON R-4": Object {
+          "classLabel": "card",
           "location": "STRATTON R-4",
           "stats": Object {
             "2004": 0.353,
@@ -5510,6 +5850,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "SUMMIT RE-1": Object {
+          "classLabel": "card",
           "location": "SUMMIT RE-1",
           "stats": Object {
             "2004": 0.619,
@@ -5526,6 +5867,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "SWINK 33": Object {
+          "classLabel": "card",
           "location": "SWINK 33",
           "stats": Object {
             "2004": 0,
@@ -5542,6 +5884,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "TELLURIDE R-1": Object {
+          "classLabel": "card",
           "location": "TELLURIDE R-1",
           "stats": Object {
             "2004": 0,
@@ -5558,6 +5901,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "THOMPSON R-2J": Object {
+          "classLabel": "card",
           "location": "THOMPSON R-2J",
           "stats": Object {
             "2004": 0.197,
@@ -5574,6 +5918,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "TRINIDAD 1": Object {
+          "classLabel": "card",
           "location": "TRINIDAD 1",
           "stats": Object {
             "2004": 1,
@@ -5590,6 +5935,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "VALLEY RE-1": Object {
+          "classLabel": "card",
           "location": "VALLEY RE-1",
           "stats": Object {
             "2004": 0,
@@ -5606,6 +5952,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "VILAS RE-5": Object {
+          "classLabel": "card",
           "location": "VILAS RE-5",
           "stats": Object {
             "2004": 1,
@@ -5622,6 +5969,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "WALSH RE-1": Object {
+          "classLabel": "card",
           "location": "WALSH RE-1",
           "stats": Object {
             "2004": 1,
@@ -5638,6 +5986,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "WELD COUNTY RE-1": Object {
+          "classLabel": "card",
           "location": "WELD COUNTY RE-1",
           "stats": Object {
             "2004": 1,
@@ -5654,6 +6003,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "WELD COUNTY S/D RE-8": Object {
+          "classLabel": "card",
           "location": "WELD COUNTY S/D RE-8",
           "stats": Object {
             "2004": 0,
@@ -5670,6 +6020,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "WELDON VALLEY RE-20(J)": Object {
+          "classLabel": "card",
           "location": "WELDON VALLEY RE-20(J)",
           "stats": Object {
             "2004": 1,
@@ -5686,6 +6037,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "WEST END RE-2": Object {
+          "classLabel": "card",
           "location": "WEST END RE-2",
           "stats": Object {
             "2004": 0.118,
@@ -5702,6 +6054,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "WEST GRAND 1-JT": Object {
+          "classLabel": "card",
           "location": "WEST GRAND 1-JT",
           "stats": Object {
             "2004": 1,
@@ -5718,6 +6071,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "WEST YUMA COUNTY RJ-1": Object {
+          "classLabel": "card",
           "location": "WEST YUMA COUNTY RJ-1",
           "stats": Object {
             "2004": 0,
@@ -5734,6 +6088,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "WESTMINSTER 50": Object {
+          "classLabel": "card",
           "location": "WESTMINSTER 50",
           "stats": Object {
             "2004": 0,
@@ -5750,6 +6105,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "WIDEFIELD 3": Object {
+          "classLabel": "card",
           "location": "WIDEFIELD 3",
           "stats": Object {
             "2004": 0.487,
@@ -5766,6 +6122,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "WIGGINS RE-50(J)": Object {
+          "classLabel": "card",
           "location": "WIGGINS RE-50(J)",
           "stats": Object {
             "2004": 1,
@@ -5782,6 +6139,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "WILEY RE-13 JT": Object {
+          "classLabel": "card",
           "location": "WILEY RE-13 JT",
           "stats": Object {
             "2004": 0.375,
@@ -5798,6 +6156,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "WINDSOR RE-4": Object {
+          "classLabel": "card",
           "location": "WINDSOR RE-4",
           "stats": Object {
             "2004": 0,
@@ -5814,6 +6173,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "WOODLAND PARK RE-2": Object {
+          "classLabel": "card",
           "location": "WOODLAND PARK RE-2",
           "stats": Object {
             "2004": 0,
@@ -5830,6 +6190,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "WOODLIN R-104": Object {
+          "classLabel": "card",
           "location": "WOODLIN R-104",
           "stats": Object {
             "2004": 1,
@@ -5846,6 +6207,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "WRAY SCHOOL DISTRICT RD-2": Object {
+          "classLabel": "card",
           "location": "WRAY SCHOOL DISTRICT RD-2",
           "stats": Object {
             "2004": 1,
@@ -5862,6 +6224,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
           },
         },
         "YUMA SCHOOL DISTRICT 1": Object {
+          "classLabel": "card",
           "location": "YUMA SCHOOL DISTRICT 1",
           "stats": Object {
             "2004": 0,

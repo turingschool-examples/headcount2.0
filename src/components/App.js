@@ -43,20 +43,28 @@ class App extends Component {
   }
 
   processSelection = (district) => {
-    if (!this.state.selection.includes(district)) {
+    if (!this.state.selection.includes(district) && district !== 
+      'close') {
+      const newData = this.state.data
+      newData.stats[district.location].classLabel = 'card selected'
       this.setState({
         selection: [...this.state.selection, district],
-        modalClass: 'hidden-modal info-modal'
-      })
+        modalClass: 'hidden-modal info-modal',
+        data: newData
+      });
     } else if (this.state.selection.includes(district) && this.state.selection.length === 2) {
+      const newData = this.state.data
+      newData.stats[district.location].classLabel = 'card'
       this.setState({
         selection: this.state.selection.filter((dist) => {
           return dist.location !== district.location
-        })
+        }),
+        data: newData
       })
     } else {
       this.setState({
-        selection: []
+        selection: [],
+        data: new DistrictRepository(kinderData)
       })
     }
 
@@ -104,6 +112,8 @@ class App extends Component {
               compareDistrictAverages={this.state.data.compareDistrictAverages}
               selection={this.state.selection} 
               clearSelections={this.clearSelections}
+              processSelection={this.processSelection}
+
             />
           }
           <Info 
