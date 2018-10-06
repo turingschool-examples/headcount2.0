@@ -7,9 +7,7 @@ ShallowWrapper {
     schoolName="colorado"
     stats={
       Object {
-        "2004": 0.24,
-        "2005": 0.543,
-        "2006": 0.789,
+        "2004": 0.624,
       }
     }
   />,
@@ -32,25 +30,11 @@ ShallowWrapper {
         />,
         Array [
           <p
-            className="less-than-point-5"
+            className="greater-than-point-5"
           >
             2004
             : 
-            0.24
-          </p>,
-          <p
-            className="greater-than-point-5"
-          >
-            2005
-            : 
-            0.543
-          </p>,
-          <p
-            className="greater-than-point-5"
-          >
-            2006
-            : 
-            0.789
+            0.624
           </p>,
         ],
       ],
@@ -78,55 +62,15 @@ ShallowWrapper {
           "children": Array [
             "2004",
             ": ",
-            0.24,
+            0.624,
           ],
-          "className": "less-than-point-5",
+          "className": "greater-than-point-5",
         },
         "ref": null,
         "rendered": Array [
           "2004",
           ": ",
-          0.24,
-        ],
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "2005",
-            ": ",
-            0.543,
-          ],
-          "className": "greater-than-point-5",
-        },
-        "ref": null,
-        "rendered": Array [
-          "2005",
-          ": ",
-          0.543,
-        ],
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "2006",
-            ": ",
-            0.789,
-          ],
-          "className": "greater-than-point-5",
-        },
-        "ref": null,
-        "rendered": Array [
-          "2006",
-          ": ",
-          0.789,
+          0.624,
         ],
         "type": "p",
       },
@@ -145,25 +89,11 @@ ShallowWrapper {
           />,
           Array [
             <p
-              className="less-than-point-5"
+              className="greater-than-point-5"
             >
               2004
               : 
-              0.24
-            </p>,
-            <p
-              className="greater-than-point-5"
-            >
-              2005
-              : 
-              0.543
-            </p>,
-            <p
-              className="greater-than-point-5"
-            >
-              2006
-              : 
-              0.789
+              0.624
             </p>,
           ],
         ],
@@ -191,55 +121,15 @@ ShallowWrapper {
             "children": Array [
               "2004",
               ": ",
-              0.24,
+              0.624,
             ],
-            "className": "less-than-point-5",
+            "className": "greater-than-point-5",
           },
           "ref": null,
           "rendered": Array [
             "2004",
             ": ",
-            0.24,
-          ],
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "2005",
-              ": ",
-              0.543,
-            ],
-            "className": "greater-than-point-5",
-          },
-          "ref": null,
-          "rendered": Array [
-            "2005",
-            ": ",
-            0.543,
-          ],
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "2006",
-              ": ",
-              0.789,
-            ],
-            "className": "greater-than-point-5",
-          },
-          "ref": null,
-          "rendered": Array [
-            "2006",
-            ": ",
-            0.789,
+            0.624,
           ],
           "type": "p",
         },

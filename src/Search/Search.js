@@ -6,14 +6,22 @@ class Search extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-
+			searchedDistrict: ''
 		}
+	}
+
+	handleChange = () => {
+
 	}
 
 	render() {
 		return(
-			<div>
-			</div>
+			<form className='Search'>
+				<input 
+					className='search-input'
+					name='search'
+					/>
+			</form>
 		)
 	}
 }

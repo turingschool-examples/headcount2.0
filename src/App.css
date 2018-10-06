@@ -5,6 +5,6 @@
 
 .app-header {
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	margin: 0 auto;
+	grid-column: 3 / span 1;
+	color: red;
 }

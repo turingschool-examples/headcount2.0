@@ -11,7 +11,11 @@ class App extends Component {
 		this.state = {
 			data: {}
 		}
+	}
 
+	searchDistrict(string) {
+		const district = new DistrictRepository(kinderData)
+		district.findAllMatches(string)	
 	}
 
 	componentDidMount() {
@@ -25,7 +29,7 @@ class App extends Component {
     return (
       <div className='App'>
       	<h1 className='app-header'>Headcount 2.7</h1>
-
+      	<Search searchDistrict={this.searchDistrict}/>
       	<DistrictsContainer districts={this.state.data}/>
       </div>
     );
