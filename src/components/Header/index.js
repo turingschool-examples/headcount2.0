@@ -5,7 +5,10 @@ import './Header.css'
 const Header = () => {
   return(
     <header className="Header">
-      <h1>HeadCount 2.0</h1>
+      <h1>Head
+        <span className="count">Count</span>
+        <span className="version"> 2.0</span>
+      </h1>
       <Search />
     </header>
   )
