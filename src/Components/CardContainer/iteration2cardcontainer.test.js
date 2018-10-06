@@ -16,13 +16,17 @@ describe('CardContainer', () =>  {
       }
     }
 
-      const wrapper = shallow(<CardContainer {...mockData} />);
+  const wrapper = shallow(<CardContainer {...mockData} />);
 
   it('should match the snapshot', () => {
 
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('', () => {
+
+    expect(wrapper).toMatchSnapshot();
+  });
 
 
   // it('should render an h1, controls, and trivialist component', () => {

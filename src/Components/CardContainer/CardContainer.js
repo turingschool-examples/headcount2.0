@@ -3,7 +3,7 @@ import Card from '../Card/Card';
 import './cardcontainer.css';
 import PropTypes from 'prop-types';
 
-const CardContainer = ({stats} = {}) => {
+const CardContainer = ({stats}) => {
 
   const arrayOfDistricts = Object.keys(stats);
 

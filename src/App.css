@@ -2,5 +2,8 @@
 
 .welcome{
   font-size: 5rem;
-  padding-top: 5rem;
+  padding-top: 3rem;
+  display: block;
+  text-align: center;
+  margin-bottom: .4em;
 }
