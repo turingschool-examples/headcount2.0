@@ -53,21 +53,18 @@ export default class DistrictRepository {
   }
 
   compareDistrictAverages(string1, string2) {
-    let string1Data = this.findByName(string1)
-    let string1Values = Object.values(string1Data.stats)
-    if(string2 === undefined) {
-      let string1Average =  this.findAverage(string1Values)
-        return string1Average
-    }
+    let ans = {}
+    string1 = string1.toUpperCase()
+    string2 = string2.toUpperCase()
+    let school1 = this.findAverage(string1)
+    let school2 = this.findAverage(string2)
+    let average = Math.round(1000 * (school1 / school2)) / 1000
+     ans[string1]= school1
+     ans[string2] = school2
+     ans['compared'] = average
+     console.log("ANS",ans)
 
-    let string2Data = this.findByName(string2)
-    let string2Values = Object.values(string2Data.stats)
-
-
-
-   let string2Average =  this.findAverage(string2Values)
-
-   return 
+    return ans
 
   }
 

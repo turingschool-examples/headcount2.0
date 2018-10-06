@@ -6,10 +6,13 @@ describe('DistrictRepository iteration 0', () =>  {
   test('findAverage for ACADEMY 20', () => {
     expect(district.findAverage('ACADEMY 20')).toBe(.407)
   });
-  console.log('\n\n\n')
 
   test('compareDistrictAverages ACADEMY 20 against YUMA SCHOOL DISTRICT 1', () => {
+    
+    // console.log('look', district.compareDistrictAverages('ACADEMY 20', 'YUMA SCHOOL DISTRICT'))
+
     const result =  { "ACADEMY 20": 0.407, "YUMA SCHOOL DISTRICT 1": 0.909, "compared": 0.448 }
+    
     expect(district.compareDistrictAverages('ACADEMY 20', 'YUMA SCHOOL DISTRICT 1')).toEqual(result);
   });
 
