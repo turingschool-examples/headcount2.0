@@ -4,13 +4,13 @@
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  height: 320px;
+  height: 260px;
   justify-content: space-evenly;
   margin: 10px;
   opacity: 0.9;
   padding-bottom: 10px;
   text-align: center;
-  width: 300px;
+  width: 280px;
 }
 
 .comparison-card h3 {
