@@ -54,7 +54,12 @@ class App extends Component {
       this.handleComparedCardClick(clickedDisctrict);
       return;
     }
+    this.addClickedProp(clickedDisctrict, comparedCards)
+    this.setState({ comparedCards });
+    this.prepareComparedStats();
+  };
 
+  addClickedProp = (clickedDisctrict, comparedCards) => {
     if (!Object.keys(comparedCards[0]).length) {
       clickedDisctrict.clicked = 0;
       comparedCards[0] = clickedDisctrict;
@@ -62,8 +67,6 @@ class App extends Component {
       clickedDisctrict.clicked = 1;
       comparedCards[1] = clickedDisctrict;
     }
-    this.setState({ comparedCards });
-    this.prepareComparedStats();
   };
 
   handleComparedCardClick = clickedDisctrict => {

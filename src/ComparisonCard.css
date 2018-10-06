@@ -1,7 +1,10 @@
 .comparison-card h3 {
   font-size: 22px;
   font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
   position: relative;
+
 }
 
 .comparison-card {
