@@ -4,9 +4,7 @@ import PropTypes from 'prop-types'
 import Result from './Result'
 
 class ResultsContainer extends Component {
-  constructor(props) {
-    super(props)
-  }
+
 
 
   render() {

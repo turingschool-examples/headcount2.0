@@ -5,6 +5,7 @@ import kinderData from './data/kindergartners_in_full_day_program.js'
 import DistrictRepository from './helper.js'
 import Landing from './Landing'
 import ResultsContainer from './ResultsContainer'
+import SearchArea from './SearchArea'  
 
 const district = new DistrictRepository(kinderData)
 
@@ -36,6 +37,7 @@ class App extends Component {
       <div className='body'>
         <Landing query={this.query}/>        
         <main className='l-main'>
+          <SearchArea />
           <ResultsContainer results={this.state.results}/>
         </main>
       </div>

@@ -65,5 +65,5 @@ class Landing extends Component {
 export default Landing
 
 Landing.propTypes = {
-  query: PropTypes.array
+  query: PropTypes.func
 }
