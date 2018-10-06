@@ -1,22 +1,20 @@
-import React, { Component } from 'react'
-import './App.css'
-import './Card.css'
-import './CardContainer.css'
-import DistrictRepository from './helper'
-import kinderData from './data/kindergartners_in_full_day_program.js'
-import CardContainer from './CardContainer'
+import React, { Component } from 'react';
+import './App.css';
+import './Card.css';
+import './CardContainer.css';
+import DistrictRepository from './helper';
+import kinderData from './data/kindergartners_in_full_day_program.js';
+import CardContainer from './CardContainer';
+import SearchFrom from './SearchForm';
 
-const allSchools = new DistrictRepository(kinderData)
-
-//try putting above in component did mount then need to set state with data
+const allSchools = new DistrictRepository(kinderData);
 
 class App extends Component {
   constructor(){
-    super()
-    this.state = { data: allSchools.stats }
-
+    super();
+    this.state = { data: allSchools.stats };
     // console.log(this.state)
-    }
+  }
   
 
   // componentDidMount = () => {
@@ -26,13 +24,18 @@ class App extends Component {
   //   })
 
   // }
-
+  filterData = (query) => {
+    const filteredData = allSchools.findAllMatches(query.search)
+    this.setState({ data: filteredData })
+    return
+  }
   
   render() {
-    const {data} = this.state
+    const {data} = this.state;
     return (
       <div>
         <h1 className="header">Headcount 2.0</h1>
+        <SearchFrom filterData={this.filterData} />
         <CardContainer data={data} />
       </div>
     );
