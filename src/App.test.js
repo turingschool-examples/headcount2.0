@@ -72,4 +72,19 @@ describe("App component", () => {
     wrapper.instance().handleCardClick("DURANGO 9-R");
     expect(wrapper.state().comparedCards).toEqual([{}, {}]);
   });
+
+  it("should toggle user instructions when two cards are being compared", () => {
+    const initialInstructions = "click any two districts to compare stats"
+    const compareInstructions = "click either card below to remove it"
+    expect(wrapper.state().instructions).toEqual(initialInstructions);
+
+    wrapper.instance().handleCardClick("DENVER COUNTY 1");
+    expect(wrapper.state().instructions).toEqual(initialInstructions);
+
+    wrapper.instance().handleCardClick("DURANGO 9-R");
+    expect(wrapper.state().instructions).toEqual(compareInstructions);
+
+    wrapper.instance().handleCardClick("DURANGO 9-R");
+    expect(wrapper.state().instructions).toEqual(initialInstructions);
+  });
 });
