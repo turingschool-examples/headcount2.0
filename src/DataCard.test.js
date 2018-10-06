@@ -7,5 +7,4 @@ import App from './App';
 describe.skip('DataCard', () => {
 
 
-
 })
