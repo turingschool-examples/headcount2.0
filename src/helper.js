@@ -36,9 +36,12 @@ export default class DistrictRepository {
   findAllMatches = input => {
     let dataset = Object.keys(this.stats).map(key => this.stats[key])
     if (!input) return dataset
+    let capitalised = input.toUpperCase()
     let filtered = dataset.filter(entry => {
-      let capitalised = input.toUpperCase()
       if (entry.location.includes(capitalised)) return entry
+    })
+    filtered = filtered.filter(entry => {
+      if (entry.location[0] === capitalised[0]) return entry
     })
     return filtered
   };

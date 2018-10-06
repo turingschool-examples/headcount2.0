@@ -33,7 +33,8 @@ class App extends Component {
 
   alphabetQuery = (letter) => {
     this.setState({
-      letter: letter
+      letter: letter,
+      results: district.findAllMatches(letter)
     })
   };
 
