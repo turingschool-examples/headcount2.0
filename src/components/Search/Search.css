@@ -8,10 +8,11 @@
 input {
   height: 2rem;
   width: 100%;
-  border: 2px solid #9E9E9E;
+  border: 2px solid #BEBEBE;
   padding-left: .6rem;
   font-size: 1.25rem;
   letter-spacing: 0.5px;
+  color: #006989;
 }
 
 ::placeholder {
