@@ -9,7 +9,8 @@ export default class DistrictRepository {
       if (!acc[district]) {
         acc[district] = {
           location: district,
-          stats: {}
+          stats: {},
+          clicked: false
         };
       }
       acc[district].stats[school.TimeFrame] =

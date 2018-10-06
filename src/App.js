@@ -7,7 +7,7 @@ import Search from "./Search";
 import "./App.css";
 
 const allSchools = new DistrictRepository(kinderData);
-let instructions = "click two districts to compare stats"
+let instructions = "click two districts to compare stats";
 
 class App extends Component {
   state = {
@@ -33,11 +33,12 @@ class App extends Component {
   };
 
   handleCardClick = location => {
+    //console.log(this.state)
     const clickedDisctrict = allSchools.stats[location];
     let { comparedCards } = this.state;
 
-    if (clickedDisctrict.hasOwnProperty('clicked')) {
-      this.handleComparedCardClick();
+    if (clickedDisctrict.clicked !== false) {
+      this.handleComparedCardClick(clickedDisctrict);
       return;
     }
 
@@ -52,8 +53,13 @@ class App extends Component {
     this.prepareComparedStats();
   };
 
-  handleComparedCardClick = () => {
-    console.log("sdf");
+  handleComparedCardClick = clickedDisctrict => {
+    const comparedCards = this.state.comparedCards;
+    const schoolData = this.state.schoolData;
+    comparedCards[clickedDisctrict.clicked] = {};
+    schoolData[clickedDisctrict.location].clicked = false;
+    this.setState({ schoolData, comparedCards });
+    console.log(this.state);
   };
 
   prepareComparedStats = () => {
@@ -62,7 +68,7 @@ class App extends Component {
       Object.keys(comparedCards[0]).length &&
       Object.keys(comparedCards[1]).length
     ) {
-      instructions = "click either card to remove it"
+      instructions = "click either card below to remove it";
       const comparedAvg = allSchools.compareDistrictAverages(
         comparedCards[0].location,
         comparedCards[1].location
@@ -72,17 +78,16 @@ class App extends Component {
   };
 
   render() {
-
     return (
       <div>
         <h1 className="main-logo">headcount</h1>
         <Search handleSearch={this.handleSearch} />
+        <h4 className="instructions">{instructions}</h4>
         <CompareCardContainer
           comparedCards={this.state.comparedCards}
           comparedAvg={this.state.comparedAvg}
-          handleComparedCardClick={this.handleComparedCardClick}
+          handleCardClick={this.handleCardClick}
         />
-        <h4 className="instructions">{instructions}</h4>
         <CardContainer
           handleCardClick={this.handleCardClick}
           cards={this.state.schoolData}
