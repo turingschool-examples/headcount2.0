@@ -7,13 +7,13 @@ import Search from "./Search";
 import "./App.css";
 
 const allSchools = new DistrictRepository(kinderData);
-let instructions = "click any two districts to compare stats";
 
 class App extends Component {
   state = {
     schoolData: {},
     comparedCards: [{}, {}],
-    comparedAvg: {}
+    comparedAvg: {},
+    instructions: "click any two districts to compare stats"
   };
 
   componentDidMount = () => {
@@ -89,18 +89,18 @@ class App extends Component {
   };
 
   prepareComparisonCard = comparedCards => {
-    instructions = "click either card below to remove it";
+    const instructions = "click either card below to remove it";
     const comparedAvg = allSchools.compareDistrictAverages(
       comparedCards[0].location,
       comparedCards[1].location
     );
-    this.setState({ comparedAvg });
+    this.setState({ comparedAvg, instructions });
   };
 
   resetComparisonCard = () => {
-    instructions = "click any two districts to compare stats";
+    const instructions = "click any two districts to compare stats";
     const comparedAvg = {};
-    this.setState({ comparedAvg });
+    this.setState({ comparedAvg, instructions });
   };
 
   render() {
@@ -108,7 +108,7 @@ class App extends Component {
       <div>
         <h1 className="main-logo">headcount</h1>
         <Search handleSearch={this.handleSearch} />
-        <h4 className="instructions">{instructions}</h4>
+        <h4 className="instructions">{this.state.instructions}</h4>
         <CompareCardContainer
           comparedCards={this.state.comparedCards}
           comparedAvg={this.state.comparedAvg}
