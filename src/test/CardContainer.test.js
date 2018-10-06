@@ -24,9 +24,7 @@ describe('CardContainer', ()=>{
     }
   }
 
-  const mockProcessSelection = () => {
-
-  } 
+  const mockProcessSelection = jest.fn()
 
   beforeEach(()=>{
     wrapper = shallow(<CardContainer 

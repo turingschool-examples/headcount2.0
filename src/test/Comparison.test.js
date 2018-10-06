@@ -41,19 +41,16 @@ describe('Comparison', ()=>{
     }
   ]
 
-  const mockClearSelections = () => {
 
-  } 
+  const mockCompareDistrictAverages = jest.fn() 
 
-  const mockCompareDistrictAverages = () => {
-
-  }
+  const mockProcesSelection = jest.fn() 
 
   beforeEach(()=>{
     wrapper = shallow(<Comparison 
-      clearSelections={mockClearSelections}
       compareDistrictAverages={mockCompareDistrictAverages}
       selection={mockData}
+      processSelection={mockProcesSelection}
     />);
   });
 
@@ -63,6 +60,12 @@ describe('Comparison', ()=>{
 
   it('should render content to the DOM', () => {
     expect(wrapper).toMatchSnapshot();    
+  });
+
+  it('should call processSelection on button click', () => {
+    wrapper.find('.close-btn').simulate('click');
+
+    expect(mockProcesSelection.mock.calls.length).toBe(1);
   });
 
 

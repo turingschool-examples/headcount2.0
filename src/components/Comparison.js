@@ -33,6 +33,7 @@ const Comparison = (props) => {
           onClick={() => {
             props.processSelection('close')
           }}
+          className="close-btn"
         >Close</button>
     </section>
   )

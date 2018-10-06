@@ -2,6 +2,7 @@
 
 exports[`Card should render content to the DOM 1`] = `
 <article
+  className="card"
   onClick={[Function]}
 >
   <h1

@@ -43,6 +43,7 @@ describe('App', ()=>{
     const data = new DistrictRepository(kinderData);
 
     const testFilter = {"COLORADO SPRINGS 11": {
+          "classLabel": "card",
           "location": "COLORADO SPRINGS 11",
           "stats": {
             "2004": 0.069,

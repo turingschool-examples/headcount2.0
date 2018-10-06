@@ -27,6 +27,7 @@ exports[`Comparison should render content to the DOM 1`] = `
         }
       }
       key="ADAMS COUNTY 14"
+      processSelection={[Function]}
       selection={
         Array [
           Object {
@@ -123,6 +124,7 @@ exports[`Comparison should render content to the DOM 1`] = `
         }
       }
       key="ADAMS COUNTY 14"
+      processSelection={[Function]}
       selection={
         Array [
           Object {
@@ -162,6 +164,7 @@ exports[`Comparison should render content to the DOM 1`] = `
     />
   </div>
   <button
+    className="close-btn"
     onClick={[Function]}
   >
     Close
