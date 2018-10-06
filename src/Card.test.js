@@ -11,7 +11,7 @@ describe("Card", () => {
     wrapper = shallow(
       <Card
         stats={{ 2004: 0 }}
-        dispay={true}
+        display={true}
         location="Colorado"
         handleCardClick={handleMockCardClick}
       />
@@ -22,7 +22,10 @@ describe("Card", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it("should recognize click on correct card", () => {
-    console.log(handleMockCardClick('COLORADO'))
+  it("handleCardClick should recognize click on correct card", () => {
+    const clickedCard = wrapper.find("section");
+    clickedCard.simulate("click");
+    
+    expect(handleMockCardClick).toHaveBeenCalledWith("Colorado");
   });
 });

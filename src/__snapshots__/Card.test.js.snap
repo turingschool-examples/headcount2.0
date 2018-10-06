@@ -4,7 +4,7 @@ exports[`Card matches the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Card
-    dispay={true}
+    display={true}
     handleCardClick={[Function]}
     location="Colorado"
     stats={
@@ -47,7 +47,7 @@ ShallowWrapper {
 </div>,
         ],
       ],
-      "className": "hide",
+      "className": "card",
       "onClick": [Function],
     },
     "ref": null,
@@ -147,7 +147,7 @@ ShallowWrapper {
 </div>,
           ],
         ],
-        "className": "hide",
+        "className": "card",
         "onClick": [Function],
       },
       "ref": null,
