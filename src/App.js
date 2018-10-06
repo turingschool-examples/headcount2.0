@@ -38,7 +38,7 @@ class App extends Component {
 
   render() {
   	const { data, searchTerm } = this.state
-  	{console.log(data.stats)}
+  	// {console.log(data.findAllMatches(searchTerm))}
     return (
       <div className='App'>
       	<div className='header'>

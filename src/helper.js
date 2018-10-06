@@ -32,14 +32,12 @@ export default class DistrictRepository {
 	}
 
 	findByName(district) {
-		// console.log(this.stats)
 		if (!district) {
 			return undefined
 		} 
 
 		const districtLowerCase = district.toLowerCase()
 		if (this.stats[districtLowerCase]) {
-		// console.log(this.stats[districtLowerCase].stats)
 			return this.stats[districtLowerCase]
 		}
 
@@ -47,64 +45,21 @@ export default class DistrictRepository {
 	}
 
 	findAllMatches(district) {
-		let allDistricts = this.stats
-		let districtKeys = Object.keys(allDistricts)
-		console.log(this.stats)
-		let districtObjects = districtKeys.map((schoolDistrict) => {
-				return allDistricts[schoolDistrict]
-			})
-		
+		const allDistricts = this.stats
+		const districtKeys = Object.keys(allDistricts)
+
 		if (!district) {
-			return districtObjects
+			return districtKeys.map((districtKey) => {
+					return allDistricts[districtKey]
+				})
+		} else {
+			let districtLowerCase = district.toLowerCase()
+			return districtKeys.reduce((acc, districtKey) => {
+				if (districtKey.includes(districtLowerCase)) {
+					acc.push(allDistricts[districtKey])
+				}
+				return acc
+			}, [])
 		}
-
-		let districtLowerCase = district.toLowerCase()
-
-
-		if (!districtKeys.includes(districtLowerCase)) {
-			return []
-		}
-
-		if (districtKeys.includes(districtLowerCase)) {
-			let filteredDistricts = districtObjects.filter((schoolDistrict) => {
-				let schoolDistrictLowerCase = schoolDistrict.location.toLowerCase()
-					return schoolDistrictLowerCase.includes(districtLowerCase)
-			})
-			// console.log(filteredDistricts)
-			return filteredDistricts
-		}
-
 	}
-
-	// findAllMatches(district) {
-	// 	let allDistricts = this.stats
-	// 	let districtKeys = Object.keys(allDistricts)
-	// 	// console.log(districtKeys)
-	// 	let districtObjects = districtKeys.map((schoolDistrict) => {
-	// 			return allDistricts[schoolDistrict]
-	// 		})
-		
-	// 	if (!district) {
-	// 		return districtObjects
-	// 	}
-
-	// 	let districtLowerCase = district.toLowerCase()
-
-
-	// 	if (!districtKeys.includes(districtLowerCase)) {
-	// 		return []
-	// 	}
-
-	// 	if (districtKeys.includes(districtLowerCase)) {
-	// 		let filteredDistricts = districtObjects.filter((schoolDistrict) => {
-	// 			let schoolDistrictLowerCase = schoolDistrict.location.toLowerCase()
-	// 				return schoolDistrictLowerCase.includes(districtLowerCase)
-	// 		})
-	// 		// console.log(filteredDistricts)
-	// 		return filteredDistricts
-	// 	}
-
-	// }
-
-
 }
