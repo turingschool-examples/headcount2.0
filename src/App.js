@@ -9,30 +9,38 @@ class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			data: {}
+			data: new DistrictRepository(kinderData),
+			searchTerm: '',
+			compareDistricts: [],
 		}
 	}
 
-	searchDistrict(string) {
-				// console.log(string)
-		const district = new DistrictRepository(kinderData)
-		const data = district.findAllMatches(string)	
-		this.setState({ data })
+	searchDistrict(searchTerm) {
+		// const district = new DistrictRepository(kinderData)
+		// const searchTerm = district.findAllMatches(string)	
+		this.setState({ searchTerm })
 	}
 
-	componentDidMount() {
-		const district = new DistrictRepository(kinderData)
-		const allDistricts = district.stats
-		this.setState({ data: allDistricts })
-	}
+	// componentDidMount() {
+	// 	const district = new DistrictRepository(kinderData)
+	// 	const allDistricts = district.stats
+	// 	this.setState({ data: allDistricts })
+	// }
 
+// compare component stateless
+// method compare districts on app, send method to cards, send back
+// logic in method that once compare
+// logic that can only take 2
+// If there's 2, don't accept anymore, then run method to give object with comparison of 2
+// Assign it to another state
 
   render() {
+  	const { data, searchTerm } = this.state
     return (
       <div className='App'>
       	<h1 className='app-header'>Headcount 2.7</h1>
       	<Search searchDistrict={this.searchDistrict}/>
-      	<DistrictsContainer districts={this.state.data}/>
+      	<DistrictsContainer districts={data.findAllMatches(searchTerm)}/>
       </div>
     );
   }

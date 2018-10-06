@@ -22,10 +22,10 @@ const DistrictCard = ({ location, stats }) => {
 	)
 }
 
-DistrictCard.proptypes = {
-	location: PropTypes.string.isRequired,
-	stats: PropTypes.object.isRequired
-}
+// DistrictCard.proptypes = {
+// 	location: PropTypes.string.isRequired,
+// 	stats: PropTypes.object.isRequired
+// }
 
 export default DistrictCard;
 
