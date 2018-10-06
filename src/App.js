@@ -3,15 +3,15 @@ import './App.css';
 import CardContainer from './CardContainer';
 import DistrictRepository from './helper';
 import KinderData from './data/kindergartners_in_full_day_program.js';
-import DistrictSearch from './DistrictSearch.js'
-import CompareContainer from './CompareContainer'
+import DistrictSearch from './DistrictSearch.js';
+import CompareContainer from './CompareContainer';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      data : {},
+      data : [],
       display: [],
     }
 
@@ -19,7 +19,7 @@ class App extends Component {
 
   componentDidMount = () => {
     const district = new DistrictRepository(KinderData);
-    const districtData = district.stats
+    const districtData = district.findAllMatches()
     this.setState((state) => {
       return {data: districtData};
     });
@@ -28,13 +28,31 @@ class App extends Component {
   handleSearch = (searchString) => {
     const district = new DistrictRepository(KinderData);
     const districtSearch = district.findAllMatches(searchString);
-    console.log('yo')
+    // let spread = {...districtSearch}
+
     this.setState((state) => {
       return {data: districtSearch}
     })
   }
 
-  handleCompare = () => {
+  handleCompare = (card) => {
+    
+
+    if(this.state.data[card]) {
+      this.state.display.push(this.state.data[card]);
+    }
+    else{
+      let schoolToCompare = this.state.data.find(school => {
+      return school.location === card
+      })
+    this.state.display.push(schoolToCompare);
+    }
+    if(this.state.display.length > 2){
+      this.state.display.shift()
+    }
+    this.setState((state) => {
+      return {display : this.state.display }
+    })
 
   }
 
@@ -44,7 +62,7 @@ class App extends Component {
       <div className="app">
         <DistrictSearch handleSubmit={this.handleSearch} />
         <CompareContainer display={ display }/>
-        <CardContainer data={ data } />
+        <CardContainer data={ data } handleCompare={this.handleCompare} />
       </div>
     );
   }

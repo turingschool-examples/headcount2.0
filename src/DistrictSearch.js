@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './DistrictSearch.css';
+import PropTypes from 'prop-types';
+
 
 class DistrictSearch extends Component {
   constructor(props) {
@@ -34,6 +36,10 @@ class DistrictSearch extends Component {
         </form>
       )
   }
+}
+
+DistrictSearch.propTypes = {
+  handleSubmit: PropTypes.func.isRequired
 }
 
 

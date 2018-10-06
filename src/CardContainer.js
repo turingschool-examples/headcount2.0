@@ -1,7 +1,9 @@
 import React from 'react';
-import Card from './Card'
+import Card from './Card';
+import PropTypes from 'prop-types';
 
-const CardContainer = ({ data }) => {
+
+const CardContainer = ({ data, handleCompare }) => {
 
   // let makeCards = () => {
   //   props.data.map(point => {
@@ -13,7 +15,7 @@ const CardContainer = ({ data }) => {
 
   let cards = (
       schools.map(point =>
-      <Card {...data[point]} className={'card' + [point]} key={counter++}/>
+      <Card {...data[point]} className={'card' + [point]} key={counter++} handleCompare={ handleCompare }/>
       ))
 
 
@@ -24,6 +26,11 @@ const CardContainer = ({ data }) => {
   )
     
   
+}
+
+CardContainer.propTypes = {
+
+  data: PropTypes.array.isRequired
 }
 
 export default CardContainer
