@@ -31,6 +31,7 @@ render() {
 
 SearchForm.propTypes = {
   props: PropTypes.object
+  //props
 }
 
 

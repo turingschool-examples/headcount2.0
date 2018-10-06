@@ -24,7 +24,6 @@ describe('Card', () => {
 
     expect(wrapper.find('li').hasClass('red'))
   })
-  //test
 })
 
 
