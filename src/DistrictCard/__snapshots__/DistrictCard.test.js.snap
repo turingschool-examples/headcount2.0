@@ -72,7 +72,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "1538791529436",
+        "key": "0.07123456156054009",
         "nodeType": "host",
         "props": Object {
           "children": Array [
@@ -92,7 +92,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "1538791529437",
+        "key": "0.0856018446186897",
         "nodeType": "host",
         "props": Object {
           "children": Array [
@@ -112,7 +112,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "1538791529437",
+        "key": "0.6246773717953531",
         "nodeType": "host",
         "props": Object {
           "children": Array [
@@ -185,7 +185,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "1538791529436",
+          "key": "0.07123456156054009",
           "nodeType": "host",
           "props": Object {
             "children": Array [
@@ -205,7 +205,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "1538791529437",
+          "key": "0.0856018446186897",
           "nodeType": "host",
           "props": Object {
             "children": Array [
@@ -225,7 +225,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "1538791529437",
+          "key": "0.6246773717953531",
           "nodeType": "host",
           "props": Object {
             "children": Array [

@@ -15,11 +15,13 @@ class App extends Component {
 		}
 	}
 
-	searchDistrict(searchTerm) {
+	searchDistrict = (searchTerm) => {
+		console.log(searchTerm)
 		// const district = new DistrictRepository(kinderData)
 		// const searchTerm = district.findAllMatches(string)	
 		this.setState({ searchTerm })
 	}
+
 
 	// componentDidMount() {
 	// 	const district = new DistrictRepository(kinderData)

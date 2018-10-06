@@ -30,6 +30,9 @@ class Search extends Component {
 	}
 }
 
+Search.propTypes = {
+	search: PropTypes.string
+}
 
 
 export default Search;

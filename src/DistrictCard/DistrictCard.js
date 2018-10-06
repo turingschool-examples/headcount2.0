@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 const DistrictCard = ({ location, stats }) => {
 	const statsKeys = Object.keys(stats)
 	const schoolData = statsKeys.map((stat) => {
-		
+		// console.log(stat)
 		return <p 
-			key={Date.now()}
+			key={Math.random()}
 			className={(stats[stat] > 0.5) ? 'greater-than-point-5' : 'less-than-point-5'}>
 			{stat}: {stats[stat]} 
 		</p>
@@ -22,10 +22,10 @@ const DistrictCard = ({ location, stats }) => {
 	)
 }
 
-// DistrictCard.proptypes = {
-// 	location: PropTypes.string.isRequired,
-// 	stats: PropTypes.object.isRequired
-// }
+DistrictCard.proptypes = {
+	location: PropTypes.string.isRequired,
+	stats: PropTypes.object.isRequired
+}
 
 export default DistrictCard;
 
