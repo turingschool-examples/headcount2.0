@@ -2,12 +2,36 @@
   margin: 0
 }
 
+body {
+  background: url(https://source.unsplash.com/collection/3314797/1600x900)
+}
+
 li {
   list-style: none;
 }
 
 ul {
   padding-left: 0;
+}
+
+.header {
+  background-color: #0A4543;
+  height: 3em;
+  text-align: center;
+  padding-top: 1.5em;
+  font-size: 3em;
+  font-family: 'Courgette', cursive;
+  color: white;
+}
+
+.input {
+  width: 400px;
+  padding: 1em;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
 }
 
 .school-card {

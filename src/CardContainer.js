@@ -5,7 +5,7 @@ const CardContainer = ({cards}) => {
   const schoolCards = Object.keys(cards).map(card => <SchoolCard location={card} data={cards[card]} key={Object.keys(cards[card])}/>
   )
   return(
-    <div>
+    <div className='card-container'>
       {schoolCards}
     </div>
   )

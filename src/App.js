@@ -28,6 +28,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <header className="header">HeadCount 2.0!</header>
         <SearchForm searchSchool={this.searchSchool}/>
         <CardContainer cards={this.state.cards}/>
       </div>
