@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import DistrictsContainer from './DistrictsContainer/DistrictsContainer.js';
+import DistrictsContainer from './DistrictsContainer/DistrictsContainer';
 import DistrictRepository from './helper.js';
 import kinderData from './data/kindergartners_in_full_day_program.js';
 import Search from './Search/Search.js';
@@ -14,8 +14,10 @@ class App extends Component {
 	}
 
 	searchDistrict(string) {
+				// console.log(string)
 		const district = new DistrictRepository(kinderData)
-		district.findAllMatches(string)	
+		const data = district.findAllMatches(string)	
+		this.setState({ data })
 	}
 
 	componentDidMount() {

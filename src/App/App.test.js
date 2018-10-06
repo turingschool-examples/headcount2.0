@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import DistrictsContainer from '../DistrictsContainer/DistrictsContainer.js';
+import App from '../App';
 import { shallow, mount } from 'enzyme';
 import DistrictRepository from '../helper.js';
 import kinderData from '../data/kindergartners_in_full_day_program.js';

@@ -8,6 +8,8 @@ ShallowWrapper {
     stats={
       Object {
         "2004": 0.624,
+        "2005": 0.124,
+        "2006": 0.224,
       }
     }
   />,
@@ -36,6 +38,20 @@ ShallowWrapper {
             : 
             0.624
           </p>,
+          <p
+            className="less-than-point-5"
+          >
+            2005
+            : 
+            0.124
+          </p>,
+          <p
+            className="less-than-point-5"
+          >
+            2006
+            : 
+            0.224
+          </p>,
         ],
       ],
       "className": "DistrictCard",
@@ -56,7 +72,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "1538791529436",
         "nodeType": "host",
         "props": Object {
           "children": Array [
@@ -71,6 +87,46 @@ ShallowWrapper {
           "2004",
           ": ",
           0.624,
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": "1538791529437",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "2005",
+            ": ",
+            0.124,
+          ],
+          "className": "less-than-point-5",
+        },
+        "ref": null,
+        "rendered": Array [
+          "2005",
+          ": ",
+          0.124,
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": "1538791529437",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "2006",
+            ": ",
+            0.224,
+          ],
+          "className": "less-than-point-5",
+        },
+        "ref": null,
+        "rendered": Array [
+          "2006",
+          ": ",
+          0.224,
         ],
         "type": "p",
       },
@@ -95,6 +151,20 @@ ShallowWrapper {
               : 
               0.624
             </p>,
+            <p
+              className="less-than-point-5"
+            >
+              2005
+              : 
+              0.124
+            </p>,
+            <p
+              className="less-than-point-5"
+            >
+              2006
+              : 
+              0.224
+            </p>,
           ],
         ],
         "className": "DistrictCard",
@@ -115,7 +185,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "1538791529436",
           "nodeType": "host",
           "props": Object {
             "children": Array [
@@ -130,6 +200,46 @@ ShallowWrapper {
             "2004",
             ": ",
             0.624,
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": "1538791529437",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "2005",
+              ": ",
+              0.124,
+            ],
+            "className": "less-than-point-5",
+          },
+          "ref": null,
+          "rendered": Array [
+            "2005",
+            ": ",
+            0.124,
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": "1538791529437",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "2006",
+              ": ",
+              0.224,
+            ],
+            "className": "less-than-point-5",
+          },
+          "ref": null,
+          "rendered": Array [
+            "2006",
+            ": ",
+            0.224,
           ],
           "type": "p",
         },

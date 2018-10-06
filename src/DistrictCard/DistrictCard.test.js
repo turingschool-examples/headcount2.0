@@ -8,7 +8,7 @@ describe('DistrictCard', () => {
 	let expectedId;
 
 	beforeEach(() => {
-		wrapper = shallow(<DistrictCard key='COLORADO' schoolName='colorado' stats={{'2004': 0.624}}/>)
+		wrapper = shallow(<DistrictCard key='COLORADO' schoolName='colorado' stats={{'2004': 0.624, '2005': 0.124, '2006': 0.224}}/>)
 	})
 
 	it('matches the snapshot', () => {
@@ -16,11 +16,12 @@ describe('DistrictCard', () => {
 	})
 
 	it('renders each entry of data', () => {
-		expect(wrapper.find('p').length).toEqual(1)
+		expect(wrapper.find('p').length).toEqual(3)
 	})
 
 	it('adds a class for data greater than 0.5', () => {
-		expect(wrapper.find('p').hasClass('greater-than-point-5')).toBe(true)
+		const greaterThanWrapper = shallow(<DistrictCard key='COLORADO' schoolName='colorado' stats={{'2004': 0.624}}/>)
+		expect(greaterThanWrapper.find('p').hasClass('greater-than-point-5')).toBe(true)
 	})	
 
 	it('adds a class for data less than 0.5', () => {
@@ -28,6 +29,9 @@ describe('DistrictCard', () => {
 		expect(lessThanWrapper.find('p').hasClass('less-than-point-5')).toBe(true)
 	})
 
+	it('renders each entry of data', () => {
+		expect(wrapper.find('p').length).toEqual(3)
+	})
 
 })
 

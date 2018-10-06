@@ -7,8 +7,10 @@ const DistrictCard = ({ location, stats }) => {
 	const schoolData = statsKeys.map((stat) => {
 		
 		return <p 
+			key={Date.now()}
 			className={(stats[stat] > 0.5) ? 'greater-than-point-5' : 'less-than-point-5'}>
-			{stat}: {stats[stat]}</p>
+			{stat}: {stats[stat]} 
+		</p>
 	})
 	// console.log(schoolData)
 
