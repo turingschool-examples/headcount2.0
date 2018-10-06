@@ -27,7 +27,10 @@ class App extends Component {
   filterData = (query) => {
     const filteredData = allSchools.findAllMatches(query.search)
     this.setState({ data: filteredData })
-    return
+  }
+
+  displayAll = () => {
+    this.setState({ data: allSchools.stats })
   }
   
   render() {
@@ -35,7 +38,10 @@ class App extends Component {
     return (
       <div>
         <h1 className="header">Headcount 2.0</h1>
-        <SearchFrom filterData={this.filterData} />
+        <SearchFrom 
+          filterData={this.filterData} 
+          displayAll={this.displayAll} 
+          />
         <CardContainer data={data} />
       </div>
     );

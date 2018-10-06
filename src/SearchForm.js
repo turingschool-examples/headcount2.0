@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class SearchForm extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       search: ''
     };
@@ -34,6 +34,10 @@ class SearchForm extends Component {
             onChange={this.updateSearch}
             />
           <button className="submit-search">Submit</button>
+          <button 
+            className="display-all"
+            onClick={() => this.props.displayAll()}
+            >Display All</button>
         </form>
       </div>
     )

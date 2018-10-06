@@ -10,10 +10,11 @@ export default class DistrictRepository {
         year: school.TimeFrame,
         data: school.Data
       }; 
-      if (!districts[school.Location]){
-        districts[school.Location] = [];
+      let capitalizeLocation = school.Location.toUpperCase();
+      if (!districts[capitalizeLocation]){
+        districts[capitalizeLocation] = [];
       } 
-      districts[school.Location].push(statsObj);
+      districts[capitalizeLocation].push(statsObj);
       return districts;
     }, {});
 
@@ -33,8 +34,18 @@ export default class DistrictRepository {
       }, {});
       return districtData;
     });
-    return mainData;
+
+    const alphabetize = mainData.sort((districtA, districtB) => { 
+      if(districtA.location > districtB.location) {
+        return 1
+      } else {
+        return -1
+      }
+    })
+
+    return alphabetize
   }
+
 
   findByName(search){
     if (search === undefined) {
