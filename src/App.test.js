@@ -74,8 +74,8 @@ describe("App component", () => {
   });
 
   it("should toggle user instructions when two cards are being compared", () => {
-    const initialInstructions = "click any two districts to compare stats"
-    const compareInstructions = "click either card below to remove it"
+    const initialInstructions = "click any two districts to compare stats";
+    const compareInstructions = "click either card below to remove it";
     expect(wrapper.state().instructions).toEqual(initialInstructions);
 
     wrapper.instance().handleCardClick("DENVER COUNTY 1");
@@ -87,4 +87,36 @@ describe("App component", () => {
     wrapper.instance().handleCardClick("DURANGO 9-R");
     expect(wrapper.state().instructions).toEqual(initialInstructions);
   });
+
+  it("should update 'clicked' and property with index in comparedCards array when card is clicked and added to comparedCards", () => {
+    expect(wrapper.state().schoolData["FALCON 49"].clicked).toEqual(false);
+    wrapper.instance().handleCardClick("FALCON 49");
+    expect(wrapper.state().schoolData["FALCON 49"].clicked).toEqual(0);
+
+    expect(wrapper.state().schoolData["ELBERT 200"].clicked).toEqual(false);
+    wrapper.instance().handleCardClick("ELBERT 200");
+    expect(wrapper.state().schoolData["ELBERT 200"].clicked).toEqual(1);
+
+    expect(wrapper.state().schoolData["ELLICOTT 22"].clicked).toEqual(false);
+    wrapper.instance().handleCardClick("ELLICOTT 22");
+    expect(wrapper.state().schoolData["ELLICOTT 22"].clicked).toEqual(false);
+
+    wrapper.instance().handleCardClick("ELBERT 200");
+    expect(wrapper.state().schoolData["ELBERT 200"].clicked).toEqual(false);
+
+    wrapper.instance().handleCardClick("ELLICOTT 22");
+    expect(wrapper.state().schoolData["ELLICOTT 22"].clicked).toEqual(1);
+  });
+
+  it("should toggle 'display' property when district appears in search", () => {
+    wrapper.instance().handleSearch("yu")
+    expect(wrapper.state().schoolData["YUMA SCHOOL DISTRICT 1"].display).toEqual(true);
+    expect(wrapper.state().schoolData["COLORADO"].display).toEqual(false);
+
+    wrapper.instance().handleSearch("col")
+    expect(wrapper.state().schoolData["YUMA SCHOOL DISTRICT 1"].display).toEqual(false);
+    expect(wrapper.state().schoolData["COLORADO"].display).toEqual(true);
+
+  });
+  
 });
