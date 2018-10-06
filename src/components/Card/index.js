@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './Card.css'
 
 const Card = ({location, data}) => {
@@ -20,7 +21,12 @@ const Card = ({location, data}) => {
 }
 
 const checkLow = (data, year) => {
-  if (data[year] >= 0.5) return 'low'
+  if (data[year] <= 0.5) return 'low'
+}
+
+Card.propTypes = {
+  location: PropTypes.string.isRequired,
+  data: PropTypes.object
 }
 
 export default Card
