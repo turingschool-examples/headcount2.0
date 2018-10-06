@@ -16,7 +16,7 @@ const DistrictCard = ({ location, stats }) => {
 
 	return (
 		<div className='DistrictCard'>
-			<h2 className='card-location'>{location}</h2>
+			<h3 className='card-location'>{location}</h3>
 			{schoolData}
 		</div>
 	)

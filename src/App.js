@@ -41,7 +41,9 @@ class App extends Component {
   	{console.log(this.state.searchTerm)}
     return (
       <div className='App'>
-      	<h1 className='app-header'>Headcount 2.7</h1>
+      	<div className='header'>
+      		<h1 className='app-site-title'>Headcount</h1>
+      	</div>
       	<Search searchDistrict={this.searchDistrict}/>
       	<DistrictsContainer districts={data.findAllMatches(searchTerm)}/>
       </div>
