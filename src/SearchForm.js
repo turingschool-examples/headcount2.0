@@ -21,27 +21,17 @@ class SearchForm extends Component {
     this.props.filterData(this.state)
     this.setState({ search: '' })
   }
-
-  // searchMatches = (this.props.data) => {
-
-
-  // }
-
-  // create options
-  // intake props of this.state
-  // map over array
-  // output options
-
     
   render() {
+
     const options = this.props.data.map( district => {
-      return <option value={district.location} key={Math.round()} />
+      return <option className='option' value={district.location} key={Math.round()}/>
     })
 
     return(
       <div>
         <form 
-          className="Search"
+          className="search"
           onSubmit={this.handleSubmit}
           >
           <input 
@@ -55,9 +45,9 @@ class SearchForm extends Component {
           <datalist id='matches'>
             { options }
           </datalist>
-          <button className="submit-search">Submit</button>
+          <button className="btn-submit-search">Submit</button>
           <button 
-            className="display-all"
+            className="btn-display-all"
             onClick={() => this.props.displayAll()}
             >Display All</button>
         </form>
