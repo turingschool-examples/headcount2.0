@@ -9,10 +9,11 @@ const CardContainer = ({ data }) => {
   //   })
   // }
   let schools = Object.keys(data);
+  let counter = 0;
 
   let cards = (
-        schools.map(point => 
-      <Card {...data[point]} className='card'/>
+      schools.map(point =>
+      <Card {...data[point]} className={'card' + [point]} key={counter++}/>
       ))
 
 

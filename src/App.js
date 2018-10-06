@@ -4,14 +4,15 @@ import CardContainer from './CardContainer';
 import DistrictRepository from './helper';
 import KinderData from './data/kindergartners_in_full_day_program.js';
 import DistrictSearch from './DistrictSearch.js'
-
+import CompareContainer from './CompareContainer'
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      data : {}
+      data : {},
+      display: [],
     }
 
   }
@@ -33,15 +34,16 @@ class App extends Component {
     })
   }
 
-  compareDistrictAverages = () => {
+  handleCompare = () => {
 
   }
 
   render() {
-    const { data } = this.state
+    const { data, display } = this.state
     return (
       <div className="app">
         <DistrictSearch handleSubmit={this.handleSearch} />
+        <CompareContainer display={ display }/>
         <CardContainer data={ data } />
       </div>
     );
