@@ -54,9 +54,9 @@ class App extends Component {
       this.handleComparedCardClick(clickedDisctrict);
       return;
     }
-    this.addClickedProp(clickedDisctrict, comparedCards)
+    this.addClickedProp(clickedDisctrict, comparedCards);
     this.setState({ comparedCards });
-    this.prepareComparedStats();
+    this.checkComparedCards();
   };
 
   addClickedProp = (clickedDisctrict, comparedCards) => {
@@ -77,25 +77,29 @@ class App extends Component {
     schoolData[clickedDisctrict.location].clicked = false;
 
     this.setState({ schoolData, comparedCards });
-    this.prepareComparedStats();
+    this.checkComparedCards();
   };
 
-  prepareComparedStats = () => {
-    let comparedAvg;
+  checkComparedCards = () => {
     const { comparedCards } = this.state;
-    if (
-      Object.keys(comparedCards[0]).length &&
-      Object.keys(comparedCards[1]).length
-    ) {
-      instructions = "click either card below to remove it";
-      comparedAvg = allSchools.compareDistrictAverages(
-        comparedCards[0].location,
-        comparedCards[1].location
-      );
-    } else {
-      instructions = "click two districts to compare stats";
-      comparedAvg = { a: "...", b: "...", compared: "..." };
-    }
+
+    Object.keys(comparedCards[0]).length && Object.keys(comparedCards[1]).length
+      ? this.prepareComparisonCard(comparedCards)
+      : this.resetComparisonCard();
+  };
+
+  prepareComparisonCard = comparedCards => {
+    instructions = "click either card below to remove it";
+    const comparedAvg = allSchools.compareDistrictAverages(
+      comparedCards[0].location,
+      comparedCards[1].location
+    );
+    this.setState({ comparedAvg });
+  };
+
+  resetComparisonCard = () => {
+    instructions = "click two districts to compare stats";
+    const comparedAvg = { a: "...", b: "...", compared: "..." };
     this.setState({ comparedAvg });
   };
 
