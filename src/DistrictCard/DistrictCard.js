@@ -1,6 +1,6 @@
 import React from 'react';
 import './DistrictCard.css';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const DistrictCard = ({ location, stats }) => {
 	const statsKeys = Object.keys(stats)
