@@ -1,5 +1,6 @@
 import React from "react";
-import applePic from "./apple.png";
+import applePic from "./images/apple.png";
+
 import "./BlankCard.css";
 
 const BlankCard = () => {

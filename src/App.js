@@ -65,8 +65,8 @@ class App extends Component {
         clickedDisctrict.clicked = i;
         comparedCards[i] = clickedDisctrict;
         break;
-      } 
-    };
+      }
+    }
   };
 
   handleComparedCardClick = clickedDisctrict => {

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import checkIcon from "./checked.svg";
-import cancelIcon from "./cancel.svg";
+import checkIcon from "./images/checked.svg";
+import cancelIcon from "./images/cancel.svg";
 import "./Card.css";
 
 const Card = ({ location, stats, display, handleCardClick }) => {

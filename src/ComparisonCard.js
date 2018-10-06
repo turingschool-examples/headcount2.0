@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import arrowIcon from "./arrow.svg";
+import arrowIcon from "./images/arrow.svg";
 import "./ComparisonCard.css";
 
 const ComparisonCard = props => {
