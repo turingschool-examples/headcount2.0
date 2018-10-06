@@ -1,24 +1,26 @@
-.comparison-card h3 {
-  font-size: 22px;
-  font-weight: bold;
-  margin-top: 0;
-  margin-bottom: 0;
-  position: relative;
-
-}
-
 .comparison-card {
   background-color: #9b9b9b;
-  border: 4px solid black;
+  border: 8px solid black;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   height: 320px;
   justify-content: space-evenly;
   margin: 10px;
+  opacity: 0.9;
   padding-bottom: 10px;
   text-align: center;
   width: 300px;
+}
+
+.comparison-card h3 {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 2.8;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  position: relative;
 }
 
 .avg-top {

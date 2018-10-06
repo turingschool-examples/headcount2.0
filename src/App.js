@@ -7,7 +7,7 @@ import Search from "./Search";
 import "./App.css";
 
 const allSchools = new DistrictRepository(kinderData);
-let instructions = "click two districts to compare stats";
+let instructions = "click any two districts to compare stats";
 
 class App extends Component {
   state = {
@@ -60,13 +60,13 @@ class App extends Component {
   };
 
   addClickedProp = (clickedDisctrict, comparedCards) => {
-    if (!Object.keys(comparedCards[0]).length) {
-      clickedDisctrict.clicked = 0;
-      comparedCards[0] = clickedDisctrict;
-    } else if (!Object.keys(comparedCards[1]).length) {
-      clickedDisctrict.clicked = 1;
-      comparedCards[1] = clickedDisctrict;
-    }
+    for (let i = 0; i < 2; i++) {
+      if (!Object.keys(comparedCards[i]).length) {
+        clickedDisctrict.clicked = i;
+        comparedCards[i] = clickedDisctrict;
+        break;
+      } 
+    };
   };
 
   handleComparedCardClick = clickedDisctrict => {
@@ -98,7 +98,7 @@ class App extends Component {
   };
 
   resetComparisonCard = () => {
-    instructions = "click two districts to compare stats";
+    instructions = "click any two districts to compare stats";
     const comparedAvg = { a: "...", b: "...", compared: "..." };
     this.setState({ comparedAvg });
   };
