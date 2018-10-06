@@ -44,7 +44,7 @@ class App extends Component {
 
   processSelection = (district) => {
     if (!this.state.selection.includes(district) && district !== 
-      'close') {
+      'close' && this.state.selection.length !== 2) {
       const newData = this.state.data
       newData.stats[district.location].classLabel = 'card selected'
       this.setState({
