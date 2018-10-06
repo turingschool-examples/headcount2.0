@@ -1,7 +1,6 @@
 .comparison-card h3 {
   font-size: 22px;
   font-weight: bold;
-  margin: 10px;
   position: relative;
 }
 
@@ -13,7 +12,9 @@
   flex-direction: column;
   height: 320px;
   justify-content: space-evenly;
+  margin: 10px;
   opacity: 0.9;
   padding-bottom: 10px;
   text-align: center;
+  width: 240px;
 }

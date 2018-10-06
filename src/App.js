@@ -22,7 +22,7 @@ class App extends Component {
   };
 
   handleSearch = input => {
-    let schoolData = allSchools.findAllMatches();
+    const schoolData = allSchools.findAllMatches();
     const districtDirectory = Object.keys(schoolData);
     if (input) {
       this.toggleSearchDisplay(schoolData, input, districtDirectory);

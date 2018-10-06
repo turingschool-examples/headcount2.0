@@ -1,7 +1,7 @@
 .compare-card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 20px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   width: 60%;
   margin: 20px 20%;
 }
