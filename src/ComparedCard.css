@@ -12,7 +12,7 @@ p {
   opacity: 0.9;
   padding-bottom: 10px;
   transition: all 0.4s ease-in-out;
-  width: 240px;
+  width: 300px;
 }
 
 .card:hover {
