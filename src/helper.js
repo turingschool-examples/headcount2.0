@@ -47,9 +47,10 @@ export default class DistrictRepository {
 	}
 
 	findAllMatches(district) {
-		const allDistricts = this.stats
-		const districtKeys = Object.keys(this.stats)
-		const districtObjects = districtKeys.map((schoolDistrict) => {
+		let allDistricts = this.stats
+		let districtKeys = Object.keys(allDistricts)
+		console.log(this.stats)
+		let districtObjects = districtKeys.map((schoolDistrict) => {
 				return allDistricts[schoolDistrict]
 			})
 		
@@ -57,7 +58,7 @@ export default class DistrictRepository {
 			return districtObjects
 		}
 
-		const districtLowerCase = district.toLowerCase()
+		let districtLowerCase = district.toLowerCase()
 
 
 		if (!districtKeys.includes(districtLowerCase)) {
@@ -65,13 +66,45 @@ export default class DistrictRepository {
 		}
 
 		if (districtKeys.includes(districtLowerCase)) {
-			const filteredDistricts = districtObjects.filter((schoolDistrict) => {
-				const schoolDistrictLowerCase = schoolDistrict.location.toLowerCase()
+			let filteredDistricts = districtObjects.filter((schoolDistrict) => {
+				let schoolDistrictLowerCase = schoolDistrict.location.toLowerCase()
 					return schoolDistrictLowerCase.includes(districtLowerCase)
 			})
+			// console.log(filteredDistricts)
 			return filteredDistricts
 		}
 
 	}
+
+	// findAllMatches(district) {
+	// 	let allDistricts = this.stats
+	// 	let districtKeys = Object.keys(allDistricts)
+	// 	// console.log(districtKeys)
+	// 	let districtObjects = districtKeys.map((schoolDistrict) => {
+	// 			return allDistricts[schoolDistrict]
+	// 		})
+		
+	// 	if (!district) {
+	// 		return districtObjects
+	// 	}
+
+	// 	let districtLowerCase = district.toLowerCase()
+
+
+	// 	if (!districtKeys.includes(districtLowerCase)) {
+	// 		return []
+	// 	}
+
+	// 	if (districtKeys.includes(districtLowerCase)) {
+	// 		let filteredDistricts = districtObjects.filter((schoolDistrict) => {
+	// 			let schoolDistrictLowerCase = schoolDistrict.location.toLowerCase()
+	// 				return schoolDistrictLowerCase.includes(districtLowerCase)
+	// 		})
+	// 		// console.log(filteredDistricts)
+	// 		return filteredDistricts
+	// 	}
+
+	// }
+
 
 }

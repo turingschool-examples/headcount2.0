@@ -18,11 +18,22 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1
-          className="app-header"
+        <div
+          className="header"
         >
-          Headcount 2.7
-        </h1>,
+          <h1
+            className="app-site-title"
+          >
+            Headcount
+            <span
+              className="icon-span"
+            >
+              <i
+                className="fas fa-graduation-cap"
+              />
+            </span>
+          </h1>
+        </div>,
         <Search
           searchDistrict={[Function]}
         />,
@@ -2938,12 +2949,69 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Headcount 2.7",
-          "className": "app-header",
+          "children": <h1
+            className="app-site-title"
+          >
+            Headcount
+            <span
+              className="icon-span"
+            >
+              <i
+                className="fas fa-graduation-cap"
+              />
+            </span>
+          </h1>,
+          "className": "header",
         },
         "ref": null,
-        "rendered": "Headcount 2.7",
-        "type": "h1",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Headcount",
+              <span
+                className="icon-span"
+              >
+                <i
+                  className="fas fa-graduation-cap"
+                />
+              </span>,
+            ],
+            "className": "app-site-title",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Headcount",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <i
+                  className="fas fa-graduation-cap"
+                />,
+                "className": "icon-span",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "fas fa-graduation-cap",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              "type": "span",
+            },
+          ],
+          "type": "h1",
+        },
+        "type": "div",
       },
       Object {
         "instance": null,
@@ -5874,11 +5942,22 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1
-            className="app-header"
+          <div
+            className="header"
           >
-            Headcount 2.7
-          </h1>,
+            <h1
+              className="app-site-title"
+            >
+              Headcount
+              <span
+                className="icon-span"
+              >
+                <i
+                  className="fas fa-graduation-cap"
+                />
+              </span>
+            </h1>
+          </div>,
           <Search
             searchDistrict={[Function]}
           />,
@@ -8794,12 +8873,69 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Headcount 2.7",
-            "className": "app-header",
+            "children": <h1
+              className="app-site-title"
+            >
+              Headcount
+              <span
+                className="icon-span"
+              >
+                <i
+                  className="fas fa-graduation-cap"
+                />
+              </span>
+            </h1>,
+            "className": "header",
           },
           "ref": null,
-          "rendered": "Headcount 2.7",
-          "type": "h1",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Headcount",
+                <span
+                  className="icon-span"
+                >
+                  <i
+                    className="fas fa-graduation-cap"
+                  />
+                </span>,
+              ],
+              "className": "app-site-title",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Headcount",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <i
+                    className="fas fa-graduation-cap"
+                  />,
+                  "className": "icon-span",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "fas fa-graduation-cap",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
+                "type": "span",
+              },
+            ],
+            "type": "h1",
+          },
+          "type": "div",
         },
         Object {
           "instance": null,

@@ -11,7 +11,7 @@ class App extends Component {
 		this.state = {
 			data: new DistrictRepository(kinderData),
 			searchTerm: '',
-			compareDistricts: [],
+			// compareDistricts: [],
 		}
 	}
 
@@ -31,14 +31,14 @@ class App extends Component {
 
 // compare component stateless
 // method compare districts on app, send method to cards, send back
-// logic in method that once compare
+// logic in method that compares two cards once they're entered
 // logic that can only take 2
 // If there's 2, don't accept anymore, then run method to give object with comparison of 2
 // Assign it to another state
 
   render() {
   	const { data, searchTerm } = this.state
-  	{console.log(this.state.searchTerm)}
+  	{console.log(data.stats)}
     return (
       <div className='App'>
       	<div className='header'>
