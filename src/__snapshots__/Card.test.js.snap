@@ -13,13 +13,16 @@ exports[`Card should match the snapshot with all data passed in correctly 1`] = 
     className="card-data"
   >
     <p
-      className="year-data"
-      key="1538711787341"
+      className="year-data less-than"
+      key="0.2674699726093819"
     >
        
       data
       : 
        
+    </p>
+    <p>
+      * less than 0.5
     </p>
   </div>
 </div>
