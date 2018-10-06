@@ -482,11 +482,10 @@ h1 {
   width: 100vw;
 }
 .search-area .search-main input {
-  background-color: rgba(245, 105, 36, 0.6);
+  background-color: rgba(255, 255, 255, 0.6);
   border: none;
-  border: 1px solid #004263;
-  border-radius: 1px;
-  color: white;
+  border: 1px solid #f56924;
+  color: black;
   font-size: 24px;
   height: 3rem;
   padding-left: 15px;
