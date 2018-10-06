@@ -17,7 +17,7 @@
         width: 75%
     
     p
-        animation: typing-delay 3.0s steps(48, end), blink-caret .75s step-end
+        animation: typing-delay 3.5s steps(48, end), blink-caret .75s step-end
         color: white
         font-weight: 700
         letter-spacing: .30em
@@ -67,6 +67,63 @@
         color: white
 
     
+
+/*
+    ----------------- Search Area ------------------
+    */
+
+.search-area
+    background-color: $beige
+
+    .search-nav
+        overflow: scroll
+        position: sticky
+        text-align: center
+        top: 0
+        width: 100vw
+
+    .search-main
+        input
+            background-color: transparentize(white, .4%)
+            border: none
+            border: 1px solid $primary-orange
+            color: black
+            font-size: 24px
+            height: 3rem
+            padding-left: 15px
+            text-align: center
+            width: 50vw
+
+    .alphabet-query
+        align-items: center
+        background-color: $secondary-navy
+        color: $primary-orange
+        display: flex
+        flex-wrap: wrap
+        // height: 103px
+        justify-content: center
+        margin: auto
+        font-size: 2rem
+        list-style-type: none
+        padding: 0
+        width: 100%
+
+        li  
+            // align-self: center
+            // display: flex
+            // flex-wrap: wrap
+            // height: 100%
+            // justify-content: center
+            // width: calc(100vw/26)
+            text-align: center
+            width: 50px
+            height: 50px
+            line-height: 50px
+            &:hover
+                background-color: $beige
+                cursor: pointer
+                font-weight: 700
+        
     
 .submit-svg
     height: 70px

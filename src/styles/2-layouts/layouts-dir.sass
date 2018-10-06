@@ -2,10 +2,15 @@
     display: grid
     grid-template-areas: "landing""search""results"
 
+.l-search
+    grid-area: search
+    height: 100vh
+
 .l-results
     display: grid
     grid-area: results
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    grid-column-gap: 2rem
 
 .l-landing
     background-image: url(./assets/imgs/Plane.png)

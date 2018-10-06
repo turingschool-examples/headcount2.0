@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import PropTypes from 'prop-types' 
+import PropTypes from "prop-types"
 import {
   XYPlot,
   XAxis,
@@ -34,11 +34,18 @@ class Result extends Component {
     return (
       <article className="result-card">
         <h3>{this.props.entry.location}</h3>
-        <XYPlot width={window.innerWidth * .2} height={window.innerHeight * .2}>
+        <XYPlot
+          width={window.innerWidth * 0.2}
+          height={window.innerHeight * 0.2}
+        >
           <XAxis />
           <YAxis />
-          <HorizontalGridLines />
-          <LineMarkSeries data={this.sorted} />
+          <HorizontalGridLines animation={({ duration: 2 }, true)} />
+          <LineMarkSeries
+            data={this.sorted}
+            lineStyle={{ stroke: "red" }}
+            markStyle={{ stroke: "blue" }}
+          />
         </XYPlot>
       </article>
     )
@@ -47,7 +54,6 @@ class Result extends Component {
 
 export default Result
 
-
 Result.propTypes = {
-  entry: PropTypes.array
+  entry: PropTypes.object
 }
