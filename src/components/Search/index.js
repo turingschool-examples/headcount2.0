@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { FaSearch } from 'react-icons/fa'
 import './Search.css'
 
 class Search extends Component {
@@ -16,6 +17,7 @@ class Search extends Component {
           aria-label="Search for a specific district here"
           placeholder="Search for a specific district"
         />
+        <button><FaSearch /></button>
       </form>
     )
   }

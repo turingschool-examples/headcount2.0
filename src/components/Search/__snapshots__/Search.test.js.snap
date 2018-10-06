@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Search should have a search input 1`] = `
+<form
+  className="Search"
+>
+  <input
+    aria-label="Search for a specific district here"
+    placeholder="Search for a specific district"
+  />
+</form>
+`;
+
 exports[`Search should have a search input and a button 1`] = `
 <form
   className="Search"
