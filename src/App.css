@@ -1,9 +1,30 @@
 /*APP COMPONENT RELATED CSS GOES HERE*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
 .App {
-
+	background-color: #E9EBEE;
 }
 
-.app-header {
-	margin: auto;
-	color: red;
+.header {
+	background-color: #008b38;
 }
+
+.app-site-title {
+	margin: 0.5rem auto 2rem;
+  color: #FFF;
+  font-size: 4rem;
+  width: 25%;
+  text-align: center;
+  font-family: 'Arvo', serif;
+  padding: 0 0 0.5rem 0;
+}
+
+/*font-family: 'Roboto Slab', serif;
+font-family: 'Noto Serif', serif;
+font-family: 'Arvo', serif;
+font-family: 'Open Sans', sans-serif;*/
+
