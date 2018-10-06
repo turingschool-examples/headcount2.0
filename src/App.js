@@ -33,6 +33,10 @@ class App extends Component {
     })
   }
 
+  compareDistrictAverages = () => {
+
+  }
+
   render() {
     const { data } = this.state
     return (
