@@ -33,13 +33,14 @@
 
 .arrow-icon {
   height: 26px;
-  margin-right: 6px;
+  margin-right: 26px;
   position: relative;
   top: 5px;
+  transform: rotate(45deg);
 }
 
 .rotate {
   margin-left: 0;
-  margin-left: 6px;
-  transform: rotate(180deg);
+  margin-left: 26px;
+  transform: rotate(225deg);
 }
