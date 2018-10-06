@@ -40,7 +40,8 @@ class App extends Component {
         <h1 className="header">Headcount 2.0</h1>
         <SearchFrom 
           filterData={this.filterData} 
-          displayAll={this.displayAll} 
+          displayAll={this.displayAll}
+          data={data} 
           />
         <CardContainer data={data} />
       </div>

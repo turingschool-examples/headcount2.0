@@ -7,10 +7,13 @@ class SearchForm extends Component {
     this.state = {
       search: ''
     };
+
+    console.log(this.props)
   }
 
   updateSearch = (event) => {
     this.setState({ search: event.target.value})
+    this.props.filterData(this.state)
   }
 
   handleSubmit = (event) => {
@@ -19,7 +22,22 @@ class SearchForm extends Component {
     this.setState({ search: '' })
   }
 
+  // searchMatches = (this.props.data) => {
+
+
+  // }
+
+  // create options
+  // intake props of this.state
+  // map over array
+  // output options
+
+    
   render() {
+    const options = this.props.data.map( district => {
+      return <option value={district.location} key={Math.round()} />
+    })
+
     return(
       <div>
         <form 
@@ -28,11 +46,15 @@ class SearchForm extends Component {
           >
           <input 
             className="input-search"
+            list="matches"
             value={this.state.search}
             placeholder="Search for School District"
             name="search"
             onChange={this.updateSearch}
             />
+          <datalist id='matches'>
+            { options }
+          </datalist>
           <button className="submit-search">Submit</button>
           <button 
             className="display-all"
