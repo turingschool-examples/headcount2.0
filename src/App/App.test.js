@@ -16,11 +16,12 @@ describe('App', () => {
 		expect(wrapper).toMatchSnapshot()
 	})
 
-	it('adds helper dataset to state', () => {
-		const district = new DistrictRepository(kinderData)
-		const allDistricts = district.stats
-		wrapper.setState({ data: allDistricts })
-		expect(wrapper.state().data).toEqual(district.stats)
+	it('initializes with correct state', () => {
+		const expectedState = {
+			data: new DistrictRepository(kinderData),
+			searchTerm: ''
+		}
+		expect(wrapper.state()).toEqual(expectedState)
 	})
 
 })

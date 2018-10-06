@@ -12,7 +12,9 @@ class Search extends Component {
 
 	handleChange = (event) => {
 		const search = event.target.value
-		this.setState({ search }, this.props.searchDistrict(search))
+		// console.log(search)
+		this.props.searchDistrict(search)
+		this.setState({ search })
 	}
 
 	handleSubmit = (event) => {
