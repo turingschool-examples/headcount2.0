@@ -12,6 +12,7 @@ const CardContainer = (props) => {
             data={props.data[district]}
             key={props.data[district].location}
             processSelection={props.processSelection}
+            selection={props.selection}
           />
         )
       })
@@ -24,7 +25,8 @@ const CardContainer = (props) => {
 
 CardContainer.propTypes = {
   data: PropTypes.object.isRequired,
-  processSelection: PropTypes.func.isRequired
+  processSelection: PropTypes.func.isRequired,
+  selection: PropTypes.array.isRequired
 }
 
 export default CardContainer;

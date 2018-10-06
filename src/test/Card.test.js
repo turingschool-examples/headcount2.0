@@ -7,6 +7,7 @@ describe('Card', ()=>{
   let wrapper; 
 
   const mockData = {
+    classLabel: 'card',
     location: 'ADAMS COUNTY 14',
       stats: {
         2004: 0.228, 
@@ -23,12 +24,10 @@ describe('Card', ()=>{
       }
   }
 
-  const mockProcessSelection = () => {
-
-  } 
+  const mockProcessSelection = jest.fn()
 
   beforeEach(()=>{
-    wrapper = shallow(<Card data={mockData} processSelection={mockProcessSelection}/>);
+    wrapper = shallow(<Card selection={['1']} data={mockData} processSelection={mockProcessSelection} />);
   });
 
   it('should exist', () => {
@@ -39,26 +38,10 @@ describe('Card', ()=>{
     expect(wrapper).toMatchSnapshot();    
   });
 
-  it('should have default state', () => {
-    expect(wrapper.state()).toEqual({classLabel: 'card'})
-  });
+  it('should call processSelection when card is clicked', () => {
+    wrapper.find('.card').simulate('click');
 
-  it('should update state when selectCard is called', () => {
-    wrapper.instance().selectCard();
-    expect(wrapper.state()).toEqual({classLabel: 'card selected'});
-  });
-
-  it('should update state back when selectCard is called twice', () => {
-    wrapper.instance().selectCard();
-    wrapper.instance().selectCard();
-    expect(wrapper.state()).toEqual({classLabel: 'card'});
-  });
-
-  it('should call selectCard() on click', () => {
-    wrapper.find('.card').simulate('click')
-
-    expect(wrapper.state()).toEqual({classLabel: 'card selected'})
-
-  })
+    expect(mockProcessSelection.mock.calls.length).toBe(1);
+  }); 
 
 });

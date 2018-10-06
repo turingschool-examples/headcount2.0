@@ -43,24 +43,31 @@ class App extends Component {
   }
 
   processSelection = (district) => {
-    if (!this.state.selection.includes(district)) {
+    if (!this.state.selection.includes(district) && district !== 
+      'close') {
+      const newData = this.state.data
+      newData.stats[district.location].classLabel = 'card selected'
       this.setState({
         selection: [...this.state.selection, district],
-        modalClass: 'hidden-modal info-modal'
+        modalClass: 'hidden-modal info-modal',
+        data: newData
+      });
+    } else if (this.state.selection.includes(district) && this.state.selection.length === 2) {
+      const newData = this.state.data
+      newData.stats[district.location].classLabel = 'card'
+      this.setState({
+        selection: this.state.selection.filter((dist) => {
+          return dist.location !== district.location
+        }),
+        data: newData
       })
     } else {
       this.setState({
-        selection: []
+        selection: [],
+        data: new DistrictRepository(kinderData)
       })
     }
 
-  }
-
-  clearSelections = () => {
-    this.setState({
-      selection: [],
-      filter: undefined
-    })
   }
 
   toggleModal = () => {
@@ -82,7 +89,7 @@ class App extends Component {
   }
 
   render() {
-    if (this.state.data && this.state.selection.length < 2) {
+    if (this.state.data) {
       return (
         <main className="app">
           <header>
@@ -100,6 +107,15 @@ class App extends Component {
               processFilter={this.processFilter}
             />
           </header>
+          {this.state.selection.length === 2 &&
+            <Comparison
+              compareDistrictAverages={this.state.data.compareDistrictAverages}
+              selection={this.state.selection} 
+              clearSelections={this.clearSelections}
+              processSelection={this.processSelection}
+
+            />
+          }
           <Info 
             modalClass={this.state.modalClass}
             untoggleModal={this.untoggleModal} 
@@ -107,35 +123,10 @@ class App extends Component {
             <CardContainer 
               data={this.state.filter || this.state.data.stats} 
               processSelection={this.processSelection}
+              selection={this.state.selection}
             />
         </main>
       );
-    } else if (this.state.selection.length === 2) {
-      return (
-        <main className="app">
-          <header>
-            <img className='logo' src="./brain-and-head.svg" alt="logo" />
-            <h1 className='banner-title'>Colorado Headcount</h1>
-            <img 
-              className='info-btn'
-              src='./information.svg'
-              alt='info-button'
-              onClick={() => {
-                this.toggleModal()
-              }}
-            />
-          </header>
-          <Info 
-            modalClass={this.state.modalClass}
-            untoggleModal={this.untoggleModal} 
-          />
-          <Comparison
-            compareDistrictAverages={this.state.data.compareDistrictAverages}
-            selection={this.state.selection} 
-            clearSelections={this.clearSelections}
-          />
-        </main>
-      )
     } else {
       return (
         <main className="app">

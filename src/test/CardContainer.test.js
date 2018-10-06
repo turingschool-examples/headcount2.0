@@ -24,12 +24,14 @@ describe('CardContainer', ()=>{
     }
   }
 
-  const mockProcessSelection = () => {
-
-  } 
+  const mockProcessSelection = jest.fn()
 
   beforeEach(()=>{
-    wrapper = shallow(<CardContainer data={mockData} processSelection={mockProcessSelection}/>);
+    wrapper = shallow(<CardContainer 
+      data={mockData} 
+      processSelection={mockProcessSelection}
+      selection={[]}
+    />);
   });
 
   it('should exist', () => {

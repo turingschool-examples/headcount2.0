@@ -9,9 +9,7 @@ describe('Info', ()=>{
 
   const mockClass = 'hidden-modal info-modal'
 
-  const mockUntoggleModal = () => {
-
-  }
+  const mockUntoggleModal = jest.fn()
 
   beforeEach(()=>{
     wrapper = shallow(<Info 
@@ -30,6 +28,8 @@ describe('Info', ()=>{
 
   it('should call untoggleModal on button click', () => {
     wrapper.find('.close-icon').simulate('click');
+
+    expect(mockUntoggleModal.mock.calls.length).toBe(1)
   })
 
 });

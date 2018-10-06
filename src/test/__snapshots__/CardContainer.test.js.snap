@@ -25,6 +25,7 @@ exports[`CardContainer should render content to the DOM 1`] = `
     }
     key="ADAMS COUNTY 14"
     processSelection={[Function]}
+    selection={Array []}
   />
 </section>
 `;
