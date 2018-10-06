@@ -4,7 +4,7 @@ import checkIcon from "./checked.svg";
 import cancelIcon from "./cancel.svg";
 import "./Card.css";
 
-const Card = ({ location, stats, handleCardClick }) => {
+const Card = ({ location, stats, display, handleCardClick }) => {
   const years = Object.keys(stats);
   const cardData = years.map(year => {
     return (
@@ -22,10 +22,10 @@ const Card = ({ location, stats, handleCardClick }) => {
   });
 
   return (
-    <div className="card" onClick={() => handleCardClick(location)}>
+    <section className={display ? "card" : "hide"} onClick={() => handleCardClick(location)}>
       <h3 className="school-name">{location}</h3>
       {cardData}
-    </div>
+    </section>
   );
 };
 

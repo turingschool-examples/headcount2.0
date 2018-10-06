@@ -13,7 +13,7 @@ class App extends Component {
   state = {
     schoolData: {},
     comparedCards: [{}, {}],
-    comparedAvg: {}
+    comparedAvg: { a: "-", b: "-", compared: "-" }
   };
 
   componentDidMount = () => {
@@ -22,18 +22,26 @@ class App extends Component {
   };
 
   handleSearch = str => {
-    let schoolData = allSchools.findAllMatches(str);
+    let schoolData = allSchools.findAllMatches();
+    const districtDirectory = Object.keys(schoolData);
+    console.log(str);
+
     if (str) {
-      schoolData = schoolData.reduce((acc, match) => {
-        acc[match] = allSchools.stats[match];
-        return acc;
-      }, {});
+      const searchResults = allSchools.findAllMatches(str);
+      districtDirectory.forEach(district => {
+        searchResults.includes(district)
+          ? (schoolData[district].display = true)
+          : (schoolData[district].display = false);
+      });
+    } else {
+      districtDirectory.forEach(
+        district => (schoolData[district].display = true)
+      );
     }
     this.setState({ schoolData });
   };
 
   handleCardClick = location => {
-    //console.log(this.state)
     const clickedDisctrict = allSchools.stats[location];
     let { comparedCards } = this.state;
 
@@ -78,7 +86,7 @@ class App extends Component {
       );
     } else {
       instructions = "click two districts to compare stats";
-      comparedAvg = {};
+      comparedAvg = { a: "-", b: "-", compared: "-" };
     }
     this.setState({ comparedAvg });
   };

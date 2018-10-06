@@ -10,6 +10,7 @@ export default class DistrictRepository {
         acc[district] = {
           location: district,
           stats: {},
+          display: true,
           clicked: false
         };
       }
