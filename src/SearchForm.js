@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 class SearchForm extends Component {
   constructor(props) {
@@ -30,7 +30,7 @@ render() {
 }
 
 SearchForm.propTypes = {
- 
+  props: PropTypes.object
 }
 
 

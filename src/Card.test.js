@@ -6,12 +6,14 @@ import DistrictRepository from './helper.js';
 import kinderData from './data/kindergartners_in_full_day_program.js';
 
 describe('Card', () => {
-  // const repository = new DistrictRepository(kinderData)
-  // const data = repository.findAllMatches()
+  const district = {school: 'Colorado', data: {2016: 0.33677}}
+
+  it('should match snapshot', () => {
+    const wrapper = shallow(<Card district={district} />)
+    expect(wrapper).toMatchSnapshot()
+  })
 
   it('should have a class of card', () => {
-    // Setup && Execution
-    const district = {school: 'Colorado', data: {2016: 0.33677}}
     const wrapper = shallow(<Card district={district} />)
     expect(wrapper.exists('.card')).toBe(true)
   })
@@ -19,9 +21,8 @@ describe('Card', () => {
   it('should render card data filtered by color', () => {
     const district = {school: 'Colorado', data: {2016: 0.33677}}
     const wrapper = shallow(<Card district={district} />)
-    // console.log(wrapper.debug());
 
-    //Read card data UIs and count how many LIs there are and assert that there is a correct amount
+    expect(wrapper.find('li').hasClass('red'))
   })
 })
 

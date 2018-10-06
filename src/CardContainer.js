@@ -5,7 +5,7 @@ import Card from './Card.js'
 import './CardContainer.css'
 
 const CardContainer = ({districts, addCompareSelections}) => {  
-  const districtCards = districts.map( district => <Card district={district} addCompareSelections={addCompareSelections}/>)
+  const districtCards = districts.map( (district, i) => <Card district={district} addCompareSelections={addCompareSelections} key={i + Date.now()}/>)
   return (
     <div className="card-container">
       { districtCards }

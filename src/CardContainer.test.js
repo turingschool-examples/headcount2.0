@@ -9,22 +9,21 @@ describe('CardContainer', () => {
   const repository = new DistrictRepository(kinderData)
   const data = repository.findAllMatches()
 
+  it('should match snapshot', () => {
+    const wrapper = shallow(<CardContainer districts={data} />)
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it('should have a class of card-container', () => {
-    // Setup && Execution
     const wrapper = shallow(<CardContainer districts={data} />)
     expect(wrapper.exists('.card-container')).toBe(true)
   })
 
 it('should render cards for all school districts passed in as props', () => {
   const wrapper = mount(<CardContainer districts={data} />)
-  // console.log(wrapper.debug());
+ 
 
   expect(wrapper.find('.card')).toHaveLength(181);
-
-
-//PSUEDOCODE- CHECK COMPONENT AND ASK: IT SHOULD DO THIS 
   })
 })
 
-
-//USE ENZYME TO RE-CREATE COMPONENTS WITH SHALLOW/MOUNT AND USE JEST ASSERTION LIBRARY FOR TESTS
