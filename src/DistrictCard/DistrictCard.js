@@ -1,16 +1,18 @@
 import React from 'react';
 import './DistrictCard.css';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const DistrictCard = ({ location, stats }) => {
 	const statsKeys = Object.keys(stats)
 	const schoolData = statsKeys.map((stat) => {
-		
+		// console.log(stat)
 		return <p 
+			key={Math.random()}
 			className={(stats[stat] > 0.5) ? 'greater-than-point-5' : 'less-than-point-5'}>
-			{stat}: {stats[stat]}</p>
+			{stat}: {stats[stat]} 
+		</p>
 	})
-	console.log(schoolData)
+	// console.log(schoolData)
 
 	return (
 		<div className='DistrictCard'>

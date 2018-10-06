@@ -7,9 +7,9 @@ ShallowWrapper {
     schoolName="colorado"
     stats={
       Object {
-        "2004": 0.24,
-        "2005": 0.543,
-        "2006": 0.789,
+        "2004": 0.624,
+        "2005": 0.124,
+        "2006": 0.224,
       }
     }
   />,
@@ -32,25 +32,25 @@ ShallowWrapper {
         />,
         Array [
           <p
-            className="less-than-point-5"
+            className="greater-than-point-5"
           >
             2004
             : 
-            0.24
+            0.624
           </p>,
           <p
-            className="greater-than-point-5"
+            className="less-than-point-5"
           >
             2005
             : 
-            0.543
+            0.124
           </p>,
           <p
-            className="greater-than-point-5"
+            className="less-than-point-5"
           >
             2006
             : 
-            0.789
+            0.224
           </p>,
         ],
       ],
@@ -72,61 +72,61 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "0.8249204263129828",
         "nodeType": "host",
         "props": Object {
           "children": Array [
             "2004",
             ": ",
-            0.24,
+            0.624,
           ],
-          "className": "less-than-point-5",
+          "className": "greater-than-point-5",
         },
         "ref": null,
         "rendered": Array [
           "2004",
           ": ",
-          0.24,
+          0.624,
         ],
         "type": "p",
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "0.007985185609500123",
         "nodeType": "host",
         "props": Object {
           "children": Array [
             "2005",
             ": ",
-            0.543,
+            0.124,
           ],
-          "className": "greater-than-point-5",
+          "className": "less-than-point-5",
         },
         "ref": null,
         "rendered": Array [
           "2005",
           ": ",
-          0.543,
+          0.124,
         ],
         "type": "p",
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "0.9305478633458517",
         "nodeType": "host",
         "props": Object {
           "children": Array [
             "2006",
             ": ",
-            0.789,
+            0.224,
           ],
-          "className": "greater-than-point-5",
+          "className": "less-than-point-5",
         },
         "ref": null,
         "rendered": Array [
           "2006",
           ": ",
-          0.789,
+          0.224,
         ],
         "type": "p",
       },
@@ -145,25 +145,25 @@ ShallowWrapper {
           />,
           Array [
             <p
-              className="less-than-point-5"
+              className="greater-than-point-5"
             >
               2004
               : 
-              0.24
+              0.624
             </p>,
             <p
-              className="greater-than-point-5"
+              className="less-than-point-5"
             >
               2005
               : 
-              0.543
+              0.124
             </p>,
             <p
-              className="greater-than-point-5"
+              className="less-than-point-5"
             >
               2006
               : 
-              0.789
+              0.224
             </p>,
           ],
         ],
@@ -185,61 +185,61 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "0.8249204263129828",
           "nodeType": "host",
           "props": Object {
             "children": Array [
               "2004",
               ": ",
-              0.24,
+              0.624,
             ],
-            "className": "less-than-point-5",
+            "className": "greater-than-point-5",
           },
           "ref": null,
           "rendered": Array [
             "2004",
             ": ",
-            0.24,
+            0.624,
           ],
           "type": "p",
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "0.007985185609500123",
           "nodeType": "host",
           "props": Object {
             "children": Array [
               "2005",
               ": ",
-              0.543,
+              0.124,
             ],
-            "className": "greater-than-point-5",
+            "className": "less-than-point-5",
           },
           "ref": null,
           "rendered": Array [
             "2005",
             ": ",
-            0.543,
+            0.124,
           ],
           "type": "p",
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "0.9305478633458517",
           "nodeType": "host",
           "props": Object {
             "children": Array [
               "2006",
               ": ",
-              0.789,
+              0.224,
             ],
-            "className": "greater-than-point-5",
+            "className": "less-than-point-5",
           },
           "ref": null,
           "rendered": Array [
             "2006",
             ": ",
-            0.789,
+            0.224,
           ],
           "type": "p",
         },

@@ -1,1 +1,9 @@
 /*APP COMPONENT RELATED CSS GOES HERE*/
+.App {
+
+}
+
+.app-header {
+	margin: auto;
+	color: red;
+}

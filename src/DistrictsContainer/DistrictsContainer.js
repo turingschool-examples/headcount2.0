@@ -4,14 +4,16 @@ import DistrictCard from '../DistrictCard/DistrictCard.js';
 import PropTypes from 'prop-types'
 
 const DistrictsContainer = ({ districts }) => {
-	const districtKeys = Object.keys(districts)
-	const districtCards = districtKeys.map((district) => {
-	// console.log(districts[district].stats)
+	// console.log(districts)
+	// const districtKeys = Object.keys(districts)
+	// const districtCards = districtKeys.map((district) => {
+		const districtCards = districts.map((district) => {
+	// console.log(district)
 		return <DistrictCard  
-
-							key={district} 
-							schoolName={district}
-							{...districts[district]}/>
+							key={Math.random()} 
+							schoolName={district.location}
+							{...district}
+						/>
 	})
 
 	return (
@@ -22,7 +24,7 @@ const DistrictsContainer = ({ districts }) => {
 }
 
 DistrictsContainer.propTypes = {
-	districts: PropTypes.object.isRequired
+	districts: PropTypes.array.isRequired
 }
 
 export default DistrictsContainer;

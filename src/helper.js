@@ -52,12 +52,13 @@ export default class DistrictRepository {
 		const districtObjects = districtKeys.map((schoolDistrict) => {
 				return allDistricts[schoolDistrict]
 			})
-
+		
 		if (!district) {
 			return districtObjects
 		}
 
 		const districtLowerCase = district.toLowerCase()
+
 
 		if (!districtKeys.includes(districtLowerCase)) {
 			return []
@@ -66,15 +67,11 @@ export default class DistrictRepository {
 		if (districtKeys.includes(districtLowerCase)) {
 			const filteredDistricts = districtObjects.filter((schoolDistrict) => {
 				const schoolDistrictLowerCase = schoolDistrict.location.toLowerCase()
-
-				if (schoolDistrictLowerCase.includes(districtLowerCase)) {
-				return schoolDistrict
-				}
+					return schoolDistrictLowerCase.includes(districtLowerCase)
 			})
 			return filteredDistricts
 		}
 
 	}
-
 
 }

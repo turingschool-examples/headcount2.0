@@ -14,8 +14,8 @@ describe('DistrictsContainer', () => {
 	let mockDistricts;
 
 	beforeEach(() => {
-		mockDistricts = {'colorado': {}, 'academy 20': {}, 'agate 300': {}} 
-		wrapper = shallow(<DistrictsContainer districts={mockDistricts} />)
+			mockDistricts = [{'colorado': {}}, {'academy 20': {}}, {'agate 300': {}}] 
+		wrapper = shallow(<DistrictsContainer districts={mockDistricts} key={Math.random()}/>)
 	})
 
 	it('matches the snapshot', () => {

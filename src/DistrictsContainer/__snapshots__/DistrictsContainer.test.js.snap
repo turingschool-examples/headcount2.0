@@ -5,11 +5,17 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DistrictsContainer
     districts={
-      Object {
-        "academy 20": Object {},
-        "agate 300": Object {},
-        "colorado": Object {},
-      }
+      Array [
+        Object {
+          "colorado": Object {},
+        },
+        Object {
+          "academy 20": Object {},
+        },
+        Object {
+          "agate 300": Object {},
+        },
+      ]
     }
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -27,13 +33,13 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <DistrictCard
-          schoolName="colorado"
+          colorado={Object {}}
         />,
         <DistrictCard
-          schoolName="academy 20"
+          academy 20={Object {}}
         />,
         <DistrictCard
-          schoolName="agate 300"
+          agate 300={Object {}}
         />,
       ],
       "className": "DistrictsContainer",
@@ -42,10 +48,11 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": "colorado",
+        "key": "0.41342311802347753",
         "nodeType": "function",
         "props": Object {
-          "schoolName": "colorado",
+          "colorado": Object {},
+          "schoolName": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -53,10 +60,11 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "academy 20",
+        "key": "0.6762061735404097",
         "nodeType": "function",
         "props": Object {
-          "schoolName": "academy 20",
+          "academy 20": Object {},
+          "schoolName": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -64,10 +72,11 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "agate 300",
+        "key": "0.23660063510950713",
         "nodeType": "function",
         "props": Object {
-          "schoolName": "agate 300",
+          "agate 300": Object {},
+          "schoolName": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -84,13 +93,13 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <DistrictCard
-            schoolName="colorado"
+            colorado={Object {}}
           />,
           <DistrictCard
-            schoolName="academy 20"
+            academy 20={Object {}}
           />,
           <DistrictCard
-            schoolName="agate 300"
+            agate 300={Object {}}
           />,
         ],
         "className": "DistrictsContainer",
@@ -99,10 +108,11 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": "colorado",
+          "key": "0.41342311802347753",
           "nodeType": "function",
           "props": Object {
-            "schoolName": "colorado",
+            "colorado": Object {},
+            "schoolName": undefined,
           },
           "ref": null,
           "rendered": null,
@@ -110,10 +120,11 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "academy 20",
+          "key": "0.6762061735404097",
           "nodeType": "function",
           "props": Object {
-            "schoolName": "academy 20",
+            "academy 20": Object {},
+            "schoolName": undefined,
           },
           "ref": null,
           "rendered": null,
@@ -121,10 +132,11 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "agate 300",
+          "key": "0.23660063510950713",
           "nodeType": "function",
           "props": Object {
-            "schoolName": "agate 300",
+            "agate 300": Object {},
+            "schoolName": undefined,
           },
           "ref": null,
           "rendered": null,
