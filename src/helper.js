@@ -88,6 +88,30 @@ export default class DistrictRepository {
       return nameMatch
     }
   }
+
+  findAverage(district){
+    const data = this.findByName(district)
+    const length = Object.values(data.stats).length
+    const average = Object.values(data.stats).reduce( (sum, num) => {
+      return sum += num
+    }, 0)/length
+
+    return Math.round(average * 1000)/1000
+  }
+
+  compareDistrictAverages(districtA, districtB){
+    const aAver = this.findAverage(districtA)
+    const bAver = this.findAverage(districtB)
+
+    const aLocal = this.findByName(districtA).location
+    const bLocal = this.findByName(districtB).location
+
+    return {
+      [aLocal]: aAver,
+      [bLocal]: bAver,
+      compared: Math.round(aAver/bAver * 1000)/1000
+    }
+  }
 }
 
 
