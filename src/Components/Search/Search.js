@@ -26,11 +26,13 @@ class Search extends Component{
   render(){
     return(
       <div className="search-container">
+      <form className="submit-form">
       <input
       name="district"
       className="search-input"
       placeholder="Search Districts"
       onChange={this.handleInput} />
+      </form>
       </div>
     )
   }

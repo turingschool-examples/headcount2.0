@@ -1,9 +1,14 @@
 .search-input{
   margin: 0 auto;
   display: flex;
-  width: 80%;
+  width: 85%;
   height: 50px;
   font-size: 2rem;
+  text-align: center;
+}
+
+.submit-form{
+  width: 85%
 }
 
 .search-container{

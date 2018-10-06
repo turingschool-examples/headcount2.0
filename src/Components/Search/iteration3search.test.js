@@ -8,10 +8,7 @@ import kinderData from '../../data/kindergartners_in_full_day_program.js';
 describe('Search', () =>  {
 
   const mockData = {
-      location: 'Turing',
-      stats: {
-        2018 : 1
-      }
+      district: 'ADAMS'
     }
 
   const district = new DistrictRepository(kinderData);
@@ -19,6 +16,17 @@ describe('Search', () =>  {
   it('should match the snapshot', () => {
 
     const wrapper = shallow(<Search {...mockData}/>);
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should c', () => {
+
+    const wrapper = shallow(<Search {...mockData}/>);
+
+    const expectedState = { district: 'Adams'}
+
+
 
     expect(wrapper).toMatchSnapshot();
   });
