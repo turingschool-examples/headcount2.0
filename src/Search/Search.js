@@ -10,7 +10,7 @@ class Search extends Component {
 		}
 	}
 
-	handleChange = (event) => {
+	handleInputChange = (event) => {
 		const search = event.target.value
 		// console.log(search)
 		this.props.searchDistrict(search)
@@ -32,7 +32,7 @@ class Search extends Component {
 					name='search'
 					placeholder='Search for district'
 					value={this.state.search}
-					onChange={this.handleChange}
+					onChange={this.handleInputChange}
 					/>
 			</form>
 		)
