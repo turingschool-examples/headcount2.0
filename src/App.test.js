@@ -109,14 +109,28 @@ describe("App component", () => {
   });
 
   it("should toggle 'display' property when district appears in search", () => {
-    wrapper.instance().handleSearch("yu")
-    expect(wrapper.state().schoolData["YUMA SCHOOL DISTRICT 1"].display).toEqual(true);
+    wrapper.instance().handleSearch("yu");
+    expect(
+      wrapper.state().schoolData["YUMA SCHOOL DISTRICT 1"].display
+    ).toEqual(true);
     expect(wrapper.state().schoolData["COLORADO"].display).toEqual(false);
 
-    wrapper.instance().handleSearch("col")
-    expect(wrapper.state().schoolData["YUMA SCHOOL DISTRICT 1"].display).toEqual(false);
+    wrapper.instance().handleSearch("col");
+    expect(
+      wrapper.state().schoolData["YUMA SCHOOL DISTRICT 1"].display
+    ).toEqual(false);
     expect(wrapper.state().schoolData["COLORADO"].display).toEqual(true);
-
   });
-  
+
+  it("should prepare compardAvg array when two cards added to comparedCards", () => {
+    expect(wrapper.state().comparedAvg).toEqual({});
+    wrapper.instance().handleCardClick("YUMA SCHOOL DISTRICT 1");
+    wrapper.instance().handleCardClick("ENGLEWOOD 1");
+
+    expect(wrapper.state().comparedAvg).toEqual({
+      "YUMA SCHOOL DISTRICT 1": 0.909,
+      "ENGLEWOOD 1": 0.885,
+      compared: 1.027
+    });
+  });
 });
