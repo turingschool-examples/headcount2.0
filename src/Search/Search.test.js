@@ -20,27 +20,31 @@ describe('Search', () => {
 		wrapper = mount(<Search searchDistrict={searchDistrictMock}/>)
 		const spy = spyOn(wrapper.instance(), 'handleInputChange')
 		wrapper.instance().forceUpdate()
-		const mockEvent = { target: { value: 'hey you guys' } }
+		const mockEvent = { target: { value: 'heyy youu guyss' } }
 		wrapper.find('.search-input').simulate('change', mockEvent)
 	})
 
 	it('updates state when handleInputChange is invoked', () => {
-
+		const mockEvent = { target: { name: 'search', value: 'heyy youu guyss'} }
+		wrapper.instance().handleInputChange(mockEvent)
+		expect(wrapper.state('search')).toBe('heyy youu guyss')
 	})
 
 	it('invokes handleSubmit on submission of form', () => {
-
+		wrapper = mount(<Search searchDistrict={searchDistrictMock}/>)
+		const spy = spyOn(wrapper.instance(), 'handleSubmit');
+		const mockEvent = { preventDefault: jest.fn() }
+		wrapper.instance().forceUpdate();
+		wrapper.find('form').simulate('submit', mockEvent)
+		expect(spy).toHaveBeenCalled()
 	})
 
 	it('invokes searchDistrict when handleSubmit is invokes', () => {
-
+		const mockEvent = { preventDefault: jest.fn() }
+		wrapper.instance().handleSubmit(mockEvent)
+		expect(searchDistrictMock).toHaveBeenCalled
 	})
 
-	it.skip('renders only the district searched by user', () => {
-		
-	})
-		// expect wrapper id to be x
-		// expect wrapper length to be 1
 })
 
 //Questions re: ideabox Search component tests
@@ -51,3 +55,5 @@ describe('Search', () => {
 //why are we calling mockEvent mockEvent
 //what is simulate
 //why is preventDefault in braces
+//HOW IS THE EVENT AN OBJECT
+//How does last test work? How does it know that searchDistrictMock has been called?
