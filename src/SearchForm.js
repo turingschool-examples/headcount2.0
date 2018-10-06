@@ -14,7 +14,7 @@ class SearchForm extends Component {
   render() {
     return(
       <div>
-        <input onKeyUp={this.handleSearch}/>
+        <input className="input" placeholder='Search Schools Here!' onKeyUp={this.handleSearch}/>
       </div>
     )
   }

@@ -18,6 +18,11 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <header
+          className="header"
+>
+          HeadCount 2.0!
+</header>,
         <SearchForm
           searchSchool={[Function]}
 />,
@@ -2746,6 +2751,18 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "HeadCount 2.0!",
+          "className": "header",
+        },
+        "ref": null,
+        "rendered": "HeadCount 2.0!",
+        "type": "header",
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -5494,6 +5511,11 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <header
+            className="header"
+>
+            HeadCount 2.0!
+</header>,
           <SearchForm
             searchSchool={[Function]}
 />,
@@ -8222,6 +8244,18 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "HeadCount 2.0!",
+            "className": "header",
+          },
+          "ref": null,
+          "rendered": "HeadCount 2.0!",
+          "type": "header",
+        },
         Object {
           "instance": null,
           "key": undefined,
