@@ -1,0 +1,19 @@
+.comparison-card h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10px;
+  position: relative;
+}
+
+.comparison-card {
+  background-color: lightgrey;
+  border: 4px solid black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+  justify-content: space-evenly;
+  opacity: 0.9;
+  padding-bottom: 10px;
+  text-align: center;
+}
