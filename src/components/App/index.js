@@ -26,7 +26,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Header />
+        <Header findAllMatching={this.findAllMatching}/>
         <CardContainer districts={kinder} />
       </div>
     );

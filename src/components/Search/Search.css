@@ -9,7 +9,6 @@ input {
   height: 2rem;
   width: 100%;
   border: 2px solid #BEBEBE;
-  border-right: none;
   padding-left: .6rem;
   font-size: 1.25rem;
   letter-spacing: 0.5px;
@@ -20,14 +19,4 @@ input {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: #9E9E9E;
-}
-
-button {
-  width: 40px;
-  color: #EFFFFF;
-  border: none;
-  border-radius: 0 5px 5px 0;
-  background-color: #009FB7;
-  font-size: 1rem;
-  padding-top: 5px;
 }
