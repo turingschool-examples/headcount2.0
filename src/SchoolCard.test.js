@@ -1,17 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import SchoolCard from './SchoolCard';
-import { shallow, mount} from 'enzyme';
+import { shallow } from 'enzyme';
+import SearchForm from './SearchForm';
 
 describe('IdeaForm', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<SearchForm searchSchool={searchSchoolMock} />)
-  })
+    let searchSchoolMock = jest.fn();
+    wrapper = shallow(<SearchForm searchSchool={searchSchoolMock} />);
+  });
 
   it('matches the snapshot', () => {
-    expect(wrapper).toMatchSnapshot()
-  })
+    expect(wrapper).toMatchSnapshot();
+  });
 
-})
+});
