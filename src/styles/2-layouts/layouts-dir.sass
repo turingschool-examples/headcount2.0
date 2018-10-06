@@ -1,0 +1,37 @@
+.l-main 
+    display: grid
+    grid-template-areas: "landing""search""results"
+
+.l-search
+    grid-area: search
+    height: 100vh
+
+.l-results
+    display: grid
+    grid-area: results
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    grid-column-gap: 2rem
+
+.l-landing
+    background-image: url(./assets/imgs/Plane.png)
+    background-size: cover
+    grid-area: landing
+    height: 100vh
+    z-index: 0
+
+
+.welcome-screen
+    display: grid
+    grid-template-areas: "title""form"
+    grid-row-gap: 2rem
+    
+    .typewriter
+        grid-area: title
+
+    .search-landing
+        align-items: center
+        display: flex
+        height: 200px
+        justify-content: space-around
+        flex-direction: column
+        grid-area: form
