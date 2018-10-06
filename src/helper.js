@@ -4,7 +4,7 @@ export default class DistrictRepository {
   }
 
   removeDupes = data => {
-    data.reduce((accu, school) => {
+    return data.reduce((accu, school) => {
       if (!accu[school.Location]) {
         accu[school.Location] = [];
       }
