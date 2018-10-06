@@ -10,7 +10,7 @@ const ComparisonCard = props => {
   if (districtNames[0] === "props" || districtNames[1] === "props") {
     return (
       <div className="apple-placeholder">
-        <img className="apple-pic" src={applePic} />
+        <img className="apple-pic" alt="apple" src={applePic} />
       </div>
     );
   } else {

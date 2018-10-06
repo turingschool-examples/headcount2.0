@@ -36,7 +36,7 @@ Card.propTypes = {
   location: PropTypes.string.isRequired,
   stats: PropTypes.object.isRequired,
   display: PropTypes.bool.isRequired,
-  handleCardClick: PropTypes.func
+  handleCardClick: PropTypes.func.isRequired
 };
 
 export default Card;
