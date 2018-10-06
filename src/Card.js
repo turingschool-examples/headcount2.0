@@ -4,7 +4,7 @@ import checkIcon from "./checked.svg";
 import cancelIcon from "./cancel.svg";
 import "./Card.css";
 
-const Card = ({ location, stats, display, clicked, handleCardClick }) => {
+const Card = ({ location, stats, display, handleCardClick }) => {
   const years = Object.keys(stats);
   const cardData = years.map(year => {
     return (

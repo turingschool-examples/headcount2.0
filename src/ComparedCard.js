@@ -4,7 +4,7 @@ import checkIcon from "./checked.svg";
 import cancelIcon from "./cancel.svg";
 import "./ComparedCard.css";
 
-const ComparedCard = ({ location, stats, display, clicked, handleCardClick }) => {
+const ComparedCard = ({ location, stats, handleCardClick }) => {
   const years = Object.keys(stats);
   const cardData = years.map(year => {
     return (
@@ -22,7 +22,7 @@ const ComparedCard = ({ location, stats, display, clicked, handleCardClick }) =>
   });
 
   return (
-    <section className="card" onClick={() => handleCardClick(location)}>
+    <section className="compared-card" onClick={() => handleCardClick(location)}>
       <h3 className="school-name">{location}</h3>
       {cardData}
     </section>
@@ -32,7 +32,7 @@ const ComparedCard = ({ location, stats, display, clicked, handleCardClick }) =>
 ComparedCard.propTypes = {
   location: PropTypes.string.isRequired,
   stats: PropTypes.object.isRequired,
-  handleCardClick: PropTypes.func,
+  handleCardClick: PropTypes.func.isRequired,
 };
 
 export default ComparedCard;

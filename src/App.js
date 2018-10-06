@@ -21,24 +21,26 @@ class App extends Component {
     this.setState({ schoolData });
   };
 
-  handleSearch = str => {
+  handleSearch = input => {
     let schoolData = allSchools.findAllMatches();
     const districtDirectory = Object.keys(schoolData);
-    console.log(str);
-
-    if (str) {
-      const searchResults = allSchools.findAllMatches(str);
-      districtDirectory.forEach(district => {
-        searchResults.includes(district)
-          ? (schoolData[district].display = true)
-          : (schoolData[district].display = false);
-      });
+    if (input) {
+      this.toggleSearchDisplay(schoolData, input, districtDirectory);
     } else {
       districtDirectory.forEach(
         district => (schoolData[district].display = true)
       );
     }
     this.setState({ schoolData });
+  };
+
+  toggleSearchDisplay = (schoolData, input, districtDirectory) => {
+    const searchResults = allSchools.findAllMatches(input);
+    districtDirectory.forEach(district => {
+      searchResults.includes(district)
+        ? (schoolData[district].display = true)
+        : (schoolData[district].display = false);
+    });
   };
 
   handleCardClick = location => {

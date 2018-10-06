@@ -3,7 +3,7 @@ p {
   padding: 0;
 }
 
-.card {
+.compared-card {
   background-color: lightgrey;
   border: 4px solid black;
   border-radius: 20px;

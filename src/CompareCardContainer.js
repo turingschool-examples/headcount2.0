@@ -27,5 +27,6 @@ export default CompareCardContainer;
 
 CompareCardContainer.propTypes = {
   comparedCards: PropTypes.array.isRequired,
-  comparedAvg: PropTypes.object.isRequired
+  comparedAvg: PropTypes.object.isRequired,
+  handleCardClick: PropTypes.func.isRequired
 };
