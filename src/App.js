@@ -56,25 +56,31 @@ class App extends Component {
   handleComparedCardClick = clickedDisctrict => {
     const comparedCards = this.state.comparedCards;
     const schoolData = this.state.schoolData;
+
     comparedCards[clickedDisctrict.clicked] = {};
     schoolData[clickedDisctrict.location].clicked = false;
+
     this.setState({ schoolData, comparedCards });
-    console.log(this.state);
+    this.prepareComparedStats();
   };
 
   prepareComparedStats = () => {
+    let comparedAvg;
     const { comparedCards } = this.state;
     if (
       Object.keys(comparedCards[0]).length &&
       Object.keys(comparedCards[1]).length
     ) {
       instructions = "click either card below to remove it";
-      const comparedAvg = allSchools.compareDistrictAverages(
+      comparedAvg = allSchools.compareDistrictAverages(
         comparedCards[0].location,
         comparedCards[1].location
       );
-      this.setState({ comparedAvg });
+    } else {
+      instructions = "click two districts to compare stats";
+      comparedAvg = {};
     }
+    this.setState({ comparedAvg });
   };
 
   render() {

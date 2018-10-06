@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import "./ComparedCard.css";
 
 const ComparedCard = props => {
+  console.log(props)
   const districtNames = Object.keys(props);
 
   return (
