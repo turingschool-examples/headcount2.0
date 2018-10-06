@@ -539,6 +539,10 @@ h1 {
   background-color: #004263;
   color: #f9f6f6;
 }
+.alphabet-results tbody .selected {
+  color: white;
+  background-color: #f56924;
+}
 
 .submit-svg {
   height: 70px;

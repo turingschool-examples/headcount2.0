@@ -5,8 +5,10 @@ class TableEntry extends Component {
   constructor(props) {
     super(props)
     this.state = { 
-      location: ''
-     }
+      location: '',
+      selected: '',
+      class: ''
+    }
   }
 
   componentDidMount () {
@@ -15,14 +17,26 @@ class TableEntry extends Component {
     })
   }
 
-  handleCompare = (event) => {
-    console.log (event.target.value)
+  handleCompare = () => {
+    if (this.state.selected) {
+      this.props.handleSelected(this.state.location, false)
+      this.setState({
+        class: '',
+        selected: !this.state.selected
+      })
+    } else {
+      this.props.handleSelected(this.state.location, true)
+      this.setState({
+        class: 'selected',
+        selected: !this.state.selected
+      })
+    }
   }
 
   render() { 
     return ( 
       <tr>
-        <td onClick={this.handleCompare} value={this.state.location}>{this.state.location}</td>
+        <td className={this.state.class} onClick={this.handleCompare} value={this.state.location}>{this.state.location}</td>
       </tr>
     )
   }
@@ -32,5 +46,6 @@ export default TableEntry
 
 
 TableEntry.propTypes = {
-  results: PropTypes.object
+  results: PropTypes.object,
+  handleSelected: PropTypes.func
 }
