@@ -1,7 +1,7 @@
-import React from 'react'
-import { shallow, mount } from 'enzyme'
-import CardContainer from './CardContainer'
-import Card from './Card'
+import React from 'react';
+import { shallow, mount } from 'enzyme';
+import CardContainer from './CardContainer';
+import Card from './Card';
 
 describe('CardContainer', () => {
   let wrapper;

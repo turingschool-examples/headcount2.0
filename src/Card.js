@@ -1,15 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Card = ({district}) => {
   
   const dataPoints = district.stats.map( year => {
     
     let classname;
-    year.data > 0.5 ? classname = 'year-data greater-than' : classname = 'year-data less-than'
+    year.data > 0.5 
+      ? classname = 'year-data greater-than' 
+      : classname = 'year-data less-than';
 
     return <p className={classname} key={Math.random()}> {year.year}: {year.data} </p>
-
   })
 
   return(
@@ -20,13 +21,11 @@ const Card = ({district}) => {
         <p>* less than 0.5</p>
       </div>
     </div>
-
   )
 }
 
 Card.propTypes = {
   district: PropTypes.object.isRequired,
-  
 }
 
-export default Card
+export default Card;
