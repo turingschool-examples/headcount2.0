@@ -15,9 +15,16 @@ class Search extends Component {
 		this.setState({ search }, this.props.searchDistrict(search))
 	}
 
+	handleSubmit = (event) => {
+		event.preventDefault()
+	}
+
 	render() {
 		return(
-			<form className='Search'>
+			<form 
+				className='Search'
+				onSubmit={this.handleSubmit}
+			>
 				<input 
 					className='search-input'
 					name='search'

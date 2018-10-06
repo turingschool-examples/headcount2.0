@@ -7,7 +7,8 @@ describe('Search', () => {
 	let wrapper
 
 	beforeEach(() => {
-		wrapper = shallow(<Search />)
+		wrapper = shallow(<Search searchDistrict={this.searchDistrict}/>)
+		
 	})
 
 	it.skip('matches the snapshot', () => {

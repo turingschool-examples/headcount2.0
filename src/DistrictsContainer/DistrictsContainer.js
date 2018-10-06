@@ -8,7 +8,7 @@ const DistrictsContainer = ({ districts }) => {
 	// const districtKeys = Object.keys(districts)
 	// const districtCards = districtKeys.map((district) => {
 		const districtCards = districts.map((district) => {
-	console.log(district)
+	// console.log(district)
 		return <DistrictCard  
 							key={Math.random()} 
 							schoolName={district.location}

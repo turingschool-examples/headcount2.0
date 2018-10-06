@@ -16,7 +16,7 @@ class App extends Component {
 	}
 
 	searchDistrict = (searchTerm) => {
-		console.log(searchTerm)
+		// console.log(this.state.data.stats)
 		// const district = new DistrictRepository(kinderData)
 		// const searchTerm = district.findAllMatches(string)	
 		this.setState({ searchTerm })
@@ -38,6 +38,7 @@ class App extends Component {
 
   render() {
   	const { data, searchTerm } = this.state
+  	{console.log(this.state.searchTerm)}
     return (
       <div className='App'>
       	<h1 className='app-header'>Headcount 2.7</h1>
