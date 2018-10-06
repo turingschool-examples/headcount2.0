@@ -1,11 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CardContainer should have cards 1`] = `
-<CardContainer
-  districts={Object {}}
+exports[`CardContainer matches the snapshot 1`] = `
+<main
+  className="CardContainer"
 >
-  <main
-    className="CardContainer"
+  <Card
+    key="0"
   />
-</CardContainer>
+  <Card
+    key="1"
+  />
+</main>
 `;

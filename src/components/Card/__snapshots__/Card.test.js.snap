@@ -3,5 +3,7 @@
 exports[`Card should match the snapshot 1`] = `
 <article
   className="Card"
-/>
+>
+  <h2 />
+</article>
 `;

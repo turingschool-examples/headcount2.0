@@ -1,9 +1,10 @@
 import React from 'react'
 import './Card.css'
 
-const Card = () => {
+const Card = ({}) => {
   return(
     <article className="Card">
+      <h2>{}</h2>
     </article>
   )
 }
