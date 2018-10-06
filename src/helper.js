@@ -35,10 +35,10 @@ export default class DistrictRepository {
 		if (!district) {
 			return undefined
 		} 
-
+		const allDistricts = this.stats
 		const districtLowerCase = district.toLowerCase()
-		if (this.stats[districtLowerCase]) {
-			return this.stats[districtLowerCase]
+		if (allDistricts[districtLowerCase]) {
+			return allDistricts[districtLowerCase]
 		}
 
 		return undefined

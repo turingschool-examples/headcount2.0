@@ -3,7 +3,9 @@
 exports[`Search matches the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Search />,
+  Symbol(enzyme.__unrendered__): <Search
+    searchDistrict={[MockFunction]}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -20,8 +22,12 @@ ShallowWrapper {
       "children": <input
         className="search-input"
         name="search"
+        onChange={[Function]}
+        placeholder="Search for district"
+        value=""
       />,
       "className": "Search",
+      "onSubmit": [Function],
     },
     "ref": null,
     "rendered": Object {
@@ -31,6 +37,9 @@ ShallowWrapper {
       "props": Object {
         "className": "search-input",
         "name": "search",
+        "onChange": [Function],
+        "placeholder": "Search for district",
+        "value": "",
       },
       "ref": null,
       "rendered": null,
@@ -47,8 +56,12 @@ ShallowWrapper {
         "children": <input
           className="search-input"
           name="search"
+          onChange={[Function]}
+          placeholder="Search for district"
+          value=""
         />,
         "className": "Search",
+        "onSubmit": [Function],
       },
       "ref": null,
       "rendered": Object {
@@ -58,6 +71,9 @@ ShallowWrapper {
         "props": Object {
           "className": "search-input",
           "name": "search",
+          "onChange": [Function],
+          "placeholder": "Search for district",
+          "value": "",
         },
         "ref": null,
         "rendered": null,
