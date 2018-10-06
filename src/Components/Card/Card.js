@@ -5,7 +5,9 @@ const Card = ({location, stats}) => {
 
   const yearsArray = Object.keys(stats);
 
-  const districtData = yearsArray.map(year => { return `${year}: ${stats[year] }`})
+  // console.log(stats)
+
+  const districtData = yearsArray.map((year, index) => { return <p key={index}>{year}: {stats[year]}</p>})
 
   return(
     <div className="card-div">
