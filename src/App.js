@@ -9,7 +9,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      cards: []
+      cards: [],
+      compareCards: []
     };
   }
 
@@ -23,6 +24,12 @@ class App extends Component {
     let search = new DistrictRepository(kinderData);
     let data = search.findAllMatches(string);
     this.setState({ cards: data });
+  }
+
+  compareAvrg = (str1, str2) => {
+    let compare = new DistrictRepository(kinderData);
+    let data = compare.compareDistrictAverages(str1, str2);
+    this.setState({compareCards: data})
   }
 
   render() {

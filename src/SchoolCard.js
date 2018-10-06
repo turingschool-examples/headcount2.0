@@ -9,7 +9,7 @@ const SchoolCard = ({ data }) => {
           Object.keys(data[location]).map(year => 
             <li key={Object.keys(data)} 
               className={data[location][year] < 0.5 ? 'isLess' : 'isMore'}>
-              {year}: {data[location][year]}</li>))};
+              {year}: {data[location][year]}</li>))}
       </ul>
       <button>Compare Data</button>
     </div>
