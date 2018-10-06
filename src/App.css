@@ -9,18 +9,26 @@ body {
 	background-color: #E9EBEE;
 }
 
+
 .header {
 	background-color: #008b38;
 }
 
+.icon-span {
+  padding: 0 0 0 0.5rem;
+}
+
+.fa-graduation-cap {
+	color: #FFF;
+}
 .app-site-title {
-	margin: 0.5rem auto 2rem;
+	margin: 0 auto 2rem;
   color: #FFF;
   font-size: 4rem;
-  width: 25%;
+  width: 46%;
   text-align: center;
   font-family: 'Arvo', serif;
-  padding: 0 0 0.5rem 0;
+  padding: 1rem 0 1rem 0;
 }
 
 /*font-family: 'Roboto Slab', serif;
