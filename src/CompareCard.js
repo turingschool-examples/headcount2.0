@@ -7,13 +7,18 @@ const CompareCard = ({compareSelections, compareDistrictAverages}) => {
   if (compareSelections.length === 2) {
     const district1 = compareSelections[0]
     const district2 = compareSelections[1]
+  
+    const comparedObj = compareDistrictAverages(district1.school, district2.school)
 
-    // const comparedObj = compareDistrictAverages(compareSelections[0].school, compareSelections[1].school)
-    
+
     return(
           <div className="compare-card">
              <Card district={district1}/> 
-             <section className="comparison"></section>
+             <section className="comparison">
+              <h3>{district1.school}: {comparedObj[district1.school]}</h3>
+              <h3>----{comparedObj.compared}----</h3>
+              <h3>{district2.school}: {comparedObj[district2.school]}</h3>
+             </section>
              <Card district={district2}/> 
           </div>
       )
@@ -25,7 +30,8 @@ const CompareCard = ({compareSelections, compareDistrictAverages}) => {
 }
 
 CompareCard.propTypes = {
- 
+  compareSelections: PropTypes.arrayOf(PropTypes.object),
+  compareDistrictAverages: PropTypes.func
 }
 
 export default CompareCard; 

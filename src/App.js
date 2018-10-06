@@ -41,9 +41,16 @@ class App extends Component {
   const name = card.children[0].innerText
 
   const schoolObj = {...this.state.data.findAllMatches(name)} 
+
+  if (this.state.compareSelections.length < 2) {
     this.setState({
       compareSelections: [{...schoolObj[0]}, ...this.state.compareSelections] 
+    })   
+  } else {
+    this.setState({
+      compareSelections: [{...schoolObj[0]}]
     })
+  }
  }
 
  render() {
@@ -51,8 +58,10 @@ class App extends Component {
     if (districts.length > 0) { 
       return (
         <div>
-          <h1>Headcount 2.0</h1>
-          <SearchForm filterCards={this.filterCards} />
+          <nav>
+            <h1>HeadCount 2.0</h1>
+            <SearchForm filterCards={this.filterCards} />
+          </nav> 
           <CompareCard compareSelections={compareSelections} 
                        compareDistrictAverages={data.compareDistrictAverages}
           />

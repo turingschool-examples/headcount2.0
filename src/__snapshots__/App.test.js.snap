@@ -2,10 +2,18 @@
 
 exports[`App should display school districts 1`] = `
 <div>
+  <h1>
+    Headcount 2.0
+  </h1>
   <SearchForm
     filterCards={[Function]}
   />
+  <CompareCard
+    compareDistrictAverages={[Function]}
+    compareSelections={Array []}
+  />
   <CardContainer
+    addCompareSelections={[Function]}
     districts={
       Array [
         Object {

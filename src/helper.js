@@ -10,6 +10,8 @@ export default class DistrictRepository {
 
       return district; 
     }, {})
+    
+    this.compareDistrictAverages = this.compareDistrictAverages.bind(this)
   }
 
   findByName(name) {

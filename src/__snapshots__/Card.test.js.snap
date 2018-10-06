@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match snapshot 1`] = `
+<div
+  className="card"
+  onClick={[Function]}
+>
+  <h3
+    className="school-name"
+  >
+    Colorado
+  </h3>
+  <ul
+    className="school-data"
+  >
+    <li
+      className="red"
+      key="1538860756562"
+    >
+      2016
+       : 
+      0.33677
+       
+    </li>
+  </ul>
+</div>
+`;
