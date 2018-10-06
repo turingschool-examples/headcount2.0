@@ -22,7 +22,10 @@ const Card = ({ location, stats, display, handleCardClick }) => {
   });
 
   return (
-    <section className={display ? "card" : "hide"} onClick={() => handleCardClick(location)}>
+    <section
+      className={display ? "card" : "hide"}
+      onClick={() => handleCardClick(location)}
+    >
       <h3 className="school-name">{location}</h3>
       {cardData}
     </section>
@@ -32,7 +35,8 @@ const Card = ({ location, stats, display, handleCardClick }) => {
 Card.propTypes = {
   location: PropTypes.string.isRequired,
   stats: PropTypes.object.isRequired,
-  handleCardClick: PropTypes.func,
+  display: PropTypes.bool.isRequired,
+  handleCardClick: PropTypes.func
 };
 
 export default Card;

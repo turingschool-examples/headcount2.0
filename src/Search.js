@@ -5,8 +5,8 @@ import "./Search.css";
 class Search extends Component {
   state = { input: "" };
 
-  handleChange = e => {
-    const input = e.target.value;
+  handleChange = event => {
+    const input = event.target.value;
     this.props.handleSearch(input);
     this.setState({ input });
   };

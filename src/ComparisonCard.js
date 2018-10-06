@@ -7,7 +7,6 @@ import "./ComparisonCard.css";
 
 const ComparisonCard = props => {
   const districtNames = Object.keys(props);
-  console.log(districtNames);
   if (districtNames[0] === "props" || districtNames[1] === "props") {
     return (
       <div className="apple-placeholder">
@@ -36,6 +35,10 @@ const ComparisonCard = props => {
 
 ComparisonCard.defaultProps = {
   props: PropTypes.obj
+};
+
+ComparisonCard.propTypes = {
+  compared: PropTypes.number
 };
 
 export default ComparisonCard;

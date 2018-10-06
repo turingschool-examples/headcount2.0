@@ -5,10 +5,18 @@ import BlankCard from "./BlankCard";
 import PropTypes from "prop-types";
 import "./CompareCardContainer.css";
 
-const CompareCardContainer = ({ comparedCards, comparedAvg, handleCardClick }) => {
+const CompareCardContainer = ({
+  comparedCards,
+  comparedAvg,
+  handleCardClick
+}) => {
   const preparedCards = comparedCards.map(card => {
     return Object.keys(card).length ? (
-      <ComparedCard key={card.location} {...card} handleCardClick={handleCardClick}/>
+      <ComparedCard
+        key={card.location}
+        {...card}
+        handleCardClick={handleCardClick}
+      />
     ) : (
       <BlankCard />
     );

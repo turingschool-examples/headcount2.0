@@ -1,5 +1,4 @@
 import React from "react";
-import applePic from "./images/apple.png";
 
 import "./BlankCard.css";
 

@@ -60,10 +60,10 @@ class App extends Component {
   };
 
   addClickedProp = (clickedDisctrict, comparedCards) => {
-    for (let i = 0; i < 2; i++) {
-      if (!Object.keys(comparedCards[i]).length) {
-        clickedDisctrict.clicked = i;
-        comparedCards[i] = clickedDisctrict;
+    for (let index = 0; index < 2; index++) {
+      if (!Object.keys(comparedCards[index]).length) {
+        clickedDisctrict.clicked = index;
+        comparedCards[index] = clickedDisctrict;
         break;
       }
     }

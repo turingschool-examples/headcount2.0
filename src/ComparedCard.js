@@ -22,7 +22,10 @@ const ComparedCard = ({ location, stats, handleCardClick }) => {
   });
 
   return (
-    <section className="compared-card" onClick={() => handleCardClick(location)}>
+    <section
+      className="compared-card"
+      onClick={() => handleCardClick(location)}
+    >
       <h3 className="school-name">{location}</h3>
       {cardData}
     </section>
@@ -32,7 +35,7 @@ const ComparedCard = ({ location, stats, handleCardClick }) => {
 ComparedCard.propTypes = {
   location: PropTypes.string.isRequired,
   stats: PropTypes.object.isRequired,
-  handleCardClick: PropTypes.func.isRequired,
+  handleCardClick: PropTypes.func.isRequired
 };
 
 export default ComparedCard;

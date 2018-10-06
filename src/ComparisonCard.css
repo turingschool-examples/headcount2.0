@@ -27,9 +27,10 @@
   background-color: lightgray;
   border: 2px solid black;
   border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
   margin: auto;
   padding: 4px;
-  font-size: 16px;
   width: 60px;
 }
 
