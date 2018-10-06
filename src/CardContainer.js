@@ -6,7 +6,7 @@ const CardContainer = ({ cards, setStateOfCompare }) => {
     <SchoolCard location={card} 
       data={cards[card]} 
       key={Object.keys(cards[card])} 
-      setStateOfCompare={setStateOfCompare}/>
+      setStateOfCompare={setStateOfCompare} />
   );
   return (
     <div className='card-container'>
