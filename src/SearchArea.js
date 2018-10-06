@@ -11,7 +11,7 @@ class SearchArea extends Component {
   render() { 
     return ( 
       <section className="l-search search-area">
-        <FilterResults />
+        <FilterResults alphabetQuery={this.props.alphabetQuery}/>
         <FilteredResults />
       </section>
     )

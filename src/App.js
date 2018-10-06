@@ -31,13 +31,20 @@ class App extends Component {
     })
   }
 
+  alphabetQuery = (letter) => {
+    this.setState({
+      letter: letter
+    })
+  };
+
+
 
   render() {
     return (
       <div className='body'>
         <Landing query={this.query}/>        
         <main className='l-main'>
-          <SearchArea />
+          <SearchArea alphabetQuery={this.alphabetQuery}/>
           <ResultsContainer results={this.state.results}/>
         </main>
       </div>
