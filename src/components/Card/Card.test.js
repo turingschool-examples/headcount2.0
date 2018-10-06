@@ -4,9 +4,13 @@ import Card from './index'
 
 describe('Card', () => {
   let wrapper;
+  let location;
+  let data;
 
   beforeEach(() => {
-    wrapper = shallow(<Card />)
+    location = 'COLORADO'
+    data = {2018: 1}
+    wrapper = shallow(<Card location={location} data={data}/>)
   })
 
   it('should match the snapshot', () => {

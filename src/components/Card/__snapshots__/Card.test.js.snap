@@ -4,6 +4,17 @@ exports[`Card should match the snapshot 1`] = `
 <article
   className="Card"
 >
-  <h2 />
+  <h2>
+    COLORADO
+  </h2>
+  <ul>
+    <li
+      key="0"
+    >
+      2018
+      : 
+      1
+    </li>
+  </ul>
 </article>
 `;

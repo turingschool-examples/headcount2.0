@@ -6,9 +6,11 @@ exports[`CardContainer matches the snapshot 1`] = `
 >
   <Card
     key="0"
+    location="COLORADO"
   />
   <Card
     key="1"
+    location="ALAMOSA"
   />
 </main>
 `;
