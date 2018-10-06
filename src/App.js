@@ -14,7 +14,8 @@ class App extends Component {
     super(props) 
     this.state = {
       data: null,
-      query: ''
+      query: '',
+      resultsAlphabet: []
     }
   }
 
@@ -34,7 +35,7 @@ class App extends Component {
   alphabetQuery = (letter) => {
     this.setState({
       letter: letter,
-      results: district.findAllMatches(letter)
+      resultsAlphabet: district.findAllMatches(letter)
     })
   };
 
@@ -45,7 +46,7 @@ class App extends Component {
       <div className='body'>
         <Landing query={this.query}/>        
         <main className='l-main'>
-          <SearchArea alphabetQuery={this.alphabetQuery}/>
+          <SearchArea alphabetQuery={this.alphabetQuery} results={this.state.resultsAlphabet}/>
           <ResultsContainer results={this.state.results}/>
         </main>
       </div>

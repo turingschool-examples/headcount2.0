@@ -41,7 +41,11 @@ export default class DistrictRepository {
       if (entry.location.includes(capitalised)) return entry
     })
     filtered = filtered.filter(entry => {
-      if (entry.location[0] === capitalised[0] && entry.location[1] === capitalised[1]) return entry
+      if (capitalised.length > 1) {
+        if (entry.location[0] === capitalised[0] && entry.location[1] === capitalised[1]) return entry
+      } else {
+        if (entry.location[0] === capitalised[0]) return entry
+      }
     })
     return filtered
   };

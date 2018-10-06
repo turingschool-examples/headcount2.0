@@ -358,6 +358,7 @@ h1 {
 .l-search {
   grid-area: search;
   height: 100vh;
+  overflow: scroll;
 }
 
 .l-results {
@@ -488,7 +489,6 @@ h1 {
   color: black;
   font-size: 24px;
   height: 3rem;
-  padding-left: 15px;
   text-align: center;
   width: 50vw;
 }
@@ -515,6 +515,29 @@ h1 {
   background-color: #f9f6f6;
   cursor: pointer;
   font-weight: 700;
+}
+
+.alphabet-results {
+  font-size: 20px;
+  margin: auto;
+  text-align: center;
+  width: 50vw;
+}
+.alphabet-results thead {
+  background-color: #f56924;
+  color: #f9f6f6;
+}
+.alphabet-results th {
+  height: 2rem;
+  margin-bottom: 20px;
+}
+.alphabet-results tbody tr {
+  color: #f56924;
+  height: 50px;
+}
+.alphabet-results tbody tr:nth-child(even) {
+  background-color: #004263;
+  color: #f9f6f6;
 }
 
 .submit-svg {

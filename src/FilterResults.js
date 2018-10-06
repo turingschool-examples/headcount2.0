@@ -35,10 +35,19 @@ class FilterResults extends Component {
         "X",
         "Y",
         "Z"
-      ]
+      ],
+      query: ''
     }
   }
 
+  handleChange = (event) => {
+    event.preventDefault()
+   
+    this.props.alphabetQuery(event.target.value)
+    this.setState({
+      query: event.target.value || ''
+    })
+  }
 
   render() {
     return (
@@ -50,7 +59,7 @@ class FilterResults extends Component {
         </ul>
         <form
           className="search-main "
-          onSubmit={this.handleSubmit}
+          onSubmit={this.handleChange}
           href="#results-page"
         >
           <input
@@ -68,6 +77,6 @@ class FilterResults extends Component {
 
 export default FilterResults
 
-NavLetter.propTypes = {
+FilterResults.propTypes = {
   alphabetQuery: PropTypes.func
 }
