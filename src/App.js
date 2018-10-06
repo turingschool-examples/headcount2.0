@@ -13,7 +13,7 @@ class App extends Component {
   state = {
     schoolData: {},
     comparedCards: [{}, {}],
-    comparedAvg: { a: "...", b: "...", compared: "..." }
+    comparedAvg: {}
   };
 
   componentDidMount = () => {
@@ -99,7 +99,7 @@ class App extends Component {
 
   resetComparisonCard = () => {
     instructions = "click any two districts to compare stats";
-    const comparedAvg = { a: "...", b: "...", compared: "..." };
+    const comparedAvg = {};
     this.setState({ comparedAvg });
   };
 

@@ -31,11 +31,11 @@
   margin-left: 40px;
 }
 
-.arrow-icon {
-  height: 26px;
+.pencil-icon {
+  height: 42px;
   margin-right: 26px;
   position: relative;
-  top: 5px;
+  top: 14px;
   transform: rotate(45deg);
 }
 
@@ -43,4 +43,20 @@
   margin-left: 0;
   margin-left: 26px;
   transform: rotate(225deg);
+}
+
+.apple-placeholder {
+  background-color: #9b9b9b;
+  border: 8px solid black;
+  border-radius: 20px;
+  height: 270px;
+  margin: 10px;
+  opacity: 0.9;
+  width: 280px;
+}
+
+.apple-pic {
+  display: flex;
+  height: 120px;
+  margin: 65px auto 0 auto;
 }

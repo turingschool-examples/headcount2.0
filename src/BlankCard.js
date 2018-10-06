@@ -6,7 +6,7 @@ import "./BlankCard.css";
 const BlankCard = () => {
   return (
     <div className="blank-card">
-      <img className="apple-pic" src={applePic} />
+      <h3 className="click-district">click district</h3>
     </div>
   );
 };
