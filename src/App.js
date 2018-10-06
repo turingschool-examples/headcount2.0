@@ -13,7 +13,7 @@ class App extends Component {
   state = {
     schoolData: {},
     comparedCards: [{}, {}],
-    comparedAvg: { a: "-", b: "-", compared: "-" }
+    comparedAvg: { a: "...", b: "...", compared: "..." }
   };
 
   componentDidMount = () => {
@@ -24,13 +24,10 @@ class App extends Component {
   handleSearch = input => {
     const schoolData = allSchools.findAllMatches();
     const districtDirectory = Object.keys(schoolData);
-    if (input) {
-      this.toggleSearchDisplay(schoolData, input, districtDirectory);
-    } else {
-      districtDirectory.forEach(
-        district => (schoolData[district].display = true)
-      );
-    }
+    input
+      ? this.toggleSearchDisplay(schoolData, input, districtDirectory)
+      : this.displayAllCards(schoolData, districtDirectory);
+
     this.setState({ schoolData });
   };
 
@@ -41,6 +38,12 @@ class App extends Component {
         ? (schoolData[district].display = true)
         : (schoolData[district].display = false);
     });
+  };
+
+  displayAllCards = (schoolData, districtDirectory) => {
+    districtDirectory.forEach(
+      district => (schoolData[district].display = true)
+    );
   };
 
   handleCardClick = location => {
@@ -88,7 +91,7 @@ class App extends Component {
       );
     } else {
       instructions = "click two districts to compare stats";
-      comparedAvg = { a: "-", b: "-", compared: "-" };
+      comparedAvg = { a: "...", b: "...", compared: "..." };
     }
     this.setState({ comparedAvg });
   };
