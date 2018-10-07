@@ -6,8 +6,11 @@ import './CardContainer.css'
 const CardContainer = ({districts}) => {
 
   const cards = Object.keys(districts).map((district, index) => {
-
-    return <Card key={index} location={district} {...districts[district]} />
+    const stats = districts[district].data
+    console.log(stats)
+    const stats2 = districts[district].stats
+    console.log(stats2)
+    return <Card key={index} location={district} data={stats} />
   })
 
   return(
