@@ -5,7 +5,7 @@ import InputField from './InputField';
 
 const Header = (props) => {
   return (
-    <header>
+    <header id="page-top">
       <img className='logo' src="./brain-and-head.svg" alt="logo" />
       <h1 className='banner-title'>Colorado Kindercount</h1>
       <img 

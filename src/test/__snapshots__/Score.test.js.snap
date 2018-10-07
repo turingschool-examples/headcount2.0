@@ -11,7 +11,6 @@ exports[`Score should render content to the DOM 1`] = `
       alt="down"
       src="./drop-down-arrow.svg"
     />
-     
     2004
     : 
     0.228

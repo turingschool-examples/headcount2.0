@@ -12,6 +12,7 @@ exports[`App should render content to the DOM 1`] = `
     modalClass="hidden-modal info-modal"
     untoggleModal={[Function]}
   />
+  <TopArrow />
   <CardContainer
     data={
       DistrictRepository {
@@ -3133,6 +3134,7 @@ exports[`App should render the comparison page if selection.length is === 2 1`] 
     modalClass="hidden-modal info-modal"
     untoggleModal={[Function]}
   />
+  <TopArrow />
   <CardContainer
     data={
       DistrictRepository {

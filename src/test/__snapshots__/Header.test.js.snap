@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header should render content to the DOM 1`] = `
-<header>
+<header
+  id="page-top"
+>
   <img
     alt="logo"
     className="logo"
