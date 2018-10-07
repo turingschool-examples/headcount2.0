@@ -4,8 +4,9 @@ import { shallow } from 'enzyme';
 import App from '../../../src/App';
 import Search from '../../../src/Search';
 
+
 describe('App', () => {
-  it('should render a CardsContainer and Search component', () => {
+  it('should render a CardsContainer, Search, and DisplayComparedContainer component', () => {
     const wrapper = shallow(<App />);    
 
     expect(wrapper).toMatchSnapshot();

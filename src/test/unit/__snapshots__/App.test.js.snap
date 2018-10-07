@@ -1,15 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App should render a CardsContainer and Search component 1`] = `
+exports[`App should render a CardsContainer, Search, and DisplayComparedContainer component 1`] = `
 <div
   className="App"
 >
   <Search
     searchSchoolData={[Function]}
   />
-  <h1>
+  <h4
+    className="App-title"
+  >
     HeadCount 2.0
-  </h1>
+  </h4>
+  <DisplayComparedContainer />
   <CardsContainer
     schoolData={
       Array [

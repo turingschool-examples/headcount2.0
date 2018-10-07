@@ -1,10 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Search should render a search input 1`] = `
-<input
-  className="search-component"
-  onChange={[Function]}
-  placeholder="Search for school"
-  value=""
-/>
+<div
+  className="Search-Component"
+>
+  <input
+    onChange={[Function]}
+    placeholder="Search for school"
+    value=""
+  />
+</div>
 `;

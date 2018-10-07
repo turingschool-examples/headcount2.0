@@ -3,6 +3,7 @@ import kindergartners_in_full_day_program from './data/kindergartners_in_full_da
 import DistrictRepository from './helper';
 import CardsContainer from './CardsContainer';
 import Search from './Search';
+import DisplayComparedContainer from './DisplayComparedContainer';
 import './App.css';
 
 class App extends Component {
@@ -29,7 +30,8 @@ class App extends Component {
     return (
       <div className="App">
         <Search searchSchoolData={this.searchSchoolData}/>
-        <h1>HeadCount 2.0</h1>
+        <h4 className="App-title">HeadCount 2.0</h4>
+        <DisplayComparedContainer />
         <CardsContainer schoolData={this.state.schoolData} />
       </div>
     );
