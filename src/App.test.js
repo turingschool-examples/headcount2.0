@@ -153,4 +153,17 @@ describe("App component", () => {
     });
     expect(results).toHaveLength(181);
   });
+
+  
+  it("toggleSearchDisplay should toggle display property", () => {
+    const input = "ASDF"
+
+    wrapper.instance().displayAllCards(schoolData, districtDirectory);
+    wrapper.setState({ schoolData });
+    expect(wrapper.state().schoolData["COLORADO"].display).toEqual(true);
+    
+    wrapper.instance().toggleSearchDisplay(schoolData, input, districtDirectory)
+    expect(wrapper.state().schoolData["COLORADO"].display).toEqual(false);
+
+  });
 });
