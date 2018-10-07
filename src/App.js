@@ -6,7 +6,7 @@ import CompareCardContainer from "./CompareCardContainer";
 import Search from "./Search";
 import "./App.css";
 
-const allSchools = new DistrictRepository(kinderData);
+const allDistricts = new DistrictRepository(kinderData);
 
 class App extends Component {
   state = {
@@ -15,41 +15,41 @@ class App extends Component {
     comparedAvg: {},
     instructions: "click any two districts to compare stats"
   };
-
+  
   componentDidMount = () => {
-    const schoolData = allSchools.findAllMatches();
+    const schoolData = allDistricts.findAllMatches();
     this.setState({ schoolData });
   };
-
+  
   handleSearch = input => {
-    const schoolData = allSchools.findAllMatches();
+    const schoolData = allDistricts.findAllMatches();
     const districtDirectory = Object.keys(schoolData);
     input
-      ? this.toggleSearchDisplay(schoolData, input, districtDirectory)
-      : this.displayAllCards(schoolData, districtDirectory);
-
+    ? this.toggleSearchDisplay(schoolData, input, districtDirectory)
+    : this.displayAllCards(schoolData, districtDirectory);
+    
     this.setState({ schoolData });
   };
-
+  
   toggleSearchDisplay = (schoolData, input, districtDirectory) => {
-    const searchResults = allSchools.findAllMatches(input);
+    const searchResults = allDistricts.findAllMatches(input);
     districtDirectory.forEach(district => {
       searchResults.includes(district)
-        ? (schoolData[district].display = true)
-        : (schoolData[district].display = false);
+      ? (schoolData[district].display = true)
+      : (schoolData[district].display = false);
     });
   };
-
+  
   displayAllCards = (schoolData, districtDirectory) => {
     districtDirectory.forEach(
       district => (schoolData[district].display = true)
     );
   };
-
+  
   handleCardClick = location => {
-    const clickedDisctrict = allSchools.stats[location];
+    const clickedDisctrict = allDistricts.stats[location];
     let { comparedCards } = this.state;
-
+    
     if (clickedDisctrict.clicked !== false) {
       this.handleComparedCardClick(clickedDisctrict);
       return;
@@ -90,7 +90,7 @@ class App extends Component {
 
   prepareComparisonCard = comparedCards => {
     const instructions = "click either card below to remove it";
-    const comparedAvg = allSchools.compareDistrictAverages(
+    const comparedAvg = allDistricts.compareDistrictAverages(
       comparedCards[0].location,
       comparedCards[1].location
     );

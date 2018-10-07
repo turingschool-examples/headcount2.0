@@ -3,20 +3,23 @@ import ReactDOM from "react-dom";
 import { shallow, mount } from "enzyme";
 import Card from "./Card";
 import ComparedCard from "./ComparedCard";
-import CompareCardContainer from "./CompareCardContainer";
+import CardContainer from "./CardContainer";
 import DistrictRepository from "./helper.js";
 import kinderData from "./data/kindergartners_in_full_day_program.js";
 import App from "./App";
 
 describe("App component", () => {
   let wrapper;
-  let handleMockCardClick;
-  const district = new DistrictRepository(kinderData);
-  const allDistricts = district.stats;
+  //let handleMockCardClick;
+  const allDistricts = new DistrictRepository(kinderData);
+  const schoolData = allDistricts.stats;
+  const districtDirectory = Object.keys(schoolData);
 
   beforeEach(() => {
-    handleMockCardClick = jest.fn();
+    //handleMockCardClick = jest.fn();
     wrapper = shallow(<App />);
+    //wrapper.instance().displayAllCards(schoolData, districtDirectory)
+    //wrapper.setState({ schoolData })
   });
 
   it("matches the snapshot", () => {
@@ -29,8 +32,8 @@ describe("App component", () => {
   });
 
   it("should add helper dataset to state", () => {
-    wrapper.setState({ schoolData: allDistricts });
-    expect(wrapper.state().schoolData).toEqual(district.stats);
+    wrapper.setState({ schoolData });
+    expect(wrapper.state().schoolData).toEqual(allDistricts.stats);
   });
 
   it("should add two clicked cards to comparedCards array in state", () => {
@@ -77,14 +80,13 @@ describe("App component", () => {
     const initialInstructions = "click any two districts to compare stats";
     const compareInstructions = "click either card below to remove it";
     expect(wrapper.state().instructions).toEqual(initialInstructions);
-
-    wrapper.instance().handleCardClick("DENVER COUNTY 1");
+    wrapper.instance().handleCardClick("GREELEY 6");
     expect(wrapper.state().instructions).toEqual(initialInstructions);
 
-    wrapper.instance().handleCardClick("DURANGO 9-R");
+    wrapper.instance().handleCardClick("HANOVER 28");
     expect(wrapper.state().instructions).toEqual(compareInstructions);
 
-    wrapper.instance().handleCardClick("DURANGO 9-R");
+    wrapper.instance().handleCardClick("HANOVER 28");
     expect(wrapper.state().instructions).toEqual(initialInstructions);
   });
 
@@ -132,5 +134,23 @@ describe("App component", () => {
       "ENGLEWOOD 1": 0.885,
       compared: 1.027
     });
+  });
+
+  it("displayAllCards should set all districts do be displayed", () => {
+    let results;
+    wrapper.instance().handleSearch("yu");
+
+    results = districtDirectory.filter(district => {
+      return wrapper.state().schoolData[district].display === true;
+    });
+    expect(results).toHaveLength(3);
+
+    wrapper.instance().displayAllCards(schoolData, districtDirectory);
+    wrapper.setState({ schoolData });
+
+    results = districtDirectory.filter(district => {
+      return wrapper.state().schoolData[district].display === true;
+    });
+    expect(results).toHaveLength(181);
   });
 });
