@@ -16,10 +16,10 @@ class App extends Component {
   findAllMatches = (query) => {
     const kinder = new DistrictRepository(kinderData)
     const matchingNames = kinder.findAllMatches(query)
-    console.log(query)
+    console.log(`query: ${query}, matchingName: ${matchingNames}`)
     matchingNames.forEach(name => {
       const district = kinder.findByName(name)
-      this.setState({kinder: district.stats})
+      this.setState({kinder: district})
     })
 
   }

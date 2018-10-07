@@ -11,13 +11,8 @@ class Search extends Component {
   }
 
   handleInputChange = (event) => {
-    const { name, value } = event.target
-
-    this.setState({ [name]: value })
-    this.submitQuery()
-  }
-
-  submitQuery = () => {
+    const { value } = event.target
+    this.state = {query: value}
     this.props.findAllMatches(this.state.query);
   }
 

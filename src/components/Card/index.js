@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import './Card.css'
 
 const Card = ({location, data}) => {
-  console.log(data)
+  console.log(location)
   return(
     <article className="Card">
       <h2 className="Card-title">{location}</h2>

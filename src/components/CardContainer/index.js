@@ -4,7 +4,11 @@ import Card from '../Card'
 import './CardContainer.css'
 
 const CardContainer = ({districts}) => {
-  const cards = Object.keys(districts).map((district, index) => <Card key={index} location={district} {...districts[district]} />)
+
+  const cards = Object.keys(districts).map((district, index) => {
+    console.log(`district: ${district}`)
+    return <Card key={index} location={district} {...districts[district]} />
+  })
 
   return(
     <main className="CardContainer">
