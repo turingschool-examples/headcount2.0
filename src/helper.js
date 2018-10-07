@@ -46,8 +46,9 @@ export default class DistrictRepository {
   }
   
   findAllMatches = (name = '') => {
+    name = name.toLowerCase();
     const filteredList = Object.keys(this.stats).filter(place => {
-      return place.toLowerCase().includes(name.toLowerCase());
+      return place.toLowerCase().includes(name);
     });
     const expectedResults = filteredList.map(place => {
       return {location: place, stats: this.stats[place]}

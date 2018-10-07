@@ -22,18 +22,29 @@ describe('App', () => {
     expect(wrapper.find(Search).prop('searchSchoolData')).toEqual(wrapper.instance().searchSchoolData);
   })
 
-  // it('searchSchoolData updates state', () => {
-  //   const wrapper = shallow(<App />);
-  //   const initialState = []
-  //   const mockValue = {value: 'c'}
-  //   const expectedState = [{value: 'c'}];
-    
+  it('should update state when searchSchoolData is called', () => {
+    const wrapper = shallow(<App />);
+    const expected = [{
+      "location": "COLORADO SPRINGS 11", 
+      "stats": 
+        {
+        "2004": 0.069, 
+        "2005": 0.509, 
+        "2006": 0.638, 
+        "2007": 0.994, 
+        "2008": 0.992, 
+        "2009": 1, 
+        "2010": 0.993, 
+        "2011": 0.994, 
+        "2012": 0.993, 
+        "2013": 0.989, 
+        "2014": 0.994}
+        }
+      ];
 
-  //   wrapper.setState({ schoolData: initialState });
-  //   wrapper.instance().searchSchoolData(mockValue);
+    wrapper.instance().searchSchoolData('COLORADO springs 11');
+    expect(wrapper.state('schoolData')).toEqual(expected);
 
-  //   expect(wrapper.state('schoolData')).toEqual(expectedState);
-  //   expect(wrapper.state('schoolData').length).toEqual(1);
-  // })
+  })
 
 })
