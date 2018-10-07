@@ -29,7 +29,8 @@ class App extends Component {
   query = query => {
     this.setState({
       query: query,
-      results: district.findAllMatches(query)
+      results: district.findAllMatches(query),
+      selectedResults: null
     })
   };
 
@@ -42,7 +43,8 @@ class App extends Component {
 
   findMultipleMatches = data => {
     this.setState({
-      selectedResults: district.findMultipleMatches(data)
+      selectedResults: district.findMultipleMatches(data),
+      results: null
     })
   };
 
@@ -56,7 +58,7 @@ class App extends Component {
             results={this.state.resultsAlphabet}
             multipleMatches={this.findMultipleMatches}
           />
-          <ResultsContainer results={this.state.results} />
+          <ResultsContainer results={this.state.results || this.state.selectedResults} />
         </main>
       </div>
     )

@@ -80,11 +80,12 @@
     .search-nav
         overflow: scroll
         position: sticky
-        text-align: center
         top: 0
         width: 100vw
 
     .search-main
+        width: 33.3%
+
         input
             background-color: transparentize(white, .4%)
             border: none
@@ -93,7 +94,7 @@
             font-size: 24px
             height: 3rem
             text-align: center
-            width: 50vw
+            width: 100%
 
     .alphabet-query
         align-items: center
@@ -120,17 +121,30 @@
                 cursor: pointer
                 font-weight: 700
     #search-area-btn
-        position: relative
+        background-color: $secondary-navy
+        border-radius: 15px
+        color: $beige
+        font-weight: 700
+        font-size: 2rem
+        position: sticky
+        top: 30vh
+        width: 14rem
+        height: 70px
+        margin: 30vh auto
 
+        &:hover
+            background-color: $primary-orange
 
 .alphabet-results
     font-size: 20px
+    margin: 3rem 0 3rem 10rem
     text-align: center
-    width: 50vw
+    width: calc(100vw-10rem)
     
     thead
         background-color: $primary-orange
         color: $beige
+   
 
     th
         height: 2rem

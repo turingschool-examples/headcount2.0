@@ -28,6 +28,11 @@ class SearchArea extends Component {
       })
     }
   }
+
+  handleSubmit = (event) => {
+    event.preventDefault()
+    this.props.multipleMatches(this.state.selected)
+  }
   
   render() { 
     return ( 
@@ -35,7 +40,7 @@ class SearchArea extends Component {
         <FilterResults alphabetQuery={this.props.alphabetQuery} />
         <div className="l-search-table">
           <FilteredResults results={this.props.results} handleSelected={this.handleSelected}/>
-          <button id="search-area-btn" type='submit' onClick={this.handleSubmit}>GO!</button>
+          <button id="search-area-btn" type='submit' onClick={this.handleSubmit}>Data:GO</button>
         </div>
       </section>
     )

@@ -490,9 +490,11 @@ h1 {
 .search-area .search-nav {
   overflow: scroll;
   position: sticky;
-  text-align: center;
   top: 0;
   width: 100vw;
+}
+.search-area .search-main {
+  width: 33.3%;
 }
 .search-area .search-main input {
   background-color: rgba(255, 255, 255, 0.6);
@@ -502,7 +504,7 @@ h1 {
   font-size: 24px;
   height: 3rem;
   text-align: center;
-  width: 50vw;
+  width: 100%;
 }
 .search-area .alphabet-query {
   align-items: center;
@@ -529,13 +531,26 @@ h1 {
   font-weight: 700;
 }
 .search-area #search-area-btn {
-  position: relative;
+  background-color: #004263;
+  border-radius: 15px;
+  color: #f9f6f6;
+  font-weight: 700;
+  font-size: 2rem;
+  position: sticky;
+  top: 30vh;
+  width: 14rem;
+  height: 70px;
+  margin: 30vh auto;
+}
+.search-area #search-area-btn:hover {
+  background-color: #f56924;
 }
 
 .alphabet-results {
   font-size: 20px;
+  margin: 3rem 0 3rem 10rem;
   text-align: center;
-  width: 50vw;
+  width: calc(100vw-10rem);
 }
 .alphabet-results thead {
   background-color: #f56924;
