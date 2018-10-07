@@ -1,8 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import CardContainer from '../components/CardContainer';
-import DistrictRepository from '../helper.js'
+import DistrictRepository from '../helper.js';
 import kinderData from '../data/kindergartners_in_full_day_program.js';
 
 
@@ -13,7 +12,7 @@ describe('CardContainer', ()=>{
 
 
 
-  const mockProcessSelection = jest.fn()
+  const mockProcessSelection = jest.fn();
 
   beforeEach(()=>{
     wrapper = shallow(<CardContainer 
@@ -33,7 +32,7 @@ describe('CardContainer', ()=>{
     expect(wrapper).toMatchSnapshot();    
   });
 
-  it('should render the entire dataset if there is filterString in props is a blank string', () => {
+  it('should render the entire dataset', () => {
     wrapper = shallow(<CardContainer 
       data={new DistrictRepository(kinderData)} 
       processSelection={mockProcessSelection}

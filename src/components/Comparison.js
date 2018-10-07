@@ -10,8 +10,14 @@ import '../css/Comparison.css';
 const Comparison = (props) => {
 
   return (
-    <section className='comparison-container'>
-      <div className="card-container">
+    <section 
+      className='comparison-container'
+      aria-label="district-comparison-section"
+    >
+      <div 
+        className="card-container"
+        aria-label="district-comparison-wrapper"
+      >
         <Card 
           data={props.selection[0]}
           key={props.selection[0].location}
@@ -34,6 +40,7 @@ const Comparison = (props) => {
           props.processSelection('close');
         }}
         className="close-btn"
+        aria-label="close-comparison-section-button"
       >Close</button>
     </section>
   );

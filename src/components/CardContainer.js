@@ -33,7 +33,10 @@ const CardContainer = (props) => {
     });
   }
   return (
-    <section className="card-container">
+    <section 
+      className="card-container"
+      aria-label="district-data-section"
+    >
       {cards}
     </section>
   );

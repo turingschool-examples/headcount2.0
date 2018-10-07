@@ -5,7 +5,10 @@ import '../css/Info.css';
 
 const Info = (props) => {
   return (
-    <aside className={props.modalClass}>
+    <aside 
+      className={props.modalClass}
+      aria-label='info-section'
+    >
       <img 
         className='close-icon'
         src='./cancel.svg' 
@@ -14,10 +17,11 @@ const Info = (props) => {
           props.untoggleModal();
         }} 
       />
-      <h1>About Colorado Kindercount</h1>
-      <p>This app allows you to compare kindergarten test scores 
-      between the school districts throughout Colorado. 
-      To compare two districts, simply click their cards to select them.</p>
+      <h1 aria-label='info-header-label'>About Colorado Kindercount</h1>
+      <p aria-label='info-description'>This app allows you to compare 
+      kindergarten test scores between the school districts 
+      throughout Colorado. To compare two districts, simply click 
+      their cards to select them.</p>
     </aside>
   );
 };

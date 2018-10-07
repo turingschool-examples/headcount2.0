@@ -2,6 +2,7 @@
 
 exports[`CardContainer should render filtered content to the DOM 1`] = `
 <section
+  aria-label="district-data-section"
   className="card-container"
 >
   <Card
@@ -55,8 +56,9 @@ exports[`CardContainer should render filtered content to the DOM 1`] = `
 </section>
 `;
 
-exports[`CardContainer should render the entire dataset if there is filterString in props is a blank string 1`] = `
+exports[`CardContainer should render the entire dataset 1`] = `
 <section
+  aria-label="district-data-section"
   className="card-container"
 >
   <Card

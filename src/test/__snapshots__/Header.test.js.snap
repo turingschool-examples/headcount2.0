@@ -10,6 +10,7 @@ exports[`Header should render content to the DOM 1`] = `
     src="./brain-and-head.svg"
   />
   <h1
+    aria-label="banner-title"
     className="banner-title"
   >
     Colorado Kindercount

@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import Info from '../components/Info';
 
@@ -7,9 +6,9 @@ import Info from '../components/Info';
 describe('Info', ()=>{
   let wrapper; 
 
-  const mockClass = 'hidden-modal info-modal'
+  const mockClass = 'hidden-modal info-modal';
 
-  const mockUntoggleModal = jest.fn()
+  const mockUntoggleModal = jest.fn();
 
   beforeEach(()=>{
     wrapper = shallow(<Info 
@@ -29,7 +28,7 @@ describe('Info', ()=>{
   it('should call untoggleModal on button click', () => {
     wrapper.find('.close-icon').simulate('click');
 
-    expect(mockUntoggleModal.mock.calls.length).toBe(1)
-  })
+    expect(mockUntoggleModal.mock.calls.length).toBe(1);
+  });
 
 });

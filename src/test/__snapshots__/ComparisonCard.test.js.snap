@@ -2,49 +2,64 @@
 
 exports[`ComparisonCard should render content to the DOM 1`] = `
 <article
+  aria-label="district-comparison-card"
   className="comparison-card"
 >
-  <section>
+  <section
+    aria-label="district-1-section"
+  >
     <h1
+      aria-label="district-1-label"
       className="comparison-school top-school"
     >
       ADAMS COUNTY 14
     </h1>
     <h1
+      aria-label="district-1-average-label"
       className="comparison-average"
     >
       average
     </h1>
     <p
+      aria-label="district-1-average"
       className="district-average"
     >
       0.709
     </p>
   </section>
-  <section>
+  <section
+    aria-label="compared-data-section"
+  >
     <h1
+      aria-label="compared-label"
       className="compared"
     >
       Compared
     </h1>
     <p
+      aria-label="comparison-data"
       className="comparison-data"
     >
       1.338
     </p>
   </section>
-  <section>
+  <section
+    aria-label="district-2-section"
+  >
     <h1
+      aria-label="district-2-label"
       className="comparison-school"
     >
       COLORADO
     </h1>
     <h1
+      aria-label="district-2-average-label"
       className="comparison-average"
     >
       average
     </h1>
     <p
+      aria-label="district-2-average"
       className="district-average"
     >
       0.53

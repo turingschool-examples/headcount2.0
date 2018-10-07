@@ -2,6 +2,7 @@
 
 exports[`Info should render content to the DOM 1`] = `
 <aside
+  aria-label="info-section"
   className="hidden-modal info-modal"
 >
   <img
@@ -10,10 +11,14 @@ exports[`Info should render content to the DOM 1`] = `
     onClick={[Function]}
     src="./cancel.svg"
   />
-  <h1>
+  <h1
+    aria-label="info-header-label"
+  >
     About Colorado Kindercount
   </h1>
-  <p>
+  <p
+    aria-label="info-description"
+  >
     This app allows you to compare kindergarten test scores between the school districts throughout Colorado. To compare two districts, simply click their cards to select them.
   </p>
 </aside>

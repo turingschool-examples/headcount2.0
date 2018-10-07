@@ -1,9 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import ComparisonCard from '../components/ComparisonCard';
 import kinderData from '../data/kindergartners_in_full_day_program.js';
-import DistrictRepository from '../helper.js'
+import DistrictRepository from '../helper.js';
 
 describe('ComparisonCard', ()=>{
   let wrapper; 
@@ -41,7 +40,7 @@ describe('ComparisonCard', ()=>{
         2014: 1
       }
     }
-  ]
+  ];
 
   const districtRepo = new DistrictRepository(kinderData);
 

@@ -5,10 +5,18 @@ exports[`InputField should render content to the DOM 1`] = `
   className="input-form"
 >
   <input
+    aria-label="district-filter-input-field"
     className="text-input"
     onChange={[Function]}
     placeholder="Search for your school district..."
     value=""
+  />
+  <img
+    alt="cancel-button"
+    aria-label="clear-filter-input"
+    className="clear-input-button hidden-button"
+    onClick={[Function]}
+    src="./cancel.svg"
   />
 </form>
 `;
