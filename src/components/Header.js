@@ -21,7 +21,7 @@ const Header = (props) => {
       />
     </header>
   );
-} 
+};
 
 Header.propTypes = {
   processFilter: PropTypes.func.isRequired,
