@@ -12,10 +12,8 @@ describe('App', () => {
   const data = repository.findAllMatches()
 
   it('should display school districts', () => {
-    // Setup && Execution
     const wrapper = shallow(<App />)
 
-    // Expectation
     expect(wrapper).toMatchSnapshot()
   })
 
