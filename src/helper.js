@@ -6,7 +6,8 @@ class DistrictRepository {
         accu[Location.toUpperCase()] = {location: Location.toUpperCase()};
         accu[Location.toUpperCase()].stats = {};
       }
-      accu[Location.toUpperCase()].stats[TimeFrame] = (Math.round(Data * 1000) / 1000 || 0);
+      accu[Location.toUpperCase()].stats[TimeFrame] = 
+        (Math.round(Data * 1000) / 1000 || 0);
       accu[Location.toUpperCase()].classLabel = 'card';
 
       return accu;
@@ -38,10 +39,12 @@ class DistrictRepository {
   }
 
   findAverage = (query) => {
-    const averageScore = Object.keys(this.stats[query.toUpperCase()].stats).reduce((accumulator, year) => {
-      accumulator += this.stats[query.toUpperCase()].stats[year];
-      return accumulator;
-    }, 0)/(Object.keys(this.stats[query.toUpperCase()].stats).length);
+    const averageScore = 
+    Object.keys(this.stats[query.toUpperCase()].stats).reduce(
+      (accumulator, year) => {
+        accumulator += this.stats[query.toUpperCase()].stats[year];
+        return accumulator;
+      }, 0)/(Object.keys(this.stats[query.toUpperCase()].stats).length);
 
     const roundedScore = (Math.round(averageScore * 1000) / 1000 || 0);
     return roundedScore;
@@ -50,8 +53,10 @@ class DistrictRepository {
   compareDistrictAverages = (query1, query2) => {
     let average1 = this.findAverage(query1);
     let average2 = this.findAverage(query2);
-    let division = (Math.round((average1/average2) * 1000) / 1000 || 0);
-    return {[query1.toUpperCase()]: average1, [query2.toUpperCase()]: average2, compared: division};
+    let division = 
+      (Math.round((average1/average2) * 1000) / 1000 || 0);
+    return {[query1.toUpperCase()]: average1, 
+      [query2.toUpperCase()]: average2, compared: division};
   }
 }
 

@@ -8,6 +8,7 @@ import CardContainer from './CardContainer';
 import Comparison from './Comparison';
 import Info from './Info';
 import Header from './Header';
+import TopArrow from './TopArrow';
 
 import '../css/App.css';
 
@@ -36,8 +37,9 @@ class App extends Component {
   }
 
   processSelection = (district) => {
-    if (!this.state.selection.includes(district) && district !== 
-      'close' && this.state.selection.length !== 2) {
+    if (!this.state.selection.includes(district) && 
+      district !== 'close' && 
+      this.state.selection.length !== 2) {
       const newData = this.state.data;
       newData.stats[district.location].classLabel = 'card selected';
       this.setState({
@@ -45,7 +47,8 @@ class App extends Component {
         modalClass: 'hidden-modal info-modal',
         data: newData
       });
-    } else if (this.state.selection.includes(district) && this.state.selection.length === 2) {
+    } else if (this.state.selection.includes(district) && 
+      this.state.selection.length === 2) {
       const newData = this.state.data;
       newData.stats[district.location].classLabel = 'card';
       this.setState({
@@ -54,7 +57,8 @@ class App extends Component {
         }),
         data: newData
       });
-    } else if (district === 'close' || this.state.selection.includes(district)) {
+    } else if (district === 'close' || 
+      this.state.selection.includes(district)) {
       this.setState({
         selection: [],
         data: new DistrictRepository(kinderData)
@@ -102,6 +106,7 @@ class App extends Component {
             modalClass={this.state.modalClass}
             untoggleModal={this.untoggleModal} 
           />
+          <TopArrow />
           <CardContainer 
             data={this.state.filter || this.state.data} 
             processSelection={this.processSelection}

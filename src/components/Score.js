@@ -15,7 +15,12 @@ const Score = (props) => {
   
   return (
     <section className="score-wrapper">
-      <p className='score'><img src={icon} alt={alt}/> {props.year}: {props.data}</p>
+      <p className='score'>
+        <img 
+          src={icon} 
+          alt={alt}/> 
+        {props.year}: {props.data}
+      </p>
     </section>
   );
 };

@@ -15,7 +15,9 @@ const Info = (props) => {
         }} 
       />
       <h1>About Colorado Kindercount</h1>
-      <p>This app allows you to compare kindergarten test scores between the school districts throughout Colorado. To compare two districts, simply click their cards to select them.</p>
+      <p>This app allows you to compare kindergarten test scores 
+      between the school districts throughout Colorado. 
+      To compare two districts, simply click their cards to select them.</p>
     </aside>
   );
 };
