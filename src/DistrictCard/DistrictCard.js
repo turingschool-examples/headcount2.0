@@ -3,6 +3,7 @@ import './DistrictCard.css';
 import PropTypes from 'prop-types';
 
 const DistrictCard = ({ location, stats, district, compareDistrict }) => {
+
 	const statsKeys = Object.keys(stats)
 	const schoolData = statsKeys.map((stat) => {
 		// console.log(stat)
@@ -13,18 +14,29 @@ const DistrictCard = ({ location, stats, district, compareDistrict }) => {
 		</p>
 	})
 	
-
-	return (
-		<div className='DistrictCard' onClick={() => compareDistrict(district)}>
+if (compareDistrict) {
+		return (
+		<div className='DistrictCard' onClick={ () => compareDistrict(district) }>
 			<h3 className='card-location'>{location}</h3>
 			{schoolData}
 		</div>
 	)
+	} else {
+		return (
+			<div className='DistrictCard'>
+				<h3 className='card-location'>{location}</h3>
+				{schoolData}
+			</div>
+		)
+	}
+
 }
 
 DistrictCard.proptypes = {
 	location: PropTypes.string.isRequired,
-	stats: PropTypes.object.isRequired
+	stats: PropTypes.object.isRequired,
+	district: PropTypes.object.isRequired,
+	compareDistrict: PropTypes.func
 }
 
 export default DistrictCard;

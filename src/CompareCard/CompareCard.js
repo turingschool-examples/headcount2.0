@@ -1,9 +1,10 @@
 import React from 'react';
 import './CompareCard.css';
 import DistrictCard from '../DistrictCard/DistrictCard.js';
-import Proptypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const CompareCard = ({ districtsBeingCompared }) => {
+	if (districtsBeingCompared) {
 	const districtCards = districtsBeingCompared.map((district) => {
 		return <DistrictCard 
 							key={Math.random()}
@@ -12,15 +13,16 @@ const CompareCard = ({ districtsBeingCompared }) => {
 						/>
 	})
 
-	return (
-		<div className='CompareCard'>
-			{ districtCards }
-		</div>
-	)
+		return (
+			<div className='CompareCard'>
+				{ districtCards }
+			</div>
+		)
+	} 
 }
 
 CompareCard.propTypes = {
-	districtsBeingCompared: Proptypes.array.isRequired
+	districtsBeingCompared: PropTypes.array
 }
 
 export default CompareCard;

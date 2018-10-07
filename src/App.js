@@ -21,17 +21,58 @@ class App extends Component {
 	}
 
 	compareDistrict = (district) => {
-		const clickedDistrict = {...district};
-		const districtsInState = this.state.districtsBeingCompared;
-		const districtsBeingCompared = 
-			[...districtsInState, clickedDistrict];
-		
-		if (districtsInState.length === 2) {
-			districtsInState.shift();
-		} else if (districtsInState.length <= 2) {
-			this.setState({ districtsBeingCompared });
+		console.log(district)
+		const districtsInState = this.state.districtsBeingCompared;	
+
+		const compareArr = districtsInState.map(district => district.location)
+		if (compareArr.includes(district.location)) {
+			const districtsBeingCompared = districtsInState.filter(comparedDistrict => {
+			return !comparedDistrict.location.includes(district.location)
+		})
+			console.log(districtsBeingCompared)
+			this.setState({districtsBeingCompared})
+		} else if (districtsInState.length <= 1) {
+			this.setState({ districtsBeingCompared: [district, ...districtsInState]})
 		}
+
+		// if (districtsInState.length > 1) {
+		// 	districtsInState.shift();
+		// 	this.setState({ districtsBeingCompared: districtsInState });			
+		// } else if (districtsInState.length <= 2) {
+		// // console.log('compareDistrict set up for ' + district)
+		// 	this.setState({ districtsBeingCompared: districtsInState });
+		// }
+
+		// const clickedDistrict = {...district};
+		// const districtsBeingCompared = 
+		// 	[...districtsInState, clickedDistrict];
+			// console.log(clickedDistrict.selected)
+
+		// if (districtsBeingCompared.includes(clickedDistrict)) {
+		// 	this.stopComparingDistrict(clickedDistrict)
+		// 	return
+		// }	
+
+
 	}
+
+	// stopComparingDistrict = (comparedDistrict) => {
+	// 	console.log('stopComparingDistrict set up for ' + comparedDistrict.location)
+	// 	const districtsInState = this.state.districtsBeingCompared;
+	// 	if (2 >= districtsInState.length >= 1) {
+	// 		const districtsBeingCompared = districtsInState.filter((district) => {
+	// 			return district.location !== comparedDistrict.location
+	// 		})
+	// 		this.setState({ districtsBeingCompared })
+	// 		// console.log(districtsBeingCompared)
+	// 	}
+	// }
+
+	// handleComparison = (district) => {
+	// 	// console.log(district)
+	// 	this.compareDistrict(district);
+	// 	this.stopComparingDistrict(district)
+	// }
 
 	render() {
 		const { data, searchTerm, districtsBeingCompared } = this.state;
@@ -51,7 +92,7 @@ class App extends Component {
 				<Search searchDistrict={this.searchDistrict}/>
 				<DistrictsContainer 
 					districts={data.findAllMatches(searchTerm)}
-					compareDistrict={this.compareDistrict}
+					compareDistrict={this.compareDistrict}					
 				/>
 			</div>
 		);

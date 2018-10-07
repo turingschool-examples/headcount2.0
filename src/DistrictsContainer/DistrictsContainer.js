@@ -22,7 +22,8 @@ const DistrictsContainer = ({ districts, compareDistrict }) => {
 }
 
 DistrictsContainer.propTypes = {
-	districts: PropTypes.array.isRequired
+	districts: PropTypes.array.isRequired,
+	compareDistrict: PropTypes.func
 }
 
 export default DistrictsContainer;
