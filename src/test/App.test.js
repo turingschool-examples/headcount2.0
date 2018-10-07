@@ -84,36 +84,36 @@ describe('App', ()=>{
         2013: 0.998,
         2014: 1
       }
-    }
-    wrapper.instance().processSelection(argument)
-    wrapper.instance().processSelection(argument)
-    expect(wrapper.state().selection).toEqual([])
-  })
+    };
+    wrapper.instance().processSelection(argument);
+    wrapper.instance().processSelection(argument);
+    expect(wrapper.state().selection).toEqual([]);
+  });
 
   it('should update state when toggleModal is called', () => {
-    expect(wrapper.state().modalClass).toEqual('hidden-modal info-modal')
+    expect(wrapper.state().modalClass).toEqual('hidden-modal info-modal');
 
     wrapper.instance().toggleModal();
 
-    expect(wrapper.state().modalClass).toEqual('info-modal')
+    expect(wrapper.state().modalClass).toEqual('info-modal');
   });
 
   it('should update state back when toggleModal is called twice', () => {
-    expect(wrapper.state().modalClass).toEqual('hidden-modal info-modal')
+    expect(wrapper.state().modalClass).toEqual('hidden-modal info-modal');
 
     wrapper.instance().toggleModal();
     wrapper.instance().toggleModal();
 
 
-    expect(wrapper.state().modalClass).toEqual('hidden-modal info-modal')
+    expect(wrapper.state().modalClass).toEqual('hidden-modal info-modal');
   });
 
   it('should update modalClass when unToggleModal is called', () => {
     wrapper.instance().toggleModal();
     wrapper.instance().untoggleModal();
 
-     expect(wrapper.state().modalClass).toEqual('hidden-modal info-modal')
-  })
+    expect(wrapper.state().modalClass).toEqual('hidden-modal info-modal');
+  });
 
   it('should filter out unselected cards', () => {
     const argument1 = {
@@ -131,7 +131,7 @@ describe('App', ()=>{
         2013: 0.998,
         2014: 1
       }
-    }
+    };
 
     const argument2 = {
       location: 'ANOTHER COUNTY',
@@ -148,21 +148,22 @@ describe('App', ()=>{
         2013: 0.998,
         2014: 1
       }
-    }
+    };
 
     wrapper.setState({
       selection: [argument1, argument2]
-    })
+    });
 
-    wrapper.instance().processSelection(argument1)
-    expect(wrapper.state().selection).toEqual([argument2])
+    wrapper.instance().processSelection(argument1);
+    expect(wrapper.state().selection).toEqual([argument2]);
   });
 
-  it('should setState on selection and data to the default settings when close is passed through', () => {
+  it('should setState to default when passed close', () => {
     wrapper.instance().processSelection('close');
 
-    expect(wrapper.state().selection).toEqual([])
-    expect(JSON.stringify(wrapper.state().data)).toEqual(JSON.stringify(new DistrictRepository(kinderData)))  
+    expect(wrapper.state().selection).toEqual([]);
+    expect(JSON.stringify(wrapper.state().data)).
+      toEqual(JSON.stringify(new DistrictRepository(kinderData)));
   });
 
 });
