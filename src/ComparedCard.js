@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ComparedCard = ({ location }) => {
   return (
@@ -10,4 +11,7 @@ const ComparedCard = ({ location }) => {
   );
 };
 
+ComparedCard.propTypes = {
+  location: PropTypes.Object
+};
 export default ComparedCard;

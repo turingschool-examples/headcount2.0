@@ -1,5 +1,6 @@
 import React from 'react';
 import SchoolCard from './SchoolCard';
+import PropTypes from 'prop-types';
 
 const CardContainer = ({ cards, setStateOfCompare }) => {
   const compareCards = Object.keys(cards).map(card => 
@@ -15,5 +16,8 @@ const CardContainer = ({ cards, setStateOfCompare }) => {
   );
 };
 
-
+CardContainer.propTypes = {
+  cards: PropTypes.array,
+  setStateOfCompare: PropTypes.func
+};
 export default CardContainer;
