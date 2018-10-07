@@ -13,6 +13,17 @@ class App extends Component {
     }
   }
 
+  findAllMatches = (query) => {
+    const kinder = new DistrictRepository(kinderData)
+    const matchingNames = kinder.findAllMatches(query)
+    console.log(query)
+    matchingNames.forEach(name => {
+      const district = kinder.findByName(name)
+      this.setState({kinder: district.stats})
+    })
+
+  }
+
   componentDidMount() {
     const kinder = new DistrictRepository(kinderData)
 
@@ -26,7 +37,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Header findAllMatching={this.findAllMatching}/>
+        <Header findAllMatches={this.findAllMatches}/>
         <CardContainer districts={kinder} />
       </div>
     );

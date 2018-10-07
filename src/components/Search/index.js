@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import './Search.css'
 
 class Search extends Component {
-  constructor({findAllMatching}) {
+  constructor({findAllMatches}) {
     super()
     this.state = {
       query: ''
@@ -13,11 +14,16 @@ class Search extends Component {
     const { name, value } = event.target
 
     this.setState({ [name]: value })
-    this.props.findAllMatching();
+    this.submitQuery()
+  }
+
+  submitQuery = () => {
+    this.props.findAllMatches(this.state.query);
   }
 
   handleSubmit = (event) => {
     event.preventDefault()
+    this.handleInputChange(event)
   }
 
   render() {
@@ -34,6 +40,10 @@ class Search extends Component {
       </form>
     )
   }
+}
+
+Search.propTypes = {
+  findAllMatches: PropTypes.func.isRequired
 }
 
 export default Search
