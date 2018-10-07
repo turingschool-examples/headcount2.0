@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Card from './Card'
-import ComparisonCard from './ComparisonCard'
+import Card from './Card';
+import ComparisonCard from './ComparisonCard';
 
-import '../css/Comparison.css'
+import '../css/Comparison.css';
 
 
 const Comparison = (props) => {
@@ -29,21 +29,20 @@ const Comparison = (props) => {
           selection={props.selection}
         />
       </div>
-        <button
-          onClick={() => {
-            props.processSelection('close')
-          }}
-          className="close-btn"
-        >Close</button>
+      <button
+        onClick={() => {
+          props.processSelection('close');
+        }}
+        className="close-btn"
+      >Close</button>
     </section>
-  )
-}
+  );
+};
 
 Comparison.propTypes = {
   selection: PropTypes.array.isRequired,
   compareDistrictAverages: PropTypes.func.isRequired,
   processSelection: PropTypes.func.isRequired
-  // clearSelections: PropTypes.func.isRequired
-}
+};
 
 export default Comparison;
