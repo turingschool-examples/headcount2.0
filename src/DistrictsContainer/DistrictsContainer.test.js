@@ -4,17 +4,12 @@ import DistrictsContainer from './DistrictsContainer.js';
 import DistrictCard from '../DistrictCard/DistrictCard.js';
 import { shallow } from 'enzyme';
 
-// it('renders without crashing', () => {
-// 	const div = document.createElement('div');
-// 	ReactDOM.render(<DistrictsContainer />, div)
-// })
-
 describe('DistrictsContainer', () => {
 	let wrapper;
 	let mockDistricts;
 
 	beforeEach(() => {
-			mockDistricts = [{'colorado': {}}, {'academy 20': {}}, {'agate 300': {}}] 
+		mockDistricts = [{'colorado': {}}, {'academy 20': {}}, {'agate 300': {}}] 
 		wrapper = shallow(<DistrictsContainer districts={mockDistricts} key={Math.random()}/>)
 	})
 

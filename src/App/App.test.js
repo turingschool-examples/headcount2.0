@@ -16,12 +16,31 @@ describe('App', () => {
 		expect(wrapper).toMatchSnapshot()
 	})
 
-	it('initializes with correct state', () => {
+	it('has a state of data than instantiates a new DistrictRepository', () => {
 		const expectedState = {
 			data: new DistrictRepository(kinderData),
-			searchTerm: ''
+			searchTerm: '',
+			compareDistricts: []
 		}
-		expect(wrapper.state()).toEqual(expectedState)
+		expect(wrapper.state('data')).toBeInstanceOf(DistrictRepository)
+	})
+
+	it('has state searchTerm', () => {
+		const expectedState = {
+			data: new DistrictRepository(kinderData),
+			searchTerm: '',
+			compareDistricts: []
+		}
+	expect(wrapper.state('searchTerm')).toEqual('')
+	})
+
+	it('has state compareDistricts', () => {
+		const expectedState = {
+			data: new DistrictRepository(kinderData),
+			searchTerm: '',
+			compareDistricts: []
+		}
+	expect(wrapper.state('compareDistricts')).toEqual([])
 	})
 
 })

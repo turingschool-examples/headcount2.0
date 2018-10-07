@@ -48,7 +48,7 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": "0.1884715946775921",
+        "key": "0.08283598125654423",
         "nodeType": "function",
         "props": Object {
           "colorado": Object {},
@@ -60,7 +60,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "0.6845975214229141",
+        "key": "0.3065029507518755",
         "nodeType": "function",
         "props": Object {
           "academy 20": Object {},
@@ -72,7 +72,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "0.5268658373849249",
+        "key": "0.08748020744138874",
         "nodeType": "function",
         "props": Object {
           "agate 300": Object {},
@@ -108,7 +108,7 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": "0.1884715946775921",
+          "key": "0.08283598125654423",
           "nodeType": "function",
           "props": Object {
             "colorado": Object {},
@@ -120,7 +120,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "0.6845975214229141",
+          "key": "0.3065029507518755",
           "nodeType": "function",
           "props": Object {
             "academy 20": Object {},
@@ -132,7 +132,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "0.5268658373849249",
+          "key": "0.08748020744138874",
           "nodeType": "function",
           "props": Object {
             "agate 300": Object {},
