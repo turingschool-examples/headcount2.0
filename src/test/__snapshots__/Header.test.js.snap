@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render content to the DOM 1`] = `
+<header>
+  <img
+    alt="logo"
+    className="logo"
+    src="./brain-and-head.svg"
+  />
+  <h1
+    className="banner-title"
+  >
+    Colorado Kindercount
+  </h1>
+  <img
+    alt="info-button"
+    className="info-btn"
+    onClick={[Function]}
+    src="./information.svg"
+  />
+  <InputField
+    processFilter={[Function]}
+  />
+</header>
+`;

@@ -1,0 +1,32 @@
+.banner-title {
+  margin: 0;
+  padding: 1rem;
+}
+
+header {
+  position: relative;
+  background: #044C62;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 70px 1fr 1fr;
+  height: 100px;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  margin: 1rem;
+}
+
+.info-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 25px;
+  transition: .3s;
+}
+
+.info-btn:hover {
+  cursor: pointer;
+  transform: scale(1.2)
+}
