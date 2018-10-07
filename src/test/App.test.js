@@ -166,4 +166,15 @@ describe('App', ()=>{
       toEqual(JSON.stringify(new DistrictRepository(kinderData)));
   });
 
+  it('should setState to default', () => {
+    wrapper.setState({
+      selection: ['denver']
+    })
+    wrapper.instance().processSelection('denver');
+
+    expect(wrapper.state().selection).toEqual([]);
+    expect(JSON.stringify(wrapper.state().data)).
+      toEqual(JSON.stringify(new DistrictRepository(kinderData)));
+  });
+
 });

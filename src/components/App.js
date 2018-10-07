@@ -1,4 +1,4 @@
-import React, { Component } from 'react'; 
+ import React, { Component } from 'react'; 
 
 import kinderData from '../data/kindergartners_in_full_day_program.js';
 
