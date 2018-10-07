@@ -4,7 +4,7 @@ export default class DistrictRepository {
 		this.stats = this.compileDistricts();
 	}
 
-	compileDistricts() { 
+	compileDistricts = () => { 
 
 		const schoolDistrict = this.data.reduce((district, location) => {
 			const school = location.Location.toLowerCase()
@@ -27,11 +27,10 @@ export default class DistrictRepository {
 
 			return district
 		}, {})	
-// console.log(schoolDistrict)
 		return schoolDistrict
 	}
 
-	findByName(district) {
+	findByName = (district) => {
 		if (!district) {
 			return undefined
 		} 
@@ -44,12 +43,13 @@ export default class DistrictRepository {
 		return undefined
 	}
 
-	findAllMatches(district) {
+	findAllMatches = (district) => {
 		const allDistricts = this.stats
 		const districtKeys = Object.keys(allDistricts)
 
 		if (!district) {
 			return districtKeys.map((districtKey) => {
+				// console.log(this.stats)
 					return allDistricts[districtKey]
 				})
 		} else {
@@ -62,4 +62,30 @@ export default class DistrictRepository {
 			}, [])
 		}
 	}
+
+	findAverage = (district) => {
+		const districtLowerCase = district.toLowerCase()
+		// console.log(this.stats[districtLowerCase])
+		const values = Object.values(this.stats[districtLowerCase].stats)
+		const finalAvg = values.reduce((average, data) => {
+			average += data;
+			return average
+		}, 0) / values.length
+		return Math.round(finalAvg * 1000) / 1000
+	}
+
+	compareDistrictAverages = (districtA, districtB) => {
+		const districtAAvg = this.findAverage(districtA)
+		const districtBAvg = this.findAverage(districtB)
+		const comparedAvg = Math.round(districtAAvg / districtBAvg * 1000) / 1000
+
+		return { [districtA.toUpperCase()]: districtAAvg, [districtB.toUpperCase()]: districtBAvg, compared: comparedAvg }
+	}
+
+
+
+
+
+
+
 }
