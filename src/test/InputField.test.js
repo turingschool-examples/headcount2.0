@@ -1,16 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import InputField from '../components/InputField';
-import kinderData from '../data/kindergartners_in_full_day_program.js';
-import DistrictRepository from '../helper.js'
 
 describe('InputField', ()=>{
   let wrapper; 
 
   const mockProcessFilter = jest.fn();
 
-  const mockEvent = {target: {value: 'place'}}
+  const mockEvent = {target: {value: 'place'}};
 
   beforeEach(()=>{
     wrapper = shallow(<InputField 
@@ -33,13 +30,16 @@ describe('InputField', ()=>{
   });
 
   it('should update state when processInput is called', () => {
-    wrapper.instance().processInput('place')
+    wrapper.instance().processInput('place');
 
-    expect(wrapper.state()).toEqual({"clearFilter": "clear-input-button", "input": "place"})
+    expect(wrapper.state()).toEqual({
+      "clearFilter": "clear-input-button", 
+      "input": "place"
+    });
   });
 
-  it('should update state when process Input is called with an empty string', () => {
-    wrapper.instance().processInput('')
+  it('should update state to an empty string and filter to hidden', () => {
+    wrapper.instance().processInput('');
 
     expect(wrapper.state()).toEqual({
       "clearFilter": "clear-input-button hidden-button", 
@@ -51,13 +51,13 @@ describe('InputField', ()=>{
     wrapper.instance().processInput('place');
 
     expect(mockProcessFilter.mock.calls.length).toBe(3);
-  })
+  });
 
   it('should call processInput on text input', () => {
     wrapper.find('.text-input').simulate('change', mockEvent);
 
     expect(wrapper.state().input).toEqual('place');
-  })
+  });
 
   it('should call processInput on click of the clear button', () => {
     wrapper.instance().processInput('place');
@@ -65,6 +65,6 @@ describe('InputField', ()=>{
 
     wrapper.find('.clear-input-button').simulate('click');
     expect(wrapper.state().input).toEqual('');
-  })
+  });
 
 });

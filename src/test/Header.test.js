@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import Header from '../components/Header';
 
@@ -10,7 +9,7 @@ describe('Header', ()=>{
   const mockToggleModal = jest.fn();
   const mockProcessFilter = () => {
 
-  }
+  };
 
   beforeEach(()=>{
     wrapper = shallow(<Header 
@@ -28,9 +27,9 @@ describe('Header', ()=>{
   });
 
   it('should call toggleModal on button click', () => {
-    wrapper.find('.info-btn').simulate('click')
+    wrapper.find('.info-btn').simulate('click');
 
-    expect(mockToggleModal.mock.calls.length).toBe(1)
+    expect(mockToggleModal.mock.calls.length).toBe(1);
   });
 
 });
