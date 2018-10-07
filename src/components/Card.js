@@ -1,24 +1,21 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-import Score from './Score'
+import Score from './Score';
 
-import '../css/Card.css'
+import '../css/Card.css';
 
 class Card extends Component {
   constructor() {
-    super()
-
-
-}
-
+    super();
+  }
 
   render() {
     return (
       <article 
         className={this.props.data.classLabel}
         onClick={() => {
-          this.props.processSelection(this.props.data)
+          this.props.processSelection(this.props.data);
         }}
       >
         <h1 className="location">{this.props.data.location}</h1>
@@ -30,11 +27,11 @@ class Card extends Component {
                 year={year}
                 key={year}
               />
-            )
+            );
           })}
         </section>
       </article>
-    ) 
+    );
   }
 }
 
@@ -42,6 +39,6 @@ Card.propTypes = {
   selection: PropTypes.array.isRequired,
   data: PropTypes.object.isRequired,
   processSelection: PropTypes.func.isRequired
-}
+};
 
 export default Card;

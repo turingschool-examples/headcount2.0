@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import '../css/ComparisonCard.css';
 
 const ComparisonCard = (props) => {
-  let averages = props.compareDistrictAverages(props.data[0].location, props.data[1].location)
+  let averages = props.compareDistrictAverages(props.data[0].location, props.data[1].location);
   return (
     <article className='comparison-card'>
       <section>
@@ -22,11 +22,12 @@ const ComparisonCard = (props) => {
         <p className='district-average'>{averages[props.data[1].location]}</p>
       </section>
     </article>
-  )
-}
+  );
+};
 
 ComparisonCard.propTypes = {
-  data: PropTypes.array.isRequired
-}
+  data: PropTypes.array.isRequired,
+  compareDistrictAverages: PropTypes.func.isRequired  
+};
 
 export default ComparisonCard;
