@@ -1,67 +1,64 @@
 import React, { Component } from 'react'; 
 
 import kinderData from '../data/kindergartners_in_full_day_program.js';
-import thirdGradeData from '../data/3rd_grade_tests.js'
-import higherEdData from '../data/remediation_in_higher_education.js'
 
-import DistrictRepository from '../helper.js'
+import DistrictRepository from '../helper.js';
 
-import CardContainer from './CardContainer'
-import InputField from './InputField'
-import Comparison from './Comparison'
-import Info from './Info'
-import Header from './Header'
+import CardContainer from './CardContainer';
+import Comparison from './Comparison';
+import Info from './Info';
+import Header from './Header';
 
 import '../css/App.css';
 
 class App extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       data: undefined,
       filter: undefined,
       selection: [],
       modalClass: 'hidden-modal info-modal',
       filterString: '' 
-    }
+    };
   }
 
   componentDidMount() {
     this.setState({
       data: new DistrictRepository(kinderData)
-    })
+    });
   }
 
   processFilter = (string) => {
     this.setState({
       filterString: string
-    })
+    });
   }
 
   processSelection = (district) => {
     if (!this.state.selection.includes(district) && district !== 
       'close' && this.state.selection.length !== 2) {
-      const newData = this.state.data
-      newData.stats[district.location].classLabel = 'card selected'
+      const newData = this.state.data;
+      newData.stats[district.location].classLabel = 'card selected';
       this.setState({
         selection: [...this.state.selection, district],
         modalClass: 'hidden-modal info-modal',
         data: newData
       });
     } else if (this.state.selection.includes(district) && this.state.selection.length === 2) {
-      const newData = this.state.data
-      newData.stats[district.location].classLabel = 'card'
+      const newData = this.state.data;
+      newData.stats[district.location].classLabel = 'card';
       this.setState({
         selection: this.state.selection.filter((dist) => {
-          return dist.location !== district.location
+          return dist.location !== district.location;
         }),
         data: newData
-      })
+      });
     } else if (district === 'close' || this.state.selection.includes(district)) {
       this.setState({
         selection: [],
         data: new DistrictRepository(kinderData)
-      })
+      });
     }
 
   }
@@ -70,18 +67,18 @@ class App extends Component {
     if (this.state.modalClass === 'hidden-modal info-modal') {
       this.setState({
         modalClass: 'info-modal'
-      })  
+      });
     } else {
       this.setState({
         modalClass: 'hidden-modal info-modal'
-      })
+      });
     }
   }
 
   untoggleModal = () => {
     this.setState({
       modalClass: 'hidden-modal info-modal'
-    })
+    });
   }
 
   render() {
@@ -105,12 +102,12 @@ class App extends Component {
             modalClass={this.state.modalClass}
             untoggleModal={this.untoggleModal} 
           />
-            <CardContainer 
-              data={this.state.filter || this.state.data} 
-              processSelection={this.processSelection}
-              selection={this.state.selection}
-              filterString={this.state.filterString}
-            />
+          <CardContainer 
+            data={this.state.filter || this.state.data} 
+            processSelection={this.processSelection}
+            selection={this.state.selection}
+            filterString={this.state.filterString}
+          />
         </main>
       );
     } else {
@@ -118,7 +115,7 @@ class App extends Component {
         <main className="app">
           nuthin
         </main>
-      )
+      );
     }
   }
 }
