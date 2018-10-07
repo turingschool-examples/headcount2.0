@@ -4,7 +4,6 @@ import Card from '../Card'
 import './CardContainer.css'
 
 const CardContainer = ({districts}) => {
-  console.log(districts)
   const cards = Object.keys(districts).map((district, index) => {
     const stats = districts[district].stats
 

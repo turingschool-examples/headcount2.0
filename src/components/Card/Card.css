@@ -39,3 +39,8 @@ ul {
 .low {
   color: #EF713B;
 }
+
+.selected {
+  background-color: #DCF1F4;
+  border: 2px solid #EF713B;
+}

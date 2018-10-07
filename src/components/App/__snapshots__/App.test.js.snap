@@ -4,12 +4,14 @@ exports[`App should render all components 1`] = `
 <div
   className="App"
 >
-  <Header />
+  <Header
+    findAllMatches={[Function]}
+  />
   <CardContainer
     districts={
       Object {
         "ACADEMY 20": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.302,
             "2005": 0.267,
             "2006": 0.354,
@@ -24,7 +26,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "ADAMS COUNTY 14": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.228,
             "2005": 0.3,
             "2006": 0.293,
@@ -39,7 +41,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "ADAMS-ARAPAHOE 28J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.174,
             "2005": 0.202,
             "2006": 0.37,
@@ -54,7 +56,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "AGATE 300": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 0,
@@ -69,7 +71,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "AGUILAR REORGANIZED 6": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -84,7 +86,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "AKRON R-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -99,7 +101,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "ALAMOSA RE-11J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0.208,
             "2006": 0.083,
@@ -114,7 +116,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "ARCHULETA COUNTY 50 JT": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0.53,
@@ -129,7 +131,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "ARICKAREE R-2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 0,
             "2006": 0.125,
@@ -144,7 +146,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "ARRIBA-FLAGLER C-20": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.455,
             "2005": 0.625,
             "2006": 0.385,
@@ -159,7 +161,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "ASPEN 1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -174,7 +176,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "AULT-HIGHLAND RE-9": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -189,7 +191,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "BAYFIELD 10 JT-R": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.318,
             "2005": 0.5,
             "2006": 0,
@@ -204,7 +206,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "BENNETT 29J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -219,7 +221,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "BETHUNE R-5": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -234,7 +236,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "BIG SANDY 100J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -249,7 +251,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "BOULDER VALLEY RE 2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.016,
             "2005": 0.033,
             "2006": 0.032,
@@ -264,7 +266,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "BRANSON REORGANIZED 82": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -279,7 +281,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "BRIGGSDALE RE-10": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 1,
             "2006": 1,
@@ -294,7 +296,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "BRIGHTON 27J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.036,
             "2005": 0.063,
             "2006": 0.06,
@@ -309,7 +311,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "BRUSH RE-2(J)": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -324,7 +326,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "BUENA VISTA R-31": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0.283,
@@ -339,7 +341,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "BUFFALO RE-4": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -354,7 +356,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "BURLINGTON RE-6J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0.254,
@@ -369,7 +371,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "BYERS 32J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -384,7 +386,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "CALHAN RJ-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.353,
             "2005": 0,
             "2006": 0.423,
@@ -399,7 +401,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "CAMPO RE-6": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 1,
@@ -414,7 +416,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "CANON CITY RE-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.302,
             "2005": 0.353,
             "2006": 0.119,
@@ -429,7 +431,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "CENTENNIAL R-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0.105,
             "2006": 0.045,
@@ -444,7 +446,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "CENTER 26 JT": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -459,7 +461,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "CHERAW 31": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -474,7 +476,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "CHERRY CREEK 5": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.392,
             "2005": 0,
             "2006": 0,
@@ -489,7 +491,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "CHEYENNE COUNTY RE-5": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -504,7 +506,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "CHEYENNE MOUNTAIN 12": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -519,7 +521,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "CLEAR CREEK RE-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.147,
             "2005": 0.208,
             "2006": 0.284,
@@ -534,7 +536,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "COLORADO": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.24,
             "2005": 0.278,
             "2006": 0.337,
@@ -549,7 +551,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "COLORADO SPRINGS 11": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.069,
             "2005": 0.509,
             "2006": 0.638,
@@ -564,7 +566,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "COTOPAXI RE-3": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -579,7 +581,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "CREEDE CONSOLIDATED 1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 1,
             "2006": 0,
@@ -594,7 +596,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "CRIPPLE CREEK-VICTOR RE-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -609,7 +611,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "CROWLEY COUNTY RE-1-J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 1,
             "2006": 1,
@@ -624,7 +626,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "CUSTER COUNTY SCHOOL DISTRICT C-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -639,7 +641,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "DE BEQUE 49JT": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0.875,
@@ -654,7 +656,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "DEER TRAIL 26J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -669,7 +671,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "DEL NORTE C-7": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 1,
@@ -684,7 +686,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "DELTA COUNTY 50(J)": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 0.951,
             "2006": 1,
@@ -699,7 +701,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "DENVER COUNTY 1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.518,
             "2005": 0.632,
             "2006": 0.667,
@@ -714,7 +716,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "DOLORES COUNTY RE NO.2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.929,
             "2005": 0,
             "2006": 0.84,
@@ -729,7 +731,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "DOLORES RE-4A": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -744,7 +746,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "DOUGLAS COUNTY RE 1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -759,7 +761,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "DURANGO 9-R": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -774,7 +776,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "EADS RE-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -789,7 +791,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "EAGLE COUNTY RE 50": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.555,
             "2005": 0.932,
             "2006": 0.927,
@@ -804,7 +806,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "EAST GRAND 2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -819,7 +821,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "EAST OTERO R-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -834,7 +836,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "EAST YUMA COUNTY RJ-2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -849,7 +851,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "EATON RE-2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -864,7 +866,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "EDISON 54 JT": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.4,
             "2005": 1,
             "2006": 1,
@@ -879,7 +881,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "ELBERT 200": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -894,7 +896,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "ELIZABETH C-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -909,7 +911,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "ELLICOTT 22": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -924,7 +926,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "ENGLEWOOD 1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.598,
             "2005": 0.642,
             "2006": 0.771,
@@ -939,7 +941,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "FALCON 49": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0.083,
@@ -954,7 +956,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "FLORENCE RE-2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -969,7 +971,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "FORT MORGAN RE-3": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0.562,
@@ -984,7 +986,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "FOUNTAIN 8": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0.394,
@@ -999,7 +1001,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "FOWLER R-4J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -1014,7 +1016,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "FRENCHMAN RE-3": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -1029,7 +1031,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "GARFIELD 16": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1044,7 +1046,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "GARFIELD RE-2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1059,7 +1061,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "GENOA-HUGO C113": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1074,7 +1076,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "GILPIN COUNTY RE-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.2,
             "2005": 0.138,
             "2006": 0.167,
@@ -1089,7 +1091,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "GRANADA RE-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -1104,7 +1106,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "GREELEY 6": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0.042,
             "2006": 0.51,
@@ -1119,7 +1121,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "GUNNISON WATERSHED RE1J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.144,
             "2005": 0.15,
             "2006": 0.135,
@@ -1134,7 +1136,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "HANOVER 28": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 1,
@@ -1149,7 +1151,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "HARRISON 2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.065,
             "2005": 0.127,
             "2006": 0.131,
@@ -1164,7 +1166,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "HAXTUN RE-2J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1179,7 +1181,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "HAYDEN RE-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 1,
@@ -1194,7 +1196,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "HI-PLAINS R-23": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1209,7 +1211,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "HINSDALE COUNTY RE 1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1224,7 +1226,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "HOEHNE REORGANIZED 3": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1239,7 +1241,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "HOLLY RE-3": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -1254,7 +1256,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "HOLYOKE RE-1J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0.947,
@@ -1269,7 +1271,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "HUERFANO RE-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1284,7 +1286,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "IDALIA SCHOOL DISTRICT RJ-3": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 1,
@@ -1299,7 +1301,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "IGNACIO 11 JT": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -1314,7 +1316,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "JEFFERSON COUNTY R-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.29,
             "2005": 0.349,
             "2006": 0.397,
@@ -1329,7 +1331,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "JOHNSTOWN-MILLIKEN RE-5J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1344,7 +1346,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "JULESBURG RE-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 1,
             "2006": 1,
@@ -1359,7 +1361,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "KARVAL RE-23": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -1374,7 +1376,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "KEENESBURG RE-3(J)": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.296,
             "2005": 0.343,
             "2006": 0.266,
@@ -1389,7 +1391,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "KIM REORGANIZED 88": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -1404,7 +1406,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "KIOWA C-2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1419,7 +1421,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "KIT CARSON R-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1434,7 +1436,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "LA VETA RE-2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 1,
             "2006": 0,
@@ -1449,7 +1451,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "LAKE COUNTY R-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.3,
             "2005": 0.333,
             "2006": 0.341,
@@ -1464,7 +1466,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "LAMAR RE-2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.87,
             "2005": 1,
             "2006": 1,
@@ -1479,7 +1481,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "LAS ANIMAS RE-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -1494,7 +1496,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "LEWIS-PALMER 38": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1509,7 +1511,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "LIBERTY SCHOOL DISTRICT J-4": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -1524,7 +1526,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "LIMON RE-4J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1539,7 +1541,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "LITTLETON 6": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1554,7 +1556,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "LONE STAR 101": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -1569,7 +1571,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "MANCOS RE-6": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 1,
             "2006": 1,
@@ -1584,7 +1586,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "MANITOU SPRINGS 14": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.014,
             "2005": 0.296,
             "2006": 0.459,
@@ -1599,7 +1601,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "MANZANOLA 3J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.952,
             "2005": 0.929,
             "2006": 1,
@@ -1614,7 +1616,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "MAPLETON 1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.067,
             "2005": 0.066,
             "2006": 0.064,
@@ -1629,7 +1631,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "MC CLAVE RE-2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 1,
             "2006": 1,
@@ -1644,7 +1646,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "MEEKER RE1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1659,7 +1661,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "MESA COUNTY VALLEY 51": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.307,
             "2005": 0.305,
             "2006": 0.255,
@@ -1674,7 +1676,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "MIAMI/YODER 60 JT": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -1689,7 +1691,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "MOFFAT 2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.014,
             "2005": 0.08,
             "2006": 0.081,
@@ -1704,7 +1706,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "MOFFAT COUNTY RE:NO 1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1719,7 +1721,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "MONTE VISTA C-8": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -1734,7 +1736,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "MONTEZUMA-CORTEZ RE-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1749,7 +1751,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "MONTROSE COUNTY RE-1J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1764,7 +1766,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "MOUNTAIN VALLEY RE 1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 0,
@@ -1779,7 +1781,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "NORTH CONEJOS RE-1J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 0,
             "2006": 0,
@@ -1794,7 +1796,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "NORTH PARK R-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -1809,7 +1811,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "NORTHGLENN-THORNTON 12": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.329,
             "2005": 0.35,
             "2006": 0.403,
@@ -1824,7 +1826,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "NORWOOD R-2J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1839,7 +1841,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "OTIS R-3": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -1854,7 +1856,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "OURAY R-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1869,7 +1871,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "PARK (ESTES PARK) R-3": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.462,
             "2005": 0,
             "2006": 0,
@@ -1884,7 +1886,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "PARK COUNTY RE-2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.339,
             "2005": 0,
             "2006": 0,
@@ -1899,7 +1901,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "PAWNEE RE-12": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 1,
@@ -1914,7 +1916,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "PEYTON 23 JT": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1929,7 +1931,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "PLAINVIEW RE-2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 1,
@@ -1944,7 +1946,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "PLATEAU RE-5": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 0,
             "2006": 1,
@@ -1959,7 +1961,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "PLATEAU VALLEY 50": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -1974,7 +1976,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "PLATTE CANYON 1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.229,
             "2005": 0.247,
             "2006": 0.787,
@@ -1989,7 +1991,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "PLATTE VALLEY RE-3": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 1,
@@ -2004,7 +2006,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "PLATTE VALLEY RE-7": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 1,
@@ -2019,7 +2021,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "POUDRE R-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0.484,
             "2006": 0.474,
@@ -2034,7 +2036,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "PRAIRIE RE-11": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 0,
             "2006": 0,
@@ -2049,7 +2051,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "PRIMERO REORGANIZED 2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -2064,7 +2066,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "PRITCHETT RE-3": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -2079,7 +2081,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "PUEBLO CITY 60": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.275,
             "2005": 0.335,
             "2006": 0.482,
@@ -2094,7 +2096,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "PUEBLO COUNTY RURAL 70": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0.063,
             "2006": 0.174,
@@ -2109,7 +2111,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "RANGELY RE-4": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -2124,7 +2126,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "RIDGWAY R-2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 1,
@@ -2139,7 +2141,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "ROARING FORK RE-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.672,
             "2005": 0.619,
             "2006": 0.693,
@@ -2154,7 +2156,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "ROCKY FORD R-2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.172,
             "2005": 1,
             "2006": 1,
@@ -2169,7 +2171,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "SALIDA R-32": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.222,
             "2005": 0.246,
             "2006": 0.367,
@@ -2184,7 +2186,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "SANFORD 6J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -2199,7 +2201,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "SANGRE DE CRISTO RE-22J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -2214,7 +2216,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "SARGENT RE-33J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -2229,7 +2231,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "SHERIDAN 2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -2244,7 +2246,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "SIERRA GRANDE R-30": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -2259,7 +2261,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "SILVERTON 1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -2274,7 +2276,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "SOUTH CONEJOS RE-10": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -2289,7 +2291,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "SOUTH ROUTT RE 3": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -2304,7 +2306,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "SPRINGFIELD RE-4": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 0,
@@ -2319,7 +2321,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "ST VRAIN VALLEY RE 1J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.182,
             "2005": 0.221,
             "2006": 0.267,
@@ -2334,7 +2336,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "STEAMBOAT SPRINGS RE-2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -2349,7 +2351,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "STRASBURG 31J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.016,
             "2005": 0,
             "2006": 0,
@@ -2364,7 +2366,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "STRATTON R-4": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.353,
             "2005": 1,
             "2006": 0.087,
@@ -2379,7 +2381,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "SUMMIT RE-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.619,
             "2005": 0.85,
             "2006": 0.833,
@@ -2394,7 +2396,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "SWINK 33": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -2409,7 +2411,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "TELLURIDE R-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -2424,7 +2426,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "THOMPSON R-2J": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.197,
             "2005": 0.151,
             "2006": 0.146,
@@ -2439,7 +2441,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "TRINIDAD 1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -2454,7 +2456,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "VALLEY RE-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -2469,7 +2471,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "VILAS RE-5": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -2484,7 +2486,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "WALSH RE-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -2499,7 +2501,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "WELD COUNTY RE-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -2514,7 +2516,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "WELD COUNTY S/D RE-8": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0.19,
             "2006": 0.13,
@@ -2529,7 +2531,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "WELDON VALLEY RE-20(J)": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -2544,7 +2546,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "WEST END RE-2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.118,
             "2005": 0.19,
             "2006": 0.2,
@@ -2559,7 +2561,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "WEST GRAND 1-JT": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -2574,7 +2576,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "WEST YUMA COUNTY RJ-1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -2589,7 +2591,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "WESTMINSTER 50": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -2604,7 +2606,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "WIDEFIELD 3": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.487,
             "2005": 0.458,
             "2006": 0.471,
@@ -2619,7 +2621,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "WIGGINS RE-50(J)": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -2634,7 +2636,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "WILEY RE-13 JT": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0.375,
             "2005": 1,
             "2006": 1,
@@ -2649,7 +2651,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "WINDSOR RE-4": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0,
             "2006": 0,
@@ -2664,7 +2666,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "WOODLAND PARK RE-2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 0.006,
             "2006": 0,
@@ -2679,7 +2681,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "WOODLIN R-104": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 0.714,
             "2006": 1,
@@ -2694,7 +2696,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "WRAY SCHOOL DISTRICT RD-2": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 1,
             "2005": 1,
             "2006": 1,
@@ -2709,7 +2711,7 @@ exports[`App should render all components 1`] = `
           },
         },
         "YUMA SCHOOL DISTRICT 1": Object {
-          "data": Object {
+          "stats": Object {
             "2004": 0,
             "2005": 1,
             "2006": 1,
