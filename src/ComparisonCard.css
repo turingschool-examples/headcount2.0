@@ -17,8 +17,8 @@
   font-size: 20px;
   font-weight: bold;
   line-height: 2.8;
-  margin-top: 0;
   margin-bottom: 0;
+  margin-top: 0;
   padding: 0;
   position: relative;
 }
@@ -34,12 +34,12 @@
   width: 60px;
 }
 
-.avg-top {
-  margin-right: 40px;
-}
-
 .avg-bottom {
   margin-left: 40px;
+}
+
+.avg-top {
+  margin-right: 40px;
 }
 
 .pencil-icon {
@@ -51,7 +51,6 @@
 }
 
 .rotate {
-  margin-left: 0;
   margin-left: 26px;
   transform: rotate(225deg);
 }
@@ -70,4 +69,14 @@
   display: flex;
   height: 150px;
   margin: 55px auto 0 auto;
+}
+
+@media screen and (max-width: 905px) {
+  .pencil-icon {
+    transform: rotate(135deg);
+  }
+  
+  .rotate {
+    transform: rotate(315deg);
+  }
 }

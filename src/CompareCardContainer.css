@@ -2,20 +2,20 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 80%;
   margin: 20px 10%;
+  width: 80%;
 }
 
 @media screen and (max-width: 1085px) {
   .compare-card-container {
-    width: 96%;
     margin: 20px 2%;
+    width: 96%;
   }
 }
 
 @media screen and (max-width: 905px) {
   .compare-card-container {
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
   }
 }
