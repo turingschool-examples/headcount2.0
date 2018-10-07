@@ -4,7 +4,7 @@ export default class DistrictRepository {
 		this.stats = this.compileDistricts();
 	}
 
-	compileDistricts() { 
+	compileDistricts = () => { 
 
 		const schoolDistrict = this.data.reduce((district, location) => {
 			const school = location.Location.toLowerCase()
@@ -27,11 +27,10 @@ export default class DistrictRepository {
 
 			return district
 		}, {})	
-// console.log(schoolDistrict)
 		return schoolDistrict
 	}
 
-	findByName(district) {
+	findByName = (district) => {
 		if (!district) {
 			return undefined
 		} 
@@ -44,12 +43,13 @@ export default class DistrictRepository {
 		return undefined
 	}
 
-	findAllMatches(district) {
+	findAllMatches = (district) => {
 		const allDistricts = this.stats
 		const districtKeys = Object.keys(allDistricts)
 
 		if (!district) {
 			return districtKeys.map((districtKey) => {
+				// console.log(this.stats)
 					return allDistricts[districtKey]
 				})
 		} else {
@@ -62,4 +62,46 @@ export default class DistrictRepository {
 			}, [])
 		}
 	}
-}
+
+	findAverage = (district) => {
+		const districtLowerCase = district.toLowerCase()
+		// console.log(this.stats[districtLowerCase])
+		const values = Object.values(this.stats[districtLowerCase].stats)
+		const finalAvg = values.reduce((avg, data) => {
+			avg += data;
+			return avg
+		}, 0) / values.length
+		return Math.round(finalAvg * 1000) / 1000
+	}
+
+		// const allDistricts = this.stats
+		// // const districtKeys = Object.keys(allDistricts)
+		// const districtValues = Object.values(this.stats)
+		// const districtLowerCase = district.toLowerCase()
+		// const districtValuesMap = districtValues.map((districtValue) => {
+		// 	return districtValue.stats
+		// })
+
+		// const districtValuesReduce = districtValuesMap.reduce((acc, districtValue) => {
+		// 	acc.push(Object.values(districtValue))
+		// 	return acc
+		// }, [])
+
+		// console.log(districtValuesMap)
+
+
+
+
+		// return districtObjects.reduce((dataAvg, object) => {
+		// 	if ()
+		// 	return dataAvg
+		// }, 0)
+		// if (districtKey.includes(districtLowerCase)) {
+		// 	const dataKeys = Object.keys(districtObjects.stats)
+		// 	return dataKeys.reduce((dataAvg, data) => {
+		// 		dataAvg += data
+		// 		console.log(dataAvg / dataKeys.length)
+		// 		return dataAvg / dataKeys.length
+		// 	}, 0)
+		// }
+	}
