@@ -13,10 +13,10 @@ describe('SearchForm', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it.skip('should call the function on input change', () => {
-    wrapper.instance().
-      expect(searchSchoolMock.mock.calls.length).toBe(1);
-  });
+  // it.skip('should call the function on input change', () => {
+  //   wrapper.instance().
+  //     expect(searchSchoolMock.mock.calls.length).toBe(1);
+  // });
 
   it.skip('updates state when searchSchool is called', () => {
     const mockEvent = { target: { name: 'title', value: 'something' } };

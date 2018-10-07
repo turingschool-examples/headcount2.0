@@ -39,7 +39,7 @@ class App extends Component {
       str1 = str1.toString();
       let str2 = Object.keys(compareCards[1]);
       str2 = str2.toString();
-      this.compareAvrg(str1, str2)
+      this.compareAvrg(str1, str2);
     }
   }
 
@@ -68,7 +68,8 @@ class App extends Component {
         <CompareCardsContainer 
           className='compare-cards'cards={this.state.compareCards} 
           comparedCard={this.state.compared} resetState={this.resetState} />
-        <button className='clear-btn' type='button' onClick={this.clearComparedCards}>Clear Cards</button>
+        <button className='clear-btn' type='button' 
+          onClick={this.clearComparedCards}>Clear Cards</button>
         <CardContainer cards={this.state.cards} 
           compareAvrg={this.compareAvrg} 
           setStateOfCompare={this.setStateOfCompare} />

@@ -32,6 +32,13 @@ ShallowWrapper {
           comparedCard={Array []}
           resetState={undefined}
 />,
+        <button
+          className="clear-btn"
+          onClick={[Function]}
+          type="button"
+>
+          Clear Cards
+</button>,
         <CardContainer
           cards={
                     Array [
@@ -2799,6 +2806,20 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Clear Cards",
+          "className": "clear-btn",
+          "onClick": [Function],
+          "type": "button",
+        },
+        "ref": null,
+        "rendered": "Clear Cards",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
         "nodeType": "function",
         "props": Object {
           "cards": Array [
@@ -5549,6 +5570,13 @@ ShallowWrapper {
             comparedCard={Array []}
             resetState={undefined}
 />,
+          <button
+            className="clear-btn"
+            onClick={[Function]}
+            type="button"
+>
+            Clear Cards
+</button>,
           <CardContainer
             cards={
                         Array [
@@ -8312,6 +8340,20 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Clear Cards",
+            "className": "clear-btn",
+            "onClick": [Function],
+            "type": "button",
+          },
+          "ref": null,
+          "rendered": "Clear Cards",
+          "type": "button",
         },
         Object {
           "instance": null,
