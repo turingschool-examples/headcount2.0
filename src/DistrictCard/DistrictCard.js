@@ -2,7 +2,7 @@ import React from 'react';
 import './DistrictCard.css';
 import PropTypes from 'prop-types';
 
-const DistrictCard = ({ location, stats }) => {
+const DistrictCard = ({ location, stats, district, compareDistrict }) => {
 	const statsKeys = Object.keys(stats)
 	const schoolData = statsKeys.map((stat) => {
 		// console.log(stat)
@@ -15,7 +15,7 @@ const DistrictCard = ({ location, stats }) => {
 	
 
 	return (
-		<div className='DistrictCard' onClick=''>
+		<div className='DistrictCard' onClick={() => compareDistrict(district)}>
 			<h3 className='card-location'>{location}</h3>
 			{schoolData}
 		</div>

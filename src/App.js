@@ -12,7 +12,7 @@ class App extends Component {
 		this.state = {
 			data: new DistrictRepository(kinderData),
 			searchTerm: '',
-			compareDistricts: []
+			districtsBeingCompared: []
 		};
 	}
 
@@ -21,12 +21,20 @@ class App extends Component {
 	}
 
 	compareDistrict = (district) => {
-
+		const clickedDistrict = {...district};
+		console.log(district)
+		const districtsBeingCompared = [...this.state.districtsBeingCompared, clickedDistrict]
+		
+		if (this.state.districtsBeingCompared.length === 2) {
+			this.state.districtsBeingCompared.shift()
+		} else if (this.state.districtsBeingCompared.length <= 2) {
+			this.setState({ districtsBeingCompared })
+		}
 	}
 
 	render() {
-		const { data, searchTerm } = this.state;
-		// {console.log(data.findAllMatches(searchTerm))}
+		const { data, searchTerm, districtsBeingCompared } = this.state;
+		// {console.log(districtsBeingCompared)}
 		return (
 			<div className='App'>
 				<div className='header'>
@@ -36,9 +44,14 @@ class App extends Component {
 							<i className="fas fa-graduation-cap"></i>
 						</span></h1>
 				</div>
+				<CompareCard 
+					districtsBeingCompared={districtsBeingCompared}
+				/>
 				<Search searchDistrict={this.searchDistrict}/>
 				<DistrictsContainer 
-					districts={data.findAllMatches(searchTerm)}/>
+					districts={data.findAllMatches(searchTerm)}
+					compareDistrict={this.compareDistrict}
+				/>
 			</div>
 		);
 	}
