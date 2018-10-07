@@ -34,12 +34,27 @@ ShallowWrapper {
       "children": Array [
         <DistrictCard
           colorado={Object {}}
+          district={
+            Object {
+              "colorado": Object {},
+            }
+          }
         />,
         <DistrictCard
           academy 20={Object {}}
+          district={
+            Object {
+              "academy 20": Object {},
+            }
+          }
         />,
         <DistrictCard
           agate 300={Object {}}
+          district={
+            Object {
+              "agate 300": Object {},
+            }
+          }
         />,
       ],
       "className": "DistrictsContainer",
@@ -48,10 +63,14 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": "0.08283598125654423",
+        "key": "0.7126468232588827",
         "nodeType": "function",
         "props": Object {
           "colorado": Object {},
+          "compareDistrict": undefined,
+          "district": Object {
+            "colorado": Object {},
+          },
           "schoolName": undefined,
         },
         "ref": null,
@@ -60,10 +79,14 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "0.3065029507518755",
+        "key": "0.010022118637625477",
         "nodeType": "function",
         "props": Object {
           "academy 20": Object {},
+          "compareDistrict": undefined,
+          "district": Object {
+            "academy 20": Object {},
+          },
           "schoolName": undefined,
         },
         "ref": null,
@@ -72,10 +95,14 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "0.08748020744138874",
+        "key": "0.8745314382999656",
         "nodeType": "function",
         "props": Object {
           "agate 300": Object {},
+          "compareDistrict": undefined,
+          "district": Object {
+            "agate 300": Object {},
+          },
           "schoolName": undefined,
         },
         "ref": null,
@@ -94,12 +121,27 @@ ShallowWrapper {
         "children": Array [
           <DistrictCard
             colorado={Object {}}
+            district={
+              Object {
+                "colorado": Object {},
+              }
+            }
           />,
           <DistrictCard
             academy 20={Object {}}
+            district={
+              Object {
+                "academy 20": Object {},
+              }
+            }
           />,
           <DistrictCard
             agate 300={Object {}}
+            district={
+              Object {
+                "agate 300": Object {},
+              }
+            }
           />,
         ],
         "className": "DistrictsContainer",
@@ -108,10 +150,14 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": "0.08283598125654423",
+          "key": "0.7126468232588827",
           "nodeType": "function",
           "props": Object {
             "colorado": Object {},
+            "compareDistrict": undefined,
+            "district": Object {
+              "colorado": Object {},
+            },
             "schoolName": undefined,
           },
           "ref": null,
@@ -120,10 +166,14 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "0.3065029507518755",
+          "key": "0.010022118637625477",
           "nodeType": "function",
           "props": Object {
             "academy 20": Object {},
+            "compareDistrict": undefined,
+            "district": Object {
+              "academy 20": Object {},
+            },
             "schoolName": undefined,
           },
           "ref": null,
@@ -132,10 +182,14 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "0.08748020744138874",
+          "key": "0.8745314382999656",
           "nodeType": "function",
           "props": Object {
             "agate 300": Object {},
+            "compareDistrict": undefined,
+            "district": Object {
+              "agate 300": Object {},
+            },
             "schoolName": undefined,
           },
           "ref": null,

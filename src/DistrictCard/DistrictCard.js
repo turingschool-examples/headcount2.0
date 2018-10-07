@@ -24,7 +24,9 @@ const DistrictCard = ({ location, stats, district, compareDistrict }) => {
 
 DistrictCard.proptypes = {
 	location: PropTypes.string.isRequired,
-	stats: PropTypes.object.isRequired
+	stats: PropTypes.object.isRequired,
+	district: PropTypes.object.isRequired,
+	compareDistrict: PropTypes.func.isRequired
 }
 
 export default DistrictCard;

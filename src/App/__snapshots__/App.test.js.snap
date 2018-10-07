@@ -34,10 +34,14 @@ ShallowWrapper {
             </span>
           </h1>
         </div>,
+        <CompareCard
+          districtsBeingCompared={Array []}
+        />,
         <Search
           searchDistrict={[Function]}
         />,
         <DistrictsContainer
+          compareDistrict={[Function]}
           districts={
             Array [
               Object {
@@ -3016,6 +3020,17 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "districtsBeingCompared": Array [],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
         "nodeType": "class",
         "props": Object {
           "searchDistrict": [Function],
@@ -3029,6 +3044,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "compareDistrict": [Function],
           "districts": Array [
             Object {
               "location": "COLORADO",
@@ -5958,10 +5974,14 @@ ShallowWrapper {
               </span>
             </h1>
           </div>,
+          <CompareCard
+            districtsBeingCompared={Array []}
+          />,
           <Search
             searchDistrict={[Function]}
           />,
           <DistrictsContainer
+            compareDistrict={[Function]}
             districts={
               Array [
                 Object {
@@ -8940,6 +8960,17 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "districtsBeingCompared": Array [],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
           "nodeType": "class",
           "props": Object {
             "searchDistrict": [Function],
@@ -8953,6 +8984,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "compareDistrict": [Function],
             "districts": Array [
               Object {
                 "location": "COLORADO",

@@ -3,7 +3,7 @@ import './DistrictsContainer.css';
 import DistrictCard from '../DistrictCard/DistrictCard.js';
 import PropTypes from 'prop-types';
 
-const DistrictsContainer = ({ districts, compareDistrict }) => {
+const DistrictsContainer = ({ districts, compareDistrict, stopComparingDistrict }) => {
 		const districtCards = districts.map((district) => {
 		return <DistrictCard  
 							key={Math.random()} 
@@ -11,6 +11,7 @@ const DistrictsContainer = ({ districts, compareDistrict }) => {
 							{...district}
 							district={district}
 							compareDistrict={compareDistrict}
+							stopComparingDistrict={stopComparingDistrict}
 						/>
 	})
 
@@ -22,7 +23,8 @@ const DistrictsContainer = ({ districts, compareDistrict }) => {
 }
 
 DistrictsContainer.propTypes = {
-	districts: PropTypes.array.isRequired
+	districts: PropTypes.array.isRequired,
+	compareDistrict: PropTypes.func
 }
 
 export default DistrictsContainer;
