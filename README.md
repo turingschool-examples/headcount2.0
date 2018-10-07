@@ -22,15 +22,15 @@ Run `npm start` and visit localhost:3000 in your browser
 You can begin running tests with `npm test`
 
 ## Functionality
-
 ![Initial State](assets/ClickingSchool.png)  
-
-![Responsive Tablet View](assets/tabView.png) 
-
-![Responsive Phone View](assets/mobileView.png)  
 
 ![Searching by district](assets/searchingSchools.png)  
 
 ![Comparing districts](assets/compareSchools.png)  
+
+## Responsive View
+![Responsive Tablet View](assets/tabView.png) 
+
+![Responsive Phone View](assets/mobileView.png)  
 
 
