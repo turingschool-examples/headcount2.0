@@ -28,7 +28,7 @@
     "comma-style": ["error", "last"],
     "computed-property-spacing": ["error", "never"],
     "func-call-spacing": ["error", "never"],
-    "indent": ["warn", 2, {"SwitchCase": 1}],
+    "indent": ["warn", tab, {"SwitchCase": 1}],
     "keyword-spacing": ["error", { "before": true, "after": true }],
     "max-len": ["warn", 80],
     "no-duplicate-imports": "error",

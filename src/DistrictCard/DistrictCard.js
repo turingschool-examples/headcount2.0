@@ -12,10 +12,10 @@ const DistrictCard = ({ location, stats }) => {
 			{stat}: {stats[stat]} 
 		</p>
 	})
-	// console.log(schoolData)
+	
 
 	return (
-		<div className='DistrictCard'>
+		<div className='DistrictCard' onClick=''>
 			<h3 className='card-location'>{location}</h3>
 			{schoolData}
 		</div>
@@ -28,6 +28,3 @@ DistrictCard.proptypes = {
 }
 
 export default DistrictCard;
-
-			// className={(stats[stat] > 0.5) ? '.greater-than-point-5' : '.less-than-point-5'}>
-			// {stat}: {stats[stat]}</p>
