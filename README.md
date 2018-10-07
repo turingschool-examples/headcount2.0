@@ -23,12 +23,13 @@ You can begin running tests with `npm test`
 
 ## Functionality
 
-## Initial State 
-![](assets/ClickingSchool.png)  
+![Initial State](assets/ClickingSchool.png)  
 
-## Searching by district
-![](assets/searchingSchools.png)  
+![Responsive Tablet View](assets/tabView.png) 
 
-## Comparing districts
-![](assets/compareSchools.png)  
+![Responsive Phone View](assets/mobileView.png)  
+
+![Searching by district](assets/searchingSchools.png)  
+
+![Comparing districts](assets/compareSchools.png)  
 
