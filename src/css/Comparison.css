@@ -1,0 +1,20 @@
+.comparison-frame {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.comparison-container button {
+  border: 1px #000 solid;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #0CA7D3;
+  color: #fff;
+  padding: .5rem;
+  transition: .5s;
+}
+
+.comparison-container button:hover {
+  background-color: #fff;
+  color: #0CA7D3;
+}
