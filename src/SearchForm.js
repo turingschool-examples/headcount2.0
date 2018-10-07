@@ -22,6 +22,7 @@ render() {
     <div>
       <form className="search-field">
         <input type="text" 
+               placeholder="search for a school district..."
                onChange={(e) => {this.saveUserInput(e)}}
                />
       </form>

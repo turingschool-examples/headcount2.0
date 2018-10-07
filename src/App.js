@@ -60,6 +60,7 @@ class App extends Component {
         <div>
           <nav>
             <h1>HeadCount 2.0</h1>
+            <h3 className="info">Search test scores by school district or compare two school districts by clicking on them</h3>
             <SearchForm filterCards={this.filterCards} />
           </nav> 
           <CompareCard compareSelections={compareSelections} 
