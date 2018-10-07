@@ -22,6 +22,12 @@ This application was built using the `create-react-app` boilerplate.
 * Make pairs of district data comparable via a comparison component.
 * Layout and style the application while keeping an eye for appropriate user experience and design.
 
+![main](https://user-images.githubusercontent.com/29719272/46584808-2f3e1a80-ca25-11e8-9e4a-0b65bdb2e149.png)
+![filter](https://user-images.githubusercontent.com/29719272/46584806-2f3e1a80-ca25-11e8-9032-1bda90ffad46.png)
+![compare](https://user-images.githubusercontent.com/29719272/46584805-2f3e1a80-ca25-11e8-86fa-f9f156ecc834.png)
+![info](https://user-images.githubusercontent.com/29719272/46584807-2f3e1a80-ca25-11e8-9491-828aec9abe0c.png)
+
+
 ## Process:
 
 I started this project by focusing first on the data set I was working with so that it could be mapped over and leveraged into individual card components. This was followed by writing a simple case-insensitive search function that would allow users to filter the data by district name. 
