@@ -82,4 +82,7 @@ header {
     width: 250px;
     font-size: .8rem;
   }
+  .clear-input-button {
+    left: 250px;
+  }
 }
