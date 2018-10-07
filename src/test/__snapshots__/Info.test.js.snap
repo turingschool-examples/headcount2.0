@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Info should render content to the DOM 1`] = `
+<aside
+  className="hidden-modal info-modal"
+>
+  <img
+    alt="close-icon"
+    className="close-icon"
+    onClick={[Function]}
+    src="./cancel.svg"
+  />
+  <h1>
+    About Colorado Kindercount
+  </h1>
+  <p>
+    This app allows you to compare kindergarten test scores between the school districts throughout Colorado. To compare two districts, simply click their cards to select them.
+  </p>
+</aside>
+`;

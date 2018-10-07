@@ -1,0 +1,40 @@
+.info-modal {
+  position: absolute;
+  width: 600px;
+  height: 200px;
+  right: 0;
+  top: 150px;
+  background: #fff;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+  border: 1px #000 solid;
+  opacity: 1;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: .3s;
+}
+
+.info-modal h1 {
+  padding-top: 0;
+  text-align: center;
+}
+
+.info-modal h1,
+.info-modal p {
+  margin: 1rem;
+}
+
+.info-modal img {
+  margin: 1rem 0 0 1rem;
+  width: 25px;
+  transition: .2s;
+}
+
+.info-modal img:hover {
+  cursor: pointer;
+  transform: rotate(90deg);
+}
+
+.hidden-modal {
+  opacity: 0;
+  right: -50%;
+}

@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comparison should render content to the DOM 1`] = `
+<section
+  className="comparison-container"
+>
+  <div
+    className="card-container"
+  >
+    <Card
+      data={
+        Object {
+          "location": "ADAMS COUNTY 14",
+          "stats": Object {
+            "2004": 0.228,
+            "2005": 0.3,
+            "2006": 0.293,
+            "2007": 0.306,
+            "2008": 0.673,
+            "2009": 1,
+            "2010": 1,
+            "2011": 1,
+            "2012": 1,
+            "2013": 0.998,
+            "2014": 1,
+          },
+        }
+      }
+      key="ADAMS COUNTY 14"
+      processSelection={[Function]}
+      selection={
+        Array [
+          Object {
+            "location": "ADAMS COUNTY 14",
+            "stats": Object {
+              "2004": 0.228,
+              "2005": 0.3,
+              "2006": 0.293,
+              "2007": 0.306,
+              "2008": 0.673,
+              "2009": 1,
+              "2010": 1,
+              "2011": 1,
+              "2012": 1,
+              "2013": 0.998,
+              "2014": 1,
+            },
+          },
+          Object {
+            "location": "ADAMS COUNTY 14",
+            "stats": Object {
+              "2004": 0.228,
+              "2005": 0.3,
+              "2006": 0.293,
+              "2007": 0.306,
+              "2008": 0.673,
+              "2009": 1,
+              "2010": 1,
+              "2011": 1,
+              "2012": 1,
+              "2013": 0.998,
+              "2014": 1,
+            },
+          },
+        ]
+      }
+    />
+    <ComparisonCard
+      compareDistrictAverages={[Function]}
+      data={
+        Array [
+          Object {
+            "location": "ADAMS COUNTY 14",
+            "stats": Object {
+              "2004": 0.228,
+              "2005": 0.3,
+              "2006": 0.293,
+              "2007": 0.306,
+              "2008": 0.673,
+              "2009": 1,
+              "2010": 1,
+              "2011": 1,
+              "2012": 1,
+              "2013": 0.998,
+              "2014": 1,
+            },
+          },
+          Object {
+            "location": "ADAMS COUNTY 14",
+            "stats": Object {
+              "2004": 0.228,
+              "2005": 0.3,
+              "2006": 0.293,
+              "2007": 0.306,
+              "2008": 0.673,
+              "2009": 1,
+              "2010": 1,
+              "2011": 1,
+              "2012": 1,
+              "2013": 0.998,
+              "2014": 1,
+            },
+          },
+        ]
+      }
+    />
+    <Card
+      data={
+        Object {
+          "location": "ADAMS COUNTY 14",
+          "stats": Object {
+            "2004": 0.228,
+            "2005": 0.3,
+            "2006": 0.293,
+            "2007": 0.306,
+            "2008": 0.673,
+            "2009": 1,
+            "2010": 1,
+            "2011": 1,
+            "2012": 1,
+            "2013": 0.998,
+            "2014": 1,
+          },
+        }
+      }
+      key="ADAMS COUNTY 14"
+      processSelection={[Function]}
+      selection={
+        Array [
+          Object {
+            "location": "ADAMS COUNTY 14",
+            "stats": Object {
+              "2004": 0.228,
+              "2005": 0.3,
+              "2006": 0.293,
+              "2007": 0.306,
+              "2008": 0.673,
+              "2009": 1,
+              "2010": 1,
+              "2011": 1,
+              "2012": 1,
+              "2013": 0.998,
+              "2014": 1,
+            },
+          },
+          Object {
+            "location": "ADAMS COUNTY 14",
+            "stats": Object {
+              "2004": 0.228,
+              "2005": 0.3,
+              "2006": 0.293,
+              "2007": 0.306,
+              "2008": 0.673,
+              "2009": 1,
+              "2010": 1,
+              "2011": 1,
+              "2012": 1,
+              "2013": 0.998,
+              "2014": 1,
+            },
+          },
+        ]
+      }
+    />
+  </div>
+  <button
+    className="close-btn"
+    onClick={[Function]}
+  >
+    Close
+  </button>
+</section>
+`;

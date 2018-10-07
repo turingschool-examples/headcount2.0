@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Score should render content to the DOM 1`] = `
+<section
+  className="score-wrapper"
+>
+  <p
+    className="score"
+  >
+    <img
+      alt="down"
+      src="./drop-down-arrow.svg"
+    />
+     
+    2004
+    : 
+    0.228
+  </p>
+</section>
+`;
