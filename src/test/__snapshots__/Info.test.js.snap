@@ -14,7 +14,7 @@ exports[`Info should render content to the DOM 1`] = `
     About Colorado Headcount
   </h1>
   <p>
-    This app allows you to compare test scores between the school districts throughout Colorado. To compare two districts, simply click their cards to select them.
+    This app allows you to compare kindergarten test scores between the school districts throughout Colorado. To compare two districts, simply click their cards to select them.
   </p>
 </aside>
 `;

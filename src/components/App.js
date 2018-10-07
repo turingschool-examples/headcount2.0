@@ -10,6 +10,7 @@ import CardContainer from './CardContainer'
 import InputField from './InputField'
 import Comparison from './Comparison'
 import Info from './Info'
+import Header from './Header'
 
 import '../css/App.css';
 
@@ -87,21 +88,10 @@ class App extends Component {
     if (this.state.data) {
       return (
         <main className="app">
-          <header>
-            <img className='logo' src="./brain-and-head.svg" alt="logo" />
-            <h1 className='banner-title'>Colorado Headcount</h1>
-            <img 
-              className='info-btn'
-              src='./information.svg'
-              alt='info-button'
-              onClick={() => {
-                this.toggleModal()
-              }}
-            />
-            <InputField 
-              processFilter={this.processFilter}
-            />
-          </header>
+          <Header 
+            processFilter={this.processFilter} 
+            toggleModal={this.toggleModal}
+          />
           {this.state.selection.length === 2 &&
             <Comparison
               compareDistrictAverages={this.state.data.compareDistrictAverages}
