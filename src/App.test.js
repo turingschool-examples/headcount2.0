@@ -1,25 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { shallow, mount } from "enzyme";
-import Card from "./Card";
-import ComparedCard from "./ComparedCard";
-import CardContainer from "./CardContainer";
+import { shallow } from "enzyme";
 import DistrictRepository from "./helper.js";
 import kinderData from "./data/kindergartners_in_full_day_program.js";
 import App from "./App";
 
 describe("App component", () => {
   let wrapper;
-  //let handleMockCardClick;
   const allDistricts = new DistrictRepository(kinderData);
   const schoolData = allDistricts.stats;
   const districtDirectory = Object.keys(schoolData);
 
   beforeEach(() => {
-    //handleMockCardClick = jest.fn();
     wrapper = shallow(<App />);
-    //wrapper.instance().displayAllCards(schoolData, districtDirectory)
-    //wrapper.setState({ schoolData })
   });
 
   it("matches the snapshot", () => {
@@ -90,7 +83,7 @@ describe("App component", () => {
     expect(wrapper.state().instructions).toEqual(initialInstructions);
   });
 
-  it("should update 'clicked' and property with index in comparedCards array when card is clicked and added to comparedCards", () => {
+  it("should update 'clicked' property with index in comparedCards array when card is clicked and added to comparedCards", () => {
     expect(wrapper.state().schoolData["FALCON 49"].clicked).toBeFalsy();
     wrapper.instance().handleCardClick("FALCON 49");
     expect(wrapper.state().schoolData["FALCON 49"].clicked).toEqual(0);
@@ -136,7 +129,7 @@ describe("App component", () => {
     });
   });
 
-  it("displayAllCards should set all districts do be displayed", () => {
+  it("displayAllCards function should set all districts do be displayed", () => {
     let results;
     wrapper.instance().handleSearch("yu");
 
@@ -154,7 +147,7 @@ describe("App component", () => {
     expect(results).toHaveLength(181);
   });
 
-  it("toggleSearchDisplay should toggle display property", () => {
+  it("toggleSearchDisplay function should toggle display property", () => {
     const input = "ASDF";
 
     wrapper.instance().displayAllCards(schoolData, districtDirectory);
@@ -167,7 +160,7 @@ describe("App component", () => {
     expect(wrapper.state().schoolData["COLORADO"].display).toBeFalsy();
   });
 
-  it("addClickedProp should add property 'clicked' of comparedCard array index", () => {
+  it("addClickedProp function should add property 'clicked' of comparedCard array index", () => {
     let { comparedCards } = wrapper.state();
     const clickedDistrict = wrapper.state().schoolData["COLORADO"];
     const clickedDistrict2 = wrapper.state().schoolData["ENGLEWOOD 1"];
@@ -183,7 +176,7 @@ describe("App component", () => {
     expect(comparedCards[1].clicked).toEqual(1);
   });
   
-  it("handleComparedCardClick should remove card from comparison array", () => {
+  it("handleComparedCardClick function should remove card from comparison array", () => {
     let { comparedCards } = wrapper.state();
     const clickedDistrict = wrapper.state().schoolData["COLORADO"];
     wrapper.instance().handleCardClick("LIMON RE-4J");
@@ -193,7 +186,7 @@ describe("App component", () => {
     expect(comparedCards).toEqual([{}, {}]);    
   });
 
-  it("resetComparisonCard should clear comparison card", () => {
+  it("resetComparisonCard function should clear comparison card", () => {
     const comparedAvg = {foo: 'bar'};
     const instructions = "foo bar";
     wrapper.instance().setState({ comparedAvg, instructions });  
