@@ -22,12 +22,13 @@ class App extends Component {
 
 	compareDistrict = (district) => {
 		const clickedDistrict = {...district};
+		const districtsInState = this.state.districtsBeingCompared;
 		const districtsBeingCompared = 
-			[...this.state.districtsBeingCompared, clickedDistrict];
+			[...districtsInState, clickedDistrict];
 		
-		if (this.state.districtsBeingCompared.length === 2) {
-			this.state.districtsBeingCompared.shift();
-		} else if (this.state.districtsBeingCompared.length <= 2) {
+		if (districtsInState.length === 2) {
+			districtsInState.shift();
+		} else if (districtsInState.length <= 2) {
 			this.setState({ districtsBeingCompared });
 		}
 	}
@@ -56,8 +57,5 @@ class App extends Component {
 		);
 	}
 }
-
-
-
 
 export default App;
