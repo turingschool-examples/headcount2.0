@@ -40,31 +40,11 @@ describe('App', ()=>{
   });
 
   it('should call setState on filter when processFilter() is called', () => {
-    const data = new DistrictRepository(kinderData);
-
-    const testFilter = {"COLORADO SPRINGS 11": {
-          "classLabel": "card",
-          "location": "COLORADO SPRINGS 11",
-          "stats": {
-            "2004": 0.069,
-            "2005": 0.509,
-            "2006": 0.638,
-            "2007": 0.994,
-            "2008": 0.992,
-            "2009": 1,
-            "2010": 0.993,
-            "2011": 0.994,
-            "2012": 0.993,
-            "2013": 0.989,
-            "2014": 0.994,
-          }
-        }
-      }
-  
 
     wrapper.instance().processFilter('colorado spri');
 
-    expect((wrapper.state().filter)).toEqual((testFilter))
+    expect((wrapper.state().filterString)).toEqual((
+      'colorado spri'))
   })
 
   it('should add an district to this.state.selection when called', () => {
@@ -128,12 +108,6 @@ describe('App', ()=>{
     expect(wrapper.state().modalClass).toEqual('hidden-modal info-modal')
   });
 
-  it('should call toggleModal on button click', () => {
-    wrapper.find('.info-btn').simulate('click')
-
-    expect(wrapper.state().modalClass).toEqual('info-modal')
-  });
-
   it('should update modalClass when unToggleModal is called', () => {
     wrapper.instance().toggleModal();
     wrapper.instance().untoggleModal();
@@ -182,6 +156,13 @@ describe('App', ()=>{
 
     wrapper.instance().processSelection(argument1)
     expect(wrapper.state().selection).toEqual([argument2])
+  });
+
+  it('should setState on selection and data to the default settings when close is passed through', () => {
+    wrapper.instance().processSelection('close');
+
+    expect(wrapper.state().selection).toEqual([])
+    expect(JSON.stringify(wrapper.state().data)).toEqual(JSON.stringify(new DistrictRepository(kinderData)))  
   });
 
 });

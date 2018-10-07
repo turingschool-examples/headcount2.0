@@ -2,35 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import CardContainer from '../components/CardContainer';
+import DistrictRepository from '../helper.js'
+import kinderData from '../data/kindergartners_in_full_day_program.js';
+
+
+
 
 describe('CardContainer', ()=>{
   let wrapper; 
 
-  const mockData = {'ADAMS COUNTY 14': {
-    location: 'ADAMS COUNTY 14',
-      stats: {
-        2004: 0.228, 
-        2005: 0.3, 
-        2006: 0.293, 
-        2007: 0.306, 
-        2008: 0.673,
-        2009: 1,
-        2010: 1,
-        2011: 1,
-        2012: 1,
-        2013: 0.998,
-        2014: 1
-      }
-    }
-  }
+
 
   const mockProcessSelection = jest.fn()
 
   beforeEach(()=>{
     wrapper = shallow(<CardContainer 
-      data={mockData} 
+      data={new DistrictRepository(kinderData)} 
       processSelection={mockProcessSelection}
       selection={[]}
+      filterString={'colo'}
+
     />);
   });
 
@@ -38,7 +29,18 @@ describe('CardContainer', ()=>{
     expect(wrapper).toBeDefined();
   });
 
-  it('should render content to the DOM', () => {
+  it('should render filtered content to the DOM', () => {
+    expect(wrapper).toMatchSnapshot();    
+  });
+
+  it('should render the entire dataset if there is filterString in props is a blank string', () => {
+    wrapper = shallow(<CardContainer 
+      data={new DistrictRepository(kinderData)} 
+      processSelection={mockProcessSelection}
+      selection={[]}
+      filterString={''}
+    />);
+    
     expect(wrapper).toMatchSnapshot();    
   });
 

@@ -10,6 +10,7 @@ import CardContainer from './CardContainer'
 import InputField from './InputField'
 import Comparison from './Comparison'
 import Info from './Info'
+import Header from './Header'
 
 import '../css/App.css';
 
@@ -20,7 +21,8 @@ class App extends Component {
       data: undefined,
       filter: undefined,
       selection: [],
-      modalClass: 'hidden-modal info-modal'
+      modalClass: 'hidden-modal info-modal',
+      filterString: '' 
     }
   }
 
@@ -31,20 +33,14 @@ class App extends Component {
   }
 
   processFilter = (string) => {
-    const filter = this.state.data.findAllMatches(string)
-    const reducedFilter = filter.reduce((accu, location) => {
-      accu[location.location] = location
-      return accu;
-    }, {});
-
     this.setState({
-      filter: reducedFilter
+      filterString: string
     })
   }
 
   processSelection = (district) => {
     if (!this.state.selection.includes(district) && district !== 
-      'close') {
+      'close' && this.state.selection.length !== 2) {
       const newData = this.state.data
       newData.stats[district.location].classLabel = 'card selected'
       this.setState({
@@ -61,7 +57,7 @@ class App extends Component {
         }),
         data: newData
       })
-    } else {
+    } else if (district === 'close' || this.state.selection.includes(district)) {
       this.setState({
         selection: [],
         data: new DistrictRepository(kinderData)
@@ -92,21 +88,10 @@ class App extends Component {
     if (this.state.data) {
       return (
         <main className="app">
-          <header>
-            <img className='logo' src="./brain-and-head.svg" alt="logo" />
-            <h1 className='banner-title'>Colorado Headcount</h1>
-            <img 
-              className='info-btn'
-              src='./information.svg'
-              alt='info-button'
-              onClick={() => {
-                this.toggleModal()
-              }}
-            />
-            <InputField 
-              processFilter={this.processFilter}
-            />
-          </header>
+          <Header 
+            processFilter={this.processFilter} 
+            toggleModal={this.toggleModal}
+          />
           {this.state.selection.length === 2 &&
             <Comparison
               compareDistrictAverages={this.state.data.compareDistrictAverages}
@@ -121,9 +106,10 @@ class App extends Component {
             untoggleModal={this.untoggleModal} 
           />
             <CardContainer 
-              data={this.state.filter || this.state.data.stats} 
+              data={this.state.filter || this.state.data} 
               processSelection={this.processSelection}
               selection={this.state.selection}
+              filterString={this.state.filterString}
             />
         </main>
       );
