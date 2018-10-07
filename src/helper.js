@@ -1,9 +1,9 @@
 export default class DistrictRepository {
   constructor(data) {
-    this.stats = this.removeDuplicates(data);
+    this.stats = this.removeDupes(data);
   }
 
-  removeDuplicates = data => {
+  removeDupes = data => {
     return data.reduce((accu, school) => {
       if (!accu[school.Location]) {
         accu[school.Location] = [];
