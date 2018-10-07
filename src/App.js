@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import CardContainer from './Components/CardContainer/CardContainer';
-import Search from './Components/Search/Search'
+import Search from './Components/Search/Search';
 import DistrictRepository from './helper.js';
 import kinderdata from './data/kindergartners_in_full_day_program.js';
 
@@ -25,7 +25,7 @@ class App extends Component {
   }
 
   searchData(userInput){
-
+    
   }
 
   render() {
@@ -36,7 +36,7 @@ class App extends Component {
 
       <div>
         <span className="welcome">Welcome To Headcount 2.0!!!!!</span>
-        <Search />
+        <Search searchData={(userInput) => this.searchData(userInput)}/>
         <CardContainer stats={districtData} />
       </div>
 

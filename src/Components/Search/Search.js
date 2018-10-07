@@ -11,7 +11,7 @@ class Search extends Component{
   }
 
 
-  handleSubmit(){
+  handleSubmit(userInput){
 
   }
 

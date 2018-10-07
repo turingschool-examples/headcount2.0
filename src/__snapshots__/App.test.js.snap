@@ -23,6 +23,9 @@ ShallowWrapper {
         >
           Welcome To Headcount 2.0!!!!!
         </span>,
+        <Search
+          searchData={[Function]}
+        />,
         <CardContainer
           stats={
             Object {
@@ -2940,6 +2943,17 @@ ShallowWrapper {
         "ref": null,
         "rendered": "Welcome To Headcount 2.0!!!!!",
         "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "searchData": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
       },
       Object {
         "instance": null,
@@ -5864,6 +5878,9 @@ ShallowWrapper {
           >
             Welcome To Headcount 2.0!!!!!
           </span>,
+          <Search
+            searchData={[Function]}
+          />,
           <CardContainer
             stats={
               Object {
@@ -8781,6 +8798,17 @@ ShallowWrapper {
           "ref": null,
           "rendered": "Welcome To Headcount 2.0!!!!!",
           "type": "span",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "searchData": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
         },
         Object {
           "instance": null,
