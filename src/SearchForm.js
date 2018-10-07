@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
-import kinderData from './testData.js';
+// import kinderData from './testData.js';
 import DistrictRepository from './helper';
 import PropTypes from 'prop-types';
 
 export default class SearchForm extends Component {
   constructor(props){
-    super(props)
+    super(props);
     this.state = {
-      school: '',
-    }
+      school: ''
+    };
   }
 
-  inputChange = (e) => {
+  inputChange = (event) => {
     this.setState({
-      school: e.target.value
-    })
-    this.props.searchSchool(this.state.school)
+      school: event.target.value
+    });
+    this.props.searchSchool(this.state.school);
   }
 
   render() {
@@ -26,12 +26,12 @@ export default class SearchForm extends Component {
           name='Search'
           value={this.state.school}
           onChange={this.inputChange}
-          />
+        />
       </form>
-    )
+    );
   }
 }
 
 SearchForm.propTypes = {
   searchSchool: PropTypes.func.isRequired
-}
+};

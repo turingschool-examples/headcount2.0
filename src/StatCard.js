@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import DataCard from './DataCard'
+// import React, { Component } from 'react';
+// import DataCard from './DataCard'
 
-const StatCard = (props) => {
+// const StatCard = (props) => {
 
- return (
-      <p>{Object.values(props.school.stats)}</p>
-  )
-}
+//  return (
+//       <p>{Object.values(props.school.stats)}</p>
+//   )
+// }
 
-export default DataCard
+// export default DataCard

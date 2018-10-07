@@ -9,6 +9,6 @@ it('renders without crashing', () => {
 });
 
 it('should match the snapshot', () => {
-    const wrapper = shallow(<App />);
-    expect(wrapper).toMatchSnapshot()
+  const wrapper = shallow(<App />);
+  expect(wrapper).toMatchSnapshot();
 });
