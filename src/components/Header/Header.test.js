@@ -4,9 +4,11 @@ import Header from './index'
 
 describe('Header', () => {
   let wrapper;
+  let findAllMatches;
 
   beforeEach(() => {
-    wrapper = shallow(<Header />)
+    findAllMatches = jest.fn()
+    wrapper = shallow(<Header findAllMatches={findAllMatches}/>)
   })
 
   it('should have a heading and a Search component', () => {

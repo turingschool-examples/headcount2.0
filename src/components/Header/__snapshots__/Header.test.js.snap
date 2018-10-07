@@ -17,6 +17,8 @@ exports[`Header should have a heading and a Search component 1`] = `
        2.0
     </span>
   </h1>
-  <Search />
+  <Search
+    findAllMatches={[Function]}
+  />
 </header>
 `;
