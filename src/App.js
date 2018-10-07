@@ -22,13 +22,13 @@ class App extends Component {
 
 	compareDistrict = (district) => {
 		const clickedDistrict = {...district};
-		console.log(district)
-		const districtsBeingCompared = [...this.state.districtsBeingCompared, clickedDistrict]
+		const districtsBeingCompared = 
+			[...this.state.districtsBeingCompared, clickedDistrict];
 		
 		if (this.state.districtsBeingCompared.length === 2) {
-			this.state.districtsBeingCompared.shift()
+			this.state.districtsBeingCompared.shift();
 		} else if (this.state.districtsBeingCompared.length <= 2) {
-			this.setState({ districtsBeingCompared })
+			this.setState({ districtsBeingCompared });
 		}
 	}
 
