@@ -31,6 +31,5 @@ You can begin running tests with `npm test`
 ## Responsive View
 ![Responsive Tablet View](assets/tabView.png) 
 
-![Responsive Phone View](assets/mobileView.png)  
 
 
