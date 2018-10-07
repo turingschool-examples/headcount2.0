@@ -33,14 +33,6 @@ class App extends Component {
       str2 = str2.toString();
       this.compareAvrg(str1, str2);
     }
-    if (this.state.compareCards.length > 1) {
-      this.state.compareCards.slice(0, -1);
-      let str1 = Object.keys(compareCards[0]);
-      str1 = str1.toString();
-      let str2 = Object.keys(compareCards[1]);
-      str2 = str2.toString();
-      this.compareAvrg(str1, str2);
-    }
   }
 
   clearComparedCards = () => {

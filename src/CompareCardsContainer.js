@@ -25,8 +25,8 @@ const CompareCardsContainer =
 
 
 CompareCardsContainer.propTypes = {
-  cards: PropTypes.Object,
+  cards: PropTypes.array,
   compareAvrg: PropTypes.func,
-  comparedCard: PropTypes.Object
+  comparedCard: PropTypes.array
 };
 export default CompareCardsContainer;

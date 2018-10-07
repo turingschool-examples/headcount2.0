@@ -17,7 +17,7 @@ const CardContainer = ({ cards, setStateOfCompare }) => {
 };
 
 CardContainer.propTypes = {
-  cards: PropTypes.Object,
+  cards: PropTypes.array,
   setStateOfCompare: PropTypes.func
 };
 export default CardContainer;

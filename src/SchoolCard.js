@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 const SchoolCard = 
   ({ data, index, setStateOfCompare }) => {
     let str1 = data;
+    console.log(data)
     return (
       <div className="school-card">
         <h1 className='card-header' 
@@ -20,8 +21,8 @@ const SchoolCard =
     );
   };
 SchoolCard.propTypes = {
-  data: PropTypes.Object,
-  index: PropTypes.index,
+  data: PropTypes.object,
+  index: PropTypes.func,
   setStateOfCompare: PropTypes.func
 };
 export default SchoolCard;
