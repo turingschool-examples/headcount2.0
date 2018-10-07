@@ -1,5 +1,170 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`CardContainer should match a snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    data={
+        Object {
+            "location": "Turing",
+            "stats": Object {
+              "2018": 1,
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          0="T"
+          1="u"
+          2="r"
+          3="i"
+          4="n"
+          5="g"
+          className="cardlocation"
+          handleCompare={undefined}
+/>,
+        <Card
+          2018={1}
+          className="cardstats"
+          handleCompare={undefined}
+/>,
+      ],
+      "className": "card-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "0": "T",
+          "1": "u",
+          "2": "r",
+          "3": "i",
+          "4": "n",
+          "5": "g",
+          "className": "cardlocation",
+          "handleCompare": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "function",
+        "props": Object {
+          "2018": 1,
+          "className": "cardstats",
+          "handleCompare": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            0="T"
+            1="u"
+            2="r"
+            3="i"
+            4="n"
+            5="g"
+            className="cardlocation"
+            handleCompare={undefined}
+/>,
+          <Card
+            2018={1}
+            className="cardstats"
+            handleCompare={undefined}
+/>,
+        ],
+        "className": "card-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "0": "T",
+            "1": "u",
+            "2": "r",
+            "3": "i",
+            "4": "n",
+            "5": "g",
+            "className": "cardlocation",
+            "handleCompare": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "function",
+          "props": Object {
+            "2018": 1,
+            "className": "cardstats",
+            "handleCompare": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
 exports[`CardContainer should match the snapshot with no cards 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],

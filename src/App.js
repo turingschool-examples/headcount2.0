@@ -13,6 +13,7 @@ class App extends Component {
     this.state = {
       data : [],
       display: [],
+      avgCard: {},
     }
 
   }
@@ -36,27 +37,37 @@ class App extends Component {
   }
 
   handleCompare = (card) => {
-    
-      let schoolToCompare = this.state.data.find(school => {
+    const district = new DistrictRepository(KinderData);
+    let avgData = {}
+    let schoolToCompare = this.state.data.find(school => {
       return school.location === card
-      })
+    })
     this.state.display.push(schoolToCompare);
     
     if(this.state.display.length > 2){
       this.state.display.shift()
     }
+    if(this.state.display.length === 2) {
+      avgData = district.compareDistrictAverages(this.state.display[0].location, this.state.display[1].location)
+    }
     this.setState((state) => {
-      return {display : this.state.display }
+      return {
+        display : this.state.display, 
+        avgCard: avgData}
     })
 
   }
 
   render() {
-    const { data, display } = this.state
+    const { data, display, avgCard } = this.state
     return (
       <div className="app">
         <DistrictSearch handleSubmit={this.handleSearch} />
-        <CompareContainer data={ data } display={ display } handleCompare={this.handleCompare} />
+        <CompareContainer 
+          data={ data } 
+          display={ display } 
+          handleCompare={this.handleCompare} 
+          avgCard={ avgCard } />
         <CardContainer data={ data } handleCompare={this.handleCompare} />
       </div>
     );
