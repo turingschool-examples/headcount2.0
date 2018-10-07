@@ -13,7 +13,7 @@ const Header = (props) => {
         src='./information.svg'
         alt='info-button'
         onClick={() => {
-          props.toggleModal()
+          props.toggleModal();
         }}
       />
       <InputField 
