@@ -5,15 +5,22 @@ import Card from './index'
 describe('Card', () => {
   let wrapper;
   let location;
-  let data;
+  let stats;
 
   beforeEach(() => {
     location = 'COLORADO'
-    data = {2018: 1}
-    wrapper = shallow(<Card location={location} data={data}/>)
+    stats = {2018: 1, 2017: 0.5, 2016: 0}
+    wrapper = shallow(<Card location={location} stats={stats}/>)
   })
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
+  })
+
+  it ('should not make cards if there are no stats', () => {
+    stats = undefined
+    wrapper = shallow(<Card location={location} stats={stats} />)
+
+    expect(wrapper.find('li').length).toEqual(0)
   })
 })

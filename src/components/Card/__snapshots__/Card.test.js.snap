@@ -11,6 +11,31 @@ exports[`Card should match the snapshot 1`] = `
   </h2>
   <ul
     className="Card-list"
-  />
+  >
+    <li
+      className="Card-entry low"
+      key="0"
+    >
+      2016
+      : 
+      0
+    </li>
+    <li
+      className="Card-entry low"
+      key="1"
+    >
+      2017
+      : 
+      0.5
+    </li>
+    <li
+      className="Card-entry undefined"
+      key="2"
+    >
+      2018
+      : 
+      1
+    </li>
+  </ul>
 </article>
 `;
