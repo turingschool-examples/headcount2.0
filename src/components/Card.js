@@ -13,7 +13,10 @@ const Card = (props) => {
         props.processSelection(props.data);
       }}
     >
-      <h1 className="location">{props.data.location}</h1>
+      <h1 
+        className="location"
+        aria-label="location-label"
+      >{props.data.location}</h1>
       <section className="score-container">
         {Object.keys(props.data.stats).map((year) => {
           return (

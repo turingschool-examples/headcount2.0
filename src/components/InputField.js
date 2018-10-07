@@ -28,6 +28,7 @@ class InputField extends Component {
           onChange={(event) => {
             this.processInput(event.target.value);
           }}
+          aria-label='district-filter-input-field'
         />
       </form>
     );

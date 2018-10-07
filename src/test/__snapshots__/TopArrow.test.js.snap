@@ -2,9 +2,11 @@
 
 exports[`TopArrow should render content to the DOM 1`] = `
 <div
+  aria-label="top-of-page-link-wrapper"
   className="top-arrow-container"
 >
   <a
+    aria-label="top-of-page-link"
     href="#page-top"
   >
     <img

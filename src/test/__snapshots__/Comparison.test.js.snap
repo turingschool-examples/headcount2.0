@@ -2,9 +2,11 @@
 
 exports[`Comparison should render content to the DOM 1`] = `
 <section
+  aria-label="district-comparison-section"
   className="comparison-container"
 >
   <div
+    aria-label="district-comparison-wrapper"
     className="card-container"
   >
     <Card
@@ -164,6 +166,7 @@ exports[`Comparison should render content to the DOM 1`] = `
     />
   </div>
   <button
+    aria-label="close-comparison-section-button"
     className="close-btn"
     onClick={[Function]}
   >

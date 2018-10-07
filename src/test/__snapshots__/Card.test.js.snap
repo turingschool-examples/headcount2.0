@@ -6,6 +6,7 @@ exports[`Card should render content to the DOM 1`] = `
   onClick={[Function]}
 >
   <h1
+    aria-label="location-label"
     className="location"
   >
     ADAMS COUNTY 14

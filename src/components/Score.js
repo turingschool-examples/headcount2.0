@@ -14,8 +14,14 @@ const Score = (props) => {
   }
   
   return (
-    <section className="score-wrapper">
-      <p className='score'>
+    <section 
+      className="score-wrapper"
+      aria-label='year-data-section'
+    >
+      <p 
+        className='score'
+        aria-label='score-label'
+      >
         <img 
           src={icon} 
           alt={alt}/> 

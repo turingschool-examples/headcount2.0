@@ -118,7 +118,12 @@ class App extends Component {
     } else {
       return (
         <main className="app">
-          nuthin
+          <h1 
+            className="loading"
+            aria-label="loading-label"
+          >
+            Loading...
+          </h1>
         </main>
       );
     }

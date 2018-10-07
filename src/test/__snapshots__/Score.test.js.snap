@@ -2,9 +2,11 @@
 
 exports[`Score should render content to the DOM 1`] = `
 <section
+  aria-label="year-data-section"
   className="score-wrapper"
 >
   <p
+    aria-label="score-label"
     className="score"
   >
     <img

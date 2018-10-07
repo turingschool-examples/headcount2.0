@@ -5,6 +5,7 @@ exports[`InputField should render content to the DOM 1`] = `
   className="input-form"
 >
   <input
+    aria-label="district-filter-input-field"
     className="text-input"
     onChange={[Function]}
     placeholder="Search for your school district..."
