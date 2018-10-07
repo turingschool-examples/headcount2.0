@@ -30,8 +30,7 @@ export default class DistrictRepository {
 
     return {location: result, stats: this.stats[result]};
   }
-
-
+  
   findAverage = district => {
     const resultPlace = Object.keys(this.stats).find(place => {
       return place.toLowerCase().includes(district.toLowerCase());    
@@ -46,7 +45,6 @@ export default class DistrictRepository {
     return  Math.round(expectedResults * 1000) / 1000;
   }
   
-
   findAllMatches = (name = '') => {
     const filteredList = Object.keys(this.stats).filter(place => {
       return place.toLowerCase().includes(name.toLowerCase());
