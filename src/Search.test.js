@@ -33,7 +33,11 @@ describe("Search", () => {
     expect(wrapper.state()).toEqual(initialState);
 
     wrapper.instance().handleChange(mockInputEvent);
-    
     expect(wrapper.state()).toEqual({ input: "colorado" });
+  });
+
+  it("should call handleSearch when handleChange is invoked", () => {
+    wrapper.instance().handleChange(mockInputEvent);
+    expect(handleMockCardClick).toHaveBeenCalled();
   });
 });
