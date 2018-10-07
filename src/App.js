@@ -3,6 +3,7 @@ import './App.css';
 import './Card.css';
 import './CardContainer.css';
 import './CardComparison.css';
+import './SearchForm.css';
 import DistrictRepository from './helper';
 import kinderData from './data/kindergartners_in_full_day_program.js';
 import CardContainer from './CardContainer';
@@ -17,7 +18,7 @@ class App extends Component {
     this.state = { 
       data: allSchools.stats,
       compareData: [],
-      analysis: []
+      analysis: {}
     };
     // console.log(this.state)
   }
@@ -62,13 +63,15 @@ class App extends Component {
     this.setState({
       compareData: updatedCompare })
   }
-  // componentDidMount = () => {
-  //   const allSchools = new DistrictRepository(kinderData)
-  //   this.setState({
-  //     data: allSchools.stats
-  //   })
 
-  // }
+  clearComparison = () => {
+    this.setState({
+      data: allSchools.stats,
+      compareData: [],
+      analysis: {}
+    })
+  }
+  
   filterData = (query) => {
     const filteredData = allSchools.findAllMatches(query.search);
     this.setState({ data: filteredData });
@@ -82,13 +85,22 @@ class App extends Component {
 
     return (
       <div>
-        <h1 className="header">Headcount 2.0</h1>
-        <SearchFrom 
-          filterData={this.filterData} 
-          displayAll={this.displayAll}
-          data={this.state.data} 
-        />
-        <CardComparison compareData={this.state.compareData} analysis={this.state.analysis} compareDistrictData={this.compareDistrictData} />
+        <div className="header-container">
+          <h1 className="header">COLORADO Headcount 2.0</h1>
+          <SearchFrom 
+            filterData={this.filterData} 
+            displayAll={this.displayAll}
+            data={this.state.data} 
+          />
+        </div>
+    { this.state.compareData.length > 0 &&
+        <CardComparison 
+          compareData={this.state.compareData} 
+          analysis={this.state.analysis} 
+          compareDistrictData={this.compareDistrictData} 
+          clearComparison={this.clearComparison} />
+        }
+
         <CardContainer data={this.state.data} compareDistrictData={this.compareDistrictData} />
       </div>
     );

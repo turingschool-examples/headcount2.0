@@ -28,9 +28,10 @@ const Card = (props) => {
   return (
     <div className={cardClass} onClick={()=> props.compareDistrictData(props.district)}>
       <h1 className='card-heading'>{props.district.location}</h1>
+      <h2 className='sub-heading'>Kindergarten</h2>
       <div className='card-data'>
         {dataPoints}
-        <p>* less than 0.5</p>
+        <p className='less-than-tag'>* less than 0.5</p>
       </div>
     </div>
   );
