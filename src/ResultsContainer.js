@@ -13,18 +13,29 @@ class ResultsContainer extends Component {
   }
 
   giveMeSelected = (selected, boolean) => {
+    let className = ''
+    if (this.state.selectedResults.length == 1) className = 'hidden'
     if (boolean) {
       this.setState({
-        selectedResults: [...this.state.selectedResults, selected]
+        selectedResults: [...this.state.selectedResults, selected],
+        hidden: ""
       })
     } else {
       this.setState({
         selectedResults: this.state.selectedResults.filter(
           result => !result.location.includes(selected.location)
-        )
+        ),
+        hidden: className
       })
     }
   };
+
+  checkBtn = () => {
+    if (this.state.selectedResults.length === 0){
+      this.setState({ hidden: "hidden" })
+    }
+  };
+
 
   render() {
     if (!this.props.results) return null
