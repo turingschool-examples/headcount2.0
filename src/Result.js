@@ -12,6 +12,10 @@ class Result extends Component {
   constructor(props) {
     super(props)
     this.sorted = this.sortResults(this.props.entry)
+    this.state = {
+      selected: '',
+      class: ''
+    }
   }
 
   sortResults = entry => {
@@ -30,9 +34,27 @@ class Result extends Component {
 
     return graphData
   };
+
+  handleCompare = () => {
+    if (this.state.selected) {
+      this.props.selectedResults(this.props.entry, false)
+      this.setState({
+        class: '',
+        selected: !this.state.selected
+      })
+    } else {
+      this.props.selectedResults(this.props.entry, true)
+      this.setState({
+        class: 'selected',
+        selected: !this.state.selected
+      })
+    }
+
+  }
+
   render() {
     return (
-      <article className="result-card">
+      <article className={`result-card ${this.state.class}`} onClick={this.handleCompare}>
         <h3>{this.props.entry.location}</h3>
         <XYPlot
           width={window.innerWidth * 0.2}
@@ -55,5 +77,6 @@ class Result extends Component {
 export default Result
 
 Result.propTypes = {
-  entry: PropTypes.object
+  entry: PropTypes.object,
+  selectedResults: PropTypes.func
 }

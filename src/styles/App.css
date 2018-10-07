@@ -594,4 +594,10 @@ h1 {
   cursor: pointer;
 }
 
+/*  ------------ Results Section ----------------
+ *  */
+.results-section .selected {
+  border: 3px solid #f56924;
+}
+
 /*# sourceMappingURL=App.css.map */
