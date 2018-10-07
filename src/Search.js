@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 
 class Search extends Component {
   constructor() {
-    super()
-  this.state=({
-    query: ''
-  })
-}
+    super();
+    this.state=({
+      query: ''
+    });
+  }
 
 handleChange = (event) => {
   this.setState({
     query: event.target.value
-  }, this.addQueryToState) 
+  }, this.addQueryToState); 
 }
 
   addQueryToState = () => {
@@ -26,7 +26,7 @@ handleChange = (event) => {
           <button>Search</button>
         </form>
       </div>
-      )
+    );
   }
 }
 

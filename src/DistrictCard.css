@@ -14,12 +14,12 @@
   transition: all .2s ease-in-out;
 }
 
-.less-than-half {
+.lower-half {
   color: red;
   margin: 0;
 }
 
-.greater-than-half {
+.upper-half {
   color: green;
   margin: 0;
 }
