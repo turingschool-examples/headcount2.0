@@ -74,6 +74,9 @@
 
 .search-area
     background-color: $beige
+    overflow: scroll
+    
+
 
     .search-nav
         overflow: scroll
@@ -108,11 +111,6 @@
         width: 100%
 
         li  
-            // align-self: center
-            // display: flex
-            // flex-wrap: wrap
-            // height: 100%
-            // justify-content: center
             // width: calc(100vw/26)
             text-align: center
             width: 50px
@@ -122,6 +120,9 @@
                 background-color: $beige
                 cursor: pointer
                 font-weight: 700
+    #search-area-btn
+        position: relative
+        bottom: -100vh
 
 
 .alphabet-results
@@ -140,11 +141,10 @@
 
     tbody 
         tr
-            color: $primary-orange
+            background-color: $secondary-navy
+            color: $beige
             height: 50px
-            &:nth-child(even)
-                background-color: $secondary-navy
-                color: $beige
+                
 
         .selected
             color: white

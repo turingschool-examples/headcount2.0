@@ -358,7 +358,6 @@ h1 {
 .l-search {
   grid-area: search;
   height: 100vh;
-  overflow: scroll;
 }
 
 .l-results {
@@ -474,6 +473,7 @@ h1 {
  *  */
 .search-area {
   background-color: #f9f6f6;
+  overflow: scroll;
 }
 .search-area .search-nav {
   overflow: scroll;
@@ -516,6 +516,10 @@ h1 {
   cursor: pointer;
   font-weight: 700;
 }
+.search-area #search-area-btn {
+  position: relative;
+  bottom: -100vh;
+}
 
 .alphabet-results {
   font-size: 20px;
@@ -532,12 +536,9 @@ h1 {
   margin-bottom: 20px;
 }
 .alphabet-results tbody tr {
-  color: #f56924;
-  height: 50px;
-}
-.alphabet-results tbody tr:nth-child(even) {
   background-color: #004263;
   color: #f9f6f6;
+  height: 50px;
 }
 .alphabet-results tbody .selected {
   color: white;
