@@ -5,6 +5,8 @@ import './DataCard';
 import kinderData from './testData.js';
 import CardContainer from './CardContainer'
 import SearchForm from './SearchForm'
+import CompareCards from './CompareCards'
+import DataCard from './DataCard'
 
 class App extends Component {
   constructor(props) {
@@ -24,12 +26,17 @@ class App extends Component {
     })
   }
 
+  compareTwoCards = (location, data) => {
+    console.log(location, data)
+  }
+
 
   render() {
     return (
       <div>
           <SearchForm searchSchool={this.searchSchool}/>
-          <CardContainer schoolCards={this.state.schoolCards} />
+          <CompareCards district={this.state.schoolCards}/>
+          <CardContainer schoolCards={this.state.schoolCards} compareTwoCards={this.compareTwoCards}/>
       </div>
     );
   }
