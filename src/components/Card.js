@@ -27,7 +27,7 @@ const Card = (props) => {
       </section>
     </article>
   );
-}
+};
 
 Card.propTypes = {
   selection: PropTypes.array.isRequired,
