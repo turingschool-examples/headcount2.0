@@ -20,7 +20,7 @@ describe('App', () => {
 		const expectedState = {
 			data: new DistrictRepository(kinderData),
 			searchTerm: '',
-			compareDistricts: []
+			districtsBeingCompared: []
 		}
 		expect(wrapper.state('data')).toBeInstanceOf(DistrictRepository)
 	})
@@ -29,18 +29,18 @@ describe('App', () => {
 		const expectedState = {
 			data: new DistrictRepository(kinderData),
 			searchTerm: '',
-			compareDistricts: []
+			districtsBeingCompared: []
 		}
 	expect(wrapper.state('searchTerm')).toEqual('')
 	})
 
-	it('has state compareDistricts', () => {
+	it('has state districtsBeingCompared', () => {
 		const expectedState = {
 			data: new DistrictRepository(kinderData),
 			searchTerm: '',
-			compareDistricts: []
+			districtsBeingCompared: []
 		}
-	expect(wrapper.state('compareDistricts')).toEqual([])
+	expect(wrapper.state('districtsBeingCompared')).toEqual([])
 	})
 
 })

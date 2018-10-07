@@ -3,16 +3,14 @@ import './DistrictsContainer.css';
 import DistrictCard from '../DistrictCard/DistrictCard.js';
 import PropTypes from 'prop-types';
 
-const DistrictsContainer = ({ districts }) => {
-	// console.log(districts)
-	// const districtKeys = Object.keys(districts)
-	// const districtCards = districtKeys.map((district) => {
+const DistrictsContainer = ({ districts, compareDistrict }) => {
 		const districtCards = districts.map((district) => {
-	// console.log(district)
 		return <DistrictCard  
 							key={Math.random()} 
 							schoolName={district.location}
 							{...district}
+							district={district}
+							compareDistrict={compareDistrict}
 						/>
 	})
 
