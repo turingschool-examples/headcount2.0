@@ -25,7 +25,9 @@ class App extends Component {
   }
 
   searchData(userInput){
-    
+
+    console.log(userInput)
+    //do some regex stuff here to display the right cards on the screen
   }
 
   render() {

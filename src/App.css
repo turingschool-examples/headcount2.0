@@ -1,6 +1,9 @@
-/*APP COMPONENT RELATED CSS GOES HERE*/
+body{
+  background-color: #5c687c;
+}
 
 .welcome{
+  color: #dcdfe2;
   font-size: 5rem;
   padding-top: 3rem;
   display: block;

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 import './search.css'
+
 
 class Search extends Component{
   constructor(){
@@ -10,8 +12,12 @@ class Search extends Component{
     }
   }
 
+  handleSubmit(event){
+    event.preventDefault();
 
-  handleSubmit(userInput){
+    this.props.searchData(this.state);
+
+    console.log('hellooooofsafoaofa')
 
   }
 
@@ -32,6 +38,7 @@ class Search extends Component{
       className="search-input"
       placeholder="Search Districts"
       onChange={this.handleInput} />
+      <button onSubmit={()=>{this.handleSubmit}} className="submit-button">Search</button>
       </form>
       </div>
     )

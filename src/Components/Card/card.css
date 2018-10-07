@@ -1,11 +1,26 @@
 .card-div{
-  border: 1px solid blue;
-  width: 14em;
-  height: 30em;
+  border: 2px solid white;
+  width: 16em;
+  height: 33em;
   margin: 0 auto;
   word-wrap: break-word;
   text-align: center;
   padding: 1em;
   margin-bottom: 2em;
+  border-radius: 10px;
 
+}
+
+.location{
+  color: white;
+}
+
+.district-data{
+  /* color: #dee4ed; */
+  color: #cacdd1;
+}
+
+.year{
+  color: white;
+  font-weight: bold;
 }

@@ -5,10 +5,15 @@
   height: 50px;
   font-size: 2rem;
   text-align: center;
+  border-radius: 5px;
+  border: 1px solid grey;
 }
 
 .submit-form{
-  width: 85%
+  width: 85%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 .search-container{
@@ -16,4 +21,14 @@
   display: flex;
   margin: 0 auto;
   justify-content: center;
+}
+
+.fixed-search{
+  position: fixed;
+}
+
+.submit-button{
+  width: 8em;
+  height: 5em;
+  border-radius: 5px;
 }

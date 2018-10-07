@@ -7,12 +7,12 @@ const Card = ({location, stats}) => {
 
   // console.log(stats)
 
-  const districtData = yearsArray.map((year, index) => { return <p key={index}>{year}: {stats[year]}</p>})
+  const districtData = yearsArray.map((year, index) => { return <p key={index}><span className="year">{year}</span>: {stats[year]}</p>})
 
   return(
     <div className="card-div">
-    <h4>{location}</h4>
-    <h3>{districtData}</h3>
+    <h2 className="location">{location}</h2>
+    <h3 className="district-data">{districtData}</h3>
     </div>
   )
 }
