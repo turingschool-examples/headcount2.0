@@ -32,9 +32,11 @@ class SearchArea extends Component {
   render() { 
     return ( 
       <section className="l-search search-area">
-        <button id="search-area-btn" type='submit' onClick={this.handleSubmit}>GO!</button>
         <FilterResults alphabetQuery={this.props.alphabetQuery} />
-        <FilteredResults results={this.props.results} handleSelected={this.handleSelected}/>
+        <div className="l-search-table">
+          <FilteredResults results={this.props.results} handleSelected={this.handleSelected}/>
+          <button id="search-area-btn" type='submit' onClick={this.handleSubmit}>GO!</button>
+        </div>
       </section>
     )
   }

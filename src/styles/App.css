@@ -375,6 +375,18 @@ h1 {
   z-index: 0;
 }
 
+.l-search-table {
+  display: grid;
+  grid-template-areas: "GO-btn table";
+  grid-template-columns: 2fr 4fr;
+}
+.l-search-table table {
+  grid-area: table;
+}
+.l-search-table btn {
+  grid-area: GO-btn;
+}
+
 .welcome-screen {
   display: grid;
   grid-template-areas: "title" "form";
@@ -518,12 +530,10 @@ h1 {
 }
 .search-area #search-area-btn {
   position: relative;
-  bottom: -100vh;
 }
 
 .alphabet-results {
   font-size: 20px;
-  margin: auto;
   text-align: center;
   width: 50vw;
 }
