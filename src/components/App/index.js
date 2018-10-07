@@ -35,7 +35,7 @@ class App extends Component {
 
   render() {
     const kinder = this.state.kinder
-    debugger
+
     return (
       <div className="App">
         <Header findAllMatches={this.findAllMatches}/>

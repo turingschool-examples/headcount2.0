@@ -6,7 +6,7 @@ import './CardContainer.css'
 const CardContainer = ({districts}) => {
 
   const cards = Object.keys(districts).map((district, index) => {
-    console.log(`district: ${district}`)
+
     return <Card key={index} location={district} {...districts[district]} />
   })
 
@@ -18,7 +18,7 @@ const CardContainer = ({districts}) => {
 }
 
 CardContainer.propTypes = {
-  districts: PropTypes.object.isRequired
+  districts: PropTypes.array.isRequired
 }
 
 export default CardContainer

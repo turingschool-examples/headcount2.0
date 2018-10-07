@@ -3,22 +3,25 @@ import PropTypes from 'prop-types'
 import './Card.css'
 
 const Card = ({location, data}) => {
-  console.log(location)
+
   return(
     <article className="Card">
       <h2 className="Card-title">{location}</h2>
       <ul className="Card-list">
-        { Object.keys(data).map((year, index) => {
+        { data ? makeCards(data) : null}
+      </ul>
+    </article>
+  )
+}
+
+const makeCards = data => {
+  return Object.keys(data).map((year, index) => {
           return (
             <li key={index}
                 className={`Card-entry ${checkLow(data, year)}`}>
               {year}: {data[year]}
             </li>)
           })
-        }
-      </ul>
-    </article>
-  )
 }
 
 const checkLow = (data, year) => {
