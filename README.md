@@ -23,8 +23,11 @@ This application was built using the `create-react-app` boilerplate.
 * Layout and style the application while keeping an eye for appropriate user experience and design.
 
 ![main](https://user-images.githubusercontent.com/29719272/46584808-2f3e1a80-ca25-11e8-9e4a-0b65bdb2e149.png)
+
 ![filter](https://user-images.githubusercontent.com/29719272/46584806-2f3e1a80-ca25-11e8-9032-1bda90ffad46.png)
+
 ![compare](https://user-images.githubusercontent.com/29719272/46584805-2f3e1a80-ca25-11e8-86fa-f9f156ecc834.png)
+
 ![info](https://user-images.githubusercontent.com/29719272/46584807-2f3e1a80-ca25-11e8-9491-828aec9abe0c.png)
 
 
