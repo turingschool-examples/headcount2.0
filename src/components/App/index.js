@@ -9,17 +9,19 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      kinder: []
+      kinder: {}
     }
   }
 
   findAllMatches = (query) => {
     const kinder = new DistrictRepository(kinderData)
     const matchingNames = kinder.findAllMatches(query)
-    const allMatches = []
+    const allMatches = {}
+
     matchingNames.forEach(name => {
       const district = kinder.findByName(name)
-      allMatches.push(district)
+
+      allMatches[name] = district
     })
 
     this.setState({kinder: allMatches})

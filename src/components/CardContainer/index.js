@@ -4,13 +4,11 @@ import Card from '../Card'
 import './CardContainer.css'
 
 const CardContainer = ({districts}) => {
-
+  console.log(districts)
   const cards = Object.keys(districts).map((district, index) => {
-    const stats = districts[district].data
-    console.log(stats)
-    const stats2 = districts[district].stats
-    console.log(stats2)
-    return <Card key={index} location={district} data={stats} />
+    const stats = districts[district].stats
+
+    return <Card key={index} location={district} stats={stats} />
   })
 
   return(
@@ -21,7 +19,7 @@ const CardContainer = ({districts}) => {
 }
 
 CardContainer.propTypes = {
-  districts: PropTypes.array.isRequired
+  districts: PropTypes.object.isRequired
 }
 
 export default CardContainer
