@@ -27,7 +27,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="App">
         <Search searchSchoolData={this.searchSchoolData}/>
         <h1>HeadCount 2.0</h1>
         <CardsContainer schoolData={this.state.schoolData} />

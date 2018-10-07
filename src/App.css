@@ -1,1 +1,5 @@
 /*APP COMPONENT RELATED CSS GOES HERE*/
+.App {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
