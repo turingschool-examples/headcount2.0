@@ -91,20 +91,20 @@ describe("App component", () => {
   });
 
   it("should update 'clicked' and property with index in comparedCards array when card is clicked and added to comparedCards", () => {
-    expect(wrapper.state().schoolData["FALCON 49"].clicked).toEqual(false);
+    expect(wrapper.state().schoolData["FALCON 49"].clicked).toBeFalsy();
     wrapper.instance().handleCardClick("FALCON 49");
     expect(wrapper.state().schoolData["FALCON 49"].clicked).toEqual(0);
 
-    expect(wrapper.state().schoolData["ELBERT 200"].clicked).toEqual(false);
+    expect(wrapper.state().schoolData["ELBERT 200"].clicked).toBeFalsy();
     wrapper.instance().handleCardClick("ELBERT 200");
     expect(wrapper.state().schoolData["ELBERT 200"].clicked).toEqual(1);
 
-    expect(wrapper.state().schoolData["ELLICOTT 22"].clicked).toEqual(false);
+    expect(wrapper.state().schoolData["ELLICOTT 22"].clicked).toBeFalsy();
     wrapper.instance().handleCardClick("ELLICOTT 22");
-    expect(wrapper.state().schoolData["ELLICOTT 22"].clicked).toEqual(false);
+    expect(wrapper.state().schoolData["ELLICOTT 22"].clicked).toBeFalsy();
 
     wrapper.instance().handleCardClick("ELBERT 200");
-    expect(wrapper.state().schoolData["ELBERT 200"].clicked).toEqual(false);
+    expect(wrapper.state().schoolData["ELBERT 200"].clicked).toBeFalsy();
 
     wrapper.instance().handleCardClick("ELLICOTT 22");
     expect(wrapper.state().schoolData["ELLICOTT 22"].clicked).toEqual(1);
@@ -114,14 +114,14 @@ describe("App component", () => {
     wrapper.instance().handleSearch("yu");
     expect(
       wrapper.state().schoolData["YUMA SCHOOL DISTRICT 1"].display
-    ).toEqual(true);
-    expect(wrapper.state().schoolData["COLORADO"].display).toEqual(false);
+    ).toBeTruthy();
+    expect(wrapper.state().schoolData["COLORADO"].display).toBeFalsy();
 
     wrapper.instance().handleSearch("col");
     expect(
       wrapper.state().schoolData["YUMA SCHOOL DISTRICT 1"].display
-    ).toEqual(false);
-    expect(wrapper.state().schoolData["COLORADO"].display).toEqual(true);
+    ).toBeFalsy();
+    expect(wrapper.state().schoolData["COLORADO"].display).toBeTruthy();
   });
 
   it("should prepare compardAvg array when two cards added to comparedCards", () => {
@@ -154,16 +154,53 @@ describe("App component", () => {
     expect(results).toHaveLength(181);
   });
 
-  
   it("toggleSearchDisplay should toggle display property", () => {
-    const input = "ASDF"
+    const input = "ASDF";
 
     wrapper.instance().displayAllCards(schoolData, districtDirectory);
     wrapper.setState({ schoolData });
-    expect(wrapper.state().schoolData["COLORADO"].display).toEqual(true);
-    
-    wrapper.instance().toggleSearchDisplay(schoolData, input, districtDirectory)
-    expect(wrapper.state().schoolData["COLORADO"].display).toEqual(false);
+    expect(wrapper.state().schoolData["COLORADO"].display).toBeTruthy();
 
+    wrapper
+      .instance()
+      .toggleSearchDisplay(schoolData, input, districtDirectory);
+    expect(wrapper.state().schoolData["COLORADO"].display).toBeFalsy();
   });
+
+  it("addClickedProp should add property 'clicked' of comparedCard array index", () => {
+    let { comparedCards } = wrapper.state();
+    const clickedDistrict = wrapper.state().schoolData["COLORADO"];
+    const clickedDistrict2 = wrapper.state().schoolData["ENGLEWOOD 1"];
+    
+    expect(comparedCards).toEqual([{}, {}]);
+    wrapper.instance().addClickedProp(clickedDistrict, comparedCards);
+    wrapper.instance().addClickedProp(clickedDistrict2, comparedCards);
+
+    expect(comparedCards[0].location).toEqual("COLORADO");
+    expect(comparedCards[0].clicked).toEqual(0);
+
+    expect(comparedCards[1].location).toEqual("ENGLEWOOD 1");
+    expect(comparedCards[1].clicked).toEqual(1);
+  });
+  
+  it("handleComparedCardClick should remove card from comparison array", () => {
+    let { comparedCards } = wrapper.state();
+    const clickedDistrict = wrapper.state().schoolData["COLORADO"];
+    wrapper.instance().handleCardClick("LIMON RE-4J");
+    expect(comparedCards[0].location).toEqual("LIMON RE-4J");
+
+    wrapper.instance().handleComparedCardClick(clickedDistrict)
+    expect(comparedCards).toEqual([{}, {}]);    
+  });
+
+  it("resetComparisonCard should clear comparison card", () => {
+    const comparedAvg = {foo: 'bar'};
+    const instructions = "foo bar";
+    wrapper.instance().setState({ comparedAvg, instructions });  
+    expect(wrapper.state().comparedAvg).toEqual({foo: 'bar'});
+
+    wrapper.instance().resetComparisonCard();
+    expect(wrapper.state().comparedAvg).toEqual({});
+  });
+  
 });
