@@ -27,4 +27,13 @@ describe("Search", () => {
 
     expect(spy).toHaveBeenCalled();
   });
+
+  it("should update state when handleChanged is called", () => {
+    const initialState = { input: "" };
+    expect(wrapper.state()).toEqual(initialState);
+
+    wrapper.instance().handleChange(mockInputEvent);
+    
+    expect(wrapper.state()).toEqual({ input: "colorado" });
+  });
 });
