@@ -26,25 +26,45 @@ describe('InputField', ()=>{
   });
   
   it('should have default state', () => {
-    expect(wrapper.state()).toEqual({input: ''})
+    expect(wrapper.state()).toEqual({
+      input: '', 
+      clearFilter: 'clear-input-button hidden-button'
+    });
   });
 
   it('should update state when processInput is called', () => {
     wrapper.instance().processInput('place')
 
-    expect(wrapper.state()).toEqual({input: 'place'})
-  })
+    expect(wrapper.state()).toEqual({"clearFilter": "clear-input-button", "input": "place"})
+  });
+
+  it('should update state when process Input is called with an empty string', () => {
+    wrapper.instance().processInput('')
+
+    expect(wrapper.state()).toEqual({
+      "clearFilter": "clear-input-button hidden-button", 
+      "input": ""
+    });
+  });
 
   it('should call processFilter when processInput is called', () => {
-    wrapper.instance().processInput('place')
+    wrapper.instance().processInput('place');
 
-    expect(mockProcessFilter.mock.calls.length).toBe(2)
+    expect(mockProcessFilter.mock.calls.length).toBe(3);
   })
 
   it('should call processInput on text input', () => {
     wrapper.find('.text-input').simulate('change', mockEvent);
 
-    expect(wrapper.state()).toEqual({input: 'place'})
+    expect(wrapper.state().input).toEqual('place');
+  })
+
+  it('should call processInput on click of the clear button', () => {
+    wrapper.instance().processInput('place');
+    expect(wrapper.state().input).toEqual('place');
+
+    wrapper.find('.clear-input-button').simulate('click');
+    expect(wrapper.state().input).toEqual('');
   })
 
 });

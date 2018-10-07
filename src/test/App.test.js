@@ -1,7 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import kinderData from '../data/kindergartners_in_full_day_program.js';
-import DistrictRepository from '../helper.js'
+import DistrictRepository from '../helper.js';
 import { shallow } from 'enzyme';
 import App from '../components/App';
 
@@ -23,7 +22,7 @@ describe('App', ()=>{
   it('should render the comparison page if selection.length is === 2', () => {
     wrapper.setState({
       selection: [{thing: 1}, {thing: 2}]
-    })
+    });
     expect(wrapper).toMatchSnapshot();    
   });
 
@@ -32,11 +31,12 @@ describe('App', ()=>{
       data: new DistrictRepository(kinderData),
       filter: undefined,
       selection: []
-    }
+    };
 
     expect(wrapper.state().filter).toEqual(mockState.filter);
     expect(wrapper.state().selection).toEqual(mockState.selection);
-    expect(JSON.stringify(wrapper.state().data)).toEqual(JSON.stringify(new DistrictRepository(kinderData)))
+    expect(JSON.stringify(wrapper.state().data)).
+      toEqual(JSON.stringify(new DistrictRepository(kinderData)));
   });
 
   it('should call setState on filter when processFilter() is called', () => {
@@ -44,8 +44,8 @@ describe('App', ()=>{
     wrapper.instance().processFilter('colorado spri');
 
     expect((wrapper.state().filterString)).toEqual((
-      'colorado spri'))
-  })
+      'colorado spri'));
+  });
 
   it('should add an district to this.state.selection when called', () => {
     const argument = {
@@ -63,12 +63,12 @@ describe('App', ()=>{
         2013: 0.998,
         2014: 1
       }
-    }
-    wrapper.instance().processSelection(argument)
-    expect(wrapper.state().selection).toEqual([argument])
-  })
+    };
+    wrapper.instance().processSelection(argument);
+    expect(wrapper.state().selection).toEqual([argument]);
+  });
 
-  it('should remove a district from this.state.selection if called twice', () => {
+  it('should remove a district if called twice', () => {
     const argument = {
       location: 'ADAMS COUNTY 14',
       stats: {

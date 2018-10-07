@@ -7,14 +7,23 @@ class InputField extends Component {
   constructor() {
     super();
     this.state = {
-      input: ''
+      input: '',
+      clearFilter: 'clear-input-button hidden-button'
     };
   }
 
   processInput = (value) => {
-    this.setState({
-      input: value
-    });
+    if (value !== '' ) {
+      this.setState({
+        input: value,
+        clearFilter: 'clear-input-button'
+      });
+    } else {
+      this.setState({
+        input: value,
+        clearFilter: 'clear-input-button hidden-button'
+      });
+    }
     this.props.processFilter(value);
   }
 
@@ -29,6 +38,15 @@ class InputField extends Component {
             this.processInput(event.target.value);
           }}
           aria-label='district-filter-input-field'
+        />
+        <img 
+          src='./cancel.svg'
+          alt='cancel-button'
+          className={this.state.clearFilter}
+          aria-label='clear-filter-input'
+          onClick={() => {
+            this.processInput('');
+          }}
         />
       </form>
     );

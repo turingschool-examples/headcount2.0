@@ -1,7 +1,7 @@
 .input-form input{
   margin: 1rem auto;
   display: block;
-  width: 250px;
+  width: 300px;
   height: 35px;
   font-size: 16px;
   border-radius: 10px;
@@ -15,3 +15,19 @@
   display: block;
 }
 
+.clear-input-button {
+  position: absolute;
+  width: 20px;
+  right: 70px;
+  z-index: 2;
+  display: block;
+}
+
+.clear-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.hidden-button {
+  display: none;
+}

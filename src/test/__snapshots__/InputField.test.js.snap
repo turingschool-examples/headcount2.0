@@ -11,5 +11,12 @@ exports[`InputField should render content to the DOM 1`] = `
     placeholder="Search for your school district..."
     value=""
   />
+  <img
+    alt="cancel-button"
+    aria-label="clear-filter-input"
+    className="clear-input-button hidden-button"
+    onClick={[Function]}
+    src="./cancel.svg"
+  />
 </form>
 `;
