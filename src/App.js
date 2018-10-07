@@ -43,6 +43,11 @@ class App extends Component {
     }
   }
 
+  clearComparedCards = () => {
+    this.setState({compareCards: []});
+    this.setState({compared: []});
+  }
+
   searchSchool = (string) => {
     let search = new DistrictRepository(kinderData);
     let data = search.findAllMatches(string);
@@ -63,6 +68,7 @@ class App extends Component {
         <CompareCardsContainer 
           className='compare-cards'cards={this.state.compareCards} 
           comparedCard={this.state.compared} resetState={this.resetState} />
+        <button className='clear-btn' type='button' onClick={this.clearComparedCards}>Clear Cards</button>
         <CardContainer cards={this.state.cards} 
           compareAvrg={this.compareAvrg} 
           setStateOfCompare={this.setStateOfCompare} />

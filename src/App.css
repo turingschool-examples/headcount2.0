@@ -57,6 +57,10 @@ ul {
   padding-top: 15px;
 }
 
+.clear-btn {
+  text-align: center;
+}
+
 .card-data {
   background-color: #ECF2F1;
   padding: 10px;
