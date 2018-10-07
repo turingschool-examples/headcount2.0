@@ -37,16 +37,11 @@ class App extends Component {
 
   handleCompare = (card) => {
     
-
-    if(this.state.data[card]) {
-      this.state.display.push(this.state.data[card]);
-    }
-    else{
       let schoolToCompare = this.state.data.find(school => {
       return school.location === card
       })
     this.state.display.push(schoolToCompare);
-    }
+    
     if(this.state.display.length > 2){
       this.state.display.shift()
     }
@@ -61,7 +56,7 @@ class App extends Component {
     return (
       <div className="app">
         <DistrictSearch handleSubmit={this.handleSearch} />
-        <CompareContainer display={ display }/>
+        <CompareContainer data={ data } display={ display } handleCompare={this.handleCompare} />
         <CardContainer data={ data } handleCompare={this.handleCompare} />
       </div>
     );

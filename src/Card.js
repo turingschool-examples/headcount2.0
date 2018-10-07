@@ -3,8 +3,10 @@ import './Card.css';
 import PropTypes from 'prop-types';
 
 const Card = ({stats, location, handleCompare}) => {
+  
   let cardCounter = 0;
   const yearData = Object.keys(stats);
+
   const SchoolScore = yearData.map(point => {
     return <p className={(stats[point] < .5) ? 'year-and-data-red' : 'year-and-data-green'}
               key={cardCounter++}
