@@ -51,6 +51,11 @@ header {
   .info-modal {
     top: 200px;
   }
+  .clear-input-button {
+    right: default;
+    top: 106px;
+    left: 295px;
+  }
 }
 
 @media (max-width: 625px) {
