@@ -1,0 +1,53 @@
+.DistrictCard {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #FFF;
+	text-align: center;
+	width: 15rem;
+	height: 26rem;
+	margin: 0 auto 0.5rem;
+	padding: 0 0 1rem;
+	box-shadow: 0px 0px 1px 2px #F5F6F7;
+	border-radius: 10px;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+}
+
+.card-location {
+	text-align: center;
+	overflow-wrap: break-word;
+	margin: 1.5rem 1.5rem 0.75rem;
+	font-family: 'Arvo', serif;
+	font-size: 1.25rem;
+}
+
+/*.card-stats {
+	margin: 0 auto 1.5rem;
+}
+*/
+.greater-than-point-5 {
+	color: #01411b;
+	background-color: #F5F6F7;
+	margin: 0.2rem auto;
+	font-weight: 300;
+	padding: 0 0.75rem;
+	border-radius: 10px;
+}
+
+.less-than-point-5 {
+	color: #FFF;
+	background-color: #008b38;
+	margin: 0.2rem auto;
+	font-weight: 300;
+	padding: 0 0.75rem;
+	border-radius: 10px;
+}
+
+.card-highlight {
+	box-shadow: 0px 0px 1px 4px #087ff5;
+}
+
+
+
