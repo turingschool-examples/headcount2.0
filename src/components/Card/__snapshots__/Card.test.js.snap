@@ -13,7 +13,7 @@ exports[`Card should match the snapshot 1`] = `
     className="Card-list"
   >
     <li
-      className="Card-entry low"
+      className="Card-entry undefined"
       key="0"
     >
       2018

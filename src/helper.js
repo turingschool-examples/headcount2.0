@@ -9,9 +9,9 @@ export default class DistrictRepository {
       const roundedData = Math.round(entry.Data * 1000) / 1000
 
       if (!Object.keys(cleanData).includes(upperLocale)) {
-        cleanData[upperLocale] = { data: { [entry.TimeFrame]: roundedData || 0 } }
+        cleanData[upperLocale] = { stats: { [entry.TimeFrame]: roundedData || 0 } }
       } else {
-        cleanData[upperLocale].data[entry.TimeFrame] = roundedData || 0
+        cleanData[upperLocale].stats[entry.TimeFrame] = roundedData || 0
       }
 
       return cleanData
@@ -28,7 +28,7 @@ export default class DistrictRepository {
     if (this.stats[upperQuery]) {
       const foundSchool = this.stats[upperQuery]
 
-      return {location: upperQuery, stats: foundSchool.data}
+      return {location: upperQuery, stats: foundSchool.stats}
 
     } else {
       return undefined;
