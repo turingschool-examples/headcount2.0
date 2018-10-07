@@ -5,3 +5,17 @@
   width: 80%;
   margin: 20px 10%;
 }
+
+@media screen and (max-width: 1085px) {
+  .compare-card-container {
+    width: 96%;
+    margin: 20px 2%;
+  }
+}
+
+@media screen and (max-width: 905px) {
+  .compare-card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
