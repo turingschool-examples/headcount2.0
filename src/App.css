@@ -1,1 +1,38 @@
 /*APP COMPONENT RELATED CSS GOES HERE*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.App {
+	background-color: #E9EBEE;
+}
+
+
+.header {
+	background-color: #008b38;
+}
+
+.icon-span {
+  padding: 0 0 0 0.5rem;
+}
+
+.fa-graduation-cap {
+	color: #FFF;
+}
+.app-site-title {
+	margin: 0 auto 2rem;
+  color: #FFF;
+  font-size: 4rem;
+  width: 46%;
+  text-align: center;
+  font-family: 'Arvo', serif;
+  padding: 1rem 0 1rem 0;
+}
+
+/*font-family: 'Roboto Slab', serif;
+font-family: 'Noto Serif', serif;
+font-family: 'Arvo', serif;
+font-family: 'Open Sans', sans-serif;*/
+
