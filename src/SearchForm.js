@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
-import DistrictRepository from './helper';
 
 class SearchForm extends Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
-  handleSearch = (e) => {
-    e.preventDefault()
-    this.props.searchSchool(e.target.value)
+  handleSearch = (event) => {
+    event.preventDefault();
+    this.props.searchSchool(event.target.value);
   }
 
   render() {
-    return(
+    return (
       <div>
-        <input className="input" placeholder='Search Schools Here!' onKeyUp={this.handleSearch}/>
+        <input className="input" 
+          placeholder='Search Schools Here!' 
+          onKeyUp={this.handleSearch}/>
       </div>
-    )
+    );
   }
 }
 

@@ -23,13 +23,21 @@ class App extends Component {
   }
 
   setStateOfCompare = (str) => {
-    const newSchool = {...str}
-    const compareCards = [...this.state.compareCards, newSchool]
-    this.setState({ compareCards })
-    if(this.state.compareCards.length === 1) {
+    const newSchool = {...str};
+    const compareCards = [...this.state.compareCards, newSchool];
+    this.setState({ compareCards });
+    if (this.state.compareCards.length > 0) {
       let str1 = Object.keys(compareCards[0]);
       str1 = str1.toString();
-      let str2 = Object.keys(compareCards[1])
+      let str2 = Object.keys(compareCards[1]);
+      str2 = str2.toString();
+      this.compareAvrg(str1, str2);
+    }
+    if (this.state.compareCards.length > 1) {
+      this.state.compareCards.slice(0, -1);
+      let str1 = Object.keys(compareCards[0]);
+      str1 = str1.toString();
+      let str2 = Object.keys(compareCards[1]);
       str2 = str2.toString();
       this.compareAvrg(str1, str2)
     }
@@ -44,7 +52,7 @@ class App extends Component {
   compareAvrg = (str1, str2) => {
     let compare = new DistrictRepository(kinderData);
     let data = compare.compareDistrictAverages(str1, str2);
-    this.setState({compared: {...data}})
+    this.setState({compared: {...data}});
   }
 
   render() {
@@ -52,8 +60,12 @@ class App extends Component {
       <div>
         <header className="header">HeadCount 2.0!</header>
         <SearchForm searchSchool={this.searchSchool}/>
-        <CompareCardsContainer cards={this.state.compareCards} comparedCard={this.state.compared}/>
-        <CardContainer cards={this.state.cards} compareAvrg={this.compareAvrg} setStateOfCompare={this.setStateOfCompare} />
+        <CompareCardsContainer 
+          className='compare-cards'cards={this.state.compareCards} 
+          comparedCard={this.state.compared} resetState={this.resetState} />
+        <CardContainer cards={this.state.cards} 
+          compareAvrg={this.compareAvrg} 
+          setStateOfCompare={this.setStateOfCompare} />
       </div>
     );
   }

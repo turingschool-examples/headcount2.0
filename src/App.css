@@ -30,7 +30,8 @@ ul {
   font-size: 25px
 }
 
-.card-container {
+.card-container,
+.compare-card-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -59,6 +60,13 @@ ul {
 .card-data {
   background-color: #ECF2F1;
   padding: 10px;
+}
+
+
+.isActive {
+  background-color: #8AC3C1;
+  color: #ECF2F1;
+  text-align: center;
 }
 
 .isLess {
