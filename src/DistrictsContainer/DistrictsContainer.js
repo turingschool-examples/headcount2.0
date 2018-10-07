@@ -3,7 +3,7 @@ import './DistrictsContainer.css';
 import DistrictCard from '../DistrictCard/DistrictCard.js';
 import PropTypes from 'prop-types';
 
-const DistrictsContainer = ({ districts, compareDistrict, stopComparingDistrict }) => {
+const DistrictsContainer = ({ districts, compareDistrict }) => {
 		const districtCards = districts.map((district) => {
 		return <DistrictCard  
 							key={Math.random()} 
@@ -11,7 +11,6 @@ const DistrictsContainer = ({ districts, compareDistrict, stopComparingDistrict 
 							{...district}
 							district={district}
 							compareDistrict={compareDistrict}
-							stopComparingDistrict={stopComparingDistrict}
 						/>
 	})
 
