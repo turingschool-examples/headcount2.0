@@ -7,8 +7,6 @@ class SearchForm extends Component {
     this.state = {
       search: ''
     };
-
-    console.log(this.props)
   }
 
   updateSearch = (event) => {
@@ -57,7 +55,9 @@ class SearchForm extends Component {
 }
 
 SearchForm.propTypes = {
-  filterData: PropTypes.func.isRequired
+  filterData: PropTypes.func.isRequired,
+  displayAll: PropTypes.func.isRequired,
+  data: PropTypes.array.isRequired
 }
 
 export default SearchForm
