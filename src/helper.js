@@ -17,9 +17,9 @@ class DistrictRepository {
     }, {})
   }
 
-  findByName = (name) => {
-    if (name) {
-    const upperName = name.toUpperCase();
+  findByName = (query) => {
+    if (query) {
+    const upperName = query.toUpperCase();
 
       if (this.stats[upperName]) {
         const foundSchoolData = this.stats[upperName];
@@ -55,6 +55,29 @@ class DistrictRepository {
       return formattedData;
       }
     }
+
+  findAverage = (district) => {
+    const districtData = this.findByName(district);
+    const totalData = 
+      Object.keys(districtData.stats)
+        .reduce((total, year) => {
+          total += districtData.stats[year];
+          return total;
+        }, 0)
+    const average = parseFloat((totalData / Object.keys(districtData.stats).length).toFixed(3))
+
+    return average;
+  }
+
+  compareDistrictAverages = (district1, district2) => {
+    const district1Upper = district1.toUpperCase();
+    const district2Upper = district2.toUpperCase();
+    const district1Avg = this.findAverage(district1);
+    const district2Avg = this.findAverage(district2);
+    const comparison = parseFloat((district1Avg / district2Avg).toFixed(3));
+
+    return {[district1Upper]: district1Avg, [district2Upper]: district2Avg, compared: comparison}
+  }
 }
 
 export default DistrictRepository;
