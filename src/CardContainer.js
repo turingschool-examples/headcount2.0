@@ -3,13 +3,13 @@ import Card from './Card';
 import './CardContainer.css';
 import PropTypes from 'prop-types';
 
-const CardContainer = ({data}) => {
+const CardContainer = (props) => {
 
-  const cards = data.map(district => {
-    return <Card district={district} key={Math.random()} />;
+  const cards = props.data.map(district => {
+    return <Card district={district} key={Math.random()} compareDistrictData={props.compareDistrictData} />;
   });
   
-  return(
+  return (
     <div className='card-container'>
       {cards}
     </div>
