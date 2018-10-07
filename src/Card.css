@@ -1,25 +1,25 @@
 @import url(https://fonts.googleapis.com/css?family=Lora|Roboto:400,500);
 
 .card {
-  border: 1px solid lightblue;
   border-radius: 15px;
   color: black;
   font-size: 16px;
   flex: 1 0 200px;
-  margin: 1rem .25em;
+  margin: 1rem .60em;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   text-align: center;
-  transition: border-width 0.1s linear;
- /* transition: background 0.6s linear;*/
-/*  max-width: 200px;*/
+  transition: background 0.1s linear;
   padding: 10px;
   opacity: 0.8;
+  background: white;
+  box-shadow:0 0 8px #16335F;
 }
 
 .card h3 {
   font-size: 16px;
   padding: 10px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .card li {
@@ -36,16 +36,39 @@
 
 .card:hover {
   cursor: pointer;
-  border-width: 5px;
-/*  background: lightgrey;*/
+  /*transform:scale(1.1);*/
+  background: #D7E1F0;
+}
+
+.card:active {
+  background: #D7E1F0;
+}
+
+.name-wrapper {
+  border: 2px solid #275DAD;
+  width: 100%;
+  border-radius: 15px;
+  background: #275DAD;
+  color: white;
 }
 
 .green {
-  color: #00BFFF;
+  color: black;
+}
+
+.green:before {
+  content: '+ ';
+  color: #109648;
 }
 
 .red {
-  color: black;
+  color: grey;
+}
+
+
+.red:before {
+  content: '- ';
+  color: red;
 }
 
 

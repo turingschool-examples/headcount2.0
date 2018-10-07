@@ -2,7 +2,7 @@
 
 nav {
   width: 100%;
-  background: lightblue;
+  background: #275DAD;
 }
 
 h1 {
@@ -10,7 +10,16 @@ h1 {
   font-family: 'Lora', sans-serif;
   font-size: 40px;
   margin-top: 0;
-  opacity: 0.8;
+  opacity:;
+  color: white;
+  opacity: 0.95;
 }
 
+
+.info {
+  color: white;
+  text-align: center;
+  opacity: 0.9;
+  font-family: 'Lora', sans-serif;
+}
 

@@ -6,8 +6,11 @@ import './Card.css'
 const Card = ({district, addCompareSelections}) => {
   const dataPoints = Object.keys(district.data)
   return(
-    <div className="card" onClick={(e) => (addCompareSelections(e))}>
-      <h3 className="school-name">{district.school}</h3>
+    <div className="card" 
+         onClick={(e) => (addCompareSelections(e))}>
+      <div className="name-wrapper">
+        <h3 className="school-name">{district.school}</h3>
+      </div> 
       <ul className="school-data">
         {dataPoints.map( (year, i) => <li 
           key={i + Date.now()}
