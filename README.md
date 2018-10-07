@@ -32,3 +32,4 @@ You can begin running tests with `npm test`
 ## Comparing districts
 ![](assets/compareSchools.png)  
 
+
