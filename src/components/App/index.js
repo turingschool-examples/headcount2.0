@@ -9,19 +9,20 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      kinder: {}
+      kinder: []
     }
   }
 
   findAllMatches = (query) => {
     const kinder = new DistrictRepository(kinderData)
     const matchingNames = kinder.findAllMatches(query)
-    console.log(`query: ${query}, matchingName: ${matchingNames}`)
+    const allMatches = []
     matchingNames.forEach(name => {
       const district = kinder.findByName(name)
-      this.setState({kinder: district})
+      allMatches.push(district)
     })
 
+    this.setState({kinder: allMatches})
   }
 
   componentDidMount() {
@@ -34,7 +35,7 @@ class App extends Component {
 
   render() {
     const kinder = this.state.kinder
-
+    debugger
     return (
       <div className="App">
         <Header findAllMatches={this.findAllMatches}/>
