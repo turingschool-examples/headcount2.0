@@ -5,17 +5,9 @@ import DistrictCard from '../DistrictCard/DistrictCard.js';
 import { shallow } from 'enzyme';
 
 describe('CompareCard', () => {
-	let wrapper;
-	let mockDistricts;
-	let cardWrapper;
-
-	beforeEach(() => {
-		mockDistricts = [{'colorado': {}}, {'academy 20': {}}]
-		wrapper = shallow(<CompareCard />)
-		cardWrapper = shallow(<DistrictCard />)
-	})
-
+	
 	it('matches the snapshot', () => {
+		let wrapper = shallow(<CompareCard />)
 		expect(wrapper).toMatchSnapshot()
 	})
 
