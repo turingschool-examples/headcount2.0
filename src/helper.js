@@ -1,3 +1,7 @@
+// <p>{ district1.location } : { DistrictRepository.findAverage(district1.location) }</p>
+// <p>{ DistrictRepository.compareDistrictAverages(district1.location, district2.location) }</p>
+// <p>{ district2.location } : { DistrictRepository.findAverage(district2.location) }</p>
+
 class DistrictRepository {
   constructor(data) {
     this.stats = this.sanitizeData(data);

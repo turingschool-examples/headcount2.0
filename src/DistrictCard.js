@@ -7,7 +7,7 @@ const DistrictCard = (props) => {
   });
 
   return (
-    <div className='card' onClick={() => props.addSelectedDistrict(props.location, info)}>
+    <div className='card' onClick={() => props.addSelectedDistrict(props.location, props.stats)}>
       <p>{props.location}</p>
       { info }
     </div>

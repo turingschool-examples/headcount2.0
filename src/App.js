@@ -45,15 +45,28 @@ class App extends Component {
     }
   }
 
-  // removeSelectedDistrict = () => {
-  // }
+  removeSelectedDistrict = (location) => {
+    const selectedDistricts = this.state.selectedDistricts.filter(district => district.location !== location)
+
+    this.setState({ selectedDistricts })
+  }
 
   render() {
+    let comparison;
+
+    if (this.state.selectedDistricts.length > 0) {
+      comparison = 
+        <Comparison 
+          selectedDistricts={this.state.selectedDistricts}
+          removeSelectedDistrict={this.removeSelectedDistrict}/>
+    }
+            
     return (
       <div>
         <Header search={this.search}/>
-        <Comparison />
-        <CardContainer districts={this.state.districts}
+        { comparison }
+        <CardContainer 
+          districts={this.state.districts}
           addSelectedDistrict={this.addSelectedDistrict}/>
       </div>
     );
