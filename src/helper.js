@@ -63,6 +63,7 @@ export default class DistrictRepository {
     ans[string2] = school2
     ans['compared'] = average
 
+    // console.log('look this is the func', ans)
     return ans
 
   }

@@ -7,11 +7,13 @@ import DataCard from './DataCard';
 export default class CompareCards extends Component {
   constructor(props){
     super(props);
-    let schoolData = new DistrictRepository(kinderData)
+    // console.log(this.props.compareSchool[0])
+    let districtsRepo = new DistrictRepository(kinderData)
+    //districtsRepo.compareDistrictAverages('COLORADO', 'ACADEMY 20')
 
     this.state = {
-      compareSchools: [],
-      schoolData: schoolData.findAllMatches()
+      // compareSchools: [],
+      districtsRepo: districtsRepo.findAllMatches()
     }
   }
 
@@ -20,13 +22,12 @@ export default class CompareCards extends Component {
       schoolComparision: this.props.compareSchool,
       dataComparision: this.props.compareData
     })
-  }
+  } 
 
   render() {
     let compareArray = this.state.schoolComparision
-    console.log('hellooooooooo', compareArray)
 
-    if(compareArray === undefined){
+    if (compareArray === undefined) {
       return (
         <div>
         </div>
@@ -49,8 +50,17 @@ export default class CompareCards extends Component {
         </div>
         )
     } else if (compareArray.length === 2) {
+      let districtsRepo = new DistrictRepository(kinderData)
+      let school1 = this.props.compareSchool[0]
+      let school2 = this.props.compareSchool[1]
+      // console.log('this is what we need', districtsRepo)
+      let SchoolAvg = districtsRepo.compareDistrictAverages(school1, school2)
+      console.log(SchoolAvg)
+      // let x = this.districtsRepo.compareDistrictAverages(this.props.compareSchool[0], this.props.compareSchool[1])
+      // this.returnCompareData(this.props.compareSchool[0], this.props.compareSchool[1])
+
       return (
-        <div>
+        <div className='final-result'>
           <div className='compare'>
             <p>{this.props.compareSchool[0]}</p>
             <p>2004: {this.props.compareData[0][2004]}</p>
@@ -65,7 +75,13 @@ export default class CompareCards extends Component {
             <p>2005: {this.props.compareData[0][2013]}</p>
             <p>2005: {this.props.compareData[0][2014]}</p>
           </div>
-
+          <div className='comparing'>
+            <h3 className='top-school'>{school1}</h3>
+            <p className='comparing-paragraph'>{SchoolAvg[school1]}</p>
+            <h2>Average: {SchoolAvg['compared']}</h2>
+            <h3 className='bottom-school'>{school2}</h3>
+            <p className='comparing-paragraph'>{SchoolAvg[school2]}</p>
+          </div>
           <div className='compare'>
           <p>{this.props.compareSchool[1]}</p>
           <p>2004: {this.props.compareData[1][2004]}</p>

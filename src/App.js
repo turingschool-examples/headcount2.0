@@ -59,7 +59,6 @@ class App extends Component {
 
     
     // dataArr.push(data)
-    console.log('this is the length', schoolArray.length)
     if (dataArr.length < 2 && !dataArr.includes(data)){
       dataArr.push(data)
     } 
@@ -71,7 +70,7 @@ class App extends Component {
      
     } 
 
-    console.log('index 0', dataArr[0], 'index 1', dataArr[1])
+    // console.log('index 0', dataArr[0], 'index 1', dataArr[1])
 
     this.setState({
       compareSchool: schoolArray,
