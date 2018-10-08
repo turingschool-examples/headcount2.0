@@ -22,26 +22,16 @@ describe('Card', () =>  {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('data should present as white if below 0.5', () => {
+  it('data should present as white if below 0.5, and grey if above 0.5', () => {
 
     const wrapper = shallow(<Card {...mockData}/>);
-    removeIdeaMock = jest.fn();
+
+    if(mockData.stats.){
+      expect(wrapper.find('.below50').hasClass('.below50')).to.equal(true);
+    }else{
+      expect(wrapper.find('.below50').hasClass('.above50')).to.equal(true);
+    }
 
   });
-
-  it('data should present as grey if above 0.5', () => {
-
-    const wrapper = shallow(<Card {...mockData}/>);
-    removeIdeaMock = jest.fn();
-
-  });
-
-
-
-  // it('should render an h1, controls, and trivialist component', () => {
-  //   expect(wrapper.find('h1').length).toEqual(1);
-  //   expect(wrapper.find('Controls').length).toEqual(1);
-  //   expect(wrapper.find('TriviaList').length).toEqual(1);
-  // })
 
 });
