@@ -363,8 +363,19 @@ h1 {
 .l-results {
   display: grid;
   grid-area: results;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  margin: auto;
+  width: calc(100vw * 0.8);
+}
+.l-results article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.l-results .compared-results {
+  grid-column: 1/3;
 }
 
 .l-landing {
@@ -604,6 +615,9 @@ h1 {
 }
 .results-section .hidden {
   display: none;
+}
+.results-section svg {
+  width: 101%;
 }
 
 /*# sourceMappingURL=App.css.map */

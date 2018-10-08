@@ -57,8 +57,8 @@ class Result extends Component {
       <article className={`result-card ${this.state.class}`} onClick={this.handleCompare}>
         <h3>{this.props.entry.location}</h3>
         <XYPlot
-          width={window.innerWidth * 0.2}
-          height={window.innerHeight * 0.2}
+          width={window.innerWidth * 0.35}
+          height={window.innerHeight * 0.35}
         >
           <XAxis />
           <YAxis />

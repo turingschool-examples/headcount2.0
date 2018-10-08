@@ -2,19 +2,21 @@ import React, { Component } from "react"
 import PropTypes from "prop-types"
 
 import Result from "./Result"
+import ComparedResults from './ComparedResults'
 
 class ResultsContainer extends Component {
   constructor(props) {
     super(props)
     this.state = {
       hidden: "hidden",
-      selectedResults: []
+      selectedResults: [],
+      compared: true
     }
   }
 
   giveMeSelected = (selected, boolean) => {
     let className = ''
-    if (this.state.selectedResults.length == 1) className = 'hidden'
+    if (this.state.selectedResults.length === 1) className = 'hidden'
     if (boolean) {
       this.setState({
         selectedResults: [...this.state.selectedResults, selected],
@@ -36,6 +38,12 @@ class ResultsContainer extends Component {
     }
   };
 
+  handleCompare = () => {
+    this.setState({
+      compared: true
+    })
+  }
+
 
   render() {
     if (!this.props.results) return null
@@ -50,7 +58,7 @@ class ResultsContainer extends Component {
             />
           )
         })}
-        <button className={`compare-btn ${this.state.hidden}`}>Compare</button>
+        <ComparedResults dataset={this.state.selectedResults} compared={this.state.compared}/>
       </section>
     )
   }
