@@ -1,0 +1,10 @@
+.comparisonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.comparisonCard:hover {
+  cursor: auto;
+  transform: none;
+  transition: none;
+}
