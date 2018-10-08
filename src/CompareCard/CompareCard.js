@@ -7,7 +7,7 @@ const CompareCard = ({ districtsBeingCompared, districtAverages }) => {
 	if (districtsBeingCompared) {
 	const districtCards = districtsBeingCompared.map((district) => {
 		return <DistrictCard 
-							key={Math.random()}
+							key={district.location}
 							schoolName={district.location}
 							{...district}
 						/>
@@ -19,11 +19,14 @@ const CompareCard = ({ districtsBeingCompared, districtAverages }) => {
 			<div className='CompareCard'>
 				{ districtCards[0] }
 				<div className='average-card'>
-					<h3>{districtsBeingCompared[0].location}</h3>
-					<p>{districtAverages[districtsBeingCompared[0].location]}</p>
-					<h3>{districtAverages.compared}</h3>
-					<p>{districtAverages[districtsBeingCompared[1].location]}</p>
-					<h3>{districtsBeingCompared[1].location}</h3>
+					<h3 className='location'>{districtsBeingCompared[0].location}</h3>
+					<p className='label-average'>Average:</p>
+					<p className='average'>{districtAverages[districtsBeingCompared[0].location]}</p>
+					<p className='label-compared'>Compared:</p>
+					<h3 className='compared'>{districtAverages.compared}</h3>
+					<h3 className='location'>{districtsBeingCompared[1].location}</h3>
+					<p className='label-average'>Average:</p>
+					<p className='average'>{districtAverages[districtsBeingCompared[1].location]}</p>
 				</div>
 				{ districtCards[1] }
 			</div>

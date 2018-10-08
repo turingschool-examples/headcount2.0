@@ -22,15 +22,15 @@ class App extends Component {
 	}
 
 	compareDistrict = (district) => {
-		console.log(district)
 		const districtsInState = this.state.districtsBeingCompared;	
+		console.log(districtsInState)
 
 		const compareArr = districtsInState.map(district => district.location)
 		if (compareArr.includes(district.location)) {
 			const districtsBeingCompared = districtsInState.filter(comparedDistrict => {
 			return !comparedDistrict.location.includes(district.location)
 		})
-			console.log(districtsBeingCompared)
+
 			this.setState({districtsBeingCompared})
 		} else if (districtsInState.length <= 1) {
 			this.setState({ districtsBeingCompared: [district, ...districtsInState]},
@@ -70,7 +70,8 @@ class App extends Component {
 				<Search searchDistrict={this.searchDistrict}/>
 				<DistrictsContainer 
 					districts={data.findAllMatches(searchTerm)}
-					compareDistrict={this.compareDistrict}					
+					compareDistrict={this.compareDistrict}
+					districtsBeingCompared={districtsBeingCompared}					
 				/>
 			</div>
 		);

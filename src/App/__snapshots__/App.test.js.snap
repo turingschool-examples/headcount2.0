@@ -35,6 +35,7 @@ ShallowWrapper {
           </h1>
         </div>,
         <CompareCard
+          districtAverages={Object {}}
           districtsBeingCompared={Array []}
         />,
         <Search
@@ -2942,6 +2943,7 @@ ShallowWrapper {
               },
             ]
           }
+          districtsBeingCompared={Array []}
         />,
       ],
       "className": "App",
@@ -3022,6 +3024,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "districtAverages": Object {},
           "districtsBeingCompared": Array [],
         },
         "ref": null,
@@ -5943,6 +5946,7 @@ ShallowWrapper {
               },
             },
           ],
+          "districtsBeingCompared": Array [],
         },
         "ref": null,
         "rendered": null,
@@ -5975,6 +5979,7 @@ ShallowWrapper {
             </h1>
           </div>,
           <CompareCard
+            districtAverages={Object {}}
             districtsBeingCompared={Array []}
           />,
           <Search
@@ -8882,6 +8887,7 @@ ShallowWrapper {
                 },
               ]
             }
+            districtsBeingCompared={Array []}
           />,
         ],
         "className": "App",
@@ -8962,6 +8968,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "districtAverages": Object {},
             "districtsBeingCompared": Array [],
           },
           "ref": null,
@@ -11883,6 +11890,7 @@ ShallowWrapper {
                 },
               },
             ],
+            "districtsBeingCompared": Array [],
           },
           "ref": null,
           "rendered": null,

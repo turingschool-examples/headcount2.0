@@ -6,3 +6,45 @@
   width: 50%;
   margin: auto;
 }
+
+.average-card {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-around;
+	background-color: #FFF;
+	text-align: center;
+	width: 15rem;
+	height: 26rem;
+	margin: 0 2rem 0.5rem;
+	padding: 0 0 1rem;
+	box-shadow: 0px 0px 1px 2px #F5F6F7;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.location {
+  font-family: 'Arvo', serif;
+  margin: 1rem 2rem 0;
+}
+
+.average {
+	font-family: 'Open Sans', sans-serif;
+	color: #01411b;
+	background-color: #F5F6F7;
+	margin: 0.2rem auto;
+	font-weight: 300;
+	padding: 0 0.75rem;
+	border-radius: 10px;
+}
+
+.compared {
+	color: #087ff5;
+	font-size: 1.5rem;
+}
+
+.label-average, .label-location, .label-compared {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1rem;
+	color: #026332;
+}
