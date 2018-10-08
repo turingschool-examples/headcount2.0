@@ -161,7 +161,7 @@ describe('App', ()=>{
   it('should setState to default', () => {
     wrapper.setState({
       selection: ['denver']
-    })
+    });
     wrapper.instance().processSelection('denver');
 
     expect(wrapper.state().selection).toEqual([]);
