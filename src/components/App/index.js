@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../Header'
 import CardContainer from '../CardContainer'
+import Comparator from '../Comparator'
 import DistrictRepository from '../../helper.js';
 import kinderData from '../../data/kindergartners_in_full_day_program'
 import './App.css';
@@ -38,11 +39,12 @@ class App extends Component {
 
   render() {
     const kinder = this.state.kinder
+    const comps = this.state.comparisons
 
     return (
       <div className="App">
         <Header findAllMatches={this.findAllMatches}/>
-        <Comparator />
+        { (comps.length > 0 && comps.length > 3) ? <Comparator /> : null}
         <CardContainer districts={kinder} />
       </div>
     );

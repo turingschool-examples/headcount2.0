@@ -17,7 +17,7 @@
   box-sizing: border-box;
 }
 
-h2 {
+.Card h2 {
   text-align: center;
   grid-row: 1 / 2;
   font-family: "Roboto Condensed", sans-serif;

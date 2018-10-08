@@ -1,8 +1,9 @@
 /*CARDCONTAINER COMPONENT RELATED CSS GOES HERE*/
 .CardContainer {
-  grid-row: 2 / 3;
+  grid-row: 3 / 4;
   grid-column: 1 / 2;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding-top: 15px;
 }

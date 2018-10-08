@@ -11,6 +11,8 @@ const Header = ({findAllMatches}) => {
         <span className="version"> 2.0</span>
       </h1>
       <Search findAllMatches={findAllMatches} />
+      <h2>Click on two districts below to compare averages.</h2>
+      <p>If you know the name of the districts you would like to compare,<br /> type them in the search field above to locate them more quickly.</p>
     </header>
   )
 }
