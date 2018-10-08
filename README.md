@@ -14,6 +14,7 @@ Team members for this project included Alexander Ela.
 #### HeadCount homepage with query 'county' entered in search bar
 ![headcount_desktop](https://github.com/alexanderela/headcount2.0/blob/master/public/images/desktop_main.png)
 
+
 #### HeadCount homepage with two cards selected for comparison
 ![headcount_desktop_cards_selected](https://github.com/alexanderela/headcount2.0/blob/master/public/images/desktop_main_highlighted.png)
 
