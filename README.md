@@ -30,8 +30,6 @@ This application was built using the `create-react-app` boilerplate.
 
 ![info](https://user-images.githubusercontent.com/29719272/46584807-2f3e1a80-ca25-11e8-9491-828aec9abe0c.png)
 
-![phone](https://user-images.githubusercontent.com/29719272/46623055-b2c13f80-cae9-11e8-98f4-1f51ce31608a.png)
-
 <img width="376" alt="screen shot 2018-10-08 at 11 01 13 am" src="https://user-images.githubusercontent.com/29719272/46623055-b2c13f80-cae9-11e8-98f4-1f51ce31608a.png">
 
 
