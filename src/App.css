@@ -3,7 +3,7 @@
 body {
   background-attachment: fixed;
   background-color: lightblue;
-  background-image: url('./images/yellow-paper.jpg');
+  background-image: url("./images/yellow-paper.jpg");
 }
 
 .instructions,

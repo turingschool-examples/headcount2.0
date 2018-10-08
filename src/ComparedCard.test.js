@@ -14,16 +14,16 @@ describe("ComparedCard", () => {
       { location: "ACADEMY 20", stats: { 2004: 0 }, display: false, clicked: 1 }
     ];
     wrapper = shallow(
-        <ComparedCard
-          location={mockData[0].location}
-          stats={mockData[0].stats}
-          handleCardClick={handleMockCardClick}
-        />,
-        <ComparedCard
-          location={mockData[1].location}
-          stats={mockData[1].stats}
-          handleCardClick={handleMockCardClick}
-        />
+      <ComparedCard
+        location={mockData[0].location}
+        stats={mockData[0].stats}
+        handleCardClick={handleMockCardClick}
+      />,
+      <ComparedCard
+        location={mockData[1].location}
+        stats={mockData[1].stats}
+        handleCardClick={handleMockCardClick}
+      />
     );
   });
 

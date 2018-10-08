@@ -15,41 +15,41 @@ class App extends Component {
     comparedAvg: {},
     instructions: "click any two districts to compare stats"
   };
-  
+
   componentDidMount = () => {
     const schoolData = allDistricts.findAllMatches();
     this.setState({ schoolData });
   };
-  
+
   handleSearch = input => {
     const schoolData = allDistricts.findAllMatches();
     const districtDirectory = Object.keys(schoolData);
     input
-    ? this.toggleSearchDisplay(schoolData, input, districtDirectory)
-    : this.displayAllCards(schoolData, districtDirectory);
-    
+      ? this.toggleSearchDisplay(schoolData, input, districtDirectory)
+      : this.displayAllCards(schoolData, districtDirectory);
+
     this.setState({ schoolData });
   };
-  
+
   toggleSearchDisplay = (schoolData, input, districtDirectory) => {
     const searchResults = allDistricts.findAllMatches(input);
     districtDirectory.forEach(district => {
       searchResults.includes(district)
-      ? (schoolData[district].display = true)
-      : (schoolData[district].display = false);
+        ? (schoolData[district].display = true)
+        : (schoolData[district].display = false);
     });
   };
-  
+
   displayAllCards = (schoolData, districtDirectory) => {
     districtDirectory.forEach(
       district => (schoolData[district].display = true)
     );
   };
-  
+
   handleCardClick = location => {
     const clickedDistrict = allDistricts.stats[location];
     let { comparedCards } = this.state;
-    
+
     if (clickedDistrict.clicked !== false) {
       this.handleComparedCardClick(clickedDistrict);
       return;

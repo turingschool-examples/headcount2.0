@@ -25,7 +25,7 @@ describe("Card", () => {
   it("handleCardClick should recognize click on correct card", () => {
     const clickedCard = wrapper.find("section");
     clickedCard.simulate("click");
-    
+
     expect(handleMockCardClick).toHaveBeenCalledWith("Colorado");
   });
 });

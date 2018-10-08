@@ -12,7 +12,7 @@ describe("ComparisonCard", () => {
       COLORADO: 0.53,
       compared: 1.302
     };
-    wrapper = shallow(<ComparisonCard {...mockData}/>);
+    wrapper = shallow(<ComparisonCard {...mockData} />);
   });
 
   it("matches the snapshot", () => {

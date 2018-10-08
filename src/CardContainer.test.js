@@ -25,9 +25,7 @@ describe("CardContainer", () => {
       }
     };
     wrapper = shallow(
-      <CardContainer 
-        cards={mockData} 
-        handleCardClick={handleMockCardClick} />
+      <CardContainer cards={mockData} handleCardClick={handleMockCardClick} />
     );
   });
 
