@@ -48,10 +48,7 @@ export default class DistrictRepository {
     if (name && this.stats[name.toUpperCase()]){
       return this.stats[name.toUpperCase()];
     }
-    // return {
-    //   location: this.stats[name.toUpperCase()];
-    //
-    // }
+
   }
 
   findAllMatches = (districtName) => {

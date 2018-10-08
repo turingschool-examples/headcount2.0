@@ -7,7 +7,7 @@ const CardContainer = ({stats}) => {
 
   const arrayOfDistricts = Object.keys(stats);
 
-  const mappedCards = arrayOfDistricts.map((stat, index)=> <Card {...stats[stat]} key={index} />)
+  const mappedCards = arrayOfDistricts.map((stat, index)=> <Card {...stats[stat]} key={index}/>)
   return(
     <div className="card-container">
     {mappedCards}

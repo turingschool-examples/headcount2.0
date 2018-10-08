@@ -25,19 +25,13 @@ class App extends Component {
 
   searchData = (userInput) => {
 
-    console.log(userInput)
-
     const districts = new DistrictRepository(kinderdata);
 
-    console.log(districts)
-    //
     const newData = districts.findByName(userInput);
 
-    console.log(newData)
-    //
-    // this.setState({
-    //   districtData: newData
-    // });
+    this.setState({
+      districtData: {...newData}
+    });
   }
 
   render() {

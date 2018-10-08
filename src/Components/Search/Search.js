@@ -43,7 +43,7 @@ class Search extends Component{
 }
 
 Search.propTypes = {
-  searchData: PropTypes.string
+  searchData: PropTypes.func
 }
 
 export default Search;
