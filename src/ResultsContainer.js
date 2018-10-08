@@ -9,8 +9,17 @@ class ResultsContainer extends Component {
     super(props)
     this.state = {
       selectedResults: [],
-      compared: true
+      compared: true,
+      results: null
     }
+  }
+
+  componentWillMount () {
+    let results = this.props.results.map(entry => entry)
+    console.log (this.props.results)
+    this.setState({
+      results: results
+    })
   }
 
   giveMeSelected = (selected, boolean) => {
@@ -33,8 +42,32 @@ class ResultsContainer extends Component {
     })
   }
 
-  handleSelect = (entry) => {
-    console.log (entry)
+  handleSelect = (entry, condition) => {
+    if (condition) {
+      let filtered = this.state.selectedResults.filter(result => {
+        return !result.location.includes(entry.location)
+      })
+      this.setState({
+        selectedResults: filtered
+      })
+    } else {
+      this.setState({
+        selectedResults: [...this.state.selectedResults, entry]
+      })
+    }
+
+
+    // if (this.state.selectedResults.length === 2) {
+    //   let newState = this.state.selectedResults.pop()
+    //   this.setState({
+    //     selectedResults: [newState, entry]
+    //   })
+    // } else {
+    //   this.setState({
+    //     selectedResults: [...this.state.selectedResults, entry]
+    //   })
+
+    // }
   }
 
 
@@ -47,7 +80,7 @@ class ResultsContainer extends Component {
             <Result
               entry={entry}
               key={entry.location}
-              selectedResults={this.giveMeSelected}
+              selectedResults={this.state.selectedResults}
               handleSelect={this.handleSelect}
             />
           )

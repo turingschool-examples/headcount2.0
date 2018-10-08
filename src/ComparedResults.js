@@ -81,6 +81,3 @@ ComparedResults.propTypes = {
   dataset: PropTypes.array,
   compared: PropTypes.bool
 }
-
-// lineStyle={{ stroke: "red" }}
-//             markStyle={{ stroke: "blue" }}

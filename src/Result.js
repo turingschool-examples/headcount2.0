@@ -18,6 +18,10 @@ class Result extends Component {
     }
   }
 
+  className = () => {
+    return 'hello'
+  }
+
   sortResults = entry => {
     let stats = Object.entries(entry.stats)
     const graphData = stats.reduce(
@@ -35,13 +39,24 @@ class Result extends Component {
     return graphData
   };
 
-  handleSelect = () => {
-    this.props.handleSelect(this.props.entry)
+  selected = (boolean) => {
+    if (boolean) return 'selected'
+    return ''
   }
+
+  handleSelect = () => {
+    let condition = (this.props.selectedResults[0] === this.props.entry || this.props.selectedResults[1] === this.props.entry)
+    this.props.handleSelect(this.props.entry, condition)
+    this.setState({
+      selected: this.selected(!condition)
+    })
+    
+  }
+
 
   render() {
     return (
-      <article className={`result-card ${this.props.entry.class}`} onClick={this.handleSelect}>
+      <article className={`result-card ${this.state.selected}`} onClick={this.handleSelect}>
         <h3>{this.props.entry.location}</h3>
         <XYPlot
           width={window.innerWidth * 0.35}
@@ -65,6 +80,6 @@ export default Result
 
 Result.propTypes = {
   entry: PropTypes.object,
-  selectedResults: PropTypes.func,
+  selectedResults: PropTypes.array,
   handleSelect: PropTypes.func
 }
