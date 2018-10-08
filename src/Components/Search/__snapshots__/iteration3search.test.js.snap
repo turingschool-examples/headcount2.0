@@ -36,7 +36,7 @@ ShallowWrapper {
         </button>
       </form>,
       "className": "search-container",
-      "onSubmit": [Function],
+      "onChange": [Function],
     },
     "ref": null,
     "rendered": Object {
@@ -114,7 +114,7 @@ ShallowWrapper {
           </button>
         </form>,
         "className": "search-container",
-        "onSubmit": [Function],
+        "onChange": [Function],
       },
       "ref": null,
       "rendered": Object {

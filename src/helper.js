@@ -42,9 +42,9 @@ export default class DistrictRepository {
    if (!districtName) {
      return districtArray.map( district => this.stats[district]);
    } else {
-     let filteredDistricts = districtArray.filter( district =>
-       district.includes(districtName.toUpperCase())
-     );
+     let filteredDistricts = districtArray.filter( district =>{
+       return district.includes(districtName.toUpperCase())
+     });
      return filteredDistricts.map( district => this.stats[district]);
    }
  }
