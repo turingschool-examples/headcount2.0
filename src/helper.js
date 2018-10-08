@@ -59,4 +59,53 @@ export default class DistrictRepository {
     })
     return matches
   }
+
+  findAverage = (input1, input2) => {
+    if (input1) input1 = input1.toUpperCase()
+    if (input2) input2 = input2.toUpperCase()
+
+    const averages = this.calcAverage (input1, input2)
+
+    let average = {
+      [input1]: averages[0],
+      [input2]: averages[1],
+      'compared': this.roundData(averages[0]/averages[1])
+    }
+
+    if (input2) return average
+    return averages[0]
+  }
+
+  compareDistrictAverages = (x, y) => {
+    return this.findAverage(x, y)
+  }
+
+  calcAverage = (input1, input2) => {
+    let firstAvg = 0
+    let secondAvg = 'no value'
+    let iterator
+
+    iterator = Object.entries(this.findByName(input1).stats)
+    firstAvg = iterator.reduce((acc, stat) => {
+      acc += stat[1]
+      return acc
+    }, 0)
+
+    firstAvg /= iterator.length
+    firstAvg = this.roundData(firstAvg)
+
+    if (input2) {
+      iterator = Object.entries(this.findByName(input2).stats)
+      secondAvg = iterator.reduce((acc, stat) => {
+        acc += stat[1]
+        return acc 
+      }, 0)
+      secondAvg /= iterator.length
+      secondAvg = this.roundData(secondAvg)
+    }
+    
+    return [firstAvg, secondAvg]
+  }
 }
+
+
