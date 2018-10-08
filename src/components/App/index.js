@@ -1,9 +1,9 @@
 import React, { Component } from "react";
+import Search from "../Search";
+import CompareCardContainer from "../CompareCardContainer";
+import CardContainer from "../CardContainer/";
 import DistrictRepository from "../../helper.js";
 import kinderData from "../../data/kindergartners_in_full_day_program.js";
-import CardContainer from "../CardContainer/";
-import CompareCardContainer from "../CompareCardContainer";
-import Search from "../Search";
 import "./App.css";
 
 const allDistricts = new DistrictRepository(kinderData);

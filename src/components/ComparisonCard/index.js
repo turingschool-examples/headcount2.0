@@ -1,7 +1,7 @@
 import React from "react";
 import applePic from "../../images/apple.png";
-import PropTypes from "prop-types";
 import pencilIcon from "../../images/pencil.svg";
+import PropTypes from "prop-types";
 import "./ComparisonCard.css";
 
 const ComparisonCard = props => {
