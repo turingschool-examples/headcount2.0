@@ -1,31 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({district}) => {
-  
-  const dataPoints = district.stats.map( year => {
+const Card = (props) => {
+
+  let cardClass;
+  if(props.district.selected === true){
+    cardClass = 'card selected'
+  } else {
+    cardClass = 'card'
+  }
+
+
+
+  const dataPoints = props.district.stats.map( year => {
     
-    let classname;
+    let dataClassName;
     year.data > 0.5 
-      ? classname = 'year-data greater-than' 
-      : classname = 'year-data less-than';
+      ? dataClassName = 'year-data greater-than' 
+      : dataClassName = 'year-data less-than';
 
-    return <p className={classname} key={Math.random()}> {year.year}: {year.data} </p>
-  })
+    return <p className={dataClassName} key={Math.random()}> {year.year}: {year.data} </p>;
+  });
 
-  return(
-    <div className='card'>
-      <h1 className='card-heading'>{district.location}</h1>
+
+
+
+  return (
+    <div className={cardClass} onClick={()=> props.compareDistrictData(props.district)}>
+      <h1 className='card-heading'>{props.district.location}</h1>
+      <h2 className='sub-heading'>Kindergarten</h2>
       <div className='card-data'>
         {dataPoints}
-        <p>* less than 0.5</p>
+        <p className='less-than-tag'>* less than 0.5</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
 Card.propTypes = {
-  district: PropTypes.object.isRequired,
-}
+  district: PropTypes.object.isRequired
+};
 
 export default Card;

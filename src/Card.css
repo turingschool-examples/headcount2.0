@@ -1,21 +1,45 @@
 .card {
   border: thin solid black;
-  padding: 10px;
+  padding: 15px;
   margin: 10px;
-  width: 20%;
+  width: 17%;
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
 
 }
 
+.selected {
+  width: 25%;
+}
+
 .card-heading {
+  font-weight: 600;
   font-size: 1em;
-  text-align: center;
+  margin-bottom: 5px;
+  /*text-align: center;*/
+}
+
+.sub-heading {
+  font-size: .8em;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
 .card-data {
   color: gray;
-  text-indent: 30%;
+  /*text-indent: 30%;*/
+}
+
+.year-data {
+  margin: 0;
 }
 
 .greater-than {
-  color: blue;
+  color: #0095A9;
+  font-weight: 600;
+}
+
+.less-than-tag {
+  margin-top: 10px;
+  font-size: .8em;
 }

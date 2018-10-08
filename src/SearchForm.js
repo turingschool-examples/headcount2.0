@@ -10,28 +10,28 @@ class SearchForm extends Component {
   }
 
   updateSearch = (event) => {
-    this.setState({ search: event.target.value})
-    this.props.filterData(this.state)
+    this.setState({ search: event.target.value});
+    this.props.filterData(this.state);
   }
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.filterData(this.state)
-    this.setState({ search: '' })
+    this.props.filterData(this.state);
+    this.setState({ search: '' });
   }
     
   render() {
 
     const options = this.props.data.map( district => {
-      return <option className='option' value={district.location} key={Math.round()}/>
-    })
+      return <option className='option' value={district.location} key={Math.random()} />;
+    });
 
-    return(
+    return (
       <div>
         <form 
           className="search"
           onSubmit={this.handleSubmit}
-          >
+        >
           <input 
             className="input-search"
             list="matches"
@@ -39,7 +39,7 @@ class SearchForm extends Component {
             placeholder="Search for School District"
             name="search"
             onChange={this.updateSearch}
-            />
+          />
           <datalist id='matches'>
             { options }
           </datalist>
@@ -47,10 +47,10 @@ class SearchForm extends Component {
           <button 
             className="btn-display-all"
             onClick={() => this.props.displayAll()}
-            >Display All</button>
+          >Display All</button>
         </form>
       </div>
-    )
+    );
   }
 }
 
@@ -58,6 +58,6 @@ SearchForm.propTypes = {
   filterData: PropTypes.func.isRequired,
   displayAll: PropTypes.func.isRequired,
   data: PropTypes.array.isRequired
-}
+};
 
-export default SearchForm
+export default SearchForm;
