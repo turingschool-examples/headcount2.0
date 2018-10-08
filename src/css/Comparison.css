@@ -18,3 +18,7 @@
   background-color: #fff;
   color: #0CA7D3;
 }
+
+.comparison-container {
+  border-bottom: 2px solid #000;
+} 
