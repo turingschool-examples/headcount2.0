@@ -36,6 +36,14 @@
     "id-blacklist": ["error", "err", "e", "cb", "callback", "payload", "obj", "arr"],
     "max-depth": ["warn", 4]
   },
+  "overrides": [
+    {
+      "files": ["testData.js",],
+      "rules": {
+    "indent": ["warn", 2, {"SwitchCase": 1}],
+      }
+    }
+  ],
   "globals": {
     "expect": true
   }

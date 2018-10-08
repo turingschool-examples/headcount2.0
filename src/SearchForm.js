@@ -31,5 +31,5 @@ export default class SearchForm extends Component {
 }
 
 SearchForm.propTypes = {
-  searchSchool: PropTypes.func.isRequired
+  searchSchool: PropTypes.func
 };
