@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import './search.css'
-
+import PropTypes from 'prop-types';
 
 class Search extends Component{
   constructor(){
@@ -15,9 +15,7 @@ class Search extends Component{
   handleSubmit(event){
     event.preventDefault();
 
-    this.props.searchData(this.state);
-
-    console.log('hellooooofsafoaofa')
+    this.props.searchData(this.state.district);
 
   }
 
@@ -31,18 +29,22 @@ class Search extends Component{
 
   render(){
     return(
-      <div className="search-container">
+      <div className="search-container" onSubmit={(event)=>{this.handleSubmit(event)}}>
       <form className="submit-form">
       <input
       name="district"
       className="search-input"
       placeholder="Search Districts"
       onChange={this.handleInput} />
-      <button onSubmit={()=>{this.handleSubmit}} className="submit-button">Search</button>
+      <button className="submit-button">Search</button>
       </form>
       </div>
     )
   }
+}
+
+Search.propTypes = {
+  searchData: PropTypes.string
 }
 
 export default Search;

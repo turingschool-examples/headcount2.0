@@ -28,11 +28,4 @@ describe('CardContainer', () =>  {
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  // it('should render an h1, controls, and trivialist component', () => {
-  //   expect(wrapper.find('h1').length).toEqual(1);
-  //   expect(wrapper.find('Controls').length).toEqual(1);
-  //   expect(wrapper.find('TriviaList').length).toEqual(1);
-  // })
-
 });

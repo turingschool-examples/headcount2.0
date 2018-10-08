@@ -5,7 +5,6 @@ import Search from './Components/Search/Search';
 import DistrictRepository from './helper.js';
 import kinderdata from './data/kindergartners_in_full_day_program.js';
 
-
 class App extends Component {
   constructor(){
     super();
@@ -24,10 +23,20 @@ class App extends Component {
     });
   }
 
-  searchData(userInput){
+  searchData = (userInput) => {
 
-    console.log(userInput)
-    //do some regex stuff here to display the right cards on the screen
+    let adams = 'Adams';
+
+    const districts = new DistrictRepository(kinderdata);
+
+    const newData = districts.findByName(adams);
+
+    this.setState({
+      districtData: newData
+    })
+
+    console.log(this.state.districtData);
+
   }
 
   render() {
@@ -45,7 +54,5 @@ class App extends Component {
     );
   }
 }
-
-//do proptypes here
 
 export default App;

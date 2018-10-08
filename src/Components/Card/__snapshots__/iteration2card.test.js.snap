@@ -1,192 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App should match the snapshot 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Card
-    location="Turing"
-    stats={
-      Object {
-        "2018": 1,
-      }
-    }
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <h4>
-          Turing
-        </h4>,
-        <h3>
-          <p>
-            2018
-            : 
-            1
-          </p>
-        </h3>,
-      ],
-      "className": "card-div",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Turing",
-        },
-        "ref": null,
-        "rendered": "Turing",
-        "type": "h4",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <p>
-              2018
-              : 
-              1
-            </p>,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": "0",
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                "2018",
-                ": ",
-                1,
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              "2018",
-              ": ",
-              1,
-            ],
-            "type": "p",
-          },
-        ],
-        "type": "h3",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <h4>
-            Turing
-          </h4>,
-          <h3>
-            <p>
-              2018
-              : 
-              1
-            </p>
-          </h3>,
-        ],
-        "className": "card-div",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Turing",
-          },
-          "ref": null,
-          "rendered": "Turing",
-          "type": "h4",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <p>
-                2018
-                : 
-                1
-              </p>,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": "0",
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  "2018",
-                  ": ",
-                  1,
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                "2018",
-                ": ",
-                1,
-              ],
-              "type": "p",
-            },
-          ],
-          "type": "h3",
-        },
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    "attachTo": undefined,
-    "hydrateIn": undefined,
-  },
-}
-`;
-
 exports[`Card should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
@@ -212,12 +25,20 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h4>
+        <h2
+          className="location"
+        >
           Turing
-        </h4>,
-        <h3>
+        </h2>,
+        <h3
+          className="district-data"
+        >
           <p>
-            2018
+            <span
+              className="year"
+            >
+              2018
+            </span>
             : 
             1
           </p>
@@ -233,10 +54,11 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Turing",
+          "className": "location",
         },
         "ref": null,
         "rendered": "Turing",
-        "type": "h4",
+        "type": "h2",
       },
       Object {
         "instance": null,
@@ -245,11 +67,16 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <p>
-              2018
+              <span
+                className="year"
+              >
+                2018
+              </span>
               : 
               1
             </p>,
           ],
+          "className": "district-data",
         },
         "ref": null,
         "rendered": Array [
@@ -259,14 +86,29 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "2018",
+                <span
+                  className="year"
+                >
+                  2018
+                </span>,
                 ": ",
                 1,
               ],
             },
             "ref": null,
             "rendered": Array [
-              "2018",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2018",
+                  "className": "year",
+                },
+                "ref": null,
+                "rendered": "2018",
+                "type": "span",
+              },
               ": ",
               1,
             ],
@@ -285,12 +127,20 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h4>
+          <h2
+            className="location"
+          >
             Turing
-          </h4>,
-          <h3>
+          </h2>,
+          <h3
+            className="district-data"
+          >
             <p>
-              2018
+              <span
+                className="year"
+              >
+                2018
+              </span>
               : 
               1
             </p>
@@ -306,10 +156,11 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Turing",
+            "className": "location",
           },
           "ref": null,
           "rendered": "Turing",
-          "type": "h4",
+          "type": "h2",
         },
         Object {
           "instance": null,
@@ -318,11 +169,16 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <p>
-                2018
+                <span
+                  className="year"
+                >
+                  2018
+                </span>
                 : 
                 1
               </p>,
             ],
+            "className": "district-data",
           },
           "ref": null,
           "rendered": Array [
@@ -332,14 +188,29 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "2018",
+                  <span
+                    className="year"
+                  >
+                    2018
+                  </span>,
                   ": ",
                   1,
                 ],
               },
               "ref": null,
               "rendered": Array [
-                "2018",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2018",
+                    "className": "year",
+                  },
+                  "ref": null,
+                  "rendered": "2018",
+                  "type": "span",
+                },
                 ": ",
                 1,
               ],
