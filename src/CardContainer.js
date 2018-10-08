@@ -18,4 +18,9 @@ CardContainer.propTypes = {
   compareTwoCards: PropTypes.object
 };
 
+CardContainer.propTypes = {
+  schoolCards: PropTypes.array,
+  compareTwoCards: PropTypes.func
+};
+
 export default CardContainer;

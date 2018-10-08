@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 const DataCard = ({school, compareTwoCards}) => {
   return (
     <div 
+      key={Date.now()}
       className='data-card'
       onClick={() => compareTwoCards(school.location, school.stats)}
     >
