@@ -9,7 +9,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      kinder: {}
+      kinder: {},
+      comparisons: []
     }
   }
 
@@ -41,6 +42,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header findAllMatches={this.findAllMatches}/>
+        <Comparator />
         <CardContainer districts={kinder} />
       </div>
     );
