@@ -12,8 +12,12 @@ exports[`App should render a CardsContainer, Search, and DisplayComparedContaine
   >
     HeadCount 2.0
   </h4>
-  <DisplayComparedContainer />
+  <DisplayComparedContainer
+    compareDistricts={[Function]}
+    comparedCards={Array []}
+  />
   <CardsContainer
+    highLightCard={[Function]}
     schoolData={
       Array [
         Object {

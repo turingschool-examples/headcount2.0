@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Card.css';
 
-const Card = ({location, stats}) => {
+const Card = ({location, stats, highLightCard}) => {
   const statsKeys = Object.keys(stats);
   const resultsLi = statsKeys.map((years, i) => 
     <li 
@@ -18,6 +18,7 @@ const Card = ({location, stats}) => {
       <ul>
         {resultsLi}
       </ul>
+      <button onClick={highLightCard}>Select</button>
     </div>
   )
 }

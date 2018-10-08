@@ -6,6 +6,10 @@
   border: 1px solid black;
 }
 
+.active {
+  border: 2px solid blue;
+}
+
 .card li {
   list-style: none;
 }
