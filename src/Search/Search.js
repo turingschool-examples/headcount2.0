@@ -12,7 +12,6 @@ class Search extends Component {
 
 	handleInputChange = (event) => {
 		const search = event.target.value
-		// console.log(search)
 		this.props.searchDistrict(search)
 		this.setState({ search })
 	}
