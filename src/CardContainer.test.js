@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import CardContainer from './CardContainer';
 import Card from './Card';
 
@@ -13,10 +13,10 @@ describe('CardContainer', () => {
       {location: 'boulder', stats: [{2002: 1}]}];
     compareDistrictDataMock = jest.fn();  
     wrapper = shallow(<CardContainer 
-                        data={mockData} 
-                        compareDistrictData={compareDistrictDataMock}/>);
+      data={mockData} 
+      compareDistrictData={compareDistrictDataMock}/>);
     
-  })
+  });
 
   it('should match the snapshot with all data passed in correctly', () => {
     expect(wrapper).toMatchSnapshot();

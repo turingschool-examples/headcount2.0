@@ -1,23 +1,27 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import Card from './Card';
 
 describe('Card', () => {
   let wrapper;
   let expectedId;
-  let districtMockData
+  let districtMockData;
   let compareDistrictDataMock = jest.fn();
   let clearComparisonMock = jest.fn();
 
-beforeEach(() => {
-  districtMockData = {location: 'denver', stats: [{2007: 0}, {2008: 1}], selected: true};
-  wrapper = shallow(<Card 
-                    key={expectedId} 
-                    district={districtMockData}
-                    compareDistrictData={compareDistrictDataMock}
-                    clearComparison={clearComparisonMock} 
-                    />);
-})
+  beforeEach(() => {
+    districtMockData = {
+      location: 'denver', 
+      stats: [{2007: 0}, {2008: 1}], 
+      selected: true
+    };
+    wrapper = shallow(<Card 
+      key={expectedId} 
+      district={districtMockData}
+      compareDistrictData={compareDistrictDataMock}
+      clearComparison={clearComparisonMock} 
+    />);
+  });
 
   it('should match the snapshot with all data passed in correctly', () => { 
     expect(wrapper).toMatchSnapshot();
