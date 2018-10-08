@@ -1,23 +1,40 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './DistrictCard.css';
 import PropTypes from 'prop-types';
 
-const DistrictCard = (props) => {
-  const info = Object.keys(props.stats.data).map(year => {
-    return <p 
-      className={props.stats.data[year] < .5 ? 'lower-half' : 'upper-half'}
-      key={year}>{year} : {props.stats.data[year]}</p>;
-  });
+class DistrictCard extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      selected: false
+    }
+  }
+
+  selectCard = (location, stats) => {
+    this.setState({selected: !this.state.selected}, 
+      () => this.props.addSelectedDistrict(location, stats, this.state))
+  }
+
+  render() {
+    const { stats, location } = this.props;
+    const info = 
+      Object.keys(stats.data).map(year => {
+        return <p 
+          className={stats.data[year] < .5 ? 'lower-half' : 'upper-half'}
+          key={year}>{year} : {stats.data[year]}</p>;
+      });
 
   return (
     <div 
       className='card' 
-      onClick={() => props.addSelectedDistrict(props.location, props.stats)}>
-      <p>{props.location}</p>
+      onClick={() => this.selectCard(location, stats)}>
+      <p>{location}</p>
       { info }
     </div>
-  );
-};
+    );
+  }
+}
 
 DistrictCard.propTypes = {
   location: PropTypes.string.isRequired,
