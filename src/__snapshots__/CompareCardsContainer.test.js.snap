@@ -110,6 +110,7 @@ ShallowWrapper {
                                   }
             }
             location="0"
+            setStateOfCompare={undefined}
 />,
           <SchoolCard
             compareAvrg={undefined}
@@ -131,6 +132,7 @@ ShallowWrapper {
                                   }
             }
             location="1"
+            setStateOfCompare={undefined}
 />,
         ],
         Array [
@@ -234,6 +236,7 @@ ShallowWrapper {
             },
           },
           "location": "0",
+          "setStateOfCompare": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -261,6 +264,7 @@ ShallowWrapper {
             },
           },
           "location": "1",
+          "setStateOfCompare": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -373,6 +377,7 @@ ShallowWrapper {
                                         }
               }
               location="0"
+              setStateOfCompare={undefined}
 />,
             <SchoolCard
               compareAvrg={undefined}
@@ -394,6 +399,7 @@ ShallowWrapper {
                                         }
               }
               location="1"
+              setStateOfCompare={undefined}
 />,
           ],
           Array [
@@ -497,6 +503,7 @@ ShallowWrapper {
               },
             },
             "location": "0",
+            "setStateOfCompare": undefined,
           },
           "ref": null,
           "rendered": null,
@@ -524,6 +531,7 @@ ShallowWrapper {
               },
             },
             "location": "1",
+            "setStateOfCompare": undefined,
           },
           "ref": null,
           "rendered": null,

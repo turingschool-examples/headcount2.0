@@ -12,6 +12,6 @@ const ComparedCard = ({ location }) => {
 };
 
 ComparedCard.propTypes = {
-  location: PropTypes.Object
+  location: PropTypes.array
 };
 export default ComparedCard;

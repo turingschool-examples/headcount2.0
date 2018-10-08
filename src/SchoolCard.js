@@ -15,7 +15,9 @@ const SchoolCard =
                 className={data[location][year] < 0.5 ? 'isLess' : 'isMore'}>
                 {year}: {data[location][year]}</li>))}
         </ul>
-        <button className='btn' onClick={() => setStateOfCompare(str1)}>Compare Data</button>
+        <button className='btn' 
+          onClick={() => setStateOfCompare(str1)}>Compare Data
+        </button>
       </div>
     );
   };

@@ -1,8 +1,6 @@
 import React from 'react';
 import App from './App';
 import { shallow } from 'enzyme';
-import DistrictRepository from './helper.js';
-import kinderData from './data/kindergartners_in_full_day_program.js';
 
 describe('App', () => {
   let wrapper;
@@ -33,8 +31,17 @@ describe('App', () => {
     expect(wrapper.state().cards).toEqual(mockSchool);
   });
 
+  it('Should test click event', () => {
+    const clearComparedCards = jest.fn();
+    const button = shallow((<button 
+      onClick={clearComparedCards}>Clear Cards</button>));
+    button.simulate('click');
+    expect(clearComparedCards.mock.calls.length).toEqual(1);
+    expect(wrapper.state().compareCards).toEqual([]);
+    expect(wrapper.state().compared).toEqual([]);
+  });
+
   it('should clear state on button push', () => {
-    const expected = {compareCards: []};
     wrapper.instance().clearComparedCards();
     expect(Array.isArray(['value'])).toBe(true);
   });
@@ -44,27 +51,33 @@ describe('App', () => {
     expect(typeof 'str2').toBe('string');
   });
 
-  it('should set a new state to compare cards on setStateOfCompare', () => {
-    const str = "COLORADO";
-    const searchSchool = jest.fn()
-      wrapper.instance().searchSchool(str);
-      expect(searchSchool.mock.calls.length).toBe(0);
+  it('should call compareAvrg function and return an object', () => {
+    let compareAvrg = jest.fn();
+    let str1 = 'COLORADO';
+    let str2 = 'COLORADO SPRINGS 11';
+    let expected ={"COLORADO": 0.53, 
+      "COLORADO SPRINGS 11": 0.833, "compared": 0.636};
+    wrapper.instance().compareAvrg(str1, str2);
+    expect(wrapper.state().compared).toEqual(expected);
   });
 
-  it.skip('should set a new state to compare cards on setStateOfCompare', () => {
-    const str = {"COLORADO": {"2004": 0.24, "2005": 0.278, 
-      "2006": 0.337, 
-      "2007": 0.395, "2008": 0.536, "2009": 0.598, "2010": 0.64, "2011": 0.672, 
-      "2012": 0.695, "2013": 0.703, "2014": 0.741}}; 
-    const setStateOfCompare = jest.fn()
-      wrapper.instance().setStateOfCompare(str);
-      expect(setStateOfCompare.mock.calls.length).toBe(0);
-  });
+  it('should run the compareAverages function on click and set state', 
+    () => {
+      const expected = 
+      { COLORADO: 0.53, 'COLORADO SPRINGS 11': 0.833, compared: 0.636 };
+      wrapper.instance().compareAvrg('COLORADO', 'COLORADO SPRINGS 11');
+      expect(wrapper.state().compared).toEqual(expected); 
+    });
 
-  it('should run the compareDistrictAverages function on click and set state', () => {
-    const expected = { COLORADO: 0.53, 'COLORADO SPRINGS 11': 0.833, compared: 0.636 };
-    wrapper.instance().compareAvrg('COLORADO', 'COLORADO SPRINGS 11');
-    expect(wrapper.state().compared).toEqual(expected); 
-  });
+  // it.skip('should set state after setstateofcompared is called', () => {
+  //   let setStateOfCompare = jest.fn();
+  //   let str ={"COLORADO": {"2004": 0.24, "2005": 0.278, 
+  //     "2006": 0.337, 
+  //     "2007": 0.395, "2008": 0.536, "2009": 0.598, 
+  //     "2010": 0.64, "2011": 0.672, 
+  //     "2012": 0.695, "2013": 0.703, "2014": 0.741}};
+  //   wrapper.instance().setStateOfCompare();
+  //   expect(wrapper.state().comparedCards).length.toBe(1);
+  // });
 
 });

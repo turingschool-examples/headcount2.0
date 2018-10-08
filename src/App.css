@@ -57,6 +57,10 @@ ul {
   padding-top: 15px;
 }
 
+.clicked {
+  border: 50px solid blue;
+}
+
 .clear-btn {
   text-align: center;
 }
