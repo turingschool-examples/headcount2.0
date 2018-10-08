@@ -16,7 +16,7 @@ const CardComparison = (props) => {
       district={district} 
       key={Math.random()} 
       compareDistrictData={props.compareDistrictData} 
-      clearComparison={this.clearComparison} />;
+      clearComparison={props.clearComparison} />;
   });
 
   return (

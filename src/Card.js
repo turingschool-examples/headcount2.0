@@ -32,8 +32,8 @@ const Card = (props) => {
 };
 
 Card.propTypes = {
-  district: PropTypes.object.isRequired,
-  compareDistrictData: PropTypes.func.isRequired
+  district: PropTypes.object,
+  compareDistrictData: PropTypes.func
 };
 
 export default Card;
