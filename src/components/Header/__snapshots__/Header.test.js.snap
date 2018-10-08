@@ -20,5 +20,13 @@ exports[`Header should have a heading and a Search component 1`] = `
   <Search
     findAllMatches={[Function]}
   />
+  <h2>
+    Click on two districts below to compare averages.
+  </h2>
+  <p>
+    If you know the name of the districts you would like to compare,
+    <br />
+     type them in the search field above to locate them more quickly.
+  </p>
 </header>
 `;

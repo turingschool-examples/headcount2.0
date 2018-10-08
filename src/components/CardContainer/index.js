@@ -4,10 +4,10 @@ import Card from '../Card'
 import './CardContainer.css'
 
 const CardContainer = ({districts, adjustComparisons}) => {
-  const cards = Object.keys(districts).map((district, index) => {
+  const cards = Object.keys(districts).map(district => {
     const stats = districts[district].stats
 
-    return <Card key={index}
+    return <Card key={`${district}-district`}
                  location={district}
                  stats={stats}
                  adjustComparisons={adjustComparisons}

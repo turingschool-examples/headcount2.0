@@ -5,11 +5,11 @@ exports[`CardContainer matches the snapshot 1`] = `
   className="CardContainer"
 >
   <Card
-    key="0"
+    key="COLORADO-district"
     location="COLORADO"
   />
   <Card
-    key="1"
+    key="ALAMOSA-district"
     location="ALAMOSA"
   />
 </main>

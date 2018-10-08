@@ -2,7 +2,7 @@
 
 exports[`Card should match the snapshot 1`] = `
 <article
-  className="Card  "
+  className="Card "
   onClick={[Function]}
 >
   <h2

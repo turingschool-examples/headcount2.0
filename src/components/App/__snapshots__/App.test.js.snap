@@ -7,8 +7,8 @@ exports[`App should render all components 1`] = `
   <Header
     findAllMatches={[Function]}
   />
-  <Comparator />
   <CardContainer
+    adjustComparisons={[Function]}
     districts={
       Object {
         "ACADEMY 20": Object {
