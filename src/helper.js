@@ -12,9 +12,10 @@ export default class DistrictRepository {
           'location': district.Location.toUpperCase()
         };
       } else {
-         Object.assign(acc[district.Location.toUpperCase()].stats, {[district.TimeFrame] : dataNum});         
-        }   
-    return acc;
+        Object.assign(acc[district.Location.toUpperCase()].stats,
+          {[district.TimeFrame] : dataNum});         
+      }   
+      return acc;
     }, {});
   }
 
@@ -58,37 +59,35 @@ export default class DistrictRepository {
     string2 = string2.toUpperCase();
     let school1 = this.findAverage(string1);
     let school2 = this.findAverage(string2);
-    let average = Math.round(1000 * (school1 / school2)) / 1000
-    ans[string1]= school1
-    ans[string2] = school2
-    ans['compared'] = average
-
-    // console.log('look this is the func', ans)
-    return ans
+    let average = Math.round(1000 * (school1 / school2)) / 1000;
+    ans[string1]= school1;
+    ans[string2] = school2;
+    ans['compared'] = average;
+    return ans;
 
   }
 
 
 
   findAllMatches(string) {
-    const findMatchesData = Object.values(this.stats)
+    const findMatchesData = Object.values(this.stats);
     if (string === undefined) {
-      return findMatchesData
+      return findMatchesData;
     } else if (string.toUpperCase() in this.stats || this.searchWords(string)){
-      let findMatchesResult = []
+      let findMatchesResult = [];
 
-      string = string.toUpperCase()
+      string = string.toUpperCase();
 
       findMatchesData.filter(school => {
-      if (school.location.match(string)){
-          findMatchesResult.push(school)
-        };
+        if (school.location.match(string)){
+          findMatchesResult.push(school);
+        }
         return true;
-      })
+      });
       return findMatchesResult;
-      } else if (!(string.toUpperCase() in this.stats)) {
+    } else if (!(string.toUpperCase() in this.stats)) {
       return [];
-    };
+    }
   }
 }
 
