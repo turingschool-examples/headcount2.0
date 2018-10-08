@@ -8,30 +8,32 @@ const Card = ({stats, location, handleCompare}) => {
   const yearData = Object.keys(stats);
 
   const SchoolScore = yearData.map(point => {
-    return <p className={(stats[point] < .5) ? 'year-and-data-red' : 'year-and-data-green'}
-              key={cardCounter++}
-              name={location}>
-              {point} :  {stats[point]} </p>
-  })
+    return <p className={ (stats[point] < .5) 
+      ? 'year-and-data-red' 
+      : 'year-and-data-green'}
+    key={cardCounter++}
+    name={location}>
+      {point} : {stats[point]} </p>;
+  });
 
-  this.handleClick = (e) => {
-    let schoolName = e.target.getAttribute('name')
-    handleCompare(schoolName)
-
+  this.handleClick = (event) => {
+    let schoolName = event.target.getAttribute('name');
+    handleCompare(schoolName);
     
-  }
+  };
 
-  return(
+  return (
     <div className='card-div' name={location} onClick={this.handleClick}>
       <h1 className='location' name={location}>{location}</h1>
       {SchoolScore}
     </div>
-  )
-}
+  );
+};
 
 Card.propTypes = {
   stats: PropTypes.object,
   location: PropTypes.string,
-}
+  handleCompare: PropTypes.func
+};
 
-export default Card
+export default Card;

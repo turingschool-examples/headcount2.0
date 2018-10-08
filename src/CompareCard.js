@@ -3,7 +3,6 @@ import Proptypes from 'prop-types';
 import './CompareCard.css';
 
 const CompareCard = ( { avgCard }) => {
-  console.log(avgCard)
   let avgCardKeys = Object.keys(avgCard);
   let avgCardValues = Object.values(avgCard);
 
@@ -14,8 +13,11 @@ const CompareCard = ( { avgCard }) => {
       <h3>{avgCardKeys[2]} : {avgCardValues[2]}</h3>
 
     </div>
-    )
-}
+  );
+};
 
+CompareCard.propTypes = {
+  avgCard: Proptypes.array.isRequired
+};
 
-export default CompareCard
+export default CompareCard;

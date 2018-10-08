@@ -14,23 +14,26 @@ const CardContainer = ({ data, handleCompare }) => {
   let counter = 0;
 
   let cards = (
-      schools.map(point =>
-      <Card {...data[point]} className={'card' + [point]} key={counter++} handleCompare={ handleCompare }/>
-      ))
+    schools.map(point =>
+      <Card {...data[point]} 
+        className={'card' + [point]} key={counter++} 
+        handleCompare={ handleCompare } />
+    ));
 
 
   return (
     <div className='card-container'>
       { cards }
     </div>
-  )
+  );
     
   
-}
+};
 
 CardContainer.propTypes = {
 
-  data: PropTypes.array.isRequired
-}
+  data: PropTypes.array.isRequired,
+  handleCompare: PropTypes.func
+};
 
-export default CardContainer
+export default CardContainer;

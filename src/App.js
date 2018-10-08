@@ -13,17 +13,17 @@ class App extends Component {
     this.state = {
       data : [],
       display: [],
-      avgCard: {},
-    }
+      avgCard: {}
+    };
 
   }
 
   componentDidMount = () => {
     const district = new DistrictRepository(KinderData);
-    const districtData = district.findAllMatches()
-    this.setState((state) => {
-      return {data: districtData};
-    });
+    const districtData = district.findAllMatches();
+    this.setState(
+      {data: districtData}
+    );
   }
 
   handleSearch = (searchString) => {
@@ -31,40 +31,42 @@ class App extends Component {
     const districtSearch = district.findAllMatches(searchString);
     // let spread = {...districtSearch}
 
-    this.setState((state) => {
-      return {data: districtSearch}
-    })
+    this.setState(
+      {data: districtSearch}
+    );
   }
 
   handleCompare = (card) => {
     const district = new DistrictRepository(KinderData);
-    let avgData = {}
-    let schoolToCompare = this.state.data.find(school => {
-      return school.location === card
-    })
-    this.state.display.push(schoolToCompare);
+    let avgData = {};
+    const { data, display } = this.state;
+    let schoolToCompare = data.find(school => {
+      return school.location === card;
+    });
+    display.push(schoolToCompare);
     
-    if(this.state.display.length > 2){
-      this.state.display.shift()
+    if (display.length > 2) {
+      display.shift();
     }
-    if(this.state.display.length === 2) {
-      avgData = district.compareDistrictAverages(this.state.display[0].location, this.state.display[1].location)
+    if (display.length === 2) {
+      avgData = district.compareDistrictAverages(
+        display[0].location, 
+        display[1].location);
     }
-    this.setState((state) => {
-      return {
-        display : this.state.display, 
+    this.setState(
+      {
+        display : display, 
         avgCard: avgData}
-    })
+    );
 
   }
 
   render() {
-    const { data, display, avgCard } = this.state
+    const { data, display, avgCard } = this.state;
     return (
       <div className="app">
         <DistrictSearch handleSubmit={this.handleSearch} />
-        <CompareContainer 
-          data={ data } 
+        <CompareContainer  
           display={ display } 
           handleCompare={this.handleCompare} 
           avgCard={ avgCard } />

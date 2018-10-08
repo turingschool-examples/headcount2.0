@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import CardContainer from './CardContainer';
 
@@ -12,14 +12,14 @@ describe('CardContainer', () => {
       stats: {
         '2018': 1 
       }
-    }
-    const wrapper = shallow(<CardContainer data={mockData}/>)
+    };
+    const wrapper = shallow(<CardContainer data={mockData}/>);
     expect(wrapper).toMatchSnapshot();
 
 
-  })
+  });
 
 
 
   
-})
+});
