@@ -11,10 +11,11 @@ it('should match the snapshot', () => {
   });
 
 it.skip('should save data to be rendered on a new div on click', () => {
+  const mockData = {'school': {'location': 'TestLocation'}}
   const mockClick = jest.fn()
   const wrapper = shallow(<DataCard
                           mockClick= {mockClick}/>)
   wrapper.find('.data-card').simulate('click')
-    expect(mockClick).toHaveBeenCalled()
+    expect(mockClick).toHaveBeenCalled(mockData, mockData)
 })
 });
