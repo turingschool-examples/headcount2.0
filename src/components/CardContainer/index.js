@@ -3,11 +3,15 @@ import PropTypes from 'prop-types'
 import Card from '../Card'
 import './CardContainer.css'
 
-const CardContainer = ({districts}) => {
+const CardContainer = ({districts, adjustComparisons}) => {
   const cards = Object.keys(districts).map((district, index) => {
     const stats = districts[district].stats
 
-    return <Card key={index} location={district} stats={stats} />
+    return <Card key={index}
+                 location={district}
+                 stats={stats}
+                 adjustComparisons={adjustComparisons}
+           />
   })
 
   return(

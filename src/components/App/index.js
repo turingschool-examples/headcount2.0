@@ -29,6 +29,29 @@ class App extends Component {
     this.setState({kinder: allMatches})
   }
 
+  adjustComparisons = card => {
+    const comparisons = this.state.comparisons
+
+    if (comparisons.length < 2) {
+      this.addComparison(comparisons, card)
+
+    } else {
+      const oldCard = comparisons.shift()
+      this.removeComparison(oldCard)
+      this.addComparison(comparisons, card)
+    }
+  }
+
+  addComparison = (comparisons, card) => {
+    const newComparisons = comparisons.push(card)
+
+    this.setState({comparisons: newComparisons})
+  }
+
+  removeComparison = oldCard => {
+
+  }
+
   componentDidMount() {
     const kinder = new DistrictRepository(kinderData)
 
@@ -45,7 +68,10 @@ class App extends Component {
       <div className="App">
         <Header findAllMatches={this.findAllMatches}/>
         { (comps.length > 0 && comps.length > 3) ? <Comparator /> : null}
-        <CardContainer districts={kinder} />
+        <CardContainer
+          districts={kinder}
+          adjustComparisons={this.adjustComparisons}
+        />
       </div>
     );
   }

@@ -6,7 +6,6 @@ import './Comparator.css'
 const Comparator = () => {
   return(
     <section className="Comparator">
-
     </section>
   )
 }

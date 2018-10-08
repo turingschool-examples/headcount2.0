@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import './Card.css'
 
 class Card extends Component {
-  constructor({location, stats}) {
+  constructor({location, stats, adjustComparisons}) {
     super()
     this.state = {
       location: location,
@@ -30,13 +30,21 @@ class Card extends Component {
     if (stats[year] <= 0.5) return 'low'
   }
 
-  checkSelected = (isSelected) => {
-    if (isSelected) return 'selected'
-    else return ''
+  checkSelected = isSelected => {
+    if (isSelected) {
+      return 'selected'
+    } else {
+      return ''
+    }
   }
 
-  toggleSelect = (event) => {
+  toggleSelect = event => {
+    const card = event.target.parentElement.find('.Card')
+
+    debugger
+
     this.setState({ isSelected: !this.state.isSelected })
+    this.props.adjustComparisons(card)
   }
 
   render() {
@@ -46,7 +54,7 @@ class Card extends Component {
 
     return(
       <article
-        className={`Card ${this.checkSelected(isSelected)} `}
+        className={`Card ${this.checkSelected(isSelected)}`}
         onClick={this.toggleSelect}
       >
         <h2 className="Card-title">{location}</h2>
