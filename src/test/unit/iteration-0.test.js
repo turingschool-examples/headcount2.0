@@ -14,5 +14,4 @@ describe('DistrictRepository iteration 0', () =>  {
     // expect(district.stats.length).toBe(181);
     expect(Object.keys(district.stats).length).toBe(181);
   });
-
 });
