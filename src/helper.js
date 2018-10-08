@@ -8,7 +8,7 @@ export default class DistrictRepository {
   stats(){
     let districts = this.data.reduce((districts, district) => {
 
-      if(isNaN(district.Data)){
+      if (isNaN(district.Data)){
         district.Data = 0;
       }
 
@@ -18,23 +18,23 @@ export default class DistrictRepository {
         districts[upperCaseDistrict] = {
           location: upperCaseDistrict,
           stats: {[district.TimeFrame]: Math.round(district.Data * 1000) / 1000}
-        }
+        };
       } else {
-      districts[upperCaseDistrict].stats = {
-        ...districts[upperCaseDistrict].stats,
-        [district.TimeFrame] : Math.round(district.Data * 1000) / 1000}
-    }
+        districts[upperCaseDistrict].stats = {
+          ...districts[upperCaseDistrict].stats,
+          [district.TimeFrame] : Math.round(district.Data * 1000) / 1000};
+      }
 
-      return districts
-    }, {})
+      return districts;
+    }, {});
 
-    return districts
+    return districts;
   }
 
   findByName(name){
 
-    if(name && this.stats[name.toUpperCase()]){
-      return this.stats[name.toUpperCase()]
+    if (name && this.stats[name.toUpperCase()]){
+      return this.stats[name.toUpperCase()];
     }
 
   }
@@ -43,16 +43,15 @@ export default class DistrictRepository {
 
     let districtsArray = Object.keys(this.stats);
 
-    let mapDistricts = districtsArray.map(district => {return this.stats[district]});
+    let mapDistricts = districtsArray.map(district => { return this.stats[district]; });
 
-    if(!districtName){
+    if (!districtName){
       return mapDistricts;
-    }else if(districtName){
-      let filterDistricts = districtsArray.filter(district=>{return district.includes(districtName.toUpperCase())});
-      console.log(filterDistricts)
+    } else if (districtName){
+      let filterDistricts = districtsArray.filter(district=>{ return district.includes(districtName.toUpperCase()); });
       return filterDistricts;
-    }else{
-      return []
+    } else {
+      return [];
     }
   }
 }
