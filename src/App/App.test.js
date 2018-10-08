@@ -57,16 +57,16 @@ describe('App', () => {
 	})
 
 	it('displays clicked cards at top of screen', () => {
-
+		expect(wrapper.state('districtsBeingCompared').length).toBe(0)
+		wrapper.instance().compareDistrict('colorado')
+		expect(wrapper.state('districtsBeingCompared').length).toBe(1)
 	})
 
 	it('displays a maximum of 2 cards at top of screen', () => {
-
+		wrapper.setState({ districtsBeingCompared: ['colorado', 'boulder'] })
+		expect(wrapper.state('districtsBeingCompared').length).toBe(2)
+		wrapper.instance().compareDistrict('aspen')
+		expect(wrapper.state('districtsBeingCompared').length).toBe(2)
 	})
-
-	it('sets district averages summary to state for 2 clicked cards', () => {
-
-	})
-
 })
 
