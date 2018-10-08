@@ -158,14 +158,6 @@ describe('App', ()=>{
     expect(wrapper.state().selection).toEqual([argument2]);
   });
 
-  it('should setState to default when passed close', () => {
-    wrapper.instance().processSelection('close');
-
-    expect(wrapper.state().selection).toEqual([]);
-    expect(JSON.stringify(wrapper.state().data)).
-      toEqual(JSON.stringify(new DistrictRepository(kinderData)));
-  });
-
   it('should setState to default', () => {
     wrapper.setState({
       selection: ['denver']
