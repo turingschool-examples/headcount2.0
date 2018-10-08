@@ -1,17 +1,17 @@
 import React from 'react';
-import './DistrictCard.css'
+import './DistrictCard.css';
 
 const DistrictCard = (props) => {
   const info = Object.keys(props.stats.data).map(year => {
-    return <p className={props.stats.data[year] < .5 ? 'less-than-half' : 'greater-than-half'} key={year}>{year} : {props.stats.data[year]}</p>
-  })
+    return <p className={props.stats.data[year] < .5 ? 'lower-half' : 'upper-half'} key={year}>{year} : {props.stats.data[year]}</p>;
+  });
 
   return (
-    <div className='card'>
+    <div className='card' onClick={() => props.addSelectedDistrict(props.location, props.stats)}>
       <p>{props.location}</p>
-        { info }
+      { info }
     </div>
-    )
-}
+  );
+};
 
 export default DistrictCard;

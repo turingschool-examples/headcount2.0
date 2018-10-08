@@ -1,11 +1,12 @@
 .card {
   width: 200px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
-  margin: 0;
+  margin:10px;
   border-radius: 15px;
   padding: 20px;
   border: 1px solid rgba(220, 220, 220, 0.3);
   text-align: center;
+  display: inline-block;
 }
 
 .card:hover {
@@ -14,12 +15,12 @@
   transition: all .2s ease-in-out;
 }
 
-.less-than-half {
+.lower-half {
   color: red;
   margin: 0;
 }
 
-.greater-than-half {
+.upper-half {
   color: green;
   margin: 0;
 }
