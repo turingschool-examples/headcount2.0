@@ -28,7 +28,7 @@ class Search extends Component{
 
   render(){
     return(
-      <div className="search-container" onSubmit={(event)=>{this.handleSubmit(event)}}>
+      <div className="search-container" onChange={(event)=>{this.handleSubmit(event)}}>
       <form className="submit-form">
       <input
       name="district"
