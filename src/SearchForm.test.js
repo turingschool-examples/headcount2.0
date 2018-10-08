@@ -14,14 +14,14 @@ describe('SearchForm', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it.skip('should call handleSearch on keyUp', () => {
-    const event = new Event('keyUp', {"input":{"value":8}})
-    wrapper.find('input').simulate('keyUp', { preventDefault() {} });
-    const input = wrapper.find('input');
-    input.value = 'test';
-    input.simulate('keyUp', {keyCode: 40});
-    expect(searchSchool.called).to.be.true;
-  });
+  // it.skip('should call handleSearch on keyUp', () => {
+  //   const event = new Event('keyUp', {"input":{"value":8}})
+  //   wrapper.find('input').simulate('keyUp', { preventDefault() {} });
+  //   const input = wrapper.find('input');
+  //   input.value = 'test';
+  //   input.simulate('keyUp', {keyCode: 40});
+  //   expect(searchSchool.called).to.be.true;
+  // });
 
   it.skip('updates state when searchSchool is called', () => {
     const mockEvent = { target: { value: 'something' } };

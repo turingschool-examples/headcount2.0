@@ -137,6 +137,7 @@ ShallowWrapper {
           </li>
 </ul>,
         <button
+          className="btn"
           onClick={[Function]}
 >
           Compare Data
@@ -314,6 +315,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Compare Data",
+          "className": "btn",
           "onClick": [Function],
         },
         "ref": null,
@@ -379,6 +381,7 @@ ShallowWrapper {
             </li>
 </ul>,
           <button
+            className="btn"
             onClick={[Function]}
 >
             Compare Data
@@ -556,6 +559,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Compare Data",
+            "className": "btn",
             "onClick": [Function],
           },
           "ref": null,

@@ -30,7 +30,7 @@ ShallowWrapper {
           cards={Array []}
           className="compare-cards"
           comparedCard={Array []}
-          resetState={undefined}
+          setStateOfCompare={[Function]}
 />,
         <button
           className="clear-btn"
@@ -2759,6 +2759,7 @@ ShallowWrapper {
                               },
                             ]
           }
+          clicked={undefined}
           compareAvrg={[Function]}
           setStateOfCompare={[Function]}
 />,
@@ -2797,7 +2798,7 @@ ShallowWrapper {
           "cards": Array [],
           "className": "compare-cards",
           "comparedCard": Array [],
-          "resetState": undefined,
+          "setStateOfCompare": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -5539,6 +5540,7 @@ ShallowWrapper {
               },
             },
           ],
+          "clicked": undefined,
           "compareAvrg": [Function],
           "setStateOfCompare": [Function],
         },
@@ -5568,7 +5570,7 @@ ShallowWrapper {
             cards={Array []}
             className="compare-cards"
             comparedCard={Array []}
-            resetState={undefined}
+            setStateOfCompare={[Function]}
 />,
           <button
             className="clear-btn"
@@ -8297,6 +8299,7 @@ ShallowWrapper {
                                     },
                                   ]
             }
+            clicked={undefined}
             compareAvrg={[Function]}
             setStateOfCompare={[Function]}
 />,
@@ -8335,7 +8338,7 @@ ShallowWrapper {
             "cards": Array [],
             "className": "compare-cards",
             "comparedCard": Array [],
-            "resetState": undefined,
+            "setStateOfCompare": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -11077,6 +11080,7 @@ ShallowWrapper {
                 },
               },
             ],
+            "clicked": undefined,
             "compareAvrg": [Function],
             "setStateOfCompare": [Function],
           },

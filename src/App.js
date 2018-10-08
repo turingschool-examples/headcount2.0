@@ -12,8 +12,7 @@ class App extends Component {
     this.state = {
       cards: [],
       compareCards: [],
-      compared: [],
-      clicked: false
+      compared: []
     };
   }
 
@@ -25,13 +24,14 @@ class App extends Component {
 
   setStateOfCompare = (str) => {
     const location = Object.keys(str)[0];
-    const poop = this.state.compareCards.map(card => Object.keys(card)[0])
-    const newSchool = {...str}
-    const compareCards = [...this.state.compareCards, newSchool]
-    if (!poop.includes(location)) {
+    const local = this.state.compareCards.map(card => Object.keys(card)[0]);
+    const newSchool = {...str};
+    const compareCards = [...this.state.compareCards, newSchool];
+    if (!local.includes(location)) {
       this.setState({ compareCards: [str, ...this.state.compareCards] });
     } else {
-      const compareCards = this.state.compareCards.filter(card => !poop.includes(Object.keys(card)[0]))
+      const compareCards = this.state.compareCards.filter(card => 
+        !local.includes(Object.keys(card)[0]));
       this.setState({ compareCards });
       this.setState({compared: []});
     }
@@ -67,13 +67,18 @@ class App extends Component {
         <header className="header">HeadCount 2.0!</header>
         <SearchForm searchSchool={this.searchSchool}/>
         <CompareCardsContainer 
-          className='compare-cards'cards={this.state.compareCards} 
-          comparedCard={this.state.compared} setStateOfCompare={this.setStateOfCompare} />
+          className='compare-cards'
+          cards={this.state.compareCards} 
+          comparedCard={this.state.compared} 
+          setStateOfCompare={this.setStateOfCompare} />
         <button className='clear-btn' type='button' 
-          onClick={this.clearComparedCards}>Clear Cards</button>
+          onClick={this.clearComparedCards}>
+          Clear Cards
+        </button>
         <CardContainer cards={this.state.cards} 
           compareAvrg={this.compareAvrg} 
-          setStateOfCompare={this.setStateOfCompare} />
+          setStateOfCompare={this.setStateOfCompare} 
+          clicked={this.state.clicked} />
       </div>
     );
   }

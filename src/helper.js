@@ -60,7 +60,6 @@ export default class DistrictRepository {
     }
     let getKeys = Object.values(this.stats[str]);
     let getAvrg = getKeys.reduce((acc, num) => {
-      let numData = Object.values(num);
       return acc += num;
     }, 0) / 11;
     return Math.round(getAvrg * 1000) / 1000;

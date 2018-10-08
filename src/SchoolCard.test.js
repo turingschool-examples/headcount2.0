@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import SchoolCard from './SchoolCard';
-import CompareCardsContainer from './CompareCardsContainer';
 
 describe('SchoolCard', () => {
   let wrapper;
@@ -26,8 +25,8 @@ describe('SchoolCard', () => {
   });
 
   it('should set a variable to str1', () => {
-    let str = {}
-    expect(str).toEqual({})
+    let str = {};
+    expect(str).toEqual({});
   });
 
 });
