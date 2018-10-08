@@ -1,6 +1,6 @@
 .card-div{
   border: 2px solid white;
-  width: 16em;
+  width: 17em;
   height: 33em;
   margin: 0 auto;
   word-wrap: break-word;
@@ -8,6 +8,7 @@
   padding: 1em;
   margin-bottom: 2em;
   border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 
 }
 
@@ -21,6 +22,14 @@
 }
 
 .year{
-  color: white;
+  color: black;
   font-weight: bold;
+}
+
+.above50{
+  color: white;
+}
+
+.below50{
+  color: grey;
 }

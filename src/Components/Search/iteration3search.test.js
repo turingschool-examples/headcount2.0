@@ -29,7 +29,7 @@ describe('Search', () =>  {
     const mockEvent = {target: { value: 'ADAMS', name: 'district'} };
 
     const expectedState = { district: 'ADAMS' }
-    
+
     wrapper.instance().handleInput(mockEvent);
 
     handleInput(mockEvent);

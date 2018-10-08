@@ -21,14 +21,20 @@ describe('Card', () =>  {
     const wrapper = shallow(<Card {...mockData}/>);
     expect(wrapper).toMatchSnapshot();
   });
-  //
-  // it('calls removeIdea with the correct id', () => {
-  //
-  //   const wrapper = shallow(<Card {...mockData}/>);
-  //   removeIdeaMock = jest.fn();
-  //
-  //
-  // });
+
+  it('data should present as grey if below 0.5', () => {
+
+    const wrapper = shallow(<Card {...mockData}/>);
+    removeIdeaMock = jest.fn();
+
+  });
+
+  it('data should present as white if above 0.5', () => {
+
+    const wrapper = shallow(<Card {...mockData}/>);
+    removeIdeaMock = jest.fn();
+
+  });
 
 
 
