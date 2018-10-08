@@ -1,7 +1,8 @@
 .compared-card {
   background-color: lightgrey;
-  border: 8px solid black;
+  border: 8px solid lightskyblue;
   border-radius: 20px;
+  cursor: pointer;
   height: 260px;
   display: flex;
   flex-direction: column;

@@ -4,7 +4,7 @@ import cancelIcon from "../../images/cancel.svg";
 import PropTypes from "prop-types";
 import "./Card.css";
 
-const Card = ({ location, stats, display, handleCardClick }) => {
+const Card = ({ location, stats, display, clicked, handleCardClick }) => {
   const years = Object.keys(stats);
   const cardData = years.map(year => {
     return (
@@ -21,8 +21,14 @@ const Card = ({ location, stats, display, handleCardClick }) => {
     );
   });
 
+  let borderToggle;
+  clicked !== false
+    ? (borderToggle = "lightskyblue")
+    : (borderToggle = "black");
+    
   return (
     <section
+      style={{ border: `solid 4px ${borderToggle}` }}
       className={display ? "card" : "hide"}
       onClick={() => handleCardClick(location)}
     >
@@ -36,7 +42,8 @@ Card.propTypes = {
   location: PropTypes.string.isRequired,
   stats: PropTypes.object.isRequired,
   display: PropTypes.bool.isRequired,
-  handleCardClick: PropTypes.func.isRequired
+  handleCardClick: PropTypes.func.isRequired,
+  clicked: PropTypes.oneOfType([PropTypes.bool.isRequired, PropTypes.number])
 };
 
 export default Card;
