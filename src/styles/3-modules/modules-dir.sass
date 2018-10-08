@@ -1,0 +1,203 @@
+.welcome-screen
+    height: 250px
+    margin: auto
+    position: relative
+    top: 25%
+    width: 30%
+    
+.typewriter 
+    h1 
+        animation: typing 1.5s steps(60, end), blink-caret .75s step-end infinite
+        border-right: .15em solid white //* Typewriter cursor */
+        letter-spacing: .2em
+        margin: 10px auto //* Gives the scrolling effect when typing */
+        overflow: hidden //* Ensures the content is not revealed until animation */
+        text-align: center
+        white-space: nowrap //* Keeps content on 1 line */
+        width: 75%
+    
+    p
+        animation: typing-delay 3.5s steps(48, end), blink-caret .75s step-end
+        color: white
+        font-weight: 700
+        letter-spacing: .30em
+        margin: 1rem auto
+        overflow: hidden
+        text-align: center
+        white-space: nowrap
+        
+        span
+            font-weight: 800
+
+@keyframes typing
+    from 
+        width: 0
+    to
+        width: 75%
+
+@keyframes blink-caret
+    from, to 
+        border-color: transparent
+    50%
+        border-color: $primary-orange
+
+@keyframes typing-delay
+    0%
+        opacity: 0
+        width: 0
+    49%
+        opacity: 0
+    50%
+        opacity: 1
+        width: 0
+    100%
+        width: 75%
+
+
+.search-landing
+    input
+        background-color: transparentize($primary-orange, .4%)
+        border-radius: 25px
+        border: none
+        color: white
+        height: 3rem
+        padding-left: 15px
+        width: 100%
+    ::placeholder 
+        color: white
+
+    
+
+/*
+    ----------------- Search Area ------------------
+    */
+
+.search-area
+    background-color: $beige
+    overflow: scroll
+
+
+    .search-nav
+        overflow: scroll
+        position: sticky
+        top: 0
+        width: 100vw
+
+    .search-main
+        width: 33.3%
+
+        input
+            background-color: transparentize(white, .4%)
+            border: none
+            border: 1px solid $primary-orange
+            color: black
+            font-size: 24px
+            height: 3rem
+            text-align: center
+            width: 100%
+
+    .alphabet-query
+        align-items: center
+        background-color: $secondary-navy
+        color: $primary-orange
+        display: flex
+        flex-wrap: wrap
+        // height: 103px
+        justify-content: center
+        margin: auto
+        font-size: 2rem
+        list-style-type: none
+        padding: 0
+        width: 100%
+
+        li  
+            // width: calc(100vw/26)
+            text-align: center
+            width: 50px
+            height: 50px
+            line-height: 50px
+            &:hover
+                background-color: $beige
+                cursor: pointer
+                font-weight: 700
+    #search-area-btn
+        background-color: $secondary-navy
+        border-radius: 15px
+        color: $beige
+        font-weight: 700
+        font-size: 2rem
+        position: sticky
+        top: 30vh
+        width: 14rem
+        height: 70px
+        margin: 30vh auto
+
+        &:hover
+            background-color: $primary-orange
+
+.alphabet-results
+    font-size: 20px
+    margin: 3rem 0 3rem 10rem
+    text-align: center
+    width: calc(100vw-10rem)
+    
+    thead
+        background-color: $primary-orange
+        color: $beige
+   
+
+    th
+        height: 2rem
+        margin-bottom: 20px
+
+    tbody 
+        tr
+            background-color: $secondary-navy
+            color: $beige
+            height: 50px
+                
+
+        .selected
+            color: white
+            background-color: $primary-orange
+    
+.submit-svg
+    height: 70px
+    width: 70px
+    &:hover circle
+        cursor: pointer
+        fill: $primary-orange
+    &:focus
+        outline: none
+
+    circle
+        fill: $secondary-navy
+        cx: 35
+        cy: 35
+        r: 35
+
+    text
+        fill: white
+        &:hover
+            cursor: pointer
+
+
+
+
+
+/*
+    ------------ Results Section ----------------
+    */
+
+.results-section
+    .selected
+        border: 3px solid $primary-orange
+    
+    .compare-btn
+        width: 14rem
+    
+    .hidden
+        display: none
+    
+    svg
+        width: 101%

@@ -1,0 +1,59 @@
+.l-main 
+    display: grid
+    grid-template-areas: "landing""search""results"
+
+.l-search
+    grid-area: search
+    height: 100vh
+
+.l-results
+    display: grid
+    grid-area: results
+    grid-template-columns: repeat(2, 1fr)
+    grid-column-gap: 2rem
+    grid-row-gap: 2rem
+    margin: auto
+
+    width: calc(100vw * 0.8)
+
+    article
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    .compared-results
+        grid-column: 1/3
+.l-landing
+    background-image: url(./assets/imgs/Plane.png)
+    background-size: cover
+    grid-area: landing
+    height: 100vh
+    z-index: 0
+
+.l-search-table
+    display: grid
+    grid-template-areas: "GO-btn table"
+    grid-template-columns: 2fr 4fr
+
+    table
+        grid-area: table
+
+    btn
+        grid-area: GO-btn
+
+
+.welcome-screen
+    display: grid
+    grid-template-areas: "title""form"
+    grid-row-gap: 2rem
+    
+    .typewriter
+        grid-area: title
+
+    .search-landing
+        align-items: center
+        display: flex
+        height: 200px
+        justify-content: space-around
+        flex-direction: column
+        grid-area: form
