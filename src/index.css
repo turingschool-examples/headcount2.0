@@ -8,6 +8,10 @@ body {
   font-family: sans-serif;
 }
 
+div {
+  border-radius: 7%;
+}
+
 ul {
   list-style-type: none;
 }
