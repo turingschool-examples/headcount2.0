@@ -1,10 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`IdeaForm matches the snapshot 1`] = `
+exports[`SchoolCard matches the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SearchForm
-    searchSchool={[Function]}
+  Symbol(enzyme.__unrendered__): <SchoolCard
+    compareAvrg={[Function]}
+    data={
+        Array [
+            Object {
+              "COLORADO": Object {
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.337,
+                "2007": 0.395,
+                "2008": 0.536,
+                "2009": 0.598,
+                "2010": 0.64,
+                "2011": 0.672,
+                "2012": 0.695,
+                "2013": 0.703,
+                "2014": 0.741,
+              },
+            },
+            Object {
+              "COLORADO SPRINGS 11": Object {
+                "2004": 0.069,
+                "2005": 0.509,
+                "2006": 0.638,
+                "2007": 0.994,
+                "2008": 0.992,
+                "2009": 1,
+                "2010": 0.993,
+                "2011": 0.994,
+                "2012": 0.993,
+                "2013": 0.989,
+                "2014": 0.994,
+              },
+            },
+          ]
+    }
+    location={
+        Array [
+            Object {
+              "COLORADO": Object {
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.337,
+                "2007": 0.395,
+                "2008": 0.536,
+                "2009": 0.598,
+                "2010": 0.64,
+                "2011": 0.672,
+                "2012": 0.695,
+                "2013": 0.703,
+                "2014": 0.741,
+              },
+            },
+            Object {
+              "COLORADO SPRINGS 11": Object {
+                "2004": 0.069,
+                "2005": 0.509,
+                "2006": 0.638,
+                "2007": 0.994,
+                "2008": 0.992,
+                "2009": 1,
+                "2010": 0.993,
+                "2011": 0.994,
+                "2012": 0.993,
+                "2013": 0.989,
+                "2014": 0.994,
+              },
+            },
+          ]
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -19,26 +87,240 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <input
-        className="input"
-        onKeyUp={[Function]}
-        placeholder="Search Schools Here!"
-/>,
+      "children": Array [
+        <h1
+          className="card-header"
+>
+          0
+          1
+</h1>,
+        <ul
+          className="card-data"
+>
+          <li
+                    className="isMore"
+          >
+                    COLORADO
+                    : 
+                    Object {
+                              "2004": 0.24,
+                              "2005": 0.278,
+                              "2006": 0.337,
+                              "2007": 0.395,
+                              "2008": 0.536,
+                              "2009": 0.598,
+                              "2010": 0.64,
+                              "2011": 0.672,
+                              "2012": 0.695,
+                              "2013": 0.703,
+                              "2014": 0.741,
+                            }
+          </li>
+          <li
+                    className="isMore"
+          >
+                    COLORADO SPRINGS 11
+                    : 
+                    Object {
+                              "2004": 0.069,
+                              "2005": 0.509,
+                              "2006": 0.638,
+                              "2007": 0.994,
+                              "2008": 0.992,
+                              "2009": 1,
+                              "2010": 0.993,
+                              "2011": 0.994,
+                              "2012": 0.993,
+                              "2013": 0.989,
+                              "2014": 0.994,
+                            }
+          </li>
+</ul>,
+        <button
+          onClick={[Function]}
+>
+          Compare Data
+</button>,
+      ],
+      "className": "school-card",
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "className": "input",
-        "onKeyUp": [Function],
-        "placeholder": "Search Schools Here!",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "0,1",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "0",
+            "1",
+          ],
+          "className": "card-header",
+        },
+        "ref": null,
+        "rendered": Array [
+          "0",
+          "1",
+        ],
+        "type": "h1",
       },
-      "ref": null,
-      "rendered": null,
-      "type": "input",
-    },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            Array [
+              <li
+                className="isMore"
+>
+                COLORADO
+                : 
+                Object {
+                                "2004": 0.24,
+                                "2005": 0.278,
+                                "2006": 0.337,
+                                "2007": 0.395,
+                                "2008": 0.536,
+                                "2009": 0.598,
+                                "2010": 0.64,
+                                "2011": 0.672,
+                                "2012": 0.695,
+                                "2013": 0.703,
+                                "2014": 0.741,
+                              }
+</li>,
+            ],
+            Array [
+              <li
+                className="isMore"
+>
+                COLORADO SPRINGS 11
+                : 
+                Object {
+                                "2004": 0.069,
+                                "2005": 0.509,
+                                "2006": 0.638,
+                                "2007": 0.994,
+                                "2008": 0.992,
+                                "2009": 1,
+                                "2010": 0.993,
+                                "2011": 0.994,
+                                "2012": 0.993,
+                                "2013": 0.989,
+                                "2014": 0.994,
+                              }
+</li>,
+            ],
+          ],
+          "className": "card-data",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "COLORADO",
+                ": ",
+                Object {
+                  "2004": 0.24,
+                  "2005": 0.278,
+                  "2006": 0.337,
+                  "2007": 0.395,
+                  "2008": 0.536,
+                  "2009": 0.598,
+                  "2010": 0.64,
+                  "2011": 0.672,
+                  "2012": 0.695,
+                  "2013": 0.703,
+                  "2014": 0.741,
+                },
+              ],
+              "className": "isMore",
+            },
+            "ref": null,
+            "rendered": Array [
+              "COLORADO",
+              ": ",
+              Object {
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.337,
+                "2007": 0.395,
+                "2008": 0.536,
+                "2009": 0.598,
+                "2010": 0.64,
+                "2011": 0.672,
+                "2012": 0.695,
+                "2013": 0.703,
+                "2014": 0.741,
+              },
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "COLORADO SPRINGS 11",
+                ": ",
+                Object {
+                  "2004": 0.069,
+                  "2005": 0.509,
+                  "2006": 0.638,
+                  "2007": 0.994,
+                  "2008": 0.992,
+                  "2009": 1,
+                  "2010": 0.993,
+                  "2011": 0.994,
+                  "2012": 0.993,
+                  "2013": 0.989,
+                  "2014": 0.994,
+                },
+              ],
+              "className": "isMore",
+            },
+            "ref": null,
+            "rendered": Array [
+              "COLORADO SPRINGS 11",
+              ": ",
+              Object {
+                "2004": 0.069,
+                "2005": 0.509,
+                "2006": 0.638,
+                "2007": 0.994,
+                "2008": 0.992,
+                "2009": 1,
+                "2010": 0.993,
+                "2011": 0.994,
+                "2012": 0.993,
+                "2013": 0.989,
+                "2014": 0.994,
+              },
+            ],
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Compare Data",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Compare Data",
+        "type": "button",
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -47,26 +329,240 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <input
-          className="input"
-          onKeyUp={[Function]}
-          placeholder="Search Schools Here!"
-/>,
+        "children": Array [
+          <h1
+            className="card-header"
+>
+            0
+            1
+</h1>,
+          <ul
+            className="card-data"
+>
+            <li
+                        className="isMore"
+            >
+                        COLORADO
+                        : 
+                        Object {
+                                    "2004": 0.24,
+                                    "2005": 0.278,
+                                    "2006": 0.337,
+                                    "2007": 0.395,
+                                    "2008": 0.536,
+                                    "2009": 0.598,
+                                    "2010": 0.64,
+                                    "2011": 0.672,
+                                    "2012": 0.695,
+                                    "2013": 0.703,
+                                    "2014": 0.741,
+                                  }
+            </li>
+            <li
+                        className="isMore"
+            >
+                        COLORADO SPRINGS 11
+                        : 
+                        Object {
+                                    "2004": 0.069,
+                                    "2005": 0.509,
+                                    "2006": 0.638,
+                                    "2007": 0.994,
+                                    "2008": 0.992,
+                                    "2009": 1,
+                                    "2010": 0.993,
+                                    "2011": 0.994,
+                                    "2012": 0.993,
+                                    "2013": 0.989,
+                                    "2014": 0.994,
+                                  }
+            </li>
+</ul>,
+          <button
+            onClick={[Function]}
+>
+            Compare Data
+</button>,
+        ],
+        "className": "school-card",
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "input",
-          "onKeyUp": [Function],
-          "placeholder": "Search Schools Here!",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "0,1",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "0",
+              "1",
+            ],
+            "className": "card-header",
+          },
+          "ref": null,
+          "rendered": Array [
+            "0",
+            "1",
+          ],
+          "type": "h1",
         },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              Array [
+                <li
+                  className="isMore"
+>
+                  COLORADO
+                  : 
+                  Object {
+                                    "2004": 0.24,
+                                    "2005": 0.278,
+                                    "2006": 0.337,
+                                    "2007": 0.395,
+                                    "2008": 0.536,
+                                    "2009": 0.598,
+                                    "2010": 0.64,
+                                    "2011": 0.672,
+                                    "2012": 0.695,
+                                    "2013": 0.703,
+                                    "2014": 0.741,
+                                  }
+</li>,
+              ],
+              Array [
+                <li
+                  className="isMore"
+>
+                  COLORADO SPRINGS 11
+                  : 
+                  Object {
+                                    "2004": 0.069,
+                                    "2005": 0.509,
+                                    "2006": 0.638,
+                                    "2007": 0.994,
+                                    "2008": 0.992,
+                                    "2009": 1,
+                                    "2010": 0.993,
+                                    "2011": 0.994,
+                                    "2012": 0.993,
+                                    "2013": 0.989,
+                                    "2014": 0.994,
+                                  }
+</li>,
+              ],
+            ],
+            "className": "card-data",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "COLORADO",
+                  ": ",
+                  Object {
+                    "2004": 0.24,
+                    "2005": 0.278,
+                    "2006": 0.337,
+                    "2007": 0.395,
+                    "2008": 0.536,
+                    "2009": 0.598,
+                    "2010": 0.64,
+                    "2011": 0.672,
+                    "2012": 0.695,
+                    "2013": 0.703,
+                    "2014": 0.741,
+                  },
+                ],
+                "className": "isMore",
+              },
+              "ref": null,
+              "rendered": Array [
+                "COLORADO",
+                ": ",
+                Object {
+                  "2004": 0.24,
+                  "2005": 0.278,
+                  "2006": 0.337,
+                  "2007": 0.395,
+                  "2008": 0.536,
+                  "2009": 0.598,
+                  "2010": 0.64,
+                  "2011": 0.672,
+                  "2012": 0.695,
+                  "2013": 0.703,
+                  "2014": 0.741,
+                },
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "COLORADO SPRINGS 11",
+                  ": ",
+                  Object {
+                    "2004": 0.069,
+                    "2005": 0.509,
+                    "2006": 0.638,
+                    "2007": 0.994,
+                    "2008": 0.992,
+                    "2009": 1,
+                    "2010": 0.993,
+                    "2011": 0.994,
+                    "2012": 0.993,
+                    "2013": 0.989,
+                    "2014": 0.994,
+                  },
+                ],
+                "className": "isMore",
+              },
+              "ref": null,
+              "rendered": Array [
+                "COLORADO SPRINGS 11",
+                ": ",
+                Object {
+                  "2004": 0.069,
+                  "2005": 0.509,
+                  "2006": 0.638,
+                  "2007": 0.994,
+                  "2008": 0.992,
+                  "2009": 1,
+                  "2010": 0.993,
+                  "2011": 0.994,
+                  "2012": 0.993,
+                  "2013": 0.989,
+                  "2014": 0.994,
+                },
+              ],
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Compare Data",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Compare Data",
+          "type": "button",
+        },
+      ],
       "type": "div",
     },
   ],

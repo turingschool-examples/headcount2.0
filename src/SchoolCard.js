@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 const SchoolCard = 
   ({ data, index, setStateOfCompare }) => {
     let str1 = data;
-    console.log(data)
     return (
       <div className="school-card">
         <h1 className='card-header' 
@@ -16,7 +15,7 @@ const SchoolCard =
                 className={data[location][year] < 0.5 ? 'isLess' : 'isMore'}>
                 {year}: {data[location][year]}</li>))}
         </ul>
-        <button onClick={() => setStateOfCompare(str1)}>Compare Data</button>
+        <button className='btn' onClick={() => setStateOfCompare(str1)}>Compare Data</button>
       </div>
     );
   };
