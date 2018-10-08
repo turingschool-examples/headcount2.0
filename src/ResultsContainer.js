@@ -16,7 +16,6 @@ class ResultsContainer extends Component {
 
   componentWillMount () {
     let results = this.props.results.map(entry => entry)
-    console.log (this.props.results)
     this.setState({
       results: results
     })
@@ -55,19 +54,6 @@ class ResultsContainer extends Component {
         selectedResults: [...this.state.selectedResults.slice(-1), entry]
       })
     }
-
-
-    // if (this.state.selectedResults.length === 2) {
-    //   let newState = this.state.selectedResults.pop()
-    //   this.setState({
-    //     selectedResults: [newState, entry]
-    //   })
-    // } else {
-    //   this.setState({
-    //     selectedResults: [...this.state.selectedResults, entry]
-    //   })
-
-    // }
   }
 
 

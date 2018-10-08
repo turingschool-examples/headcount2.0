@@ -4,11 +4,7 @@ import PropTypes from "prop-types"
 import TableEntry from './TableEntry.js'
 
 class FilteredResults extends Component {
-  constructor(props) {
-    super(props)
-  
-  }
-
+    
   tableBody = () => {
     const tableData = this.props.results.map(entry => {
       return (
