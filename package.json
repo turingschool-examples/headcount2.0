@@ -2,6 +2,7 @@
   "name": "headcount",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://christopherchateau.github.io/headcount2.0/",
   "devDependencies": {
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
@@ -10,6 +11,7 @@
     "react-scripts": "1.1.0"
   },
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "prop-types": "^15.6.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
@@ -19,6 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "eslint": "./node_modules/eslint/bin/eslint.js ./src/*.js"
+    "eslint": "./node_modules/eslint/bin/eslint.js ./src/*.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
