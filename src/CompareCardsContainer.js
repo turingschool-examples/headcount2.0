@@ -5,12 +5,13 @@ import PropTypes from 'prop-types';
 
 
 const CompareCardsContainer = 
-({ cards, compareAvrg, comparedCard }) => {
+({ cards, compareAvrg, comparedCard, setStateOfCompare }) => {
   const schoolCards = Object.keys(cards).map(card => 
     <SchoolCard location={card} 
       data={cards[card]} 
       key={Object.keys(cards[card])}
-      compareAvrg={compareAvrg} />
+      compareAvrg={compareAvrg}
+      setStateOfCompare={setStateOfCompare} />
   );
   const comparisonCard = [{comparedCard}].map(card => 
     <ComparedCard location={comparedCard} data={card} key={card}/>

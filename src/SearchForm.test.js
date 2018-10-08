@@ -6,22 +6,27 @@ describe('SearchForm', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<SearchForm />);
+    let searchSchool = jest.fn();
+    wrapper = shallow(<SearchForm searchSchool={searchSchool}/>);
   });
 
-  it.skip('matches the snapshot', () => {
+  it('matches the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  // it.skip('should call the function on input change', () => {
-  //   wrapper.instance().
-  //     expect(searchSchoolMock.mock.calls.length).toBe(1);
-  // });
+  it.skip('should call handleSearch on keyUp', () => {
+    const event = new Event('keyUp', {"input":{"value":8}})
+    wrapper.find('input').simulate('keyUp', { preventDefault() {} });
+    const input = wrapper.find('input');
+    input.value = 'test';
+    input.simulate('keyUp', {keyCode: 40});
+    expect(searchSchool.called).to.be.true;
+  });
 
   it.skip('updates state when searchSchool is called', () => {
-    const mockEvent = { target: { name: 'title', value: 'something' } };
-
-    wrapper.instance().handleInputChange(mockEvent);
+    const mockEvent = { target: { value: 'something' } };
+    wrapper.find('input').simulate('keyUp', { preventDefault() {} });
+    wrapper.instance().handleSearch(mockEvent);
 
     expect(wrapper.state('title')).toBe('something');
   });
