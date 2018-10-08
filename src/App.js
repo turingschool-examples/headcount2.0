@@ -59,7 +59,6 @@ class App extends Component {
 	render() {
 		const { data, searchTerm, districtsBeingCompared, districtAverages } = 
 			this.state;
-		// {console.log(districtsBeingCompared)}
 		return (
 			<div className='App'>
 				<div className='header'>
