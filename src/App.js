@@ -22,37 +22,42 @@ class App extends Component {
 	}
 
 	compareDistrict = (district) => {
+		const location = district.location;
 		const districtsInState = this.state.districtsBeingCompared;	
-		console.log(districtsInState)
 
-		const compareArr = districtsInState.map(district => district.location)
-		if (compareArr.includes(district.location)) {
-			const districtsBeingCompared = districtsInState.filter(comparedDistrict => {
-			return !comparedDistrict.location.includes(district.location)
-		})
+		const compareArr = districtsInState.map(district => district.location);
+		if (compareArr.includes(location)) {
+			const districtsBeingCompared = 
+				districtsInState.filter(comparedDistrict => {
+					return !comparedDistrict.location.includes(location);
+				});
 
-			this.setState({districtsBeingCompared})
+			this.setState({districtsBeingCompared});
 		} else if (districtsInState.length <= 1) {
-			this.setState({ districtsBeingCompared: [district, ...districtsInState]},
-				() => this.compareAverages())
+			this.setState({ 
+				districtsBeingCompared: [district, ...districtsInState]
+			}, () => this.compareAverages());
 		}
 	}
 
 	compareAverages = () => {
-		const districtsBeingCompared = this.state.districtsBeingCompared;			
+		const districtsBeingCompared = 
+			this.state.districtsBeingCompared;			
 		let district1;
 		let district2;
 
 		if (districtsBeingCompared.length === 2) {
-			district1 = districtsBeingCompared[0].location
-			district2 = districtsBeingCompared[1].location
-			let districtAverages = this.state.data.compareDistrictAverages(district1, district2)
-			this.setState({ districtAverages })
+			district1 = districtsBeingCompared[0].location;
+			district2 = districtsBeingCompared[1].location;
+			let districtAverages = 
+				this.state.data.compareDistrictAverages(district1, district2);
+			this.setState({ districtAverages });
 		}
 	}
 
 	render() {
-		const { data, searchTerm, districtsBeingCompared, districtAverages } = this.state;
+		const { data, searchTerm, districtsBeingCompared, districtAverages } = 
+			this.state;
 		// {console.log(districtsBeingCompared)}
 		return (
 			<div className='App'>
@@ -71,7 +76,8 @@ class App extends Component {
 				<DistrictsContainer 
 					districts={data.findAllMatches(searchTerm)}
 					compareDistrict={this.compareDistrict}
-					districtsBeingCompared={districtsBeingCompared}					
+					districtsBeingCompared=
+						{districtsBeingCompared}					
 				/>
 			</div>
 		);
