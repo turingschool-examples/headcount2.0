@@ -26,13 +26,10 @@ describe('Card', () =>  {
 
     const wrapper = shallow(<Card {...mockData}/>);
 
-    console.log(mockData.stats)
     if(mockData.stats < 0.5){
-      expect(wrapper.find('p').hasClass('.below50')).toEqual(true);
-      expect(wrapper.find('p').hasClass('.above50')).toEqual(false);
+      expect(wrapper.find('p').hasClass('below50')).toEqual(true);
     }else{
-      expect(wrapper.find('p').hasClass('.above50')).toEqual(true);
-      expect(wrapper.find('p').hasClass('.below50')).toEqual(false);
+      expect(wrapper.find('p').hasClass('above50')).toEqual(true);
     }
 
   });
