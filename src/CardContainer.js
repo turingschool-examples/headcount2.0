@@ -6,7 +6,10 @@ import PropTypes from 'prop-types';
 const CardContainer = (props) => {
 
   const cards = props.data.map(district => {
-    return <Card district={district} key={Math.random()} compareDistrictData={props.compareDistrictData} />;
+    return <Card 
+      district={district} 
+      key={Math.random()} 
+      compareDistrictData={props.compareDistrictData} />;
   });
   
   return (
@@ -17,7 +20,8 @@ const CardContainer = (props) => {
 };
 
 CardContainer.propTypes = {
-  data: PropTypes.array
+  data: PropTypes.array,
+  compareDistrictData: PropTypes.func
 };
 
 export default CardContainer;

@@ -9,14 +9,13 @@
 }
 
 .selected {
-  width: 25%;
+  width: 26%;
 }
 
 .card-heading {
   font-weight: 600;
   font-size: 1em;
   margin-bottom: 5px;
-  /*text-align: center;*/
 }
 
 .sub-heading {
@@ -27,7 +26,6 @@
 
 .card-data {
   color: gray;
-  /*text-indent: 30%;*/
 }
 
 .year-data {

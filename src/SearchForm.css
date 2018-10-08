@@ -14,15 +14,11 @@
   outline: none;
   color: #9DBFAF;
   margin-left: 5px;
-
 }
-
-
 
 .input-search:focus {
   color: #0095A9;
 }
-
 
 .input-search::placeholder {
   font-size: 16px;
@@ -30,8 +26,6 @@
 }
 
 .btn-submit-search {
-/*  position: absolute;*/  
-  /*right: -50px;*/
   width: 60px;
   height: 36px;
   border: 1px solid #0095A9;
@@ -44,20 +38,15 @@
   margin-left: 5px;
 }
 
-
-
-
 .btn-display-all {
-    /* right: 0px; */
-    width: 100px;
-    height: 36px;
-    border: 1px solid #0095A9;
-    background: #0095A9;
-    text-align: center;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
+  width: 100px;
+  height: 36px;
+  border: 1px solid #0095A9;
+  background: #0095A9;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
   margin-left: 5px;
-
 }
