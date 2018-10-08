@@ -20,7 +20,8 @@ describe('App', () => {
 		const expectedState = {
 			data: new DistrictRepository(kinderData),
 			searchTerm: '',
-			districtsBeingCompared: []
+			districtsBeingCompared: [],
+			districtAverages: {}
 		}
 		expect(wrapper.state('data')).toBeInstanceOf(DistrictRepository)
 	})
@@ -29,7 +30,8 @@ describe('App', () => {
 		const expectedState = {
 			data: new DistrictRepository(kinderData),
 			searchTerm: '',
-			districtsBeingCompared: []
+			districtsBeingCompared: [],
+			districtAverages: {}
 		}
 	expect(wrapper.state('searchTerm')).toEqual('')
 	})
@@ -38,10 +40,30 @@ describe('App', () => {
 		const expectedState = {
 			data: new DistrictRepository(kinderData),
 			searchTerm: '',
-			districtsBeingCompared: []
+			districtsBeingCompared: [],
+			districtAverages: {}
 		}
 	expect(wrapper.state('districtsBeingCompared')).toEqual([])
 	})
+
+	it('has state districtAverages', () => {
+		const expectedState = {
+			data: new DistrictRepository(kinderData),
+			searchTerm: '',
+			districtsBeingCompared: [],
+			districtAverages: {}
+		}
+	expect(wrapper.state('districtAverages')).toEqual({})		
+	})
+
+	it('displays clicked cards at top of screen', () => {
+
+	})
+
+
+
+
+
 
 })
 

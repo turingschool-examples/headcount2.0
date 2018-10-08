@@ -63,15 +63,15 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": "0.3022427336632387",
-        "nodeType": "function",
+        "key": "0",
+        "nodeType": "class",
         "props": Object {
           "colorado": Object {},
           "compareDistrict": undefined,
           "district": Object {
             "colorado": Object {},
           },
-          "schoolName": undefined,
+          "districtsBeingCompared": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -79,15 +79,15 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "0.8244085998644402",
-        "nodeType": "function",
+        "key": "1",
+        "nodeType": "class",
         "props": Object {
           "academy 20": Object {},
           "compareDistrict": undefined,
           "district": Object {
             "academy 20": Object {},
           },
-          "schoolName": undefined,
+          "districtsBeingCompared": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -95,15 +95,15 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "0.10995132325090307",
-        "nodeType": "function",
+        "key": "2",
+        "nodeType": "class",
         "props": Object {
           "agate 300": Object {},
           "compareDistrict": undefined,
           "district": Object {
             "agate 300": Object {},
           },
-          "schoolName": undefined,
+          "districtsBeingCompared": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -150,15 +150,15 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": "0.3022427336632387",
-          "nodeType": "function",
+          "key": "0",
+          "nodeType": "class",
           "props": Object {
             "colorado": Object {},
             "compareDistrict": undefined,
             "district": Object {
               "colorado": Object {},
             },
-            "schoolName": undefined,
+            "districtsBeingCompared": undefined,
           },
           "ref": null,
           "rendered": null,
@@ -166,15 +166,15 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "0.8244085998644402",
-          "nodeType": "function",
+          "key": "1",
+          "nodeType": "class",
           "props": Object {
             "academy 20": Object {},
             "compareDistrict": undefined,
             "district": Object {
               "academy 20": Object {},
             },
-            "schoolName": undefined,
+            "districtsBeingCompared": undefined,
           },
           "ref": null,
           "rendered": null,
@@ -182,15 +182,15 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "0.10995132325090307",
-          "nodeType": "function",
+          "key": "2",
+          "nodeType": "class",
           "props": Object {
             "agate 300": Object {},
             "compareDistrict": undefined,
             "district": Object {
               "agate 300": Object {},
             },
-            "schoolName": undefined,
+            "districtsBeingCompared": undefined,
           },
           "ref": null,
           "rendered": null,
