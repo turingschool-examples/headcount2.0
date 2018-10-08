@@ -3,8 +3,11 @@ import PropTypes from "prop-types";
 import "./Search.css";
 
 class Search extends Component {
-  state = { input: "" };
-
+  constructor() {
+    super();
+    this.state = { input: "" };
+  }
+  
   handleChange = event => {
     const input = event.target.value;
     this.props.handleSearch(input);

@@ -9,12 +9,15 @@ import "./App.css";
 const allDistricts = new DistrictRepository(kinderData);
 
 class App extends Component {
-  state = {
-    schoolData: {},
-    comparedCards: [{}, {}],
-    comparedAvg: {},
-    instructions: "click any two districts to compare stats"
-  };
+  constructor() {
+    super();
+    this.state = {
+      schoolData: {},
+      comparedCards: [{}, {}],
+      comparedAvg: {},
+      instructions: "click any two districts to compare stats"
+    };
+  }
 
   componentDidMount = () => {
     const schoolData = allDistricts.findAllMatches();
