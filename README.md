@@ -1,6 +1,6 @@
 # HeadCount 2.0
 
-This application is a project assigned as a part of the Front End Engineering program at the Turing School of Software and Design. It is fundamentally designed to challenge the developer to simultaneously manage multiple React components combined with having to make some difficult decisions about where and how data should be organized, stored, and manipulated.
+This application is a project [assigned as a part of the Front End Engineering program at the Turing School of Software and Design](https://github.com/turingschool-examples/headcount2.0). It is fundamentally designed to challenge the developer to simultaneously manage multiple React components combined with having to make some difficult decisions about where and how data should be organized, stored, and manipulated.
 
 The project is centered around a data set of kindergarten test scores organized by year and district that must be cleaned and formatted so that it can be properly deployed in the web app.
 
