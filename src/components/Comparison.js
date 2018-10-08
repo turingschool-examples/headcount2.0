@@ -24,24 +24,30 @@ const Comparison = (props) => {
           processSelection={props.processSelection}
           selection={props.selection}
         />
-        <ComparisonCard
-          data={props.selection}
-          compareDistrictAverages={props.compareDistrictAverages}
-        />
-        <Card 
-          data={props.selection[1]}
-          key={props.selection[1].location}
-          processSelection={props.processSelection}
-          selection={props.selection}
-        />
+        {props.selection.length === 2 &&
+          <ComparisonCard
+            data={props.selection}
+            compareDistrictAverages={props.compareDistrictAverages}
+          />
+        }
+        {props.selection.length === 2 &&
+          <Card 
+            data={props.selection[1]}
+            key={props.selection[1].location}
+            processSelection={props.processSelection}
+            selection={props.selection}
+          />
+        }
       </div>
-      <button
-        onClick={() => {
-          props.processSelection('close');
-        }}
-        className="close-btn"
-        aria-label="close-comparison-section-button"
-      >Close</button>
+      {props.selection.length === 2 &&
+        <button
+          onClick={() => {
+            props.processSelection('close');
+          }}
+          className="close-btn"
+          aria-label="close-comparison-section-button"
+        >Clear</button>
+      }
     </section>
   );
 };

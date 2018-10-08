@@ -16,6 +16,7 @@
   cursor: pointer;
   background: #000;
 }
+
 .top-arrow-container:hover a img {
   transform: scale(1.1);
 }
