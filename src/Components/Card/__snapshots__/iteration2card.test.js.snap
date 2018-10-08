@@ -24,104 +24,34 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
+      "children": <section
+        className="info-section"
+      >
         <h2
           className="location"
         >
           Turing
-        </h2>,
+        </h2>
         <h3
           className="district-data"
         >
-          <p>
+          <p
+            className="above50"
+          >
             <span
               className="year"
             >
               2018
+              : 
             </span>
-            : 
             1
           </p>
-        </h3>,
-      ],
+        </h3>
+      </section>,
       "className": "card-div",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Turing",
-          "className": "location",
-        },
-        "ref": null,
-        "rendered": "Turing",
-        "type": "h2",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <p>
-              <span
-                className="year"
-              >
-                2018
-              </span>
-              : 
-              1
-            </p>,
-          ],
-          "className": "district-data",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": "0",
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <span
-                  className="year"
-                >
-                  2018
-                </span>,
-                ": ",
-                1,
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "2018",
-                  "className": "year",
-                },
-                "ref": null,
-                "rendered": "2018",
-                "type": "span",
-              },
-              ": ",
-              1,
-            ],
-            "type": "p",
-          },
-        ],
-        "type": "h3",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
@@ -135,18 +65,20 @@ ShallowWrapper {
           <h3
             className="district-data"
           >
-            <p>
+            <p
+              className="above50"
+            >
               <span
                 className="year"
               >
                 2018
+                : 
               </span>
-              : 
               1
             </p>
           </h3>,
         ],
-        "className": "card-div",
+        "className": "info-section",
       },
       "ref": null,
       "rendered": Array [
@@ -168,13 +100,15 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <p>
+              <p
+                className="above50"
+              >
                 <span
                   className="year"
                 >
                   2018
+                  : 
                 </span>
-                : 
                 1
               </p>,
             ],
@@ -192,10 +126,11 @@ ShallowWrapper {
                     className="year"
                   >
                     2018
+                    : 
                   </span>,
-                  ": ",
                   1,
                 ],
+                "className": "above50",
               },
               "ref": null,
               "rendered": Array [
@@ -204,14 +139,19 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "2018",
+                    "children": Array [
+                      "2018",
+                      ": ",
+                    ],
                     "className": "year",
                   },
                   "ref": null,
-                  "rendered": "2018",
+                  "rendered": Array [
+                    "2018",
+                    ": ",
+                  ],
                   "type": "span",
                 },
-                ": ",
                 1,
               ],
               "type": "p",
@@ -220,6 +160,154 @@ ShallowWrapper {
           "type": "h3",
         },
       ],
+      "type": "section",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <section
+          className="info-section"
+        >
+          <h2
+            className="location"
+          >
+            Turing
+          </h2>
+          <h3
+            className="district-data"
+          >
+            <p
+              className="above50"
+            >
+              <span
+                className="year"
+              >
+                2018
+                : 
+              </span>
+              1
+            </p>
+          </h3>
+        </section>,
+        "className": "card-div",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2
+              className="location"
+            >
+              Turing
+            </h2>,
+            <h3
+              className="district-data"
+            >
+              <p
+                className="above50"
+              >
+                <span
+                  className="year"
+                >
+                  2018
+                  : 
+                </span>
+                1
+              </p>
+            </h3>,
+          ],
+          "className": "info-section",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Turing",
+              "className": "location",
+            },
+            "ref": null,
+            "rendered": "Turing",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p
+                  className="above50"
+                >
+                  <span
+                    className="year"
+                  >
+                    2018
+                    : 
+                  </span>
+                  1
+                </p>,
+              ],
+              "className": "district-data",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "0",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <span
+                      className="year"
+                    >
+                      2018
+                      : 
+                    </span>,
+                    1,
+                  ],
+                  "className": "above50",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2018",
+                        ": ",
+                      ],
+                      "className": "year",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2018",
+                      ": ",
+                    ],
+                    "type": "span",
+                  },
+                  1,
+                ],
+                "type": "p",
+              },
+            ],
+            "type": "h3",
+          },
+        ],
+        "type": "section",
+      },
       "type": "div",
     },
   ],

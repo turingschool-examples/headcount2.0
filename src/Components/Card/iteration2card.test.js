@@ -10,7 +10,7 @@ describe('Card', () =>  {
   const mockData = {
       location: 'Turing',
       stats: {
-        2018 : 1
+        '2018' : 1
       }
     }
 
@@ -26,10 +26,13 @@ describe('Card', () =>  {
 
     const wrapper = shallow(<Card {...mockData}/>);
 
-    if(mockData.stats.){
-      expect(wrapper.find('.below50').hasClass('.below50')).to.equal(true);
+    console.log(mockData.stats)
+    if(mockData.stats < 0.5){
+      expect(wrapper.find('p').hasClass('.below50')).toEqual(true);
+      expect(wrapper.find('p').hasClass('.above50')).toEqual(false);
     }else{
-      expect(wrapper.find('.below50').hasClass('.above50')).to.equal(true);
+      expect(wrapper.find('p').hasClass('.above50')).toEqual(true);
+      expect(wrapper.find('p').hasClass('.below50')).toEqual(false);
     }
 
   });
