@@ -25,7 +25,7 @@ const Card = ({ location, stats, display, clicked, handleCardClick }) => {
   clicked !== false
     ? (borderToggle = "lightskyblue")
     : (borderToggle = "black");
-    
+
   return (
     <section
       style={{ border: `solid 4px ${borderToggle}` }}
