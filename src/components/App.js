@@ -1,4 +1,4 @@
- import React, { Component } from 'react'; 
+import React, { Component } from 'react'; 
 
 import kinderData from '../data/kindergartners_in_full_day_program.js';
 
@@ -93,7 +93,7 @@ class App extends Component {
             processFilter={this.processFilter} 
             toggleModal={this.toggleModal}
           />
-          {this.state.selection.length === 2 &&
+          {this.state.selection.length >= 1 &&
             <Comparison
               compareDistrictAverages={this.state.data.compareDistrictAverages}
               selection={this.state.selection} 
