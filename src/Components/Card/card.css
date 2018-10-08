@@ -1,5 +1,5 @@
 .card-div{
-  border: 2px solid white;
+  border: 1.3px solid white;
   width: 17em;
   height: 33em;
   margin: 0 auto;
@@ -8,8 +8,8 @@
   padding: 1em;
   margin-bottom: 2em;
   border-radius: 10px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+  background-color: #5c687c;
 }
 
 .location{

@@ -1,9 +1,17 @@
-body{
+/* body{
   background-color: #5c687c;
-}
+} */
 
+body{
+  background-color: #f9f9f9;
+  border: 1.5px solid grey;
+  border-radius: 2em;
+  margin: 2em;
+}
 .welcome{
-  color: #dcdfe2;
+  /* color: #dcdfe2; */
+  color: #5c687c;
+  font-weight: bold;
   font-size: 5rem;
   padding-top: 3rem;
   display: block;
