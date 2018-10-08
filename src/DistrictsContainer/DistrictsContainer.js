@@ -7,7 +7,6 @@ const DistrictsContainer = ({ districts, compareDistrict, districtsBeingCompared
 		const districtCards = districts.map((district, i) => {
 		return <DistrictCard  
 							key={i} 
-							// schoolName={district.location}
 							{...district}
 							district={district}
 							compareDistrict={compareDistrict}

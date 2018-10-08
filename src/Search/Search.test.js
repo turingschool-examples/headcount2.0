@@ -46,14 +46,3 @@ describe('Search', () => {
 	})
 
 })
-
-//Questions re: ideabox Search component tests
-//why mount instead of shallow
-//what is spyOn
-//what is instance()
-//what is forceUpdate()
-//why are we calling mockEvent mockEvent
-//what is simulate
-//why is preventDefault in braces
-//HOW IS THE EVENT AN OBJECT
-//How does last test work? How does it know that searchDistrictMock has been called?
