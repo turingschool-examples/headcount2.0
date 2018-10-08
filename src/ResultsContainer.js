@@ -52,7 +52,7 @@ class ResultsContainer extends Component {
       })
     } else {
       this.setState({
-        selectedResults: [...this.state.selectedResults, entry]
+        selectedResults: [...this.state.selectedResults.slice(-1), entry]
       })
     }
 
