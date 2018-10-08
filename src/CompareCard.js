@@ -11,7 +11,7 @@ const CompareCard = ({compareSelections, compareDistrictAverages}) => {
   
     const comparedObj = compareDistrictAverages(district1.school, district2.school)
 
-    return(
+    return (
           <div className="compare-card">
              <Card district={district1}/> 
              <section className="comparison">

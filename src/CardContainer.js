@@ -14,7 +14,8 @@ const CardContainer = ({districts, addCompareSelections}) => {
 }
 
 CardContainer.propTypes = {
-  districts: PropTypes.arrayOf(PropTypes.object)
+  districts: PropTypes.arrayOf(PropTypes.object),
+  addCompareSelections: PropTypes.func
 }
 
 export default CardContainer; 

@@ -23,7 +23,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "COLORADO",
       }
     }
-    key="1538860756175"
+    key="1538956730526"
   />
   <Card
     district={
@@ -44,7 +44,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "ACADEMY 20",
       }
     }
-    key="1538860756176"
+    key="1538956730527"
   />
   <Card
     district={
@@ -65,7 +65,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "ADAMS COUNTY 14",
       }
     }
-    key="1538860756177"
+    key="1538956730528"
   />
   <Card
     district={
@@ -86,7 +86,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "ADAMS-ARAPAHOE 28J",
       }
     }
-    key="1538860756178"
+    key="1538956730529"
   />
   <Card
     district={
@@ -107,7 +107,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "AGATE 300",
       }
     }
-    key="1538860756179"
+    key="1538956730530"
   />
   <Card
     district={
@@ -128,7 +128,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "AGUILAR REORGANIZED 6",
       }
     }
-    key="1538860756180"
+    key="1538956730531"
   />
   <Card
     district={
@@ -149,7 +149,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "AKRON R-1",
       }
     }
-    key="1538860756181"
+    key="1538956730532"
   />
   <Card
     district={
@@ -170,7 +170,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "ALAMOSA RE-11J",
       }
     }
-    key="1538860756182"
+    key="1538956730533"
   />
   <Card
     district={
@@ -191,7 +191,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "ARCHULETA COUNTY 50 JT",
       }
     }
-    key="1538860756183"
+    key="1538956730534"
   />
   <Card
     district={
@@ -212,7 +212,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "ARICKAREE R-2",
       }
     }
-    key="1538860756184"
+    key="1538956730535"
   />
   <Card
     district={
@@ -233,7 +233,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "ARRIBA-FLAGLER C-20",
       }
     }
-    key="1538860756185"
+    key="1538956730536"
   />
   <Card
     district={
@@ -254,7 +254,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "ASPEN 1",
       }
     }
-    key="1538860756186"
+    key="1538956730537"
   />
   <Card
     district={
@@ -275,7 +275,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "AULT-HIGHLAND RE-9",
       }
     }
-    key="1538860756187"
+    key="1538956730538"
   />
   <Card
     district={
@@ -296,7 +296,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "BAYFIELD 10 JT-R",
       }
     }
-    key="1538860756188"
+    key="1538956730539"
   />
   <Card
     district={
@@ -317,7 +317,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "BENNETT 29J",
       }
     }
-    key="1538860756189"
+    key="1538956730540"
   />
   <Card
     district={
@@ -338,7 +338,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "BETHUNE R-5",
       }
     }
-    key="1538860756190"
+    key="1538956730541"
   />
   <Card
     district={
@@ -359,7 +359,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "BIG SANDY 100J",
       }
     }
-    key="1538860756191"
+    key="1538956730542"
   />
   <Card
     district={
@@ -380,7 +380,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "BOULDER VALLEY RE 2",
       }
     }
-    key="1538860756192"
+    key="1538956730543"
   />
   <Card
     district={
@@ -401,7 +401,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "BRANSON REORGANIZED 82",
       }
     }
-    key="1538860756193"
+    key="1538956730544"
   />
   <Card
     district={
@@ -422,7 +422,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "BRIGGSDALE RE-10",
       }
     }
-    key="1538860756194"
+    key="1538956730545"
   />
   <Card
     district={
@@ -443,7 +443,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "BRIGHTON 27J",
       }
     }
-    key="1538860756195"
+    key="1538956730546"
   />
   <Card
     district={
@@ -464,7 +464,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "BRUSH RE-2(J)",
       }
     }
-    key="1538860756196"
+    key="1538956730547"
   />
   <Card
     district={
@@ -485,7 +485,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "BUENA VISTA R-31",
       }
     }
-    key="1538860756197"
+    key="1538956730548"
   />
   <Card
     district={
@@ -506,7 +506,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "BUFFALO RE-4",
       }
     }
-    key="1538860756198"
+    key="1538956730549"
   />
   <Card
     district={
@@ -527,7 +527,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "BURLINGTON RE-6J",
       }
     }
-    key="1538860756199"
+    key="1538956730550"
   />
   <Card
     district={
@@ -548,7 +548,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "BYERS 32J",
       }
     }
-    key="1538860756200"
+    key="1538956730551"
   />
   <Card
     district={
@@ -569,7 +569,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "CALHAN RJ-1",
       }
     }
-    key="1538860756201"
+    key="1538956730552"
   />
   <Card
     district={
@@ -590,7 +590,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "CAMPO RE-6",
       }
     }
-    key="1538860756202"
+    key="1538956730553"
   />
   <Card
     district={
@@ -611,7 +611,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "CANON CITY RE-1",
       }
     }
-    key="1538860756203"
+    key="1538956730554"
   />
   <Card
     district={
@@ -632,7 +632,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "CENTENNIAL R-1",
       }
     }
-    key="1538860756204"
+    key="1538956730555"
   />
   <Card
     district={
@@ -653,7 +653,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "CENTER 26 JT",
       }
     }
-    key="1538860756205"
+    key="1538956730556"
   />
   <Card
     district={
@@ -674,7 +674,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "CHERAW 31",
       }
     }
-    key="1538860756206"
+    key="1538956730557"
   />
   <Card
     district={
@@ -695,7 +695,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "CHERRY CREEK 5",
       }
     }
-    key="1538860756207"
+    key="1538956730558"
   />
   <Card
     district={
@@ -716,7 +716,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "CHEYENNE COUNTY RE-5",
       }
     }
-    key="1538860756208"
+    key="1538956730559"
   />
   <Card
     district={
@@ -737,7 +737,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "CHEYENNE MOUNTAIN 12",
       }
     }
-    key="1538860756209"
+    key="1538956730560"
   />
   <Card
     district={
@@ -758,7 +758,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "CLEAR CREEK RE-1",
       }
     }
-    key="1538860756210"
+    key="1538956730561"
   />
   <Card
     district={
@@ -779,7 +779,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "COLORADO SPRINGS 11",
       }
     }
-    key="1538860756211"
+    key="1538956730562"
   />
   <Card
     district={
@@ -800,7 +800,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "COTOPAXI RE-3",
       }
     }
-    key="1538860756212"
+    key="1538956730563"
   />
   <Card
     district={
@@ -821,7 +821,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "CREEDE CONSOLIDATED 1",
       }
     }
-    key="1538860756213"
+    key="1538956730564"
   />
   <Card
     district={
@@ -842,7 +842,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "CRIPPLE CREEK-VICTOR RE-1",
       }
     }
-    key="1538860756214"
+    key="1538956730565"
   />
   <Card
     district={
@@ -863,7 +863,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "CROWLEY COUNTY RE-1-J",
       }
     }
-    key="1538860756215"
+    key="1538956730566"
   />
   <Card
     district={
@@ -884,7 +884,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "CUSTER COUNTY SCHOOL DISTRICT C-1",
       }
     }
-    key="1538860756216"
+    key="1538956730567"
   />
   <Card
     district={
@@ -905,7 +905,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "DE BEQUE 49JT",
       }
     }
-    key="1538860756217"
+    key="1538956730568"
   />
   <Card
     district={
@@ -926,7 +926,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "DEER TRAIL 26J",
       }
     }
-    key="1538860756218"
+    key="1538956730569"
   />
   <Card
     district={
@@ -947,7 +947,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "DEL NORTE C-7",
       }
     }
-    key="1538860756219"
+    key="1538956730570"
   />
   <Card
     district={
@@ -968,7 +968,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "DELTA COUNTY 50(J)",
       }
     }
-    key="1538860756220"
+    key="1538956730571"
   />
   <Card
     district={
@@ -989,7 +989,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "DENVER COUNTY 1",
       }
     }
-    key="1538860756221"
+    key="1538956730573"
   />
   <Card
     district={
@@ -1010,7 +1010,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "DOLORES COUNTY RE NO.2",
       }
     }
-    key="1538860756222"
+    key="1538956730574"
   />
   <Card
     district={
@@ -1031,7 +1031,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "DOLORES RE-4A",
       }
     }
-    key="1538860756223"
+    key="1538956730575"
   />
   <Card
     district={
@@ -1052,7 +1052,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "DOUGLAS COUNTY RE 1",
       }
     }
-    key="1538860756224"
+    key="1538956730576"
   />
   <Card
     district={
@@ -1073,7 +1073,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "DURANGO 9-R",
       }
     }
-    key="1538860756225"
+    key="1538956730577"
   />
   <Card
     district={
@@ -1094,7 +1094,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "EADS RE-1",
       }
     }
-    key="1538860756226"
+    key="1538956730578"
   />
   <Card
     district={
@@ -1115,7 +1115,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "EAGLE COUNTY RE 50",
       }
     }
-    key="1538860756227"
+    key="1538956730579"
   />
   <Card
     district={
@@ -1136,7 +1136,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "EAST GRAND 2",
       }
     }
-    key="1538860756228"
+    key="1538956730580"
   />
   <Card
     district={
@@ -1157,7 +1157,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "EAST OTERO R-1",
       }
     }
-    key="1538860756229"
+    key="1538956730581"
   />
   <Card
     district={
@@ -1178,7 +1178,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "EAST YUMA COUNTY RJ-2",
       }
     }
-    key="1538860756230"
+    key="1538956730582"
   />
   <Card
     district={
@@ -1199,7 +1199,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "EATON RE-2",
       }
     }
-    key="1538860756231"
+    key="1538956730583"
   />
   <Card
     district={
@@ -1220,7 +1220,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "EDISON 54 JT",
       }
     }
-    key="1538860756232"
+    key="1538956730584"
   />
   <Card
     district={
@@ -1241,7 +1241,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "ELBERT 200",
       }
     }
-    key="1538860756233"
+    key="1538956730585"
   />
   <Card
     district={
@@ -1262,7 +1262,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "ELIZABETH C-1",
       }
     }
-    key="1538860756234"
+    key="1538956730586"
   />
   <Card
     district={
@@ -1283,7 +1283,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "ELLICOTT 22",
       }
     }
-    key="1538860756235"
+    key="1538956730587"
   />
   <Card
     district={
@@ -1304,7 +1304,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "ENGLEWOOD 1",
       }
     }
-    key="1538860756236"
+    key="1538956730588"
   />
   <Card
     district={
@@ -1325,7 +1325,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "FALCON 49",
       }
     }
-    key="1538860756237"
+    key="1538956730589"
   />
   <Card
     district={
@@ -1346,7 +1346,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "FLORENCE RE-2",
       }
     }
-    key="1538860756238"
+    key="1538956730590"
   />
   <Card
     district={
@@ -1367,7 +1367,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "FORT MORGAN RE-3",
       }
     }
-    key="1538860756239"
+    key="1538956730591"
   />
   <Card
     district={
@@ -1388,7 +1388,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "FOUNTAIN 8",
       }
     }
-    key="1538860756240"
+    key="1538956730592"
   />
   <Card
     district={
@@ -1409,7 +1409,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "FOWLER R-4J",
       }
     }
-    key="1538860756241"
+    key="1538956730593"
   />
   <Card
     district={
@@ -1430,7 +1430,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "FRENCHMAN RE-3",
       }
     }
-    key="1538860756242"
+    key="1538956730594"
   />
   <Card
     district={
@@ -1451,7 +1451,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "GARFIELD 16",
       }
     }
-    key="1538860756243"
+    key="1538956730595"
   />
   <Card
     district={
@@ -1472,7 +1472,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "GARFIELD RE-2",
       }
     }
-    key="1538860756244"
+    key="1538956730596"
   />
   <Card
     district={
@@ -1493,7 +1493,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "GENOA-HUGO C113",
       }
     }
-    key="1538860756245"
+    key="1538956730597"
   />
   <Card
     district={
@@ -1514,7 +1514,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "GILPIN COUNTY RE-1",
       }
     }
-    key="1538860756246"
+    key="1538956730598"
   />
   <Card
     district={
@@ -1535,7 +1535,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "GRANADA RE-1",
       }
     }
-    key="1538860756247"
+    key="1538956730599"
   />
   <Card
     district={
@@ -1556,7 +1556,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "GREELEY 6",
       }
     }
-    key="1538860756249"
+    key="1538956730600"
   />
   <Card
     district={
@@ -1577,7 +1577,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "GUNNISON WATERSHED RE1J",
       }
     }
-    key="1538860756250"
+    key="1538956730601"
   />
   <Card
     district={
@@ -1598,7 +1598,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "HANOVER 28",
       }
     }
-    key="1538860756251"
+    key="1538956730602"
   />
   <Card
     district={
@@ -1619,7 +1619,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "HARRISON 2",
       }
     }
-    key="1538860756252"
+    key="1538956730603"
   />
   <Card
     district={
@@ -1640,7 +1640,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "HAXTUN RE-2J",
       }
     }
-    key="1538860756253"
+    key="1538956730604"
   />
   <Card
     district={
@@ -1661,7 +1661,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "HAYDEN RE-1",
       }
     }
-    key="1538860756254"
+    key="1538956730605"
   />
   <Card
     district={
@@ -1682,7 +1682,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "HINSDALE COUNTY RE 1",
       }
     }
-    key="1538860756255"
+    key="1538956730606"
   />
   <Card
     district={
@@ -1703,7 +1703,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "HI-PLAINS R-23",
       }
     }
-    key="1538860756256"
+    key="1538956730607"
   />
   <Card
     district={
@@ -1724,7 +1724,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "HOEHNE REORGANIZED 3",
       }
     }
-    key="1538860756257"
+    key="1538956730608"
   />
   <Card
     district={
@@ -1745,7 +1745,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "HOLLY RE-3",
       }
     }
-    key="1538860756258"
+    key="1538956730609"
   />
   <Card
     district={
@@ -1766,7 +1766,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "HOLYOKE RE-1J",
       }
     }
-    key="1538860756259"
+    key="1538956730610"
   />
   <Card
     district={
@@ -1787,7 +1787,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "HUERFANO RE-1",
       }
     }
-    key="1538860756260"
+    key="1538956730611"
   />
   <Card
     district={
@@ -1808,7 +1808,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "IDALIA SCHOOL DISTRICT RJ-3",
       }
     }
-    key="1538860756261"
+    key="1538956730612"
   />
   <Card
     district={
@@ -1829,7 +1829,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "IGNACIO 11 JT",
       }
     }
-    key="1538860756262"
+    key="1538956730613"
   />
   <Card
     district={
@@ -1850,7 +1850,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "JEFFERSON COUNTY R-1",
       }
     }
-    key="1538860756263"
+    key="1538956730614"
   />
   <Card
     district={
@@ -1871,7 +1871,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "JOHNSTOWN-MILLIKEN RE-5J",
       }
     }
-    key="1538860756264"
+    key="1538956730615"
   />
   <Card
     district={
@@ -1892,7 +1892,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "JULESBURG RE-1",
       }
     }
-    key="1538860756265"
+    key="1538956730616"
   />
   <Card
     district={
@@ -1913,7 +1913,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "KARVAL RE-23",
       }
     }
-    key="1538860756266"
+    key="1538956730617"
   />
   <Card
     district={
@@ -1934,7 +1934,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "KEENESBURG RE-3(J)",
       }
     }
-    key="1538860756267"
+    key="1538956730618"
   />
   <Card
     district={
@@ -1955,7 +1955,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "KIM REORGANIZED 88",
       }
     }
-    key="1538860756268"
+    key="1538956730619"
   />
   <Card
     district={
@@ -1976,7 +1976,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "KIOWA C-2",
       }
     }
-    key="1538860756269"
+    key="1538956730620"
   />
   <Card
     district={
@@ -1997,7 +1997,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "KIT CARSON R-1",
       }
     }
-    key="1538860756270"
+    key="1538956730621"
   />
   <Card
     district={
@@ -2018,7 +2018,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "LA VETA RE-2",
       }
     }
-    key="1538860756271"
+    key="1538956730623"
   />
   <Card
     district={
@@ -2039,7 +2039,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "LAKE COUNTY R-1",
       }
     }
-    key="1538860756272"
+    key="1538956730624"
   />
   <Card
     district={
@@ -2060,7 +2060,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "LAMAR RE-2",
       }
     }
-    key="1538860756273"
+    key="1538956730625"
   />
   <Card
     district={
@@ -2081,7 +2081,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "LAS ANIMAS RE-1",
       }
     }
-    key="1538860756274"
+    key="1538956730626"
   />
   <Card
     district={
@@ -2102,7 +2102,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "LEWIS-PALMER 38",
       }
     }
-    key="1538860756275"
+    key="1538956730627"
   />
   <Card
     district={
@@ -2123,7 +2123,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "LIBERTY SCHOOL DISTRICT J-4",
       }
     }
-    key="1538860756276"
+    key="1538956730628"
   />
   <Card
     district={
@@ -2144,7 +2144,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "LIMON RE-4J",
       }
     }
-    key="1538860756277"
+    key="1538956730629"
   />
   <Card
     district={
@@ -2165,7 +2165,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "LITTLETON 6",
       }
     }
-    key="1538860756278"
+    key="1538956730630"
   />
   <Card
     district={
@@ -2186,7 +2186,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "LONE STAR 101",
       }
     }
-    key="1538860756279"
+    key="1538956730631"
   />
   <Card
     district={
@@ -2207,7 +2207,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "MANCOS RE-6",
       }
     }
-    key="1538860756280"
+    key="1538956730632"
   />
   <Card
     district={
@@ -2228,7 +2228,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "MANITOU SPRINGS 14",
       }
     }
-    key="1538860756281"
+    key="1538956730633"
   />
   <Card
     district={
@@ -2249,7 +2249,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "MANZANOLA 3J",
       }
     }
-    key="1538860756282"
+    key="1538956730634"
   />
   <Card
     district={
@@ -2270,7 +2270,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "MAPLETON 1",
       }
     }
-    key="1538860756283"
+    key="1538956730635"
   />
   <Card
     district={
@@ -2291,7 +2291,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "MC CLAVE RE-2",
       }
     }
-    key="1538860756284"
+    key="1538956730636"
   />
   <Card
     district={
@@ -2312,7 +2312,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "MEEKER RE1",
       }
     }
-    key="1538860756285"
+    key="1538956730637"
   />
   <Card
     district={
@@ -2333,7 +2333,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "MESA COUNTY VALLEY 51",
       }
     }
-    key="1538860756286"
+    key="1538956730638"
   />
   <Card
     district={
@@ -2354,7 +2354,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "MIAMI/YODER 60 JT",
       }
     }
-    key="1538860756287"
+    key="1538956730639"
   />
   <Card
     district={
@@ -2375,7 +2375,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "MOFFAT 2",
       }
     }
-    key="1538860756288"
+    key="1538956730640"
   />
   <Card
     district={
@@ -2396,7 +2396,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "MOFFAT COUNTY RE:NO 1",
       }
     }
-    key="1538860756289"
+    key="1538956730641"
   />
   <Card
     district={
@@ -2417,7 +2417,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "MONTE VISTA C-8",
       }
     }
-    key="1538860756290"
+    key="1538956730642"
   />
   <Card
     district={
@@ -2438,7 +2438,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "MONTEZUMA-CORTEZ RE-1",
       }
     }
-    key="1538860756291"
+    key="1538956730643"
   />
   <Card
     district={
@@ -2459,7 +2459,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "MONTROSE COUNTY RE-1J",
       }
     }
-    key="1538860756292"
+    key="1538956730644"
   />
   <Card
     district={
@@ -2480,7 +2480,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "MOUNTAIN VALLEY RE 1",
       }
     }
-    key="1538860756293"
+    key="1538956730645"
   />
   <Card
     district={
@@ -2501,7 +2501,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "NORTH CONEJOS RE-1J",
       }
     }
-    key="1538860756294"
+    key="1538956730646"
   />
   <Card
     district={
@@ -2522,7 +2522,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "NORTH PARK R-1",
       }
     }
-    key="1538860756295"
+    key="1538956730647"
   />
   <Card
     district={
@@ -2543,7 +2543,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "NORTHGLENN-THORNTON 12",
       }
     }
-    key="1538860756296"
+    key="1538956730648"
   />
   <Card
     district={
@@ -2564,7 +2564,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "NORWOOD R-2J",
       }
     }
-    key="1538860756297"
+    key="1538956730649"
   />
   <Card
     district={
@@ -2585,7 +2585,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "OTIS R-3",
       }
     }
-    key="1538860756298"
+    key="1538956730650"
   />
   <Card
     district={
@@ -2606,7 +2606,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "OURAY R-1",
       }
     }
-    key="1538860756299"
+    key="1538956730651"
   />
   <Card
     district={
@@ -2627,7 +2627,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "PARK (ESTES PARK) R-3",
       }
     }
-    key="1538860756300"
+    key="1538956730652"
   />
   <Card
     district={
@@ -2648,7 +2648,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "PARK COUNTY RE-2",
       }
     }
-    key="1538860756301"
+    key="1538956730653"
   />
   <Card
     district={
@@ -2669,7 +2669,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "PAWNEE RE-12",
       }
     }
-    key="1538860756302"
+    key="1538956730654"
   />
   <Card
     district={
@@ -2690,7 +2690,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "PEYTON 23 JT",
       }
     }
-    key="1538860756303"
+    key="1538956730655"
   />
   <Card
     district={
@@ -2711,7 +2711,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "PLAINVIEW RE-2",
       }
     }
-    key="1538860756304"
+    key="1538956730656"
   />
   <Card
     district={
@@ -2732,7 +2732,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "PLATEAU RE-5",
       }
     }
-    key="1538860756305"
+    key="1538956730657"
   />
   <Card
     district={
@@ -2753,7 +2753,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "PLATEAU VALLEY 50",
       }
     }
-    key="1538860756306"
+    key="1538956730658"
   />
   <Card
     district={
@@ -2774,7 +2774,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "PLATTE CANYON 1",
       }
     }
-    key="1538860756307"
+    key="1538956730659"
   />
   <Card
     district={
@@ -2795,7 +2795,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "PLATTE VALLEY RE-3",
       }
     }
-    key="1538860756308"
+    key="1538956730660"
   />
   <Card
     district={
@@ -2816,7 +2816,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "PLATTE VALLEY RE-7",
       }
     }
-    key="1538860756309"
+    key="1538956730661"
   />
   <Card
     district={
@@ -2837,7 +2837,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "POUDRE R-1",
       }
     }
-    key="1538860756310"
+    key="1538956730662"
   />
   <Card
     district={
@@ -2858,7 +2858,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "PRAIRIE RE-11",
       }
     }
-    key="1538860756311"
+    key="1538956730663"
   />
   <Card
     district={
@@ -2879,7 +2879,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "PRIMERO REORGANIZED 2",
       }
     }
-    key="1538860756312"
+    key="1538956730664"
   />
   <Card
     district={
@@ -2900,7 +2900,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "PRITCHETT RE-3",
       }
     }
-    key="1538860756313"
+    key="1538956730665"
   />
   <Card
     district={
@@ -2921,7 +2921,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "PUEBLO CITY 60",
       }
     }
-    key="1538860756314"
+    key="1538956730666"
   />
   <Card
     district={
@@ -2942,7 +2942,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "PUEBLO COUNTY RURAL 70",
       }
     }
-    key="1538860756315"
+    key="1538956730667"
   />
   <Card
     district={
@@ -2963,7 +2963,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "RANGELY RE-4",
       }
     }
-    key="1538860756316"
+    key="1538956730668"
   />
   <Card
     district={
@@ -2984,7 +2984,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "RIDGWAY R-2",
       }
     }
-    key="1538860756317"
+    key="1538956730669"
   />
   <Card
     district={
@@ -3005,7 +3005,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "ROARING FORK RE-1",
       }
     }
-    key="1538860756318"
+    key="1538956730670"
   />
   <Card
     district={
@@ -3026,7 +3026,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "ROCKY FORD R-2",
       }
     }
-    key="1538860756319"
+    key="1538956730671"
   />
   <Card
     district={
@@ -3047,7 +3047,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "SALIDA R-32",
       }
     }
-    key="1538860756320"
+    key="1538956730672"
   />
   <Card
     district={
@@ -3068,7 +3068,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "SANFORD 6J",
       }
     }
-    key="1538860756322"
+    key="1538956730673"
   />
   <Card
     district={
@@ -3089,7 +3089,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "SANGRE DE CRISTO RE-22J",
       }
     }
-    key="1538860756323"
+    key="1538956730674"
   />
   <Card
     district={
@@ -3110,7 +3110,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "SARGENT RE-33J",
       }
     }
-    key="1538860756324"
+    key="1538956730675"
   />
   <Card
     district={
@@ -3131,7 +3131,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "SHERIDAN 2",
       }
     }
-    key="1538860756325"
+    key="1538956730676"
   />
   <Card
     district={
@@ -3152,7 +3152,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "SIERRA GRANDE R-30",
       }
     }
-    key="1538860756326"
+    key="1538956730677"
   />
   <Card
     district={
@@ -3173,7 +3173,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "SILVERTON 1",
       }
     }
-    key="1538860756327"
+    key="1538956730678"
   />
   <Card
     district={
@@ -3194,7 +3194,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "SOUTH CONEJOS RE-10",
       }
     }
-    key="1538860756328"
+    key="1538956730679"
   />
   <Card
     district={
@@ -3215,7 +3215,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "SOUTH ROUTT RE 3",
       }
     }
-    key="1538860756329"
+    key="1538956730680"
   />
   <Card
     district={
@@ -3236,7 +3236,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "SPRINGFIELD RE-4",
       }
     }
-    key="1538860756330"
+    key="1538956730681"
   />
   <Card
     district={
@@ -3257,7 +3257,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "ST VRAIN VALLEY RE 1J",
       }
     }
-    key="1538860756331"
+    key="1538956730682"
   />
   <Card
     district={
@@ -3278,7 +3278,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "STEAMBOAT SPRINGS RE-2",
       }
     }
-    key="1538860756332"
+    key="1538956730683"
   />
   <Card
     district={
@@ -3299,7 +3299,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "STRASBURG 31J",
       }
     }
-    key="1538860756333"
+    key="1538956730684"
   />
   <Card
     district={
@@ -3320,7 +3320,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "STRATTON R-4",
       }
     }
-    key="1538860756334"
+    key="1538956730685"
   />
   <Card
     district={
@@ -3341,7 +3341,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "SUMMIT RE-1",
       }
     }
-    key="1538860756335"
+    key="1538956730686"
   />
   <Card
     district={
@@ -3362,7 +3362,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "SWINK 33",
       }
     }
-    key="1538860756336"
+    key="1538956730688"
   />
   <Card
     district={
@@ -3383,7 +3383,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "TELLURIDE R-1",
       }
     }
-    key="1538860756337"
+    key="1538956730689"
   />
   <Card
     district={
@@ -3404,7 +3404,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "THOMPSON R-2J",
       }
     }
-    key="1538860756338"
+    key="1538956730690"
   />
   <Card
     district={
@@ -3425,7 +3425,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "TRINIDAD 1",
       }
     }
-    key="1538860756339"
+    key="1538956730691"
   />
   <Card
     district={
@@ -3446,7 +3446,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "VALLEY RE-1",
       }
     }
-    key="1538860756340"
+    key="1538956730692"
   />
   <Card
     district={
@@ -3467,7 +3467,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "VILAS RE-5",
       }
     }
-    key="1538860756341"
+    key="1538956730693"
   />
   <Card
     district={
@@ -3488,7 +3488,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "WALSH RE-1",
       }
     }
-    key="1538860756342"
+    key="1538956730694"
   />
   <Card
     district={
@@ -3509,7 +3509,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "WELD COUNTY RE-1",
       }
     }
-    key="1538860756343"
+    key="1538956730695"
   />
   <Card
     district={
@@ -3530,7 +3530,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "WELD COUNTY S/D RE-8",
       }
     }
-    key="1538860756344"
+    key="1538956730696"
   />
   <Card
     district={
@@ -3551,7 +3551,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "WELDON VALLEY RE-20(J)",
       }
     }
-    key="1538860756345"
+    key="1538956730697"
   />
   <Card
     district={
@@ -3572,7 +3572,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "WEST END RE-2",
       }
     }
-    key="1538860756346"
+    key="1538956730698"
   />
   <Card
     district={
@@ -3593,7 +3593,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "WEST GRAND 1-JT",
       }
     }
-    key="1538860756347"
+    key="1538956730699"
   />
   <Card
     district={
@@ -3614,7 +3614,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "WEST YUMA COUNTY RJ-1",
       }
     }
-    key="1538860756348"
+    key="1538956730700"
   />
   <Card
     district={
@@ -3635,7 +3635,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "WESTMINSTER 50",
       }
     }
-    key="1538860756349"
+    key="1538956730701"
   />
   <Card
     district={
@@ -3656,7 +3656,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "WIDEFIELD 3",
       }
     }
-    key="1538860756350"
+    key="1538956730702"
   />
   <Card
     district={
@@ -3677,7 +3677,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "WIGGINS RE-50(J)",
       }
     }
-    key="1538860756351"
+    key="1538956730703"
   />
   <Card
     district={
@@ -3698,7 +3698,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "WILEY RE-13 JT",
       }
     }
-    key="1538860756352"
+    key="1538956730704"
   />
   <Card
     district={
@@ -3719,7 +3719,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "WINDSOR RE-4",
       }
     }
-    key="1538860756353"
+    key="1538956730705"
   />
   <Card
     district={
@@ -3740,7 +3740,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "WOODLAND PARK RE-2",
       }
     }
-    key="1538860756354"
+    key="1538956730706"
   />
   <Card
     district={
@@ -3761,7 +3761,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "WOODLIN R-104",
       }
     }
-    key="1538860756355"
+    key="1538956730707"
   />
   <Card
     district={
@@ -3782,7 +3782,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "WRAY SCHOOL DISTRICT RD-2",
       }
     }
-    key="1538860756356"
+    key="1538956730708"
   />
   <Card
     district={
@@ -3803,7 +3803,7 @@ exports[`CardContainer should match snapshot 1`] = `
         "school": "YUMA SCHOOL DISTRICT 1",
       }
     }
-    key="1538860756357"
+    key="1538956730709"
   />
 </div>
 `;

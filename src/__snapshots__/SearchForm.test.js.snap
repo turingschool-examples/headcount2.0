@@ -7,6 +7,7 @@ exports[`SearchForm should match snapshot 1`] = `
   >
     <input
       onChange={[Function]}
+      placeholder="search for a school district..."
       type="text"
     />
   </form>

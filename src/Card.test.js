@@ -1,9 +1,7 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-
+import { shallow } from 'enzyme';
 import Card from './Card.js'
-import DistrictRepository from './helper.js';
-import kinderData from './data/kindergartners_in_full_day_program.js';
+
 
 describe('Card', () => {
   const district = {school: 'Colorado', data: {2016: 0.33677}}

@@ -1,9 +1,7 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import DistrictRepository from './helper.js';
 import kinderData from './data/kindergartners_in_full_day_program.js';
-import Card from './Card.js'
-import CompareCard from './CompareCard.js'
 
 import App from './App';
 

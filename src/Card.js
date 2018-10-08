@@ -5,7 +5,7 @@ import './Card.css'
 
 const Card = ({district, addCompareSelections}) => {
   const dataPoints = Object.keys(district.data)
-  return(
+  return (
     <div className="card" 
          onClick={(e) => (addCompareSelections(e))}>
       <div className="name-wrapper">
@@ -25,6 +25,7 @@ Card.propTypes = {
      location: PropTypes.string,
      data: PropTypes.object
   }),
+  addCompareSelections: PropTypes.func
 }
 
 export default Card; 

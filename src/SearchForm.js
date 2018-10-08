@@ -32,7 +32,7 @@ render() {
 }
 
 SearchForm.propTypes = {
-  props: PropTypes.object
+  filterCards: PropTypes.func
 }
 
 
