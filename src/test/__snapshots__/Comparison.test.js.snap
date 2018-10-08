@@ -165,12 +165,5 @@ exports[`Comparison should render content to the DOM 1`] = `
       }
     />
   </div>
-  <button
-    aria-label="close-comparison-section-button"
-    className="close-btn"
-    onClick={[Function]}
-  >
-    Clear
-  </button>
 </section>
 `;

@@ -61,11 +61,4 @@ describe('Comparison', ()=>{
     expect(wrapper).toMatchSnapshot();    
   });
 
-  it('should call processSelection on button click', () => {
-    wrapper.find('.close-btn').simulate('click');
-
-    expect(mockProcesSelection.mock.calls.length).toBe(1);
-  });
-
-
 });

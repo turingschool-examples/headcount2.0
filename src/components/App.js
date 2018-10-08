@@ -57,8 +57,7 @@ class App extends Component {
         }),
         data: newData
       });
-    } else if (district === 'close' || 
-      this.state.selection.includes(district)) {
+    } else if (this.state.selection.includes(district)) {
       this.setState({
         selection: [],
         data: new DistrictRepository(kinderData)

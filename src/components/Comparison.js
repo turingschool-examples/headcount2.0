@@ -39,15 +39,6 @@ const Comparison = (props) => {
           />
         }
       </div>
-      {props.selection.length === 2 &&
-        <button
-          onClick={() => {
-            props.processSelection('close');
-          }}
-          className="close-btn"
-          aria-label="close-comparison-section-button"
-        >Clear</button>
-      }
     </section>
   );
 };
