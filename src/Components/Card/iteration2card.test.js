@@ -22,14 +22,14 @@ describe('Card', () =>  {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('data should present as grey if below 0.5', () => {
+  it('data should present as white if below 0.5', () => {
 
     const wrapper = shallow(<Card {...mockData}/>);
     removeIdeaMock = jest.fn();
 
   });
 
-  it('data should present as white if above 0.5', () => {
+  it('data should present as grey if above 0.5', () => {
 
     const wrapper = shallow(<Card {...mockData}/>);
     removeIdeaMock = jest.fn();
