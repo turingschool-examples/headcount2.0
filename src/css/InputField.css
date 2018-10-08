@@ -1,0 +1,33 @@
+.input-form input{
+  margin: 1rem auto;
+  display: block;
+  width: 300px;
+  height: 35px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  padding-left: .5rem;
+}
+
+.input-form {
+  justify-self: end;
+  margin-right: 4rem;
+  display: block;
+}
+
+.clear-input-button {
+  position: absolute;
+  width: 20px;
+  right: 70px;
+  z-index: 2;
+  display: block;
+}
+
+.clear-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.hidden-button {
+  display: none;
+}
