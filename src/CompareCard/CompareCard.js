@@ -14,7 +14,6 @@ const CompareCard = ({ districtsBeingCompared, districtAverages }) => {
 	})
 
 	if (districtsBeingCompared.length === 2 && districtAverages) {
-		console.log(districtAverages)
 		return (
 			<div className='CompareCard'>
 				{ districtCards[0] }
@@ -43,7 +42,8 @@ const CompareCard = ({ districtsBeingCompared, districtAverages }) => {
 }
 
 CompareCard.propTypes = {
-	districtsBeingCompared: PropTypes.array
+	districtsBeingCompared: PropTypes.array,
+	districtAverages: PropTypes.object
 }
 
 export default CompareCard;

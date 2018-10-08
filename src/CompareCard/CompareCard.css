@@ -8,19 +8,19 @@
 }
 
 .average-card {
-	display: flex;
 	align-items: center;
-	flex-direction: column;
-	justify-content: space-around;
 	background-color: #FFF;
-	text-align: center;
-	width: 15rem;
+	border-radius: 10px;
+	box-shadow: 0px 0px 1px 2px #F5F6F7;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
 	height: 26rem;
+	justify-content: space-around;
 	margin: 0 2rem 0.5rem;
 	padding: 0 0 1rem;
-	box-shadow: 0px 0px 1px 2px #F5F6F7;
-	border-radius: 10px;
-	cursor: pointer;
+	text-align: center;
+	width: 15rem;
 }
 
 .location {
@@ -29,22 +29,23 @@
 }
 
 .average {
-	font-family: 'Open Sans', sans-serif;
-	color: #01411b;
 	background-color: #F5F6F7;
-	margin: 0.2rem auto;
-	font-weight: 300;
-	padding: 0 0.75rem;
 	border-radius: 10px;
+	color: #01411b;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	margin: 0.2rem auto;
+	padding: 0 0.75rem;
 }
 
 .compared {
 	color: #087ff5;
+  font-family: 'Arvo', serif;
 	font-size: 1.5rem;
 }
 
 .label-average, .label-location, .label-compared {
+	color: #026332;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1rem;
-	color: #026332;
 }

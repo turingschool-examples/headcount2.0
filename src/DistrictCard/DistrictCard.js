@@ -56,7 +56,8 @@ DistrictCard.proptypes = {
 	location: PropTypes.string.isRequired,
 	stats: PropTypes.object.isRequired,
 	district: PropTypes.object.isRequired,
-	compareDistrict: PropTypes.func
+	compareDistrict: PropTypes.func,
+	districtsBeingCompared: PropTypes.array
 }
 
 export default DistrictCard;

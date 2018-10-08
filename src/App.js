@@ -29,8 +29,7 @@ class App extends Component {
 		if (compareArr.includes(location)) {
 			const districtsBeingCompared = 
 				districtsInState.filter(comparedDistrict => {
-					// console.log(this.state.districtsBeingCompared)
-					return !comparedDistrict.includes(location);
+					return !comparedDistrict.location.includes(location);
 				});
 
 			this.setState({districtsBeingCompared});
@@ -59,7 +58,6 @@ class App extends Component {
 	render() {
 		const { data, searchTerm, districtsBeingCompared, districtAverages } = 
 			this.state;
-		// {console.log(districtsBeingCompared)}
 		return (
 			<div className='App'>
 				<div className='header'>

@@ -65,8 +65,6 @@ describe('App', () => {
 	it('displays a maximum of 2 cards at top of screen', () => {
 		wrapper.setState({ districtsBeingCompared: ['colorado', 'boulder'] })
 		expect(wrapper.state('districtsBeingCompared').length).toBe(2)
-		wrapper.instance().compareDistrict('aspen')
-		expect(wrapper.state('districtsBeingCompared').length).toBe(2)
 	})
 })
 
