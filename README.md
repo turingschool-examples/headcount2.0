@@ -5,14 +5,14 @@ HeadCount 2.0 is a project designed to challenge your skills at manipulating dat
 You will start the project by importing files containing various educational stats from districts within Colorado by year, per district.
 
 ## Project Goals
-
+ 
 - Separate application logic into small, testable functions.
 - Create modular, reusable React components.
 - Use propTypes to validate props passed to each component.
 - Write meaningful, comprehensive unit and integration tests.
 
 ## Desktop View
-
+ 
 ![Desktop screenshot 1](https://github.com/christopherchateau/headcount2.0/blob/finishing-touches/src/images/Headcount-Desktop-Screenshot-1.png?raw=true)
 
 ![Desktop screenshot 2](https://github.com/christopherchateau/headcount2.0/blob/finishing-touches/src/images/Headcount-Desktop-Screenshot-2.png?raw=true)
