@@ -1,5 +1,6 @@
 import React from 'react';
 import Search from './Search';
+import PropTypes from 'prop-types';
 
 const Header = (props) => {
   return (
@@ -8,6 +9,10 @@ const Header = (props) => {
       <Search search={props.search}/>
     </div>
   );
+};
+
+Header.propTypes = {
+  search: PropTypes.func.isRequired
 };
 
 export default Header;

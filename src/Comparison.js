@@ -1,49 +1,60 @@
 import React from 'react';
 import DistrictRepository from './helper';
 import kinderData from './data/kindergartners_in_full_day_program.js';
+import PropTypes from 'prop-types';
 import './Comparison.css';
 
 const Comparison = (props) => {
-  const district1 = props.selectedDistricts[0]
-  const district2 = props.selectedDistricts[1]
+  const dist1 = props.selectedDistricts[0];
+  const dist2 = props.selectedDistricts[1];
 
   const card1Info = 
-    <div onClick={(event) => { props.removeSelectedDistrict(district1.location) }}>
-      <p>{district1.location}</p>
+    <div onClick={() => { props.removeSelectedDistrict(dist1.location); }}>
+      <p>{dist1.location}</p>
       <div>
-        {Object.keys(district1.stats.data).map(year => {
+        {Object.keys(dist1.stats.data).map(year => {
           return (
-            <p className={district1.stats.data[year] < .5 ? 'lower-half' : 'upper-half'} key={year}>{year} : {district1.stats.data[year]}</p>
-          )
+            <p className=
+              {dist1.stats.data[year] < .5 ? 'lower-half' : 'upper-half'} 
+            key={year}>{year} : {dist1.stats.data[year]}</p>
+          );
         })}
       </div>
-    </div>
+    </div>;
 
   let card2Info;
   let comparisonCard;
 
   if (props.selectedDistricts.length > 1) {
     card2Info = 
-      <div onClick={() => props.removeSelectedDistrict(district2.location)}>
-        <p>{district2.location}</p>
-          <div>
-            {Object.keys(district2.stats.data).map(year => {
-              return (
-                <p className={district2.stats.data[year] < .5 ? 'lower-half' : 'upper-half'} key={year}>{year} : {district2.stats.data[year]}</p>
-              )
-            })}
-          </div>
-      </div>
+      <div onClick={() => props.removeSelectedDistrict(dist2.location)}>
+        <p>{dist2.location}</p>
+        <div>
+          {Object.keys(dist2.stats.data).map(year => {
+            return (
+              <p className=
+                {dist2.stats.data[year] < .5 ? 'lower-half' : 'upper-half'}
+              key={year}>{year} : {dist2.stats.data[year]}</p>
+            );
+          })}
+        </div>
+      </div>;
 
-    const repository = new DistrictRepository(kinderData);
+    const repo = new DistrictRepository(kinderData);
 
-     comparisonCard = 
+    let comp = repo.compareDistrictAverages(dist1.location, dist2.location);
+
+    comparisonCard = 
       <div>
-        <p>{ district1.location } : { repository.findAverage(district1.location) }</p>
-        <p>{ (repository.compareDistrictAverages(district1.location, district2.location)).compared }</p>
-        <p>{ district2.location } : { repository.findAverage(district2.location) }</p>
-      </div>
-    }
+        <p>
+          { dist1.location } : { repo.findAverage(dist1.location) }
+        </p>
+        <p>
+          { comp.compared }
+        </p>
+        <p>{ dist2.location } : { repo.findAverage(dist2.location) }</p>
+      </div>;
+  }
 
   let finalComparisonInfo;
 
@@ -53,7 +64,7 @@ const Comparison = (props) => {
       <div className='card'>
         { card1Info }
       </div>
-    </div>
+    </div>;
 
   } else {
     finalComparisonInfo = 
@@ -67,14 +78,19 @@ const Comparison = (props) => {
       <div className='card'>
         { card2Info }
       </div>
-    </div>
+    </div>;
   }
 
   return (
     <div>
       { finalComparisonInfo }
     </div>
-    )
-}
+  );
+};
+
+Comparison.propTypes = {
+  selectedDistricts: PropTypes.array.isRequired,
+  removeSelectedDistrict: PropTypes.func.isRequired
+};
 
 export default Comparison;

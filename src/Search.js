@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Search extends Component {
   constructor() {
@@ -29,5 +30,9 @@ handleChange = (event) => {
     );
   }
 }
+
+Search.propTypes = {
+  search: PropTypes.func.isRequired
+};
 
 export default Search;

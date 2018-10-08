@@ -1,7 +1,3 @@
-// <p>{ district1.location } : { DistrictRepository.findAverage(district1.location) }</p>
-// <p>{ DistrictRepository.compareDistrictAverages(district1.location, district2.location) }</p>
-// <p>{ district2.location } : { DistrictRepository.findAverage(district2.location) }</p>
-
 class DistrictRepository {
   constructor(data) {
     this.stats = this.sanitizeData(data);
@@ -46,9 +42,9 @@ class DistrictRepository {
         key.includes(upperQuery));
       const filteredData = Object.keys(this.stats)
         .filter(key => allowedKeys.includes(key))
-        .reduce((obj, key) => {
+        .reduce((object, key) => {
           return {
-            ...obj,
+            ...object,
             [key]: this.stats[key]
           };
         }, {});
@@ -63,14 +59,17 @@ class DistrictRepository {
   findAverage = (district) => {
     const districtData = this.findByName(district);
     const totalData = 
+
       Object.keys(districtData.stats)
         .reduce((total, year) => {
           total += districtData.stats[year];
           return total;
         }, 0);
-    const average = parseFloat((totalData / Object.keys(districtData.stats).length).toFixed(3));
 
-    return average;
+    const avg = totalData / Object.keys(districtData.stats).length;
+    const formattedAvg = parseFloat(avg.toFixed(3));
+
+    return formattedAvg;
   }
 
   compareDistrictAverages = (district1, district2) => {
@@ -78,9 +77,12 @@ class DistrictRepository {
     const district2Upper = district2.toUpperCase();
     const district1Avg = this.findAverage(district1);
     const district2Avg = this.findAverage(district2);
-    const comparison = parseFloat((district1Avg / district2Avg).toFixed(3));
+    const comparison = district1Avg / district2Avg;
+    const formattedComparison = parseFloat((comparison).toFixed(3));
+    const dist1 = ([district1Upper]: district1Avg);
+    const dist2 = ([district2Upper]: district2Avg);
 
-    return {[district1Upper]: district1Avg, [district2Upper]: district2Avg, compared: comparison};
+    return {dist1, dist2, compared: formattedComparison};
   }
 }
 

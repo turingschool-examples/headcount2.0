@@ -35,20 +35,24 @@ class App extends Component {
   }
 
   addSelectedDistrict = (location, stats) => {
-    const selectedDistrict = {location: location, stats: stats}
-    const selectedLocations = this.state.selectedDistricts.map(district => district.location)
+    const selectedDistrict = {location: location, stats: stats};
+    const selectedLocations = this.state.selectedDistricts.map(district => {
+      return district.location; 
+    });
 
     if (!selectedLocations.includes(location) && selectedLocations.length < 2) {
-    this.setState({
-      selectedDistricts: [...this.state.selectedDistricts, selectedDistrict]
-      })
+      this.setState({
+        selectedDistricts: [...this.state.selectedDistricts, selectedDistrict]
+      });
     }
   }
 
   removeSelectedDistrict = (location) => {
-    const selectedDistricts = this.state.selectedDistricts.filter(district => district.location !== location)
+    let selectedDistricts = this.state.selectedDistricts.filter(district => {
+      return district.location !== location; 
+    });
 
-    this.setState({ selectedDistricts })
+    this.setState({ selectedDistricts });
   }
 
   render() {
@@ -58,7 +62,7 @@ class App extends Component {
       comparison = 
         <Comparison 
           selectedDistricts={this.state.selectedDistricts}
-          removeSelectedDistrict={this.removeSelectedDistrict}/>
+          removeSelectedDistrict={this.removeSelectedDistrict}/>;
     }
             
     return (
