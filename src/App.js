@@ -25,20 +25,20 @@ class App extends Component {
   
   compareDistrictData = (selectedCard) => {
     if (selectedCard.selected){
-      this.removeCardComparison(selectedCard)
-      return
+      this.removeCardComparison(selectedCard);
+      return;
     }
 
     //add selected property to cardData
-    const newSelectedCard = {...selectedCard, selected: true}
+    const newSelectedCard = {...selectedCard, selected: true};
     
-    if(this.state.compareData.length === 2){
-      this.state.compareData.pop()
+    if (this.state.compareData.length === 2){
+      this.state.compareData.pop();
     }
 
     this.setState({
       compareData: [newSelectedCard, ...this.state.compareData]
-    }, () => this.makeAnalysis())
+    }, () => this.makeAnalysis());
   }
 
   makeAnalysis = () => {
@@ -46,22 +46,22 @@ class App extends Component {
     let distrB;
     let analysis;
 
-    if(this.state.compareData.length === 2){
-      distrA = this.state.compareData[0].location
-      distrB = this.state.compareData[1].location
-      analysis = allSchools.compareDistrictAverages(distrA, distrB)
+    if (this.state.compareData.length === 2){
+      distrA = this.state.compareData[0].location;
+      distrB = this.state.compareData[1].location;
+      analysis = allSchools.compareDistrictAverages(distrA, distrB);
       
-      this.setState({ analysis: analysis })
+      this.setState({ analysis: analysis });
     }
   }
 
   removeCardComparison = (selectedCard) => {
     const updatedCompare = this.state.compareData.filter( district => {
-      return district.location !== selectedCard.location
-    }) 
+      return district.location !== selectedCard.location;
+    }); 
 
     this.setState({
-      compareData: updatedCompare })
+      compareData: updatedCompare });
   }
 
   clearComparison = () => {
@@ -69,7 +69,7 @@ class App extends Component {
       data: allSchools.stats,
       compareData: [],
       analysis: {}
-    })
+    });
   }
   
   filterData = (query) => {
@@ -93,15 +93,16 @@ class App extends Component {
             data={this.state.data} 
           />
         </div>
-    { this.state.compareData.length > 0 &&
-        <CardComparison 
-          compareData={this.state.compareData} 
-          analysis={this.state.analysis} 
-          compareDistrictData={this.compareDistrictData} 
-          clearComparison={this.clearComparison} />
+        { this.state.compareData.length > 0 &&
+          <CardComparison 
+            compareData={this.state.compareData} 
+            analysis={this.state.analysis} 
+            compareDistrictData={this.compareDistrictData} 
+            clearComparison={this.clearComparison} />
         }
-
-        <CardContainer data={this.state.data} compareDistrictData={this.compareDistrictData} />
+        <CardContainer 
+          data={this.state.data} 
+          compareDistrictData={this.compareDistrictData} />
       </div>
     );
   }

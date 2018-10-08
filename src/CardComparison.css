@@ -10,7 +10,6 @@
 
 .comparison-heading {
   font-size: 1.5em;
-
 }
 
 .comparison-data {
@@ -18,7 +17,6 @@
   flex-direction: column;
   justify-content: center;
   padding: 10px;
-
 }
 
 .district-name {
@@ -30,14 +28,11 @@
 .district-avg {
   margin: 0px;
   padding-left: 15px;
-
-
 }
 
 .comparison-value {
   font-weight: 400;
   margin: 10;
-
 }
 
 .clear-btn {

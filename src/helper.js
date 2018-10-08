@@ -25,7 +25,8 @@ export default class DistrictRepository {
         const roundedData = Math.round(year.data * 1000)/1000;
         let yearStats = {year: year.year, data: roundedData};
         years.push(yearStats);
-        let orderedYears = years.sort((statsA, statsB) => statsA.year - statsB.year);
+        let orderedYears = years
+          .sort((statsA, statsB) => statsA.year - statsB.year);
         schoolData = {
           location: district,
           stats: orderedYears
@@ -57,7 +58,7 @@ export default class DistrictRepository {
     if (nameMatch.length === 0){
       return undefined;
     } else { 
-      const yearlyData = nameMatch.reduce((obj, match) => {
+      const yearlyData = nameMatch.reduce((yearObj, match) => {
         const yearData = match.stats.reduce((yearData, district) => {
           if (typeof district.data !== 'number') { district.data = 0; }
           yearData[district.year]= Math.round(district.data * 1000)/1000;

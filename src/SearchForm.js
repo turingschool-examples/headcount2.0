@@ -21,9 +21,11 @@ class SearchForm extends Component {
   }
     
   render() {
-
     const options = this.props.data.map( district => {
-      return <option className='option' value={district.location} key={Math.random()} />;
+      return <option 
+        className='option' 
+        value={district.location} 
+        key={Math.random()} />;
     });
 
     return (
