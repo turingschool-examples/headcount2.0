@@ -19,12 +19,12 @@ exports[`SearchForm should match the snapshot with all the data passed in correc
     >
       <option
         className="option"
-        key="0.24516002388609026"
+        key="0.5011243213058167"
         value="denver"
       />
       <option
         className="option"
-        key="0.75702221660613"
+        key="0.6742463814277346"
         value="boulder"
       />
     </datalist>

@@ -2,13 +2,13 @@
 
 exports[`Card should match the snapshot with all data passed in correctly 1`] = `
 <div
-  className="card"
+  className="card selected"
   onClick={[Function]}
 >
   <h1
     className="card-heading"
   >
-    Colorado
+    denver
   </h1>
   <h2
     className="sub-heading"
@@ -20,10 +20,17 @@ exports[`Card should match the snapshot with all data passed in correctly 1`] = 
   >
     <p
       className="year-data less-than"
-      key="0.680603984136456"
+      key="0.009211060853006714"
     >
        
-      data
+      : 
+       
+    </p>
+    <p
+      className="year-data less-than"
+      key="0.5208901722472918"
+    >
+       
       : 
        
     </p>

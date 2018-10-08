@@ -20,7 +20,14 @@ class App extends Component {
       compareData: [],
       analysis: {}
     };
-    // console.log(this.state)
+  }
+
+  clearComparison = () => {
+    this.setState({
+      data: allSchools.stats,
+      compareData: [],
+      analysis: {}
+    });
   }
   
   compareDistrictData = (selectedCard) => {
@@ -29,7 +36,6 @@ class App extends Component {
       return;
     }
 
-    //add selected property to cardData
     const newSelectedCard = {...selectedCard, selected: true};
     
     if (this.state.compareData.length === 2){
@@ -39,6 +45,15 @@ class App extends Component {
     this.setState({
       compareData: [newSelectedCard, ...this.state.compareData]
     }, () => this.makeAnalysis());
+  }
+
+  displayAll = () => {
+    this.setState({ data: allSchools.stats });
+  }
+
+  filterData = (query) => {
+    const filteredData = allSchools.findAllMatches(query.search);
+    this.setState({ data: filteredData });
   }
 
   makeAnalysis = () => {
@@ -64,22 +79,7 @@ class App extends Component {
       compareData: updatedCompare });
   }
 
-  clearComparison = () => {
-    this.setState({
-      data: allSchools.stats,
-      compareData: [],
-      analysis: {}
-    });
-  }
   
-  filterData = (query) => {
-    const filteredData = allSchools.findAllMatches(query.search);
-    this.setState({ data: filteredData });
-  }
-
-  displayAll = () => {
-    this.setState({ data: allSchools.stats });
-  }
   
   render() {
 
