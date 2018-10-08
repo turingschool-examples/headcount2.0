@@ -60,9 +60,13 @@ describe('App', () => {
 
 	})
 
+	it('displays a maximum of 2 cards at top of screen', () => {
 
+	})
 
+	it('sets district averages summary to state for 2 clicked cards', () => {
 
+	})
 
 
 })

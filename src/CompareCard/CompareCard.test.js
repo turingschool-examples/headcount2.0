@@ -7,23 +7,16 @@ import { shallow } from 'enzyme';
 describe('CompareCard', () => {
 	let wrapper;
 	let mockDistricts;
+	let cardWrapper;
 
 	beforeEach(() => {
 		mockDistricts = [{'colorado': {}}, {'academy 20': {}}]
 		wrapper = shallow(<CompareCard />)
+		cardWrapper = shallow(<DistrictCard />)
 	})
 
 	it('matches the snapshot', () => {
 		expect(wrapper).toMatchSnapshot()
 	})
-
-	it.skip('renders each district clicked', () => {
-		expect(wrapper.find(DistrictCard).length).toEqual(2)
-	})
-
-	it.skip('renders a maximum of 2 districts', () => {
-
-	})
-
 
 })
