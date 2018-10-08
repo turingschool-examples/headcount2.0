@@ -28,7 +28,7 @@ describe('Search', () =>  {
 
     const mockEvent = {target: { value: 'ADAMS', name: 'district'} };
 
-    const expectedState = { district: 'ADAMS' }
+    const expectedState = { district: 'ADAMS' };
 
     wrapper.instance().handleInput(mockEvent);
 
@@ -37,6 +37,14 @@ describe('Search', () =>  {
     expect(handleInput).toBeCalled();
 
     expect(wrapper.state()).toEqual(expectedState);
+
+  });
+
+  it('should update ', () => {
+
+    const wrapper = shallow(<Search {...mockData} searchData={handleInput}/>);
+
+    // wrapper.find('.search-container').simulate('submit', { preventDefault() {} });
 
   });
 

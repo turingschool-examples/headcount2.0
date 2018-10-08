@@ -2,7 +2,6 @@ export default class DistrictRepository {
   constructor(data){
     this.data = data;
     this.stats = this.stats();
-
   }
 
   stats(){
@@ -31,15 +30,31 @@ export default class DistrictRepository {
     return districts;
   }
 
-  findByName(name){
+  // findByName(name) {
+  //   let statsArray = Object.keys(this.stats);
+  //
+  //   if (!name.toUpperCase() || !statsArray.includes(name.toUpperCase())){
+  //     return undefined;
+  //   } else if (statsArray.includes(name.toUpperCase())) {
+  //     return {
+  //       location: name.toUpperCase(),
+  //       stats: this.stats[name.toUpperCase()]
+  //     };
+  //   }
+  // }
+
+  findByName = (name) => {
 
     if (name && this.stats[name.toUpperCase()]){
       return this.stats[name.toUpperCase()];
     }
-
+    // return {
+    //   location: this.stats[name.toUpperCase()];
+    //
+    // }
   }
 
-  findAllMatches(districtName){
+  findAllMatches = (districtName) => {
 
     let districtsArray = Object.keys(this.stats);
 

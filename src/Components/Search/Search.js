@@ -12,11 +12,10 @@ class Search extends Component{
     }
   }
 
-  handleSubmit(event){
+  handleSubmit = (event) => {
     event.preventDefault();
 
     this.props.searchData(this.state.district);
-
   }
 
   handleInput = (event) => {
