@@ -1,0 +1,46 @@
+/*CARD COMPONENT RELATED CSS GOES HERE*/
+.Card {
+  height: 350px;
+  width: 250px;
+  margin: 5px 0;
+  padding: 0.5rem;
+  padding-bottom: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4rem 1fr;
+  justify-items: center;
+  color: #006989;
+  letter-spacing: 0.5px;
+  border-radius: 5%;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-sizing: border-box;
+}
+
+.Card h2 {
+  text-align: center;
+  grid-row: 1 / 2;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+  padding-top: 1.25rem;
+}
+
+ul {
+  grid-row: 2 / 3;
+  list-style-type: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-size: 1.5rem;
+  padding-left: 0;
+  align-self: center;
+}
+
+.low {
+  color: #EF713B;
+}
+
+.selected {
+  border: 5px solid #EF713B;
+}

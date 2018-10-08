@@ -1,0 +1,22 @@
+/*SEARCH COMPONENT RELATED CSS GOES HERE*/
+.Search {
+  width: 35%;
+  display: flex;
+  justify-content: space-between
+}
+
+input {
+  height: 2rem;
+  width: 100%;
+  border: 2px solid #BEBEBE;
+  padding-left: .6rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+  color: #006989;
+}
+
+::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #9E9E9E;
+}

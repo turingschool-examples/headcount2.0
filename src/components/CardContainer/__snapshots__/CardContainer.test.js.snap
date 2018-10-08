@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardContainer matches the snapshot 1`] = `
+<main
+  className="CardContainer"
+>
+  <Card
+    key="COLORADO-district"
+    location="COLORADO"
+  />
+  <Card
+    key="ALAMOSA-district"
+    location="ALAMOSA"
+  />
+</main>
+`;

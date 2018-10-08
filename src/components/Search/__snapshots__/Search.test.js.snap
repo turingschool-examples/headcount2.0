@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search should have a search input 1`] = `
+<form
+  className="Search"
+  onSubmit={[Function]}
+>
+  <input
+    aria-label="Search for a specific district here"
+    className="search-input"
+    name="query"
+    onChange={[Function]}
+    placeholder="Search for a specific district"
+    value=""
+  />
+</form>
+`;
