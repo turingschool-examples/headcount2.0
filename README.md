@@ -13,6 +13,10 @@ You will start the project by importing files containing various educational sta
 
 ## Desktop View
 
+![Design inspiration image 1](https://github.com/christopherchateau/headcount2.0/blob/finishing-touches/src/images/Headcount-Desktop-Screenshot-1.png?raw=true)
+(https://github.com/christopherchateau/headcount2.0/blob/finishing-touches/src/images/Headcount-Desktop-Screenshot-2.png?raw=true)
+
+
 ## Mobile View
 
 # Original Project Assignment:
