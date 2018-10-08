@@ -30,40 +30,23 @@ export default class DistrictRepository {
     return districts;
   }
 
-  // findByName(name) {
-  //   let statsArray = Object.keys(this.stats);
-  //
-  //   if (!name.toUpperCase() || !statsArray.includes(name.toUpperCase())){
-  //     return undefined;
-  //   } else if (statsArray.includes(name.toUpperCase())) {
-  //     return {
-  //       location: name.toUpperCase(),
-  //       stats: this.stats[name.toUpperCase()]
-  //     };
-  //   }
-  // }
-
   findByName = (name) => {
-
-    if (name && this.stats[name.toUpperCase()]){
-      return this.stats[name.toUpperCase()];
+    if (!name || !this.stats[name.toUpperCase()]) {
+      return undefined;
     }
-
+    return this.stats[name.toUpperCase()];
   }
 
   findAllMatches = (districtName) => {
+   let districtArray = Object.keys(this.stats);
+   if (!districtName) {
+     return districtArray.map( district => this.stats[district]);
+   } else {
+     let filteredDistricts = districtArray.filter( district =>
+       district.includes(districtName.toUpperCase())
+     );
+     return filteredDistricts.map( district => this.stats[district]);
+   }
+ }
 
-    let districtsArray = Object.keys(this.stats);
-
-    let mapDistricts = districtsArray.map(district => { return this.stats[district]; });
-
-    if (!districtName){
-      return mapDistricts;
-    } else if (districtName){
-      let filterDistricts = districtsArray.filter(district=>{ return district.includes(districtName.toUpperCase()); });
-      return filterDistricts;
-    } else {
-      return [];
-    }
-  }
 }

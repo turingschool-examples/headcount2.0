@@ -27,7 +27,7 @@ class App extends Component {
 
     const districts = new DistrictRepository(kinderdata);
 
-    const newData = districts.findByName(userInput);
+    const newData = districts.findAllMatches(userInput);
 
     this.setState({
       districtData: {...newData}
