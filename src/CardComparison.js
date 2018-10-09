@@ -36,7 +36,6 @@ const CardComparison = (props) => {
               className="clear-btn" 
               onClick={()=> props.clearComparison()}>Clear</button>
           </div>
-      
       }
     </div>
   );

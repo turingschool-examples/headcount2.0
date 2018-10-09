@@ -1,6 +1,8 @@
 import React from 'react';
 import App from './App';
 import { shallow } from 'enzyme';
+import DistrictRepository from './helper';
+import kinderData from './data/kindergartners_in_full_day_program.js';
 
 describe('App', () => {
   let wrapper;
@@ -78,19 +80,20 @@ describe('App', () => {
 
   // it('should set the state with a new analysis object', () => {
     
+  //   const allSchools = new DistrictRepository(kinderData);
   //   const initialAnalysis= {}
   //   const initialCompareData = [{
-  //   location: 'denver', 
-  //   stats: [{2001: 2}], 
-  //   selected: true
-  // },
-  //   {location: 'boulder', stats: [{2002: 1}], selected: true}];
+  //     location: 'denver', 
+  //     stats: [{2001: 2}], 
+  //     selected: true
+  //   }];
+  //   const mockDistrict = {location: 'boulder', stats: [{2002: 1}], selected: true};
   //   const expected = {'denver': 2, 'boulder': 1, compared: 2}
 
-  //   wrapper.setState({  analysis: initialAnalysis,
-  //                       compareData: initialCompareData })
-  //   wrapper.instance().makeAnalysis();
-
+  //   wrapper.setState({  analysis: initialAnalysis, compareData: initialCompareData })
+                        
+  //   wrapper.instance().compareDistrictData(mockDistrict);
+    
   //   expect(wrapper.state('analysis')).toEqual(expected);
   //   expect(wrapper.state('analysis').length).toEqual(1);
 

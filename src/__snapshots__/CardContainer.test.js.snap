@@ -16,7 +16,7 @@ exports[`CardContainer should match the snapshot with all data passed in correct
         ],
       }
     }
-    key="0.19449928746916045"
+    key="0.9488309976733398"
   />
   <Card
     compareDistrictData={[Function]}
@@ -30,7 +30,7 @@ exports[`CardContainer should match the snapshot with all data passed in correct
         ],
       }
     }
-    key="0.2592622780689873"
+    key="0.025373462429416183"
   />
 </div>
 `;

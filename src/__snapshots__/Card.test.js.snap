@@ -20,7 +20,7 @@ exports[`Card should match the snapshot with all data passed in correctly 1`] = 
   >
     <p
       className="year-data less-than"
-      key="0.009211060853006714"
+      key="0.008164113608783108"
     >
        
       : 
@@ -28,7 +28,7 @@ exports[`Card should match the snapshot with all data passed in correctly 1`] = 
     </p>
     <p
       className="year-data less-than"
-      key="0.5208901722472918"
+      key="0.5853382634288147"
     >
        
       : 
