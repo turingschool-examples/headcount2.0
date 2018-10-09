@@ -10,21 +10,41 @@ import CardContainer from './CardContainer';
 import SearchFrom from './SearchForm';
 import CardComparison from './CardComparison';
 
-const allSchools = new DistrictRepository(kinderData);
+// const allSchools = new DistrictRepository(kinderData);
+
+//allschools.stats---> change tp this.state.stats
+
+//this.stats.data===> change to STATS
 
 class App extends Component {
   constructor(){
     super();
     this.state = { 
-      data: allSchools.stats,
+      repository: {},
+      stats: [],
       compareData: [],
       analysis: {}
     };
   }
 
-  clearComparison = () => {
+  componentDidMount = () => {
+    this.populateDistrict()
+  }
+
+  populateDistrict = () => {
+    let repository = new DistrictRepository(kinderData)
+    let districtStats = repository.findAllMatches()
+
     this.setState({
-      data: allSchools.stats,
+      repository: repository,
+      stats: districtStats
+    })
+  }
+
+  clearComparison = () => {
+    this.populateDistrict()
+
+    this.setState({
       compareData: [],
       analysis: {}
     });
@@ -48,12 +68,14 @@ class App extends Component {
   }
 
   displayAll = () => {
-    this.setState({ data: allSchools.stats });
+    // this.setState({ data: allSchools.stats });
+    this.populateDistrict()
   }
 
   filterData = (query) => {
-    const filteredData = allSchools.findAllMatches(query.search);
-    this.setState({ data: filteredData });
+    const filteredData = this.state.repository.findAllMatches(query.search)
+    // const filteredData = allSchools.findAllMatches(query.search);
+    this.setState({ stats: filteredData });
   }
 
   makeAnalysis = () => {
@@ -64,7 +86,9 @@ class App extends Component {
     if (this.state.compareData.length === 2){
       distrA = this.state.compareData[0].location;
       distrB = this.state.compareData[1].location;
-      analysis = allSchools.compareDistrictAverages(distrA, distrB);
+      // analysis = allSchools.compareDistrictAverages(distrA, distrB);
+      analysis = this.state.repository.compareDistrictAverages(distrA, distrB);
+
       
       this.setState({ analysis: analysis });
     }
@@ -88,7 +112,7 @@ class App extends Component {
           <SearchFrom 
             filterData={this.filterData} 
             displayAll={this.displayAll}
-            data={this.state.data} 
+            data={this.state.stats} 
           />
         </div>
         { this.state.compareData.length > 0 &&
@@ -99,7 +123,7 @@ class App extends Component {
             clearComparison={this.clearComparison} />
         }
         <CardContainer 
-          data={this.state.data} 
+          data={this.state.stats} 
           compareDistrictData={this.compareDistrictData} />
       </div>
     );
