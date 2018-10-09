@@ -79,8 +79,6 @@ class App extends Component {
       compareData: updatedCompare });
   }
 
-  
-  
   render() {
 
     return (
