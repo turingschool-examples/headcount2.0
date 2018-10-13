@@ -89,11 +89,12 @@ class App extends Component {
     let distrA;
     let distrB;
     let analysis;
+    const { compareData, repository } = this.state
 
-    if (this.state.compareData.length === 2){
-      distrA = this.state.compareData[0].location;
-      distrB = this.state.compareData[1].location;
-      analysis = this.state.repository.compareDistrictAverages(distrA, distrB);
+    if (compareData.length === 2){
+      distrA = compareData[0].location;
+      distrB = compareData[1].location;
+      analysis = repository.compareDistrictAverages(distrA, distrB);
 
       this.setState({ analysis: analysis });
     }

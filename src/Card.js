@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = (props) => {
+const Card = ({district, checkComparison}) => {
 
   let cardClass;
-  props.district.selected === true 
+  district.selected === true 
     ? cardClass = 'card selected'
     : cardClass = 'card';
 
-  const dataPoints = props.district.stats.map( year => {
+  const dataPoints = district.stats.map( year => {
     let dataClassName;
     year.data > 0.5 
       ? dataClassName = 'year-data greater-than' 
@@ -20,8 +20,8 @@ const Card = (props) => {
 
   return (
     <div className={cardClass} 
-      onClick={()=> props.checkComparison(props.district)}>
-      <h1 className='card-heading'>{props.district.location}</h1>
+      onClick={()=> checkComparison(district)}>
+      <h1 className='card-heading'>{district.location}</h1>
       <h2 className='sub-heading'>Kindergarten</h2>
       <div className='card-data'>
         {dataPoints}
