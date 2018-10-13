@@ -9,7 +9,7 @@ const CardContainer = (props) => {
     return <Card 
       district={district} 
       key={Math.random()} 
-      compareDistrictData={props.compareDistrictData} />;
+      checkComparison={props.checkComparison} />;
   });
   
   return (
@@ -21,7 +21,7 @@ const CardContainer = (props) => {
 
 CardContainer.propTypes = {
   data: PropTypes.array,
-  compareDistrictData: PropTypes.func
+  checkComparison: PropTypes.func
 };
 
 export default CardContainer;

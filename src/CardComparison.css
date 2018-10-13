@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: center;
   border: thin solid black;
-  margin: 30px auto;
+  margin: 30px auto 10px;
   font-family: 'Raleway', sans-serif;
   width: 65%;
 }

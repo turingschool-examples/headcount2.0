@@ -15,7 +15,7 @@ const CardComparison = (props) => {
     return <Card 
       district={district} 
       key={Math.random()} 
-      compareDistrictData={props.compareDistrictData} 
+      checkComparison={props.checkComparison} 
       clearComparison={props.clearComparison} />;
   });
 
@@ -44,7 +44,7 @@ const CardComparison = (props) => {
 CardComparison.propTypes = {
   analysis: PropTypes.object.isRequired,
   compareData: PropTypes.array.isRequired,
-  compareDistrictData: PropTypes.func.isRequired,
+  checkComparison: PropTypes.func.isRequired,
   clearComparison: PropTypes.func.isRequired
 };
 

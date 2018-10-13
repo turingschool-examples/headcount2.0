@@ -18,7 +18,8 @@ class App extends Component {
       repository: {},
       stats: [],
       compareData: [],
-      analysis: {}
+      analysis: {},
+      selected: false,
     };
   }
 
@@ -41,15 +42,26 @@ class App extends Component {
 
     this.setState({
       compareData: [],
-      analysis: {}
+      analysis: {},
+      selected: false
     });
   }
   
-  compareDistrictData = (selectedCard) => {
+  checkComparison = (selectedCard) => {
+    this.setState({ selected: false })
+
     if (selectedCard.selected){
       this.removeCardComparison(selectedCard);
       return;
+    } else if (this.state.compareData.find( district => district.location === selectedCard.location)) {
+      this.setState({ selected: true })
+      return 
+    } else {
+      this.compareDistrictData(selectedCard)
     }
+  }
+
+  compareDistrictData = (selectedCard) => {
 
     const currentComparison = this.state.compareData
     const newSelectedCard = {...selectedCard, selected: true};
@@ -64,6 +76,7 @@ class App extends Component {
   }
 
   displayAll = () => {
+    this.setState({ selected: false })
     this.populateDistrict()
   }
 
@@ -111,12 +124,17 @@ class App extends Component {
           <CardComparison 
             compareData={compareData} 
             analysis={analysis} 
-            compareDistrictData={this.compareDistrictData} 
+            checkComparison={this.checkComparison} 
             clearComparison={this.clearComparison} />
         }
+
+        { this.state.selected && 
+          <h3 className="error-message">Card already selected</h3>
+        }
+
         <CardContainer 
           data={stats} 
-          compareDistrictData={this.compareDistrictData} />
+          checkComparison={this.checkComparison} />
       </div>
     );
   }
