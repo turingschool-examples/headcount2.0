@@ -48,13 +48,16 @@ export default class DistrictRepository {
   }
 
 
-  findByName(search){
-    if (search === undefined) {
+  findByName(query){
+    if (query === undefined) {
       return undefined;
     }
-    let upperSearch = search.toUpperCase();
+
+    let upperSearch = query.toUpperCase();
+
     const nameMatch = this.stats.filter( district =>  
       district.location === upperSearch );
+
     if (nameMatch.length === 0){
       return undefined;
     } else { 
@@ -79,6 +82,7 @@ export default class DistrictRepository {
 
   findAllMatches(search){
     let nameMatch;
+    
     if (search === undefined){
       return this.stats;
     } else {

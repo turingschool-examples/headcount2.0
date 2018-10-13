@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const CardContainer = ({ data, checkComparison, compareData }) => {
 
-  const cards = data.map(district => {
+  const cards = data.map((district, index) => {
     return <Card 
       district={district} 
       key={Math.random()} 

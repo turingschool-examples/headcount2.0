@@ -3,21 +3,10 @@ import PropTypes from 'prop-types';
 
 const Card = ({district, checkComparison, compareData}) => {
 
-
   let cardState;
-
   const cardCheck = compareData.find( school => school.location === district.location)
 
-  if (cardCheck) {
-    cardState = 'selected'
-  } else {
-    cardState = ''
-  }
-
-  // let cardClass;
-  // district.selected === true 
-  //   ? cardClass = 'card selected'
-  //   : cardClass = 'card';
+  cardCheck ? cardState = 'selected' : cardState = ''
 
   const dataPoints = district.stats.map( year => {
     let dataClassName;

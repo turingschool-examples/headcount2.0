@@ -5,11 +5,15 @@
   width: 200px;
   font-family: 'Raleway', sans-serif;
   box-sizing: border-box;
+  box-shadow: 4px 4px 2px #aeaeae;
+}
 
+.card:hover {
+  box-shadow: 6px 6px 4px #888888;
 }
 
 .selected {
-  width: 220px;
+  width: 200px;
   border-color: red;
 }
 

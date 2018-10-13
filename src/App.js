@@ -20,7 +20,6 @@ class App extends Component {
       compareData: [],
       analysis: {},
       selected: false,
-      currentSelection: []
     };
   }
 
@@ -64,7 +63,7 @@ class App extends Component {
 
   compareDistrictData = (selectedCard) => {
 
-    const currentComparison = this.state.compareData
+    const currentComparison = this.state.compareData;
     const newSelectedCard = {...selectedCard, selected: true};
     
     if (currentComparison.length === 2){
@@ -122,6 +121,7 @@ class App extends Component {
             data={stats} 
           />
         </div>
+
         { compareData.length > 0 &&
           <CardComparison 
             compareData={compareData} 
