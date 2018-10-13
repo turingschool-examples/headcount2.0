@@ -16,7 +16,8 @@ const CardComparison = ({ analysis, checkComparison, clearComparison, compareDat
       district={district} 
       key={Math.random()} 
       checkComparison={checkComparison} 
-      clearComparison={clearComparison} />;
+      clearComparison={clearComparison}
+      compareData={compareData} />;
   });
 
   return (

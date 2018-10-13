@@ -3,13 +3,14 @@ import Card from './Card';
 import './CardContainer.css';
 import PropTypes from 'prop-types';
 
-const CardContainer = ({ data, checkComparison }) => {
+const CardContainer = ({ data, checkComparison, compareData }) => {
 
   const cards = data.map(district => {
     return <Card 
       district={district} 
       key={Math.random()} 
-      checkComparison={checkComparison} />;
+      checkComparison={checkComparison}
+      compareData={compareData} />;
   });
   
   return (

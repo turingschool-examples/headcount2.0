@@ -20,6 +20,7 @@ class App extends Component {
       compareData: [],
       analysis: {},
       selected: false,
+      currentSelection: []
     };
   }
 
@@ -134,6 +135,7 @@ class App extends Component {
         }
 
         <CardContainer 
+          compareData={compareData} 
           data={stats} 
           checkComparison={this.checkComparison} />
       </div>
