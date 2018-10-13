@@ -8889,7 +8889,8 @@ exports[`App match the snapshot 1`] = `
     />
   </div>
   <CardContainer
-    compareDistrictData={[Function]}
+    checkComparison={[Function]}
+    compareData={Array []}
     data={
       Array [
         Object {

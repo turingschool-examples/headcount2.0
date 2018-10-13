@@ -1,15 +1,23 @@
+.comparison-wrapper {
+  border: thin solid black;
+  width: 65%;
+  margin: 0px auto 10px;
+  
+}
+
 .card-comparison-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border: thin solid black;
-  margin: 30px auto 10px;
   font-family: 'Raleway', sans-serif;
-  width: 65%;
 }
 
 .comparison-heading {
   font-size: 1.5em;
+  text-align: center;
+  margin: 20px;
+  font-family: 'Raleway', sans-serif;
+
 }
 
 .comparison-data {

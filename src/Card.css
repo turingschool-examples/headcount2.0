@@ -2,14 +2,19 @@
   border: thin solid black;
   padding: 15px;
   margin: 10px;
-  width: 17%;
+  width: 200px;
   font-family: 'Raleway', sans-serif;
   box-sizing: border-box;
+  box-shadow: 4px 4px 2px #aeaeae;
+}
 
+.card:hover {
+  box-shadow: 6px 6px 4px #888888;
 }
 
 .selected {
-  width: 26%;
+  width: 200px;
+  border-color: red;
 }
 
 .card-heading {

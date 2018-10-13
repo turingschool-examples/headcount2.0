@@ -5,7 +5,6 @@ exports[`CardContainer should match the snapshot with all data passed in correct
   className="card-container"
 >
   <Card
-    compareDistrictData={[Function]}
     district={
       Object {
         "location": "denver",
@@ -16,10 +15,9 @@ exports[`CardContainer should match the snapshot with all data passed in correct
         ],
       }
     }
-    key="0.9488309976733398"
+    key="0.8040570783513796"
   />
   <Card
-    compareDistrictData={[Function]}
     district={
       Object {
         "location": "boulder",
@@ -30,7 +28,7 @@ exports[`CardContainer should match the snapshot with all data passed in correct
         ],
       }
     }
-    key="0.025373462429416183"
+    key="0.998881955084906"
   />
 </div>
 `;

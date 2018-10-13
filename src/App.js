@@ -63,7 +63,7 @@ class App extends Component {
 
   compareDistrictData = (selectedCard) => {
 
-    const currentComparison = this.state.compareData
+    const currentComparison = this.state.compareData;
     const newSelectedCard = {...selectedCard, selected: true};
     
     if (currentComparison.length === 2){
@@ -89,11 +89,12 @@ class App extends Component {
     let distrA;
     let distrB;
     let analysis;
+    const { compareData, repository } = this.state
 
-    if (this.state.compareData.length === 2){
-      distrA = this.state.compareData[0].location;
-      distrB = this.state.compareData[1].location;
-      analysis = this.state.repository.compareDistrictAverages(distrA, distrB);
+    if (compareData.length === 2){
+      distrA = compareData[0].location;
+      distrB = compareData[1].location;
+      analysis = repository.compareDistrictAverages(distrA, distrB);
 
       this.setState({ analysis: analysis });
     }
@@ -120,6 +121,7 @@ class App extends Component {
             data={stats} 
           />
         </div>
+
         { compareData.length > 0 &&
           <CardComparison 
             compareData={compareData} 
@@ -133,6 +135,7 @@ class App extends Component {
         }
 
         <CardContainer 
+          compareData={compareData} 
           data={stats} 
           checkComparison={this.checkComparison} />
       </div>
