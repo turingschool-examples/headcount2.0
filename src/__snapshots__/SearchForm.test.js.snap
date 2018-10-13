@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm should match the snapshot with all the data passed in correctly 1`] = `
+<div>
+  <form
+    className="search"
+    onSubmit={[Function]}
+  >
+    <input
+      className="input-search"
+      list="matches"
+      name="search"
+      onChange={[Function]}
+      placeholder="Search for School District"
+      value=""
+    />
+    <datalist
+      id="matches"
+    >
+      <option
+        className="option"
+        key="0.6707279570737692"
+        value="denver"
+      />
+      <option
+        className="option"
+        key="0.6055289785202185"
+        value="boulder"
+      />
+    </datalist>
+    <button
+      className="btn-submit-search"
+    >
+      Submit
+    </button>
+    <button
+      className="btn-display-all"
+      onClick={[Function]}
+    >
+      Display All
+    </button>
+  </form>
+</div>
+`;

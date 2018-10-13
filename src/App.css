@@ -1,1 +1,22 @@
-/*APP COMPONENT RELATED CSS GOES HERE*/
+.header {
+  font-family: 'Raleway', sans-serif;
+  color: #0095A9;
+  font-size: 3.5rem;
+  text-align: center;
+  margin: 0;
+  padding: 25px;
+  letter-spacing: -1.5px;
+}
+
+.header-container {
+  background-color: #F0F8FF;
+  margin: 0;
+}
+
+.error-message {
+  text-align: center;
+  margin: 0;
+}
+
+
+
