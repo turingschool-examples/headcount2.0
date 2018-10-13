@@ -15,7 +15,7 @@ const CardComparison = (props) => {
     return <Card 
       district={district} 
       key={Math.random()} 
-      compareDistrictData={props.compareDistrictData} 
+      checkComparison={props.checkComparison} 
       clearComparison={props.clearComparison} />;
   });
 
@@ -25,27 +25,26 @@ const CardComparison = (props) => {
       {compareCards}
 
       { props.compareData.length === 2 &&
-          <div className='comparison-data'>
-            <h1 className='comparison-heading'>School District Comparison</h1>
-            <h3 className='district-name'>{districtA}</h3>
-            <p className='district-avg'>Average: {distAAvg}</p>
-            <h3 className='district-name'>{districtB}</h3>
-            <p className='district-avg'>Average: {distBAvg}</p>
-            <h4 className='comparison-value'>Compared Value: {comparison}</h4>
-            <button 
-              className="clear-btn" 
-              onClick={()=> props.clearComparison()}>Clear</button>
-          </div>
+        <div className='comparison-data'>
+          <h1 className='comparison-heading'>School District Comparison</h1>
+          <h3 className='district-name'>{districtA}</h3>
+          <p className='district-avg'>Average: {distAAvg}</p>
+          <h3 className='district-name'>{districtB}</h3>
+          <p className='district-avg'>Average: {distBAvg}</p>
+          <h4 className='comparison-value'>Compared Value: {comparison}</h4>
+          <button 
+            className="clear-btn" 
+            onClick={()=> props.clearComparison()}>Clear</button>
+        </div>
       }
     </div>
   );
 };
 
 CardComparison.propTypes = {
-  // district: PropTypes.object.isRequired
   analysis: PropTypes.object.isRequired,
   compareData: PropTypes.array.isRequired,
-  compareDistrictData: PropTypes.func.isRequired,
+  checkComparison: PropTypes.func.isRequired,
   clearComparison: PropTypes.func.isRequired
 };
 

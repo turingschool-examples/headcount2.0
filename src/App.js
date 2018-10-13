@@ -10,11 +10,6 @@ import CardContainer from './CardContainer';
 import SearchFrom from './SearchForm';
 import CardComparison from './CardComparison';
 
-// const allSchools = new DistrictRepository(kinderData);
-
-//allschools.stats---> change tp this.state.stats
-
-//this.stats.data===> change to STATS
 
 class App extends Component {
   constructor(){
@@ -23,7 +18,8 @@ class App extends Component {
       repository: {},
       stats: [],
       compareData: [],
-      analysis: {}
+      analysis: {},
+      selected: false,
     };
   }
 
@@ -46,35 +42,46 @@ class App extends Component {
 
     this.setState({
       compareData: [],
-      analysis: {}
+      analysis: {},
+      selected: false
     });
   }
   
-  compareDistrictData = (selectedCard) => {
+  checkComparison = (selectedCard) => {
+    this.setState({ selected: false })
+
     if (selectedCard.selected){
       this.removeCardComparison(selectedCard);
       return;
+    } else if (this.state.compareData.find( district => district.location === selectedCard.location)) {
+      this.setState({ selected: true })
+      return 
+    } else {
+      this.compareDistrictData(selectedCard)
     }
+  }
 
+  compareDistrictData = (selectedCard) => {
+
+    const currentComparison = this.state.compareData
     const newSelectedCard = {...selectedCard, selected: true};
     
-    if (this.state.compareData.length === 2){
-      this.state.compareData.pop();
+    if (currentComparison.length === 2){
+      currentComparison.pop();
     }
 
     this.setState({
-      compareData: [newSelectedCard, ...this.state.compareData]
+      compareData: [newSelectedCard, ...currentComparison]
     }, () => this.makeAnalysis());
   }
 
   displayAll = () => {
-    // this.setState({ data: allSchools.stats });
+    this.setState({ selected: false })
     this.populateDistrict()
   }
 
   filterData = (query) => {
     const filteredData = this.state.repository.findAllMatches(query.search)
-    // const filteredData = allSchools.findAllMatches(query.search);
     this.setState({ stats: filteredData });
   }
 
@@ -86,10 +93,8 @@ class App extends Component {
     if (this.state.compareData.length === 2){
       distrA = this.state.compareData[0].location;
       distrB = this.state.compareData[1].location;
-      // analysis = allSchools.compareDistrictAverages(distrA, distrB);
       analysis = this.state.repository.compareDistrictAverages(distrA, distrB);
 
-      
       this.setState({ analysis: analysis });
     }
   }
@@ -104,7 +109,7 @@ class App extends Component {
   }
 
   render() {
-
+    const { stats, analysis, compareData } = this.state
     return (
       <div>
         <div className="header-container">
@@ -112,19 +117,24 @@ class App extends Component {
           <SearchFrom 
             filterData={this.filterData} 
             displayAll={this.displayAll}
-            data={this.state.stats} 
+            data={stats} 
           />
         </div>
-        { this.state.compareData.length > 0 &&
+        { compareData.length > 0 &&
           <CardComparison 
-            compareData={this.state.compareData} 
-            analysis={this.state.analysis} 
-            compareDistrictData={this.compareDistrictData} 
+            compareData={compareData} 
+            analysis={analysis} 
+            checkComparison={this.checkComparison} 
             clearComparison={this.clearComparison} />
         }
+
+        { this.state.selected && 
+          <h3 className="error-message">Card already selected</h3>
+        }
+
         <CardContainer 
-          data={this.state.stats} 
-          compareDistrictData={this.compareDistrictData} />
+          data={stats} 
+          checkComparison={this.checkComparison} />
       </div>
     );
   }

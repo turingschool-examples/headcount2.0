@@ -20,7 +20,7 @@ const Card = (props) => {
 
   return (
     <div className={cardClass} 
-      onClick={()=> props.compareDistrictData(props.district)}>
+      onClick={()=> props.checkComparison(props.district)}>
       <h1 className='card-heading'>{props.district.location}</h1>
       <h2 className='sub-heading'>Kindergarten</h2>
       <div className='card-data'>
@@ -33,7 +33,7 @@ const Card = (props) => {
 
 Card.propTypes = {
   district: PropTypes.object,
-  compareDistrictData: PropTypes.func
+  checkComparison: PropTypes.func
 };
 
 export default Card;
