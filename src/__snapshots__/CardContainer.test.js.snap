@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardContainer should match the snapshot with all data passed in correctly 1`] = `
+<div
+  className="card-container"
+>
+  <Card
+    district={
+      Object {
+        "location": "denver",
+        "stats": Array [
+          Object {
+            "2001": 2,
+          },
+        ],
+      }
+    }
+  />
+  <Card
+    district={
+      Object {
+        "location": "boulder",
+        "stats": Array [
+          Object {
+            "2002": 1,
+          },
+        ],
+      }
+    }
+  />
+</div>
+`;

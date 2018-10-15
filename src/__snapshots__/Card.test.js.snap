@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot with all data passed in correctly 1`] = `
+<div
+  className="card selected"
+  onClick={[Function]}
+>
+  <h1
+    className="card-heading"
+  >
+    denver
+  </h1>
+  <h2
+    className="sub-heading"
+  >
+    Kindergarten
+  </h2>
+  <div
+    className="card-data"
+  >
+    <p
+      className="year-data less-than"
+    >
+       
+      : 
+       
+    </p>
+    <p
+      className="year-data less-than"
+    >
+       
+      : 
+       
+    </p>
+    <p
+      className="less-than-tag"
+    >
+      * less than 0.5
+    </p>
+  </div>
+</div>
+`;
