@@ -8,7 +8,7 @@ const CardContainer = ({ data, checkComparison, compareData }) => {
   const cards = data.map((district, index) => {
     return <Card 
       district={district} 
-      // key={Math.random()} 
+      key={Math.random()} 
       checkComparison={checkComparison}
       compareData={compareData} />;
   });

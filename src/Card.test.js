@@ -49,7 +49,8 @@ describe('Card', () => {
     expect(wrapper.find('.card').length).toEqual(1);
   });
 
-  it('should have a className of selected if it is in the compareData array', () => {})
+  it('should have a className of selected if it is in the compareData array', () => {
+  })
   
   it('should have a className of year-data greater-than if the data is greater than 0.5', () => {})
   
