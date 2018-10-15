@@ -15,7 +15,8 @@ const Card = ({district, checkComparison, compareData}) => {
       : dataClassName = 'year-data less-than';
     return <p 
       className={dataClassName} 
-      key={Math.random()}> {year.year}: {year.data} </p>;
+      // key={Math.random()}
+        > {year.year}: {year.data} </p>;
   });
 
   return (

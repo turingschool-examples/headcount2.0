@@ -47,7 +47,6 @@ exports[`CardComparison should match the snapshot with all data passed in correc
           ],
         }
       }
-      key="0.9639338131506183"
     />
     <Card
       clearComparison={[Function]}
@@ -84,7 +83,6 @@ exports[`CardComparison should match the snapshot with all data passed in correc
           ],
         }
       }
-      key="0.08274623535410264"
     />
     <div
       className="comparison-data"

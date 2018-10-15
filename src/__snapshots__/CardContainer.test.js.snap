@@ -15,7 +15,6 @@ exports[`CardContainer should match the snapshot with all data passed in correct
         ],
       }
     }
-    key="0.8040570783513796"
   />
   <Card
     district={
@@ -28,7 +27,6 @@ exports[`CardContainer should match the snapshot with all data passed in correct
         ],
       }
     }
-    key="0.998881955084906"
   />
 </div>
 `;

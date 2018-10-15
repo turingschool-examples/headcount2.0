@@ -69,7 +69,7 @@ class App extends Component {
     if (currentComparison.length === 2){
       currentComparison.pop();
     }
-
+    
     this.setState({
       compareData: [newSelectedCard, ...currentComparison]
     }, () => this.makeAnalysis());
@@ -112,7 +112,7 @@ class App extends Component {
   render() {
     const { stats, analysis, compareData } = this.state
     return (
-      <div>
+      <div className='main'>
         <div className="header-container">
           <h1 className="header">COLORADO Headcount 2.0</h1>
           <SearchFrom 

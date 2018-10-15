@@ -1,3 +1,8 @@
+.main {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .header {
   font-family: 'Raleway', sans-serif;
   color: #0095A9;
