@@ -14,7 +14,7 @@ const CardComparison = ({ analysis, checkComparison, clearComparison, compareDat
   const compareCards = compareData.map(district => {
     return <Card 
       district={district} 
-      key={Math.random()} 
+      // key={Math.random()} 
       checkComparison={checkComparison} 
       clearComparison={clearComparison}
       compareData={compareData} />;
