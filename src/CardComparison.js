@@ -14,7 +14,7 @@ const CardComparison = ({ analysis, checkComparison, clearComparison, compareDat
   const compareCards = compareData.map(district => {
     return <Card 
       district={district} 
-      // key={Math.random()} 
+      key={Math.random()} 
       checkComparison={checkComparison} 
       clearComparison={clearComparison}
       compareData={compareData} />;
@@ -46,10 +46,10 @@ const CardComparison = ({ analysis, checkComparison, clearComparison, compareDat
 };
 
 CardComparison.propTypes = {
-  analysis: PropTypes.object.isRequired,
-  compareData: PropTypes.array.isRequired,
-  checkComparison: PropTypes.func.isRequired,
-  clearComparison: PropTypes.func.isRequired
+  analysis: PropTypes.object,
+  compareData: PropTypes.array,
+  checkComparison: PropTypes.func,
+  clearComparison: PropTypes.func
 };
 
 export default CardComparison;

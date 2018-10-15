@@ -31,24 +31,22 @@ describe('App', () => {
   })
 
   describe('populateDistrict', () => {
-    // it('should instantiate a new district repository and update state', () => {
-    //   let mockData =   [
-    //         {
-    //           "Location": "school1",
-    //           "TimeFrame": 2007,
-    //           "Data": 1
-    //         },  {
-    //           "Location": "school2",
-    //           "TimeFrame": 2005,
-    //           "Data": 1
-    //         },
-    //       ]
-
-    //   let mockStats = [{location: 'school1', stats:[{2007: 1}]},
-    //     {location: 'school2', stats:[{2005: 1}]}]
-    //   //how to instantiate districtRepository with mockData?
-    // })
+    it('should instantiate a new repository and set state', () => {
+      let mockData = [
+        {
+          "Location": "school1",
+          "TimeFrame": 2007,
+          "Data": 1
+        },  {
+          "Location": "school2",
+          "TimeFrame": 2005,
+          "Data": 1
+        },
+      ]
+      
+    })
   })
+  
 
   describe('clearComparison', () => {
     it('should invoke populateDistrict', () => {
@@ -187,21 +185,59 @@ describe('App', () => {
 
       wrapper.instance().displayAll();
 
-      expect(wrapper.instance().populateDistrict).toHaveBeenCalled;
+      expect(wrapper.instance().populateDistrict).toHaveBeenCalled();
     })
   })
 
-  // describe('filterData', () => {
-  //   it('should filter through the data and return an array of matches', () => {
-  //   })
-  //   it('should set State', () => {})
-  // })
+  describe('filterData', () => {
+    it('should filter through the data and return an array of matches', () => {
+      //how to access a method on the instantiate class that is in state
+    })
+    it('should set State', () => {})
+  })
 
-  // describe('makeAnalysis', () => {
-  //   it('should invoke compareDistrictAverages if the array has two elements', () => {})
+  describe('makeAnalysis', () => {
+    let mockCompareData = [
+        {location: 'school', stats: {2001: 1}, selected: true},
+        {location: 'school2', stats: {2001: 1}, selected: true}
+      ]
+    let mockData = [
+            {
+              "Location": "school1",
+              "TimeFrame": 2007,
+              "Data": 1
+            },  {
+              "Location": "school2",
+              "TimeFrame": 2005,
+              "Data": 1
+            },
+          ]
+    let data = new DistrictRepository(mockData)
+
+    it('should invoke compareDistrictAverages if the array has two elements', () => {
+      wrapper.setState({
+        repository: data,
+        compareData: mockCompareData
+      })
+      data.compareDistrictAverages = jest.fn()
+
+      wrapper.instance().makeAnalysis()
+
+      expect(wrapper.instance().data.compareDistrictAverages).toHaveBeenCalled()
+    })
     
-  //   it('should set the state with a new analysis object', () => {})
-  // })
+    it('should set the state with a new analysis object', () => {
+      wrapper.setState({
+        repository: data,
+        compareData: mockCompareData,
+        analysis: {}
+      })
+
+      let expected = {school: 1, school2: 1, compared: 1}
+
+      expect(wrapper.state().analysis).toEqual(expected)
+    })
+  })
 
   describe('removeCardComparison', () => {
 
