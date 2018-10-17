@@ -65,14 +65,37 @@ class App extends Component {
 
     const currentComparison = this.state.compareData;
     const newSelectedCard = {...selectedCard, selected: true};
+    let analysis = {}
     
     if (currentComparison.length === 2){
       currentComparison.pop();
     }
     
+    const updatedCompareData = [newSelectedCard, ...currentComparison]
+    
+    if (currentComparison.length === 1){
+      analysis = this.makeAnalysis(updatedCompareData)
+    }
+
     this.setState({
-      compareData: [newSelectedCard, ...currentComparison]
-    }, () => this.makeAnalysis());
+      compareData: updatedCompareData,
+      analysis: analysis
+    })
+  }
+
+  makeAnalysis = (compareData) => {
+    console.log('in')
+    let distrA;
+    let distrB;
+    let analysis;
+    const { repository } = this.state
+
+    if (compareData.length === 2){
+      distrA = compareData[0].location;
+      distrB = compareData[1].location;
+      analysis = repository.compareDistrictAverages(distrA, distrB);
+    }
+    return analysis
   }
 
   displayAll = () => {
@@ -85,20 +108,6 @@ class App extends Component {
     this.setState({ stats: filteredData });
   }
 
-  makeAnalysis = () => {
-    let distrA;
-    let distrB;
-    let analysis;
-    const { compareData, repository } = this.state
-
-    if (compareData.length === 2){
-      distrA = compareData[0].location;
-      distrB = compareData[1].location;
-      analysis = repository.compareDistrictAverages(distrA, distrB);
-
-      this.setState({ analysis: analysis });
-    }
-  }
 
   removeCardComparison = (selectedCard) => {
     const updatedCompare = this.state.compareData.filter( district => {

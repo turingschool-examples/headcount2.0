@@ -3,16 +3,15 @@ import PropTypes from 'prop-types';
 
 const Card = ({district, checkComparison, compareData}) => {
 
-  let cardState;
   const cardCheck = compareData.find( school => school.location === district.location)
 
-  cardCheck ? cardState = 'selected' : cardState = ''
+  const cardState = cardCheck ? 'selected' : ''
 
   const dataPoints = district.stats.map( year => {
-    let dataClassName;
-    year.data > 0.5 
-      ? dataClassName = 'year-data greater-than' 
-      : dataClassName = 'year-data less-than';
+    const valueCheck = year.data > 0.5 
+    const dataClassName = valueCheck
+      ? 'year-data greater-than' 
+      : 'year-data less-than';
     return <p 
       className={dataClassName} 
       key={Math.random()}
