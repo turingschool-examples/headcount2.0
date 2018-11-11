@@ -12,6 +12,7 @@ const Card = ({district, checkComparison, compareData}) => {
     const dataClassName = valueCheck
       ? 'year-data greater-than' 
       : 'year-data less-than';
+      
     return <p 
       className={dataClassName} 
       key={Math.random()}
