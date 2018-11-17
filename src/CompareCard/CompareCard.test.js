@@ -11,4 +11,5 @@ describe('CompareCard', () => {
 		expect(wrapper).toMatchSnapshot()
 	})
 
+
 })

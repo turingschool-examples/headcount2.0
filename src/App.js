@@ -29,7 +29,6 @@ class App extends Component {
 		if (compareArr.includes(location)) {
 			const districtsBeingCompared = 
 				districtsInState.filter(comparedDistrict => {
-					// console.log(this.state.districtsBeingCompared)
 					return !comparedDistrict.includes(location);
 				});
 
