@@ -2,7 +2,7 @@
   "name": "headcount",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://username.github.io/myapp",
+  "homepage": "http://alexanderela.github.io",
   "devDependencies": {
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
