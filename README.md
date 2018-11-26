@@ -1,19 +1,24 @@
 # HeadCount 2.0
 
-HeadCount 2.0 is a project designed to challenge your skills at manipulating data and creating small, reusable React components.  
 
-You will start the project by importing files containing various educational stats from districts within Colorado by year, per district.  
+### Project Description
 
-In the spirit of TDD we have created some unit tests for you to start off with. These tests will help you break out calculation logic into a `DistrictRepository` class. After you finish `iteration 1` you'll move on to creating the rest of the react application on your own, with the expectation that you will continue to test the application on your own.
+### Team
+Team members for this project included Alexander Ela.
 
-This application was built using the `create-react-app` boilerplate. This boilerplate provides a lot of build in content and dependencies for free. Take a few minutes to read through [the documentation](https://github.com/facebookincubator/create-react-app), and remember to refer back to these docs if you run into unexpected issues.  
+### Functionality
+* To use HeadCount, users need only to enter a search query to filter through all 181 school districts contained in the site's dataset.
+* At any point, users can select up to two cards. Once two cards have been selected, they will be displayed at the top of the page with a comparison summary of each school district's averages, and the compared value between them.
 
-## Set Up
+### Images
+#### HeadCount homepage with query 'county' entered in search bar
+![headcount_desktop](https://github.com/alexanderela/headcount2.0/blob/master/public/images/desktop_main.png)
 
-Fork this project
 
-Run `npm install` from the root directory
+#### HeadCount homepage with two cards selected for comparison
+![headcount_desktop_cards_selected](https://github.com/alexanderela/headcount2.0/blob/master/public/images/desktop_main_highlighted.png)
 
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 Run `npm start` and visit localhost:3000 in your browser
 
 You can begin running your tests with `npm test`
