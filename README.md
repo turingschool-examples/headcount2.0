@@ -51,7 +51,7 @@ This project is broken out into multiple iterations. You are expected to complet
 **Notes on the District Repository**  
 As an example, take a minute to look at the `kindergartners_in_full_day_program.js` data file.  
 
-The `DistrictRepository` helper class you create will be responsible for holding data pertaining to each educational district. Off the bat, it should contain a `.stats` method that returns the information pertaining to to that file:  
+The `DistrictRepository` helper class you create will be responsible for holding data pertaining to each educational district. Off the bat, it should have a property `.stats` that contains the information pertaining to to that file:  
 
 Example:  
 
@@ -68,7 +68,7 @@ Besides pulling in a particular file, the `DistrictRepository` should also be re
 
 * `.findByName()` - returns either `undefined` or `{}` having done a *case insensitive* search
 
-* `.findAllMatching()` - returns an empty array `[]`, or an array of objects `[Object, Object]`, also *case insensitive*.
+* `.findAllMatching()` - returns an empty array `[]`, or an array of objects `[Object, Object]` pertaining to the results that match the search passed into `findAllMatching()`, also *case insensitive*.
 
 Example:  
 
@@ -79,6 +79,9 @@ const district = new DistrictRepository(kindergartnerData);
 
 district.findByName('ACADEMY 20').data;
 // => { "2004": 0.302, "2005": 0.267, "2006": 0.354, "2007": 0.392, "2008": 0.385, "2009":  0.39, "2010": 0.436, "2011": 0.489, "2012": 0.479, "2013": 0.488, "2014": 0.49 };
+
+district.findAllMatching('Colorado');
+// => [{location: Colorado, stats: {2005: 0.56, ...}}, {location: Colorado Springs, stats: {2007: 0.7, ...}}];
 ```
 
 ## Visual layer
