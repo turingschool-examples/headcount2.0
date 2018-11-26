@@ -4,7 +4,7 @@ import kinderData from '../../data/kindergartners_in_full_day_program.js';
 describe('DistrictRepository iteration 1 - part 1', () =>  {
   const district = new DistrictRepository(kinderData);
 
-  test.skip('findByName returns undefined if no arguments are provided', () => {
+  test('findByName returns undefined if no arguments are provided', () => {
     expect(district.findByName()).toBe(undefined);
   });
 

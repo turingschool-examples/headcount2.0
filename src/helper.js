@@ -5,10 +5,17 @@ export default class DistrictRepository {
 
   cleanStats = (stats) => stats.reduce((allStats, stat) => {
     allStats[stat.Location] = {[stat.TimeFrame]: stat.Data};
-    console.log(Object.keys(allStats).length);
     return allStats;
   }, {});
 
+  findByName = (name) => {
+    if (name) {
+      console.log(name)
+    } else {
+      return undefined
+    }
+  }
 
+  
 }
 
