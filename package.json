@@ -3,13 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "eslint": "^5.6.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-standard": "^4.0.0",
     "react-scripts": "1.1.0"
   },
   "dependencies": {
+    "babel-jest": "^23.6.0",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "jest-enzyme": "^6.1.2",
+    "jquery": "^3.3.1",
+    "prop-types": "^15.6.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
   "scripts": {
+    "eslint": "./node_modules/eslint/bin/eslint.js ./src/*.js",
+    "eslint-config-standard": "^12.0.0",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

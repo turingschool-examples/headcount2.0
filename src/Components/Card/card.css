@@ -1,0 +1,35 @@
+.card-div{
+  border: 1.3px solid white;
+  width: 17em;
+  height: 33em;
+  margin: 0 auto;
+  word-wrap: break-word;
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 2em;
+  border-radius: 10px;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+  background-color: #5c687c;
+  flex-basis: 20%;
+}
+
+.location{
+  color: white;
+}
+
+.district-data{
+  color: #cacdd1;
+}
+
+.year{
+  color: black;
+  font-weight: bold;
+}
+
+.above50{
+  color: #404142;
+}
+
+.below50{
+  color: white;
+}
