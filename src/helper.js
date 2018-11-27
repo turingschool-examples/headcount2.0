@@ -5,7 +5,11 @@ export default class DistrictRepository {
 
   cleanStats = (stats) => stats.reduce((allStats, stat) => {
     const upperCaseStat = stat.Location.toUpperCase();
+    if(allStats[upperCaseStat]) {
+      allStats[upperCaseStat][stat.TimeFrame] = stat.Data
+    } else {
     allStats[upperCaseStat] = {[stat.TimeFrame]: stat.Data};
+  }
     return allStats;
   }, {});
 
