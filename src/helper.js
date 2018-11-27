@@ -4,10 +4,26 @@ export default class DistrictRepository {
   }
 
   cleanStats = (stats) => stats.reduce((allStats, stat) => {
-    allStats[stat.Location] = {[stat.TimeFrame]: stat.Data};
-    console.log(Object.keys(allStats).length);
+    const upperCaseStat = stat.Location.toUpperCase();
+    const roundedData = Math.round(1000 * stat.Data) / 1000;
+
+    if(allStats[upperCaseStat]) {
+      allStats[upperCaseStat][stat.TimeFrame] = roundedData
+    } else {
+    allStats[upperCaseStat] = {[stat.TimeFrame]: roundedData};
+  }
     return allStats;
   }, {});
+
+  findByName = (name) => {
+
+    if (name && Object.keys(this.stats).includes(name.toUpperCase())) {
+      const upperCaseName = name.toUpperCase();
+      return {location: upperCaseName, stats: this.stats[upperCaseName]};
+    } else {
+      return undefined
+    }
+  }
 
 
 }
