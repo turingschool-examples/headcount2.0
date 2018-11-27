@@ -25,6 +25,11 @@ export default class DistrictRepository {
     }
   }
 
+  findAllMatches = (searchName) => {
+    console.log(Object.keys(this.stats).length);
+    return Object.keys(this.stats);
+  }
+
 
 }
 
