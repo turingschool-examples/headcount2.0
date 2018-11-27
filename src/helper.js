@@ -5,10 +5,12 @@ export default class DistrictRepository {
 
   cleanStats = (stats) => stats.reduce((allStats, stat) => {
     const upperCaseStat = stat.Location.toUpperCase();
+    const roundedData = Math.round(1000 * stat.Data) / 1000;
+
     if(allStats[upperCaseStat]) {
-      allStats[upperCaseStat][stat.TimeFrame] = stat.Data
+      allStats[upperCaseStat][stat.TimeFrame] = roundedData
     } else {
-    allStats[upperCaseStat] = {[stat.TimeFrame]: stat.Data};
+    allStats[upperCaseStat] = {[stat.TimeFrame]: roundedData};
   }
     return allStats;
   }, {});
