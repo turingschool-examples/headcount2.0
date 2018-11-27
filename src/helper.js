@@ -34,11 +34,11 @@ export default class DistrictRepository {
           } 
         return allMatching;
         }, []);
-      } else if (!searchName) {
+    } else if (!searchName) {
         const noSearchEntered = [];
         return Object.keys(this.stats).map(stat => {
         [...noSearchEntered, {location: stat, stats: this.stats[stat]}] })
-      } else {
+    } else {
         const noMatchToSearchName = [];
         return noMatchToSearchName;
       }
