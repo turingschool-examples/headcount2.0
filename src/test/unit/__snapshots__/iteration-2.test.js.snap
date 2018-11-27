@@ -1,0 +1,812 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot with all data passed in correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    cardInfo={
+        Object {
+            "location": "Colorado",
+            "stats": Object {
+              "2004": 0.24,
+              "2005": 0.278,
+              "2006": 0.337,
+              "2007": 0.395,
+              "2008": 0.536,
+              "2009": 0.598,
+              "2010": 0.64,
+              "2011": 0.672,
+              "2012": 0.695,
+              "2013": 0.703,
+              "2014": 0.741,
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+           
+          Colorado
+           
+</h1>,
+        <ul>
+           
+          <li>
+                    2004
+                    : 
+                    0.24
+          </li>
+          <li>
+                    2005
+                    : 
+                    0.278
+          </li>
+          <li>
+                    2006
+                    : 
+                    0.337
+          </li>
+          <li>
+                    2007
+                    : 
+                    0.395
+          </li>
+          <li>
+                    2008
+                    : 
+                    0.536
+          </li>
+          <li>
+                    2009
+                    : 
+                    0.598
+          </li>
+          <li>
+                    2010
+                    : 
+                    0.64
+          </li>
+          <li>
+                    2011
+                    : 
+                    0.672
+          </li>
+          <li>
+                    2012
+                    : 
+                    0.695
+          </li>
+          <li>
+                    2013
+                    : 
+                    0.703
+          </li>
+          <li>
+                    2014
+                    : 
+                    0.741
+          </li>
+           
+</ul>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            " ",
+            "Colorado",
+            " ",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          " ",
+          "Colorado",
+          " ",
+        ],
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            " ",
+            Array [
+              <li>
+                2004
+                : 
+                0.24
+</li>,
+              <li>
+                2005
+                : 
+                0.278
+</li>,
+              <li>
+                2006
+                : 
+                0.337
+</li>,
+              <li>
+                2007
+                : 
+                0.395
+</li>,
+              <li>
+                2008
+                : 
+                0.536
+</li>,
+              <li>
+                2009
+                : 
+                0.598
+</li>,
+              <li>
+                2010
+                : 
+                0.64
+</li>,
+              <li>
+                2011
+                : 
+                0.672
+</li>,
+              <li>
+                2012
+                : 
+                0.695
+</li>,
+              <li>
+                2013
+                : 
+                0.703
+</li>,
+              <li>
+                2014
+                : 
+                0.741
+</li>,
+            ],
+            " ",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          " ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2004",
+                ": ",
+                0.24,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2004",
+              ": ",
+              0.24,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2005",
+                ": ",
+                0.278,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2005",
+              ": ",
+              0.278,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2006",
+                ": ",
+                0.337,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2006",
+              ": ",
+              0.337,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2007",
+                ": ",
+                0.395,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2007",
+              ": ",
+              0.395,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2008",
+                ": ",
+                0.536,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2008",
+              ": ",
+              0.536,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2009",
+                ": ",
+                0.598,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2009",
+              ": ",
+              0.598,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2010",
+                ": ",
+                0.64,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2010",
+              ": ",
+              0.64,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2011",
+                ": ",
+                0.672,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2011",
+              ": ",
+              0.672,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2012",
+                ": ",
+                0.695,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2012",
+              ": ",
+              0.695,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2013",
+                ": ",
+                0.703,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2013",
+              ": ",
+              0.703,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2014",
+                ": ",
+                0.741,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2014",
+              ": ",
+              0.741,
+            ],
+            "type": "li",
+          },
+          " ",
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+             
+            Colorado
+             
+</h1>,
+          <ul>
+             
+            <li>
+                        2004
+                        : 
+                        0.24
+            </li>
+            <li>
+                        2005
+                        : 
+                        0.278
+            </li>
+            <li>
+                        2006
+                        : 
+                        0.337
+            </li>
+            <li>
+                        2007
+                        : 
+                        0.395
+            </li>
+            <li>
+                        2008
+                        : 
+                        0.536
+            </li>
+            <li>
+                        2009
+                        : 
+                        0.598
+            </li>
+            <li>
+                        2010
+                        : 
+                        0.64
+            </li>
+            <li>
+                        2011
+                        : 
+                        0.672
+            </li>
+            <li>
+                        2012
+                        : 
+                        0.695
+            </li>
+            <li>
+                        2013
+                        : 
+                        0.703
+            </li>
+            <li>
+                        2014
+                        : 
+                        0.741
+            </li>
+             
+</ul>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              " ",
+              "Colorado",
+              " ",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            " ",
+            "Colorado",
+            " ",
+          ],
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              " ",
+              Array [
+                <li>
+                  2004
+                  : 
+                  0.24
+</li>,
+                <li>
+                  2005
+                  : 
+                  0.278
+</li>,
+                <li>
+                  2006
+                  : 
+                  0.337
+</li>,
+                <li>
+                  2007
+                  : 
+                  0.395
+</li>,
+                <li>
+                  2008
+                  : 
+                  0.536
+</li>,
+                <li>
+                  2009
+                  : 
+                  0.598
+</li>,
+                <li>
+                  2010
+                  : 
+                  0.64
+</li>,
+                <li>
+                  2011
+                  : 
+                  0.672
+</li>,
+                <li>
+                  2012
+                  : 
+                  0.695
+</li>,
+                <li>
+                  2013
+                  : 
+                  0.703
+</li>,
+                <li>
+                  2014
+                  : 
+                  0.741
+</li>,
+              ],
+              " ",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            " ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2004",
+                  ": ",
+                  0.24,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2004",
+                ": ",
+                0.24,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2005",
+                  ": ",
+                  0.278,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2005",
+                ": ",
+                0.278,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2006",
+                  ": ",
+                  0.337,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2006",
+                ": ",
+                0.337,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2007",
+                  ": ",
+                  0.395,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2007",
+                ": ",
+                0.395,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2008",
+                  ": ",
+                  0.536,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2008",
+                ": ",
+                0.536,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2009",
+                  ": ",
+                  0.598,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2009",
+                ": ",
+                0.598,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2010",
+                  ": ",
+                  0.64,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2010",
+                ": ",
+                0.64,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2011",
+                  ": ",
+                  0.672,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2011",
+                ": ",
+                0.672,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2012",
+                  ": ",
+                  0.695,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2012",
+                ": ",
+                0.695,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2013",
+                  ": ",
+                  0.703,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2013",
+                ": ",
+                0.703,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2014",
+                  ": ",
+                  0.741,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2014",
+                ": ",
+                0.741,
+              ],
+              "type": "li",
+            },
+            " ",
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
