@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Search from './Search';
-import ComparisonContainer from 'ComparisonContainer';
-import CardContainer from 'CardContainer';
+import ComparisonContainer from './ComparisonContainer';
+import CardContainer from './CardContainer';
 import DistrictRepository from './helper';
 import kinderData from './data/kindergartners_in_full_day_program.js';
 
