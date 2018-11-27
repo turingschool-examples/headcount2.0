@@ -4,14 +4,15 @@ export default class DistrictRepository {
   }
 
   cleanStats = (stats) => stats.reduce((allStats, stat) => {
-    allStats[stat.Location] = {[stat.TimeFrame]: stat.Data};
+    const upperCaseStat = stat.Location.toUpperCase();
+    allStats[upperCaseStat] = {[stat.TimeFrame]: stat.Data};
     return allStats;
   }, {});
 
   findByName = (name) => {
-    if(name && Object.keys(this.stats).includes(name)) {
+
+    if (name && Object.keys(this.stats).includes(name.toUpperCase())) {
       const upperCaseName = name.toUpperCase();
-      console.log(upperCaseName);
       return {location: upperCaseName, stats: this.stats[upperCaseName]};
     } else {
       return undefined

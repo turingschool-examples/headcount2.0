@@ -23,7 +23,7 @@ describe('DistrictRepository iteration 1 - part 1', () =>  {
     expect(district.findByName('ACADEmY 20').location).toEqual('ACADEMY 20');
   });
 
-  test.skip('each district has a data object containing each year and its data as key value pairs.', () => {
+  test('each district has a data object containing each year and its data as key value pairs.', () => {
     const academy = district.findByName('ACADEmY 20');
 
     expect(academy.location).toEqual('ACADEMY 20');
