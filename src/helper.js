@@ -1,4 +1,3 @@
-
 export default class DistrictRepository {
  constructor(data) {
    this.stats = data.reduce((newObj, currentElement) => {
@@ -33,7 +32,7 @@ export default class DistrictRepository {
         if (currentValue.includes(searchValue.toUpperCase())) {
           return currentValue;
         }
-      })
+      });
     }
   }
 }
