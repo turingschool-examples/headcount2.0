@@ -25,6 +25,23 @@ export default class DistrictRepository {
     }
   }
 
-
+  findAllMatches = (searchName) => {
+    if (searchName && Object.keys(this.stats).includes(searchName.toUpperCase())) {
+      const ucSearchName = searchName.toUpperCase();
+      return Object.keys(this.stats).reduce((allMatching, stat) => {
+          if (stat.includes(ucSearchName)) {
+            return [...allMatching, {location: stat, stats: this.stats[stat]}]
+          } 
+        return allMatching;
+        }, []);
+      } else if (!searchName) {
+        const noSearchEntered = [];
+        return Object.keys(this.stats).map(stat => {
+        [...noSearchEntered, {location: stat, stats: this.stats[stat]}] })
+      } else {
+        const noMatchToSearchName = [];
+        return noMatchToSearchName;
+      }
+  }
 }
 
