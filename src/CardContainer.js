@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card.js';
-import './CardContainer.css';
 import PropTypes from 'prop-types';
+import './CardContainer.css';
 
 const CardContainer = (props) => {
   const cards = Object.keys(props.data).map((currCard) => {

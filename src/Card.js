@@ -1,6 +1,6 @@
 import React from 'react';
-import './Card.css'
 import PropTypes from 'prop-types'
+import './Card.css'
 
 const Card = (props) => {
   const stats = Object.keys(props.cardInfo.stats).map((currStat) => {
