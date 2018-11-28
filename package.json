@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
     "react-scripts": "1.1.0"
   },
   "dependencies": {
+    "prop-types": "^15.6.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },

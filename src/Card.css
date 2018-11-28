@@ -1,0 +1,23 @@
+/* .card-container {
+  display: flex;
+} */
+.card-wrapper {
+  border: 1px solid black;
+  width: 300px;
+  margin: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin: 10px;
+  font-size: 20px;
+}
+
+li {
+  text-align: center;
+}
