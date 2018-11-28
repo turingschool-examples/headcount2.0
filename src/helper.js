@@ -21,7 +21,7 @@ export default class DistrictRepository {
      return 
    }
     const searchedLocation = location.toUpperCase();
-    return this.stats[searchedLocation]
+    return this.stats[searchedLocation];
   }
 
   findAllMatches = (searchValue) => {

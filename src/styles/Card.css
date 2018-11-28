@@ -1,0 +1,43 @@
+.card {
+    display: flex;
+    background-color: aquamarine;
+    border: solid 1px black;
+    padding: 20px;
+    border-radius: 10px;
+    flex-direction: column;
+    margin: 40px;
+}
+ul {
+    font-size: 20px;
+    list-style: none;
+    /* line-height: 20px; */
+    margin-top: 0;
+}
+
+
+li.red {
+    color: blue;
+}
+li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+li.green {
+    color: grey;
+}
+
+.year {
+    margin: 4px;
+    font-style: bold;
+}
+
+p {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 0;
+}

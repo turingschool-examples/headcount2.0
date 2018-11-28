@@ -42,66 +42,185 @@ ShallowWrapper {
           Colorado
            
 </h1>,
+        <p>
+          <h3>
+                     year 
+          </h3>
+          <h3>
+                     % enrollment 
+          </h3>
+</p>,
         <ul>
            
-          <li>
-                    2004
-                    : 
-                    0.24
+          <li
+                    className="green"
+          >
+                    <span
+                              className="year"
+                    >
+                              2004
+                    </span>
+                    <span
+                              className="percentage"
+                    >
+                              0.24
+                               
+                    </span>
           </li>
-          <li>
-                    2005
-                    : 
-                    0.278
+          <li
+                    className="green"
+          >
+                    <span
+                              className="year"
+                    >
+                              2005
+                    </span>
+                    <span
+                              className="percentage"
+                    >
+                              0.278
+                               
+                    </span>
           </li>
-          <li>
-                    2006
-                    : 
-                    0.337
+          <li
+                    className="green"
+          >
+                    <span
+                              className="year"
+                    >
+                              2006
+                    </span>
+                    <span
+                              className="percentage"
+                    >
+                              0.337
+                               
+                    </span>
           </li>
-          <li>
-                    2007
-                    : 
-                    0.395
+          <li
+                    className="green"
+          >
+                    <span
+                              className="year"
+                    >
+                              2007
+                    </span>
+                    <span
+                              className="percentage"
+                    >
+                              0.395
+                               
+                    </span>
           </li>
-          <li>
-                    2008
-                    : 
-                    0.536
+          <li
+                    className="red"
+          >
+                    <span
+                              className="year"
+                    >
+                              2008
+                    </span>
+                    <span
+                              className="percentage"
+                    >
+                              0.536
+                               
+                    </span>
           </li>
-          <li>
-                    2009
-                    : 
-                    0.598
+          <li
+                    className="red"
+          >
+                    <span
+                              className="year"
+                    >
+                              2009
+                    </span>
+                    <span
+                              className="percentage"
+                    >
+                              0.598
+                               
+                    </span>
           </li>
-          <li>
-                    2010
-                    : 
-                    0.64
+          <li
+                    className="red"
+          >
+                    <span
+                              className="year"
+                    >
+                              2010
+                    </span>
+                    <span
+                              className="percentage"
+                    >
+                              0.64
+                               
+                    </span>
           </li>
-          <li>
-                    2011
-                    : 
-                    0.672
+          <li
+                    className="red"
+          >
+                    <span
+                              className="year"
+                    >
+                              2011
+                    </span>
+                    <span
+                              className="percentage"
+                    >
+                              0.672
+                               
+                    </span>
           </li>
-          <li>
-                    2012
-                    : 
-                    0.695
+          <li
+                    className="red"
+          >
+                    <span
+                              className="year"
+                    >
+                              2012
+                    </span>
+                    <span
+                              className="percentage"
+                    >
+                              0.695
+                               
+                    </span>
           </li>
-          <li>
-                    2013
-                    : 
-                    0.703
+          <li
+                    className="red"
+          >
+                    <span
+                              className="year"
+                    >
+                              2013
+                    </span>
+                    <span
+                              className="percentage"
+                    >
+                              0.703
+                               
+                    </span>
           </li>
-          <li>
-                    2014
-                    : 
-                    0.741
+          <li
+                    className="red"
+          >
+                    <span
+                              className="year"
+                    >
+                              2014
+                    </span>
+                    <span
+                              className="percentage"
+                    >
+                              0.741
+                               
+                    </span>
           </li>
            
 </ul>,
       ],
+      "className": "card",
     },
     "ref": null,
     "rendered": Array [
@@ -130,62 +249,213 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
+            <h3>
+               year 
+</h3>,
+            <h3>
+               % enrollment 
+</h3>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": " year ",
+            },
+            "ref": null,
+            "rendered": " year ",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": " % enrollment ",
+            },
+            "ref": null,
+            "rendered": " % enrollment ",
+            "type": "h3",
+          },
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
             " ",
             Array [
-              <li>
-                2004
-                : 
-                0.24
+              <li
+                className="green"
+>
+                <span
+                                className="year"
+                >
+                                2004
+                </span>
+                <span
+                                className="percentage"
+                >
+                                0.24
+                                 
+                </span>
 </li>,
-              <li>
-                2005
-                : 
-                0.278
+              <li
+                className="green"
+>
+                <span
+                                className="year"
+                >
+                                2005
+                </span>
+                <span
+                                className="percentage"
+                >
+                                0.278
+                                 
+                </span>
 </li>,
-              <li>
-                2006
-                : 
-                0.337
+              <li
+                className="green"
+>
+                <span
+                                className="year"
+                >
+                                2006
+                </span>
+                <span
+                                className="percentage"
+                >
+                                0.337
+                                 
+                </span>
 </li>,
-              <li>
-                2007
-                : 
-                0.395
+              <li
+                className="green"
+>
+                <span
+                                className="year"
+                >
+                                2007
+                </span>
+                <span
+                                className="percentage"
+                >
+                                0.395
+                                 
+                </span>
 </li>,
-              <li>
-                2008
-                : 
-                0.536
+              <li
+                className="red"
+>
+                <span
+                                className="year"
+                >
+                                2008
+                </span>
+                <span
+                                className="percentage"
+                >
+                                0.536
+                                 
+                </span>
 </li>,
-              <li>
-                2009
-                : 
-                0.598
+              <li
+                className="red"
+>
+                <span
+                                className="year"
+                >
+                                2009
+                </span>
+                <span
+                                className="percentage"
+                >
+                                0.598
+                                 
+                </span>
 </li>,
-              <li>
-                2010
-                : 
-                0.64
+              <li
+                className="red"
+>
+                <span
+                                className="year"
+                >
+                                2010
+                </span>
+                <span
+                                className="percentage"
+                >
+                                0.64
+                                 
+                </span>
 </li>,
-              <li>
-                2011
-                : 
-                0.672
+              <li
+                className="red"
+>
+                <span
+                                className="year"
+                >
+                                2011
+                </span>
+                <span
+                                className="percentage"
+                >
+                                0.672
+                                 
+                </span>
 </li>,
-              <li>
-                2012
-                : 
-                0.695
+              <li
+                className="red"
+>
+                <span
+                                className="year"
+                >
+                                2012
+                </span>
+                <span
+                                className="percentage"
+                >
+                                0.695
+                                 
+                </span>
 </li>,
-              <li>
-                2013
-                : 
-                0.703
+              <li
+                className="red"
+>
+                <span
+                                className="year"
+                >
+                                2013
+                </span>
+                <span
+                                className="percentage"
+                >
+                                0.703
+                                 
+                </span>
 </li>,
-              <li>
-                2014
-                : 
-                0.741
+              <li
+                className="red"
+>
+                <span
+                                className="year"
+                >
+                                2014
+                </span>
+                <span
+                                className="percentage"
+                >
+                                0.741
+                                 
+                </span>
 </li>,
             ],
             " ",
@@ -200,16 +470,52 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "2004",
-                ": ",
-                0.24,
+                <span
+                  className="year"
+>
+                  2004
+</span>,
+                <span
+                  className="percentage"
+>
+                  0.24
+                   
+</span>,
               ],
+              "className": "green",
             },
             "ref": null,
             "rendered": Array [
-              "2004",
-              ": ",
-              0.24,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2004",
+                  "className": "year",
+                },
+                "ref": null,
+                "rendered": "2004",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    0.24,
+                    " ",
+                  ],
+                  "className": "percentage",
+                },
+                "ref": null,
+                "rendered": Array [
+                  0.24,
+                  " ",
+                ],
+                "type": "span",
+              },
             ],
             "type": "li",
           },
@@ -219,16 +525,52 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "2005",
-                ": ",
-                0.278,
+                <span
+                  className="year"
+>
+                  2005
+</span>,
+                <span
+                  className="percentage"
+>
+                  0.278
+                   
+</span>,
               ],
+              "className": "green",
             },
             "ref": null,
             "rendered": Array [
-              "2005",
-              ": ",
-              0.278,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2005",
+                  "className": "year",
+                },
+                "ref": null,
+                "rendered": "2005",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    0.278,
+                    " ",
+                  ],
+                  "className": "percentage",
+                },
+                "ref": null,
+                "rendered": Array [
+                  0.278,
+                  " ",
+                ],
+                "type": "span",
+              },
             ],
             "type": "li",
           },
@@ -238,16 +580,52 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "2006",
-                ": ",
-                0.337,
+                <span
+                  className="year"
+>
+                  2006
+</span>,
+                <span
+                  className="percentage"
+>
+                  0.337
+                   
+</span>,
               ],
+              "className": "green",
             },
             "ref": null,
             "rendered": Array [
-              "2006",
-              ": ",
-              0.337,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2006",
+                  "className": "year",
+                },
+                "ref": null,
+                "rendered": "2006",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    0.337,
+                    " ",
+                  ],
+                  "className": "percentage",
+                },
+                "ref": null,
+                "rendered": Array [
+                  0.337,
+                  " ",
+                ],
+                "type": "span",
+              },
             ],
             "type": "li",
           },
@@ -257,16 +635,52 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "2007",
-                ": ",
-                0.395,
+                <span
+                  className="year"
+>
+                  2007
+</span>,
+                <span
+                  className="percentage"
+>
+                  0.395
+                   
+</span>,
               ],
+              "className": "green",
             },
             "ref": null,
             "rendered": Array [
-              "2007",
-              ": ",
-              0.395,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2007",
+                  "className": "year",
+                },
+                "ref": null,
+                "rendered": "2007",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    0.395,
+                    " ",
+                  ],
+                  "className": "percentage",
+                },
+                "ref": null,
+                "rendered": Array [
+                  0.395,
+                  " ",
+                ],
+                "type": "span",
+              },
             ],
             "type": "li",
           },
@@ -276,16 +690,52 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "2008",
-                ": ",
-                0.536,
+                <span
+                  className="year"
+>
+                  2008
+</span>,
+                <span
+                  className="percentage"
+>
+                  0.536
+                   
+</span>,
               ],
+              "className": "red",
             },
             "ref": null,
             "rendered": Array [
-              "2008",
-              ": ",
-              0.536,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2008",
+                  "className": "year",
+                },
+                "ref": null,
+                "rendered": "2008",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    0.536,
+                    " ",
+                  ],
+                  "className": "percentage",
+                },
+                "ref": null,
+                "rendered": Array [
+                  0.536,
+                  " ",
+                ],
+                "type": "span",
+              },
             ],
             "type": "li",
           },
@@ -295,16 +745,52 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "2009",
-                ": ",
-                0.598,
+                <span
+                  className="year"
+>
+                  2009
+</span>,
+                <span
+                  className="percentage"
+>
+                  0.598
+                   
+</span>,
               ],
+              "className": "red",
             },
             "ref": null,
             "rendered": Array [
-              "2009",
-              ": ",
-              0.598,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2009",
+                  "className": "year",
+                },
+                "ref": null,
+                "rendered": "2009",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    0.598,
+                    " ",
+                  ],
+                  "className": "percentage",
+                },
+                "ref": null,
+                "rendered": Array [
+                  0.598,
+                  " ",
+                ],
+                "type": "span",
+              },
             ],
             "type": "li",
           },
@@ -314,16 +800,52 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "2010",
-                ": ",
-                0.64,
+                <span
+                  className="year"
+>
+                  2010
+</span>,
+                <span
+                  className="percentage"
+>
+                  0.64
+                   
+</span>,
               ],
+              "className": "red",
             },
             "ref": null,
             "rendered": Array [
-              "2010",
-              ": ",
-              0.64,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2010",
+                  "className": "year",
+                },
+                "ref": null,
+                "rendered": "2010",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    0.64,
+                    " ",
+                  ],
+                  "className": "percentage",
+                },
+                "ref": null,
+                "rendered": Array [
+                  0.64,
+                  " ",
+                ],
+                "type": "span",
+              },
             ],
             "type": "li",
           },
@@ -333,16 +855,52 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "2011",
-                ": ",
-                0.672,
+                <span
+                  className="year"
+>
+                  2011
+</span>,
+                <span
+                  className="percentage"
+>
+                  0.672
+                   
+</span>,
               ],
+              "className": "red",
             },
             "ref": null,
             "rendered": Array [
-              "2011",
-              ": ",
-              0.672,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2011",
+                  "className": "year",
+                },
+                "ref": null,
+                "rendered": "2011",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    0.672,
+                    " ",
+                  ],
+                  "className": "percentage",
+                },
+                "ref": null,
+                "rendered": Array [
+                  0.672,
+                  " ",
+                ],
+                "type": "span",
+              },
             ],
             "type": "li",
           },
@@ -352,16 +910,52 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "2012",
-                ": ",
-                0.695,
+                <span
+                  className="year"
+>
+                  2012
+</span>,
+                <span
+                  className="percentage"
+>
+                  0.695
+                   
+</span>,
               ],
+              "className": "red",
             },
             "ref": null,
             "rendered": Array [
-              "2012",
-              ": ",
-              0.695,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2012",
+                  "className": "year",
+                },
+                "ref": null,
+                "rendered": "2012",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    0.695,
+                    " ",
+                  ],
+                  "className": "percentage",
+                },
+                "ref": null,
+                "rendered": Array [
+                  0.695,
+                  " ",
+                ],
+                "type": "span",
+              },
             ],
             "type": "li",
           },
@@ -371,16 +965,52 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "2013",
-                ": ",
-                0.703,
+                <span
+                  className="year"
+>
+                  2013
+</span>,
+                <span
+                  className="percentage"
+>
+                  0.703
+                   
+</span>,
               ],
+              "className": "red",
             },
             "ref": null,
             "rendered": Array [
-              "2013",
-              ": ",
-              0.703,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2013",
+                  "className": "year",
+                },
+                "ref": null,
+                "rendered": "2013",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    0.703,
+                    " ",
+                  ],
+                  "className": "percentage",
+                },
+                "ref": null,
+                "rendered": Array [
+                  0.703,
+                  " ",
+                ],
+                "type": "span",
+              },
             ],
             "type": "li",
           },
@@ -390,16 +1020,52 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "2014",
-                ": ",
-                0.741,
+                <span
+                  className="year"
+>
+                  2014
+</span>,
+                <span
+                  className="percentage"
+>
+                  0.741
+                   
+</span>,
               ],
+              "className": "red",
             },
             "ref": null,
             "rendered": Array [
-              "2014",
-              ": ",
-              0.741,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2014",
+                  "className": "year",
+                },
+                "ref": null,
+                "rendered": "2014",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    0.741,
+                    " ",
+                  ],
+                  "className": "percentage",
+                },
+                "ref": null,
+                "rendered": Array [
+                  0.741,
+                  " ",
+                ],
+                "type": "span",
+              },
             ],
             "type": "li",
           },
@@ -422,66 +1088,185 @@ ShallowWrapper {
             Colorado
              
 </h1>,
+          <p>
+            <h3>
+                         year 
+            </h3>
+            <h3>
+                         % enrollment 
+            </h3>
+</p>,
           <ul>
              
-            <li>
-                        2004
-                        : 
-                        0.24
+            <li
+                        className="green"
+            >
+                        <span
+                                    className="year"
+                        >
+                                    2004
+                        </span>
+                        <span
+                                    className="percentage"
+                        >
+                                    0.24
+                                     
+                        </span>
             </li>
-            <li>
-                        2005
-                        : 
-                        0.278
+            <li
+                        className="green"
+            >
+                        <span
+                                    className="year"
+                        >
+                                    2005
+                        </span>
+                        <span
+                                    className="percentage"
+                        >
+                                    0.278
+                                     
+                        </span>
             </li>
-            <li>
-                        2006
-                        : 
-                        0.337
+            <li
+                        className="green"
+            >
+                        <span
+                                    className="year"
+                        >
+                                    2006
+                        </span>
+                        <span
+                                    className="percentage"
+                        >
+                                    0.337
+                                     
+                        </span>
             </li>
-            <li>
-                        2007
-                        : 
-                        0.395
+            <li
+                        className="green"
+            >
+                        <span
+                                    className="year"
+                        >
+                                    2007
+                        </span>
+                        <span
+                                    className="percentage"
+                        >
+                                    0.395
+                                     
+                        </span>
             </li>
-            <li>
-                        2008
-                        : 
-                        0.536
+            <li
+                        className="red"
+            >
+                        <span
+                                    className="year"
+                        >
+                                    2008
+                        </span>
+                        <span
+                                    className="percentage"
+                        >
+                                    0.536
+                                     
+                        </span>
             </li>
-            <li>
-                        2009
-                        : 
-                        0.598
+            <li
+                        className="red"
+            >
+                        <span
+                                    className="year"
+                        >
+                                    2009
+                        </span>
+                        <span
+                                    className="percentage"
+                        >
+                                    0.598
+                                     
+                        </span>
             </li>
-            <li>
-                        2010
-                        : 
-                        0.64
+            <li
+                        className="red"
+            >
+                        <span
+                                    className="year"
+                        >
+                                    2010
+                        </span>
+                        <span
+                                    className="percentage"
+                        >
+                                    0.64
+                                     
+                        </span>
             </li>
-            <li>
-                        2011
-                        : 
-                        0.672
+            <li
+                        className="red"
+            >
+                        <span
+                                    className="year"
+                        >
+                                    2011
+                        </span>
+                        <span
+                                    className="percentage"
+                        >
+                                    0.672
+                                     
+                        </span>
             </li>
-            <li>
-                        2012
-                        : 
-                        0.695
+            <li
+                        className="red"
+            >
+                        <span
+                                    className="year"
+                        >
+                                    2012
+                        </span>
+                        <span
+                                    className="percentage"
+                        >
+                                    0.695
+                                     
+                        </span>
             </li>
-            <li>
-                        2013
-                        : 
-                        0.703
+            <li
+                        className="red"
+            >
+                        <span
+                                    className="year"
+                        >
+                                    2013
+                        </span>
+                        <span
+                                    className="percentage"
+                        >
+                                    0.703
+                                     
+                        </span>
             </li>
-            <li>
-                        2014
-                        : 
-                        0.741
+            <li
+                        className="red"
+            >
+                        <span
+                                    className="year"
+                        >
+                                    2014
+                        </span>
+                        <span
+                                    className="percentage"
+                        >
+                                    0.741
+                                     
+                        </span>
             </li>
              
 </ul>,
         ],
+        "className": "card",
       },
       "ref": null,
       "rendered": Array [
@@ -510,62 +1295,213 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
+              <h3>
+                 year 
+</h3>,
+              <h3>
+                 % enrollment 
+</h3>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": " year ",
+              },
+              "ref": null,
+              "rendered": " year ",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": " % enrollment ",
+              },
+              "ref": null,
+              "rendered": " % enrollment ",
+              "type": "h3",
+            },
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
               " ",
               Array [
-                <li>
-                  2004
-                  : 
-                  0.24
+                <li
+                  className="green"
+>
+                  <span
+                                    className="year"
+                  >
+                                    2004
+                  </span>
+                  <span
+                                    className="percentage"
+                  >
+                                    0.24
+                                     
+                  </span>
 </li>,
-                <li>
-                  2005
-                  : 
-                  0.278
+                <li
+                  className="green"
+>
+                  <span
+                                    className="year"
+                  >
+                                    2005
+                  </span>
+                  <span
+                                    className="percentage"
+                  >
+                                    0.278
+                                     
+                  </span>
 </li>,
-                <li>
-                  2006
-                  : 
-                  0.337
+                <li
+                  className="green"
+>
+                  <span
+                                    className="year"
+                  >
+                                    2006
+                  </span>
+                  <span
+                                    className="percentage"
+                  >
+                                    0.337
+                                     
+                  </span>
 </li>,
-                <li>
-                  2007
-                  : 
-                  0.395
+                <li
+                  className="green"
+>
+                  <span
+                                    className="year"
+                  >
+                                    2007
+                  </span>
+                  <span
+                                    className="percentage"
+                  >
+                                    0.395
+                                     
+                  </span>
 </li>,
-                <li>
-                  2008
-                  : 
-                  0.536
+                <li
+                  className="red"
+>
+                  <span
+                                    className="year"
+                  >
+                                    2008
+                  </span>
+                  <span
+                                    className="percentage"
+                  >
+                                    0.536
+                                     
+                  </span>
 </li>,
-                <li>
-                  2009
-                  : 
-                  0.598
+                <li
+                  className="red"
+>
+                  <span
+                                    className="year"
+                  >
+                                    2009
+                  </span>
+                  <span
+                                    className="percentage"
+                  >
+                                    0.598
+                                     
+                  </span>
 </li>,
-                <li>
-                  2010
-                  : 
-                  0.64
+                <li
+                  className="red"
+>
+                  <span
+                                    className="year"
+                  >
+                                    2010
+                  </span>
+                  <span
+                                    className="percentage"
+                  >
+                                    0.64
+                                     
+                  </span>
 </li>,
-                <li>
-                  2011
-                  : 
-                  0.672
+                <li
+                  className="red"
+>
+                  <span
+                                    className="year"
+                  >
+                                    2011
+                  </span>
+                  <span
+                                    className="percentage"
+                  >
+                                    0.672
+                                     
+                  </span>
 </li>,
-                <li>
-                  2012
-                  : 
-                  0.695
+                <li
+                  className="red"
+>
+                  <span
+                                    className="year"
+                  >
+                                    2012
+                  </span>
+                  <span
+                                    className="percentage"
+                  >
+                                    0.695
+                                     
+                  </span>
 </li>,
-                <li>
-                  2013
-                  : 
-                  0.703
+                <li
+                  className="red"
+>
+                  <span
+                                    className="year"
+                  >
+                                    2013
+                  </span>
+                  <span
+                                    className="percentage"
+                  >
+                                    0.703
+                                     
+                  </span>
 </li>,
-                <li>
-                  2014
-                  : 
-                  0.741
+                <li
+                  className="red"
+>
+                  <span
+                                    className="year"
+                  >
+                                    2014
+                  </span>
+                  <span
+                                    className="percentage"
+                  >
+                                    0.741
+                                     
+                  </span>
 </li>,
               ],
               " ",
@@ -580,16 +1516,52 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "2004",
-                  ": ",
-                  0.24,
+                  <span
+                    className="year"
+>
+                    2004
+</span>,
+                  <span
+                    className="percentage"
+>
+                    0.24
+                     
+</span>,
                 ],
+                "className": "green",
               },
               "ref": null,
               "rendered": Array [
-                "2004",
-                ": ",
-                0.24,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2004",
+                    "className": "year",
+                  },
+                  "ref": null,
+                  "rendered": "2004",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      0.24,
+                      " ",
+                    ],
+                    "className": "percentage",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    0.24,
+                    " ",
+                  ],
+                  "type": "span",
+                },
               ],
               "type": "li",
             },
@@ -599,16 +1571,52 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "2005",
-                  ": ",
-                  0.278,
+                  <span
+                    className="year"
+>
+                    2005
+</span>,
+                  <span
+                    className="percentage"
+>
+                    0.278
+                     
+</span>,
                 ],
+                "className": "green",
               },
               "ref": null,
               "rendered": Array [
-                "2005",
-                ": ",
-                0.278,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2005",
+                    "className": "year",
+                  },
+                  "ref": null,
+                  "rendered": "2005",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      0.278,
+                      " ",
+                    ],
+                    "className": "percentage",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    0.278,
+                    " ",
+                  ],
+                  "type": "span",
+                },
               ],
               "type": "li",
             },
@@ -618,16 +1626,52 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "2006",
-                  ": ",
-                  0.337,
+                  <span
+                    className="year"
+>
+                    2006
+</span>,
+                  <span
+                    className="percentage"
+>
+                    0.337
+                     
+</span>,
                 ],
+                "className": "green",
               },
               "ref": null,
               "rendered": Array [
-                "2006",
-                ": ",
-                0.337,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2006",
+                    "className": "year",
+                  },
+                  "ref": null,
+                  "rendered": "2006",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      0.337,
+                      " ",
+                    ],
+                    "className": "percentage",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    0.337,
+                    " ",
+                  ],
+                  "type": "span",
+                },
               ],
               "type": "li",
             },
@@ -637,16 +1681,52 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "2007",
-                  ": ",
-                  0.395,
+                  <span
+                    className="year"
+>
+                    2007
+</span>,
+                  <span
+                    className="percentage"
+>
+                    0.395
+                     
+</span>,
                 ],
+                "className": "green",
               },
               "ref": null,
               "rendered": Array [
-                "2007",
-                ": ",
-                0.395,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2007",
+                    "className": "year",
+                  },
+                  "ref": null,
+                  "rendered": "2007",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      0.395,
+                      " ",
+                    ],
+                    "className": "percentage",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    0.395,
+                    " ",
+                  ],
+                  "type": "span",
+                },
               ],
               "type": "li",
             },
@@ -656,16 +1736,52 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "2008",
-                  ": ",
-                  0.536,
+                  <span
+                    className="year"
+>
+                    2008
+</span>,
+                  <span
+                    className="percentage"
+>
+                    0.536
+                     
+</span>,
                 ],
+                "className": "red",
               },
               "ref": null,
               "rendered": Array [
-                "2008",
-                ": ",
-                0.536,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2008",
+                    "className": "year",
+                  },
+                  "ref": null,
+                  "rendered": "2008",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      0.536,
+                      " ",
+                    ],
+                    "className": "percentage",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    0.536,
+                    " ",
+                  ],
+                  "type": "span",
+                },
               ],
               "type": "li",
             },
@@ -675,16 +1791,52 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "2009",
-                  ": ",
-                  0.598,
+                  <span
+                    className="year"
+>
+                    2009
+</span>,
+                  <span
+                    className="percentage"
+>
+                    0.598
+                     
+</span>,
                 ],
+                "className": "red",
               },
               "ref": null,
               "rendered": Array [
-                "2009",
-                ": ",
-                0.598,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2009",
+                    "className": "year",
+                  },
+                  "ref": null,
+                  "rendered": "2009",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      0.598,
+                      " ",
+                    ],
+                    "className": "percentage",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    0.598,
+                    " ",
+                  ],
+                  "type": "span",
+                },
               ],
               "type": "li",
             },
@@ -694,16 +1846,52 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "2010",
-                  ": ",
-                  0.64,
+                  <span
+                    className="year"
+>
+                    2010
+</span>,
+                  <span
+                    className="percentage"
+>
+                    0.64
+                     
+</span>,
                 ],
+                "className": "red",
               },
               "ref": null,
               "rendered": Array [
-                "2010",
-                ": ",
-                0.64,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2010",
+                    "className": "year",
+                  },
+                  "ref": null,
+                  "rendered": "2010",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      0.64,
+                      " ",
+                    ],
+                    "className": "percentage",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    0.64,
+                    " ",
+                  ],
+                  "type": "span",
+                },
               ],
               "type": "li",
             },
@@ -713,16 +1901,52 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "2011",
-                  ": ",
-                  0.672,
+                  <span
+                    className="year"
+>
+                    2011
+</span>,
+                  <span
+                    className="percentage"
+>
+                    0.672
+                     
+</span>,
                 ],
+                "className": "red",
               },
               "ref": null,
               "rendered": Array [
-                "2011",
-                ": ",
-                0.672,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2011",
+                    "className": "year",
+                  },
+                  "ref": null,
+                  "rendered": "2011",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      0.672,
+                      " ",
+                    ],
+                    "className": "percentage",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    0.672,
+                    " ",
+                  ],
+                  "type": "span",
+                },
               ],
               "type": "li",
             },
@@ -732,16 +1956,52 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "2012",
-                  ": ",
-                  0.695,
+                  <span
+                    className="year"
+>
+                    2012
+</span>,
+                  <span
+                    className="percentage"
+>
+                    0.695
+                     
+</span>,
                 ],
+                "className": "red",
               },
               "ref": null,
               "rendered": Array [
-                "2012",
-                ": ",
-                0.695,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2012",
+                    "className": "year",
+                  },
+                  "ref": null,
+                  "rendered": "2012",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      0.695,
+                      " ",
+                    ],
+                    "className": "percentage",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    0.695,
+                    " ",
+                  ],
+                  "type": "span",
+                },
               ],
               "type": "li",
             },
@@ -751,16 +2011,52 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "2013",
-                  ": ",
-                  0.703,
+                  <span
+                    className="year"
+>
+                    2013
+</span>,
+                  <span
+                    className="percentage"
+>
+                    0.703
+                     
+</span>,
                 ],
+                "className": "red",
               },
               "ref": null,
               "rendered": Array [
-                "2013",
-                ": ",
-                0.703,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2013",
+                    "className": "year",
+                  },
+                  "ref": null,
+                  "rendered": "2013",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      0.703,
+                      " ",
+                    ],
+                    "className": "percentage",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    0.703,
+                    " ",
+                  ],
+                  "type": "span",
+                },
               ],
               "type": "li",
             },
@@ -770,16 +2066,52 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "2014",
-                  ": ",
-                  0.741,
+                  <span
+                    className="year"
+>
+                    2014
+</span>,
+                  <span
+                    className="percentage"
+>
+                    0.741
+                     
+</span>,
                 ],
+                "className": "red",
               },
               "ref": null,
               "rendered": Array [
-                "2014",
-                ": ",
-                0.741,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2014",
+                    "className": "year",
+                  },
+                  "ref": null,
+                  "rendered": "2014",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      0.741,
+                      " ",
+                    ],
+                    "className": "percentage",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    0.741,
+                    " ",
+                  ],
+                  "type": "span",
+                },
               ],
               "type": "li",
             },
