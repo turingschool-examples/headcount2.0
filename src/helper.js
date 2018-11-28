@@ -39,4 +39,17 @@ export default class DistrictRepository {
       })
     } 
 }
+  findAverage = (location) => {
+    let values = Object.values(this.stats[location].stats)
+    let average =  values.reduce((sum, currElement) => {
+      sum+= currElement
+      return sum
+    }, 0)/values.length
+    return Math.round(1000*average)/1000;
+  }
+
+  compareDistrictAverages = (location1, location2) => {
+
+}
+
 }
