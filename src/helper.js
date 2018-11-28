@@ -40,8 +40,8 @@ export default class DistrictRepository {
     } 
 }
   findAverage = (location) => {
-    let values = Object.values(this.stats[location].stats)
-    let average =  values.reduce((sum, currElement) => {
+    const values = Object.values(this.stats[location].stats)
+    const average =  values.reduce((sum, currElement) => {
       sum+= currElement
       return sum
     }, 0)/values.length
@@ -49,7 +49,13 @@ export default class DistrictRepository {
   }
 
   compareDistrictAverages = (location1, location2) => {
-
+    const average1 = this.findAverage(location1.toUpperCase());
+    const average2 = this.findAverage(location2.toUpperCase());
+    const result = {}
+    result[location1.toUpperCase()] = average1
+    result[location2.toUpperCase()] = average2
+    result.compared = Math.round(1000*average1/average2)/1000;
+    return result;n
 }
 
 }
