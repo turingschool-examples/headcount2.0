@@ -1,23 +1,45 @@
-/* .card-container {
-  display: flex;
-} */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 .card-wrapper {
   border: 1px solid black;
+  border-radius: 10%;
   width: 300px;
   margin: 20px;
+  box-shadow: 3px 0 3px #bababa, -0.2em 0 0.2em #bababa;
+  background-color: #fff;
+}
+
+.location {
+  color: #000;
 }
 
 ul {
   list-style-type: none;
-  margin: 10px;
+  margin-bottom: 20px;
+  padding-left: 0;
 }
 
 h1 {
   text-align: center;
-  margin: 10px;
+  margin: 10px 10px 20px 10px;
   font-size: 20px;
 }
 
 li {
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.year {
+  color: #262730;
+}
+
+.percentage {
+   color: #337AB7;
+}
+
+h1, .year, .percentage, .location {
+  font-weight: 700;
 }

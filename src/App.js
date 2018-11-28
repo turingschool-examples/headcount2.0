@@ -23,7 +23,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1 className="header">HeadCount 2.0</h1>
+        <h1 className="header">HeadCount <span className="num">2.0</span></h1>
         <CardContainer data={this.state.data} />
       </div>
 

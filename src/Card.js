@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const Card = (props) => {
   const stats = Object.keys(props.cardInfo.stats).map((currStat) => {
-    return <li>{currStat}: {props.cardInfo.stats[currStat]}</li>
+    return <li><span className="year">{currStat}</span> <span className="percentage">{props.cardInfo.stats[currStat]}</span></li>
 
   })
 
