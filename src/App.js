@@ -10,7 +10,7 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      data: {}
+      data: {},
     }
   }
 
@@ -21,11 +21,23 @@ class App extends Component {
     })
   }
 
+  displaySearch = (searchValue) => {
+    const districtRepository = new DistrictRepository(Data);
+    const searchedSchoolsArr = districtRepository.findAllMatches(searchValue);
+    let searchedSchoolsObj = searchedSchoolsArr.reduce((obj, currSchool) => {
+      obj[currSchool] = districtRepository.stats[currSchool];
+      return obj;
+    }, {})
+    this.setState({
+      data: searchedSchoolsObj
+    })
+  }
+
   render() {
     return (
       <div>
         <h1 className="header">HeadCount <span className="num">2.0</span></h1>
-        <Search />
+        <Search displaySearch={this.displaySearch} />
         <CardContainer data={this.state.data} />
       </div>
 

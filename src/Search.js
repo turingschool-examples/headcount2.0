@@ -2,23 +2,19 @@ import React, { Component } from 'react';
 import './Search.css'
 
 class Search extends Component {
-  constructor(){
-    super();
-    this.state = {
-      searchValue: ''
-    }
+  constructor(props) {
+    super(props);
   }
 
-  handleState = (e) => {
-    this.setState({
-      searchValue: e.target.value
-    })
+  handleSearch = (e) => {
+    let value = e.target.value
+    this.props.displaySearch(value)
   }
   
   render() {
     return (
       <form className="form">
-        <input type="text" placeholder="Search School Districts" onKeyUp={this.handleState}/>
+        <input type="text" placeholder="Search School Districts" onChange={this.handleSearch}/>
       </form>
     )
   }
