@@ -1,22 +1,27 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import './Card.css'
 
-const Card = ( {district} ) => {
-    
+const Card = ( {location, stats} ) => {
+    const displayStats = Object.keys(stats).map(stat => {
+      return ( <li>{stat} {stats[stat] }</li>
+        )
+    })
     
     return(
-      <div>
-        <h4>{district.location}</h4>
+      <div className='card'>
+        <h4>{ location }</h4>
         <button>Select</button>
         <ul>
-          <li>stats Here</li>
+          {displayStats} 
         </ul>
       </div>
     )
   }
 
 Card.propTypes = {
-  district: PropTypes.object.isRequired
+  location: PropTypes.string.isRequired,
+  stats: PropTypes.object.isRequired
 }
 
 export default Card;

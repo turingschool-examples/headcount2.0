@@ -24,8 +24,7 @@ class App extends Component {
   }
 
   prepareDataForDisplay = (dataSet) => {
-    const displayData = this.state.repository.findAllMatches(this.state.searchWord);
-    console.log(displayData);
+    const displayData = this.state.repository.findAllMatches(this.state.searchWord);{}
     this.setState({ displayData })
   }
 

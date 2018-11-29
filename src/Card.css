@@ -1,0 +1,16 @@
+.above {
+  color: green;
+}
+
+.below {
+  color: red;
+}
+
+.card {
+  border: solid 2px black;
+  color: black;
+}
+
+ul {
+list-style: none
+}
