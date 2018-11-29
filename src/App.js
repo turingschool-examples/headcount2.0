@@ -12,7 +12,8 @@ class App extends Component {
     this.state = {
       dataSet: '',
       displayData: [],
-      searchWord: ''
+      searchWord: '',
+      repository: new DistrictRepository(kinderData)
     }
   }
 
@@ -23,8 +24,8 @@ class App extends Component {
   }
 
   prepareDataForDisplay = (dataSet) => {
-    const cleanData = new DistrictRepository(dataSet);
-    const displayData = cleanData.findAllMatches(this.state.searchWord);
+    const displayData = this.state.repository.findAllMatches(this.state.searchWord);
+    console.log(displayData);
     this.setState({ displayData })
   }
 

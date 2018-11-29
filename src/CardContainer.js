@@ -5,7 +5,9 @@ import PropTypes from 'prop-types';
 const CardContainer = ( {displayData} ) => {
 
   const cards = displayData.map(district => {
-    return <Card key={Date.now()} {...district} />
+    return <Card 
+            key={Date.now()} 
+            district={district} />
   })
 
   return(
@@ -19,7 +21,7 @@ const CardContainer = ( {displayData} ) => {
 }
 
 CardContainer.propTypes = {
-  dataSet: PropTypes.array.isRequired
+  displaData: PropTypes.array.isRequired
 }
 
 export default CardContainer;
