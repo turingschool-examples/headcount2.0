@@ -1,0 +1,26 @@
+/*APP COMPONENT RELATED CSS GOES HERE*/
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Raleway');
+
+* {
+    font-family: 'Raleway', sans-serif;
+    /* background-color: #DDDBCB; */
+    margin-top: 0;
+}
+
+.App {
+    background-color: #C9C5BA;
+    /* background-color: #EBBAB9; */
+}
+
+h1 {
+    text-align: center;
+}
+
+.header {
+    font-family: 'Black Han Sans', sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 60px;
+    color: #698996;
+    padding-top: 20px;
+}

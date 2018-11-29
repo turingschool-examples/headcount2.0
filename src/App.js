@@ -2,14 +2,17 @@ import React, { Component } from 'react';
 import DistrictRepository from './helper.js';
 import data from './data/kindergartners_in_full_day_program.js';
 import CardContainer from './CardContainer.js';
-import './App.css';
+import './styles/App.css';
 import Search from './Search.js';
+import CompareCardContainer from './CompareCardContainer.js'
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: {}
+      data: {},
+      compareCard1: null,
+      compareCard2: null
     }
   }
 
@@ -32,12 +35,29 @@ class App extends Component {
     })
   }
 
+  displaySelected = (card) => {
+    const district = new DistrictRepository(data);
+    const comparedCard = district.findByName(card.location);
+    this.setState({compareCard1: comparedCard});
+  }
+
   render() {
     return (
-      <div>
-          <h1> HeadCount 2.0</h1>
-          <Search displaySearch={this.displaySearch}/>
-          <CardContainer data={this.state.data} />
+      <div className = "App">
+          <h1 className="header"> 
+          HeadCount 2.0
+          </h1>
+          <Search 
+          displaySearch={this.displaySearch}
+          />
+          <CompareCardContainer 
+          // appState = {this.state}
+          compareCard1 = {this.state.compareCard1}
+          />
+          <CardContainer 
+          data={this.state.data} 
+          displaySelected={this.displaySelected} 
+          />
       </div>
     );
   }

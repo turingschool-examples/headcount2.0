@@ -4,22 +4,27 @@ import './styles/Card.css';
 
 const Card = (props) => {
     const stats = Object.keys(props.cardInfo.stats).map(currStat => {
-        let classString = 'green';
+        let classString = 'low';
         if (props.cardInfo.stats[currStat] > 0.5) {
-            classString = 'red'; 
+            classString = 'high'; 
         }
-        return <li 
-        className={classString}>
+        return (<li 
+        className={classString} 
+        
+        >
             <span className='year'>
             {currStat}
             </span>
             <span className='percentage'>
             {props.cardInfo.stats[currStat]} 
             </span>
-        </li>
+        </li> )
     });
+
     return (
-        <div className="card"> 
+        <div className="card" key={props.cardInfo.id} 
+        onClick={() => props.displaySelected(props.cardInfo)}
+        > 
             <h1> {props.cardInfo.location} </h1>
                 <p> 
                     <h3> year </h3>

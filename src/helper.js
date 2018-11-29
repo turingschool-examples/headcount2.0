@@ -54,5 +54,4 @@ export default class DistrictRepository {
     result.compared = Math.round(1000*loc1Avg/loc2Avg)/1000;
     return result;
   }
-  
 }
