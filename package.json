@@ -2,18 +2,25 @@
   "name": "headcount",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://saraebbers.github.io/headcount2.0",
   "devDependencies": {
+    "enzyme-adapter-react-16": "^1.7.0",
     "react-scripts": "1.1.0"
   },
   "dependencies": {
+    "enzyme": "^3.7.0",
+    "gh-pages": "^2.0.1",
     "prop-types": "^15.6.2",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "save-dev": "^2.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build",
     "eject": "react-scripts eject"
   }
 }
