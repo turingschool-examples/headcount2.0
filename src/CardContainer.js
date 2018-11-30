@@ -12,8 +12,8 @@ const CardContainer = ( {displayData} ) => {
   })
 
   return(
-    <div className='cardContainerHeading'>
-      <h3>Data for Each District Contained Here</h3>
+    <div>
+      <h3 className='cardContainerHeading'>Data for Each District Contained Here</h3>
       <section className='cardContainer-grid'>
         { cards }
       </section>

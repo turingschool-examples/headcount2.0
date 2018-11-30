@@ -4,14 +4,16 @@ import './Card.css'
 
 const Card = ( {location, stats} ) => {
     const displayStats = Object.keys(stats).map(stat => {
-      return ( <li>{stat} {stats[stat] }</li>
+      return ( <li className={`listedStats ${stats[stat] < 0.5 ? 'below' : 'above'}`}> {`${stat}: ${stats[stat] }`}</li>
         )
     })
     
     return(
       <div className='card'>
-        <h4>{ location }</h4>
-        <button>Select</button>
+        <span>
+          <h5>{ location }</h5>
+          <button className='select-btn'>Select</button>
+          </span>
         <ul>
           {displayStats} 
         </ul>
