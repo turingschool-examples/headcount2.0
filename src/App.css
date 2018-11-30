@@ -1,1 +1,5 @@
-/*APP COMPONENT RELATED CSS GOES HERE*/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+

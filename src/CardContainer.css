@@ -1,0 +1,15 @@
+.cardContainer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  grid-gap: 15px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 25px;
+  border: cornflowerblue;
+  align-items: center;
+}
+
+.cardContainerHeading {
+  color: cornflowerblue; 
+  text-align: center;
+}
