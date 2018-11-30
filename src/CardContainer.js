@@ -22,7 +22,7 @@ const CardContainer = ( {displayData} ) => {
 }
 
 CardContainer.propTypes = {
-  displaData: PropTypes.array.isRequired
+  displayData: PropTypes.array.isRequired
 }
 
 export default CardContainer;
