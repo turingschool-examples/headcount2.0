@@ -9,10 +9,6 @@
   background-color: #fff;
 }
 
-.location {
-  color: #000;
-}
-
 ul {
   list-style-type: none;
   margin-bottom: 20px;
@@ -25,6 +21,13 @@ h1 {
   font-size: 20px;
 }
 
+p {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
 li {
   text-align: center;
   display: flex;
@@ -32,12 +35,16 @@ li {
   justify-content: space-around;
 }
 
-.year {
-  color: #262730;
+li.low {
+  color: #F96854;
 }
 
-.percentage {
-   color: #337AB7;
+li.high {
+  color: #337AB7;
+
+}
+.year {
+  color: #262730;
 }
 
 h1, .year, .percentage, .location {

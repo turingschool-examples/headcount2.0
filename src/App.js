@@ -4,6 +4,7 @@ import DistrictRepository from './helper.js';
 import CardContainer from './CardContainer.js';
 import Search from './Search.js'
 import './App.css';
+import CompareCardContainer from './CompareCardContainer.js';
 
 
 class App extends Component {
@@ -11,8 +12,11 @@ class App extends Component {
     super()
     this.state = {
       data: {},
-    }
+      compareCard1: null,
+      compareCard2: null,
+      middleCard: null
   }
+}
 
   componentDidMount = () => {
     const districtRepository = new DistrictRepository(Data);
@@ -33,16 +37,40 @@ class App extends Component {
     })
   }
 
+  displaySelected = (card) => {
+    const districtRepository = new DistrictRepository(Data);
+    console.log(card.location)
+    const selected = districtRepository.findByName(card.location);
+    if (!this.state.compareCard1) {
+      this.setState({
+        compareCard1: selected
+      })
+    } else {
+      this.setState({
+      compareCard2: selected
+    })
+  }
+}
+
+compareCards = (card1, card2) => {
+  const districtRepository = new DistrictRepository(Data);
+  const comparedAvg = districtRepository.compareDistrictAverages(card1, card2);
+  console.log('comparedAvg', comparedAvg)
+}
+
   render() {
     return (
       <div>
         <h1 className="header">HeadCount <span className="num">2.0</span></h1>
         <Search displaySearch={this.displaySearch} />
-        <CardContainer data={this.state.data} />
+        <CompareCardContainer appState={this.state} compareCards={this.compareCards} />
+        <CardContainer data={this.state.data} displaySelected={this.displaySelected} />
       </div>
 
     );
-  }
+  
 }
+}
+
 
 export default App;

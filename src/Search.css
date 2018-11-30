@@ -5,4 +5,10 @@
 
 input {
   width: 300px;
+    border: none;
+    font-size: 14px;
+    height: 90%;
+    /* outline-width: 0; */
+    padding: 5px;
+    /* width: 90%; */
 }
