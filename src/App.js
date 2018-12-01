@@ -39,7 +39,6 @@ class App extends Component {
 
   displaySelected = (card) => {
     const districtRepository = new DistrictRepository(Data);
-    console.log(card.location)
     const selected = districtRepository.findByName(card.location);
     if (!this.state.compareCard1) {
       this.setState({
@@ -64,7 +63,7 @@ compareCards = (card1, card2) => {
         <h1 className="header">HeadCount <span className="num">2.0</span></h1>
         <Search displaySearch={this.displaySearch} />
         <CompareCardContainer appState={this.state} compareCards={this.compareCards} />
-        <CardContainer data={this.state.data} displaySelected={this.displaySelected} />
+        <CardContainer data={this.state.data} displaySelected={this.displaySelected} campareCard1={this.state.compareCard1} campareCard2={this.state.compareCard2}/>
       </div>
 
     );

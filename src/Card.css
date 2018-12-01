@@ -9,6 +9,11 @@
   background-color: #fff;
 }
 
+#selected {
+  border: 5px solid red;
+  box-shadow: none;
+}
+
 ul {
   list-style-type: none;
   margin-bottom: 20px;
@@ -35,11 +40,11 @@ li {
   justify-content: space-around;
 }
 
-li.high {
+#high {
   color: #F96854;
 }
 
-li.low {
+#low {
   color: #337AB7;
 
 }
