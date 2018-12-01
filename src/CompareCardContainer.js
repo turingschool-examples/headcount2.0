@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card.js';
+import CompareCard from './CompareCard.js';
 import './CompareCardContainer.css';
 
 const CompareCardContainer = (props) => {
@@ -13,11 +14,14 @@ const CompareCardContainer = (props) => {
     card2= <Card cardInfo={props.appState.compareCard2} />
   }
   if(props.appState.compareCard1 !== null && props.appState.compareCard2 !== null) {
-    props.compareCards(props.appState.compareCard1.location, props.appState.compareCard2.location)
+    let object = props.compareCards(props.appState.compareCard1.location, props.appState.compareCard2.location)
+    middleCard= <CompareCard cardInfo={object} />
   }
 
+ 
+
   return (
-    <div className="compare-cards">{card1}{card2}</div>
+    <div className="compare-cards">{card1}{middleCard}{card2}</div>
 
   )
 }

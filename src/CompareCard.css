@@ -1,27 +1,45 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-.card-wrapper {
+.compare-card {
   border: 1px solid black;
   border-radius: 10%;
   width: 300px;
   margin: 20px;
   box-shadow: 3px 0 3px #bababa, -0.2em 0 0.2em #bababa;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-ul {
+.location {
+  margin-bottom: 0;
+}
+
+.location-num {
+  color:#337AB7;
+}
+
+.compare-num {
+  color: #F96854;
+  font-size: 50px;
+}
+
+
+
+/* ul {
   list-style-type: none;
   margin-bottom: 20px;
   padding-left: 0;
-}
+} */
 
-h1 {
+/* h1 {
   text-align: center;
   margin: 10px 10px 20px 10px;
   font-size: 20px;
-}
+} */
 
-p {
+/* p {
   display: flex;
   justify-content: space-around;
   margin-bottom: 0;
@@ -35,11 +53,11 @@ li {
   justify-content: space-around;
 }
 
-li.high {
+li.low {
   color: #F96854;
 }
 
-li.low {
+li.high {
   color: #337AB7;
 
 }
@@ -49,4 +67,4 @@ li.low {
 
 h1, .year, .percentage, .location {
   font-weight: 700;
-}
+} */

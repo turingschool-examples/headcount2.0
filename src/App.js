@@ -55,7 +55,7 @@ class App extends Component {
 compareCards = (card1, card2) => {
   const districtRepository = new DistrictRepository(Data);
   const comparedAvg = districtRepository.compareDistrictAverages(card1, card2);
-  console.log('comparedAvg', comparedAvg)
+  return comparedAvg;
 }
 
   render() {

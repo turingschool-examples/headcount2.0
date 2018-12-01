@@ -1,4 +1,3 @@
-
 export default class DistrictRepository {
   constructor(data) {
     this.stats = data.reduce((obj, currElement) => {
