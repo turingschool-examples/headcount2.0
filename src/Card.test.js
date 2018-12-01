@@ -4,9 +4,11 @@ import { shallow } from 'enzyme';
 
 describe('Card', () => {
   it('matches the snapshot', () => {
-    const wrapper = shallow(<Card 
+
+    let wrapper = shallow(<Card 
             key={Date.now()} 
-            {...district} />);
+            location={'string'}
+            stats={{1909: 0.107, 3999: 5.999}} />);
     expect(wrapper).toMatchSnapshot()
   });
 
