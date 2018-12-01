@@ -22,49 +22,9 @@
 
 .compare-num {
   color: #F96854;
-  font-size: 50px;
+  font-size: 35px;
 }
 
-
-
-/* ul {
-  list-style-type: none;
-  margin-bottom: 20px;
-  padding-left: 0;
-} */
-
-/* h1 {
-  text-align: center;
-  margin: 10px 10px 20px 10px;
-  font-size: 20px;
-} */
-
-/* p {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 0;
-  font-size: 12px;
+span {
+  color: #000;
 }
-
-li {
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  justify-content: space-around;
-}
-
-li.low {
-  color: #F96854;
-}
-
-li.high {
-  color: #337AB7;
-
-}
-.year {
-  color: #262730;
-}
-
-h1, .year, .percentage, .location {
-  font-weight: 700;
-} */
