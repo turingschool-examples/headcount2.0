@@ -5,7 +5,7 @@ import './CardContainer.css';
 
 const CardContainer = (props) => {
   const cards = Object.keys(props.data).map((currCard) => {
-    return <Card cardInfo={props.data[currCard]} displaySelected={props.displaySelected} campareCard1={props.compareCard1} campareCard2={props.compareCard2} />
+    return <Card cardInfo={props.data[currCard]} displaySelected={props.displaySelected} compareCard1={props.compareCard1} compareCard2={props.compareCard2} />
 
   })
 

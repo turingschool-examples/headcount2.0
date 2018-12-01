@@ -24,16 +24,15 @@ class Card extends Component {
 
   handleChange = () => {
     this.props.displaySelected(this.props.cardInfo)
-    // if (this.props.compareCard1 === null || this.props.compareCard2 === null )
+    if (this.props.compareCard1 === null || this.props.compareCard2 === null )
     this.setState({
       selected: !this.state.selected
       })
-    // if (this.props.compareCard1 !== null && this.props.compareCard2 !== null) {
-    //   this.setState({
-    //     selected: false
-    //   })
-    // }
-    
+    if (this.props.compareCard1 !== null && this.props.compareCard2 !== null) {
+      this.setState({
+        selected: false
+      })
+    }
   }
 
   render() {
