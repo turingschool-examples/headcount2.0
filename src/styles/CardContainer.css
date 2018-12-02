@@ -4,3 +4,8 @@
     grid-auto-flow: dense;
     grid-gap: 10px;
 }
+
+.selected {
+    border: solid 4px palevioletred;
+    
+}

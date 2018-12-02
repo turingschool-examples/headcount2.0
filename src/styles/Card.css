@@ -9,6 +9,16 @@
     margin: 40px;
     max-width: 400px;
 }
+
+
+
+.compared-card {
+    justify-content: space-between;
+    align-items: center;
+    width: 110%;
+    font-size: 24px;
+}
+
 ul {
     color: #EBBAB9;
     font-size: 20px;

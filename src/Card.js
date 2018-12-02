@@ -1,7 +1,6 @@
 import React from 'react';
 import './styles/Card.css';
 
-
 const Card = (props) => {
     const stats = Object.keys(props.cardInfo.stats).map(currStat => {
         let classString = 'low';
@@ -9,8 +8,7 @@ const Card = (props) => {
             classString = 'high'; 
         }
         return (<li 
-        className={classString} 
-        
+        className={classString}
         >
             <span className='year'>
             {currStat}
@@ -20,9 +18,8 @@ const Card = (props) => {
             </span>
         </li> )
     });
-
     return (
-        <div className="card" key={props.cardInfo.id} 
+        <div className={props.selected || 'card selected'} key={props.cardInfo.id} 
         onClick={() => props.displaySelected(props.cardInfo)}
         > 
             <h1> {props.cardInfo.location} </h1>

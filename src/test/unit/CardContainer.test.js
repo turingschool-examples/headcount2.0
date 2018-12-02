@@ -5,7 +5,7 @@ import React from 'react';
 import CardContainer from '../../CardContainer.js';
 
 
-describe ('Card', () => {
+describe ('CardContainer', () => {
     const mockData2 = [{
         location:
         "COLORADO", 

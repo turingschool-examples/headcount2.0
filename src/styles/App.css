@@ -24,3 +24,14 @@ h1 {
     color: #698996;
     padding-top: 20px;
 }
+
+.compared-card {
+    height: 400px;
+}
+
+.compared-card-container {
+   display: flex;
+   /* flex-direction: row; */
+   justify-content: center;
+   /* border: 1px solid black; */
+}
