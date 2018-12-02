@@ -1,0 +1,638 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot with all appropriate data 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    location="COLORADO"
+    stats={
+      Object {
+        "2006": 1,
+        "2007": 1,
+        "2008": 0,
+        "2009": 0.5,
+        "2010": 1,
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3>
+          COLORADO
+        </h3>,
+        <hr />,
+        <ul
+          className="timeframes"
+        >
+          <li>
+            2006: 
+            <span
+              className="purple"
+            >
+              1
+            </span>
+          </li>
+          <li>
+            2007: 
+            <span
+              className="purple"
+            >
+              1
+            </span>
+          </li>
+          <li>
+            2008: 
+            <span
+              className="yellow"
+            >
+              0
+            </span>
+          </li>
+          <li>
+            2009: 
+            <span
+              className="purple"
+            >
+              0.5
+            </span>
+          </li>
+          <li>
+            2010: 
+            <span
+              className="purple"
+            >
+              1
+            </span>
+          </li>
+        </ul>,
+      ],
+      "className": "card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "COLORADO",
+        },
+        "ref": null,
+        "rendered": "COLORADO",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "hr",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li>
+              2006: 
+              <span
+                className="purple"
+              >
+                1
+              </span>
+            </li>,
+            <li>
+              2007: 
+              <span
+                className="purple"
+              >
+                1
+              </span>
+            </li>,
+            <li>
+              2008: 
+              <span
+                className="yellow"
+              >
+                0
+              </span>
+            </li>,
+            <li>
+              2009: 
+              <span
+                className="purple"
+              >
+                0.5
+              </span>
+            </li>,
+            <li>
+              2010: 
+              <span
+                className="purple"
+              >
+                1
+              </span>
+            </li>,
+          ],
+          "className": "timeframes",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "2006",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2006: ",
+                <span
+                  className="purple"
+                >
+                  1
+                </span>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2006: ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "1",
+                  "className": "purple",
+                },
+                "ref": null,
+                "rendered": "1",
+                "type": "span",
+              },
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "2007",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2007: ",
+                <span
+                  className="purple"
+                >
+                  1
+                </span>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2007: ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "1",
+                  "className": "purple",
+                },
+                "ref": null,
+                "rendered": "1",
+                "type": "span",
+              },
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "2008",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2008: ",
+                <span
+                  className="yellow"
+                >
+                  0
+                </span>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2008: ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "0",
+                  "className": "yellow",
+                },
+                "ref": null,
+                "rendered": "0",
+                "type": "span",
+              },
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "2009",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2009: ",
+                <span
+                  className="purple"
+                >
+                  0.5
+                </span>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2009: ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "0.5",
+                  "className": "purple",
+                },
+                "ref": null,
+                "rendered": "0.5",
+                "type": "span",
+              },
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "2010",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2010: ",
+                <span
+                  className="purple"
+                >
+                  1
+                </span>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2010: ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "1",
+                  "className": "purple",
+                },
+                "ref": null,
+                "rendered": "1",
+                "type": "span",
+              },
+            ],
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3>
+            COLORADO
+          </h3>,
+          <hr />,
+          <ul
+            className="timeframes"
+          >
+            <li>
+              2006: 
+              <span
+                className="purple"
+              >
+                1
+              </span>
+            </li>
+            <li>
+              2007: 
+              <span
+                className="purple"
+              >
+                1
+              </span>
+            </li>
+            <li>
+              2008: 
+              <span
+                className="yellow"
+              >
+                0
+              </span>
+            </li>
+            <li>
+              2009: 
+              <span
+                className="purple"
+              >
+                0.5
+              </span>
+            </li>
+            <li>
+              2010: 
+              <span
+                className="purple"
+              >
+                1
+              </span>
+            </li>
+          </ul>,
+        ],
+        "className": "card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "COLORADO",
+          },
+          "ref": null,
+          "rendered": "COLORADO",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "hr",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li>
+                2006: 
+                <span
+                  className="purple"
+                >
+                  1
+                </span>
+              </li>,
+              <li>
+                2007: 
+                <span
+                  className="purple"
+                >
+                  1
+                </span>
+              </li>,
+              <li>
+                2008: 
+                <span
+                  className="yellow"
+                >
+                  0
+                </span>
+              </li>,
+              <li>
+                2009: 
+                <span
+                  className="purple"
+                >
+                  0.5
+                </span>
+              </li>,
+              <li>
+                2010: 
+                <span
+                  className="purple"
+                >
+                  1
+                </span>
+              </li>,
+            ],
+            "className": "timeframes",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "2006",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2006: ",
+                  <span
+                    className="purple"
+                  >
+                    1
+                  </span>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2006: ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "1",
+                    "className": "purple",
+                  },
+                  "ref": null,
+                  "rendered": "1",
+                  "type": "span",
+                },
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "2007",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2007: ",
+                  <span
+                    className="purple"
+                  >
+                    1
+                  </span>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2007: ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "1",
+                    "className": "purple",
+                  },
+                  "ref": null,
+                  "rendered": "1",
+                  "type": "span",
+                },
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "2008",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2008: ",
+                  <span
+                    className="yellow"
+                  >
+                    0
+                  </span>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2008: ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "0",
+                    "className": "yellow",
+                  },
+                  "ref": null,
+                  "rendered": "0",
+                  "type": "span",
+                },
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "2009",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2009: ",
+                  <span
+                    className="purple"
+                  >
+                    0.5
+                  </span>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2009: ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "0.5",
+                    "className": "purple",
+                  },
+                  "ref": null,
+                  "rendered": "0.5",
+                  "type": "span",
+                },
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "2010",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2010: ",
+                  <span
+                    className="purple"
+                  >
+                    1
+                  </span>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2010: ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "1",
+                    "className": "purple",
+                  },
+                  "ref": null,
+                  "rendered": "1",
+                  "type": "span",
+                },
+              ],
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

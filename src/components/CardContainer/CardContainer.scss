@@ -1,0 +1,15 @@
+section {
+  text-align: center;
+}
+
+.title-header {
+  z-index: 1;
+}
+
+.card-container {
+  display: flex;
+  z-index: 1;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+}

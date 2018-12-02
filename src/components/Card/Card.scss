@@ -1,0 +1,35 @@
+.card {
+  border: 2px solid black;
+  width: 200px;
+  background: gray;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  margin: 0;
+  text-align: center;
+}
+
+hr {
+  width: 75%;
+}
+
+.timeframes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+
+  .yellow {
+    color: yellow;
+  }
+
+  .purple {
+    color: purple;
+  }
+}
