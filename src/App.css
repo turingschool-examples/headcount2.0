@@ -1,1 +1,25 @@
-/*APP COMPONENT RELATED CSS GOES HERE*/
+@import url(https://fonts.googleapis.com/css?family=Lora|Roboto:400,500);
+
+nav {
+  width: 100%;
+  background: #275DAD;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Lora', sans-serif;
+  font-size: 40px;
+  margin-top: 0;
+  opacity:;
+  color: white;
+  opacity: 0.95;
+}
+
+
+.info {
+  color: white;
+  text-align: center;
+  opacity: 0.9;
+  font-family: 'Lora', sans-serif;
+}
+

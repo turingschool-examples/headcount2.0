@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm should match snapshot 1`] = `
+<div>
+  <form
+    className="search-field"
+  >
+    <input
+      onChange={[Function]}
+      placeholder="search for a school district..."
+      type="text"
+    />
+  </form>
+</div>
+`;

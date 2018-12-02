@@ -1,0 +1,18 @@
+@import url(https://fonts.googleapis.com/css?family=Lora|Roboto:400,500);
+
+.search-field {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  outline: none;
+  font-size: 16px;
+  font-family: 'Lora', sans-serif;
+} 
+
