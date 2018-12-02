@@ -12,4 +12,11 @@ describe('Card', () => {
     expect(wrapper).toMatchSnapshot()
   });
 
+  it.skip('assigns a classNames of listedStats and above to all stats that are above 0.5, and listedStats below to all stats less than 0.5', () => {
+
+
+  })
+
+  
+
 })

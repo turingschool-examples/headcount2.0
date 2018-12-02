@@ -4,31 +4,31 @@ import Search from './Search';
 import ComparisonContainer from './ComparisonContainer';
 import CardContainer from './CardContainer';
 import DistrictRepository from './helper';
-import kinderData from './data/kindergartners_in_full_day_program.js';
+import Kindergartner from './data/kindergartners_in_full_day_program.js';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      dataSet: 'kinderData',
+      dataSet: 'Kindergartner',
       displayData: [],
       searchWord: '',
-      repository: new DistrictRepository(kinderData)
+      repository: new DistrictRepository(Kindergartner)
     }
   }
 
   componentDidMount() {
-    this.prepareDataForDisplay(this.state.dataSet);
+    this.prepareDataForDisplay();
   }
 
-  prepareDataForDisplay = (dataSet) => {
+  prepareDataForDisplay = () => {
     const displayData = this.state.repository.findAllMatches(this.state.searchWord);
     this.setState({ displayData })
   }
 
   render() {
 
-    const { cleanData, displayData } = this.state;
+    const { cleanData, displayData, dataSet } = this.state;
 
     return (
       <div>
@@ -36,7 +36,8 @@ class App extends Component {
         <Search />
         <ComparisonContainer />
         <CardContainer 
-          displayData={ displayData }/>
+          displayData={ displayData }
+          dataSet={ dataSet }/>
       </div>
     );
   }

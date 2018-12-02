@@ -4,6 +4,7 @@ exports[`CardContainer matches the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CardContainer
+    dataSet="College"
     displayData={
         Array [
             Object {
@@ -40,7 +41,8 @@ ShallowWrapper {
         <h3
           className="cardContainerHeading"
 >
-          Data for Each District Contained Here
+          College
+           data for each district is listed below when nothing is entered in the search field, otherwise, only districts that match the search criteria are listed.
 </h3>,
         <section
           className="cardContainer-grid"
@@ -73,11 +75,17 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Data for Each District Contained Here",
+          "children": Array [
+            "College",
+            " data for each district is listed below when nothing is entered in the search field, otherwise, only districts that match the search criteria are listed.",
+          ],
           "className": "cardContainerHeading",
         },
         "ref": null,
-        "rendered": "Data for Each District Contained Here",
+        "rendered": Array [
+          "College",
+          " data for each district is listed below when nothing is entered in the search field, otherwise, only districts that match the search criteria are listed.",
+        ],
         "type": "h3",
       },
       Object {
@@ -111,7 +119,7 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": "1543612466667",
+            "key": "1543783538490",
             "nodeType": "function",
             "props": Object {
               "location": "NorthCarolina",
@@ -126,7 +134,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": "1543612466667",
+            "key": "1543783538490",
             "nodeType": "function",
             "props": Object {
               "location": "VIRGINIA",
@@ -155,7 +163,8 @@ ShallowWrapper {
           <h3
             className="cardContainerHeading"
 >
-            Data for Each District Contained Here
+            College
+             data for each district is listed below when nothing is entered in the search field, otherwise, only districts that match the search criteria are listed.
 </h3>,
           <section
             className="cardContainer-grid"
@@ -188,11 +197,17 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Data for Each District Contained Here",
+            "children": Array [
+              "College",
+              " data for each district is listed below when nothing is entered in the search field, otherwise, only districts that match the search criteria are listed.",
+            ],
             "className": "cardContainerHeading",
           },
           "ref": null,
-          "rendered": "Data for Each District Contained Here",
+          "rendered": Array [
+            "College",
+            " data for each district is listed below when nothing is entered in the search field, otherwise, only districts that match the search criteria are listed.",
+          ],
           "type": "h3",
         },
         Object {
@@ -226,7 +241,7 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": "1543612466667",
+              "key": "1543783538490",
               "nodeType": "function",
               "props": Object {
                 "location": "NorthCarolina",
@@ -241,7 +256,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": "1543612466667",
+              "key": "1543783538490",
               "nodeType": "function",
               "props": Object {
                 "location": "VIRGINIA",
