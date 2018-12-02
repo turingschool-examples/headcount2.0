@@ -38,7 +38,7 @@ class App extends Component {
 
     return (
       <div>
-        <h1>Welcome To Headcount 2.0</h1>
+        <h1 className='app'>Welcome To Headcount 2.0</h1>
         <Search 
           searchForDistrict={this.searchForDistrict } />
         <ComparisonContainer />

@@ -14,6 +14,7 @@ class Search extends Component {
     const { name, value } = e.target;
     // value = value.toUppercase();
     this.setState( {[name]: value.toUpperCase()})
+    this.props.searchForDistrict(value.toUpperCase())
   }
 
   handleSubmit = (e) => {
@@ -21,6 +22,7 @@ class Search extends Component {
     const searchString = this.state.searchString;
     // console.log(searchForDistrict);
     this.props.searchForDistrict(searchString)
+    this.setState({searchString : ''})
   }
 
   render() {
@@ -30,11 +32,13 @@ class Search extends Component {
         <form 
           onSubmit={this.handleSubmit}>
           <input 
+            className='inputField'
             name='searchString'
             placeholder='Enter District You Want To Search'
             value={this.state.searchString}
             onChange={this.handleImputChange} />
-          <button>Submit</button>
+          <button
+            className='inputButton'>Submit</button>
         </form>
       </div>
     )
