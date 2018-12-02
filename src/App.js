@@ -40,6 +40,8 @@ class App extends Component {
   displaySelected = (card) => {
     const districtRepository = new DistrictRepository(Data);
     const selected = districtRepository.findByName(card.location);
+    selected.selected = true;
+    card.selected = true;
     if (!this.state.compareCard1) {
       this.setState({
         compareCard1: selected
@@ -50,6 +52,10 @@ class App extends Component {
     })
   }
 }
+
+// updateSelected = () => {
+
+// }
 
 compareCards = (card1, card2) => {
   const districtRepository = new DistrictRepository(Data);
