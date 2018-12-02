@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.card-wrapper {
+  border: 1px solid black;
+  border-radius: 10%;
+  width: 300px;
+  margin: 20px;
+  box-shadow: 3px 0 3px #bababa, -0.2em 0 0.2em #bababa;
+  background-color: #fff;
+}
+
+.selected {
+  border: 5px solid #337AB7;
+  box-shadow: none;
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 20px;
+  padding-left: 0;
+}
+
+h1 {
+  text-align: center;
+  margin: 10px 10px 20px 10px;
+  font-size: 20px;
+}
+
+p {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+li {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-around;
+}
+
+#high {
+  color: #F96854;
+}
+
+#low {
+  color: #337AB7;
+
+}
+.year {
+  color: #262730;
+}
+
+h1, .year, .percentage, .location {
+  font-weight: 700;
+}

@@ -1,0 +1,308 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CompareCardContainer should match the snapshot with all data passed in correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    data={
+        Object {
+            "CompareCard2": Object {
+              "location": "ADAMS COUNTY 14",
+              "stats": Object {
+                "2004": 0.228,
+                "2005": 0.3,
+                "2006": 0.293,
+                "2007": 0.306,
+                "2008": 0.673,
+                "2009": 1,
+                "2010": 1,
+                "2011": 1,
+                "2012": 1,
+                "2013": 0.998,
+                "2014": 1,
+              },
+            },
+            "compareCard1": Object {
+              "location": "ADAMS COUNTY 14",
+              "stats": Object {
+                "2004": 0.228,
+                "2005": 0.3,
+                "2006": 0.293,
+                "2007": 0.306,
+                "2008": 0.673,
+                "2009": 1,
+                "2010": 1,
+                "2011": 1,
+                "2012": 1,
+                "2013": 0.998,
+                "2014": 1,
+              },
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          cardInfo={
+                    Object {
+                              "location": "ADAMS COUNTY 14",
+                              "stats": Object {
+                                "2004": 0.228,
+                                "2005": 0.3,
+                                "2006": 0.293,
+                                "2007": 0.306,
+                                "2008": 0.673,
+                                "2009": 1,
+                                "2010": 1,
+                                "2011": 1,
+                                "2012": 1,
+                                "2013": 0.998,
+                                "2014": 1,
+                              },
+                            }
+          }
+          compareCard1={undefined}
+          compareCard2={undefined}
+          displaySelected={undefined}
+/>,
+        <Card
+          cardInfo={
+                    Object {
+                              "location": "ADAMS COUNTY 14",
+                              "stats": Object {
+                                "2004": 0.228,
+                                "2005": 0.3,
+                                "2006": 0.293,
+                                "2007": 0.306,
+                                "2008": 0.673,
+                                "2009": 1,
+                                "2010": 1,
+                                "2011": 1,
+                                "2012": 1,
+                                "2013": 0.998,
+                                "2014": 1,
+                              },
+                            }
+          }
+          compareCard1={undefined}
+          compareCard2={undefined}
+          displaySelected={undefined}
+/>,
+      ],
+      "className": "card-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "cardInfo": Object {
+            "location": "ADAMS COUNTY 14",
+            "stats": Object {
+              "2004": 0.228,
+              "2005": 0.3,
+              "2006": 0.293,
+              "2007": 0.306,
+              "2008": 0.673,
+              "2009": 1,
+              "2010": 1,
+              "2011": 1,
+              "2012": 1,
+              "2013": 0.998,
+              "2014": 1,
+            },
+          },
+          "compareCard1": undefined,
+          "compareCard2": undefined,
+          "displaySelected": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "cardInfo": Object {
+            "location": "ADAMS COUNTY 14",
+            "stats": Object {
+              "2004": 0.228,
+              "2005": 0.3,
+              "2006": 0.293,
+              "2007": 0.306,
+              "2008": 0.673,
+              "2009": 1,
+              "2010": 1,
+              "2011": 1,
+              "2012": 1,
+              "2013": 0.998,
+              "2014": 1,
+            },
+          },
+          "compareCard1": undefined,
+          "compareCard2": undefined,
+          "displaySelected": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            cardInfo={
+                        Object {
+                                    "location": "ADAMS COUNTY 14",
+                                    "stats": Object {
+                                      "2004": 0.228,
+                                      "2005": 0.3,
+                                      "2006": 0.293,
+                                      "2007": 0.306,
+                                      "2008": 0.673,
+                                      "2009": 1,
+                                      "2010": 1,
+                                      "2011": 1,
+                                      "2012": 1,
+                                      "2013": 0.998,
+                                      "2014": 1,
+                                    },
+                                  }
+            }
+            compareCard1={undefined}
+            compareCard2={undefined}
+            displaySelected={undefined}
+/>,
+          <Card
+            cardInfo={
+                        Object {
+                                    "location": "ADAMS COUNTY 14",
+                                    "stats": Object {
+                                      "2004": 0.228,
+                                      "2005": 0.3,
+                                      "2006": 0.293,
+                                      "2007": 0.306,
+                                      "2008": 0.673,
+                                      "2009": 1,
+                                      "2010": 1,
+                                      "2011": 1,
+                                      "2012": 1,
+                                      "2013": 0.998,
+                                      "2014": 1,
+                                    },
+                                  }
+            }
+            compareCard1={undefined}
+            compareCard2={undefined}
+            displaySelected={undefined}
+/>,
+        ],
+        "className": "card-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "cardInfo": Object {
+              "location": "ADAMS COUNTY 14",
+              "stats": Object {
+                "2004": 0.228,
+                "2005": 0.3,
+                "2006": 0.293,
+                "2007": 0.306,
+                "2008": 0.673,
+                "2009": 1,
+                "2010": 1,
+                "2011": 1,
+                "2012": 1,
+                "2013": 0.998,
+                "2014": 1,
+              },
+            },
+            "compareCard1": undefined,
+            "compareCard2": undefined,
+            "displaySelected": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "cardInfo": Object {
+              "location": "ADAMS COUNTY 14",
+              "stats": Object {
+                "2004": 0.228,
+                "2005": 0.3,
+                "2006": 0.293,
+                "2007": 0.306,
+                "2008": 0.673,
+                "2009": 1,
+                "2010": 1,
+                "2011": 1,
+                "2012": 1,
+                "2013": 0.998,
+                "2014": 1,
+              },
+            },
+            "compareCard1": undefined,
+            "compareCard2": undefined,
+            "displaySelected": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

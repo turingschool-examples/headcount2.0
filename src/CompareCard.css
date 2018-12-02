@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.compare-card {
+  border: 5px solid #337AB7;
+  border-radius: 10%;
+  width: 300px;
+  margin: 20px;  
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location {
+  margin-bottom: 0;
+}
+
+.location-num {
+  color:#337AB7;
+}
+
+.compare-num {
+  color: #F96854;
+  font-size: 35px;
+}
+
+span {
+  color: #000;
+}

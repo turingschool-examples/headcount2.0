@@ -1,0 +1,4965 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card iteration 2 should match the snapshot with all data passed in correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    cardInfo={
+        Object {
+            "location": "COLORADO",
+            "stats": Object {
+              "2004": 0.24,
+              "2005": 0.278,
+              "2006": 0.337,
+              "2007": 0.395,
+              "2008": 0.536,
+              "2009": 0.598,
+              "2010": 0.64,
+              "2011": 0.672,
+              "2012": 0.695,
+              "2013": 0.703,
+              "2014": 0.741,
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1
+          className="location"
+>
+          COLORADO
+</h1>,
+        <ul
+          className="stats"
+>
+          <li>
+                    2004
+                    : 
+                    0.24
+          </li>
+          <li>
+                    2005
+                    : 
+                    0.278
+          </li>
+          <li>
+                    2006
+                    : 
+                    0.337
+          </li>
+          <li>
+                    2007
+                    : 
+                    0.395
+          </li>
+          <li>
+                    2008
+                    : 
+                    0.536
+          </li>
+          <li>
+                    2009
+                    : 
+                    0.598
+          </li>
+          <li>
+                    2010
+                    : 
+                    0.64
+          </li>
+          <li>
+                    2011
+                    : 
+                    0.672
+          </li>
+          <li>
+                    2012
+                    : 
+                    0.695
+          </li>
+          <li>
+                    2013
+                    : 
+                    0.703
+          </li>
+          <li>
+                    2014
+                    : 
+                    0.741
+          </li>
+</ul>,
+      ],
+      "className": "card-wrapper",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "COLORADO",
+          "className": "location",
+        },
+        "ref": null,
+        "rendered": "COLORADO",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li>
+              2004
+              : 
+              0.24
+</li>,
+            <li>
+              2005
+              : 
+              0.278
+</li>,
+            <li>
+              2006
+              : 
+              0.337
+</li>,
+            <li>
+              2007
+              : 
+              0.395
+</li>,
+            <li>
+              2008
+              : 
+              0.536
+</li>,
+            <li>
+              2009
+              : 
+              0.598
+</li>,
+            <li>
+              2010
+              : 
+              0.64
+</li>,
+            <li>
+              2011
+              : 
+              0.672
+</li>,
+            <li>
+              2012
+              : 
+              0.695
+</li>,
+            <li>
+              2013
+              : 
+              0.703
+</li>,
+            <li>
+              2014
+              : 
+              0.741
+</li>,
+          ],
+          "className": "stats",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2004",
+                ": ",
+                0.24,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2004",
+              ": ",
+              0.24,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2005",
+                ": ",
+                0.278,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2005",
+              ": ",
+              0.278,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2006",
+                ": ",
+                0.337,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2006",
+              ": ",
+              0.337,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2007",
+                ": ",
+                0.395,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2007",
+              ": ",
+              0.395,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2008",
+                ": ",
+                0.536,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2008",
+              ": ",
+              0.536,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2009",
+                ": ",
+                0.598,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2009",
+              ": ",
+              0.598,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2010",
+                ": ",
+                0.64,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2010",
+              ": ",
+              0.64,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2011",
+                ": ",
+                0.672,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2011",
+              ": ",
+              0.672,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2012",
+                ": ",
+                0.695,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2012",
+              ": ",
+              0.695,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2013",
+                ": ",
+                0.703,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2013",
+              ": ",
+              0.703,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2014",
+                ": ",
+                0.741,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2014",
+              ": ",
+              0.741,
+            ],
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1
+            className="location"
+>
+            COLORADO
+</h1>,
+          <ul
+            className="stats"
+>
+            <li>
+                        2004
+                        : 
+                        0.24
+            </li>
+            <li>
+                        2005
+                        : 
+                        0.278
+            </li>
+            <li>
+                        2006
+                        : 
+                        0.337
+            </li>
+            <li>
+                        2007
+                        : 
+                        0.395
+            </li>
+            <li>
+                        2008
+                        : 
+                        0.536
+            </li>
+            <li>
+                        2009
+                        : 
+                        0.598
+            </li>
+            <li>
+                        2010
+                        : 
+                        0.64
+            </li>
+            <li>
+                        2011
+                        : 
+                        0.672
+            </li>
+            <li>
+                        2012
+                        : 
+                        0.695
+            </li>
+            <li>
+                        2013
+                        : 
+                        0.703
+            </li>
+            <li>
+                        2014
+                        : 
+                        0.741
+            </li>
+</ul>,
+        ],
+        "className": "card-wrapper",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "COLORADO",
+            "className": "location",
+          },
+          "ref": null,
+          "rendered": "COLORADO",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li>
+                2004
+                : 
+                0.24
+</li>,
+              <li>
+                2005
+                : 
+                0.278
+</li>,
+              <li>
+                2006
+                : 
+                0.337
+</li>,
+              <li>
+                2007
+                : 
+                0.395
+</li>,
+              <li>
+                2008
+                : 
+                0.536
+</li>,
+              <li>
+                2009
+                : 
+                0.598
+</li>,
+              <li>
+                2010
+                : 
+                0.64
+</li>,
+              <li>
+                2011
+                : 
+                0.672
+</li>,
+              <li>
+                2012
+                : 
+                0.695
+</li>,
+              <li>
+                2013
+                : 
+                0.703
+</li>,
+              <li>
+                2014
+                : 
+                0.741
+</li>,
+            ],
+            "className": "stats",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2004",
+                  ": ",
+                  0.24,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2004",
+                ": ",
+                0.24,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2005",
+                  ": ",
+                  0.278,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2005",
+                ": ",
+                0.278,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2006",
+                  ": ",
+                  0.337,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2006",
+                ": ",
+                0.337,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2007",
+                  ": ",
+                  0.395,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2007",
+                ": ",
+                0.395,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2008",
+                  ": ",
+                  0.536,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2008",
+                ": ",
+                0.536,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2009",
+                  ": ",
+                  0.598,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2009",
+                ": ",
+                0.598,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2010",
+                  ": ",
+                  0.64,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2010",
+                ": ",
+                0.64,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2011",
+                  ": ",
+                  0.672,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2011",
+                ": ",
+                0.672,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2012",
+                  ": ",
+                  0.695,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2012",
+                ": ",
+                0.695,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2013",
+                  ": ",
+                  0.703,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2013",
+                ": ",
+                0.703,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2014",
+                  ": ",
+                  0.741,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2014",
+                ": ",
+                0.741,
+              ],
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CardContainer iteration 2 should match the snapshot with all data passed in correctly 1`] = `
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <CardContainer
+    data={
+        Array [
+            Object {
+              "location": "COLORADO",
+              "stats": Object {
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.337,
+                "2007": 0.395,
+                "2008": 0.536,
+                "2009": 0.598,
+                "2010": 0.64,
+                "2011": 0.672,
+                "2012": 0.695,
+                "2013": 0.703,
+                "2014": 0.741,
+              },
+            },
+            Object {
+              "location": "ACADEMY 20",
+              "stats": Object {
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.337,
+                "2007": 0.395,
+                "2008": 0.536,
+                "2009": 0.598,
+                "2010": 0.64,
+                "2011": 0.672,
+                "2012": 0.695,
+                "2013": 0.703,
+                "2014": 0.741,
+              },
+            },
+            Object {
+              "location": "ADAMS COUNTY 14",
+              "stats": Object {
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.337,
+                "2007": 0.395,
+                "2008": 0.536,
+                "2009": 0.598,
+                "2010": 0.64,
+                "2011": 0.672,
+                "2012": 0.695,
+                "2013": 0.703,
+                "2014": 0.741,
+              },
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "data": Array [
+        Object {
+          "location": "COLORADO",
+          "stats": Object {
+            "2004": 0.24,
+            "2005": 0.278,
+            "2006": 0.337,
+            "2007": 0.395,
+            "2008": 0.536,
+            "2009": 0.598,
+            "2010": 0.64,
+            "2011": 0.672,
+            "2012": 0.695,
+            "2013": 0.703,
+            "2014": 0.741,
+          },
+        },
+        Object {
+          "location": "ACADEMY 20",
+          "stats": Object {
+            "2004": 0.24,
+            "2005": 0.278,
+            "2006": 0.337,
+            "2007": 0.395,
+            "2008": 0.536,
+            "2009": 0.598,
+            "2010": 0.64,
+            "2011": 0.672,
+            "2012": 0.695,
+            "2013": 0.703,
+            "2014": 0.741,
+          },
+        },
+        Object {
+          "location": "ADAMS COUNTY 14",
+          "stats": Object {
+            "2004": 0.24,
+            "2005": 0.278,
+            "2006": 0.337,
+            "2007": 0.395,
+            "2008": 0.536,
+            "2009": 0.598,
+            "2010": 0.64,
+            "2011": 0.672,
+            "2012": 0.695,
+            "2013": 0.703,
+            "2014": 0.741,
+          },
+        },
+      ],
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="card-container"
+>
+        <div
+                class="card-wrapper"
+        >
+                <h1
+                        class="location"
+                >
+                        COLORADO
+                </h1>
+                <ul
+                        class="stats"
+                >
+                        <li>
+                                2004
+                                : 
+                                0.24
+                        </li>
+                        <li>
+                                2005
+                                : 
+                                0.278
+                        </li>
+                        <li>
+                                2006
+                                : 
+                                0.337
+                        </li>
+                        <li>
+                                2007
+                                : 
+                                0.395
+                        </li>
+                        <li>
+                                2008
+                                : 
+                                0.536
+                        </li>
+                        <li>
+                                2009
+                                : 
+                                0.598
+                        </li>
+                        <li>
+                                2010
+                                : 
+                                0.64
+                        </li>
+                        <li>
+                                2011
+                                : 
+                                0.672
+                        </li>
+                        <li>
+                                2012
+                                : 
+                                0.695
+                        </li>
+                        <li>
+                                2013
+                                : 
+                                0.703
+                        </li>
+                        <li>
+                                2014
+                                : 
+                                0.741
+                        </li>
+                </ul>
+        </div>
+        <div
+                class="card-wrapper"
+        >
+                <h1
+                        class="location"
+                >
+                        ACADEMY 20
+                </h1>
+                <ul
+                        class="stats"
+                >
+                        <li>
+                                2004
+                                : 
+                                0.24
+                        </li>
+                        <li>
+                                2005
+                                : 
+                                0.278
+                        </li>
+                        <li>
+                                2006
+                                : 
+                                0.337
+                        </li>
+                        <li>
+                                2007
+                                : 
+                                0.395
+                        </li>
+                        <li>
+                                2008
+                                : 
+                                0.536
+                        </li>
+                        <li>
+                                2009
+                                : 
+                                0.598
+                        </li>
+                        <li>
+                                2010
+                                : 
+                                0.64
+                        </li>
+                        <li>
+                                2011
+                                : 
+                                0.672
+                        </li>
+                        <li>
+                                2012
+                                : 
+                                0.695
+                        </li>
+                        <li>
+                                2013
+                                : 
+                                0.703
+                        </li>
+                        <li>
+                                2014
+                                : 
+                                0.741
+                        </li>
+                </ul>
+        </div>
+        <div
+                class="card-wrapper"
+        >
+                <h1
+                        class="location"
+                >
+                        ADAMS COUNTY 14
+                </h1>
+                <ul
+                        class="stats"
+                >
+                        <li>
+                                2004
+                                : 
+                                0.24
+                        </li>
+                        <li>
+                                2005
+                                : 
+                                0.278
+                        </li>
+                        <li>
+                                2006
+                                : 
+                                0.337
+                        </li>
+                        <li>
+                                2007
+                                : 
+                                0.395
+                        </li>
+                        <li>
+                                2008
+                                : 
+                                0.536
+                        </li>
+                        <li>
+                                2009
+                                : 
+                                0.598
+                        </li>
+                        <li>
+                                2010
+                                : 
+                                0.64
+                        </li>
+                        <li>
+                                2011
+                                : 
+                                0.672
+                        </li>
+                        <li>
+                                2012
+                                : 
+                                0.695
+                        </li>
+                        <li>
+                                2013
+                                : 
+                                0.703
+                        </li>
+                        <li>
+                                2014
+                                : 
+                                0.741
+                        </li>
+                </ul>
+        </div>
+</div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            cardInfo={
+                        Object {
+                                    "location": "COLORADO",
+                                    "stats": Object {
+                                      "2004": 0.24,
+                                      "2005": 0.278,
+                                      "2006": 0.337,
+                                      "2007": 0.395,
+                                      "2008": 0.536,
+                                      "2009": 0.598,
+                                      "2010": 0.64,
+                                      "2011": 0.672,
+                                      "2012": 0.695,
+                                      "2013": 0.703,
+                                      "2014": 0.741,
+                                    },
+                                  }
+            }
+/>,
+          <Card
+            cardInfo={
+                        Object {
+                                    "location": "ACADEMY 20",
+                                    "stats": Object {
+                                      "2004": 0.24,
+                                      "2005": 0.278,
+                                      "2006": 0.337,
+                                      "2007": 0.395,
+                                      "2008": 0.536,
+                                      "2009": 0.598,
+                                      "2010": 0.64,
+                                      "2011": 0.672,
+                                      "2012": 0.695,
+                                      "2013": 0.703,
+                                      "2014": 0.741,
+                                    },
+                                  }
+            }
+/>,
+          <Card
+            cardInfo={
+                        Object {
+                                    "location": "ADAMS COUNTY 14",
+                                    "stats": Object {
+                                      "2004": 0.24,
+                                      "2005": 0.278,
+                                      "2006": 0.337,
+                                      "2007": 0.395,
+                                      "2008": 0.536,
+                                      "2009": 0.598,
+                                      "2010": 0.64,
+                                      "2011": 0.672,
+                                      "2012": 0.695,
+                                      "2013": 0.703,
+                                      "2014": 0.741,
+                                    },
+                                  }
+            }
+/>,
+        ],
+        "className": "card-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "cardInfo": Object {
+              "location": "COLORADO",
+              "stats": Object {
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.337,
+                "2007": 0.395,
+                "2008": 0.536,
+                "2009": 0.598,
+                "2010": 0.64,
+                "2011": 0.672,
+                "2012": 0.695,
+                "2013": 0.703,
+                "2014": 0.741,
+              },
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": <div
+              class="card-wrapper"
+>
+              <h1
+                            class="location"
+              >
+                            COLORADO
+              </h1>
+              <ul
+                            class="stats"
+              >
+                            <li>
+                                          2004
+                                          : 
+                                          0.24
+                            </li>
+                            <li>
+                                          2005
+                                          : 
+                                          0.278
+                            </li>
+                            <li>
+                                          2006
+                                          : 
+                                          0.337
+                            </li>
+                            <li>
+                                          2007
+                                          : 
+                                          0.395
+                            </li>
+                            <li>
+                                          2008
+                                          : 
+                                          0.536
+                            </li>
+                            <li>
+                                          2009
+                                          : 
+                                          0.598
+                            </li>
+                            <li>
+                                          2010
+                                          : 
+                                          0.64
+                            </li>
+                            <li>
+                                          2011
+                                          : 
+                                          0.672
+                            </li>
+                            <li>
+                                          2012
+                                          : 
+                                          0.695
+                            </li>
+                            <li>
+                                          2013
+                                          : 
+                                          0.703
+                            </li>
+                            <li>
+                                          2014
+                                          : 
+                                          0.741
+                            </li>
+              </ul>
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h1
+                  className="location"
+>
+                  COLORADO
+</h1>,
+                <ul
+                  className="stats"
+>
+                  <li>
+                                    2004
+                                    : 
+                                    0.24
+                  </li>
+                  <li>
+                                    2005
+                                    : 
+                                    0.278
+                  </li>
+                  <li>
+                                    2006
+                                    : 
+                                    0.337
+                  </li>
+                  <li>
+                                    2007
+                                    : 
+                                    0.395
+                  </li>
+                  <li>
+                                    2008
+                                    : 
+                                    0.536
+                  </li>
+                  <li>
+                                    2009
+                                    : 
+                                    0.598
+                  </li>
+                  <li>
+                                    2010
+                                    : 
+                                    0.64
+                  </li>
+                  <li>
+                                    2011
+                                    : 
+                                    0.672
+                  </li>
+                  <li>
+                                    2012
+                                    : 
+                                    0.695
+                  </li>
+                  <li>
+                                    2013
+                                    : 
+                                    0.703
+                  </li>
+                  <li>
+                                    2014
+                                    : 
+                                    0.741
+                  </li>
+</ul>,
+              ],
+              "className": "card-wrapper",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <h1
+                  class="location"
+>
+                  COLORADO
+</h1>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "COLORADO",
+                  "className": "location",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "COLORADO",
+                ],
+                "type": "h1",
+              },
+              Object {
+                "instance": <ul
+                  class="stats"
+>
+                  <li>
+                                    2004
+                                    : 
+                                    0.24
+                  </li>
+                  <li>
+                                    2005
+                                    : 
+                                    0.278
+                  </li>
+                  <li>
+                                    2006
+                                    : 
+                                    0.337
+                  </li>
+                  <li>
+                                    2007
+                                    : 
+                                    0.395
+                  </li>
+                  <li>
+                                    2008
+                                    : 
+                                    0.536
+                  </li>
+                  <li>
+                                    2009
+                                    : 
+                                    0.598
+                  </li>
+                  <li>
+                                    2010
+                                    : 
+                                    0.64
+                  </li>
+                  <li>
+                                    2011
+                                    : 
+                                    0.672
+                  </li>
+                  <li>
+                                    2012
+                                    : 
+                                    0.695
+                  </li>
+                  <li>
+                                    2013
+                                    : 
+                                    0.703
+                  </li>
+                  <li>
+                                    2014
+                                    : 
+                                    0.741
+                  </li>
+</ul>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <li>
+                      2004
+                      : 
+                      0.24
+</li>,
+                    <li>
+                      2005
+                      : 
+                      0.278
+</li>,
+                    <li>
+                      2006
+                      : 
+                      0.337
+</li>,
+                    <li>
+                      2007
+                      : 
+                      0.395
+</li>,
+                    <li>
+                      2008
+                      : 
+                      0.536
+</li>,
+                    <li>
+                      2009
+                      : 
+                      0.598
+</li>,
+                    <li>
+                      2010
+                      : 
+                      0.64
+</li>,
+                    <li>
+                      2011
+                      : 
+                      0.672
+</li>,
+                    <li>
+                      2012
+                      : 
+                      0.695
+</li>,
+                    <li>
+                      2013
+                      : 
+                      0.703
+</li>,
+                    <li>
+                      2014
+                      : 
+                      0.741
+</li>,
+                  ],
+                  "className": "stats",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <li>
+                      2004
+                      : 
+                      0.24
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2004",
+                        ": ",
+                        0.24,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2004",
+                      ": ",
+                      "0.24",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2005
+                      : 
+                      0.278
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2005",
+                        ": ",
+                        0.278,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2005",
+                      ": ",
+                      "0.278",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2006
+                      : 
+                      0.337
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2006",
+                        ": ",
+                        0.337,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2006",
+                      ": ",
+                      "0.337",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2007
+                      : 
+                      0.395
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2007",
+                        ": ",
+                        0.395,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2007",
+                      ": ",
+                      "0.395",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2008
+                      : 
+                      0.536
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2008",
+                        ": ",
+                        0.536,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2008",
+                      ": ",
+                      "0.536",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2009
+                      : 
+                      0.598
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2009",
+                        ": ",
+                        0.598,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2009",
+                      ": ",
+                      "0.598",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2010
+                      : 
+                      0.64
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2010",
+                        ": ",
+                        0.64,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2010",
+                      ": ",
+                      "0.64",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2011
+                      : 
+                      0.672
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2011",
+                        ": ",
+                        0.672,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2011",
+                      ": ",
+                      "0.672",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2012
+                      : 
+                      0.695
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2012",
+                        ": ",
+                        0.695,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2012",
+                      ": ",
+                      "0.695",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2013
+                      : 
+                      0.703
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2013",
+                        ": ",
+                        0.703,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2013",
+                      ": ",
+                      "0.703",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2014
+                      : 
+                      0.741
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2014",
+                        ": ",
+                        0.741,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2014",
+                      ": ",
+                      "0.741",
+                    ],
+                    "type": "li",
+                  },
+                ],
+                "type": "ul",
+              },
+            ],
+            "type": "div",
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "cardInfo": Object {
+              "location": "ACADEMY 20",
+              "stats": Object {
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.337,
+                "2007": 0.395,
+                "2008": 0.536,
+                "2009": 0.598,
+                "2010": 0.64,
+                "2011": 0.672,
+                "2012": 0.695,
+                "2013": 0.703,
+                "2014": 0.741,
+              },
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": <div
+              class="card-wrapper"
+>
+              <h1
+                            class="location"
+              >
+                            ACADEMY 20
+              </h1>
+              <ul
+                            class="stats"
+              >
+                            <li>
+                                          2004
+                                          : 
+                                          0.24
+                            </li>
+                            <li>
+                                          2005
+                                          : 
+                                          0.278
+                            </li>
+                            <li>
+                                          2006
+                                          : 
+                                          0.337
+                            </li>
+                            <li>
+                                          2007
+                                          : 
+                                          0.395
+                            </li>
+                            <li>
+                                          2008
+                                          : 
+                                          0.536
+                            </li>
+                            <li>
+                                          2009
+                                          : 
+                                          0.598
+                            </li>
+                            <li>
+                                          2010
+                                          : 
+                                          0.64
+                            </li>
+                            <li>
+                                          2011
+                                          : 
+                                          0.672
+                            </li>
+                            <li>
+                                          2012
+                                          : 
+                                          0.695
+                            </li>
+                            <li>
+                                          2013
+                                          : 
+                                          0.703
+                            </li>
+                            <li>
+                                          2014
+                                          : 
+                                          0.741
+                            </li>
+              </ul>
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h1
+                  className="location"
+>
+                  ACADEMY 20
+</h1>,
+                <ul
+                  className="stats"
+>
+                  <li>
+                                    2004
+                                    : 
+                                    0.24
+                  </li>
+                  <li>
+                                    2005
+                                    : 
+                                    0.278
+                  </li>
+                  <li>
+                                    2006
+                                    : 
+                                    0.337
+                  </li>
+                  <li>
+                                    2007
+                                    : 
+                                    0.395
+                  </li>
+                  <li>
+                                    2008
+                                    : 
+                                    0.536
+                  </li>
+                  <li>
+                                    2009
+                                    : 
+                                    0.598
+                  </li>
+                  <li>
+                                    2010
+                                    : 
+                                    0.64
+                  </li>
+                  <li>
+                                    2011
+                                    : 
+                                    0.672
+                  </li>
+                  <li>
+                                    2012
+                                    : 
+                                    0.695
+                  </li>
+                  <li>
+                                    2013
+                                    : 
+                                    0.703
+                  </li>
+                  <li>
+                                    2014
+                                    : 
+                                    0.741
+                  </li>
+</ul>,
+              ],
+              "className": "card-wrapper",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <h1
+                  class="location"
+>
+                  ACADEMY 20
+</h1>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "ACADEMY 20",
+                  "className": "location",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "ACADEMY 20",
+                ],
+                "type": "h1",
+              },
+              Object {
+                "instance": <ul
+                  class="stats"
+>
+                  <li>
+                                    2004
+                                    : 
+                                    0.24
+                  </li>
+                  <li>
+                                    2005
+                                    : 
+                                    0.278
+                  </li>
+                  <li>
+                                    2006
+                                    : 
+                                    0.337
+                  </li>
+                  <li>
+                                    2007
+                                    : 
+                                    0.395
+                  </li>
+                  <li>
+                                    2008
+                                    : 
+                                    0.536
+                  </li>
+                  <li>
+                                    2009
+                                    : 
+                                    0.598
+                  </li>
+                  <li>
+                                    2010
+                                    : 
+                                    0.64
+                  </li>
+                  <li>
+                                    2011
+                                    : 
+                                    0.672
+                  </li>
+                  <li>
+                                    2012
+                                    : 
+                                    0.695
+                  </li>
+                  <li>
+                                    2013
+                                    : 
+                                    0.703
+                  </li>
+                  <li>
+                                    2014
+                                    : 
+                                    0.741
+                  </li>
+</ul>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <li>
+                      2004
+                      : 
+                      0.24
+</li>,
+                    <li>
+                      2005
+                      : 
+                      0.278
+</li>,
+                    <li>
+                      2006
+                      : 
+                      0.337
+</li>,
+                    <li>
+                      2007
+                      : 
+                      0.395
+</li>,
+                    <li>
+                      2008
+                      : 
+                      0.536
+</li>,
+                    <li>
+                      2009
+                      : 
+                      0.598
+</li>,
+                    <li>
+                      2010
+                      : 
+                      0.64
+</li>,
+                    <li>
+                      2011
+                      : 
+                      0.672
+</li>,
+                    <li>
+                      2012
+                      : 
+                      0.695
+</li>,
+                    <li>
+                      2013
+                      : 
+                      0.703
+</li>,
+                    <li>
+                      2014
+                      : 
+                      0.741
+</li>,
+                  ],
+                  "className": "stats",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <li>
+                      2004
+                      : 
+                      0.24
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2004",
+                        ": ",
+                        0.24,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2004",
+                      ": ",
+                      "0.24",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2005
+                      : 
+                      0.278
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2005",
+                        ": ",
+                        0.278,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2005",
+                      ": ",
+                      "0.278",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2006
+                      : 
+                      0.337
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2006",
+                        ": ",
+                        0.337,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2006",
+                      ": ",
+                      "0.337",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2007
+                      : 
+                      0.395
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2007",
+                        ": ",
+                        0.395,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2007",
+                      ": ",
+                      "0.395",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2008
+                      : 
+                      0.536
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2008",
+                        ": ",
+                        0.536,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2008",
+                      ": ",
+                      "0.536",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2009
+                      : 
+                      0.598
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2009",
+                        ": ",
+                        0.598,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2009",
+                      ": ",
+                      "0.598",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2010
+                      : 
+                      0.64
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2010",
+                        ": ",
+                        0.64,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2010",
+                      ": ",
+                      "0.64",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2011
+                      : 
+                      0.672
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2011",
+                        ": ",
+                        0.672,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2011",
+                      ": ",
+                      "0.672",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2012
+                      : 
+                      0.695
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2012",
+                        ": ",
+                        0.695,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2012",
+                      ": ",
+                      "0.695",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2013
+                      : 
+                      0.703
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2013",
+                        ": ",
+                        0.703,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2013",
+                      ": ",
+                      "0.703",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2014
+                      : 
+                      0.741
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2014",
+                        ": ",
+                        0.741,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2014",
+                      ": ",
+                      "0.741",
+                    ],
+                    "type": "li",
+                  },
+                ],
+                "type": "ul",
+              },
+            ],
+            "type": "div",
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "cardInfo": Object {
+              "location": "ADAMS COUNTY 14",
+              "stats": Object {
+                "2004": 0.24,
+                "2005": 0.278,
+                "2006": 0.337,
+                "2007": 0.395,
+                "2008": 0.536,
+                "2009": 0.598,
+                "2010": 0.64,
+                "2011": 0.672,
+                "2012": 0.695,
+                "2013": 0.703,
+                "2014": 0.741,
+              },
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": <div
+              class="card-wrapper"
+>
+              <h1
+                            class="location"
+              >
+                            ADAMS COUNTY 14
+              </h1>
+              <ul
+                            class="stats"
+              >
+                            <li>
+                                          2004
+                                          : 
+                                          0.24
+                            </li>
+                            <li>
+                                          2005
+                                          : 
+                                          0.278
+                            </li>
+                            <li>
+                                          2006
+                                          : 
+                                          0.337
+                            </li>
+                            <li>
+                                          2007
+                                          : 
+                                          0.395
+                            </li>
+                            <li>
+                                          2008
+                                          : 
+                                          0.536
+                            </li>
+                            <li>
+                                          2009
+                                          : 
+                                          0.598
+                            </li>
+                            <li>
+                                          2010
+                                          : 
+                                          0.64
+                            </li>
+                            <li>
+                                          2011
+                                          : 
+                                          0.672
+                            </li>
+                            <li>
+                                          2012
+                                          : 
+                                          0.695
+                            </li>
+                            <li>
+                                          2013
+                                          : 
+                                          0.703
+                            </li>
+                            <li>
+                                          2014
+                                          : 
+                                          0.741
+                            </li>
+              </ul>
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h1
+                  className="location"
+>
+                  ADAMS COUNTY 14
+</h1>,
+                <ul
+                  className="stats"
+>
+                  <li>
+                                    2004
+                                    : 
+                                    0.24
+                  </li>
+                  <li>
+                                    2005
+                                    : 
+                                    0.278
+                  </li>
+                  <li>
+                                    2006
+                                    : 
+                                    0.337
+                  </li>
+                  <li>
+                                    2007
+                                    : 
+                                    0.395
+                  </li>
+                  <li>
+                                    2008
+                                    : 
+                                    0.536
+                  </li>
+                  <li>
+                                    2009
+                                    : 
+                                    0.598
+                  </li>
+                  <li>
+                                    2010
+                                    : 
+                                    0.64
+                  </li>
+                  <li>
+                                    2011
+                                    : 
+                                    0.672
+                  </li>
+                  <li>
+                                    2012
+                                    : 
+                                    0.695
+                  </li>
+                  <li>
+                                    2013
+                                    : 
+                                    0.703
+                  </li>
+                  <li>
+                                    2014
+                                    : 
+                                    0.741
+                  </li>
+</ul>,
+              ],
+              "className": "card-wrapper",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <h1
+                  class="location"
+>
+                  ADAMS COUNTY 14
+</h1>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "ADAMS COUNTY 14",
+                  "className": "location",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "ADAMS COUNTY 14",
+                ],
+                "type": "h1",
+              },
+              Object {
+                "instance": <ul
+                  class="stats"
+>
+                  <li>
+                                    2004
+                                    : 
+                                    0.24
+                  </li>
+                  <li>
+                                    2005
+                                    : 
+                                    0.278
+                  </li>
+                  <li>
+                                    2006
+                                    : 
+                                    0.337
+                  </li>
+                  <li>
+                                    2007
+                                    : 
+                                    0.395
+                  </li>
+                  <li>
+                                    2008
+                                    : 
+                                    0.536
+                  </li>
+                  <li>
+                                    2009
+                                    : 
+                                    0.598
+                  </li>
+                  <li>
+                                    2010
+                                    : 
+                                    0.64
+                  </li>
+                  <li>
+                                    2011
+                                    : 
+                                    0.672
+                  </li>
+                  <li>
+                                    2012
+                                    : 
+                                    0.695
+                  </li>
+                  <li>
+                                    2013
+                                    : 
+                                    0.703
+                  </li>
+                  <li>
+                                    2014
+                                    : 
+                                    0.741
+                  </li>
+</ul>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <li>
+                      2004
+                      : 
+                      0.24
+</li>,
+                    <li>
+                      2005
+                      : 
+                      0.278
+</li>,
+                    <li>
+                      2006
+                      : 
+                      0.337
+</li>,
+                    <li>
+                      2007
+                      : 
+                      0.395
+</li>,
+                    <li>
+                      2008
+                      : 
+                      0.536
+</li>,
+                    <li>
+                      2009
+                      : 
+                      0.598
+</li>,
+                    <li>
+                      2010
+                      : 
+                      0.64
+</li>,
+                    <li>
+                      2011
+                      : 
+                      0.672
+</li>,
+                    <li>
+                      2012
+                      : 
+                      0.695
+</li>,
+                    <li>
+                      2013
+                      : 
+                      0.703
+</li>,
+                    <li>
+                      2014
+                      : 
+                      0.741
+</li>,
+                  ],
+                  "className": "stats",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <li>
+                      2004
+                      : 
+                      0.24
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2004",
+                        ": ",
+                        0.24,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2004",
+                      ": ",
+                      "0.24",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2005
+                      : 
+                      0.278
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2005",
+                        ": ",
+                        0.278,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2005",
+                      ": ",
+                      "0.278",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2006
+                      : 
+                      0.337
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2006",
+                        ": ",
+                        0.337,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2006",
+                      ": ",
+                      "0.337",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2007
+                      : 
+                      0.395
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2007",
+                        ": ",
+                        0.395,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2007",
+                      ": ",
+                      "0.395",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2008
+                      : 
+                      0.536
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2008",
+                        ": ",
+                        0.536,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2008",
+                      ": ",
+                      "0.536",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2009
+                      : 
+                      0.598
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2009",
+                        ": ",
+                        0.598,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2009",
+                      ": ",
+                      "0.598",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2010
+                      : 
+                      0.64
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2010",
+                        ": ",
+                        0.64,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2010",
+                      ": ",
+                      "0.64",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2011
+                      : 
+                      0.672
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2011",
+                        ": ",
+                        0.672,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2011",
+                      ": ",
+                      "0.672",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2012
+                      : 
+                      0.695
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2012",
+                        ": ",
+                        0.695,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2012",
+                      ": ",
+                      "0.695",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2013
+                      : 
+                      0.703
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2013",
+                        ": ",
+                        0.703,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2013",
+                      ": ",
+                      "0.703",
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": <li>
+                      2014
+                      : 
+                      0.741
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "2014",
+                        ": ",
+                        0.741,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "2014",
+                      ": ",
+                      "0.741",
+                    ],
+                    "type": "li",
+                  },
+                ],
+                "type": "ul",
+              },
+            ],
+            "type": "div",
+          },
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "data": Array [
+          Object {
+            "location": "COLORADO",
+            "stats": Object {
+              "2004": 0.24,
+              "2005": 0.278,
+              "2006": 0.337,
+              "2007": 0.395,
+              "2008": 0.536,
+              "2009": 0.598,
+              "2010": 0.64,
+              "2011": 0.672,
+              "2012": 0.695,
+              "2013": 0.703,
+              "2014": 0.741,
+            },
+          },
+          Object {
+            "location": "ACADEMY 20",
+            "stats": Object {
+              "2004": 0.24,
+              "2005": 0.278,
+              "2006": 0.337,
+              "2007": 0.395,
+              "2008": 0.536,
+              "2009": 0.598,
+              "2010": 0.64,
+              "2011": 0.672,
+              "2012": 0.695,
+              "2013": 0.703,
+              "2014": 0.741,
+            },
+          },
+          Object {
+            "location": "ADAMS COUNTY 14",
+            "stats": Object {
+              "2004": 0.24,
+              "2005": 0.278,
+              "2006": 0.337,
+              "2007": 0.395,
+              "2008": 0.536,
+              "2009": 0.598,
+              "2010": 0.64,
+              "2011": 0.672,
+              "2012": 0.695,
+              "2013": 0.703,
+              "2014": 0.741,
+            },
+          },
+        ],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="card-container"
+>
+          <div
+                    class="card-wrapper"
+          >
+                    <h1
+                              class="location"
+                    >
+                              COLORADO
+                    </h1>
+                    <ul
+                              class="stats"
+                    >
+                              <li>
+                                        2004
+                                        : 
+                                        0.24
+                              </li>
+                              <li>
+                                        2005
+                                        : 
+                                        0.278
+                              </li>
+                              <li>
+                                        2006
+                                        : 
+                                        0.337
+                              </li>
+                              <li>
+                                        2007
+                                        : 
+                                        0.395
+                              </li>
+                              <li>
+                                        2008
+                                        : 
+                                        0.536
+                              </li>
+                              <li>
+                                        2009
+                                        : 
+                                        0.598
+                              </li>
+                              <li>
+                                        2010
+                                        : 
+                                        0.64
+                              </li>
+                              <li>
+                                        2011
+                                        : 
+                                        0.672
+                              </li>
+                              <li>
+                                        2012
+                                        : 
+                                        0.695
+                              </li>
+                              <li>
+                                        2013
+                                        : 
+                                        0.703
+                              </li>
+                              <li>
+                                        2014
+                                        : 
+                                        0.741
+                              </li>
+                    </ul>
+          </div>
+          <div
+                    class="card-wrapper"
+          >
+                    <h1
+                              class="location"
+                    >
+                              ACADEMY 20
+                    </h1>
+                    <ul
+                              class="stats"
+                    >
+                              <li>
+                                        2004
+                                        : 
+                                        0.24
+                              </li>
+                              <li>
+                                        2005
+                                        : 
+                                        0.278
+                              </li>
+                              <li>
+                                        2006
+                                        : 
+                                        0.337
+                              </li>
+                              <li>
+                                        2007
+                                        : 
+                                        0.395
+                              </li>
+                              <li>
+                                        2008
+                                        : 
+                                        0.536
+                              </li>
+                              <li>
+                                        2009
+                                        : 
+                                        0.598
+                              </li>
+                              <li>
+                                        2010
+                                        : 
+                                        0.64
+                              </li>
+                              <li>
+                                        2011
+                                        : 
+                                        0.672
+                              </li>
+                              <li>
+                                        2012
+                                        : 
+                                        0.695
+                              </li>
+                              <li>
+                                        2013
+                                        : 
+                                        0.703
+                              </li>
+                              <li>
+                                        2014
+                                        : 
+                                        0.741
+                              </li>
+                    </ul>
+          </div>
+          <div
+                    class="card-wrapper"
+          >
+                    <h1
+                              class="location"
+                    >
+                              ADAMS COUNTY 14
+                    </h1>
+                    <ul
+                              class="stats"
+                    >
+                              <li>
+                                        2004
+                                        : 
+                                        0.24
+                              </li>
+                              <li>
+                                        2005
+                                        : 
+                                        0.278
+                              </li>
+                              <li>
+                                        2006
+                                        : 
+                                        0.337
+                              </li>
+                              <li>
+                                        2007
+                                        : 
+                                        0.395
+                              </li>
+                              <li>
+                                        2008
+                                        : 
+                                        0.536
+                              </li>
+                              <li>
+                                        2009
+                                        : 
+                                        0.598
+                              </li>
+                              <li>
+                                        2010
+                                        : 
+                                        0.64
+                              </li>
+                              <li>
+                                        2011
+                                        : 
+                                        0.672
+                              </li>
+                              <li>
+                                        2012
+                                        : 
+                                        0.695
+                              </li>
+                              <li>
+                                        2013
+                                        : 
+                                        0.703
+                              </li>
+                              <li>
+                                        2014
+                                        : 
+                                        0.741
+                              </li>
+                    </ul>
+          </div>
+</div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Card
+              cardInfo={
+                            Object {
+                                          "location": "COLORADO",
+                                          "stats": Object {
+                                            "2004": 0.24,
+                                            "2005": 0.278,
+                                            "2006": 0.337,
+                                            "2007": 0.395,
+                                            "2008": 0.536,
+                                            "2009": 0.598,
+                                            "2010": 0.64,
+                                            "2011": 0.672,
+                                            "2012": 0.695,
+                                            "2013": 0.703,
+                                            "2014": 0.741,
+                                          },
+                                        }
+              }
+/>,
+            <Card
+              cardInfo={
+                            Object {
+                                          "location": "ACADEMY 20",
+                                          "stats": Object {
+                                            "2004": 0.24,
+                                            "2005": 0.278,
+                                            "2006": 0.337,
+                                            "2007": 0.395,
+                                            "2008": 0.536,
+                                            "2009": 0.598,
+                                            "2010": 0.64,
+                                            "2011": 0.672,
+                                            "2012": 0.695,
+                                            "2013": 0.703,
+                                            "2014": 0.741,
+                                          },
+                                        }
+              }
+/>,
+            <Card
+              cardInfo={
+                            Object {
+                                          "location": "ADAMS COUNTY 14",
+                                          "stats": Object {
+                                            "2004": 0.24,
+                                            "2005": 0.278,
+                                            "2006": 0.337,
+                                            "2007": 0.395,
+                                            "2008": 0.536,
+                                            "2009": 0.598,
+                                            "2010": 0.64,
+                                            "2011": 0.672,
+                                            "2012": 0.695,
+                                            "2013": 0.703,
+                                            "2014": 0.741,
+                                          },
+                                        }
+              }
+/>,
+          ],
+          "className": "card-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "cardInfo": Object {
+                "location": "COLORADO",
+                "stats": Object {
+                  "2004": 0.24,
+                  "2005": 0.278,
+                  "2006": 0.337,
+                  "2007": 0.395,
+                  "2008": 0.536,
+                  "2009": 0.598,
+                  "2010": 0.64,
+                  "2011": 0.672,
+                  "2012": 0.695,
+                  "2013": 0.703,
+                  "2014": 0.741,
+                },
+              },
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": <div
+                class="card-wrapper"
+>
+                <h1
+                                class="location"
+                >
+                                COLORADO
+                </h1>
+                <ul
+                                class="stats"
+                >
+                                <li>
+                                                2004
+                                                : 
+                                                0.24
+                                </li>
+                                <li>
+                                                2005
+                                                : 
+                                                0.278
+                                </li>
+                                <li>
+                                                2006
+                                                : 
+                                                0.337
+                                </li>
+                                <li>
+                                                2007
+                                                : 
+                                                0.395
+                                </li>
+                                <li>
+                                                2008
+                                                : 
+                                                0.536
+                                </li>
+                                <li>
+                                                2009
+                                                : 
+                                                0.598
+                                </li>
+                                <li>
+                                                2010
+                                                : 
+                                                0.64
+                                </li>
+                                <li>
+                                                2011
+                                                : 
+                                                0.672
+                                </li>
+                                <li>
+                                                2012
+                                                : 
+                                                0.695
+                                </li>
+                                <li>
+                                                2013
+                                                : 
+                                                0.703
+                                </li>
+                                <li>
+                                                2014
+                                                : 
+                                                0.741
+                                </li>
+                </ul>
+</div>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h1
+                    className="location"
+>
+                    COLORADO
+</h1>,
+                  <ul
+                    className="stats"
+>
+                    <li>
+                                        2004
+                                        : 
+                                        0.24
+                    </li>
+                    <li>
+                                        2005
+                                        : 
+                                        0.278
+                    </li>
+                    <li>
+                                        2006
+                                        : 
+                                        0.337
+                    </li>
+                    <li>
+                                        2007
+                                        : 
+                                        0.395
+                    </li>
+                    <li>
+                                        2008
+                                        : 
+                                        0.536
+                    </li>
+                    <li>
+                                        2009
+                                        : 
+                                        0.598
+                    </li>
+                    <li>
+                                        2010
+                                        : 
+                                        0.64
+                    </li>
+                    <li>
+                                        2011
+                                        : 
+                                        0.672
+                    </li>
+                    <li>
+                                        2012
+                                        : 
+                                        0.695
+                    </li>
+                    <li>
+                                        2013
+                                        : 
+                                        0.703
+                    </li>
+                    <li>
+                                        2014
+                                        : 
+                                        0.741
+                    </li>
+</ul>,
+                ],
+                "className": "card-wrapper",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <h1
+                    class="location"
+>
+                    COLORADO
+</h1>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "COLORADO",
+                    "className": "location",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "COLORADO",
+                  ],
+                  "type": "h1",
+                },
+                Object {
+                  "instance": <ul
+                    class="stats"
+>
+                    <li>
+                                        2004
+                                        : 
+                                        0.24
+                    </li>
+                    <li>
+                                        2005
+                                        : 
+                                        0.278
+                    </li>
+                    <li>
+                                        2006
+                                        : 
+                                        0.337
+                    </li>
+                    <li>
+                                        2007
+                                        : 
+                                        0.395
+                    </li>
+                    <li>
+                                        2008
+                                        : 
+                                        0.536
+                    </li>
+                    <li>
+                                        2009
+                                        : 
+                                        0.598
+                    </li>
+                    <li>
+                                        2010
+                                        : 
+                                        0.64
+                    </li>
+                    <li>
+                                        2011
+                                        : 
+                                        0.672
+                    </li>
+                    <li>
+                                        2012
+                                        : 
+                                        0.695
+                    </li>
+                    <li>
+                                        2013
+                                        : 
+                                        0.703
+                    </li>
+                    <li>
+                                        2014
+                                        : 
+                                        0.741
+                    </li>
+</ul>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <li>
+                        2004
+                        : 
+                        0.24
+</li>,
+                      <li>
+                        2005
+                        : 
+                        0.278
+</li>,
+                      <li>
+                        2006
+                        : 
+                        0.337
+</li>,
+                      <li>
+                        2007
+                        : 
+                        0.395
+</li>,
+                      <li>
+                        2008
+                        : 
+                        0.536
+</li>,
+                      <li>
+                        2009
+                        : 
+                        0.598
+</li>,
+                      <li>
+                        2010
+                        : 
+                        0.64
+</li>,
+                      <li>
+                        2011
+                        : 
+                        0.672
+</li>,
+                      <li>
+                        2012
+                        : 
+                        0.695
+</li>,
+                      <li>
+                        2013
+                        : 
+                        0.703
+</li>,
+                      <li>
+                        2014
+                        : 
+                        0.741
+</li>,
+                    ],
+                    "className": "stats",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": <li>
+                        2004
+                        : 
+                        0.24
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2004",
+                          ": ",
+                          0.24,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2004",
+                        ": ",
+                        "0.24",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2005
+                        : 
+                        0.278
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2005",
+                          ": ",
+                          0.278,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2005",
+                        ": ",
+                        "0.278",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2006
+                        : 
+                        0.337
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2006",
+                          ": ",
+                          0.337,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2006",
+                        ": ",
+                        "0.337",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2007
+                        : 
+                        0.395
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2007",
+                          ": ",
+                          0.395,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2007",
+                        ": ",
+                        "0.395",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2008
+                        : 
+                        0.536
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2008",
+                          ": ",
+                          0.536,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2008",
+                        ": ",
+                        "0.536",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2009
+                        : 
+                        0.598
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2009",
+                          ": ",
+                          0.598,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2009",
+                        ": ",
+                        "0.598",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2010
+                        : 
+                        0.64
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2010",
+                          ": ",
+                          0.64,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2010",
+                        ": ",
+                        "0.64",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2011
+                        : 
+                        0.672
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2011",
+                          ": ",
+                          0.672,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2011",
+                        ": ",
+                        "0.672",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2012
+                        : 
+                        0.695
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2012",
+                          ": ",
+                          0.695,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2012",
+                        ": ",
+                        "0.695",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2013
+                        : 
+                        0.703
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2013",
+                          ": ",
+                          0.703,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2013",
+                        ": ",
+                        "0.703",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2014
+                        : 
+                        0.741
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2014",
+                          ": ",
+                          0.741,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2014",
+                        ": ",
+                        "0.741",
+                      ],
+                      "type": "li",
+                    },
+                  ],
+                  "type": "ul",
+                },
+              ],
+              "type": "div",
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "cardInfo": Object {
+                "location": "ACADEMY 20",
+                "stats": Object {
+                  "2004": 0.24,
+                  "2005": 0.278,
+                  "2006": 0.337,
+                  "2007": 0.395,
+                  "2008": 0.536,
+                  "2009": 0.598,
+                  "2010": 0.64,
+                  "2011": 0.672,
+                  "2012": 0.695,
+                  "2013": 0.703,
+                  "2014": 0.741,
+                },
+              },
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": <div
+                class="card-wrapper"
+>
+                <h1
+                                class="location"
+                >
+                                ACADEMY 20
+                </h1>
+                <ul
+                                class="stats"
+                >
+                                <li>
+                                                2004
+                                                : 
+                                                0.24
+                                </li>
+                                <li>
+                                                2005
+                                                : 
+                                                0.278
+                                </li>
+                                <li>
+                                                2006
+                                                : 
+                                                0.337
+                                </li>
+                                <li>
+                                                2007
+                                                : 
+                                                0.395
+                                </li>
+                                <li>
+                                                2008
+                                                : 
+                                                0.536
+                                </li>
+                                <li>
+                                                2009
+                                                : 
+                                                0.598
+                                </li>
+                                <li>
+                                                2010
+                                                : 
+                                                0.64
+                                </li>
+                                <li>
+                                                2011
+                                                : 
+                                                0.672
+                                </li>
+                                <li>
+                                                2012
+                                                : 
+                                                0.695
+                                </li>
+                                <li>
+                                                2013
+                                                : 
+                                                0.703
+                                </li>
+                                <li>
+                                                2014
+                                                : 
+                                                0.741
+                                </li>
+                </ul>
+</div>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h1
+                    className="location"
+>
+                    ACADEMY 20
+</h1>,
+                  <ul
+                    className="stats"
+>
+                    <li>
+                                        2004
+                                        : 
+                                        0.24
+                    </li>
+                    <li>
+                                        2005
+                                        : 
+                                        0.278
+                    </li>
+                    <li>
+                                        2006
+                                        : 
+                                        0.337
+                    </li>
+                    <li>
+                                        2007
+                                        : 
+                                        0.395
+                    </li>
+                    <li>
+                                        2008
+                                        : 
+                                        0.536
+                    </li>
+                    <li>
+                                        2009
+                                        : 
+                                        0.598
+                    </li>
+                    <li>
+                                        2010
+                                        : 
+                                        0.64
+                    </li>
+                    <li>
+                                        2011
+                                        : 
+                                        0.672
+                    </li>
+                    <li>
+                                        2012
+                                        : 
+                                        0.695
+                    </li>
+                    <li>
+                                        2013
+                                        : 
+                                        0.703
+                    </li>
+                    <li>
+                                        2014
+                                        : 
+                                        0.741
+                    </li>
+</ul>,
+                ],
+                "className": "card-wrapper",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <h1
+                    class="location"
+>
+                    ACADEMY 20
+</h1>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "ACADEMY 20",
+                    "className": "location",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "ACADEMY 20",
+                  ],
+                  "type": "h1",
+                },
+                Object {
+                  "instance": <ul
+                    class="stats"
+>
+                    <li>
+                                        2004
+                                        : 
+                                        0.24
+                    </li>
+                    <li>
+                                        2005
+                                        : 
+                                        0.278
+                    </li>
+                    <li>
+                                        2006
+                                        : 
+                                        0.337
+                    </li>
+                    <li>
+                                        2007
+                                        : 
+                                        0.395
+                    </li>
+                    <li>
+                                        2008
+                                        : 
+                                        0.536
+                    </li>
+                    <li>
+                                        2009
+                                        : 
+                                        0.598
+                    </li>
+                    <li>
+                                        2010
+                                        : 
+                                        0.64
+                    </li>
+                    <li>
+                                        2011
+                                        : 
+                                        0.672
+                    </li>
+                    <li>
+                                        2012
+                                        : 
+                                        0.695
+                    </li>
+                    <li>
+                                        2013
+                                        : 
+                                        0.703
+                    </li>
+                    <li>
+                                        2014
+                                        : 
+                                        0.741
+                    </li>
+</ul>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <li>
+                        2004
+                        : 
+                        0.24
+</li>,
+                      <li>
+                        2005
+                        : 
+                        0.278
+</li>,
+                      <li>
+                        2006
+                        : 
+                        0.337
+</li>,
+                      <li>
+                        2007
+                        : 
+                        0.395
+</li>,
+                      <li>
+                        2008
+                        : 
+                        0.536
+</li>,
+                      <li>
+                        2009
+                        : 
+                        0.598
+</li>,
+                      <li>
+                        2010
+                        : 
+                        0.64
+</li>,
+                      <li>
+                        2011
+                        : 
+                        0.672
+</li>,
+                      <li>
+                        2012
+                        : 
+                        0.695
+</li>,
+                      <li>
+                        2013
+                        : 
+                        0.703
+</li>,
+                      <li>
+                        2014
+                        : 
+                        0.741
+</li>,
+                    ],
+                    "className": "stats",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": <li>
+                        2004
+                        : 
+                        0.24
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2004",
+                          ": ",
+                          0.24,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2004",
+                        ": ",
+                        "0.24",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2005
+                        : 
+                        0.278
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2005",
+                          ": ",
+                          0.278,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2005",
+                        ": ",
+                        "0.278",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2006
+                        : 
+                        0.337
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2006",
+                          ": ",
+                          0.337,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2006",
+                        ": ",
+                        "0.337",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2007
+                        : 
+                        0.395
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2007",
+                          ": ",
+                          0.395,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2007",
+                        ": ",
+                        "0.395",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2008
+                        : 
+                        0.536
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2008",
+                          ": ",
+                          0.536,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2008",
+                        ": ",
+                        "0.536",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2009
+                        : 
+                        0.598
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2009",
+                          ": ",
+                          0.598,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2009",
+                        ": ",
+                        "0.598",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2010
+                        : 
+                        0.64
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2010",
+                          ": ",
+                          0.64,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2010",
+                        ": ",
+                        "0.64",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2011
+                        : 
+                        0.672
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2011",
+                          ": ",
+                          0.672,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2011",
+                        ": ",
+                        "0.672",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2012
+                        : 
+                        0.695
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2012",
+                          ": ",
+                          0.695,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2012",
+                        ": ",
+                        "0.695",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2013
+                        : 
+                        0.703
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2013",
+                          ": ",
+                          0.703,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2013",
+                        ": ",
+                        "0.703",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2014
+                        : 
+                        0.741
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2014",
+                          ": ",
+                          0.741,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2014",
+                        ": ",
+                        "0.741",
+                      ],
+                      "type": "li",
+                    },
+                  ],
+                  "type": "ul",
+                },
+              ],
+              "type": "div",
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "cardInfo": Object {
+                "location": "ADAMS COUNTY 14",
+                "stats": Object {
+                  "2004": 0.24,
+                  "2005": 0.278,
+                  "2006": 0.337,
+                  "2007": 0.395,
+                  "2008": 0.536,
+                  "2009": 0.598,
+                  "2010": 0.64,
+                  "2011": 0.672,
+                  "2012": 0.695,
+                  "2013": 0.703,
+                  "2014": 0.741,
+                },
+              },
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": <div
+                class="card-wrapper"
+>
+                <h1
+                                class="location"
+                >
+                                ADAMS COUNTY 14
+                </h1>
+                <ul
+                                class="stats"
+                >
+                                <li>
+                                                2004
+                                                : 
+                                                0.24
+                                </li>
+                                <li>
+                                                2005
+                                                : 
+                                                0.278
+                                </li>
+                                <li>
+                                                2006
+                                                : 
+                                                0.337
+                                </li>
+                                <li>
+                                                2007
+                                                : 
+                                                0.395
+                                </li>
+                                <li>
+                                                2008
+                                                : 
+                                                0.536
+                                </li>
+                                <li>
+                                                2009
+                                                : 
+                                                0.598
+                                </li>
+                                <li>
+                                                2010
+                                                : 
+                                                0.64
+                                </li>
+                                <li>
+                                                2011
+                                                : 
+                                                0.672
+                                </li>
+                                <li>
+                                                2012
+                                                : 
+                                                0.695
+                                </li>
+                                <li>
+                                                2013
+                                                : 
+                                                0.703
+                                </li>
+                                <li>
+                                                2014
+                                                : 
+                                                0.741
+                                </li>
+                </ul>
+</div>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h1
+                    className="location"
+>
+                    ADAMS COUNTY 14
+</h1>,
+                  <ul
+                    className="stats"
+>
+                    <li>
+                                        2004
+                                        : 
+                                        0.24
+                    </li>
+                    <li>
+                                        2005
+                                        : 
+                                        0.278
+                    </li>
+                    <li>
+                                        2006
+                                        : 
+                                        0.337
+                    </li>
+                    <li>
+                                        2007
+                                        : 
+                                        0.395
+                    </li>
+                    <li>
+                                        2008
+                                        : 
+                                        0.536
+                    </li>
+                    <li>
+                                        2009
+                                        : 
+                                        0.598
+                    </li>
+                    <li>
+                                        2010
+                                        : 
+                                        0.64
+                    </li>
+                    <li>
+                                        2011
+                                        : 
+                                        0.672
+                    </li>
+                    <li>
+                                        2012
+                                        : 
+                                        0.695
+                    </li>
+                    <li>
+                                        2013
+                                        : 
+                                        0.703
+                    </li>
+                    <li>
+                                        2014
+                                        : 
+                                        0.741
+                    </li>
+</ul>,
+                ],
+                "className": "card-wrapper",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <h1
+                    class="location"
+>
+                    ADAMS COUNTY 14
+</h1>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "ADAMS COUNTY 14",
+                    "className": "location",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "ADAMS COUNTY 14",
+                  ],
+                  "type": "h1",
+                },
+                Object {
+                  "instance": <ul
+                    class="stats"
+>
+                    <li>
+                                        2004
+                                        : 
+                                        0.24
+                    </li>
+                    <li>
+                                        2005
+                                        : 
+                                        0.278
+                    </li>
+                    <li>
+                                        2006
+                                        : 
+                                        0.337
+                    </li>
+                    <li>
+                                        2007
+                                        : 
+                                        0.395
+                    </li>
+                    <li>
+                                        2008
+                                        : 
+                                        0.536
+                    </li>
+                    <li>
+                                        2009
+                                        : 
+                                        0.598
+                    </li>
+                    <li>
+                                        2010
+                                        : 
+                                        0.64
+                    </li>
+                    <li>
+                                        2011
+                                        : 
+                                        0.672
+                    </li>
+                    <li>
+                                        2012
+                                        : 
+                                        0.695
+                    </li>
+                    <li>
+                                        2013
+                                        : 
+                                        0.703
+                    </li>
+                    <li>
+                                        2014
+                                        : 
+                                        0.741
+                    </li>
+</ul>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <li>
+                        2004
+                        : 
+                        0.24
+</li>,
+                      <li>
+                        2005
+                        : 
+                        0.278
+</li>,
+                      <li>
+                        2006
+                        : 
+                        0.337
+</li>,
+                      <li>
+                        2007
+                        : 
+                        0.395
+</li>,
+                      <li>
+                        2008
+                        : 
+                        0.536
+</li>,
+                      <li>
+                        2009
+                        : 
+                        0.598
+</li>,
+                      <li>
+                        2010
+                        : 
+                        0.64
+</li>,
+                      <li>
+                        2011
+                        : 
+                        0.672
+</li>,
+                      <li>
+                        2012
+                        : 
+                        0.695
+</li>,
+                      <li>
+                        2013
+                        : 
+                        0.703
+</li>,
+                      <li>
+                        2014
+                        : 
+                        0.741
+</li>,
+                    ],
+                    "className": "stats",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": <li>
+                        2004
+                        : 
+                        0.24
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2004",
+                          ": ",
+                          0.24,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2004",
+                        ": ",
+                        "0.24",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2005
+                        : 
+                        0.278
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2005",
+                          ": ",
+                          0.278,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2005",
+                        ": ",
+                        "0.278",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2006
+                        : 
+                        0.337
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2006",
+                          ": ",
+                          0.337,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2006",
+                        ": ",
+                        "0.337",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2007
+                        : 
+                        0.395
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2007",
+                          ": ",
+                          0.395,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2007",
+                        ": ",
+                        "0.395",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2008
+                        : 
+                        0.536
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2008",
+                          ": ",
+                          0.536,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2008",
+                        ": ",
+                        "0.536",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2009
+                        : 
+                        0.598
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2009",
+                          ": ",
+                          0.598,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2009",
+                        ": ",
+                        "0.598",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2010
+                        : 
+                        0.64
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2010",
+                          ": ",
+                          0.64,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2010",
+                        ": ",
+                        "0.64",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2011
+                        : 
+                        0.672
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2011",
+                          ": ",
+                          0.672,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2011",
+                        ": ",
+                        "0.672",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2012
+                        : 
+                        0.695
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2012",
+                          ": ",
+                          0.695,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2012",
+                        ": ",
+                        "0.695",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2013
+                        : 
+                        0.703
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2013",
+                          ": ",
+                          0.703,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2013",
+                        ": ",
+                        "0.703",
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": <li>
+                        2014
+                        : 
+                        0.741
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "2014",
+                          ": ",
+                          0.741,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "2014",
+                        ": ",
+                        "0.741",
+                      ],
+                      "type": "li",
+                    },
+                  ],
+                  "type": "ul",
+                },
+              ],
+              "type": "div",
+            },
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
