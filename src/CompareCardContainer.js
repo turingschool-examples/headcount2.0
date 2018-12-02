@@ -16,6 +16,7 @@ const CompareCardContainer = (props) => {
   }
   if(props.appState.compareCard1 !== null && props.appState.compareCard2 !== null) {
     let object = props.compareCards(props.appState.compareCard1.location, props.appState.compareCard2.location)
+    console.log('middlecard', object)
     middleCard= <CompareCard cardInfo={object} />
   }
 

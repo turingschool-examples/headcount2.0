@@ -17,7 +17,7 @@ const CardContainer = (props) => {
 }
 
 CardContainer.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object
 }
 
 export default CardContainer;
