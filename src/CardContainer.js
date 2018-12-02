@@ -3,17 +3,19 @@ import Card from './Card';
 import PropTypes from 'prop-types';
 import './CardContainer.css';
 
-const CardContainer = ( {displayData} ) => {
 
+const CardContainer = ( {displayData, dataSet} ) => {
+
+  
   const cards = displayData.map(district => {
     return <Card 
-            key={Date.now()} 
+            key={`card ${district.location}`}
             {...district} />
   })
 
   return(
     <div>
-      <h3 className='cardContainerHeading'>Data for Each District Contained Here</h3>
+      <h3 className='cardContainerHeading'>{dataSet} data for each district is listed below when nothing is entered in the search field, otherwise, only districts that match the search criteria are listed.</h3>
       <section className='cardContainer-grid'>
         { cards }
       </section>
@@ -22,7 +24,7 @@ const CardContainer = ( {displayData} ) => {
 }
 
 CardContainer.propTypes = {
-  displaData: PropTypes.array.isRequired
+  displayData: PropTypes.array.isRequired
 }
 
 export default CardContainer;

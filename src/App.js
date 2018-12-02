@@ -4,41 +4,47 @@ import Search from './Search';
 import ComparisonContainer from './ComparisonContainer';
 import CardContainer from './CardContainer';
 import DistrictRepository from './helper';
-import kinderData from './data/kindergartners_in_full_day_program.js';
+import Kindergartner from './data/kindergartners_in_full_day_program.js';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      dataSet: '',
+      dataSet: 'Kindergartner',
       displayData: [],
       searchWord: '',
-      repository: new DistrictRepository(kinderData)
+      repository: new DistrictRepository(Kindergartner)
     }
   }
 
   componentDidMount() {
-    const dataSet = kinderData;
-    this.setState({ dataSet });
-    this.prepareDataForDisplay(dataSet)
+    this.prepareDataForDisplay();
   }
 
-  prepareDataForDisplay = (dataSet) => {
-    const displayData = this.state.repository.findAllMatches(this.state.searchWord);{}
+  searchForDistrict = (searchString) => {
+    const searchWord = searchString;
+    this.setState( { searchWord } );
+    this.prepareDataForDisplay(searchString)
+  }
+
+  prepareDataForDisplay = (searchWord) => {
+    const displayData = this.state.repository.findAllMatches(searchWord);
     this.setState({ displayData })
   }
 
   render() {
 
-    const { cleanData, displayData } = this.state;
+    const { cleanData, displayData, dataSet } = this.state;
 
     return (
       <div>
-        <h1>Welcome To Headcount 2.0</h1>
-        <Search />
+        <h1 className='app'>Welcome To Headcount 2.0</h1>
+        <Search 
+          searchForDistrict={this.searchForDistrict } />
         <ComparisonContainer />
         <CardContainer 
-          displayData={ displayData }/>
+          displayData={ displayData }
+          dataSet={ dataSet }/>
       </div>
     );
   }

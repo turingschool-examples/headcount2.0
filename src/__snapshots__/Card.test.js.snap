@@ -1,0 +1,329 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card matches the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    location="string"
+    stats={
+        Object {
+            "1909": 0.107,
+            "3999": 5.999,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <span>
+          <h5>
+                    string
+          </h5>
+          <button
+                    className="select-btn"
+          >
+                    Select
+          </button>
+</span>,
+        <ul>
+          <li
+                    className="listedStats below"
+          >
+                     
+                    1909: 0.107
+          </li>
+          <li
+                    className="listedStats above"
+          >
+                     
+                    3999: 5.999
+          </li>
+</ul>,
+      ],
+      "className": "card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h5>
+              string
+</h5>,
+            <button
+              className="select-btn"
+>
+              Select
+</button>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "string",
+            },
+            "ref": null,
+            "rendered": "string",
+            "type": "h5",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Select",
+              "className": "select-btn",
+            },
+            "ref": null,
+            "rendered": "Select",
+            "type": "button",
+          },
+        ],
+        "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li
+              className="listedStats below"
+>
+               
+              1909: 0.107
+</li>,
+            <li
+              className="listedStats above"
+>
+               
+              3999: 5.999
+</li>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " ",
+                "1909: 0.107",
+              ],
+              "className": "listedStats below",
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              "1909: 0.107",
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " ",
+                "3999: 5.999",
+              ],
+              "className": "listedStats above",
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              "3999: 5.999",
+            ],
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <span>
+            <h5>
+                        string
+            </h5>
+            <button
+                        className="select-btn"
+            >
+                        Select
+            </button>
+</span>,
+          <ul>
+            <li
+                        className="listedStats below"
+            >
+                         
+                        1909: 0.107
+            </li>
+            <li
+                        className="listedStats above"
+            >
+                         
+                        3999: 5.999
+            </li>
+</ul>,
+        ],
+        "className": "card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h5>
+                string
+</h5>,
+              <button
+                className="select-btn"
+>
+                Select
+</button>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "string",
+              },
+              "ref": null,
+              "rendered": "string",
+              "type": "h5",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Select",
+                "className": "select-btn",
+              },
+              "ref": null,
+              "rendered": "Select",
+              "type": "button",
+            },
+          ],
+          "type": "span",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li
+                className="listedStats below"
+>
+                 
+                1909: 0.107
+</li>,
+              <li
+                className="listedStats above"
+>
+                 
+                3999: 5.999
+</li>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  "1909: 0.107",
+                ],
+                "className": "listedStats below",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                "1909: 0.107",
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  "3999: 5.999",
+                ],
+                "className": "listedStats above",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                "3999: 5.999",
+              ],
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

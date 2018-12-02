@@ -26,14 +26,14 @@ export default class DistrictRepository {
   }
 
   findAllMatches = (searchName) => {
-      if (searchName && Object.keys(this.stats).includes(searchName.toUpperCase())) {
-        const ucSearchName = searchName.toUpperCase();
-        return Object.keys(this.stats).reduce((matching, stat) => {
-            if (stat.includes(ucSearchName)) {
-              return [...matching, {location: stat, stats: this.stats[stat]}]
-            } 
-          return matching;
-          }, []);
+      if (searchName) {
+        const ucSearchName = searchName.toUpperCase()
+        const matching = Object.keys(this.stats).filter(stat => {
+          return stat.includes(ucSearchName)
+        })
+        return matching.map(stat => {
+           return {location: stat, stats: this.stats[stat]} 
+         })
       } else if (!searchName) {
           return Object.keys(this.stats).map(stat => {
            return {location: stat, stats: this.stats[stat]} 
