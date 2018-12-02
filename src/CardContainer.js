@@ -9,7 +9,7 @@ const CardContainer = ( {displayData, dataSet} ) => {
   
   const cards = displayData.map(district => {
     return <Card 
-            key={Date.now()}
+            key={`card ${district.location}`}
             {...district} />
   })
 

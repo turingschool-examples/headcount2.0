@@ -21,8 +21,14 @@ class App extends Component {
     this.prepareDataForDisplay();
   }
 
-  prepareDataForDisplay = () => {
-    const displayData = this.state.repository.findAllMatches(this.state.searchWord);
+  searchForDistrict = (searchString) => {
+    const searchWord = searchString;
+    this.setState( { searchWord } );
+    this.prepareDataForDisplay(searchString)
+  }
+
+  prepareDataForDisplay = (searchWord) => {
+    const displayData = this.state.repository.findAllMatches(searchWord);
     this.setState({ displayData })
   }
 
@@ -33,7 +39,8 @@ class App extends Component {
     return (
       <div>
         <h1>Welcome To Headcount 2.0</h1>
-        <Search />
+        <Search 
+          searchForDistrict={this.searchForDistrict } />
         <ComparisonContainer />
         <CardContainer 
           displayData={ displayData }

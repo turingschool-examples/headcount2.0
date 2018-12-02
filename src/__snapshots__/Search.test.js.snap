@@ -21,13 +21,21 @@ ShallowWrapper {
         <h3>
           Enter the district you want to search
 </h3>,
-        <form>
-          <input />
+        <form
+          onSubmit={[Function]}
+>
+          <input
+                    name="searchString"
+                    onChange={[Function]}
+                    placeholder="Enter District You Want To Search"
+                    value=""
+          />
           <button>
                     Submit
           </button>
 </form>,
       ],
+      "className": "search",
     },
     "ref": null,
     "rendered": Array [
@@ -48,11 +56,17 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <input />,
+            <input
+              name="searchString"
+              onChange={[Function]}
+              placeholder="Enter District You Want To Search"
+              value=""
+/>,
             <button>
               Submit
 </button>,
           ],
+          "onSubmit": [Function],
         },
         "ref": null,
         "rendered": Array [
@@ -60,7 +74,12 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
-            "props": Object {},
+            "props": Object {
+              "name": "searchString",
+              "onChange": [Function],
+              "placeholder": "Enter District You Want To Search",
+              "value": "",
+            },
             "ref": null,
             "rendered": null,
             "type": "input",
@@ -92,13 +111,21 @@ ShallowWrapper {
           <h3>
             Enter the district you want to search
 </h3>,
-          <form>
-            <input />
+          <form
+            onSubmit={[Function]}
+>
+            <input
+                        name="searchString"
+                        onChange={[Function]}
+                        placeholder="Enter District You Want To Search"
+                        value=""
+            />
             <button>
                         Submit
             </button>
 </form>,
         ],
+        "className": "search",
       },
       "ref": null,
       "rendered": Array [
@@ -119,11 +146,17 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <input />,
+              <input
+                name="searchString"
+                onChange={[Function]}
+                placeholder="Enter District You Want To Search"
+                value=""
+/>,
               <button>
                 Submit
 </button>,
             ],
+            "onSubmit": [Function],
           },
           "ref": null,
           "rendered": Array [
@@ -131,7 +164,12 @@ ShallowWrapper {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
-              "props": Object {},
+              "props": Object {
+                "name": "searchString",
+                "onChange": [Function],
+                "placeholder": "Enter District You Want To Search",
+                "value": "",
+              },
               "ref": null,
               "rendered": null,
               "type": "input",
