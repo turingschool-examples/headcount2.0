@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 .compare-card {
-  border: 1px solid black;
+  border: 5px solid #337AB7;
   border-radius: 10%;
   width: 300px;
-  margin: 20px;
-  box-shadow: 3px 0 3px red, -0.2em 0 0.2em red;
+  margin: 20px;  
   background-color: #fff;
   display: flex;
   flex-direction: column;
