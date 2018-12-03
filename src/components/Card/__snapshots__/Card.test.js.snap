@@ -4,6 +4,7 @@ exports[`Card should match the snapshot with all appropriate data 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Card
+    addDistrictToCompare={[MockFunction]}
     location="COLORADO"
     stats={
       Object {
@@ -63,7 +64,7 @@ ShallowWrapper {
           <li>
             2009: 
             <span
-              className="purple"
+              className="yellow"
             >
               0.5
             </span>
@@ -79,6 +80,7 @@ ShallowWrapper {
         </ul>,
       ],
       "className": "card",
+      "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -135,7 +137,7 @@ ShallowWrapper {
             <li>
               2009: 
               <span
-                className="purple"
+                className="yellow"
               >
                 0.5
               </span>
@@ -257,7 +259,7 @@ ShallowWrapper {
               "children": Array [
                 "2009: ",
                 <span
-                  className="purple"
+                  className="yellow"
                 >
                   0.5
                 </span>,
@@ -272,7 +274,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "0.5",
-                  "className": "purple",
+                  "className": "yellow",
                 },
                 "ref": null,
                 "rendered": "0.5",
@@ -360,7 +362,7 @@ ShallowWrapper {
             <li>
               2009: 
               <span
-                className="purple"
+                className="yellow"
               >
                 0.5
               </span>
@@ -376,6 +378,7 @@ ShallowWrapper {
           </ul>,
         ],
         "className": "card",
+        "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -432,7 +435,7 @@ ShallowWrapper {
               <li>
                 2009: 
                 <span
-                  className="purple"
+                  className="yellow"
                 >
                   0.5
                 </span>
@@ -554,7 +557,7 @@ ShallowWrapper {
                 "children": Array [
                   "2009: ",
                   <span
-                    className="purple"
+                    className="yellow"
                   >
                     0.5
                   </span>,
@@ -569,7 +572,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "0.5",
-                    "className": "purple",
+                    "className": "yellow",
                   },
                   "ref": null,
                   "rendered": "0.5",

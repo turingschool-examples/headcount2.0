@@ -31,12 +31,17 @@ ShallowWrapper {
               type="text"
               value=""
             />
-            <button>
-              Search
+            <button
+              onClick={[Function]}
+            >
+              Clear
             </button>
           </form>
         </header>,
         <CardContainer
+          addDistrictToCompare={[Function]}
+          compareMessage="Select two districts to compare"
+          districtAverages={Object {}}
           districtData={
             Array [
               Object {
@@ -2937,6 +2942,8 @@ ShallowWrapper {
               },
             ]
           }
+          districtsToCompare={Array []}
+          resetComparison={[Function]}
         />,
       ],
       "className": "App",
@@ -2961,8 +2968,10 @@ ShallowWrapper {
                 type="text"
                 value=""
               />
-              <button>
-                Search
+              <button
+                onClick={[Function]}
+              >
+                Clear
               </button>
             </form>,
           ],
@@ -2994,8 +3003,10 @@ ShallowWrapper {
                   type="text"
                   value=""
                 />,
-                <button>
-                  Search
+                <button
+                  onClick={[Function]}
+                >
+                  Clear
                 </button>,
               ],
             },
@@ -3022,10 +3033,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Search",
+                  "children": "Clear",
+                  "onClick": [Function],
                 },
                 "ref": null,
-                "rendered": "Search",
+                "rendered": "Clear",
                 "type": "button",
               },
             ],
@@ -3039,6 +3051,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "addDistrictToCompare": [Function],
+          "compareMessage": "Select two districts to compare",
+          "districtAverages": Object {},
           "districtData": Array [
             Object {
               "location": "COLORADO",
@@ -5937,6 +5952,8 @@ ShallowWrapper {
               },
             },
           ],
+          "districtsToCompare": Array [],
+          "resetComparison": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -5965,12 +5982,17 @@ ShallowWrapper {
                 type="text"
                 value=""
               />
-              <button>
-                Search
+              <button
+                onClick={[Function]}
+              >
+                Clear
               </button>
             </form>
           </header>,
           <CardContainer
+            addDistrictToCompare={[Function]}
+            compareMessage="Select two districts to compare"
+            districtAverages={Object {}}
             districtData={
               Array [
                 Object {
@@ -8871,6 +8893,8 @@ ShallowWrapper {
                 },
               ]
             }
+            districtsToCompare={Array []}
+            resetComparison={[Function]}
           />,
         ],
         "className": "App",
@@ -8895,8 +8919,10 @@ ShallowWrapper {
                   type="text"
                   value=""
                 />
-                <button>
-                  Search
+                <button
+                  onClick={[Function]}
+                >
+                  Clear
                 </button>
               </form>,
             ],
@@ -8928,8 +8954,10 @@ ShallowWrapper {
                     type="text"
                     value=""
                   />,
-                  <button>
-                    Search
+                  <button
+                    onClick={[Function]}
+                  >
+                    Clear
                   </button>,
                 ],
               },
@@ -8956,10 +8984,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Search",
+                    "children": "Clear",
+                    "onClick": [Function],
                   },
                   "ref": null,
-                  "rendered": "Search",
+                  "rendered": "Clear",
                   "type": "button",
                 },
               ],
@@ -8973,6 +9002,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "addDistrictToCompare": [Function],
+            "compareMessage": "Select two districts to compare",
+            "districtAverages": Object {},
             "districtData": Array [
               Object {
                 "location": "COLORADO",
@@ -11871,6 +11903,8 @@ ShallowWrapper {
                 },
               },
             ],
+            "districtsToCompare": Array [],
+            "resetComparison": [Function],
           },
           "ref": null,
           "rendered": null,

@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CompareContainer should match the snapshot with no selected cards 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CompareContainer
+    addDistrictToCompare={[MockFunction]}
+    compareMessage="this is only a test"
+    districtAverages={Object {}}
+    districtsToCompare={Array []}
+    resetComparison={[Function]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        undefined,
+        <div
+          className="comparison-area"
+        >
+          <article
+            className="compare-card"
+          >
+            this is only a test
+          </article>
+          <button
+            className="reset-button"
+            onClick={[Function]}
+          >
+            Reset Comparison
+          </button>
+        </div>,
+        undefined,
+      ],
+      "className": "compare-container card-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      undefined,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <article
+              className="compare-card"
+            >
+              this is only a test
+            </article>,
+            <button
+              className="reset-button"
+              onClick={[Function]}
+            >
+              Reset Comparison
+            </button>,
+          ],
+          "className": "comparison-area",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "this is only a test",
+              "className": "compare-card",
+            },
+            "ref": null,
+            "rendered": "this is only a test",
+            "type": "article",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Reset Comparison",
+              "className": "reset-button",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Reset Comparison",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+      undefined,
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          undefined,
+          <div
+            className="comparison-area"
+          >
+            <article
+              className="compare-card"
+            >
+              this is only a test
+            </article>
+            <button
+              className="reset-button"
+              onClick={[Function]}
+            >
+              Reset Comparison
+            </button>
+          </div>,
+          undefined,
+        ],
+        "className": "compare-container card-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        undefined,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <article
+                className="compare-card"
+              >
+                this is only a test
+              </article>,
+              <button
+                className="reset-button"
+                onClick={[Function]}
+              >
+                Reset Comparison
+              </button>,
+            ],
+            "className": "comparison-area",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "this is only a test",
+                "className": "compare-card",
+              },
+              "ref": null,
+              "rendered": "this is only a test",
+              "type": "article",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Reset Comparison",
+                "className": "reset-button",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Reset Comparison",
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+        undefined,
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

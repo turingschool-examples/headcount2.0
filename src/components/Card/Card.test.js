@@ -12,7 +12,9 @@ describe('Card', () => {
       2009: 0.5,
       2010: 1
     }
-    const wrapper = shallow(<Card location="COLORADO" stats={stats} />);
+    const wrapper = shallow(<Card location="COLORADO" 
+                                  stats={stats}
+                                  addDistrictToCompare={jest.fn()} />);
 
     expect(wrapper).toMatchSnapshot();
   })

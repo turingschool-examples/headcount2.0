@@ -11,7 +11,8 @@ class App extends Component {
       districtData: [],
       searchInput: '',
       districtsToCompare: [],
-      compareMessage: 'Click on two districts to compare'
+      compareMessage: 'Select two districts to compare',
+      districtAverages: {}
     }
   }
 
@@ -38,8 +39,37 @@ class App extends Component {
     })
   }
 
-  addDistrictToCompare = () => {
-    
+  handleClick = () => {
+    this.setState({
+      searchInput: ''
+    })
+  }
+
+  addDistrictToCompare = (location) => {
+    const { districtsToCompare } = this.state
+    const data = new DistrictRepository(kinderData);
+    let currentDistrict = data.findByName(location);
+
+    if (districtsToCompare.length < 1) {
+      this.setState({
+        districtsToCompare: [currentDistrict],
+        compareMessage: 'Select another district'
+      })
+    } else if (districtsToCompare.length === 1) {
+      this.setState({
+        districtsToCompare: [...districtsToCompare, currentDistrict],
+        districtAverages: data.compareDistrictAverages(districtsToCompare[0].location, currentDistrict.location)
+      })
+    }
+  }
+
+  resetComparison = () => {
+    this.setState({
+      districtsToCompare: [],
+      compareMessage: 'Select two districts to compare',
+      districtAverages: {},
+      searchInput: ''
+    })
   }
 
   search = (searchValue) => {
@@ -52,7 +82,13 @@ class App extends Component {
   }
 
   render() {
-    const { districtData, searchInput, districtsToCompare, compareMessage } = this.state;
+    const { 
+      districtData, 
+      searchInput, 
+      districtsToCompare, 
+      compareMessage,
+      districtAverages,
+    } = this.state;
 
     return (
       <main className="App">
@@ -60,12 +96,15 @@ class App extends Component {
           <h1>HeadCount 2.0</h1>
           <form>
             <input type="text" onChange={this.handleChange} name="search" value={searchInput} placeholder="Search for a district" autoFocus />
-            <button>Search</button>
+            <button onClick={this.handleClick}>Clear</button>
           </form>
         </header>
         <CardContainer  districtData={districtData}
                         compareMessage={compareMessage}
-                        districtsToCompare={districtsToCompare} />
+                        districtsToCompare={districtsToCompare}
+                        addDistrictToCompare={this.addDistrictToCompare}
+                        districtAverages={districtAverages}
+                        resetComparison={this.resetComparison} />
       </main>
     );
   }

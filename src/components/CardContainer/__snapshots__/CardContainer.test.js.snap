@@ -4,7 +4,12 @@ exports[`CardContainer should match the snapshot with cards passed down 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CardContainer
+    addDistrictToCompare={[MockFunction]}
+    compareMessage=""
+    districtAverages={Object {}}
     districtData={Array []}
+    districtsToCompare={Array []}
+    resetComparison={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -25,6 +30,13 @@ ShallowWrapper {
         >
           Kindergartners In Full Day Programs
         </h1>,
+        <CompareContainer
+          addDistrictToCompare={[MockFunction]}
+          compareMessage=""
+          districtAverages={Object {}}
+          districtsToCompare={Array []}
+          resetComparison={[MockFunction]}
+        />,
         <article
           className="card-container"
         />,
@@ -44,6 +56,21 @@ ShallowWrapper {
         "ref": null,
         "rendered": "Kindergartners In Full Day Programs",
         "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "addDistrictToCompare": [MockFunction],
+          "compareMessage": "",
+          "districtAverages": Object {},
+          "districtsToCompare": Array [],
+          "resetComparison": [MockFunction],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
       },
       Object {
         "instance": null,
@@ -72,6 +99,13 @@ ShallowWrapper {
           >
             Kindergartners In Full Day Programs
           </h1>,
+          <CompareContainer
+            addDistrictToCompare={[MockFunction]}
+            compareMessage=""
+            districtAverages={Object {}}
+            districtsToCompare={Array []}
+            resetComparison={[MockFunction]}
+          />,
           <article
             className="card-container"
           />,
@@ -91,6 +125,21 @@ ShallowWrapper {
           "ref": null,
           "rendered": "Kindergartners In Full Day Programs",
           "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "addDistrictToCompare": [MockFunction],
+            "compareMessage": "",
+            "districtAverages": Object {},
+            "districtsToCompare": Array [],
+            "resetComparison": [MockFunction],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
         },
         Object {
           "instance": null,
@@ -132,7 +181,12 @@ exports[`CardContainer should match the snapshot with no cards passed down 1`] =
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CardContainer
+    addDistrictToCompare={[MockFunction]}
+    compareMessage=""
+    districtAverages={Object {}}
     districtData={Array []}
+    districtsToCompare={Array []}
+    resetComparison={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -153,6 +207,13 @@ ShallowWrapper {
         >
           Kindergartners In Full Day Programs
         </h1>,
+        <CompareContainer
+          addDistrictToCompare={[MockFunction]}
+          compareMessage=""
+          districtAverages={Object {}}
+          districtsToCompare={Array []}
+          resetComparison={[MockFunction]}
+        />,
         <article
           className="card-container"
         />,
@@ -172,6 +233,21 @@ ShallowWrapper {
         "ref": null,
         "rendered": "Kindergartners In Full Day Programs",
         "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "addDistrictToCompare": [MockFunction],
+          "compareMessage": "",
+          "districtAverages": Object {},
+          "districtsToCompare": Array [],
+          "resetComparison": [MockFunction],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
       },
       Object {
         "instance": null,
@@ -200,6 +276,13 @@ ShallowWrapper {
           >
             Kindergartners In Full Day Programs
           </h1>,
+          <CompareContainer
+            addDistrictToCompare={[MockFunction]}
+            compareMessage=""
+            districtAverages={Object {}}
+            districtsToCompare={Array []}
+            resetComparison={[MockFunction]}
+          />,
           <article
             className="card-container"
           />,
@@ -219,6 +302,21 @@ ShallowWrapper {
           "ref": null,
           "rendered": "Kindergartners In Full Day Programs",
           "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "addDistrictToCompare": [MockFunction],
+            "compareMessage": "",
+            "districtAverages": Object {},
+            "districtsToCompare": Array [],
+            "resetComparison": [MockFunction],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
         },
         Object {
           "instance": null,
