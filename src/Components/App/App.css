@@ -1,0 +1,10 @@
+.app {
+    background-image: url('../../assets/seigaiha.png');
+    display: flex;
+    align-items: center;
+    flex-direction: column
+}
+
+.app-header {
+    width: 100%;
+}
