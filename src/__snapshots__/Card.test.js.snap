@@ -1,0 +1,1052 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    content={
+        Object {
+            "2004": 0.302,
+            "2005": 0.267,
+            "2006": 0.354,
+            "2007": 0.392,
+            "2008": 0.385,
+            "2009": 0.39,
+            "2010": 0.436,
+            "2011": 0.489,
+            "2012": 0.479,
+            "2013": 0.488,
+            "2014": 0.49,
+          }
+    }
+    title="ACADEMY 20"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3>
+          ACADEMY 20
+</h3>,
+        <ul>
+          <aside
+                    className="low"
+          >
+                     
+                    2004
+                    : 
+                    0.302
+                     
+          </aside>
+          <aside
+                    className="low"
+          >
+                     
+                    2005
+                    : 
+                    0.267
+                     
+          </aside>
+          <aside
+                    className="low"
+          >
+                     
+                    2006
+                    : 
+                    0.354
+                     
+          </aside>
+          <aside
+                    className="low"
+          >
+                     
+                    2007
+                    : 
+                    0.392
+                     
+          </aside>
+          <aside
+                    className="low"
+          >
+                     
+                    2008
+                    : 
+                    0.385
+                     
+          </aside>
+          <aside
+                    className="low"
+          >
+                     
+                    2009
+                    : 
+                    0.39
+                     
+          </aside>
+          <aside
+                    className="low"
+          >
+                     
+                    2010
+                    : 
+                    0.436
+                     
+          </aside>
+          <aside
+                    className="low"
+          >
+                     
+                    2011
+                    : 
+                    0.489
+                     
+          </aside>
+          <aside
+                    className="low"
+          >
+                     
+                    2012
+                    : 
+                    0.479
+                     
+          </aside>
+          <aside
+                    className="low"
+          >
+                     
+                    2013
+                    : 
+                    0.488
+                     
+          </aside>
+          <aside
+                    className="low"
+          >
+                     
+                    2014
+                    : 
+                    0.49
+                     
+          </aside>
+</ul>,
+      ],
+      "className": "Card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "ACADEMY 20",
+        },
+        "ref": null,
+        "rendered": "ACADEMY 20",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <aside
+              className="low"
+>
+               
+              2004
+              : 
+              0.302
+               
+</aside>,
+            <aside
+              className="low"
+>
+               
+              2005
+              : 
+              0.267
+               
+</aside>,
+            <aside
+              className="low"
+>
+               
+              2006
+              : 
+              0.354
+               
+</aside>,
+            <aside
+              className="low"
+>
+               
+              2007
+              : 
+              0.392
+               
+</aside>,
+            <aside
+              className="low"
+>
+               
+              2008
+              : 
+              0.385
+               
+</aside>,
+            <aside
+              className="low"
+>
+               
+              2009
+              : 
+              0.39
+               
+</aside>,
+            <aside
+              className="low"
+>
+               
+              2010
+              : 
+              0.436
+               
+</aside>,
+            <aside
+              className="low"
+>
+               
+              2011
+              : 
+              0.489
+               
+</aside>,
+            <aside
+              className="low"
+>
+               
+              2012
+              : 
+              0.479
+               
+</aside>,
+            <aside
+              className="low"
+>
+               
+              2013
+              : 
+              0.488
+               
+</aside>,
+            <aside
+              className="low"
+>
+               
+              2014
+              : 
+              0.49
+               
+</aside>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " ",
+                "2004",
+                ": ",
+                0.302,
+                " ",
+              ],
+              "className": "low",
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              "2004",
+              ": ",
+              0.302,
+              " ",
+            ],
+            "type": "aside",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " ",
+                "2005",
+                ": ",
+                0.267,
+                " ",
+              ],
+              "className": "low",
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              "2005",
+              ": ",
+              0.267,
+              " ",
+            ],
+            "type": "aside",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " ",
+                "2006",
+                ": ",
+                0.354,
+                " ",
+              ],
+              "className": "low",
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              "2006",
+              ": ",
+              0.354,
+              " ",
+            ],
+            "type": "aside",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " ",
+                "2007",
+                ": ",
+                0.392,
+                " ",
+              ],
+              "className": "low",
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              "2007",
+              ": ",
+              0.392,
+              " ",
+            ],
+            "type": "aside",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " ",
+                "2008",
+                ": ",
+                0.385,
+                " ",
+              ],
+              "className": "low",
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              "2008",
+              ": ",
+              0.385,
+              " ",
+            ],
+            "type": "aside",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " ",
+                "2009",
+                ": ",
+                0.39,
+                " ",
+              ],
+              "className": "low",
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              "2009",
+              ": ",
+              0.39,
+              " ",
+            ],
+            "type": "aside",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " ",
+                "2010",
+                ": ",
+                0.436,
+                " ",
+              ],
+              "className": "low",
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              "2010",
+              ": ",
+              0.436,
+              " ",
+            ],
+            "type": "aside",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " ",
+                "2011",
+                ": ",
+                0.489,
+                " ",
+              ],
+              "className": "low",
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              "2011",
+              ": ",
+              0.489,
+              " ",
+            ],
+            "type": "aside",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " ",
+                "2012",
+                ": ",
+                0.479,
+                " ",
+              ],
+              "className": "low",
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              "2012",
+              ": ",
+              0.479,
+              " ",
+            ],
+            "type": "aside",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " ",
+                "2013",
+                ": ",
+                0.488,
+                " ",
+              ],
+              "className": "low",
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              "2013",
+              ": ",
+              0.488,
+              " ",
+            ],
+            "type": "aside",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " ",
+                "2014",
+                ": ",
+                0.49,
+                " ",
+              ],
+              "className": "low",
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              "2014",
+              ": ",
+              0.49,
+              " ",
+            ],
+            "type": "aside",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3>
+            ACADEMY 20
+</h3>,
+          <ul>
+            <aside
+                        className="low"
+            >
+                         
+                        2004
+                        : 
+                        0.302
+                         
+            </aside>
+            <aside
+                        className="low"
+            >
+                         
+                        2005
+                        : 
+                        0.267
+                         
+            </aside>
+            <aside
+                        className="low"
+            >
+                         
+                        2006
+                        : 
+                        0.354
+                         
+            </aside>
+            <aside
+                        className="low"
+            >
+                         
+                        2007
+                        : 
+                        0.392
+                         
+            </aside>
+            <aside
+                        className="low"
+            >
+                         
+                        2008
+                        : 
+                        0.385
+                         
+            </aside>
+            <aside
+                        className="low"
+            >
+                         
+                        2009
+                        : 
+                        0.39
+                         
+            </aside>
+            <aside
+                        className="low"
+            >
+                         
+                        2010
+                        : 
+                        0.436
+                         
+            </aside>
+            <aside
+                        className="low"
+            >
+                         
+                        2011
+                        : 
+                        0.489
+                         
+            </aside>
+            <aside
+                        className="low"
+            >
+                         
+                        2012
+                        : 
+                        0.479
+                         
+            </aside>
+            <aside
+                        className="low"
+            >
+                         
+                        2013
+                        : 
+                        0.488
+                         
+            </aside>
+            <aside
+                        className="low"
+            >
+                         
+                        2014
+                        : 
+                        0.49
+                         
+            </aside>
+</ul>,
+        ],
+        "className": "Card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "ACADEMY 20",
+          },
+          "ref": null,
+          "rendered": "ACADEMY 20",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <aside
+                className="low"
+>
+                 
+                2004
+                : 
+                0.302
+                 
+</aside>,
+              <aside
+                className="low"
+>
+                 
+                2005
+                : 
+                0.267
+                 
+</aside>,
+              <aside
+                className="low"
+>
+                 
+                2006
+                : 
+                0.354
+                 
+</aside>,
+              <aside
+                className="low"
+>
+                 
+                2007
+                : 
+                0.392
+                 
+</aside>,
+              <aside
+                className="low"
+>
+                 
+                2008
+                : 
+                0.385
+                 
+</aside>,
+              <aside
+                className="low"
+>
+                 
+                2009
+                : 
+                0.39
+                 
+</aside>,
+              <aside
+                className="low"
+>
+                 
+                2010
+                : 
+                0.436
+                 
+</aside>,
+              <aside
+                className="low"
+>
+                 
+                2011
+                : 
+                0.489
+                 
+</aside>,
+              <aside
+                className="low"
+>
+                 
+                2012
+                : 
+                0.479
+                 
+</aside>,
+              <aside
+                className="low"
+>
+                 
+                2013
+                : 
+                0.488
+                 
+</aside>,
+              <aside
+                className="low"
+>
+                 
+                2014
+                : 
+                0.49
+                 
+</aside>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  "2004",
+                  ": ",
+                  0.302,
+                  " ",
+                ],
+                "className": "low",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                "2004",
+                ": ",
+                0.302,
+                " ",
+              ],
+              "type": "aside",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  "2005",
+                  ": ",
+                  0.267,
+                  " ",
+                ],
+                "className": "low",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                "2005",
+                ": ",
+                0.267,
+                " ",
+              ],
+              "type": "aside",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  "2006",
+                  ": ",
+                  0.354,
+                  " ",
+                ],
+                "className": "low",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                "2006",
+                ": ",
+                0.354,
+                " ",
+              ],
+              "type": "aside",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  "2007",
+                  ": ",
+                  0.392,
+                  " ",
+                ],
+                "className": "low",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                "2007",
+                ": ",
+                0.392,
+                " ",
+              ],
+              "type": "aside",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  "2008",
+                  ": ",
+                  0.385,
+                  " ",
+                ],
+                "className": "low",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                "2008",
+                ": ",
+                0.385,
+                " ",
+              ],
+              "type": "aside",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  "2009",
+                  ": ",
+                  0.39,
+                  " ",
+                ],
+                "className": "low",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                "2009",
+                ": ",
+                0.39,
+                " ",
+              ],
+              "type": "aside",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  "2010",
+                  ": ",
+                  0.436,
+                  " ",
+                ],
+                "className": "low",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                "2010",
+                ": ",
+                0.436,
+                " ",
+              ],
+              "type": "aside",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  "2011",
+                  ": ",
+                  0.489,
+                  " ",
+                ],
+                "className": "low",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                "2011",
+                ": ",
+                0.489,
+                " ",
+              ],
+              "type": "aside",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  "2012",
+                  ": ",
+                  0.479,
+                  " ",
+                ],
+                "className": "low",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                "2012",
+                ": ",
+                0.479,
+                " ",
+              ],
+              "type": "aside",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  "2013",
+                  ": ",
+                  0.488,
+                  " ",
+                ],
+                "className": "low",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                "2013",
+                ": ",
+                0.488,
+                " ",
+              ],
+              "type": "aside",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  "2014",
+                  ": ",
+                  0.49,
+                  " ",
+                ],
+                "className": "low",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                "2014",
+                ": ",
+                0.49,
+                " ",
+              ],
+              "type": "aside",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
