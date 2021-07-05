@@ -5,6 +5,7 @@ describe('DistrictRepository iteration 1 - part 2', () =>  {
   const district = new DistrictRepository(kinderData);
 
   test('findAllMatches defaults to returning all data in an array', () => {
+    // console.log(district.stats)
     expect(district.findAllMatches().length).toBe(181);
   });
 
@@ -17,5 +18,4 @@ describe('DistrictRepository iteration 1 - part 2', () =>  {
     expect(district.findAllMatches('packers').length).toBe(0);
     expect(district.findAllMatches('df').length).toBe(0);
   });
-
 });
