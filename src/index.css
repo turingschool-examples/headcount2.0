@@ -1,5 +1,76 @@
+* {
+  margin: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+div {
+  border-radius: 7%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 16px;
+  margin: 10px;
+}
+
+p {
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
+h3 { 
+  margin: 10px;
+  text-align: center;
+}
+
+.comparing-paragraph {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+.final-result {
+ margin-left: 150px;
+}
+
+.data-card, .compare {
+  display: inline-block;
+  margin: 20px;
+  width: 250px;
+  height: 300px;
+  border: 1px solid;
+}
+
+.comparing {
+ width: 280px;
+ display: inline-block;
+ position: relative;
+ height: 160px;
+ bottom: 40px;
+ border: 1px solid;
+}
+
+.less-than {
+  color: red;
+}
+
+.more-than {
+  color: green;
+}
+
+input {
+  margin: 10px;
+  width: 300px;
+  font-size: 16px;
+  outline: none;
 }
