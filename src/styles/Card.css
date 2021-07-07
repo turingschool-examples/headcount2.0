@@ -1,0 +1,60 @@
+.card {
+    display: flex;
+    color: #EBBAB9;
+    background-color: #407076;
+    border: solid 1px black;
+    padding: 20px;
+    border-radius: 10px;
+    flex-direction: column;
+    margin: 40px;
+    max-width: 400px;
+}
+
+
+
+.compared-card {
+    justify-content: space-between;
+    align-items: center;
+    width: 110%;
+    font-size: 24px;
+}
+
+ul {
+    color: #EBBAB9;
+    font-size: 20px;
+    list-style: none;
+    /* line-height: 20px; */
+    margin-top: 0;
+}
+
+
+li.high {
+    color: white;
+}
+li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+li.low {
+    color:  #EBBAB9;;
+}
+
+.year {
+    margin: 4px;
+    font-style: bold;
+}
+
+p {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-weight: bolder;
+}
