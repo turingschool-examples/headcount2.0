@@ -7,7 +7,7 @@ describe('DistrictRepository iteration 1 - part 2', () =>  {
   test('findAllMatches defaults to returning all data in an array', () => {
     expect(district.findAllMatches().length).toBe(181);
   });
-
+  console.log(district.findAllMatches('ColoRado'))
   test('findAllMatches returns matches in an array, case insensitive', () => {
     expect(district.findAllMatches('ColoRado').length).toBe(2);
   });
