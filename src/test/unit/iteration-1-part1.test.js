@@ -13,7 +13,6 @@ describe('DistrictRepository iteration 1 - part 1', () =>  {
   });
 
   test('findByName returns an object with its individual district information', () => {
-
     expect(typeof district.findByName('Colorado')).toEqual('object');
     expect(district.findByName('Colorado').location).toEqual('COLORADO');
   });
@@ -33,7 +32,7 @@ describe('DistrictRepository iteration 1 - part 1', () =>  {
   test('district data is rounded to the nearest hundredth', () => {
     const result = {"2004": 0.302, "2005": 0.267, "2006": 0.354, "2007": 0.392, "2008": 0.385, "2009": 0.39, "2010": 0.436, "2011": 0.489, "2012": 0.479, "2013": 0.488, "2014": 0.49}
     const academy = district.findByName('ACADEmY 20');
-
+    
     expect(academy.stats).toEqual(result);
   });
 
