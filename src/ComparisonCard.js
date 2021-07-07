@@ -1,0 +1,32 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import './style/ComparisonCard.css';
+
+export const ComparisonCard = ({ comparisonData }) => {
+  const keys = Object.keys(comparisonData);
+  return (
+    <div className="comparison-card">
+      <div className="district-info">
+        <h4>{keys[0]}</h4>
+        <h4>{keys[1]}</h4>
+      </div>
+      <div className="district-info">
+        <h4>{comparisonData[keys[0]]}</h4>
+        <h4>{comparisonData[keys[1]]}</h4>
+      </div>
+      <h3 className="comparison-ratio">{comparisonData.compared}</h3>
+    </div>
+  );
+};
+
+const { objectOf, string, shape, bool, number } = PropTypes;
+ComparisonCard.propTypes = {
+  comparisonData: objectOf(
+    shape({
+      location: string,
+      stats: objectOf(number),
+      selected: bool
+    })
+  )
+};
