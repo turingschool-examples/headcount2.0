@@ -1,0 +1,297 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardContainer matches the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    dataSet="College"
+    displayData={
+        Array [
+            Object {
+              "location": "NorthCarolina",
+              "stats": Object {
+                "1999": 0.007,
+                "2099": 1.999,
+              },
+            },
+            Object {
+              "location": "VIRGINIA",
+              "stats": Object {
+                "1909": 0.107,
+                "3999": 5.999,
+              },
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3
+          className="cardContainerHeading"
+>
+          College
+           data for each district is listed below when nothing is entered in the search field, otherwise, only districts that match the search criteria are listed.
+</h3>,
+        <section
+          className="cardContainer-grid"
+>
+          <Card
+                    location="NorthCarolina"
+                    stats={
+                              Object {
+                                        "1999": 0.007,
+                                        "2099": 1.999,
+                                      }
+                    }
+          />
+          <Card
+                    location="VIRGINIA"
+                    stats={
+                              Object {
+                                        "1909": 0.107,
+                                        "3999": 5.999,
+                                      }
+                    }
+          />
+</section>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "College",
+            " data for each district is listed below when nothing is entered in the search field, otherwise, only districts that match the search criteria are listed.",
+          ],
+          "className": "cardContainerHeading",
+        },
+        "ref": null,
+        "rendered": Array [
+          "College",
+          " data for each district is listed below when nothing is entered in the search field, otherwise, only districts that match the search criteria are listed.",
+        ],
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Card
+              location="NorthCarolina"
+              stats={
+                            Object {
+                                          "1999": 0.007,
+                                          "2099": 1.999,
+                                        }
+              }
+/>,
+            <Card
+              location="VIRGINIA"
+              stats={
+                            Object {
+                                          "1909": 0.107,
+                                          "3999": 5.999,
+                                        }
+              }
+/>,
+          ],
+          "className": "cardContainer-grid",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "card NorthCarolina",
+            "nodeType": "function",
+            "props": Object {
+              "location": "NorthCarolina",
+              "stats": Object {
+                "1999": 0.007,
+                "2099": 1.999,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "card VIRGINIA",
+            "nodeType": "function",
+            "props": Object {
+              "location": "VIRGINIA",
+              "stats": Object {
+                "1909": 0.107,
+                "3999": 5.999,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "section",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3
+            className="cardContainerHeading"
+>
+            College
+             data for each district is listed below when nothing is entered in the search field, otherwise, only districts that match the search criteria are listed.
+</h3>,
+          <section
+            className="cardContainer-grid"
+>
+            <Card
+                        location="NorthCarolina"
+                        stats={
+                                    Object {
+                                                "1999": 0.007,
+                                                "2099": 1.999,
+                                              }
+                        }
+            />
+            <Card
+                        location="VIRGINIA"
+                        stats={
+                                    Object {
+                                                "1909": 0.107,
+                                                "3999": 5.999,
+                                              }
+                        }
+            />
+</section>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "College",
+              " data for each district is listed below when nothing is entered in the search field, otherwise, only districts that match the search criteria are listed.",
+            ],
+            "className": "cardContainerHeading",
+          },
+          "ref": null,
+          "rendered": Array [
+            "College",
+            " data for each district is listed below when nothing is entered in the search field, otherwise, only districts that match the search criteria are listed.",
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Card
+                location="NorthCarolina"
+                stats={
+                                Object {
+                                                "1999": 0.007,
+                                                "2099": 1.999,
+                                              }
+                }
+/>,
+              <Card
+                location="VIRGINIA"
+                stats={
+                                Object {
+                                                "1909": 0.107,
+                                                "3999": 5.999,
+                                              }
+                }
+/>,
+            ],
+            "className": "cardContainer-grid",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "card NorthCarolina",
+              "nodeType": "function",
+              "props": Object {
+                "location": "NorthCarolina",
+                "stats": Object {
+                  "1999": 0.007,
+                  "2099": 1.999,
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "card VIRGINIA",
+              "nodeType": "function",
+              "props": Object {
+                "location": "VIRGINIA",
+                "stats": Object {
+                  "1909": 0.107,
+                  "3999": 5.999,
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "section",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
