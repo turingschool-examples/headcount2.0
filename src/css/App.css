@@ -1,0 +1,21 @@
+.card-container {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid black;
+  width: 320px;
+  margin: 20px;
+}
+
+.card-title {
+  text-align: center;
+}
+
+ul {
+  margin-left:35%;
+  padding: 0;
+  list-style: none;
+}
